@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T22:57:23Z",
+  "updatedAt": "2026-07-28T23:04:34Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -4678,7 +4678,9 @@
       "id": "manor-lords",
       "title": "Manor Lords - Soundtrack",
       "game": "Manor Lords",
-      "composers": [],
+      "composers": [
+        "Pressure Cooker & Elben Schutte"
+      ],
       "date": "2024-04-26",
       "sources": [
         {
@@ -4686,12 +4688,33 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/2932630/Manor_Lords__Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/manor-lords",
+          "seenAt": "2026-07-28T23:04:34Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Manor+Lords+-+Soundtrack+Manor+Lords+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9pIDARvh5Hl",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2932630/1b4d9dbfca52f983866cdfe486ef74c87db4ba3a/header.jpg",
-      "notable": true
+      "notable": true,
+      "company": "Slavic Magic",
+      "topTracks": [
+        {
+          "title": "Media Vita",
+          "plays": "111K plays"
+        },
+        {
+          "title": "Vil Lieber Grusse Susse",
+          "plays": "91K plays"
+        },
+        {
+          "title": "Cantigas de Santa Maria",
+          "plays": "89K plays"
+        }
+      ]
     },
     {
       "id": "momodora-reverie-under-the-moonlight",
@@ -6813,7 +6836,9 @@
       "id": "subnautica-2",
       "title": "Subnautica 2 Original Soundtrack",
       "game": "Subnautica 2",
-      "composers": [],
+      "composers": [
+        "Ben Prunty"
+      ],
       "date": "2026-05-14",
       "sources": [
         {
@@ -6821,12 +6846,33 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/3803320/Subnautica_2_Original_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/subnautica-2",
+          "seenAt": "2026-07-28T23:04:34Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Subnautica+2+Original+Soundtrack+Subnautica+2+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_4uQtkhMguOk",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3803320/a8150811dc2dc5d823d50343e3c1b12aa319b5c7/header.jpg",
-      "notable": true
+      "notable": true,
+      "company": "Unknown Worlds Entertainment",
+      "topTracks": [
+        {
+          "title": "Titan-Class Biosignatures",
+          "plays": "375K plays"
+        },
+        {
+          "title": "Subnautica 2",
+          "plays": "176K plays"
+        },
+        {
+          "title": "Respect the Crush Depth",
+          "plays": "66K plays"
+        }
+      ]
     },
     {
       "id": "the-witcher-3-wild-hunt",
@@ -9771,7 +9817,9 @@
       "id": "frostpunk-2",
       "title": "Frostpunk 2: Original Soundtrack",
       "game": "Frostpunk 2",
-      "composers": [],
+      "composers": [
+        "Piotr Musiał"
+      ],
       "date": "2024-09-20",
       "sources": [
         {
@@ -9779,12 +9827,33 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/3197520/Frostpunk_2_Original_Soundtrack/",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/frostpunk-2",
+          "seenAt": "2026-07-28T23:04:34Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Frostpunk+2%3A+Original+Soundtrack+Frostpunk+2+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_CZohyqyUSr8",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3197520/823cc8205aecb4b1f37de4d27c391f4be5d59725/header.jpg",
-      "notable": true
+      "notable": true,
+      "company": "11 bit studios",
+      "topTracks": [
+        {
+          "title": "Anger",
+          "plays": "452K plays"
+        },
+        {
+          "title": "The Great Old Enemy",
+          "plays": "208K plays"
+        },
+        {
+          "title": "Main Theme",
+          "plays": "137K plays"
+        }
+      ]
     },
     {
       "id": "fez",
@@ -10193,20 +10262,43 @@
       "id": "sheepy-a-short-adventure",
       "title": "Sheepy: A Short Adventure Soundtrack",
       "game": "Sheepy: A Short Adventure",
-      "composers": [],
-      "date": "2024-02-20",
+      "composers": [
+        "Tal Richards, Hahlweg, Sheepy"
+      ],
+      "date": "2024-02-06",
       "sources": [
         {
           "name": "steam",
           "type": "catalog",
           "url": "https://store.steampowered.com/app/2779500/Sheepy_A_Short_Adventure_Soundtrack/",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sheepy-a-short-adventure",
+          "seenAt": "2026-07-28T23:04:34Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sheepy%3A+A+Short+Adventure+Soundtrack+Sheepy%3A+A+Short+Adventure+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_N1QtpdFSe03",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2779500/header.jpg",
-      "notable": true
+      "notable": true,
+      "company": "MrSuicideSheep",
+      "topTracks": [
+        {
+          "title": "A Journey's Pace",
+          "plays": "78K plays"
+        },
+        {
+          "title": "The First Exploration (feat. Yoe Mase)",
+          "plays": "19K plays"
+        },
+        {
+          "title": "Title Screen Music",
+          "plays": "18K plays"
+        }
+      ]
     },
     {
       "id": "baba-is-you",
@@ -11850,20 +11942,43 @@
       "id": "mouthwashing",
       "title": "Mouthwashing Soundtrack",
       "game": "Mouthwashing",
-      "composers": [],
-      "date": "2024-10-14",
+      "composers": [
+        "Wrong Organ"
+      ],
+      "date": "2024-09-26",
       "sources": [
         {
           "name": "steam",
           "type": "catalog",
           "url": "https://store.steampowered.com/app/3276830/Mouthwashing_Soundtrack/",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mouthwashing",
+          "seenAt": "2026-07-28T23:04:34Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Mouthwashing+Soundtrack+Mouthwashing+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_XMxUu91mtNt",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3276830/beaeb410f28c5942d374d16a5ce1330fd8e5f045/header.jpg",
-      "notable": true
+      "notable": true,
+      "company": "Wrong Organ",
+      "topTracks": [
+        {
+          "title": "Main Theme",
+          "plays": "971K plays"
+        },
+        {
+          "title": "The Windows Are Plastic",
+          "plays": "329K plays"
+        },
+        {
+          "title": "Speech! Speech! Speech!",
+          "plays": "272K plays"
+        }
+      ]
     },
     {
       "id": "back-to-the-dawn",
@@ -26000,6 +26115,3089 @@
         {
           "title": "Crimson City",
           "plays": "58K plays"
+        }
+      ]
+    },
+    {
+      "id": "assassin-s-creed-mirage",
+      "title": "Assassin's Creed Mirage (Original Game Soundtrack)",
+      "game": "Assassin's Creed Mirage",
+      "composers": [
+        "Brendan Angelides",
+        "Assassin's Creed"
+      ],
+      "date": "2023-10-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/assassins-creed-mirage",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Assassin%27s+Creed+Mirage+%28Original+Game+Soundtrack%29+Assassin%27s+Creed+Mirage+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_rpg5mh60eun",
+      "art": "https://yt3.googleusercontent.com/DJy8jLJT-8om9BOLao3uvNjI8qaeRkZMaj0oUH16PJ32NEpoFv-rEQHlvOmP2QKMnO-oEHKR5nT80iJK_w=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ubisoft Bordeaux",
+      "topTracks": [
+        {
+          "title": "Mirage Theme (feat. Layth Sidiq)",
+          "plays": "2.4M plays"
+        },
+        {
+          "title": "Ezio's Family (Mirage Version) (feat. Layth Sidiq)",
+          "plays": "1.7M plays"
+        },
+        {
+          "title": "Daughter of No One (feat. Emel Mathlouthi)",
+          "plays": "926K plays"
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-black-ops-6",
+      "title": "Call of Duty®: Black Ops 6 (Original Soundtrack)",
+      "game": "Call of Duty: Black Ops 6",
+      "composers": [
+        "Jack Wall"
+      ],
+      "date": "2024-10-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-black-ops-6",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%C2%AE%3A+Black+Ops+6+%28Original+Soundtrack%29+Call+of+Duty%3A+Black+Ops+6+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Qg7Xi3ld8uj",
+      "art": "https://yt3.googleusercontent.com/7CAgrRO57paXn1cwuvBCePFATr3sGH47RA0rWZ9GCQiS86ZJ3bWsdmup71B68Dwq80KgICueNXabzDpF=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Treyarch",
+      "topTracks": [
+        {
+          "title": "Raining the Fire",
+          "plays": "2.2M plays"
+        },
+        {
+          "title": "Black Ops 6",
+          "plays": "273K plays"
+        },
+        {
+          "title": "The Executive Director",
+          "plays": "146K plays"
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-modern-warfare-iii-2023",
+      "title": "Call of Duty®: Modern Warfare III (Original Soundtrack)",
+      "game": "Call of Duty: Modern Warfare III",
+      "composers": [
+        "Walter Mair"
+      ],
+      "date": "2023-11-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-modern-warfare-iii",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%C2%AE%3A+Modern+Warfare+III+%28Original+Soundtrack%29+Call+of+Duty%3A+Modern+Warfare+III+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WW3sZJeBGnr",
+      "art": "https://yt3.googleusercontent.com/2LgyZwauwFr5aErTR2xRFGPazptFpPKjdc0YsNGo-Oxd1RYfSOsm4l5SgKi0QmuGyA7mHJsvYbUp44os=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Sledgehammer Games",
+      "topTracks": [
+        {
+          "title": "Modern Warfare III",
+          "plays": "394K plays"
+        },
+        {
+          "title": "Makarov",
+          "plays": "244K plays"
+        },
+        {
+          "title": "Reactor",
+          "plays": "142K plays"
+        }
+      ]
+    },
+    {
+      "id": "battlefield-6",
+      "title": "Battlefield 6 (Original Video Game Soundtrack)",
+      "game": "Battlefield 6",
+      "composers": [
+        "Henry Jackman"
+      ],
+      "date": "2025-10-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/battlefield-6",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Battlefield+6+%28Original+Video+Game+Soundtrack%29+Battlefield+6+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_jhyl7CWVe6q",
+      "art": "https://yt3.googleusercontent.com/mSOtyvkpMoIqzjZGbTJXyzfx7fWv8qeCg3NfgfCZA3cGxo-2HiNfIDjv0VIOnivYFU0pSi8LTP9Fzf_7=w544-h544-l90-rj",
+      "notable": true,
+      "company": "EA Digital Illusions CE",
+      "topTracks": [
+        {
+          "title": "Making Love to Morgan Wallen",
+          "plays": "7.3M plays"
+        },
+        {
+          "title": "Battlefield 6 \"Warsaw\" Theme",
+          "plays": "1.5M plays"
+        },
+        {
+          "title": "Battlefield 6 Main Theme",
+          "plays": "371K plays"
+        }
+      ]
+    },
+    {
+      "id": "astro-bot",
+      "title": "ASTRO BOT (Original Soundtrack)",
+      "game": "Astro Bot",
+      "composers": [
+        "Kenneth C M Young"
+      ],
+      "date": "2024-09-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/astro-bot",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=ASTRO+BOT+%28Original+Soundtrack%29+Astro+Bot+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_PCZcS0zVXAw",
+      "art": "https://yt3.googleusercontent.com/iQEVsPs4vO7GhNRVDIXPE9KFa6Wf2XBLRluo6Be7bXFESrWMcyVy8sJRQXys02VhXvY10iQYIrP3d2fD=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Team Asobi",
+      "topTracks": [
+        {
+          "title": "I Am Astro Bot (ASTRO BOT Remix)",
+          "plays": "1.6M plays"
+        },
+        {
+          "title": "You Can't Catch Me (SSD Remix)",
+          "plays": "952K plays"
+        },
+        {
+          "title": "CPU Plaza",
+          "plays": "796K plays"
+        }
+      ]
+    },
+    {
+      "id": "doom-the-dark-ages",
+      "title": "DOOM: The Dark Ages (Original Game Soundtrack)",
+      "game": "Doom: The Dark Ages",
+      "composers": [
+        "Finishing Move Inc."
+      ],
+      "date": "2025-05-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/doom-the-dark-ages",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DOOM%3A+The+Dark+Ages+%28Original+Game+Soundtrack%29+Doom%3A+The+Dark+Ages+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qpZxi0kjSL0",
+      "art": "https://yt3.googleusercontent.com/Rmp9iVDDmSoXjRWp2pU_oDAjFo2nRCONR1b-ZnPGLm_tme2GeHTbGZCYXzTw6RNQJQRMGST0OV4VujhXTg=w544-h544-l90-rj",
+      "notable": true,
+      "company": "id Software",
+      "topTracks": [
+        {
+          "title": "Unchained Predator",
+          "plays": "2.3M plays"
+        },
+        {
+          "title": "Blood Red",
+          "plays": "1.8M plays"
+        },
+        {
+          "title": "Infernal Chasm",
+          "plays": "1.8M plays"
+        }
+      ]
+    },
+    {
+      "id": "cocoon",
+      "title": "Cocoon (Original Video Game Soundtrack)",
+      "game": "Cocoon",
+      "composers": [
+        "Jakob Schmid"
+      ],
+      "date": "2023-09-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/cocoon",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cocoon+%28Original+Video+Game+Soundtrack%29+Cocoon+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ohRperolrkk",
+      "art": "https://yt3.googleusercontent.com/Mz4kJWael6C2VyoVkxeJytqZG01SIvbRiFFihzcRHaP6qfSnpwqKnPnXocgww6GSnAQzt1wRwjuHpcA9=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Geometric Interactive",
+      "topTracks": [
+        {
+          "title": "Signal",
+          "plays": "2.3K plays"
+        },
+        {
+          "title": "Spheres",
+          "plays": "1.7K plays"
+        },
+        {
+          "title": "Cosmic Mystery",
+          "plays": "1.2K plays"
+        }
+      ]
+    },
+    {
+      "id": "final-fantasy-vii-rebirth",
+      "title": "FINAL FANTASY VII REBIRTH Original Soundtrack",
+      "game": "Final Fantasy VII Rebirth",
+      "composers": [
+        "SQUARE ENIX MUSIC"
+      ],
+      "date": "2024-02-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/final-fantasy-vii-rebirth",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=FINAL+FANTASY+VII+REBIRTH+Original+Soundtrack+Final+Fantasy+VII+Rebirth+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_SoQRGXoUOCj",
+      "art": "https://yt3.googleusercontent.com/tLitQVGV9FTQlt83toVqarueoMuV7F4D65kd7YeEUulVKpNC-2fxGuW_XhAUrcW1MCxtvsVJojUqVqjq=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Square Enix Creative Business Unit I",
+      "topTracks": [
+        {
+          "title": "FFVIIメインテーマ Battle Edit (FF7 Rebirth OST Ver.) - Main Theme of FFVII - Battle Edit (FF7 Rebirth OST Ver.)",
+          "plays": "1.5M plays"
+        },
+        {
+          "title": "ニブル山を目指して (FF7 Rebirth OST Ver.) - Toward Mt. Nibel (FF7 Rebirth OST Ver.)",
+          "plays": "618K plays"
+        },
+        {
+          "title": "ルーファウス歓迎式典 -ジュノンのテーマ- (FF7 Rebirth OST Ver.) - Rufus's Welcoming Ceremony - Seventh, Ten-Hut! (FF7 Rebirth OST Ver.)",
+          "plays": "418K plays"
+        }
+      ]
+    },
+    {
+      "id": "s-t-a-l-k-e-r-2-heart-of-chornobyl",
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl (Original Game Soundtrack)",
+      "game": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "composers": [
+        "Kyrylo Borisov, Andrew Luchanko, Yaroslav Odrin, and Valentine Parkhomenko"
+      ],
+      "date": "2024-11-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/stalker-2-heart-of-chornobyl",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=S.T.A.L.K.E.R.+2%3A+Heart+of+Chornobyl+%28Original+Game+Soundtrack%29+S.T.A.L.K.E.R.+2%3A+Heart+of+Chornobyl+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fBgEyCmOLKn",
+      "art": "https://yt3.googleusercontent.com/pqMgtGuzPPj_NpUloWX7scSoPLpc2Q7BczcCWU573z_fKR3PJf_4ROFqrG0oYKtbTxZQk1FxlBtk_l_R=w544-h544-l90-rj",
+      "notable": true,
+      "company": "GSC Game World",
+      "topTracks": [
+        {
+          "title": "End Titles",
+          "plays": "105K plays"
+        },
+        {
+          "title": "Menu Theme",
+          "plays": "56K plays"
+        },
+        {
+          "title": "Faust",
+          "plays": "30K plays"
+        }
+      ]
+    },
+    {
+      "id": "dragon-age-the-veilguard",
+      "title": "Dragon Age: The Veilguard (Original Soundtrack)",
+      "game": "Dragon Age: The Veilguard",
+      "composers": [
+        "Hans Zimmer",
+        "Lorne Balfe"
+      ],
+      "date": "2024-10-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dragon-age-the-veilguard",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dragon+Age%3A+The+Veilguard+%28Original+Soundtrack%29+Dragon+Age%3A+The+Veilguard+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_lMuc48k8r3f",
+      "art": "https://yt3.googleusercontent.com/6OJOIeokBoOk2l7gudFTxz4Rf4sl5mKljXpcuhiVe1-n_v0hxok8fqRSE3DDojW9vFX67Nd2rLPTJ-Uv=w544-h544-l90-rj",
+      "notable": true,
+      "company": "BioWare",
+      "topTracks": [
+        {
+          "title": "Dragon Age: The Veilguard Main Theme",
+          "plays": "360K plays"
+        },
+        {
+          "title": "The Dread Wolf",
+          "plays": "248K plays"
+        },
+        {
+          "title": "Not The Chosen One",
+          "plays": "151K plays"
+        }
+      ]
+    },
+    {
+      "id": "assassin-s-creed-shadows",
+      "title": "Assassin's Creed Shadows (Original Game Soundtrack)",
+      "game": "Assassin's Creed Shadows",
+      "composers": [
+        "The Flight",
+        "Assassin's Creed"
+      ],
+      "date": "2025-03-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/assassins-creed-shadows",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Assassin%27s+Creed+Shadows+%28Original+Game+Soundtrack%29+Assassin%27s+Creed+Shadows+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_pQFtOMKveTu",
+      "art": "https://yt3.googleusercontent.com/4kP1qeCr9bCQ-f5PQRPyVG2cU1wW5eYC598-v6_la_-H4fb9kpNjTxM1q5EO3RAOPC3plYJ53Td7mQxbWA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ubisoft Québec",
+      "topTracks": [
+        {
+          "title": "Shadows Main Theme",
+          "plays": "666K plays"
+        },
+        {
+          "title": "Rise of Yasuke",
+          "plays": "145K plays"
+        },
+        {
+          "title": "The Fujibayashi Legacy",
+          "plays": "107K plays"
+        }
+      ]
+    },
+    {
+      "id": "tekken-8",
+      "title": "TEKKEN 8 (Original Soundtrack)",
+      "game": "Tekken 8",
+      "composers": [
+        "TEKKEN Project",
+        "Bandai Namco Game Music"
+      ],
+      "date": "2024-01-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tekken-8",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=TEKKEN+8+%28Original+Soundtrack%29+Tekken+8+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gbb63DqhILZ",
+      "art": "https://yt3.googleusercontent.com/WfnX8LKN1u0brNc2yS82tSv4z6EQSF2JYIVqgkOZ_6-oIJgjmkILj9Iclfsxv-7b3npbvXwKlQmT2AI=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Bandai Namco Studios",
+      "topTracks": [
+        {
+          "title": "STORM RISING (Normal)",
+          "plays": "2.7M plays"
+        },
+        {
+          "title": "My Last Stand",
+          "plays": "2.5M plays"
+        },
+        {
+          "title": "Volcanic Bomb (Climax)",
+          "plays": "965K plays"
+        }
+      ]
+    },
+    {
+      "id": "prince-of-persia-the-lost-crown",
+      "title": "Prince of Persia: The Lost Crown (Original Game Soundtrack)",
+      "game": "Prince of Persia: The Lost Crown",
+      "composers": [
+        "Mentrix",
+        "Gareth Coker",
+        "Prince of Persia"
+      ],
+      "date": "2024-01-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/prince-of-persia-the-lost-crown",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Prince+of+Persia%3A+The+Lost+Crown+%28Original+Game+Soundtrack%29+Prince+of+Persia%3A+The+Lost+Crown+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_0ek4c6d4trX",
+      "art": "https://yt3.googleusercontent.com/CRHz4WtktdBCv0sGzkfPeu19A2EGua4hCbd98-U0-Na0nUOadOAvwU_-kG666ZxmEYfpAPqCNjaJjyc=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ubisoft Montpellier",
+      "topTracks": [
+        {
+          "title": "The Darkest of Souls",
+          "plays": "100K plays"
+        },
+        {
+          "title": "Main Theme",
+          "plays": "86K plays"
+        },
+        {
+          "title": "End Credits",
+          "plays": "57K plays"
+        }
+      ]
+    },
+    {
+      "id": "persona-3-reload",
+      "title": "Persona 3 Reload Original Soundtrack",
+      "game": "Persona 3 Reload",
+      "composers": [
+        "ATLUS Sound Team"
+      ],
+      "date": "2024-02-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/persona-3-reload",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Persona+3+Reload+Original+Soundtrack+Persona+3+Reload+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mXptORiImqG",
+      "art": "https://yt3.googleusercontent.com/vuH5dCXWGdXSYAJXI4jNhZZHJjwUwcIaQjYCYcz85S5AH5Ejb9Cau4xtzYENq71VrTkgqZVaW3xbp8c=w544-h544-l90-rj",
+      "notable": true,
+      "company": "P Studio",
+      "topTracks": [
+        {
+          "title": "It's Going Down Now",
+          "plays": "143M plays"
+        },
+        {
+          "title": "Full Moon Full Life",
+          "plays": "43M plays"
+        },
+        {
+          "title": "Full Moon Full Life -Opening Movie Version-",
+          "plays": "43M plays"
+        }
+      ]
+    },
+    {
+      "id": "the-first-descendant",
+      "title": "The First Descendant (Original Soundtrack)",
+      "game": "The First Descendant",
+      "composers": [
+        "Stephen Barton",
+        "Dirk Ehlert",
+        "Amadeus Indetzki"
+      ],
+      "date": "2024-07-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-first-descendant",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+First+Descendant+%28Original+Soundtrack%29+The+First+Descendant+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_nfpkAqHh5D2",
+      "art": "https://yt3.googleusercontent.com/uRXPuJRwuBtwGpW0LSh_TzgcbQiviIrDEX9f7D2GMzOrOu28PJNlpl-0NNLSZ-szw_7oUf93q7iu24Q9=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Nexon Games",
+      "topTracks": [
+        {
+          "title": "Queen Of Lightning - Ines Theme",
+          "plays": "22K plays"
+        },
+        {
+          "title": "The First Descendant - Main Theme ",
+          "plays": "21K plays"
+        },
+        {
+          "title": "Cook Or Arsonist? - Blair Theme",
+          "plays": "8.3K plays"
+        }
+      ]
+    },
+    {
+      "id": "mafia-the-old-country",
+      "title": "Mafia: The Old Country (Original Game Soundtrack)",
+      "game": "Mafia: The Old Country",
+      "composers": [
+        "BT"
+      ],
+      "date": "2025-08-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mafia-the-old-country",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mafia%3A+The+Old+Country+%28Original+Game+Soundtrack%29+Mafia%3A+The+Old+Country+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_vJrodrWdI1k",
+      "art": "https://yt3.googleusercontent.com/jSxwVYH4quhb04_ESljVNYfG86WKiiHgUOHBcYJf325X6qChvC150HZgtAQH70EGd1rrx5tOwzz-oJY=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Hangar 13",
+      "topTracks": [
+        {
+          "title": "The Carusu",
+          "plays": "258K plays"
+        },
+        {
+          "title": "Soldato",
+          "plays": "63K plays"
+        },
+        {
+          "title": "The Old Country",
+          "plays": "43K plays"
+        }
+      ]
+    },
+    {
+      "id": "still-wakes-the-deep",
+      "title": "Still Wakes the Deep (Original Soundtrack)",
+      "game": "Still Wakes the Deep",
+      "composers": [
+        "Jason Graves"
+      ],
+      "date": "2024-06-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/still-wakes-the-deep",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Still+Wakes+the+Deep+%28Original+Soundtrack%29+Still+Wakes+the+Deep+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_y7Pq4fIFd0w",
+      "art": "https://yt3.googleusercontent.com/L2csUmHIioS_NPyXqjFj6LgQtiA8rRBN83t8tNqITunxScbe7OftIx3xoxFu2vYmdqsIvm9ggjcgeRej=w544-h544-l90-rj",
+      "notable": true,
+      "company": "The Chinese Room",
+      "topTracks": [
+        {
+          "title": "Dùisgidh e Fhathast na Doimhneachdan",
+          "plays": "35K plays"
+        },
+        {
+          "title": "Endgame",
+          "plays": "26K plays"
+        },
+        {
+          "title": "Suze’s Letter",
+          "plays": "23K plays"
+        }
+      ]
+    },
+    {
+      "id": "multiversus",
+      "title": "MultiVersus (Original Video Game Soundtrack)",
+      "game": "MultiVersus",
+      "composers": [
+        "Stephen Barton",
+        "Gordy Haab",
+        "Kevin Notar"
+      ],
+      "date": "2024-05-28",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/multiversus",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=MultiVersus+%28Original+Video+Game+Soundtrack%29+MultiVersus+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qidbedNQNoP",
+      "art": "https://yt3.googleusercontent.com/CTUiNj9wZ_qGtu3UrodZ0Na6qdFaE-k2o3YEobsoOoMs_O41EI-lfxUhJrjs0xsG7WXwWK1LiQZor6LBCw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Player First Games",
+      "topTracks": [
+        {
+          "title": "Rick and Morty: Get Schwifty",
+          "plays": "95K plays"
+        },
+        {
+          "title": "Rick and Morty: Show Me What You Got",
+          "plays": "78K plays"
+        },
+        {
+          "title": "Come On Down to the Warner Bros. Lot",
+          "plays": "38K plays"
+        }
+      ]
+    },
+    {
+      "id": "metaphor-refantazio",
+      "title": "Metaphor: ReFantazio Original Soundtrack",
+      "game": "Metaphor: ReFantazio",
+      "composers": [
+        "ATLUS Sound Team",
+        "ATLUS GAME MUSIC"
+      ],
+      "date": "2024-10-11",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/metaphor-refantazio",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Metaphor%3A+ReFantazio+Original+Soundtrack+Metaphor%3A+ReFantazio+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_TQ4mHtJZ9hH",
+      "art": "https://yt3.googleusercontent.com/akUdYbltpBrXzknTReWu3zuaNwAKwzYeAEqql_nfg8-YKh3H6n3tiM_yAVbaDnSa-7BDZ9LnZF6Vp84D=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Studio Zero",
+      "topTracks": [
+        {
+          "title": "猛き者たちよ - Warriors in Valour",
+          "plays": "4.9M plays"
+        },
+        {
+          "title": "Warriors in Arms",
+          "plays": "2.1M plays"
+        },
+        {
+          "title": "荒野を往く者 - Traversing the Wastes",
+          "plays": "1.3M plays"
+        }
+      ]
+    },
+    {
+      "id": "chants-of-sennaar",
+      "title": "Chants of Sennaar (Original Soundtrack)",
+      "game": "Chants of Sennaar",
+      "composers": [
+        "Thomas Brunet"
+      ],
+      "date": "2023-09-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/chants-of-sennaar",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Chants+of+Sennaar+%28Original+Soundtrack%29+Chants+of+Sennaar+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_urJwvHJ0ufi",
+      "art": "https://yt3.googleusercontent.com/n8WHJlCzo6Fjw7-A-isCMkAQSb9Wug7ueCvcb0lUiL2u8m_t44IINtB0uJfJo2g6-4SbjMz7YjCnyH44HQ=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Rundisc",
+      "topTracks": [
+        {
+          "title": "Bonds Reforged",
+          "plays": "27K plays"
+        },
+        {
+          "title": "Out Of The Cavern And Into The Light",
+          "plays": "19K plays"
+        },
+        {
+          "title": "Forgotten Bonds",
+          "plays": "18K plays"
+        }
+      ]
+    },
+    {
+      "id": "elden-ring-nightreign",
+      "title": "ELDEN RING NIGHTREIGN Original Soundtrack",
+      "game": "Elden Ring Nightreign",
+      "composers": [
+        "FROMSOFTWARE SOUND TEAM"
+      ],
+      "date": "2025-05-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/elden-ring-nightreign",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=ELDEN+RING+NIGHTREIGN+Original+Soundtrack+Elden+Ring+Nightreign+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_G0RlJmUtvyN",
+      "art": "https://yt3.googleusercontent.com/H6ivt3W5Ap6S7Szv9VdW9C3F3T09UH18sUKhlCeFfshQ3pU_3_z2SA13u69qmBItB9IHKQZaMZWb7HCrsQ=w544-h544-l90-rj",
+      "notable": true,
+      "company": "FromSoftware",
+      "topTracks": [
+        {
+          "title": "Heolstor the Nightlord",
+          "plays": "1.4M plays"
+        },
+        {
+          "title": "Caligo, Miasma of Night",
+          "plays": "846K plays"
+        },
+        {
+          "title": "Fulghor, Champion of Nightglow",
+          "plays": "560K plays"
+        }
+      ]
+    },
+    {
+      "id": "jusant",
+      "title": "Jusant (Original Game Soundtrack)",
+      "game": "Jusant",
+      "composers": [
+        "Guillaume Ferran"
+      ],
+      "date": "2023-10-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/jusant",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Jusant+%28Original+Game+Soundtrack%29+Jusant+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_K3tfRl2FqUf",
+      "art": "https://yt3.googleusercontent.com/xjXl98D1cSeKUMiGe4DaVavd3vAqsJ9SxzQRpZ52ugCfBAiME8YjUWnvstVun_hSDQydKdRrTZpC9Icc=w544-h544-l90-rj",
+      "notable": true,
+      "company": "DON'T NOD",
+      "topTracks": [
+        {
+          "title": "Jusant",
+          "plays": "107K plays"
+        },
+        {
+          "title": "9C+ (Caillasses)",
+          "plays": "67K plays"
+        },
+        {
+          "title": "Migration",
+          "plays": "65K plays"
+        }
+      ]
+    },
+    {
+      "id": "star-wars-outlaws",
+      "title": "Star Wars Outlaws (Original Video Game Soundtrack)",
+      "game": "Star Wars Outlaws",
+      "composers": [
+        "Wilbert Roget, II"
+      ],
+      "date": "2024-08-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-outlaws",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars+Outlaws+%28Original+Video+Game+Soundtrack%29+Star+Wars+Outlaws+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_BWNKvb42xQu",
+      "art": "https://yt3.googleusercontent.com/rPU2LhRYoeOicfAfFXdCBytA5ZnLI34_kANf9Pl81KLMxBZ8FIugs0d0Ho4SA27XZ6y4zDB1rsP_Cmg=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Massive Entertainment",
+      "topTracks": [
+        {
+          "title": "Kay Vess, The Outlaw",
+          "plays": "136K plays"
+        },
+        {
+          "title": "The Underworld and the Thief",
+          "plays": "25K plays"
+        },
+        {
+          "title": "The Trailblazer",
+          "plays": "25K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-invincible",
+      "title": "The Invincible (Original Game Soundtrack)",
+      "game": "The Invincible",
+      "composers": [
+        "Brunon Lubas"
+      ],
+      "date": "2023-11-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-invincible",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Invincible+%28Original+Game+Soundtrack%29+The+Invincible+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_J7VBUEZz4yf",
+      "art": "https://yt3.googleusercontent.com/DJk5gFbo7AQ3SKh5LllgZ6AWfcXiFJRZAO7gIuLkN09fB-Qy3386umOe5u3o1aEYQr9j4ygfucEDnpw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Starward Industries",
+      "topTracks": [
+        {
+          "title": "Point of No Return",
+          "plays": "12K plays"
+        },
+        {
+          "title": "Per Aspera",
+          "plays": "9.2K plays"
+        },
+        {
+          "title": "Black Rain",
+          "plays": "6.7K plays"
+        }
+      ]
+    },
+    {
+      "id": "last-epoch",
+      "title": "Last Epoch (Original Soundtrack)",
+      "game": "Last Epoch",
+      "composers": [
+        "Erik Desiderio"
+      ],
+      "date": "2024-02-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/last-epoch",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Last+Epoch+%28Original+Soundtrack%29+Last+Epoch+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_CAgOBVSDsnS",
+      "art": "https://yt3.googleusercontent.com/fsh4fPorLoncKramQ1ceI2-Cr50lFnuKMdyzY1OFNIngKPtu6Ng6ntYHjX4RubwmGFDc8_rTD_zIHFAy=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Eleventh Hour Games",
+      "topTracks": [
+        {
+          "title": "Last Epoch Theme",
+          "plays": "23K plays"
+        },
+        {
+          "title": "The End of Time",
+          "plays": "8.1K plays"
+        },
+        {
+          "title": "Keepers Camp",
+          "plays": "1.2K plays"
+        }
+      ]
+    },
+    {
+      "id": "indika",
+      "title": "INDIKA (Original Game Soundtrack)",
+      "game": "Indika",
+      "composers": [
+        "Mike Sabadash"
+      ],
+      "date": "2024-05-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/indika",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=INDIKA+%28Original+Game+Soundtrack%29+Indika+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_a272niGz3QK",
+      "art": "https://yt3.googleusercontent.com/V3n3DaQU5aAPIdF6Kdxt7t4C14tOt4ob-stAT51Ug2OaJNj51MrBA4sEIkxurTObKzDhfRez-yViRy5-=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Odd Meter",
+      "topTracks": [
+        {
+          "title": "Numbers",
+          "plays": "7.3K plays"
+        },
+        {
+          "title": "Joel",
+          "plays": "7.3K plays"
+        },
+        {
+          "title": "Apocalypse",
+          "plays": "6.1K plays"
+        }
+      ]
+    },
+    {
+      "id": "ready-or-not",
+      "title": "Ready or Not (Original Soundtrack)",
+      "game": "Ready or Not",
+      "composers": [
+        "Zack Bower"
+      ],
+      "date": "2023-12-13",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ready-or-not",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ready+or+Not+%28Original+Soundtrack%29+Ready+or+Not+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DE6sCOZ8QvY",
+      "art": "https://yt3.googleusercontent.com/9D5yyPvb8GmrUSH7ivT-IMBOJUw8rt6xKdrmEaj8uh2hWbtWQvwVjhs_4_9R7FoAazfLwAvCMKMVklc=w544-h544-l90-rj",
+      "notable": true,
+      "company": "VOID Interactive",
+      "topTracks": [
+        {
+          "title": "Thank You, Come Again (Gas)",
+          "plays": "180K plays"
+        },
+        {
+          "title": "23 Megabytes A Second (Streamer)",
+          "plays": "140K plays"
+        },
+        {
+          "title": "Police Theme",
+          "plays": "121K plays"
+        }
+      ]
+    },
+    {
+      "id": "v-rising",
+      "title": "V Rising (Original Game Soundtrack)",
+      "game": "V Rising",
+      "composers": [
+        "Migova"
+      ],
+      "date": "2024-05-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/v-rising",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=V+Rising+%28Original+Game+Soundtrack%29+V+Rising+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_LaN16KlP4vf",
+      "art": "https://yt3.googleusercontent.com/TB13l_9ta_-yox6OyhlUrOhir9SD6OrMMTBEgAP7p3XaIpydPERxBVAQ-yFAXXvv27BcmcFIKBOkasCpLg=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Stunlock Studios",
+      "topTracks": [
+        {
+          "title": "Farbane Nights",
+          "plays": "53K plays"
+        },
+        {
+          "title": "Main Theme",
+          "plays": "33K plays"
+        },
+        {
+          "title": "Dracula's Theme",
+          "plays": "27K plays"
+        }
+      ]
+    },
+    {
+      "id": "lords-of-the-fallen",
+      "title": "Lords of the Fallen (Original Soundtrack)",
+      "game": "Lords of the Fallen",
+      "composers": [
+        "Cris Velasco",
+        "Knut Avenstroup Haugen"
+      ],
+      "date": "2023-10-13",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/lords-of-the-fallen--2",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lords+of+the+Fallen+%28Original+Soundtrack%29+Lords+of+the+Fallen+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ORT24F9pJN8",
+      "art": "https://yt3.googleusercontent.com/Cd7LQVtRROweksdST9w_s8RmDrPKUnXbBqp4UyQXfpsQWk69CvrX_ObZ9knofqk8JFYIS4bp-ny4E7l9=w544-h544-l90-rj",
+      "notable": true,
+      "company": "HEXWORKS",
+      "topTracks": [
+        {
+          "title": "Mournstead Withers (feat. The Budapest Scoring Orchestra and Choir & David Cohen)",
+          "plays": "62K plays"
+        },
+        {
+          "title": "Stigmata (feat. The Budapest Scoring Orchestra and Choir & Eurielle)",
+          "plays": "49K plays"
+        },
+        {
+          "title": "Anathema Phase 1 (feat. The Budapest Scoring Orchestra and Choir)",
+          "plays": "33K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-alters",
+      "title": "The Alters (Original Game Soundtrack)",
+      "game": "The Alters",
+      "composers": [
+        "Piotr Musiał"
+      ],
+      "date": "2025-06-13",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-alters",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Alters+%28Original+Game+Soundtrack%29+The+Alters+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2KxIyTxbgxS",
+      "art": "https://yt3.googleusercontent.com/x0LujukxAtRhSA37gobFeKD1nLg9eFCod3863so_SYIllupUuwpSDru_Ck7cgDMh_Xh8zcHst_-3oFuW=w544-h544-l90-rj",
+      "notable": true,
+      "company": "11 bit studios",
+      "topTracks": [
+        {
+          "title": "What If (The Alters Song) (feat. Alex Jordan)",
+          "plays": "87K plays"
+        },
+        {
+          "title": "The Alters Theme",
+          "plays": "29K plays"
+        },
+        {
+          "title": "Project Dolly",
+          "plays": "20K plays"
+        }
+      ]
+    },
+    {
+      "id": "forza-horizon-6",
+      "title": "Forza Horizon 6 (Original Soundtrack)",
+      "game": "Forza Horizon 6",
+      "composers": [
+        "Forza Horizon"
+      ],
+      "date": "2026-05-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/forza-horizon-6",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Forza+Horizon+6+%28Original+Soundtrack%29+Forza+Horizon+6+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZqeZXTtZcUL",
+      "art": "https://yt3.googleusercontent.com/R_dAPcyS6oCUDDDKhZ5f9AevY1QW_Cto6F0NbMK66PZp2u8pcFpOkNJIAg3hHNHJbyQo01zTnFVap398nw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Playground Games",
+      "topTracks": [
+        {
+          "title": "Enchanting Stranger",
+          "plays": "305K plays"
+        },
+        {
+          "title": "Rebirth",
+          "plays": "80K plays"
+        },
+        {
+          "title": "Enchanting Stranger (Zero Yon Mix)",
+          "plays": "61K plays"
+        }
+      ]
+    },
+    {
+      "id": "nobody-wants-to-die",
+      "title": "Nobody Wants To Die (Original Game Soundtrack)",
+      "game": "Nobody Wants to Die",
+      "composers": [
+        "Mikolai Stroinski"
+      ],
+      "date": "2024-07-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/nobody-wants-to-die",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nobody+Wants+To+Die+%28Original+Game+Soundtrack%29+Nobody+Wants+to+Die+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wmygNb6XcPp",
+      "art": "https://yt3.googleusercontent.com/wiZ9aEdBLiSmjtXRAUltKXKoDrYUTMh51ZRQku42ECJdUogTafV-oU-EhJ_njBM_OzfxtEsAOn6T93nr=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Critical Hit Games",
+      "topTracks": [
+        {
+          "title": "Nobody Wants to Die",
+          "plays": "11K plays"
+        },
+        {
+          "title": "Neon Wants a Drink",
+          "plays": "5.8K plays"
+        },
+        {
+          "title": "Revisiting the Subconcious",
+          "plays": "4.1K plays"
+        }
+      ]
+    },
+    {
+      "id": "pacific-drive",
+      "title": "Pacific Drive (Original Soundtrack)",
+      "game": "Pacific Drive",
+      "composers": [
+        "Wilbert Roget, II"
+      ],
+      "date": "2024-02-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/pacific-drive",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pacific+Drive+%28Original+Soundtrack%29+Pacific+Drive+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_3yiSvkYSgPL",
+      "art": "https://yt3.googleusercontent.com/SA4drv4CRhfgcosTMPtp5sBgF5EBAjRukpEOzQhWAAj-4nJzYmgjVPZjyJP-Y9wgqZYQskeN4LiTxh4t=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ironwood Studios",
+      "topTracks": [
+        {
+          "title": "The Remnant (Pacific Drive Main Theme) (feat. D'Anthoni Wooten)",
+          "plays": "79K plays"
+        },
+        {
+          "title": "Punch It",
+          "plays": "42K plays"
+        },
+        {
+          "title": "Instability",
+          "plays": "31K plays"
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-black-ops-7",
+      "title": "Call of Duty®: Black Ops 7 (Original Soundtrack)",
+      "game": "Call of Duty: Black Ops 7",
+      "composers": [
+        "Jack Wall"
+      ],
+      "date": "2025-11-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-black-ops-7",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%C2%AE%3A+Black+Ops+7+%28Original+Soundtrack%29+Call+of+Duty%3A+Black+Ops+7+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HVfncZzc1Ap",
+      "art": "https://yt3.googleusercontent.com/1HcpkiQAFRb3JIC3U9FUbsLeoSPo22D5jbKiMKkXiJfB6Mx1HTzF37x5eCiI9HSlgTORhBuGMJTyShQFuA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Treyarch",
+      "topTracks": [
+        {
+          "title": "Adrenaline 2025 (Big Giant Circles Remix)",
+          "plays": "271K plays"
+        },
+        {
+          "title": "Embrace The Madness (feat. Uyanga Bold)",
+          "plays": "251K plays"
+        },
+        {
+          "title": "Black Ops 7 (feat. Gracie LeClere)",
+          "plays": "188K plays"
+        }
+      ]
+    },
+    {
+      "id": "south-of-midnight",
+      "title": "South of Midnight (Original Game Soundtrack)",
+      "game": "South of Midnight",
+      "composers": [
+        "Olivier Deriviere"
+      ],
+      "date": "2025-04-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/south-of-midnight",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=South+of+Midnight+%28Original+Game+Soundtrack%29+South+of+Midnight+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_T1FHpHPHjvZ",
+      "art": "https://yt3.googleusercontent.com/o75hwEFZ95OO6AvXxvOpUJJuqxRt2rBy89AZgM_arqvSjM-21FPsJSizdjq8P84QSMsM1C_YOK76lIG8=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Compulsion Games",
+      "topTracks": [
+        {
+          "title": "Rougarou - Boss Fight",
+          "plays": "76K plays"
+        },
+        {
+          "title": "Two-Toed Tom - Boss Fight",
+          "plays": "70K plays"
+        },
+        {
+          "title": "Huggin’ molly - Boss Fight",
+          "plays": "49K plays"
+        }
+      ]
+    },
+    {
+      "id": "palia",
+      "title": "Palia (Original Soundtrack)",
+      "game": "Palia",
+      "composers": [
+        "Steffen Schmidt"
+      ],
+      "date": "2023-12-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/palia",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Palia+%28Original+Soundtrack%29+Palia+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_udDXHyXNZSS",
+      "art": "https://yt3.googleusercontent.com/2eGeSnn3k2D9U6ttrxRJ8OjxtyN6JUjX0zb0_kuiX07-f0lpp0hWPO_uBhYbJ0pw6hI2AU8LzLbpdjH0=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Singularity 6",
+      "topTracks": [
+        {
+          "title": "Welcome to Palia (Main Theme)",
+          "plays": "27K plays"
+        },
+        {
+          "title": "Chapaa Chase!",
+          "plays": "23K plays"
+        },
+        {
+          "title": "The Creation",
+          "plays": "7.8K plays"
+        }
+      ]
+    },
+    {
+      "id": "until-dawn-2024",
+      "title": "Until Dawn (Original Game Soundtrack)",
+      "game": "Until Dawn",
+      "composers": [
+        "Mark Korven"
+      ],
+      "date": "2024-10-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/until-dawn--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Until+Dawn+%28Original+Game+Soundtrack%29+Until+Dawn+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qPJczNBNyAt",
+      "art": "https://yt3.googleusercontent.com/vE8LZZahYyspmVOTIWqvOeGzJFfq6Q3gpCoUYVdvkYOsORMB1akDF-jEfqwexgU-sJhM0ttfXfm6BLZYHg=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ballistic Moon",
+      "topTracks": [
+        {
+          "title": "Forgive and Forget",
+          "plays": "130K plays"
+        },
+        {
+          "title": "In for the Kill",
+          "plays": "116K plays"
+        },
+        {
+          "title": "Until Dawn",
+          "plays": "92K plays"
+        }
+      ]
+    },
+    {
+      "id": "neva",
+      "title": "Neva (Original Soundtrack)",
+      "game": "Neva",
+      "composers": [
+        "Berlinist"
+      ],
+      "date": "2024-10-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/neva",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Neva+%28Original+Soundtrack%29+Neva+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YJr3ODkg4Z6",
+      "art": "https://yt3.googleusercontent.com/xwTpezaTzP9NQiOV6CddMFg4Lci-xeTE8mRa-b4p6Pvuc23cL93n6GzzIxar6ZoFMXELsT8JZR1Ba_rY3A=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Nomada Studio",
+      "topTracks": [
+        {
+          "title": "Where courage abide",
+          "plays": "114K plays"
+        },
+        {
+          "title": "In courage abide",
+          "plays": "114K plays"
+        },
+        {
+          "title": "So long",
+          "plays": "61K plays"
+        }
+      ]
+    },
+    {
+      "id": "dune-awakening",
+      "title": "Dune: Awakening (Original Video Game Soundtrack)",
+      "game": "Dune: Awakening",
+      "composers": [
+        "Knut Avenstroup Haugen"
+      ],
+      "date": "2025-06-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dune-awakening",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dune%3A+Awakening+%28Original+Video+Game+Soundtrack%29+Dune%3A+Awakening+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_G3cRFWJPsfB",
+      "art": "https://yt3.googleusercontent.com/6S7EhUEdNJDg4_4jPD3LpfvpQ0bBaymzc44WcNDsJsrP1Vm4J1y4NyCJMvcNIJ32mQFe4P9ZwLj5UPQ=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Funcom",
+      "topTracks": [
+        {
+          "title": "Awakening",
+          "plays": "26K plays"
+        },
+        {
+          "title": "Welcome to Arrakis",
+          "plays": "23K plays"
+        },
+        {
+          "title": "Breath of Shai-Hulud",
+          "plays": "18K plays"
+        }
+      ]
+    },
+    {
+      "id": "little-kitty-big-city",
+      "title": "Little Kitty Big City (Original Soundtrack)",
+      "game": "Little Kitty, Big City",
+      "composers": [
+        "Riley Koenig"
+      ],
+      "date": "2024-05-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/little-kitty-big-city",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Little+Kitty+Big+City+%28Original+Soundtrack%29+Little+Kitty%2C+Big+City+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5bE2GdChftJ",
+      "art": "https://yt3.googleusercontent.com/K7LZ9S7Tg9Zd9O3tv_Bfyzc3kb7RratgXU66TrPEFoibwbiMzsOjKXCN4mqSr_tm8-5XiaJiFpZ2zTA0=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Double Dagger Studio",
+      "topTracks": [
+        {
+          "title": "A Great Day To Be A Cat",
+          "plays": "11K plays"
+        },
+        {
+          "title": "An Uninterrupted Nap",
+          "plays": "7.6K plays"
+        },
+        {
+          "title": "The Erratic Engineer (Tanuki's Theme)",
+          "plays": "5.3K plays"
+        }
+      ]
+    },
+    {
+      "id": "cronos-the-new-dawn",
+      "title": "Cronos: The New Dawn (Original Game Soundtrack)",
+      "game": "Cronos: The New Dawn",
+      "composers": [
+        "Arkadiusz Reikowski"
+      ],
+      "date": "2025-09-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/cronos-the-new-dawn",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cronos%3A+The+New+Dawn+%28Original+Game+Soundtrack%29+Cronos%3A+The+New+Dawn+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_IBmSnprLtUz",
+      "art": "https://yt3.googleusercontent.com/vkBguxyDRlKcpNLgRfTTCztk8KZMbRS3QHGwL_jmcnX7o4-h48FVGLkmOU8YHwRuPVXy5icy5ppBZn7fVw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Bloober Team",
+      "topTracks": [
+        {
+          "title": "Don't Let Them Merge (feat. Zazula)",
+          "plays": "21K plays"
+        },
+        {
+          "title": "Traveler Remains, Vita Aeterna (feat. Zazula)",
+          "plays": "12K plays"
+        },
+        {
+          "title": "What Do You See",
+          "plays": "6.7K plays"
+        }
+      ]
+    },
+    {
+      "id": "little-nightmares-iii",
+      "title": "Little Nightmares III (Original Game Soundtrack)",
+      "game": "Little Nightmares III",
+      "composers": [
+        "Hugo Long"
+      ],
+      "date": "2025-10-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/little-nightmares-iii--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Little+Nightmares+III+%28Original+Game+Soundtrack%29+Little+Nightmares+III+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_svlOeg7XCgw",
+      "art": "https://yt3.googleusercontent.com/k2j9Ji1uS_06pxrtlkL272BfC2qNRy9wuF6t-FGSoHWMYCqzQK6JFUGY-BcMU27sQBWJXTbu9FDUHH9w=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Supermassive Games",
+      "topTracks": [
+        {
+          "title": "Little Nightmares III (Main Theme)",
+          "plays": "288K plays"
+        },
+        {
+          "title": "Heart of Delusion",
+          "plays": "70K plays"
+        },
+        {
+          "title": "Return to the Nowhere",
+          "plays": "60K plays"
+        }
+      ]
+    },
+    {
+      "id": "venba",
+      "title": "Venba (Original Video Game Soundtrack)",
+      "game": "Venba",
+      "composers": [
+        "Alpha Something"
+      ],
+      "date": "2023-07-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/venba",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Venba+%28Original+Video+Game+Soundtrack%29+Venba+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Qbgmy7DBnF0",
+      "art": "https://yt3.googleusercontent.com/8Vnioh8L5EQuKm8ApH7QIJV-A_8AKnaPyi69wMwWzXI16z5wRniWKmj1qLSmcJH_TU-Dkx0WM2nE_ydy=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Visai Games",
+      "topTracks": [
+        {
+          "title": "Thulludhadi Valasu",
+          "plays": "5.1K plays"
+        },
+        {
+          "title": "Nee Dhaane",
+          "plays": "4.1K plays"
+        },
+        {
+          "title": "Chellakutty",
+          "plays": "2.8K plays"
+        }
+      ]
+    },
+    {
+      "id": "another-crab-s-treasure",
+      "title": "Another Crab's Treasure OST",
+      "game": "Another Crab's Treasure",
+      "composers": [
+        "feasley"
+      ],
+      "date": "2024-04-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/another-crabs-treasure",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Another+Crab%27s+Treasure+OST+Another+Crab%27s+Treasure+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_vuVb4roE9nt",
+      "art": "https://yt3.googleusercontent.com/RExrgOitgajpbnJ9PgtmrCGr8trXwgkLZ3ohbT2ZisjY4DuEQS9y7QrLGuLALXU3nDf8dVzJ84AvF4QA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Aggro Crab Games",
+      "topTracks": [
+        {
+          "title": "Polluted Platoon Pathfinder",
+          "plays": "157K plays"
+        },
+        {
+          "title": "The Mess I Made (feat. defsharp)",
+          "plays": "95K plays"
+        },
+        {
+          "title": "Magista, Tyrant of Slacktide",
+          "plays": "37K plays"
+        }
+      ]
+    },
+    {
+      "id": "ball-x-pit",
+      "title": "BALL x PIT (Original Game Soundtrack)",
+      "game": "Ball x Pit",
+      "composers": [
+        "Amos Roddy"
+      ],
+      "date": "2025-10-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ball-x-pit",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=BALL+x+PIT+%28Original+Game+Soundtrack%29+Ball+x+Pit+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_UvSC9dWqVTk",
+      "art": "https://yt3.googleusercontent.com/LSzo1wAAs0-cjSeXcvcJcZmeURbXW43hGs5u514j5uCF4lfB1uKP0gfIyKssWOdh3-QpBgWNqRv3-y1m=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Kenny Sun",
+      "topTracks": [
+        {
+          "title": "Bone x Yard",
+          "plays": "66K plays"
+        },
+        {
+          "title": "Liminal x Desert",
+          "plays": "59K plays"
+        },
+        {
+          "title": "Snowy x Shores",
+          "plays": "55K plays"
+        }
+      ]
+    },
+    {
+      "id": "mixtape",
+      "title": "Mixtape (Original Soundtrack)",
+      "game": "Mixtape",
+      "composers": [
+        "Josh Abrahams & Johnny Galvatron"
+      ],
+      "date": "2026-05-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mixtape--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mixtape+%28Original+Soundtrack%29+Mixtape+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DeZI3S0b0ca",
+      "art": "https://yt3.googleusercontent.com/VsP7ikQMPd_K72zFwr2CWzXyPzT4MOnfZN8_rB3HqMZmNkzdb2O7AzH3wwyX1A2tBU-c3xpX10ina2w7=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Beethoven & Dinosaur",
+      "topTracks": [
+        {
+          "title": "Diplodocus",
+          "plays": "361 plays"
+        },
+        {
+          "title": "Kaiju Mode",
+          "plays": "176 plays"
+        },
+        {
+          "title": "Rockford's House",
+          "plays": "163 plays"
+        }
+      ]
+    },
+    {
+      "id": "alone-in-the-dark",
+      "title": "Alone in the Dark (Original Game Soundtrack)",
+      "game": "Alone in the Dark",
+      "composers": [
+        "Album"
+      ],
+      "date": "2024-03-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/alone-in-the-dark--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Alone+in+the+Dark+%28Original+Game+Soundtrack%29+Alone+in+the+Dark+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_RddT1PVN8Me",
+      "art": "https://yt3.googleusercontent.com/R6IBdMWu4Zz_lurz2ZkL-MVY5UBHQeGnSNKIpJ3YHlYbhn_ekQZ2dcH1PyUyCgFCYFWjBynBiUDB1aKK=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Pieces Interactive",
+      "topTracks": [
+        {
+          "title": "Mourning the Dead",
+          "plays": "1.9K plays"
+        },
+        {
+          "title": "Welcome to Derceto",
+          "plays": "1.7K plays"
+        },
+        {
+          "title": "The New Orleans Doom Shuffle",
+          "plays": "979 plays"
+        }
+      ]
+    },
+    {
+      "id": "avatar-frontiers-of-pandora",
+      "title": "Avatar: Frontiers of Pandora (Original Game Soundtrack)",
+      "game": "Avatar: Frontiers of Pandora",
+      "composers": [
+        "Pinar Toprak"
+      ],
+      "date": "2023-12-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/avatar-frontiers-of-pandora",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Avatar%3A+Frontiers+of+Pandora+%28Original+Game+Soundtrack%29+Avatar%3A+Frontiers+of+Pandora+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_8quFfxxlE4Y",
+      "art": "https://yt3.googleusercontent.com/g0SRKticN-uZ33_FIH4E60a-vh-QkdAgrG7MvY8ffkXuqpeos9lFzRKxZXCDw2D4NiwIdu1eUj48wLjt=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Massive Entertainment",
+      "topTracks": [
+        {
+          "title": "The People's Cry (Main Theme)",
+          "plays": "259K plays"
+        },
+        {
+          "title": "Song of the Sarentu",
+          "plays": "64K plays"
+        },
+        {
+          "title": "First Flight",
+          "plays": "45K plays"
+        }
+      ]
+    },
+    {
+      "id": "against-the-storm",
+      "title": "Against the Storm (Original Game Soundtrack)",
+      "game": "Against the Storm",
+      "composers": [
+        "Mikołaj Kurpios"
+      ],
+      "date": "2023-12-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/against-the-storm",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Against+the+Storm+%28Original+Game+Soundtrack%29+Against+the+Storm+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xGGZO7BmRhl",
+      "art": "https://yt3.googleusercontent.com/8z-78w-EVb74Wf5_e-Dzv1p49IB2orFgHABAeZGwDmBgJfgwoiZcWu1-SSstiULLowR7Bdzy7V9OhjI=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Eremite Games",
+      "topTracks": [
+        {
+          "title": "Forest Lights",
+          "plays": "31K plays"
+        },
+        {
+          "title": "Scorched Queen",
+          "plays": "23K plays"
+        },
+        {
+          "title": "Harvest Time",
+          "plays": "22K plays"
+        }
+      ]
+    },
+    {
+      "id": "dying-light-the-beast",
+      "title": "Dying Light: The Beast (Original Game Soundtrack)",
+      "game": "Dying Light: The Beast",
+      "composers": [
+        "Olivier Deriviere"
+      ],
+      "date": "2025-09-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dying-light-the-beast",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dying+Light%3A+The+Beast+%28Original+Game+Soundtrack%29+Dying+Light%3A+The+Beast+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_c7IvIxQC2up",
+      "art": "https://yt3.googleusercontent.com/WjLsFNatUEN2HEd1_Z81uOrVi7Cx0XmJDiniYeKJCzoSH2TqKJGD9gfGj8isOKZ-eGsOXJd1b_UHjSzs0g=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Techland",
+      "topTracks": [
+        {
+          "title": "A Changed Man",
+          "plays": "1.5M plays"
+        },
+        {
+          "title": "An Angry Man",
+          "plays": "636K plays"
+        },
+        {
+          "title": "Kyle",
+          "plays": "436K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-plucky-squire",
+      "title": "The Plucky Squire (Original Soundtrack)",
+      "game": "The Plucky Squire",
+      "composers": [
+        "Mike Georgiades"
+      ],
+      "date": "2024-09-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-plucky-squire",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Plucky+Squire+%28Original+Soundtrack%29+The+Plucky+Squire+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_JjHZO9K3c0g",
+      "art": "https://yt3.googleusercontent.com/l2UiRgB_uJ_w0-hjUoijgF_8s_gnDWw8GK35dDtt_z721Zc9g8ghRYSiTkzZujRW92T6NcAbssUjyqL4=w544-h544-l90-rj",
+      "notable": true,
+      "company": "All Possible Futures",
+      "topTracks": [
+        {
+          "title": "The Plucky Squire Theme",
+          "plays": "3K plays"
+        },
+        {
+          "title": "Intro Theme",
+          "plays": "1.2K plays"
+        },
+        {
+          "title": "Honey Peak",
+          "plays": "1.2K plays"
+        }
+      ]
+    },
+    {
+      "id": "suicide-squad-kill-the-justice-league",
+      "title": "Suicide Squad: Kill the Justice League (Original Video Game Soundtrack)",
+      "game": "Suicide Squad: Kill the Justice League",
+      "composers": [
+        "Rupert Cross",
+        "Nick Arundel"
+      ],
+      "date": "2024-02-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/suicide-squad-kill-the-justice-league",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Suicide+Squad%3A+Kill+the+Justice+League+%28Original+Video+Game+Soundtrack%29+Suicide+Squad%3A+Kill+the+Justice+League+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_RKze2j2Noef",
+      "art": "https://yt3.googleusercontent.com/5znjOy4yr-DkFM7b_yOERg9UUaVKqR2ytnB37WCt_pcjk8EBqBRda5_EY3fcmxSwwFPkAg9FDnV7KXlF=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Rocksteady Studios",
+      "topTracks": [
+        {
+          "title": "The Batman Experience",
+          "plays": "71K plays"
+        },
+        {
+          "title": "Squad Up! (Main Theme from \"Suicide Squad: Kill the Justice League\")",
+          "plays": "68K plays"
+        },
+        {
+          "title": "This Is Super Bad",
+          "plays": "62K plays"
+        }
+      ]
+    },
+    {
+      "id": "granblue-fantasy-relink",
+      "title": "GRANBLUE FANTASY: Relink ORIGINAL SOUNDTRACK",
+      "game": "Granblue Fantasy: Relink",
+      "composers": [
+        "Tsutomu Narita"
+      ],
+      "date": "2024-02-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/granblue-fantasy-relink",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=GRANBLUE+FANTASY%3A+Relink+ORIGINAL+SOUNDTRACK+Granblue+Fantasy%3A+Relink+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_1Qb6H19EFbA",
+      "art": "https://yt3.googleusercontent.com/eF58L3_KHBiSJBvGepON8mzaldV1DLvr6okUy4bzVgy5Mq83VsaRo3dWaGOTJD4MGua-zDv860UGFWc=w544-h544-s-l90-rj",
+      "notable": true,
+      "company": "Cygames Osaka",
+      "topTracks": [
+        {
+          "title": "End of Ragnarok",
+          "plays": "1.5M plays"
+        },
+        {
+          "title": "黒銀の翼 by STELLA MAGNA -Songs from GRANBLUE FANTASY- - Wings of Terror by STELLA MAGNA: Songs from Granblue Fantasy",
+          "plays": "1.5M plays"
+        },
+        {
+          "title": "Burning Out the Blue",
+          "plays": "1.2M plays"
+        }
+      ]
+    },
+    {
+      "id": "life-is-strange-double-exposure",
+      "title": "Life is Strange: Double Exposure (Official Soundtrack)",
+      "game": "Life is Strange: Double Exposure",
+      "composers": [
+        "Tessa Rose Jackson",
+        "FFM"
+      ],
+      "date": "2024-10-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/life-is-strange-double-exposure",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Life+is+Strange%3A+Double+Exposure+%28Official+Soundtrack%29+Life+is+Strange%3A+Double+Exposure+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_bJUntwBE9D6",
+      "art": "https://yt3.googleusercontent.com/cYXj94XL55FXRCPz4IrpszKF6743Hip6-ha9dNhcNxSydt_mMZrpZMkgnTHf5JWbAnUjX3LxULZOmt1L=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Deck Nine",
+      "topTracks": [
+        {
+          "title": "Illusion (From \"Life is Strange\")",
+          "plays": "453K plays"
+        },
+        {
+          "title": "Wake (From \"Life is Strange\")",
+          "plays": "210K plays"
+        },
+        {
+          "title": "So This Is Lonely (From \"Life is Strange\")",
+          "plays": "139K plays"
+        }
+      ]
+    },
+    {
+      "id": "rematch",
+      "title": "Rematch (Original Game Soundtrack)",
+      "game": "Rematch",
+      "composers": [
+        "Remi Gallego"
+      ],
+      "date": "2025-06-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/rematch--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rematch+%28Original+Game+Soundtrack%29+Rematch+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_0wjJbVUJUoP",
+      "art": "https://yt3.googleusercontent.com/QcQAMe8gZvdTWpaDdHR1dzIQWuFSHLexlEPZXRMQgnPFnn_OQ18peo9ThdAJi5v_go2C3-O3-AUUOPAd=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Sloclap",
+      "topTracks": [
+        {
+          "title": "Coliseum",
+          "plays": "13K plays"
+        },
+        {
+          "title": "Jungle",
+          "plays": "7.4K plays"
+        },
+        {
+          "title": "Flower Field",
+          "plays": "6.2K plays"
+        }
+      ]
+    },
+    {
+      "id": "disney-dreamlight-valley",
+      "title": "Disney Dreamlight Valley (Original Video Game Soundtrack)",
+      "game": "Disney Dreamlight Valley",
+      "composers": [
+        "Gameloft"
+      ],
+      "date": "2023-12-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/disney-dreamlight-valley",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Disney+Dreamlight+Valley+%28Original+Video+Game+Soundtrack%29+Disney+Dreamlight+Valley+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7Ls5PzmsNfy",
+      "art": "https://yt3.googleusercontent.com/cnJBfinfLA7x2HJ_9eGoWrLUoToeNQEDan3K4stAfv_QXrHjQHJcmrZqIvN4tBmZqd1z4q1UP8kuC4PM=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Gameloft",
+      "topTracks": [
+        {
+          "title": "Welcome To Dreamlight Valley",
+          "plays": "12K plays"
+        },
+        {
+          "title": "You've Got a Friend in Me (Toy Story Realm)",
+          "plays": "9.8K plays"
+        },
+        {
+          "title": "How Far I'll Go (Moana Realm)",
+          "plays": "8.4K plays"
+        }
+      ]
+    },
+    {
+      "id": "mewgenics",
+      "title": "Mewgenics (Original Soundtrack)",
+      "game": "Mewgenics",
+      "composers": [
+        "Ridiculon"
+      ],
+      "date": "2026-02-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mewgenics",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mewgenics+%28Original+Soundtrack%29+Mewgenics+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_k7iIFue6LQj",
+      "art": "https://yt3.googleusercontent.com/ROxBawOGWb7E22rzU4eXdMpl40JhO6UlWMa6VjlU7OovcE1Qla-5BMDBfMUBradRrRYKbLBt6W9R9RQ=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Edmund McMillen",
+      "topTracks": [
+        {
+          "title": "Guillotina",
+          "plays": "1.4M plays"
+        },
+        {
+          "title": "Eatin' Rats",
+          "plays": "852K plays"
+        },
+        {
+          "title": "Them Kitty Bones",
+          "plays": "768K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-crew-motorfest",
+      "title": "The Crew: Motorfest (Original Game Soundtrack)",
+      "game": "The Crew: Motorfest",
+      "composers": [
+        "Dirty Two Club, Blue Stahli, & Ribongia"
+      ],
+      "date": "2023-09-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-crew-motorfest",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Crew%3A+Motorfest+%28Original+Game+Soundtrack%29+The+Crew%3A+Motorfest+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_noIVzgQlsbI",
+      "art": "https://yt3.googleusercontent.com/J5Q9PzFVts5dszJbLAv4Kou4mHgWAqIH3g6TFdDuxmdDsgkfVde3tILAm7jQ2rzLn2nMEDOixpTwv3KH=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ivory Tower",
+      "topTracks": [
+        {
+          "title": "Speed Tribe",
+          "plays": "127K plays"
+        },
+        {
+          "title": "Ho'oponopono",
+          "plays": "97K plays"
+        },
+        {
+          "title": "Look Alive!",
+          "plays": "83K plays"
+        }
+      ]
+    },
+    {
+      "id": "skull-and-bones",
+      "title": "Skull and Bones (Original Game Soundtrack)",
+      "game": "Skull and Bones",
+      "composers": [
+        "Junkie XL"
+      ],
+      "date": "2024-02-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/skull-and-bones",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Skull+and+Bones+%28Original+Game+Soundtrack%29+Skull+and+Bones+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_LXrseYZhRpa",
+      "art": "https://yt3.googleusercontent.com/bmPdUErDzEjuM2Jhla5-JrjlHtS-q-79-BQX5n8q2cEw2Dzxbq75vsmcUsnuggEuUsQcLd06NeI59f2V=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ubisoft Singapore",
+      "topTracks": [
+        {
+          "title": "An Untold Story (Main Theme)",
+          "plays": "9K plays"
+        },
+        {
+          "title": "Outgunned",
+          "plays": "6.2K plays"
+        },
+        {
+          "title": "Uncharted Waters",
+          "plays": "5.9K plays"
+        }
+      ]
+    },
+    {
+      "id": "silent-hill-the-short-message",
+      "title": "SILENT HILL: The Short Message ORIGINAL SOUNDTRACK",
+      "game": "Silent Hill: The Short Message",
+      "composers": [
+        "AKIRA YAMAOKA"
+      ],
+      "date": "2024-01-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/silent-hill-the-short-message",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SILENT+HILL%3A+The+Short+Message+ORIGINAL+SOUNDTRACK+Silent+Hill%3A+The+Short+Message+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_aPcGgkBcmQi",
+      "art": "https://yt3.googleusercontent.com/M0cryfIwldLoX4YtZM9paprWmgyG0qXyRLPFpXOODoxMZ98Ty9zDTZyCezr_4H7vOSDWH_CIjdPZMiGi=w544-h544-l90-rj",
+      "notable": true,
+      "company": "HexaDrive",
+      "topTracks": [
+        {
+          "title": "My Heroine",
+          "plays": "127K plays"
+        },
+        {
+          "title": "My Heroine (Game-Size Version)",
+          "plays": "127K plays"
+        },
+        {
+          "title": "From Silence, Whispers Awake",
+          "plays": "38K plays"
+        }
+      ]
+    },
+    {
+      "id": "vampire-the-masquerade-bloodlines-2",
+      "title": "Vampire: The Masquerade - Bloodlines 2 (Original Soundtrack)",
+      "game": "Vampire: The Masquerade - Bloodlines 2",
+      "composers": [
+        "Craig Stuart Garfinkle",
+        "Eímear Noone",
+        "Rik Schaffer",
+        "Mike Lane"
+      ],
+      "date": "2025-10-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/vampire-the-masquerade-bloodlines-2",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Vampire%3A+The+Masquerade+-+Bloodlines+2+%28Original+Soundtrack%29+Vampire%3A+The+Masquerade+-+Bloodlines+2+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mJO9vsRUJXh",
+      "art": "https://yt3.googleusercontent.com/uoi_try_Y8XXgcnwWBnwDZ1DAXet_GLVPfun501ue1hWU0c7GmIMR9BzMOmIJh-_OJY5iOf6uFRXwEs=w544-h544-l90-rj",
+      "notable": true,
+      "company": "The Chinese Room",
+      "topTracks": [
+        {
+          "title": "Is It All Worth It",
+          "plays": "373K plays"
+        },
+        {
+          "title": "Downtown Theme (Alternative Version)",
+          "plays": "215K plays"
+        },
+        {
+          "title": "Open Season",
+          "plays": "124K plays"
+        }
+      ]
+    },
+    {
+      "id": "planet-crafter",
+      "title": "Planet Crafter (Original Game Soundtrack)",
+      "game": "Planet Crafter",
+      "composers": [
+        "Benjamin Young"
+      ],
+      "date": "2024-04-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/planet-crafter",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Planet+Crafter+%28Original+Game+Soundtrack%29+Planet+Crafter+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_s3s4DK63LPV",
+      "art": "https://yt3.googleusercontent.com/SmTqfLV4R1l22_6UVpwoxDKMYs6pWB2FfkLTexwddTQqLOuO02MbOMs0ACrW7SFaqYSWlBHYhMrB1rtkIg=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Miju Games",
+      "topTracks": [
+        {
+          "title": "Base Building",
+          "plays": "46K plays"
+        },
+        {
+          "title": "Unfolding Expanse",
+          "plays": "20K plays"
+        },
+        {
+          "title": "Nothing but Sand",
+          "plays": "15K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-casting-of-frank-stone",
+      "title": "The Casting of Frank Stone (Original Game Soundtrack)",
+      "game": "The Casting of Frank Stone",
+      "composers": [
+        "Boxed Ape"
+      ],
+      "date": "2024-09-03",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-casting-of-frank-stone",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Casting+of+Frank+Stone+%28Original+Game+Soundtrack%29+The+Casting+of+Frank+Stone+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HQ0lEVwWzaZ",
+      "art": "https://yt3.googleusercontent.com/wEme1sbRjatTg6tw1ysbyB1joG13XL7fOn0XDNe3CjYkb7nVAhQa90zcyLiLI4g8lPp2vAKB3kJmcGut=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Supermassive Games",
+      "topTracks": [
+        {
+          "title": "Monster in the House",
+          "plays": "2.6K plays"
+        },
+        {
+          "title": "An Endless Hunt",
+          "plays": "2.2K plays"
+        },
+        {
+          "title": "Frank Stone Will Be Reborn",
+          "plays": "1.8K plays"
+        }
+      ]
+    },
+    {
+      "id": "disney-speedstorm",
+      "title": "Disney Speedstorm (Original Video Game Soundtrack)",
+      "game": "Disney Speedstorm",
+      "composers": [
+        "Gameloft"
+      ],
+      "date": "2023-07-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/disney-speedstorm",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Disney+Speedstorm+%28Original+Video+Game+Soundtrack%29+Disney+Speedstorm+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_N06I5y8AHiS",
+      "art": "https://yt3.googleusercontent.com/o3wAEBQYXLXWZhIlk8wJ6D0ck8OzxW8aGJ9OhpfG_sUvOVatwOdzE971lBubwG2emQ16v1605a_T8uoLBA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Gameloft",
+      "topTracks": [
+        {
+          "title": "The Gospel Truth",
+          "plays": "56K plays"
+        },
+        {
+          "title": "Yo Ho (A Pirate's Life for Me)",
+          "plays": "48K plays"
+        },
+        {
+          "title": "He Mele No Lilo",
+          "plays": "46K plays"
+        }
+      ]
+    },
+    {
+      "id": "gray-zone-warfare",
+      "title": "Gray Zone Warfare (Original Game Soundtrack)",
+      "game": "Gray Zone Warfare",
+      "composers": [
+        "MADFINGER Games"
+      ],
+      "date": "2024-04-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gray-zone-warfare",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gray+Zone+Warfare+%28Original+Game+Soundtrack%29+Gray+Zone+Warfare+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_4I5ePKE14NR",
+      "art": "https://yt3.googleusercontent.com/DxOKaGoEah_gk9t1jJDxnJPhH9S8DxCWqadog5pt3aiNGkg-7geLhVw0jS5UdYLswplIJT7ii7DLrYku=w544-h544-l90-rj",
+      "notable": true,
+      "company": "MADFINGER Games",
+      "topTracks": [
+        {
+          "title": "Main Theme",
+          "plays": "1.6K plays"
+        },
+        {
+          "title": "Spearhead",
+          "plays": "1.1K plays"
+        },
+        {
+          "title": "Main Theme Variation",
+          "plays": "618 plays"
+        }
+      ]
+    },
+    {
+      "id": "off-the-grid",
+      "title": "Off The Grid (Original Game Soundtrack)",
+      "game": "Off The Grid",
+      "composers": [
+        "Lorne Balfe"
+      ],
+      "date": "2025-07-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/off-the-grid--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Off+The+Grid+%28Original+Game+Soundtrack%29+Off+The+Grid+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hJvIS0y81tU",
+      "art": "https://yt3.googleusercontent.com/M8y53vpGRKczsUIzw0wgjr5of89LGVO69OHOQBRYFZlGlrfx4hODwr8VauksWbGhe6N-SbXp-yEx53IF=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Gunzilla Games",
+      "topTracks": [
+        {
+          "title": "Welcome to the Island",
+          "plays": "19K plays"
+        },
+        {
+          "title": "Cyberlimbs",
+          "plays": "3.5K plays"
+        },
+        {
+          "title": "Battle Royale With Cheese",
+          "plays": "3.1K plays"
+        }
+      ]
+    },
+    {
+      "id": "replaced",
+      "title": "REPLACED Original Soundtrack",
+      "game": "Replaced",
+      "composers": [
+        "Igor Gritsay",
+        "aygad"
+      ],
+      "date": "2026-04-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/replaced",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=REPLACED+Original+Soundtrack+Replaced+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_71UiwqfjzZ2",
+      "art": "https://yt3.googleusercontent.com/3isjsAk6YhEZQE8G-4j2r_QyO4w3LxANXFiQX0pVrrtezXcr6zQaboro2iXSfywG-6Hfn46mieJQ5rYE=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Sad Cat Studios",
+      "topTracks": [
+        {
+          "title": "Dusk (feat. Marina Thorik)",
+          "plays": "138K plays"
+        },
+        {
+          "title": "Rust (feat. Marina Thorik)",
+          "plays": "65K plays"
+        },
+        {
+          "title": "Void (feat. Marina Thorik)",
+          "plays": "48K plays"
+        }
+      ]
+    },
+    {
+      "id": "lego-batman-legacy-of-the-dark-knight",
+      "title": "LEGO® Batman™: Legacy of the Dark Knight (Original Video Game Soundtrack)",
+      "game": "LEGO Batman: Legacy of the Dark Knight",
+      "composers": [
+        "Simon Withenshaw"
+      ],
+      "date": "2026-05-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/lego-batman-legacy-of-the-dark-knight",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=LEGO%C2%AE+Batman%E2%84%A2%3A+Legacy+of+the+Dark+Knight+%28Original+Video+Game+Soundtrack%29+LEGO+Batman%3A+Legacy+of+the+Dark+Knight+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_K7RvHDOpxEZ",
+      "art": "https://yt3.googleusercontent.com/YZBCuOl4zbUBsVn0JGj5UjCXoFH89nUARSLD9_GXsmedSZ0OEgoB9VjvtKABw0qumtww7gLkTiu9CqNV=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Traveller's Tales",
+      "topTracks": [
+        {
+          "title": "LEGO Batman: Legacy of the Dark Knight Theme",
+          "plays": "25K plays"
+        },
+        {
+          "title": "Rough and Tumble",
+          "plays": "3.9K plays"
+        },
+        {
+          "title": "LEGO Batman: Legacy of the Dark Knight End Credits",
+          "plays": "3.9K plays"
+        }
+      ]
+    },
+    {
+      "id": "we-were-here-expeditions-the-friendship",
+      "title": "We Were Here Expeditions: The FriendShip (Original Game Soundtrack)",
+      "game": "We Were Here Expeditions: The FriendShip",
+      "composers": [
+        "Total Mayhem Games"
+      ],
+      "date": "2023-09-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/we-were-here-expeditions-the-friendship",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=We+Were+Here+Expeditions%3A+The+FriendShip+%28Original+Game+Soundtrack%29+We+Were+Here+Expeditions%3A+The+FriendShip+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qPfyrNAjuu7",
+      "art": "https://yt3.googleusercontent.com/e0VZSuUAeFBmT87B9iHk9V7BP3riM63E8KGaa_UVzOKSnZy40qSfgB7I66Y_9TtLcJrV8UrsAfS9jqRW=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Total Mayhem Games",
+      "topTracks": [
+        {
+          "title": "After the Storm",
+          "plays": "6.9K plays"
+        },
+        {
+          "title": "Teamwork",
+          "plays": "4.5K plays"
+        },
+        {
+          "title": "Lost at Sea",
+          "plays": "2.8K plays"
+        }
+      ]
+    },
+    {
+      "id": "mullet-madjack",
+      "title": "MULLET MADJACK (Original Soundtrack)",
+      "game": "Mullet Madjack",
+      "composers": [
+        "Fernando Pepe & Mateus Polati"
+      ],
+      "date": "2024-05-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mullet-madjack",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=MULLET+MADJACK+%28Original+Soundtrack%29+Mullet+Madjack+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_VBXbUfEr5bs",
+      "art": "https://yt3.googleusercontent.com/INLR18NZnsH1CzwifmOorsg4u2LfVYRNouEflIdM1msUZkzaT1kSuT6D7hS-K1P0RQ0DQSGJ_5QPJtPr=w544-h544-l90-rj",
+      "notable": true,
+      "company": "HAMMER95",
+      "topTracks": [
+        {
+          "title": "Jack the Mullet Mad",
+          "plays": "34K plays"
+        },
+        {
+          "title": "This is the Grid",
+          "plays": "13K plays"
+        },
+        {
+          "title": "Nakamura Plaza",
+          "plays": "11K plays"
+        }
+      ]
+    },
+    {
+      "id": "mouse-p-i-for-hire",
+      "title": "MOUSE: P.I. For Hire (Original Game Soundtrack)",
+      "game": "Mouse: P.I. For Hire",
+      "composers": [
+        "Patryk Scelina"
+      ],
+      "date": "2026-04-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mouse-pi-for-hire--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=MOUSE%3A+P.I.+For+Hire+%28Original+Game+Soundtrack%29+Mouse%3A+P.I.+For+Hire+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_AL2Bm0T7acg",
+      "art": "https://yt3.googleusercontent.com/U3y63rKUd5A_vu3bJH2mvuoe_1yilkPJ72yfrM8AlKYxgXhezcErxFLswEOrvKL0rzk5ruZ_R9XYxjRr=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Fumi Games",
+      "topTracks": [
+        {
+          "title": "Good Mouse",
+          "plays": "2.9M plays"
+        },
+        {
+          "title": "Jack Pepper's Theme",
+          "plays": "64K plays"
+        },
+        {
+          "title": "Chasing Milford Soyer",
+          "plays": "40K plays"
+        }
+      ]
+    },
+    {
+      "id": "unicorn-overlord",
+      "title": "Unicorn Overlord Original Soundtrack",
+      "game": "Unicorn Overlord",
+      "composers": [
+        "Mitsuhiro Kaneda",
+        "Basiscape"
+      ],
+      "date": "2024-03-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/unicorn-overlord--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Unicorn+Overlord+Original+Soundtrack+Unicorn+Overlord+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mR28EGS1aMB",
+      "art": "https://yt3.googleusercontent.com/Qfsy32SadlyxNMG2_8d1pntjFGSowvgX91q8M9I2lJ0GJ41mxrRvdH-h-c7ES7RowNWQxRScIQy_0oE=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Vanillaware",
+      "topTracks": [
+        {
+          "title": "Farde mal diavolo, ～悪を滅し、来たれり～ - Farde mal diavolo -Destroy Evil, then Come-",
+          "plays": "125K plays"
+        },
+        {
+          "title": "強者との戦い - Fighting off the Powerful",
+          "plays": "125K plays"
+        },
+        {
+          "title": "ドラケンガルド －竜の国を継ぐ者－ - Drakenhold -Heir to the Dragonlands-",
+          "plays": "31K plays"
+        }
+      ]
+    },
+    {
+      "id": "rv-there-yet",
+      "title": "RV There Yet? (Original Soundtrack)",
+      "game": "RV There Yet?",
+      "composers": [
+        "Ghostwood Empire"
+      ],
+      "date": "2025-10-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/rv-there-yet--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=RV+There+Yet%3F+%28Original+Soundtrack%29+RV+There+Yet%3F+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mvFTLXBPJ1L",
+      "art": "https://yt3.googleusercontent.com/wf6jSMT_Q62X0XpzktFfYclAhYQ7bgJx0OIytrQd6X2eOuTR9ChIlslM74sTIWjyc38LyvaLlbHf3tDj=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Nuggets Entertainment",
+      "topTracks": [
+        {
+          "title": "Tiramisu, I Love You",
+          "plays": "21K plays"
+        },
+        {
+          "title": "Relax Embrace",
+          "plays": "18K plays"
+        },
+        {
+          "title": "Run Winnebago Run",
+          "plays": "14K plays"
+        }
+      ]
+    },
+    {
+      "id": "absolum",
+      "title": "Absolum (Original Game Soundtrack)",
+      "game": "Absolum",
+      "composers": [
+        "Gareth Coker"
+      ],
+      "date": "2025-10-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/absolum",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Absolum+%28Original+Game+Soundtrack%29+Absolum+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uxNU4s9Mltm",
+      "art": "https://yt3.googleusercontent.com/83QZedG4EUjX_hT9Z-Y2XVPiqMKEVIfXmivm_FB07txsQ69my_b-2bXWZBy6RsuvtKrmU8lr2kJzvY5O=w544-h544-l90-rj",
+      "notable": true,
+      "company": "DotEmu",
+      "topTracks": [
+        {
+          "title": "The Underking",
+          "plays": "874K plays"
+        },
+        {
+          "title": "Morta Mima",
+          "plays": "62K plays"
+        },
+        {
+          "title": "The Resistance (Main Theme)",
+          "plays": "38K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-texas-chain-saw-massacre",
+      "title": "The Texas Chain Saw Massacre (Original Game Soundtrack)",
+      "game": "The Texas Chain Saw Massacre",
+      "composers": [
+        "Ross Tregenza"
+      ],
+      "date": "2023-08-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-texas-chain-saw-massacre",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Texas+Chain+Saw+Massacre+%28Original+Game+Soundtrack%29+The+Texas+Chain+Saw+Massacre+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2VRDFX5F6E7",
+      "art": "https://yt3.googleusercontent.com/7Bmk4oao8FaLpRl-Ud5x_aehoAo1AlhzipexYLoXNx4Zdci3uGvCbjxc0oef0TSsmTYdj59-RdEXMqw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Sumo Nottingham",
+      "topTracks": [
+        {
+          "title": "Bizarre Crimes (feat. Wes Keltner)",
+          "plays": "27K plays"
+        },
+        {
+          "title": "Who Will Survive (Overture)",
+          "plays": "15K plays"
+        },
+        {
+          "title": "The Massacre (Main Theme) (feat. Wes Keltner)",
+          "plays": "15K plays"
+        }
+      ]
+    },
+    {
+      "id": "anomaly-agent",
+      "title": "Anomaly Agent (Original Game Soundtrack)",
+      "game": "Anomaly Agent",
+      "composers": [
+        "Ali Barutçuoğlu"
+      ],
+      "date": "2024-01-24",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/anomaly-agent",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Anomaly+Agent+%28Original+Game+Soundtrack%29+Anomaly+Agent+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_PPv4L8vQAfj",
+      "art": "https://yt3.googleusercontent.com/DTZt-jKMWSbX7lQQIw07ML0yu0OL47lGxI9QIieFBsBnedUkgNXelHa51v6mxsf1ZnJCk9dLsv5a18rgCQ=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Phew Phew Games",
+      "topTracks": [
+        {
+          "title": "Anomaly Mayhem",
+          "plays": "27K plays"
+        },
+        {
+          "title": "Metro March",
+          "plays": "23K plays"
+        },
+        {
+          "title": "Can't Stop Dancing",
+          "plays": "20K plays"
+        }
+      ]
+    },
+    {
+      "id": "rise-of-the-ronin",
+      "title": "Rise of the Ronin (Original Game Soundtrack)",
+      "game": "Rise of the Ronin",
+      "composers": [
+        "Inon Zur"
+      ],
+      "date": "2024-03-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/rise-of-the-ronin",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rise+of+the+Ronin+%28Original+Game+Soundtrack%29+Rise+of+the+Ronin+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Lk2EHnBYX2F",
+      "art": "https://yt3.googleusercontent.com/f3abfdj5aKV8o2n_7KTVwnE2-nMWRQOaPHbIxHwQ6in1_89X5Ir7QISxfPFdQhk174_dV8GYO1UOJWfw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Team NINJA",
+      "topTracks": [
+        {
+          "title": "Main Theme",
+          "plays": "56K plays"
+        },
+        {
+          "title": "Loneliness",
+          "plays": "29K plays"
+        },
+        {
+          "title": "Battle Pro-Shogunate II",
+          "plays": "29K plays"
+        }
+      ]
+    },
+    {
+      "id": "ninja-gaiden-ragebound",
+      "title": "NINJA GAIDEN: Ragebound (Original Game Soundtrack)",
+      "game": "Ninja Gaiden: Ragebound",
+      "composers": [
+        "Sergio de Prado"
+      ],
+      "date": "2025-07-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ninja-gaiden-ragebound",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=NINJA+GAIDEN%3A+Ragebound+%28Original+Game+Soundtrack%29+Ninja+Gaiden%3A+Ragebound+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xcufiaeKLgg",
+      "art": "https://yt3.googleusercontent.com/XblxHWSHekUMXddXiYLPsSkRouwMoxaimYIiQD45OG8qiocwZSonyGTkY1Zhxis8CPklqnNAk_PofXLS=w544-h544-l90-rj",
+      "notable": true,
+      "company": "The Game Kitchen",
+      "topTracks": [
+        {
+          "title": "Unbreakable Determination (Ragebound Version)",
+          "plays": "106K plays"
+        },
+        {
+          "title": "Kenji's Theme",
+          "plays": "32K plays"
+        },
+        {
+          "title": "Requiem (Ragebound Version)",
+          "plays": "21K plays"
+        }
+      ]
+    },
+    {
+      "id": "kinitopet",
+      "title": "KinitoPet (Original Video Game Soundtrack)",
+      "game": "KinitoPet",
+      "composers": [
+        "Joel Tumelty"
+      ],
+      "date": "2024-01-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kinitopet--1",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=KinitoPet+%28Original+Video+Game+Soundtrack%29+KinitoPet+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hpuGH01gufo",
+      "art": "https://yt3.googleusercontent.com/ZuAJIhNSj8hh6XD-vuu0IElR8g2rQAtSnfWYw_D02eURn-DyCZkP9j8AsjIMWEdPBhXg9-cIS4uUU2-O=w544-h544-l90-rj",
+      "notable": true,
+      "company": "troy_en",
+      "topTracks": [
+        {
+          "title": "A World I Built For You",
+          "plays": "2.7M plays"
+        },
+        {
+          "title": "Bliss",
+          "plays": "444K plays"
+        },
+        {
+          "title": "Deep Below The Code",
+          "plays": "220K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-first-berserker-khazan",
+      "title": "The First Berserker: Khazan (Original Game Soundtrack)",
+      "game": "The First Berserker: Khazan",
+      "composers": [
+        "Lee Jaekwang (NEOPLE)",
+        "Go Younghwa (NEOPLE)"
+      ],
+      "date": "2025-03-27",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-first-berserker-khazan",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+First+Berserker%3A+Khazan+%28Original+Game+Soundtrack%29+The+First+Berserker%3A+Khazan+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_BfcS2CpFERr",
+      "art": "https://yt3.googleusercontent.com/Xy8Q4xz3LkvZjupd_k-WtHmnR1MrPByUKgABSEikULZjfayQgKelzGeIJ0e4atYnPOcvarzVsYNDelSdXg=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Neople",
+      "topTracks": [
+        {
+          "title": "Bride of Despair I",
+          "plays": "214K plays"
+        },
+        {
+          "title": "Master of Chaos II",
+          "plays": "67K plays"
+        },
+        {
+          "title": "Bride of Despair II",
+          "plays": "55K plays"
+        }
+      ]
+    },
+    {
+      "id": "atlas-fallen",
+      "title": "Atlas Fallen (Original Game Soundtrack)",
+      "game": "Atlas Fallen",
+      "composers": [
+        "Helge Borgarts"
+      ],
+      "date": "2023-08-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/atlas-fallen",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Atlas+Fallen+%28Original+Game+Soundtrack%29+Atlas+Fallen+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ftCfrWWJiYh",
+      "art": "https://yt3.googleusercontent.com/CswBxeO8XUoktu7TgRRUSQw-QBmC9aAndtMKftfhHlWl5Q9ui8rq9l-Y6yR6qPfqBfJogoIXLmw0UcW4aw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Deck13 Interactive",
+      "topTracks": [
+        {
+          "title": "Rise from the Dust",
+          "plays": "889 plays"
+        },
+        {
+          "title": "Main Theme Felt Piano Version (feat. Thomas Stanger)",
+          "plays": "510 plays"
+        },
+        {
+          "title": "Looking at the Past",
+          "plays": "477 plays"
+        }
+      ]
+    },
+    {
+      "id": "lego-horizon-adventures",
+      "title": "LEGO® Horizon Adventures™ (Original Game Soundtrack)",
+      "game": "LEGO Horizon Adventures",
+      "composers": [
+        "Homay Schmitz"
+      ],
+      "date": "2024-11-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/lego-horizon-adventures",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=LEGO%C2%AE+Horizon+Adventures%E2%84%A2+%28Original+Game+Soundtrack%29+LEGO+Horizon+Adventures+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_IG4AsOs4chS",
+      "art": "https://yt3.googleusercontent.com/ALLbS73nLajAvvfr3mIvPO4boKd5EepQd_xmsRzwS0KKt2mPyBPX2NaK74oX48CN2jbP6ovIltG8IQ-p=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Guerrilla Games",
+      "topTracks": [
+        {
+          "title": "post-post apocalyptic dance party",
+          "plays": "103K plays"
+        },
+        {
+          "title": "Aloy's Adventures Theme",
+          "plays": "4.3K plays"
+        },
+        {
+          "title": "Moments of Training",
+          "plays": "1.7K plays"
+        }
+      ]
+    },
+    {
+      "id": "the-thaumaturge",
+      "title": "The Thaumaturge (Original Game Soundtrack)",
+      "game": "The Thaumaturge",
+      "composers": [
+        "Agnieszka Wlazły",
+        "Sebastian Syczyński"
+      ],
+      "date": "2024-03-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-thaumaturge",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Thaumaturge+%28Original+Game+Soundtrack%29+The+Thaumaturge+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GjjxTS3kYSe",
+      "art": "https://yt3.googleusercontent.com/clFSRK_VNoZ9ykIfEW-_kYyKdtOjp85o_q4SdV7WbsAejnsObQled-wFQIRaYJz5VrFUHI-u3BUUTGM9=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Fool's Theory",
+      "topTracks": [
+        {
+          "title": "Gut You with Love",
+          "plays": "7.3K plays"
+        },
+        {
+          "title": "Devoured by Desire",
+          "plays": "3.4K plays"
+        },
+        {
+          "title": "Wiktor with a W (feat. Sutari)",
+          "plays": "2.3K plays"
+        }
+      ]
+    },
+    {
+      "id": "house-flipper-2",
+      "title": "House Flipper 2 (Original Game Soundtrack)",
+      "game": "House Flipper 2",
+      "composers": [
+        "Richard Williams",
+        "張衞帆",
+        "Leszek Karczewski"
+      ],
+      "date": "2023-12-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/house-flipper-2",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=House+Flipper+2+%28Original+Game+Soundtrack%29+House+Flipper+2+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_SmgUc7pHcYz",
+      "art": "https://yt3.googleusercontent.com/Uq9Q17qNX20WzrFfJN2Gart9pHFKvFWeIsCVY2NHCUXD9f_o520KeLO2tRRMp777CARrMuZG42-dpeeq=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Empyrean",
+      "topTracks": [
+        {
+          "title": "Welcome to Pinnacove (Main Theme)",
+          "plays": "863 plays"
+        },
+        {
+          "title": "Seashell Sonata",
+          "plays": "851 plays"
+        },
+        {
+          "title": "Morning Coffee",
+          "plays": "805 plays"
+        }
+      ]
+    },
+    {
+      "id": "like-a-dragon-pirate-yakuza-in-hawaii",
+      "title": "Like A Dragon Pirate Yakuza in Hawaii (Original Soundtrack)",
+      "game": "Like a Dragon: Pirate Yakuza in Hawaii",
+      "composers": [
+        "SEGA"
+      ],
+      "date": "2025-02-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/like-a-dragon-pirate-yakuza-in-hawaii",
+          "seenAt": "2026-07-28T23:04:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Like+A+Dragon+Pirate+Yakuza+in+Hawaii+%28Original+Soundtrack%29+Like+a+Dragon%3A+Pirate+Yakuza+in+Hawaii+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_w8P6KJUcmjQ",
+      "art": "https://yt3.googleusercontent.com/3Ktlm9OBcx8q5anpXA1osc5VzjWEOcQ_XtDePhcGxXamWQRt22hzVhwtCMJ_XgbHGYIwjmfK7LKy8j4=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Ryu Ga Gotoku Studio",
+      "topTracks": [
+        {
+          "title": "24時間シンデレラ (Full Spec Edition) - 24 ZIKAN SINDERERA (Full Spec Edition)",
+          "plays": "12M plays"
+        },
+        {
+          "title": "GET TO THE TOP (Remix OF THE END)",
+          "plays": "1.9M plays"
+        },
+        {
+          "title": "幸せならいいや (Full Spec Edition) - SHIAWASE NARA IIYA (Full Spec Edition)",
+          "plays": "1.7M plays"
         }
       ]
     }
