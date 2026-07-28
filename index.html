@@ -154,6 +154,7 @@ const KEY = 'vgm-v1';
 const VIEWS = ['feed', 'queue', 'library'];
 const STATUSES = ['unsorted', 'queued', 'listened', 'hidden'];
 const LIB_SORTS = ['listenedOn', 'rating', 'date'];
+const FEED_SORTS = ['date', 'oldest', 'az', 'added'];
 let R = { updatedAt: null, releases: [] };   // shared data from the collector; never written here
 let LOADSTATE = 'loading';                    // loading | ok | empty | error
 let LOADERR = '';
@@ -166,7 +167,7 @@ function blank(){ return { status:'unsorted', rating:null, liked:false, note:'',
 function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', libSort:'listenedOn', libLiked:false, showHidden:false }; }
+function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', libSort:'listenedOn', libLiked:false, showHidden:false }; }
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -188,6 +189,7 @@ function validateState(d){
   const s = fresh();
   s.lastSeen = typeof d.lastSeen === 'number' ? d.lastSeen : 0;
   s.view = VIEWS.includes(d.view) ? d.view : 'feed';
+  s.feedSort = FEED_SORTS.includes(d.feedSort) ? d.feedSort : 'date';
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
   s.showHidden = d.showHidden === true;
@@ -232,6 +234,7 @@ function editEntry(id, fn){
 }
 function setView(v){ if(VIEWS.includes(v)){ S.view = v; save(); renderAll(); } }
 function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
+function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
 function toggleLibLiked(){ S.libLiked = !S.libLiked; save(); renderAll(); }
 function toggleQueued(id){ editEntry(id, e => {
   const on = e.status === 'queued';
@@ -292,14 +295,24 @@ function sorted(){
     firstSeen(b) - firstSeen(a) ||
     TRACKNO[b.id] - TRACKNO[a.id]);
 }
+function label(r){ return r.albumTitle || r.title; }
 function matches(r, q){
   if(!q) return true;
-  const hay = [r.title, r.game, ...(r.composers || []), E(r.id).note]
+  const hay = [r.title, r.albumTitle, r.game, ...(r.composers || []), E(r.id).note]
     .filter(Boolean).join(' ').toLowerCase();
   return hay.includes(q.toLowerCase());
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
-function feedRows(){ return sorted().filter(r => E(r.id).status !== 'hidden'); }
+function feedRows(){
+  const rows = sorted().filter(r => E(r.id).status !== 'hidden');
+  if(S.feedSort === 'oldest')
+    rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
+  else if(S.feedSort === 'az')
+    rows.sort((a, b) => label(a).toLowerCase().localeCompare(label(b).toLowerCase()));
+  else if(S.feedSort === 'added')
+    rows.sort((a, b) => firstSeen(b) - firstSeen(a) || TRACKNO[b.id] - TRACKNO[a.id]);
+  return rows;  // 'date' keeps the shared newest-first order
+}
 function queueRows(){
   return sorted().filter(r => E(r.id).status === 'queued')
     .sort((a, b) => dcmp(b.date, a.date) || dcmp(E(b.id).queuedOn, E(a.id).queuedOn) || TRACKNO[b.id] - TRACKNO[a.id]);
@@ -356,10 +369,16 @@ function renderTabs(){
 
 function renderControls(){
   const el = document.getElementById('subctl');
+  if(S.view === 'feed'){
+    const sorts = [['date', 'newest'], ['oldest', 'oldest'], ['az', 'a–z'], ['added', 'added']];
+    el.innerHTML = sorts.map(([k, name]) =>
+      `<button data-fs="${k}" class="${S.feedSort === k ? 'on' : ''}">${name}</button>`).join('');
+    return;
+  }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
   const sorts = [['listenedOn', 'heard on'], ['rating', 'rating'], ['date', 'released']];
-  el.innerHTML = sorts.map(([k, label]) =>
-    `<button data-ls="${k}" class="${S.libSort === k ? 'on' : ''}">${label}</button>`).join('') +
+  el.innerHTML = sorts.map(([k, name]) =>
+    `<button data-ls="${k}" class="${S.libSort === k ? 'on' : ''}">${name}</button>`).join('') +
     `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>`;
 }
 
@@ -398,11 +417,11 @@ function rowHtml(r, view, ghost){
   const art = r.art
     ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noart');this.remove()"></div>`
     : `<div class="rart noart"></div>`;
-  return `<div class="row${heard && view === 'feed' ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="link" aria-label="Open in YouTube Music: ${esc(r.title)}">
+  return `<div class="row${heard && view === 'feed' ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="link" aria-label="Open in YouTube Music: ${esc(label(r))}">
     ${art}
     <div class="rmain">
       <div class="rtop"><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span>${view === 'feed' && isNew(r) ? '<span class="new">NEW</span>' : ''}<time>${topDate}</time></div>
-      <div class="rtitle">${esc(r.title)}</div>
+      <div class="rtitle">${esc(label(r))}</div>
       ${sub ? `<div class="rsub">${esc(sub)}</div>` : ''}
       ${view === 'library' && e.note ? `<div class="rnote">“${esc(e.note)}”</div>` : ''}
       <div class="rmeta">${meta}</div>
@@ -470,7 +489,7 @@ function renderSheet(){
   const wasListened = E(SHEET.id).status === 'listened';
   wrap.innerHTML = `<div id="scrim"></div>
   <div id="sheet" role="dialog" aria-modal="true" aria-label="Log listen">
-    <div class="shead"><span class="tno">TRACK ${pad3(TRACKNO[SHEET.id] || 0)}</span><div class="stitle">${esc(r.title)}</div></div>
+    <div class="shead"><span class="tno">TRACK ${pad3(TRACKNO[SHEET.id] || 0)}</span><div class="stitle">${esc(label(r))}</div></div>
     <div class="slab">Listened on</div>
     <input type="date" id="sh-date" value="${esc(d.listenedOn)}">
     <div class="slab">Rating${d.rating != null ? ` <button id="sh-clear">clear</button>` : ''}</div>
@@ -514,6 +533,8 @@ document.querySelector('#tabbar .trow').addEventListener('click', e => {
   if(b) setView(b.dataset.v);
 });
 document.getElementById('subctl').addEventListener('click', e => {
+  const f = e.target.closest('button[data-fs]');
+  if(f){ setFeedSort(f.dataset.fs); return; }
   const s = e.target.closest('button[data-ls]');
   if(s){ setLibSort(s.dataset.ls); return; }
   if(e.target.closest('#libliked')) toggleLibLiked();

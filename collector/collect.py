@@ -169,6 +169,20 @@ def _query(title):
 _SOUNDTRACKY = re.compile(r"\b(soundtrack|ost|score|original sound)\b", re.IGNORECASE)
 
 
+def _hit_from(r):
+    n = normalize_title(r.get("title", ""))
+    composers = [a["name"] for a in r.get("artists", [])
+                 if a.get("name") and a["name"].lower() != "various artists"
+                 and normalize_title(a["name"]) != n]
+    if not composers:
+        return None  # only credit is the album's own name: too ambiguous
+    thumbs = sorted((t for t in r.get("thumbnails", []) if t.get("url")),
+                    key=lambda t: t.get("width") or 0)
+    return {"title": r["title"], "composers": composers,
+            "art": thumbs[-1]["url"] if thumbs else None,
+            "url": "https://music.youtube.com/browse/" + r["browseId"]}
+
+
 def _match_album(results, want_norm):
     """Strict: the album title must normalize to exactly the wanted name, must
     say it's a soundtrack, and must have a credited artist besides the game.
@@ -181,16 +195,27 @@ def _match_album(results, want_norm):
             continue
         if not _SOUNDTRACKY.search(r.get("title", "")):
             continue
-        composers = [a["name"] for a in r.get("artists", [])
-                     if a.get("name") and a["name"].lower() != "various artists"
-                     and normalize_title(a["name"]) != want_norm]
-        if not composers:
-            continue  # only credit was the game/band name itself: too ambiguous
-        thumbs = sorted((t for t in r.get("thumbnails", []) if t.get("url")),
-                        key=lambda t: t.get("width") or 0)
-        return {"title": r["title"], "composers": composers,
-                "art": thumbs[-1]["url"] if thumbs else None,
-                "url": "https://music.youtube.com/browse/" + r["browseId"]}
+        hit = _hit_from(r)
+        if hit:
+            return hit
+    return None
+
+
+def _match_album_within(results, hay_norm):
+    """Containment: an editorial headline carries the album's name inside it
+    ("Atomic Owl vinyl reissue is now available…" ⊇ "Atomic Owl (OST)").
+    Multi-word names only — single words match far too much."""
+    for r in results or []:
+        if r.get("resultType") != "album" or not r.get("browseId"):
+            continue
+        if not _SOUNDTRACKY.search(r.get("title", "")):
+            continue
+        n = normalize_title(r.get("title", ""))
+        if len(n) < 6 or " " not in n or n not in hay_norm:
+            continue
+        hit = _hit_from(r)
+        if hit:
+            return hit
     return None
 
 
@@ -339,15 +364,19 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
         if looked >= cap:
             break
         looked += 1
+        norm = normalize_title(r["title"])
         try:
-            hit = _match_album(resolve(_query(r["title"])), normalize_title(r["title"]))
+            results = resolve(_query(r["title"]))
         except Exception:
             continue
+        hit = _match_album(results, norm) or _match_album_within(results, norm)
         if not hit:
             continue
         if not r.get("ytmAlbumUrl"):
             r["ytmAlbumUrl"] = hit["url"]
             filled += 1
+        if not r.get("albumTitle") and normalize_title(hit["title"]) != norm:
+            r["albumTitle"] = hit["title"]  # headline rows: display the album, keep the headline in `title`
         if not r.get("art") and hit["art"]:
             r["art"] = hit["art"]
         if not r.get("composers") and hit["composers"]:

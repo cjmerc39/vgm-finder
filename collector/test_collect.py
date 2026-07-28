@@ -185,6 +185,52 @@ def test_resolver_backfills_recent_unresolved_rows():
     assert done["ytmAlbumUrl"] == "https://music.youtube.com/browse/existing"
 
 
+ATOMIC_OWL_RESULTS = [
+    {"resultType": "album", "browseId": "MPREb_owl", "title": "Atomic Owl (Original Game Soundtrack)",
+     "artists": [{"name": "Some Composer"}],
+     "thumbnails": [{"url": "https://img.example/owl.jpg", "width": 544}]},
+]
+
+
+def test_containment_matcher_accepts_headline_supersets_only():
+    n = collect.normalize_title
+    hay = n("Atomic Owl vinyl reissue is now available from Ghost Mutt Records")
+    hit = collect._match_album_within(ATOMIC_OWL_RESULTS, hay)
+    assert hit and hit["title"] == "Atomic Owl (Original Game Soundtrack)"
+    # single-word names are banned: "Hades" inside a Hades II headline would mislabel it
+    one_word = [{"resultType": "album", "browseId": "MPREb_h", "title": "Hades (Original Soundtrack)",
+                 "artists": [{"name": "Darren Korb"}], "thumbnails": []}]
+    assert collect._match_album_within(one_word, n("hades ii crossover concert announced")) is None
+    # no soundtrack keyword, no match
+    band = [{"resultType": "album", "browseId": "MPREb_b", "title": "Atomic Owl Anthems",
+             "artists": [{"name": "X"}], "thumbnails": []}]
+    assert collect._match_album_within(band, hay) is None
+    # name not actually inside the headline
+    assert collect._match_album_within(ATOMIC_OWL_RESULTS, n("some unrelated news post")) is None
+
+
+def test_resolver_relabels_headline_rows_with_album_titles():
+    row = {"id": "atomic-owl-headline",
+           "title": "Atomic Owl vinyl reissue is now available from Ghost Mutt Records",
+           "game": None, "composers": [], "date": "2026-07-28", "sources": [],
+           "ytmSearchUrl": "s", "ytmAlbumUrl": None, "art": None, "notable": True}
+    looked, filled = collect.resolve_albums([row], lambda q: ATOMIC_OWL_RESULTS, NOW)
+    assert (looked, filled) == (1, 1)
+    assert row["albumTitle"] == "Atomic Owl (Original Game Soundtrack)"
+    assert row["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_owl"
+    assert row["art"] == "https://img.example/owl.jpg"
+    assert row["composers"] == ["Some Composer"]
+
+
+def test_strict_matches_do_not_add_redundant_album_titles():
+    row = {"id": "denshattack", "title": "Denshattack! Soundtrack", "game": None, "composers": [],
+           "date": "2026-07-25", "sources": [], "ytmSearchUrl": "s",
+           "ytmAlbumUrl": None, "art": None, "notable": True}
+    collect.resolve_albums([row], fake_resolve, NOW)
+    assert row["ytmAlbumUrl"]  # matched strictly
+    assert "albumTitle" not in row  # same album name modulo suffixes: no relabel needed
+
+
 def test_resolver_fills_art_on_rows_that_already_have_albums():
     r = {"id": "denshattack", "title": "Denshattack! Soundtrack", "game": None, "composers": ["x"],
          "date": "2026-07-25", "sources": [], "ytmSearchUrl": "s",

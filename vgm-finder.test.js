@@ -11,6 +11,7 @@ const FIXTURE = {
   updatedAt: '2026-07-28T10:00:00Z',
   releases: [
     { id: 'chrono-cross-the-radical-dreamers-edition', title: 'Chrono Cross: The Radical Dreamers Edition OST',
+      albumTitle: 'Chrono Cross: The Radical Dreamers Edition (Original Soundtrack)',
       game: 'Chrono Cross', composers: ['Yasunori Mitsuda'], date: '2026-06-01',
       sources: [{ name: 'vgmo', type: 'editorial', url: 'https://vgmonline.net/a', seenAt: '2026-07-01T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Chrono+Cross%3A+The+Radical+Dreamers+Edition+OST+soundtrack',
@@ -105,6 +106,27 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(tab('feed').innerHTML.includes('1 NEW'), 'feed tab carries the new-since count');
   assert(tab('queue').textContent.includes('0'), 'queue count starts 0');
   assert(tab('library').textContent.includes('1'), 'library counts the migrated listen');
+
+  // ---------- album-name labels ----------
+  assert(rowById('chrono-cross-the-radical-dreamers-edition').querySelector('.rtitle').textContent
+    === 'Chrono Cross: The Radical Dreamers Edition (Original Soundtrack)',
+    'rows label by resolved album name');
+  assert(rowById('fresh-drop').querySelector('.rtitle').textContent.startsWith('Fresh Drop'),
+    'rows without a resolved album keep their title');
+
+  // ---------- feed sort control ----------
+  assert(d.querySelectorAll('#subctl button[data-fs]').length === 4, 'feed offers four sorts');
+  d.querySelector('#subctl button[data-fs="oldest"]').click(); await sleep(20);
+  assert(rows()[0].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'oldest-first surfaces the back catalog');
+  assert(stored().feedSort === 'oldest', 'feed sort persists');
+  d.querySelector('#subctl button[data-fs="az"]').click(); await sleep(20);
+  assert(JSON.stringify(rows().map(r => r.dataset.id)) === JSON.stringify(
+    ['chrono-cross-the-radical-dreamers-edition', 'fresh-drop', 'hades-ii', 'ratchet-clank-rift-apart', 'ゼルダの伝説']),
+    'a–z sorts by the display label');
+  d.querySelector('#subctl button[data-fs="added"]').click(); await sleep(20);
+  assert(rows()[0].dataset.id === 'fresh-drop', 'recently-added sort leads with the newest find');
+  d.querySelector('#subctl button[data-fs="date"]').click(); await sleep(20);
+  assert(rows()[0].dataset.id === 'fresh-drop', 'newest-first restored');
 
   // ---------- YTM tap-through unchanged ----------
   rowById('ratchet-clank-rift-apart').click();
@@ -220,6 +242,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   const type = (s) => { q.value = s; q.dispatchEvent(new w.Event('input', { bubbles: true })); };
   type('mitsuda');
   assert(rows().length === 1 && rows()[0].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'search matches composers');
+  type('radical dreamers edition ost');
+  assert(rows().length === 1, 'original headline text stays searchable behind the album label');
   type('slaps');
   assert(rows().length === 1 && rows()[0].dataset.id === 'ratchet-clank-rift-apart', 'search matches your notes');
   type('');
