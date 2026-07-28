@@ -17,9 +17,21 @@ FEED_FILES = {
     "https://nowplaying.cool/rss/": "nowplaying-feed.xml",
     "https://blipblop.net/feed/": "blipblop-feed.xml",
     "https://www.vgmonline.net/feed/": "vgmo-feed.xml",
+    collect.IGDB_URL: "igdb-games.json",
 }
 STEAM_URL = next(s["url"] for s in collect.SOURCES if s["name"] == "steam")
 FEED_FILES[STEAM_URL] = "steam-soundtracks.json"
+
+YTM_FIX = json.loads((FIXTURES / "ytm-search.json").read_text(encoding="utf-8"))
+_BY_NORM = {collect.normalize_title(q): res for q, res in YTM_FIX.items()}
+
+
+def fake_resolve(query):
+    return _BY_NORM.get(collect.normalize_title(query), [])
+
+
+def no_resolve(query):
+    return []
 
 
 def raw(name):
@@ -37,7 +49,7 @@ def src(name="test", type="editorial"):
 # ---------------- per-source parsing ----------------
 
 def test_nowplaying_keeps_ost_and_vinyl_only():
-    items = collect.parse_nowplaying(raw("nowplaying-feed.xml"))
+    items = collect.parse_nowplaying(raw("nowplaying-feed.xml"), no_resolve)
     assert len(items) == 10  # 15 in feed, 5 are News (singles/previews)
     titles = " | ".join(i["title"] for i in items)
     assert "UNBEATABLE" in titles
@@ -48,7 +60,7 @@ def test_nowplaying_keeps_ost_and_vinyl_only():
 
 
 def test_blipblop_keeps_confirmed_release_only():
-    items = collect.parse_blipblop(raw("blipblop-feed.xml"))
+    items = collect.parse_blipblop(raw("blipblop-feed.xml"), no_resolve)
     assert len(items) == 9  # 10 in feed; the Sonic Frontiers EP campaign isn't a confirmed release
     titles = " | ".join(i["title"] for i in items)
     assert "Plague Tale" in titles
@@ -56,7 +68,7 @@ def test_blipblop_keeps_confirmed_release_only():
 
 
 def test_vgmo_keeps_news_and_album_reviews_only():
-    items = collect.parse_vgmo(raw("vgmo-feed.xml"))
+    items = collect.parse_vgmo(raw("vgmo-feed.xml"), no_resolve)
     assert len(items) == 5  # 10 in feed, 5 are Editorials
     titles = " | ".join(i["title"] for i in items)
     assert "NieR:Piano Journeys" in titles
@@ -64,7 +76,7 @@ def test_vgmo_keeps_news_and_album_reviews_only():
 
 
 def test_steam_parses_search_rows():
-    items = collect.parse_steam(raw("steam-soundtracks.json"))
+    items = collect.parse_steam(raw("steam-soundtracks.json"), no_resolve)
     assert len(items) == 25
     assert items[0]["title"] == "Endacopia Soundtrack"
     assert items[0]["url"].startswith("https://store.steampowered.com/app/")
@@ -81,10 +93,101 @@ def test_steam_skips_unreleased_rows():
         '<a href="https://store.steampowered.com/app/2/B/" class="search_result_row">'
         '<span class="title">Vapor Soundtrack</span>'
         '<div class="search_released">Coming soon</div></a>'}).encode()
-    items = collect.parse_steam(blob)
+    items = collect.parse_steam(blob, no_resolve)
     assert [i["title"] for i in items] == ["Real Album Soundtrack"]
     assert items[0]["date"] == "2026-07-20"
     assert items[0]["url"] == "https://store.steampowered.com/app/1/A/"
+
+
+# ---------------- IGDB + strict album matching ----------------
+
+def test_igdb_yields_only_games_with_confident_albums():
+    items = collect.parse_igdb(raw("igdb-games.json"), fake_resolve)
+    assert {i["game"] for i in items} == {"Fading Echo", "Scarlet Deer Inn", "Denshattack!"}
+    fading = next(i for i in items if i["game"] == "Fading Echo")
+    assert fading["title"] == "Fading Echo (Original Soundtrack)"
+    assert fading["composers"] == ["Maxwell Sterling"]
+    assert fading["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_hK34tOz4ENm"
+    assert fading["url"] == "https://www.igdb.com/games/fading-echo"
+    assert fading["date"] == "2026-07-21"
+    # Halo: Campaign Evolved is in the games fixture but YTM only offers the
+    # 2001 Combat Evolved album — the strict matcher must refuse it
+    assert not any(i["game"] == "Halo: Campaign Evolved" for i in items)
+
+
+def test_matcher_rejects_near_names_and_fan_albums():
+    n = collect.normalize_title
+    assert collect._match_album(YTM_FIX["Halo Campaign Evolved soundtrack"],
+                                n("Halo: Campaign Evolved")) is None
+    assert collect._match_album(YTM_FIX["Hades II soundtrack"], n("Hades II")) is None  # fan album
+    assert collect._match_album(YTM_FIX["UNBEATABLE soundtrack"], n("UNBEATABLE")) is None
+    hit = collect._match_album(YTM_FIX["Scarlet Deer Inn soundtrack"], n("Scarlet Deer Inn"))
+    assert hit and "Lukáš Navrátil" in hit["composers"]
+    assert hit["url"] == "https://music.youtube.com/browse/MPREb_LUaLY8EETcH"
+
+
+def test_matcher_rejects_same_name_band_albums():
+    n = collect.normalize_title
+    # observed live: the game ZeroSpace matched Kidneythieves' 2002 album, and
+    # "Lifted" matched a non-game album with no credited composer
+    band = [{"resultType": "album", "browseId": "MPREb_band", "title": "Zerospace",
+             "artists": [{"name": "Kidneythieves"}]}]
+    assert collect._match_album(band, n("ZeroSpace")) is None  # no soundtrack word
+    selfcredit = [{"resultType": "album", "browseId": "MPREb_self",
+                   "title": "Lifted (Original Soundtrack)", "artists": [{"name": "Lifted"}]}]
+    assert collect._match_album(selfcredit, n("Lifted")) is None  # only credit is the name itself
+    # order independence: a plain same-name album before the real OST is skipped, not fatal
+    reordered = [YTM_FIX["Fading Echo soundtrack"][2], YTM_FIX["Fading Echo soundtrack"][0]]
+    hit = collect._match_album(reordered, n("Fading Echo"))
+    assert hit and hit["title"] == "Fading Echo (Original Soundtrack)"
+
+
+def test_resolver_backfills_recent_unresolved_rows():
+    def row(title, date, album=None):
+        return {"id": collect.slugify(title), "title": title, "game": None, "composers": [],
+                "date": date, "sources": [], "ytmSearchUrl": "x",
+                "ytmAlbumUrl": album, "art": None, "notable": True}
+    steamish = row("Denshattack! Soundtrack", "2026-07-25")
+    headline = row("Mahou Arms finally hits 1.0, and Dale North's full OST is a vibe", "2026-07-27")
+    ancient = row("Fading Echo Soundtrack", "2026-01-01")  # matchable but outside the window
+    done = row("Hades II", "2026-07-20", album="https://music.youtube.com/browse/existing")
+    releases = [steamish, headline, ancient, done]
+    looked, filled = collect.resolve_albums(releases, fake_resolve, NOW)
+    assert (looked, filled) == (2, 1)  # ancient + done never looked up
+    assert steamish["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_8VX7LFDliIy"
+    assert "Tee Lopes" in steamish["composers"]
+    assert headline["ytmAlbumUrl"] is None  # editorial headlines never equal album titles
+    assert ancient["ytmAlbumUrl"] is None
+    assert done["ytmAlbumUrl"] == "https://music.youtube.com/browse/existing"
+
+
+def test_resolver_respects_cap():
+    rows = [{"id": str(i), "title": f"Nothing Matches This {i}", "game": None, "composers": [],
+             "date": "2026-07-20", "sources": [], "ytmSearchUrl": "x",
+             "ytmAlbumUrl": None, "art": None, "notable": True} for i in range(5)]
+    looked, filled = collect.resolve_albums(rows, fake_resolve, NOW, cap=3)
+    assert (looked, filled) == (3, 0)
+
+
+def test_merge_enriches_nulls_without_touching_the_rest():
+    releases = []
+    collect.merge(releases, [{"title": "Denshattack! Soundtrack",
+                              "url": "https://store.steampowered.com/app/9/D/",
+                              "date": "2026-07-25"}], src("steam", "catalog"), SEEN)
+    collect.merge(releases, [{"title": "Denshattack! (Original Game Soundtrack)",
+                              "game": "Denshattack!", "composers": ["Tee Lopes"],
+                              "url": "https://www.igdb.com/games/denshattack",
+                              "date": "2026-07-15",
+                              "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_8VX7LFDliIy"}],
+                  src("igdb", "catalog"), SEEN)
+    assert len(releases) == 1  # both normalize to "denshattack"
+    entry = releases[0]
+    assert entry["title"] == "Denshattack! Soundtrack"  # first-seen title kept
+    assert entry["game"] == "Denshattack!"              # null filled
+    assert entry["composers"] == ["Tee Lopes"]          # empty filled
+    assert entry["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_8VX7LFDliIy"
+    assert entry["date"] == "2026-07-15"                # earliest (game release) wins
+    assert [s["name"] for s in entry["sources"]] == ["steam", "igdb"]
 
 
 # ---------------- slugs and normalization ----------------
@@ -207,18 +310,20 @@ def test_new_entry_shape_matches_schema():
 
 def test_run_collects_all_sources_and_is_stable(tmp_path):
     data_path = tmp_path / "releases.json"
-    assert collect.run(fetch_fn=fixture_fetch, data_path=data_path, now=NOW) == 0
+    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve,
+                       data_path=data_path, now=NOW) == 0
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert data["updatedAt"] == SEEN
-    assert len(data["releases"]) == 49  # 10 + 9 + 5 + 25, no cross-source collisions in these fixtures
-    assert all(r["notable"] for r in data["releases"])
-    catalog = [r for r in data["releases"] if r["sources"][0]["type"] == "catalog"]
-    assert len(catalog) == 25
+    assert len(data["releases"]) == 52  # 10 + 9 + 5 + 25 + 3 igdb, no cross-source collisions
+    igdb_rows = [r for r in data["releases"] if r["sources"][0]["name"] == "igdb"]
+    assert len(igdb_rows) == 3
+    assert all(r["ytmAlbumUrl"] and r["game"] and r["composers"] for r in igdb_rows)
 
     # a second run over identical feeds must not rewrite the file
     first = data_path.read_text(encoding="utf-8")
     later = datetime(2026, 7, 29, 10, 0, 0, tzinfo=timezone.utc)
-    assert collect.run(fetch_fn=fixture_fetch, data_path=data_path, now=later) == 0
+    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve,
+                       data_path=data_path, now=later) == 0
     assert data_path.read_text(encoding="utf-8") == first
 
 
@@ -228,14 +333,16 @@ def test_run_survives_one_source_failing(tmp_path, capsys):
             raise OSError("simulated network failure")
         return fixture_fetch(url)
     data_path = tmp_path / "releases.json"
-    assert collect.run(fetch_fn=flaky, data_path=data_path, now=NOW) == 0
+    assert collect.run(fetch_fn=flaky, resolve_fn=fake_resolve,
+                       data_path=data_path, now=NOW) == 0
     out = capsys.readouterr().out
     assert "::warning::blipblop failed" in out
-    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 40
+    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 43
 
 
 def test_run_fails_red_when_every_source_fails(tmp_path, capsys):
     def dead(url):
         raise OSError("nope")
-    assert collect.run(fetch_fn=dead, data_path=tmp_path / "releases.json", now=NOW) == 1
+    assert collect.run(fetch_fn=dead, resolve_fn=no_resolve,
+                       data_path=tmp_path / "releases.json", now=NOW) == 1
     assert "::error::" in capsys.readouterr().out

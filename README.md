@@ -17,9 +17,15 @@ listened marks, and hides are yours alone — they live in `localStorage`
 | [Blip Blop](https://blipblop.net) | editorial, vinyl/physical announcements | `Confirmed Release` category |
 | [VGMO](https://vgmonline.net) | editorial, long-form game music writing | `News` + `Album Reviews` |
 | Steam Soundtracks | catalog: every album shipped on Steam | newest 25, released only |
+| IGDB + YT Music | catalog: notable game releases that have a real album | last 14 days, hypes ≥ 5, strict album match |
 
 On equal dates the list ranks editorial picks above catalog rows above
 community rows (a few early community rows remain in the data from v1).
+A resolver also backfills direct YouTube Music album links (`ytmAlbumUrl`)
+for recent rows when an album title matches exactly after normalization —
+rows with one open the album; everything else opens a YTM search. IGDB needs
+`TWITCH_CLIENT_ID` / `TWITCH_CLIENT_SECRET` (free at dev.twitch.tv) in the
+environment; without them that source warns and the rest still run.
 
 ## Run the collector locally
 

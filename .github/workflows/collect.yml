@@ -15,6 +15,9 @@ jobs:
           python-version: '3.12'
       - run: pip install -r collector/requirements.txt
       - run: python collector/collect.py
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
       - run: |
           git config user.name vgm-bot
           git config user.email actions@users.noreply.github.com

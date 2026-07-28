@@ -1,13 +1,17 @@
 """vgm-finder collector: folds curated VGM release feeds into data/releases.json.
 
 Deterministic, append-only. Run from anywhere: python collector/collect.py
+IGDB needs TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET in the environment; without
+them that one source warns and the rest still run.
 """
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
-from datetime import datetime, timezone
+import time
+from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from html import unescape
 from pathlib import Path
@@ -20,12 +24,54 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "releases.json"
 USER_AGENT = "vgm-finder collector (+https://github.com/cjmerc39/vgm-finder)"
 FUZZY_THRESHOLD = 0.92
+IGDB_URL = "igdb:recent-games"
+IGDB_WINDOW_DAYS = 14
+IGDB_HYPES_MIN = 5
+IGDB_LIMIT = 25
+RESOLVE_WINDOW_DAYS = 60
+RESOLVE_CAP = 40
 
 
 def fetch_feed(url):
     resp = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
     resp.raise_for_status()
     return resp.content  # bytes: feedparser sniffs the declared encoding itself
+
+
+def igdb_fetch():
+    cid = os.environ.get("TWITCH_CLIENT_ID")
+    secret = os.environ.get("TWITCH_CLIENT_SECRET")
+    if not cid or not secret:
+        raise RuntimeError("TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET not set")
+    tok = requests.post("https://id.twitch.tv/oauth2/token", timeout=30, params={
+        "client_id": cid, "client_secret": secret,
+        "grant_type": "client_credentials"}).json()["access_token"]
+    now = int(time.time())
+    start = now - IGDB_WINDOW_DAYS * 86400
+    # game_type replaced the old (now dead) category field; 0/4/8/9 = main/expansion/remake/remaster
+    query = (f"fields name, slug, first_release_date, hypes, game_type; "
+             f"where first_release_date >= {start} & first_release_date <= {now} "
+             f"& game_type = (0,4,8,9) & hypes >= {IGDB_HYPES_MIN}; "
+             f"sort hypes desc; limit {IGDB_LIMIT};")
+    resp = requests.post("https://api.igdb.com/v4/games", data=query.encode(), timeout=30,
+                         headers={"Client-ID": cid, "Authorization": f"Bearer {tok}"})
+    resp.raise_for_status()
+    return resp.content
+
+
+def fetch_any(url):
+    return igdb_fetch() if url == IGDB_URL else fetch_feed(url)
+
+
+_YT = None
+
+
+def ytm_resolve(query):
+    global _YT
+    if _YT is None:
+        from ytmusicapi import YTMusic  # lazy: only the resolver path needs it
+        _YT = YTMusic()
+    return _YT.search(query, filter="albums", limit=5)
 
 
 def entry_categories(entry):
@@ -52,15 +98,15 @@ def _feed(raw, keep):
     return [_item(e) for e in feed.entries if entry_categories(e) & keep]
 
 
-def parse_vgmo(raw):
+def parse_vgmo(raw, resolve=None):
     return _feed(raw, {"News", "Album Reviews"})
 
 
-def parse_nowplaying(raw):
+def parse_nowplaying(raw, resolve=None):
     return _feed(raw, {"OST", "Vinyl"})
 
 
-def parse_blipblop(raw):
+def parse_blipblop(raw, resolve=None):
     return _feed(raw, {"Confirmed Release"})
 
 
@@ -80,7 +126,7 @@ def _steam_date(text):
     return f"{m.group(3)}-{_MONTHS[m.group(1)]:02d}-{int(m.group(2)):02d}"
 
 
-def parse_steam(raw):
+def parse_steam(raw, resolve=None):
     data = json.loads(raw)
     blob = data.get("results_html") or ""
     if not data.get("success") or not blob:
@@ -97,6 +143,62 @@ def parse_steam(raw):
     return items
 
 
+def _query(title):
+    return title if "soundtrack" in title.lower() else f"{title} soundtrack"
+
+
+_SOUNDTRACKY = re.compile(r"\b(soundtrack|ost|score|original sound)\b", re.IGNORECASE)
+
+
+def _match_album(results, want_norm):
+    """Strict: the album title must normalize to exactly the wanted name, must
+    say it's a soundtrack, and must have a credited artist besides the game.
+    Rejects fan albums, near-names (Combat vs Campaign Evolved), and
+    same-name band albums (ZeroSpace the game vs Zerøspace the album)."""
+    for r in results or []:
+        if r.get("resultType") != "album" or not r.get("browseId"):
+            continue
+        if normalize_title(r.get("title", "")) != want_norm:
+            continue
+        if not _SOUNDTRACKY.search(r.get("title", "")):
+            continue
+        composers = [a["name"] for a in r.get("artists", [])
+                     if a.get("name") and a["name"].lower() != "various artists"
+                     and normalize_title(a["name"]) != want_norm]
+        if not composers:
+            continue  # only credit was the game/band name itself: too ambiguous
+        return {"title": r["title"], "composers": composers,
+                "url": "https://music.youtube.com/browse/" + r["browseId"]}
+    return None
+
+
+def parse_igdb(raw, resolve):
+    games = json.loads(raw)
+    if not isinstance(games, list):
+        raise RuntimeError("igdb returned non-list")
+    items, errors = [], 0
+    for g in games:
+        name = (g.get("name") or "").strip()
+        stamp = g.get("first_release_date")
+        if not name or not stamp:
+            continue
+        try:
+            hit = _match_album(resolve(_query(name)), normalize_title(name))
+        except Exception:
+            errors += 1
+            continue
+        if not hit:
+            continue  # released game, but no confidently-matching album on YTM
+        items.append({
+            "title": hit["title"], "game": name, "composers": hit["composers"],
+            "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
+            "date": datetime.fromtimestamp(stamp, tz=timezone.utc).strftime("%Y-%m-%d"),
+            "ytmAlbumUrl": hit["url"]})
+    if errors and not items:
+        raise RuntimeError(f"all {errors} album lookups failed")
+    return items
+
+
 SOURCES = [
     {"name": "nowplaying", "type": "editorial",
      "url": "https://nowplaying.cool/rss/", "parse": parse_nowplaying},
@@ -108,6 +210,7 @@ SOURCES = [
      "url": "https://store.steampowered.com/search/results/"
             "?query&start=0&count=25&category1=990&sort_by=Released_DESC&infinite=1&l=english&cc=US",
      "parse": parse_steam},
+    {"name": "igdb", "type": "catalog", "url": IGDB_URL, "parse": parse_igdb},
 ]
 
 _PUNCT = re.compile(r"[^\w\s]", re.UNICODE)
@@ -160,7 +263,8 @@ def _fuzzy_find(norm, releases, norms):
 
 def merge(releases, items, source, seen_at):
     """Fold one source's items in. Append-only: existing entries only ever gain
-    a source or an earlier date; id and title never change."""
+    a source, an earlier date, or a fill for a still-null enrichment field;
+    id and title never change."""
     by_id = {r["id"]: r for r in releases}
     norms = {id(r): normalize_title(r["title"]) for r in releases}
     added = merged = 0
@@ -177,16 +281,47 @@ def merge(releases, items, source, seen_at):
                 merged += 1
             if it["date"] and (not target["date"] or it["date"] < target["date"]):
                 target["date"] = it["date"]
+            if not target.get("game") and it.get("game"):
+                target["game"] = it["game"]
+            if not target.get("composers") and it.get("composers"):
+                target["composers"] = list(it["composers"])
+            if not target.get("ytmAlbumUrl") and it.get("ytmAlbumUrl"):
+                target["ytmAlbumUrl"] = it["ytmAlbumUrl"]
         else:
-            entry = {"id": slug, "title": it["title"], "game": None, "composers": [],
+            entry = {"id": slug, "title": it["title"], "game": it.get("game"),
+                     "composers": list(it.get("composers") or []),
                      "date": it["date"], "sources": [src],
-                     "ytmSearchUrl": ytm_search_url(it["title"], None),
-                     "ytmAlbumUrl": None, "art": None, "notable": True}
+                     "ytmSearchUrl": ytm_search_url(it["title"], it.get("game")),
+                     "ytmAlbumUrl": it.get("ytmAlbumUrl"), "art": None, "notable": True}
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
             added += 1
     return added, merged
+
+
+def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
+    """Fill ytmAlbumUrl for recent rows that lack one, with the same strict
+    matcher. Bounded per run; unresolved rows retry until they age out."""
+    cutoff = (now - timedelta(days=RESOLVE_WINDOW_DAYS)).strftime("%Y-%m-%d")
+    looked = filled = 0
+    for r in releases:
+        if r.get("ytmAlbumUrl") or not r.get("date") or r["date"] < cutoff:
+            continue
+        if looked >= cap:
+            break
+        looked += 1
+        try:
+            hit = _match_album(resolve(_query(r["title"])), normalize_title(r["title"]))
+        except Exception:
+            continue
+        if not hit:
+            continue
+        r["ytmAlbumUrl"] = hit["url"]
+        if not r.get("composers") and hit["composers"]:
+            r["composers"] = hit["composers"]
+        filled += 1
+    return looked, filled
 
 
 def load_data(path):
@@ -199,7 +334,7 @@ def load_data(path):
     return {"updatedAt": None, "releases": []}
 
 
-def run(fetch_fn=fetch_feed, data_path=DATA_PATH, now=None):
+def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, data_path=DATA_PATH, now=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_data(data_path)
@@ -209,7 +344,7 @@ def run(fetch_fn=fetch_feed, data_path=DATA_PATH, now=None):
     ok = 0
     for source in SOURCES:
         try:
-            items = source["parse"](fetch_fn(source["url"]))
+            items = source["parse"](fetch_fn(source["url"]), resolve_fn)
             added, merged = merge(releases, items, source, seen_at)
             print(f"{source['name']}: {len(items)} items -> {added} new, {merged} merged")
             ok += 1
@@ -218,6 +353,9 @@ def run(fetch_fn=fetch_feed, data_path=DATA_PATH, now=None):
     if ok == 0:
         print("::error::every source failed")
         return 1
+
+    looked, filled = resolve_albums(releases, resolve_fn, now)
+    print(f"album resolver: {looked} lookups, {filled} filled")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data["updatedAt"] = seen_at
