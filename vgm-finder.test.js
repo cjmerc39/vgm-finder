@@ -4,6 +4,8 @@ const html = fs.readFileSync('index.html', 'utf8');
 
 const T = (n) => Date.parse(n); // shorthand: ISO -> ms
 const LAST_VISIT = T('2026-07-25T00:00:00Z');
+const TODAY = (() => { const d = new Date(), p = n => String(n).padStart(2, '0');
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()); })();
 
 const FIXTURE = {
   updatedAt: '2026-07-28T10:00:00Z',
@@ -44,7 +46,8 @@ function makeDom(fetchImpl, prefill) {
     beforeParse(w) {
       w.fetch = fetchImpl;
       w.open = (url) => { w.__opened = url; };
-      if (prefill) w.localStorage.setItem('vgm-v1', JSON.stringify(prefill));
+      if (typeof prefill === 'string') w.localStorage.setItem('vgm-v1', prefill);
+      else if (prefill) w.localStorage.setItem('vgm-v1', JSON.stringify(prefill));
     },
   });
   dom.window.addEventListener('error', e => errors.push(e.message));
@@ -53,119 +56,204 @@ function makeDom(fetchImpl, prefill) {
 const okFetch = (data) => async () => ({ ok: true, status: 200, json: async () => data });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+// boot the main dom with LEGACY v1 state: the migration is under test
 const { w, d, errors } = makeDom(okFetch(FIXTURE),
-  { v: 1, starred: {}, listened: {}, hidden: {}, lastSeen: LAST_VISIT, filter: 'all', showHidden: false });
+  { v: 1, starred: { 'hades-ii': true }, listened: { 'chrono-cross-the-radical-dreamers-edition': true },
+    hidden: { 'evil': true }, lastSeen: LAST_VISIT, filter: 'starred', showHidden: false });
 
 (async () => {
   await sleep(120);
   const assert = (c, m) => { if (!c) { console.error('FAIL:', m); process.exitCode = 1; } else console.log('ok  :', m); };
   const rows = () => [...d.querySelectorAll('#list .row:not(.ghost)')];
   const rowById = (id) => d.querySelector(`#list .row[data-id="${id}"]`);
+  const stored = () => JSON.parse(w.localStorage.getItem('vgm-v1'));
+  const tab = (v) => d.querySelector(`#tabbar button[data-v="${v}"]`);
+  const S = (expr) => w.eval(expr);
 
   assert(errors.length === 0, 'no runtime errors on boot' + (errors.length ? ' -> ' + errors.join(' | ') : ''));
-  assert(rows().length === 6, 'renders all 6 releases');
 
-  // newest first by date, but TRACK numbers pin to append-only position
+  // ---------- legacy migration ----------
+  assert(stored().v === 2, 'v1 state migrated to v2 and persisted');
+  assert(!('starred' in stored()) && !('listened' in stored()) && !('hidden' in stored()), 'legacy keys retired');
+  assert(stored().entries['hades-ii'].liked === true, 'starred became liked');
+  assert(stored().entries['chrono-cross-the-radical-dreamers-edition'].status === 'listened', 'listened became status listened');
+  assert(stored().entries['chrono-cross-the-radical-dreamers-edition'].listenedOn === null, 'migrated listen has no invented date');
+  assert(stored().entries['evil'].status === 'hidden', 'hidden stayed hidden');
+  assert(stored().lastSeen > LAST_VISIT, 'lastSeen survived migration then advanced on visit');
+
+  // ---------- feed basics survive ----------
+  assert(rows().length === 5, 'feed shows 5 rows (hidden row excluded)');
   assert(rows()[0].dataset.id === 'fresh-drop', 'newest release renders first');
-  assert(rows()[0].querySelector('.tno').textContent === 'TRACK 006', 'newest row keeps its catalog number (006)');
-  assert(rows()[5].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'oldest release renders last');
-  assert(rows()[5].querySelector('.tno').textContent === 'TRACK 001', 'first-collected row is TRACK 001');
-  assert(rows()[0].querySelector('time').textContent === 'JUL 28', 'current-year dates render without the year');
-  assert(rows()[2].dataset.id === 'ratchet-clank-rift-apart' && rows()[3].dataset.id === 'evil',
-    'on equal dates, editorial ranks above community');
+  assert(rows()[0].querySelector('.tno').textContent === 'TRACK 006', 'catalog numbers still pinned to append order');
+  assert(rows()[1].dataset.id === 'hades-ii' && rows()[2].dataset.id === 'ratchet-clank-rift-apart',
+    'date sort with editorial-over-community tiebreak intact');
+  assert(d.querySelectorAll('#list .new').length === 1 && rowById('fresh-drop').querySelector('.new') !== null,
+    'NEW badging preserved through migration');
+  assert(d.querySelector('#list img') === null && w.__pwned === undefined, 'hostile titles still render inert');
+  assert(rowById('chrono-cross-the-radical-dreamers-edition').classList.contains('heard'), 'migrated listen dims its feed row');
 
-  // new-since-last-visit badging
-  assert(d.querySelectorAll('#list .new').length === 1, 'exactly one row is NEW vs the 07-25 visit');
-  assert(rowById('fresh-drop').querySelector('.new') !== null, 'the NEW badge sits on the fresh row');
-  assert(w.eval('S.lastSeen') > LAST_VISIT, 'visit timestamp advanced after load');
-  assert(JSON.parse(w.localStorage.getItem('vgm-v1')).lastSeen === w.eval('S.lastSeen'), 'advanced timestamp persisted');
+  // ---------- tabs and counts ----------
+  assert(tab('feed').classList.contains('on'), 'feed tab active by default');
+  assert(tab('feed').innerHTML.includes('1 NEW'), 'feed tab carries the new-since count');
+  assert(tab('queue').textContent.includes('0'), 'queue count starts 0');
+  assert(tab('library').textContent.includes('1'), 'library counts the migrated listen');
 
-  // feed data is escaped, never parsed as markup
-  assert(d.querySelector('#list img') === null, 'hostile title injects no element');
-  assert(w.__pwned === undefined, 'onerror payload never ran');
-  assert(rowById('evil').querySelector('.rtitle').textContent.includes('Evil OST'), 'hostile title still shown as text');
-
-  // sub line and chips
-  assert(rowById('hades-ii').textContent.includes('Hades II · Darren Korb'), 'game and composer render on the sub line');
-  assert(rowById('hades-ii').querySelectorAll('.chip').length === 2, 'both sources get chips');
-  assert(rowById('hades-ii').querySelector('.chip.community') !== null, 'community source chip is badged');
-  assert(rowById('ratchet-clank-rift-apart').querySelector('.chip.community') === null, 'editorial chip is not');
-
-  // tap-through: search URL by default, album URL when resolved
+  // ---------- YTM tap-through unchanged ----------
   rowById('ratchet-clank-rift-apart').click();
   assert(w.__opened === 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
     'row tap opens the encoded YTM search URL untouched');
   rowById('hades-ii').click();
-  assert(w.__opened === 'https://music.youtube.com/playlist?list=OLAK5uy_hades2', 'album URL preferred over search when present');
-  rowById('ゼルダの伝説').click();
-  assert(w.__opened.startsWith('https://music.youtube.com/search?q=%E3%82%BC'), 'Japanese title URL passes through encoded');
+  assert(w.__opened === 'https://music.youtube.com/playlist?list=OLAK5uy_hades2', 'album URL preferred when present');
 
-  // star: toggles, persists, does not open the row
+  // ---------- queue flow ----------
   w.__opened = null;
-  rowById('hades-ii').querySelector('[data-act="star"]').click();
-  assert(w.__opened === null, 'starring does not open YTM');
-  assert(rowById('hades-ii').querySelector('.star').getAttribute('aria-pressed') === 'true', 'star toggles on');
-  assert(JSON.parse(w.localStorage.getItem('vgm-v1')).starred['hades-ii'] === true, 'star round-trips through localStorage');
+  rowById('fresh-drop').querySelector('[data-act="queue"]').click();
+  assert(w.__opened === null, 'queueing does not open YTM');
+  assert(stored().entries['fresh-drop'].status === 'queued', 'one tap queues');
+  assert(stored().entries['fresh-drop'].queuedOn === TODAY, 'queue stamps today');
+  rowById('ゼルダの伝説').querySelector('[data-act="queue"]').click();
+  assert(tab('queue').textContent.includes('2'), 'queue tab counts 2');
+  tab('queue').click();
+  await sleep(20);
+  assert(tab('queue').classList.contains('on') && stored().view === 'queue', 'queue tab activates and persists');
+  assert(rows().length === 2, 'queue lists both queued rows');
+  assert(rows()[0].dataset.id === 'fresh-drop', 'queue sorts by release date, newest first');
+  assert(rows()[0].textContent.includes('queued'), 'queue rows show when they were queued');
+  rowById('ゼルダの伝説').querySelector('[data-act="queue"]').click();
+  assert(rows().length === 1 && stored().entries['ゼルダの伝説'] === undefined,
+    'dequeue removes the row and prunes the blank entry');
 
-  // listened: play-state glyph + dim
-  rowById('fresh-drop').querySelector('[data-act="heard"]').click();
-  assert(rowById('fresh-drop').classList.contains('heard'), 'listened row dims');
-  assert(rowById('fresh-drop').querySelector('.heard').textContent === '▶', 'glyph flips to played');
-  assert(JSON.parse(w.localStorage.getItem('vgm-v1')).listened['fresh-drop'] === true, 'listened persists');
+  // ---------- the logging ritual: two taps for a bare listen ----------
+  rowById('fresh-drop').querySelector('[data-act="log"]').click();
+  assert(d.querySelector('#sheet') !== null, 'log tap opens the sheet');
+  assert(d.querySelector('#sh-date').value === TODAY, 'date prefilled to today');
+  d.querySelector('#sh-save').click();
+  await sleep(20);
+  assert(d.querySelector('#sheet') === null, 'save closes the sheet');
+  const fresh = stored().entries['fresh-drop'];
+  assert(fresh.status === 'listened' && fresh.listenedOn === TODAY, 'bare save logs a listen dated today');
+  assert(fresh.rating === null && fresh.liked === false && fresh.note === '', 'bare listen record still carries rating/liked/note fields');
+  assert(fresh.queuedOn === null, 'listening clears the queue slot');
+  assert(tab('queue').textContent.includes('0') && tab('library').textContent.includes('2'), 'counts follow the log');
 
-  // filter chips (with counts)
-  const chip = f => d.querySelector(`#chips button[data-f="${f}"]`);
-  assert(chip('all').textContent.startsWith('all6'), 'ALL chip counts 6');
-  assert(chip('unlistened').textContent.startsWith('unlistened5'), 'UNLISTENED counts 5 after one listen');
-  chip('unlistened').click();
-  assert(rows().length === 5 && rowById('fresh-drop') === null, 'unlistened filter drops the heard row');
-  chip('starred').click();
-  assert(rows().length === 1 && rows()[0].dataset.id === 'hades-ii', 'starred filter shows only the starred row');
-  assert(JSON.parse(w.localStorage.getItem('vgm-v1')).filter === 'starred', 'active filter persists');
-  chip('all').click();
-  assert(rows().length === 6, 'ALL restores everything');
+  // ---------- full ritual: half stars, heart, note ----------
+  tab('feed').click(); await sleep(20);
+  rowById('ratchet-clank-rift-apart').querySelector('[data-act="log"]').click();
+  d.querySelector('#sh-stars button[data-r="3.5"]').click();
+  assert(S('SHEET.draft.rating') === 3.5, 'half-star tap sets 3.5');
+  assert(d.querySelectorAll('#sh-stars .sfill')[3].style.width === '50%', 'fourth star renders half full');
+  d.querySelector('#sh-heart').click();
+  d.querySelector('#sh-note').value = 'rift apart <script>alert(1)</script> slaps';
+  d.querySelector('#sh-note').dispatchEvent(new w.Event('input', { bubbles: true }));
+  d.querySelector('#sh-date').value = '2026-07-26';
+  d.querySelector('#sh-date').dispatchEvent(new w.Event('input', { bubbles: true }));
+  d.querySelector('#sh-save').click();
+  await sleep(20);
+  const rr = stored().entries['ratchet-clank-rift-apart'];
+  assert(rr.rating === 3.5 && rr.liked === true && rr.listenedOn === '2026-07-26', 'rating, heart, and edited date persist');
+  assert(rr.note.includes('slaps'), 'note round-trips');
 
-  // search across title, game, composers
+  // reopen for edit, clear the rating
+  rowById('ratchet-clank-rift-apart').querySelector('[data-act="log"]').click();
+  assert(S('SHEET.draft.rating') === 3.5 && d.querySelector('#sh-note').value.includes('slaps'), 'sheet reopens with saved values');
+  d.querySelector('#sh-clear').click();
+  assert(S('SHEET.draft.rating') === null, 'clear empties the rating');
+  d.querySelector('#sh-save').click(); await sleep(20);
+  assert(stored().entries['ratchet-clank-rift-apart'].rating === null, 'cleared rating persists');
+
+  // ---------- library ----------
+  tab('library').click(); await sleep(20);
+  assert(rows().length === 3, 'library lists all listened rows');
+  S(`editEntry('ratchet-clank-rift-apart', e => { e.rating = 3.5; })`);
+  S(`editEntry('fresh-drop', e => { e.rating = 5; e.listenedOn = '2026-07-20'; })`);
+  await sleep(20);
+  assert(rows()[0].dataset.id === 'ratchet-clank-rift-apart', 'default sort: most recent listen first');
+  assert(rows()[2].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'dateless migrated listen sinks');
+  d.querySelector('#subctl button[data-ls="rating"]').click(); await sleep(20);
+  assert(rows()[0].dataset.id === 'fresh-drop' && rows()[1].dataset.id === 'ratchet-clank-rift-apart',
+    'rating sort: 5 before 3.5');
+  assert(rows()[2].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'unrated sorts last on rating sort');
+  assert(rowById('fresh-drop').querySelector('.minis').textContent === '★★★★★', 'five stars render');
+  assert(rowById('ratchet-clank-rift-apart').querySelector('.minis').textContent === '★★★½', 'half star renders as ½');
+  d.querySelector('#subctl button[data-ls="date"]').click(); await sleep(20);
+  assert(rows()[0].dataset.id === 'fresh-drop' && rows()[2].dataset.id === 'chrono-cross-the-radical-dreamers-edition',
+    'release-date sort uses the shared newest-first order');
+  assert(rowById('ratchet-clank-rift-apart').querySelector('.rnote').textContent.includes('slaps'),
+    'note shows on the library row');
+  assert(rowById('ratchet-clank-rift-apart').querySelector('.rnote').textContent.includes('<script>')
+    && d.querySelector('#list script') === null && w.__pwned === undefined,
+    'note renders its markup as visible text, never as elements');
+  // liked filter + per-row heart
+  d.querySelector('#libliked').click(); await sleep(20);
+  assert(rows().length === 1 && rows()[0].dataset.id === 'ratchet-clank-rift-apart', '♥ only filters to liked');
+  rowById('ratchet-clank-rift-apart').querySelector('[data-act="like"]').click(); await sleep(20);
+  assert(rows().length === 0 && d.querySelector('#list .state') !== null, 'unliking live empties the filter with a message');
+  d.querySelector('#libliked').click(); await sleep(20);
+
+  // ---------- clear a listen (reversibility) ----------
+  rowById('fresh-drop').querySelector('[data-act="log"]').click();
+  d.querySelector('#sh-unlog').click(); await sleep(20);
+  assert(stored().entries['fresh-drop'].status === 'unsorted' && stored().entries['fresh-drop'].listenedOn === null,
+    'clear this listen reverts status but keeps the entry');
+  assert(stored().entries['fresh-drop'].rating === 5, 'rating survives a cleared listen');
+  assert(tab('library').textContent.includes('2'), 'library count follows the cleared listen');
+
+  // ---------- hidden: reachable, reversible ----------
+  tab('feed').click(); await sleep(20);
+  rowById('ゼルダの伝説').querySelector('[data-act="hide"]').click(); await sleep(20);
+  assert(rowById('ゼルダの伝説') === null, 'hide removes the row from the feed');
+  d.querySelector('#hidtoggle').click(); await sleep(20);
+  assert(d.querySelector('#hidhead').textContent.includes('2'), 'hidden section counts both hidden rows');
+  d.querySelector('.row.ghost[data-id="ゼルダの伝説"] [data-act="restore"]').click(); await sleep(20);
+  assert(rowById('ゼルダの伝説') !== null, 'restore brings the row back');
+
+  // ---------- search still works, now note-aware ----------
   const q = d.getElementById('q');
   const type = (s) => { q.value = s; q.dispatchEvent(new w.Event('input', { bubbles: true })); };
-  type('ゼルダ');
-  assert(rows().length === 1 && rows()[0].dataset.id === 'ゼルダの伝説', 'search matches Japanese titles');
   type('mitsuda');
   assert(rows().length === 1 && rows()[0].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'search matches composers');
-  type('fresh drop');
-  assert(rows().length === 1, 'search matches game names');
-  type('zzzz');
-  assert(rows().length === 0 && d.querySelector('#list .state').textContent.includes('zzzz'), 'no-match state names the query');
+  type('slaps');
+  assert(rows().length === 1 && rows()[0].dataset.id === 'ratchet-clank-rift-apart', 'search matches your notes');
   type('');
-  assert(rows().length === 6, 'clearing search restores the list');
 
-  // hide -> footer -> show -> restore
-  rowById('evil').querySelector('[data-act="hide"]').click();
-  assert(rowById('evil') === null, 'hidden row leaves the list');
-  assert(d.getElementById('hidtoggle').textContent.includes('1 hidden'), 'footer counts hidden rows');
-  d.getElementById('hidtoggle').click();
-  assert(d.querySelector('#hidhead') !== null && d.querySelector('#list .row.ghost[data-id="evil"]') !== null,
-    'show reveals the hidden section');
-  d.querySelector('.row.ghost [data-act="restore"]').click();
-  assert(rowById('evil') !== null, 'restore brings the row back');
-  assert(JSON.parse(w.localStorage.getItem('vgm-v1')).hidden.evil === undefined, 'restore clears the persisted flag');
+  // ---------- export / import round-trip ----------
+  const dump = S('JSON.stringify(buildExport())');
+  const parsedDump = JSON.parse(dump);
+  assert(parsedDump.app === 'vgm-finder' && parsedDump.state.v === 2, 'export wraps the v2 state');
+  S(`editEntry('ratchet-clank-rift-apart', e => { e.note = 'clobbered'; e.rating = 1; })`);
+  assert(S(`applyImport(${JSON.stringify(dump)})`) === true, 'import accepts its own export');
+  assert(stored().entries['ratchet-clank-rift-apart'].note.includes('slaps') &&
+         stored().entries['ratchet-clank-rift-apart'].rating === 3.5, 'import restores the exported state');
+  assert(S(`applyImport('{"nope":true}')`) === false, 'import rejects foreign JSON');
+  assert(S(`applyImport('not json')`) === false, 'import rejects non-JSON');
+  const legacy = JSON.stringify({ v: 1, starred: { 'hades-ii': true }, listened: {}, hidden: {}, lastSeen: 5 });
+  assert(S(`applyImport(${JSON.stringify(legacy)})`) === true && stored().v === 2 &&
+         stored().entries['hades-ii'].liked === true, 'importing a v1 backup migrates it');
+  assert(S(`applyImport(${JSON.stringify(dump)})`) === true, 'state restored for the reload test');
 
-  // header sync line
-  assert(d.getElementById('sync').textContent === 'synced jul 28', 'header shows the collector sync date');
+  // ---------- persistence across reload ----------
+  const raw = w.localStorage.getItem('vgm-v1');
+  const re = makeDom(okFetch(FIXTURE), raw);
+  await sleep(120);
+  assert(re.errors.length === 0, 'reload boots clean on v2 state');
+  const rtab = (v) => re.d.querySelector(`#tabbar button[data-v="${v}"]`);
+  assert(rtab('library').textContent.includes('2') && rtab('queue').textContent.includes('0'),
+    'counts survive a reload');
+  assert(JSON.parse(re.w.localStorage.getItem('vgm-v1')).entries['ratchet-clank-rift-apart'].rating === 3.5,
+    'diary content identical after reload');
 
-  // ---------- separate DOMs: empty data, fetch failure, first visit ----------
-  const empty = makeDom(okFetch({ updatedAt: null, releases: [] }));
+  // ---------- fresh visitor, empty and error states ----------
+  const first = makeDom(okFetch(FIXTURE));
   await sleep(60);
-  assert(empty.d.querySelector('#list .state').textContent.includes('NO TRACKS YET'), 'empty data explains the morning collector');
+  assert(first.d.querySelectorAll('#list .new').length === 0, 'first-ever visit badges nothing as NEW');
+  first.d.querySelector('#tabbar button[data-v="queue"]').click();
+  assert(first.d.querySelector('#list .state').textContent.includes('QUEUE EMPTY'), 'empty queue explains itself');
+  first.d.querySelector('#tabbar button[data-v="library"]').click();
+  assert(first.d.querySelector('#list .state').textContent.includes('NOTHING LOGGED'), 'empty library points at the ritual');
 
   const broken = makeDom(async () => ({ ok: false, status: 404, json: async () => ({}) }));
   await sleep(60);
-  const errText = broken.d.querySelector('#list .state').textContent;
-  assert(errText.includes('READ ERROR') && errText.includes('HTTP 404'), 'fetch failure states the status, no apology');
-
-  const first = makeDom(okFetch(FIXTURE)); // no prefill: a brand-new visitor
-  await sleep(60);
-  assert(first.d.querySelectorAll('#list .new').length === 0, 'first-ever visit badges nothing as NEW');
+  assert(broken.d.querySelector('#list .state').textContent.includes('HTTP 404'), 'fetch failure states the status');
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

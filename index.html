@@ -46,12 +46,11 @@ input:focus{outline:1px solid var(--amberdim)}
 #sync{margin-left:auto;color:var(--dim);font-size:11px;white-space:nowrap}
 
 #controls{flex:none;width:100%;max-width:560px;margin:0 auto;padding:8px 16px 10px;border-bottom:1px solid var(--line)}
-#chips{display:flex;gap:6px;margin-top:8px}
-#chips button{flex:0 0 auto;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim);
+#subctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+#subctl:not(:empty){margin-top:8px}
+#subctl button{flex:0 0 auto;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim);
   border:1px solid var(--line);border-radius:99px;padding:6px 13px}
-#chips button.on{color:var(--amber2);border-color:var(--amberdim)}
-#chips button .n{color:var(--dim);margin-left:4px}
-#chips button.on .n{color:var(--amberdim)}
+#subctl button.on{color:var(--amber2);border-color:var(--amberdim)}
 
 main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 8px 20px}
 
@@ -63,14 +62,18 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 .new{font-size:8.5px;font-weight:700;letter-spacing:1.5px;color:var(--bg);background:var(--amber);border-radius:3px;padding:1.5px 5px 1px}
 .rtop time{margin-left:auto;color:var(--dim);font-size:10.5px;letter-spacing:1px;white-space:nowrap}
 .rtitle{margin-top:3px;font-size:15px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
+.rsub{margin-top:2px;color:var(--mut);font-size:12.5px}
+.rnote{margin-top:4px;color:var(--mut);font-size:12.5px;font-style:italic;overflow-wrap:anywhere}
 .rmeta{margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .chip{font-size:10px;letter-spacing:.8px;text-transform:lowercase;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:2px 8px}
 .chip.community{border-style:dashed;color:var(--dim)}
-.xhide{margin-left:auto;color:var(--dim);font-size:13px;padding:4px 10px}
+.minis{color:var(--amber);font-size:12px;letter-spacing:1px;white-space:nowrap}
+.xhide,.xdeq{margin-left:auto;color:var(--dim);font-size:13px;padding:4px 10px}
 .racts{flex:none;display:flex;flex-direction:column;justify-content:center}
 .racts button{width:46px;height:44px;font-size:19px;color:var(--dim)}
-.racts .star.on{color:var(--amber2)}
-.racts .heard.on{color:var(--amber)}
+.racts .queue.on{color:var(--amber2)}
+.racts .like.on{color:var(--amber2)}
+.racts .log.on{color:var(--amber)}
 .row.heard .rmain{opacity:.5}
 .row.heard .rtitle{color:var(--mut);font-weight:500}
 @media (prefers-reduced-motion: no-preference){
@@ -87,11 +90,45 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 .row.ghost .rmain{opacity:.45}
 .restore{flex:none;align-self:center;color:var(--amber);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:12px 14px}
 
-#footer{flex:none;width:100%;max-width:560px;margin:0 auto;border-top:1px solid var(--line);
-  padding:9px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;
-  color:var(--dim);font-size:11px;letter-spacing:.5px}
-#hidtoggle{color:var(--mut);text-decoration:underline;text-underline-offset:2px;padding:4px}
-#footer .r{margin-left:auto;text-align:right}
+#colophon{padding:18px 8px 6px;color:var(--dim);font-size:11px;letter-spacing:.5px;line-height:2}
+#colophon button,#colophon label{color:var(--mut);text-decoration:underline;text-underline-offset:2px;padding:2px 2px;cursor:pointer;font-size:11px;letter-spacing:.5px}
+#colophon .impmsg{color:var(--amber)}
+
+#tabbar{flex:none;width:100%;background:rgba(9,11,17,.97);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+#tabbar .trow{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
+#tabbar button{padding:13px 4px 12px;color:var(--dim);font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase}
+#tabbar button .n{color:var(--dim);margin-left:5px;font-size:10.5px}
+#tabbar button.on{color:var(--amber2)}
+#tabbar button.on span.lbl{border-bottom:2px solid var(--amber);padding-bottom:4px}
+#tabbar button.on .n{color:var(--amberdim)}
+#tabbar .nb{margin-left:5px;font-size:8.5px;font-weight:700;letter-spacing:1px;color:var(--bg);background:var(--amber);border-radius:3px;padding:1.5px 4px 1px;vertical-align:2px}
+
+/* the logging ritual sheet */
+#scrim{position:fixed;inset:0;background:rgba(4,5,9,.6);z-index:8}
+#sheet{position:fixed;left:0;right:0;bottom:0;z-index:9;max-width:560px;margin:0 auto;
+  background:var(--bg2);border:1px solid var(--line);border-bottom:0;border-radius:16px 16px 0 0;
+  padding:16px 18px calc(18px + env(safe-area-inset-bottom))}
+@media (prefers-reduced-motion: no-preference){
+  #sheet{animation:sheetUp .22s cubic-bezier(.2,.7,.3,1)}
+  @keyframes sheetUp{from{transform:translateY(30px);opacity:.4}to{transform:none;opacity:1}}
+}
+#sheet .shead{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+#sheet .stitle{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+#sheet .slab{color:var(--dim);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;margin:12px 0 6px;display:flex;align-items:baseline;gap:10px}
+#sh-clear{color:var(--mut);font-size:10.5px;letter-spacing:1px;text-decoration:underline;text-underline-offset:2px}
+#sh-stars{display:flex;gap:6px}
+.star{position:relative;width:40px;height:40px}
+.sbase,.sfill{position:absolute;inset:0;font-size:30px;line-height:40px;text-align:left;pointer-events:none}
+.sbase{color:var(--bg3);-webkit-text-stroke:1px var(--dim)}
+.sfill{color:var(--amber);overflow:hidden;white-space:nowrap}
+.star button{position:absolute;top:0;bottom:0;width:50%;background:transparent}
+.star button.hl{left:0}.star button.hr{right:0}
+#sheet .srow{display:flex;gap:10px;align-items:center;margin-top:4px}
+#sh-heart{flex:none;width:44px;height:44px;font-size:22px;color:var(--dim);border:1px solid var(--line);border-radius:10px}
+#sh-heart.on{color:var(--amber2);border-color:var(--amberdim)}
+#sheet .sactions{display:flex;align-items:center;gap:14px;margin-top:16px}
+#sh-save{background:var(--amber);color:#241a08;font-weight:700;letter-spacing:2px;border-radius:10px;padding:12px 26px;font-size:13px}
+#sh-unlog{color:var(--dim);font-size:11px;letter-spacing:.5px;text-decoration:underline;text-underline-offset:2px}
 </style>
 </head>
 <body>
@@ -101,52 +138,133 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
   <span id="sync"></span>
 </header>
 <div id="controls">
-  <input id="q" type="search" placeholder="Search title, game, composer" autocomplete="off" aria-label="Search releases">
-  <div id="chips" role="tablist" aria-label="Filter"></div>
+  <input id="q" type="search" placeholder="Search title, game, composer" autocomplete="off" aria-label="Search">
+  <div id="subctl"></div>
 </div>
-<main><div id="list" aria-live="polite"></div></main>
-<footer id="footer"></footer>
+<main><div id="list" aria-live="polite"></div><div id="colophon"></div></main>
+<nav id="tabbar" aria-label="Views"><div class="trow"></div></nav>
+<div id="sheetwrap"></div>
 <script>
 /* ============================ state ============================ */
 const KEY = 'vgm-v1';
-const FILTERS = ['all', 'unlistened', 'starred'];
+const VIEWS = ['feed', 'queue', 'library'];
+const STATUSES = ['unsorted', 'queued', 'listened', 'hidden'];
+const LIB_SORTS = ['listenedOn', 'rating', 'date'];
 let R = { updatedAt: null, releases: [] };   // shared data from the collector; never written here
 let LOADSTATE = 'loading';                    // loading | ok | empty | error
 let LOADERR = '';
 let TRACKNO = {};                             // id -> position in the append-only history
 let Q = '';                                   // search text, deliberately not persisted
+let SHEET = null;                             // {id, draft} while the logging sheet is open
+let IMPMSG = '';                              // one-shot import feedback line
 
-function fresh(){ return { v:1, starred:{}, listened:{}, hidden:{}, lastSeen:0, filter:'all', showHidden:false }; }
+function blank(){ return { status:'unsorted', rating:null, liked:false, note:'', listenedOn:null, queuedOn:null }; }
+function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn; }
+function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
+function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
+function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', libSort:'listenedOn', libLiked:false, showHidden:false }; }
+
+function migrateV1(d){
+  // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
+  // diary entry, hidden stays hidden (and wins if a row was somehow both)
+  const s = fresh();
+  s.lastSeen = typeof d.lastSeen === 'number' ? d.lastSeen : 0;
+  const ids = k => (d[k] && typeof d[k] === 'object' && !Array.isArray(d[k])) ? Object.keys(d[k]) : [];
+  const ent = id => s.entries[id] || (s.entries[id] = blank());
+  for(const id of ids('listened')) ent(id).status = 'listened';
+  for(const id of ids('hidden')) ent(id).status = 'hidden';
+  for(const id of ids('starred')) ent(id).liked = true;
+  return s;
+}
+
+function validateState(d){
+  if(!d || typeof d !== 'object') return null;
+  if(d.v === 1) return migrateV1(d);
+  if(d.v !== 2) return null;
+  const s = fresh();
+  s.lastSeen = typeof d.lastSeen === 'number' ? d.lastSeen : 0;
+  s.view = VIEWS.includes(d.view) ? d.view : 'feed';
+  s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
+  s.libLiked = d.libLiked === true;
+  s.showHidden = d.showHidden === true;
+  const src = (d.entries && typeof d.entries === 'object' && !Array.isArray(d.entries)) ? d.entries : {};
+  for(const id in src){
+    const x = src[id] || {}, e = blank();
+    e.status = STATUSES.includes(x.status) ? x.status : 'unsorted';
+    e.rating = validRating(x.rating) ? x.rating : null;
+    e.liked = x.liked === true;
+    e.note = typeof x.note === 'string' ? x.note.slice(0, 200) : '';
+    e.listenedOn = isDateStr(x.listenedOn) ? x.listenedOn : null;
+    e.queuedOn = isDateStr(x.queuedOn) ? x.queuedOn : null;
+    if(!isBlank(e)) s.entries[id] = e;
+  }
+  return s;
+}
+
 function load(){
   let raw = null;
   try{ raw = localStorage.getItem(KEY); }catch(e){}
   if(!raw) return fresh();
   let d = null;
   try{ d = JSON.parse(raw); }catch(e){}
-  if(!d || typeof d !== 'object' || d.v !== 1){
-    try{ localStorage.setItem(KEY + '-backup', raw); }catch(e){}  // unknown schema: keep a copy, start clean
-    return fresh();
-  }
-  for(const k of ['starred','listened','hidden']) if(!d[k] || typeof d[k] !== 'object' || Array.isArray(d[k])) d[k] = {};
-  if(typeof d.lastSeen !== 'number') d.lastSeen = 0;
-  if(!FILTERS.includes(d.filter)) d.filter = 'all';
-  d.showHidden = d.showHidden === true;
-  return d;
+  const s = validateState(d);
+  if(s) return s;
+  try{ localStorage.setItem(KEY + '-backup', raw); }catch(e){}  // unknown schema: keep a copy, start clean
+  return s || fresh();
 }
 let S = load();
 const PREV_SEEN = S.lastSeen;   // frozen at boot: "new since last visit" compares against the previous visit
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+save();  // persists a v1 migration immediately, retiring the legacy fields
 
 /* ========================== mutations ========================== */
 /* every state change goes through one of these; no render path mutates */
-function toggleStar(id){ if(S.starred[id]) delete S.starred[id]; else S.starred[id] = true; save(); renderAll(); }
-function toggleHeard(id){ if(S.listened[id]) delete S.listened[id]; else S.listened[id] = true; save(); renderAll(); }
-function hideTrack(id){ S.hidden[id] = true; save(); renderAll(); }
-function unhideTrack(id){ delete S.hidden[id]; save(); renderAll(); }
-function setFilter(f){ if(FILTERS.includes(f)){ S.filter = f; save(); renderAll(); } }
-function setQuery(q){ Q = q; renderAll(); }
+function E(id){ return S.entries[id] || blank(); }
+function editEntry(id, fn){
+  const e = S.entries[id] || (S.entries[id] = blank());
+  fn(e);
+  if(isBlank(e)) delete S.entries[id];
+  save(); renderAll();
+}
+function setView(v){ if(VIEWS.includes(v)){ S.view = v; save(); renderAll(); } }
+function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
+function toggleLibLiked(){ S.libLiked = !S.libLiked; save(); renderAll(); }
+function toggleQueued(id){ editEntry(id, e => {
+  const on = e.status === 'queued';
+  e.status = on ? 'unsorted' : 'queued';
+  e.queuedOn = on ? null : todayLocal();
+}); }
+function hideTrack(id){ editEntry(id, e => { e.status = 'hidden'; e.queuedOn = null; }); }
+function unhideTrack(id){ editEntry(id, e => { e.status = 'unsorted'; }); }
+function toggleLiked(id){ editEntry(id, e => { e.liked = !e.liked; }); }
 function toggleShowHidden(){ S.showHidden = !S.showHidden; save(); renderAll(); }
 function markVisit(){ S.lastSeen = Date.now(); save(); }
+function setQuery(q){ Q = q; renderAll(); }
+
+function openLog(id){
+  const e = E(id);
+  SHEET = { id, draft: { listenedOn: e.listenedOn || todayLocal(),
+                         rating: e.rating, liked: e.liked, note: e.note } };
+  renderSheet();
+}
+function closeLog(){ SHEET = null; renderSheet(); }
+function saveLog(){
+  const { id, draft } = SHEET;
+  SHEET = null;
+  editEntry(id, e => {
+    e.status = 'listened';
+    e.listenedOn = isDateStr(draft.listenedOn) ? draft.listenedOn : todayLocal();
+    e.rating = validRating(draft.rating) ? draft.rating : null;
+    e.liked = draft.liked === true;
+    e.note = String(draft.note || '').trim().slice(0, 200);
+    e.queuedOn = null;
+  });
+}
+function clearListen(){
+  const id = SHEET.id;
+  SHEET = null;
+  editEntry(id, e => { e.status = 'unsorted'; e.listenedOn = null; });
+}
 
 /* ========================== derived ============================ */
 function byId(id){ return R.releases.find(r => r.id === id); }
@@ -162,25 +280,37 @@ function srcRank(r){
   const ranks = (r.sources || []).map(s => SRC_RANK[s.type] ?? 1);
   return ranks.length ? Math.min(...ranks) : 1;
 }
+function dcmp(b, a){ return String(b || '').localeCompare(String(a || '')); }  // desc, nulls sink
 function sorted(){
   return R.releases.slice().sort((a, b) =>
-    String(b.date || '').localeCompare(String(a.date || '')) ||
+    dcmp(b.date, a.date) ||
     srcRank(a) - srcRank(b) ||   // same day: an editor's pick outranks the firehose outranks the crowd
     firstSeen(b) - firstSeen(a) ||
     TRACKNO[b.id] - TRACKNO[a.id]);
 }
 function matches(r, q){
   if(!q) return true;
-  const hay = [r.title, r.game, ...(r.composers || [])].filter(Boolean).join(' ').toLowerCase();
+  const hay = [r.title, r.game, ...(r.composers || []), E(r.id).note]
+    .filter(Boolean).join(' ').toLowerCase();
   return hay.includes(q.toLowerCase());
 }
-function visibleRows(){
-  let rows = sorted().filter(r => !S.hidden[r.id]);
-  if(S.filter === 'unlistened') rows = rows.filter(r => !S.listened[r.id]);
-  if(S.filter === 'starred') rows = rows.filter(r => S.starred[r.id]);
-  return rows.filter(r => matches(r, Q.trim()));
+function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
+function feedRows(){ return sorted().filter(r => E(r.id).status !== 'hidden'); }
+function queueRows(){
+  return sorted().filter(r => E(r.id).status === 'queued')
+    .sort((a, b) => dcmp(b.date, a.date) || dcmp(E(b.id).queuedOn, E(a.id).queuedOn) || TRACKNO[b.id] - TRACKNO[a.id]);
 }
-function hiddenRows(){ return sorted().filter(r => S.hidden[r.id]); }
+function libraryRows(){
+  let rows = sorted().filter(r => E(r.id).status === 'listened');
+  if(S.libLiked) rows = rows.filter(r => E(r.id).liked);
+  if(S.libSort === 'rating')
+    rows.sort((a, b) => ((E(b.id).rating ?? -1) - (E(a.id).rating ?? -1)) || dcmp(E(b.id).listenedOn, E(a.id).listenedOn));
+  else if(S.libSort === 'listenedOn')
+    rows.sort((a, b) => dcmp(E(b.id).listenedOn, E(a.id).listenedOn));
+  return rows;  // 'date' keeps release order from sorted()
+}
+function hiddenRows(){ return sorted().filter(r => E(r.id).status === 'hidden'); }
+function newCount(){ return feedRows().filter(isNew).length; }
 
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 function fmtDate(iso){
@@ -189,49 +319,101 @@ function fmtDate(iso){
   const label = MONTHS[+m[2] - 1] + ' ' + (+m[3]);
   return +m[1] === new Date().getFullYear() ? label : label + ' ' + m[1];
 }
+function todayLocal(){
+  const d = new Date(), p = n => String(n).padStart(2, '0');
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+}
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function pad3(n){ return String(n).padStart(3, '0'); }
+function minis(rating){
+  if(rating == null) return '';
+  return '★'.repeat(Math.floor(rating)) + (rating % 1 ? '½' : '');
+}
 
 /* =========================== render ============================ */
-function renderAll(){ renderSync(); renderChips(); renderList(); renderFooter(); }
+function renderAll(){ renderSync(); renderTabs(); renderControls(); renderList(); renderColophon(); renderSheet(); }
 
 function renderSync(){
   const el = document.getElementById('sync');
   el.textContent = R.updatedAt ? 'synced ' + fmtDate(R.updatedAt).toLowerCase() : '';
 }
 
-function renderChips(){
-  const base = sorted().filter(r => !S.hidden[r.id]);
-  const counts = { all: base.length,
-    unlistened: base.filter(r => !S.listened[r.id]).length,
-    starred: base.filter(r => S.starred[r.id]).length };
-  document.getElementById('chips').innerHTML = FILTERS.map(f =>
-    `<button data-f="${f}" role="tab" aria-selected="${S.filter === f}" class="${S.filter === f ? 'on' : ''}">` +
-    `${f}<span class="n">${counts[f]}</span></button>`).join('');
+function renderTabs(){
+  const nb = newCount();
+  const tabs = [
+    { v:'feed', label:'Feed', extra: nb ? `<span class="nb">${nb} NEW</span>` : '' },
+    { v:'queue', label:'Queue', extra: `<span class="n">${queueRows().length}</span>` },
+    { v:'library', label:'Library', extra: `<span class="n">${libraryRows().length}</span>` },
+  ];
+  document.querySelector('#tabbar .trow').innerHTML = tabs.map(t =>
+    `<button data-v="${t.v}" class="${S.view === t.v ? 'on' : ''}" aria-selected="${S.view === t.v}">` +
+    `<span class="lbl">${t.label}</span>${t.extra}</button>`).join('');
 }
 
-function rowHtml(r, ghost){
-  const heard = !!S.listened[r.id], star = !!S.starred[r.id];
+function renderControls(){
+  const el = document.getElementById('subctl');
+  if(S.view !== 'library'){ el.innerHTML = ''; return; }
+  const sorts = [['listenedOn', 'heard on'], ['rating', 'rating'], ['date', 'released']];
+  el.innerHTML = sorts.map(([k, label]) =>
+    `<button data-ls="${k}" class="${S.libSort === k ? 'on' : ''}">${label}</button>`).join('') +
+    `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>`;
+}
+
+function rowHtml(r, view, ghost){
+  const e = E(r.id);
+  const heard = e.status === 'listened', queued = e.status === 'queued';
   const chips = (r.sources || []).map(s =>
     `<span class="chip${s.type === 'community' ? ' community' : ''}">${esc(s.name)}</span>`).join('');
   const sub = [r.game, (r.composers || []).join(', ')].filter(Boolean).join(' · ');
-  return `<div class="row${heard ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="link" aria-label="Open in YouTube Music: ${esc(r.title)}">
+  const topDate = view === 'library' ? (e.listenedOn ? fmtDate(e.listenedOn) : '') : fmtDate(r.date);
+
+  let meta = chips, acts = '';
+  if(ghost){
+    acts = `<button class="restore" data-act="restore">Restore</button>`;
+  } else if(view === 'feed'){
+    meta += `<button class="xhide" data-act="hide" aria-label="Hide ${esc(r.title)}">✕</button>`;
+    acts = `<div class="racts">
+      <button class="queue${queued ? ' on' : ''}" data-act="queue" aria-pressed="${queued}" aria-label="Queue">${queued ? '✓' : '+'}</button>
+      <button class="log${heard ? ' on' : ''}" data-act="log" aria-label="${heard ? 'Edit log' : 'Mark listened'}">${heard ? '▶' : '▷'}</button>
+    </div>`;
+  } else if(view === 'queue'){
+    meta += `<span class="chip">queued ${esc(fmtDate(e.queuedOn).toLowerCase())}</span>` +
+      `<button class="xdeq" data-act="queue" aria-label="Remove from queue">−</button>`;
+    acts = `<div class="racts"><button class="log" data-act="log" aria-label="Mark listened">▷</button></div>`;
+  } else { // library
+    const bits = [];
+    if(e.rating != null) bits.push(`<span class="minis">${minis(e.rating)}</span>`);
+    bits.push(`<span class="chip">released ${esc(fmtDate(r.date).toLowerCase())}</span>`);
+    meta = bits.concat([chips]).join('');
+    acts = `<div class="racts">
+      <button class="like${e.liked ? ' on' : ''}" data-act="like" aria-pressed="${e.liked}" aria-label="Liked">${e.liked ? '♥' : '♡'}</button>
+      <button class="log on" data-act="log" aria-label="Edit log">▶</button>
+    </div>`;
+  }
+
+  return `<div class="row${heard && view === 'feed' ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="link" aria-label="Open in YouTube Music: ${esc(r.title)}">
     <div class="rmain">
-      <div class="rtop"><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span>${isNew(r) ? '<span class="new">NEW</span>' : ''}<time>${fmtDate(r.date)}</time></div>
+      <div class="rtop"><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span>${view === 'feed' && isNew(r) ? '<span class="new">NEW</span>' : ''}<time>${topDate}</time></div>
       <div class="rtitle">${esc(r.title)}</div>
-      ${sub ? `<div class="rmeta" style="margin-top:2px"><span style="color:var(--mut);font-size:12.5px">${esc(sub)}</span></div>` : ''}
-      <div class="rmeta">${chips}${ghost ? '' : `<button class="xhide" data-act="hide" aria-label="Hide ${esc(r.title)}">✕</button>`}</div>
+      ${sub ? `<div class="rsub">${esc(sub)}</div>` : ''}
+      ${view === 'library' && e.note ? `<div class="rnote">“${esc(e.note)}”</div>` : ''}
+      <div class="rmeta">${meta}</div>
     </div>
-    ${ghost
-      ? `<button class="restore" data-act="restore">Restore</button>`
-      : `<div class="racts">
-          <button class="star${star ? ' on' : ''}" data-act="star" aria-pressed="${star}" aria-label="Star">${star ? '★' : '☆'}</button>
-          <button class="heard${heard ? ' on' : ''}" data-act="heard" aria-pressed="${heard}" aria-label="Mark listened">${heard ? '▶' : '▷'}</button>
-        </div>`}
+    ${acts}
   </div>`;
 }
 
 function stateHtml(big, body){ return `<div class="state"><div class="big">${big}</div><p>${body}</p></div>`; }
+
+function emptyHtml(){
+  const q = Q.trim();
+  if(q) return stateHtml('NO MATCHES', `Nothing matches “${esc(q)}” here.`);
+  if(S.view === 'queue') return stateHtml('QUEUE EMPTY', 'Tap + on anything in the feed worth hearing and it lands here.');
+  if(S.view === 'library') return S.libLiked
+    ? stateHtml('NO LIKED TRACKS', 'The ♥ lives in the logging sheet and on library rows.')
+    : stateHtml('NOTHING LOGGED YET', 'The ▷ on any row opens the logging sheet and starts your diary.');
+  return stateHtml('ALL TRACKS HIDDEN', 'Everything is hidden. Use “show” below to bring tracks back.');
+}
 
 function renderList(){
   const el = document.getElementById('list');
@@ -245,30 +427,55 @@ function renderList(){
     el.innerHTML = stateHtml('NO TRACKS YET', 'The collector runs every morning at 6 ET. The first batch lands after its next run.');
     return;
   }
-  const rows = visibleRows();
-  let html = rows.map(r => rowHtml(r, false)).join('');
-  if(!rows.length){
-    const q = Q.trim();
-    if(q) html = stateHtml('NO MATCHES', `Nothing matches “${esc(q)}” in titles, games, or composers.`);
-    else if(S.filter === 'unlistened') html = stateHtml('SOUND TEST COMPLETE', 'Every track is marked listened.');
-    else if(S.filter === 'starred') html = stateHtml('NO STARRED TRACKS', 'Tap ☆ on anything worth coming back to.');
-    else html = stateHtml('ALL TRACKS HIDDEN', 'Everything is hidden. Use “show” below to bring tracks back.');
-  }
+  const rows = searched(S.view === 'queue' ? queueRows() : S.view === 'library' ? libraryRows() : feedRows());
+  let html = rows.length ? rows.map(r => rowHtml(r, S.view, false)).join('') : emptyHtml();
   if(S.showHidden && hiddenRows().length){
     html += `<div id="hidhead">HIDDEN (${hiddenRows().length})</div>` +
-            hiddenRows().map(r => rowHtml(r, true)).join('');
+            hiddenRows().map(r => rowHtml(r, S.view, true)).join('');
   }
   el.innerHTML = html;
 }
 
-function renderFooter(){
-  const el = document.getElementById('footer');
+function renderColophon(){
+  const el = document.getElementById('colophon');
   if(LOADSTATE !== 'ok'){ el.innerHTML = ''; return; }
   const h = hiddenRows().length;
   el.innerHTML =
-    `<span>${R.releases.length} tracks</span>` +
-    (h ? `<button id="hidtoggle">${h} hidden · ${S.showHidden ? 'tuck away' : 'show'}</button>` : '') +
-    `<span class="r">collected daily · 6am ET</span>`;
+    `<span>${R.releases.length} tracks · collected daily 6am ET</span> · ` +
+    (h ? `<button id="hidtoggle">${h} hidden · ${S.showHidden ? 'tuck away' : 'show'}</button> · ` : '') +
+    `<button id="exp">export backup</button> · ` +
+    `<label for="impfile">import backup</label><input type="file" id="impfile" accept=".json,application/json" hidden>` +
+    (IMPMSG ? ` · <span class="impmsg">${esc(IMPMSG)}</span>` : '');
+}
+
+function renderSheet(){
+  const wrap = document.getElementById('sheetwrap');
+  if(!SHEET){ wrap.innerHTML = ''; return; }
+  const r = byId(SHEET.id) || { title: SHEET.id };
+  const d = SHEET.draft;
+  const stars = [1, 2, 3, 4, 5].map(i => {
+    const fill = d.rating == null ? 0 : Math.max(0, Math.min(1, d.rating - (i - 1)));
+    return `<div class="star"><span class="sbase">★</span><span class="sfill" style="width:${fill * 100}%">★</span>` +
+      `<button class="hl" data-r="${i - 0.5}" aria-label="${i - 0.5} stars"></button>` +
+      `<button class="hr" data-r="${i}" aria-label="${i} stars"></button></div>`;
+  }).join('');
+  const wasListened = E(SHEET.id).status === 'listened';
+  wrap.innerHTML = `<div id="scrim"></div>
+  <div id="sheet" role="dialog" aria-modal="true" aria-label="Log listen">
+    <div class="shead"><span class="tno">TRACK ${pad3(TRACKNO[SHEET.id] || 0)}</span><div class="stitle">${esc(r.title)}</div></div>
+    <div class="slab">Listened on</div>
+    <input type="date" id="sh-date" value="${esc(d.listenedOn)}">
+    <div class="slab">Rating${d.rating != null ? ` <button id="sh-clear">clear</button>` : ''}</div>
+    <div id="sh-stars">${stars}</div>
+    <div class="srow">
+      <button id="sh-heart" class="${d.liked ? 'on' : ''}" aria-pressed="${d.liked}" aria-label="Liked">${d.liked ? '♥' : '♡'}</button>
+      <input id="sh-note" placeholder="One line worth remembering" maxlength="200" value="${esc(d.note)}">
+    </div>
+    <div class="sactions">
+      <button id="sh-save">SAVE</button>
+      ${wasListened ? '<button id="sh-unlog">clear this listen</button>' : ''}
+    </div>
+  </div>`;
 }
 
 /* =========================== events ============================ */
@@ -280,9 +487,9 @@ document.getElementById('list').addEventListener('click', e => {
   if(!row) return;
   const id = row.dataset.id;
   if(btn){
-    e.stopPropagation();
-    if(btn.dataset.act === 'star') toggleStar(id);
-    else if(btn.dataset.act === 'heard') toggleHeard(id);
+    if(btn.dataset.act === 'queue') toggleQueued(id);
+    else if(btn.dataset.act === 'log') openLog(id);
+    else if(btn.dataset.act === 'like') toggleLiked(id);
     else if(btn.dataset.act === 'hide') hideTrack(id);
     else if(btn.dataset.act === 'restore') unhideTrack(id);
     return;
@@ -294,14 +501,65 @@ document.getElementById('list').addEventListener('keydown', e => {
   const row = e.target.closest('.row');
   if(row){ e.preventDefault(); openTrack(byId(row.dataset.id)); }
 });
-document.getElementById('chips').addEventListener('click', e => {
-  const b = e.target.closest('button[data-f]');
-  if(b) setFilter(b.dataset.f);
+document.querySelector('#tabbar .trow').addEventListener('click', e => {
+  const b = e.target.closest('button[data-v]');
+  if(b) setView(b.dataset.v);
 });
-document.getElementById('footer').addEventListener('click', e => {
-  if(e.target.closest('#hidtoggle')) toggleShowHidden();
+document.getElementById('subctl').addEventListener('click', e => {
+  const s = e.target.closest('button[data-ls]');
+  if(s){ setLibSort(s.dataset.ls); return; }
+  if(e.target.closest('#libliked')) toggleLibLiked();
+});
+document.getElementById('colophon').addEventListener('click', e => {
+  if(e.target.closest('#hidtoggle')){ toggleShowHidden(); return; }
+  if(e.target.closest('#exp')) exportBackup();
+});
+document.getElementById('colophon').addEventListener('change', e => {
+  if(e.target.id !== 'impfile' || !e.target.files || !e.target.files[0]) return;
+  e.target.files[0].text().then(t => {
+    IMPMSG = applyImport(t) ? 'imported ✓' : 'import failed: not a vgm-finder backup';
+    renderAll();
+  });
 });
 document.getElementById('q').addEventListener('input', e => setQuery(e.target.value));
+
+const sheetwrap = document.getElementById('sheetwrap');
+sheetwrap.addEventListener('click', e => {
+  if(e.target.id === 'scrim'){ closeLog(); return; }
+  if(e.target.id === 'sh-save'){ saveLog(); return; }
+  if(e.target.id === 'sh-unlog'){ clearListen(); return; }
+  if(e.target.id === 'sh-clear'){ SHEET.draft.rating = null; renderSheet(); return; }
+  if(e.target.id === 'sh-heart'){ SHEET.draft.liked = !SHEET.draft.liked; renderSheet(); return; }
+  const star = e.target.closest('button[data-r]');
+  if(star){ SHEET.draft.rating = parseFloat(star.dataset.r); renderSheet(); }
+});
+sheetwrap.addEventListener('input', e => {
+  if(!SHEET) return;
+  if(e.target.id === 'sh-note') SHEET.draft.note = e.target.value;
+  if(e.target.id === 'sh-date') SHEET.draft.listenedOn = e.target.value;
+});
+window.addEventListener('keydown', e => { if(e.key === 'Escape' && SHEET) closeLog(); });
+
+/* ======================= backup lifeboat ======================= */
+function buildExport(){ return { app: 'vgm-finder', exportedAt: new Date().toISOString(), state: S }; }
+function exportBackup(){
+  try{
+    const blob = new Blob([JSON.stringify(buildExport(), null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'vgm-finder-backup-' + todayLocal() + '.json';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  }catch(e){}
+}
+function applyImport(text){
+  let d = null;
+  try{ d = JSON.parse(text); }catch(e){ return false; }
+  const s = validateState(d && d.state ? d.state : d);
+  if(!s) return false;
+  S = s; save(); renderAll();
+  return true;
+}
 
 /* ============================ boot ============================= */
 renderAll();
