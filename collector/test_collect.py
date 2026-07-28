@@ -480,6 +480,37 @@ def test_clearly_different_titles_do_not_merge():
     assert len(releases) == 2
 
 
+def test_same_name_different_era_stays_separate():
+    releases = []
+    collect.merge(releases, [{"title": "Tomb Raider (Original Soundtrack)",
+                              "url": "https://a.example/tr2013", "date": "2013-03-05"}], src("a"), SEEN)
+    collect.merge(releases, [{"title": "Tomb Raider Soundtrack",
+                              "url": "https://b.example/tr1996", "date": "1996-10-24"}], src("b"), SEEN)
+    assert len(releases) == 2  # 17 years apart: different releases, not one row
+    assert {r["id"] for r in releases} == {"tomb-raider", "tomb-raider-1996"}
+    assert next(r for r in releases if r["id"] == "tomb-raider")["date"] == "2013-03-05"
+    # rerunning the 1996 item lands on its year-suffixed row, not a third one
+    added, merged = collect.merge(releases, [{"title": "Tomb Raider Soundtrack",
+                                              "url": "https://b.example/tr1996",
+                                              "date": "1996-10-24"}], src("b"), SEEN)
+    assert (added, merged) == (0, 0) and len(releases) == 2
+
+
+def test_numbered_sequels_never_fuzzy_merge():
+    releases = []
+    collect.merge(releases, [{"title": "Mass Effect 2 Original Soundtrack",
+                              "url": "https://a.example/me2", "date": "2010-01-26"}], src("a"), SEEN)
+    collect.merge(releases, [{"title": "Mass Effect 3 Original Soundtrack",
+                              "url": "https://b.example/me3", "date": "2012-03-06"}], src("b"), SEEN)
+    collect.merge(releases, [{"title": "Grand Theft Auto V Original Soundtrack",
+                              "url": "https://c.example/gtav", "date": "2013-09-17"}], src("c"), SEEN)
+    collect.merge(releases, [{"title": "Grand Theft Auto 5 Original Soundtrack",
+                              "url": "https://d.example/gta5", "date": "2013-09-18"}], src("d"), SEEN)
+    assert len(releases) == 3  # ME2 and ME3 stay apart; GTA V and GTA 5 are the same album
+    gta = next(r for r in releases if "grand-theft" in r["id"])
+    assert len(gta["sources"]) == 2  # roman V and arabic 5 count as the same numeral
+
+
 def test_rerun_is_append_only_and_idempotent():
     releases = []
     items = [{"title": "Tunic Soundtrack", "url": "https://a.example/tunic", "date": "2026-06-01"}]

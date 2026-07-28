@@ -414,16 +414,39 @@ def ytm_search_url(title, game):
     return "https://music.youtube.com/search?q=" + quote_plus(re.sub(r"\s+", " ", q).strip())
 
 
+_ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7,
+          "viii": 8, "ix": 9, "x": 10, "xi": 11, "xii": 12, "xiii": 13,
+          "xiv": 14, "xv": 15, "xvi": 16}
+
+
+def _numeral_tail(norm):
+    tail = norm.rsplit(" ", 1)[-1] if " " in norm else ""
+    if tail.isdigit() and len(tail) <= 2:
+        return int(tail)
+    return _ROMAN.get(tail)
+
+
 def _fuzzy_find(norm, releases, norms):
     best, best_ratio = None, 0.0
+    tail = _numeral_tail(norm)
     for r in releases:
-        m = SequenceMatcher(None, norm, norms[id(r)])
+        other = norms[id(r)]
+        if _numeral_tail(other) != tail:
+            continue  # Mass Effect 2 and 3 are near-identical strings and different albums
+        m = SequenceMatcher(None, norm, other)
         if m.real_quick_ratio() < FUZZY_THRESHOLD or m.quick_ratio() < FUZZY_THRESHOLD:
             continue
         ratio = m.ratio()
         if ratio > best_ratio:
             best, best_ratio = r, ratio
     return best if best_ratio >= FUZZY_THRESHOLD else None
+
+
+def _far_apart(a, b):
+    try:
+        return abs(int(str(a)[:4]) - int(str(b)[:4])) > 3
+    except (TypeError, ValueError):
+        return False
 
 
 def merge(releases, items, source, seen_at):
@@ -438,6 +461,13 @@ def merge(releases, items, source, seen_at):
             continue
         slug = slugify(it["title"])
         target = by_id.get(slug) or _fuzzy_find(normalize_title(it["title"]), releases, norms)
+        if target is not None and it["date"] and target.get("date") and _far_apart(it["date"], target["date"]):
+            # same name, different era: Tomb Raider 1996 is not Tomb Raider 2013.
+            # The newcomer gets a year-suffixed id; reruns find it there again.
+            slug = f"{slug}-{it['date'][:4]}"
+            target = by_id.get(slug)
+            if target is not None and target.get("date") and _far_apart(it["date"], target["date"]):
+                target = None
         src = {"name": source["name"], "type": source["type"],
                "url": it["url"], "seenAt": seen_at}
         if target is not None:
