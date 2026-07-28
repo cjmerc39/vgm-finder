@@ -212,7 +212,7 @@ def _query(title):
     return title if "soundtrack" in title.lower() else f"{title} soundtrack"
 
 
-_SOUNDTRACKY = re.compile(r"\b(soundtrack|ost|score|original sound)\b", re.IGNORECASE)
+_SOUNDTRACKY = re.compile(r"\b(soundtrack|ost|score|original sound|music from)\b", re.IGNORECASE)
 
 
 def _hit_from(r):
@@ -311,7 +311,11 @@ SOURCES = [
 _PUNCT = re.compile(r"[^\w\s]", re.UNICODE)
 # longest first so "original soundtrack" goes before "soundtrack" etc.
 _SUFFIXES = (
+    "original video game soundtrack",
+    "music from the video game",
     "original game soundtrack",
+    "video game soundtrack",
+    "music from the game",
     "original sound track",
     "original soundtrack",
     "official soundtrack",

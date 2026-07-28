@@ -72,13 +72,15 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 .chip{font-size:10px;letter-spacing:.8px;text-transform:lowercase;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:2px 8px}
 .chip.community{border-style:dashed;color:var(--dim)}
 .minis{color:var(--amber);font-size:12px;letter-spacing:1px;white-space:nowrap}
-.xhide,.xdeq{margin-left:auto;color:var(--dim);font-size:13px;padding:4px 10px}
-.racts{flex:none;display:flex;flex-direction:column;justify-content:center}
-.racts button{width:46px;height:44px;font-size:19px;color:var(--dim)}
-.racts .queue.on{color:var(--amber2)}
-.racts .like.on{color:var(--amber2)}
-.racts .log.on{color:var(--amber)}
-.row.heard .rmain{opacity:.5}
+/* one aligned control bar per row: chips left, actions right, nothing floats */
+.rbar{display:flex;align-items:center;gap:6px;margin-top:8px;flex-wrap:wrap}
+.racts{margin-left:auto;display:flex;gap:5px}
+.racts button{width:42px;height:38px;font-size:17px;color:var(--mut);border:1px solid var(--line);border-radius:9px;display:grid;place-items:center}
+.racts .queue.on{color:var(--amber2);border-color:var(--amberdim)}
+.racts .like.on{color:var(--amber2);border-color:var(--amberdim)}
+.racts .log.on{color:var(--amber);border-color:var(--amberdim)}
+.racts .hide{color:var(--dim)}
+.row.heard .rmain{opacity:.55}
 .row.heard .rtitle{color:var(--mut);font-weight:500}
 @media (prefers-reduced-motion: no-preference){
   .row{transition:background .15s}
@@ -92,7 +94,7 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 
 #hidhead{font-family:var(--disp);font-size:10.5px;color:var(--dim);letter-spacing:1px;padding:22px 8px 6px;border-bottom:1px solid var(--line)}
 .row.ghost .rmain{opacity:.45}
-.restore{flex:none;align-self:center;color:var(--amber);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:12px 14px}
+.restore{color:var(--amber);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;border:1px solid var(--amberdim);border-radius:9px;padding:9px 14px}
 
 #colophon{padding:18px 8px 6px;color:var(--dim);font-size:11px;letter-spacing:.5px;line-height:2}
 #colophon button,#colophon label{color:var(--mut);text-decoration:underline;text-underline-offset:2px;padding:2px 2px;cursor:pointer;font-size:11px;letter-spacing:.5px}
@@ -382,11 +384,13 @@ function renderControls(){
     `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>`;
 }
 
+const SRC_LABEL = { igdb: 'catalog' };  // site names read fine; api names get friendly labels
+
 function rowHtml(r, view, ghost){
   const e = E(r.id);
   const heard = e.status === 'listened', queued = e.status === 'queued';
   const chips = (r.sources || []).map(s =>
-    `<span class="chip${s.type === 'community' ? ' community' : ''}">${esc(s.name)}</span>`).join('');
+    `<span class="chip${s.type === 'community' ? ' community' : ''}">${esc(SRC_LABEL[s.name] || s.name)}</span>`).join('');
   const sub = [r.game, (r.composers || []).join(', ')].filter(Boolean).join(' · ');
   const topDate = view === 'library' ? (e.listenedOn ? fmtDate(e.listenedOn) : '') : fmtDate(r.date);
 
@@ -394,24 +398,20 @@ function rowHtml(r, view, ghost){
   if(ghost){
     acts = `<button class="restore" data-act="restore">Restore</button>`;
   } else if(view === 'feed'){
-    meta += `<button class="xhide" data-act="hide" aria-label="Hide ${esc(r.title)}">✕</button>`;
-    acts = `<div class="racts">
-      <button class="queue${queued ? ' on' : ''}" data-act="queue" aria-pressed="${queued}" aria-label="Queue">${queued ? '✓' : '+'}</button>
+    acts = `<button class="queue${queued ? ' on' : ''}" data-act="queue" aria-pressed="${queued}" aria-label="Queue">${queued ? '✓' : '+'}</button>
       <button class="log${heard ? ' on' : ''}" data-act="log" aria-label="${heard ? 'Edit log' : 'Mark listened'}">${heard ? '▶' : '▷'}</button>
-    </div>`;
+      <button class="hide" data-act="hide" aria-label="Hide ${esc(label(r))}">✕</button>`;
   } else if(view === 'queue'){
-    meta += `<span class="chip">queued ${esc(fmtDate(e.queuedOn).toLowerCase())}</span>` +
-      `<button class="xdeq" data-act="queue" aria-label="Remove from queue">−</button>`;
-    acts = `<div class="racts"><button class="log" data-act="log" aria-label="Mark listened">▷</button></div>`;
+    meta += `<span class="chip">queued ${esc(fmtDate(e.queuedOn).toLowerCase())}</span>`;
+    acts = `<button class="log" data-act="log" aria-label="Mark listened">▷</button>
+      <button class="hide" data-act="queue" aria-label="Remove from queue">−</button>`;
   } else { // library
     const bits = [];
     if(e.rating != null) bits.push(`<span class="minis">${minis(e.rating)}</span>`);
     bits.push(`<span class="chip">released ${esc(fmtDate(r.date).toLowerCase())}</span>`);
     meta = bits.concat([chips]).join('');
-    acts = `<div class="racts">
-      <button class="like${e.liked ? ' on' : ''}" data-act="like" aria-pressed="${e.liked}" aria-label="Liked">${e.liked ? '♥' : '♡'}</button>
-      <button class="log on" data-act="log" aria-label="Edit log">▶</button>
-    </div>`;
+    acts = `<button class="like${e.liked ? ' on' : ''}" data-act="like" aria-pressed="${e.liked}" aria-label="Liked">${e.liked ? '♥' : '♡'}</button>
+      <button class="log on" data-act="log" aria-label="Edit log">▶</button>`;
   }
 
   const art = r.art
@@ -424,9 +424,8 @@ function rowHtml(r, view, ghost){
       <div class="rtitle">${esc(label(r))}</div>
       ${sub ? `<div class="rsub">${esc(sub)}</div>` : ''}
       ${view === 'library' && e.note ? `<div class="rnote">“${esc(e.note)}”</div>` : ''}
-      <div class="rmeta">${meta}</div>
+      <div class="rbar">${meta}<div class="racts">${acts}</div></div>
     </div>
-    ${acts}
   </div>`;
 }
 
@@ -506,7 +505,20 @@ function renderSheet(){
 }
 
 /* =========================== events ============================ */
-function openTrack(r){ if(r) window.open(ytmUrl(r), '_blank', 'noopener'); }
+let PENDING_OPEN = null;
+function openTrack(r){
+  if(!r) return;
+  const w2 = window.open(ytmUrl(r), '_blank');
+  if(w2){ try{ w2.opener = null; }catch(e){} PENDING_OPEN = w2; }
+}
+document.addEventListener('visibilitychange', () => {
+  // iOS standalone: the _blank sheet is left blank once the YT Music app takes
+  // over; closing it when we regain focus lands the return trip on the app
+  if(document.visibilityState !== 'hidden' && PENDING_OPEN){
+    try{ PENDING_OPEN.close(); }catch(e){}
+    PENDING_OPEN = null;
+  }
+});
 
 document.getElementById('list').addEventListener('click', e => {
   const btn = e.target.closest('[data-act]');

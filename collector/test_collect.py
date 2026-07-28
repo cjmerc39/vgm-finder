@@ -324,10 +324,30 @@ def test_merge_enriches_nulls_without_touching_the_rest():
     ("NieR:Piano Journeys", "nier-piano-journeys"),
     ("Stardew Valley 1.6 Original Sound Track", "stardew-valley-1-6"),
     ("ペルソナ5 OST", "ペルソナ5"),
+    ("Ghost of Tsushima (Music from the Video Game)", "ghost-of-tsushima"),
+    ("Marvel's Spider-Man (Original Video Game Soundtrack)", "marvel-s-spider-man"),
     ("OST", "ost"),  # a title that is only a suffix survives as itself
 ])
 def test_slugify(title, slug):
     assert collect.slugify(title) == slug
+
+
+def test_matcher_accepts_console_exclusive_album_namings():
+    n = collect.normalize_title
+    tsushima = [{"resultType": "album", "browseId": "MPREb_got",
+                 "title": "Ghost of Tsushima (Music from the Video Game)",
+                 "artists": [{"name": "Ilan Eshkeri"}, {"name": "Shigeru Umebayashi"}],
+                 "thumbnails": [{"url": "https://img.example/got.jpg", "width": 544}]}]
+    hit = collect._match_album(tsushima, n("Ghost of Tsushima"))
+    assert hit and hit["composers"] == ["Ilan Eshkeri", "Shigeru Umebayashi"]
+    spidey = [{"resultType": "album", "browseId": "MPREb_sm",
+               "title": "Marvel's Spider-Man (Original Video Game Soundtrack)",
+               "artists": [{"name": "John Paesano"}], "thumbnails": []}]
+    assert collect._match_album(spidey, n("Marvel's Spider-Man")) is not None
+    # a bare same-name album with no soundtrack marker stays out (band-album guard)
+    bare = [{"resultType": "album", "browseId": "MPREb_tlou", "title": "The Last of Us",
+             "artists": [{"name": "Gustavo Santaolalla"}], "thumbnails": []}]
+    assert collect._match_album(bare, n("The Last of Us")) is None
 
 
 def test_slug_is_stable_across_source_phrasings():
