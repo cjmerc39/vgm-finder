@@ -185,6 +185,47 @@ def test_resolver_backfills_recent_unresolved_rows():
     assert done["ytmAlbumUrl"] == "https://music.youtube.com/browse/existing"
 
 
+@pytest.mark.parametrize("headline,album", [
+    ("Atomic Owl vinyl reissue is now available from Ghost Mutt Records", "Atomic Owl"),
+    ("Resonance: A Plague Tale Legacy vinyl soundtrack up for preorder via Black Screen Records",
+     "Resonance: A Plague Tale Legacy vinyl soundtrack"),
+    ("Make yourself at home : the World of Warcraft housing soundtrack has arrived",
+     "World of Warcraft housing soundtrack"),
+    ("Lost In Cult to reissue the Starbound soundtrack on vinyl", "Starbound soundtrack"),
+    ("Mahou Arms finally hits 1.0, and Dale North's full OST is a vibe", "Mahou Arms"),
+    ("iam8bit announces the Mina the Hollower 3LP vinyl", "Mina the Hollower"),
+    ("The cult techno soundtrack of ChainDive finally hits streaming", "cult techno soundtrack of ChainDive"),
+    ("Bargain with fate with the Schrödinger's Call soundtrack", None),  # no cut applies: keep the headline
+    ("Endacopia Soundtrack", None),  # already an album name
+])
+def test_headline_album_extraction(headline, album):
+    assert collect.headline_album(headline) == album
+
+
+def test_headline_parsers_attach_display_labels():
+    np = collect.parse_nowplaying(raw("nowplaying-feed.xml"), no_resolve)
+    wow = next(i for i in np if "World of Warcraft" in i["title"])
+    assert wow["albumTitle"] == "World of Warcraft housing soundtrack"
+    mahou = next(i for i in np if "Mahou Arms" in i["title"])
+    assert mahou["albumTitle"] == "Mahou Arms"
+    bb = collect.parse_blipblop(raw("blipblop-feed.xml"), no_resolve)
+    owl = next(i for i in bb if "Atomic Owl" in i["title"])
+    assert owl["albumTitle"] == "Atomic Owl"
+
+
+def test_merge_carries_and_fills_album_titles():
+    releases = []
+    collect.merge(releases, [{"title": "Atomic Owl vinyl reissue is now available from Ghost Mutt Records",
+                              "albumTitle": "Atomic Owl", "url": "https://blipblop.net/owl",
+                              "date": "2026-07-28"}], src("blipblop"), SEEN)
+    assert releases[0]["albumTitle"] == "Atomic Owl"
+    # a second source's derived label only fills, never overwrites
+    collect.merge(releases, [{"title": "Atomic Owl vinyl reissue is now available from Ghost Mutt Records",
+                              "albumTitle": "Different Label", "url": "https://other.example/owl",
+                              "date": "2026-07-28"}], src("other"), SEEN)
+    assert releases[0]["albumTitle"] == "Atomic Owl"
+
+
 ATOMIC_OWL_RESULTS = [
     {"resultType": "album", "browseId": "MPREb_owl", "title": "Atomic Owl (Original Game Soundtrack)",
      "artists": [{"name": "Some Composer"}],
@@ -212,11 +253,12 @@ def test_containment_matcher_accepts_headline_supersets_only():
 def test_resolver_relabels_headline_rows_with_album_titles():
     row = {"id": "atomic-owl-headline",
            "title": "Atomic Owl vinyl reissue is now available from Ghost Mutt Records",
+           "albumTitle": "Atomic Owl",  # heuristic label from parse time
            "game": None, "composers": [], "date": "2026-07-28", "sources": [],
            "ytmSearchUrl": "s", "ytmAlbumUrl": None, "art": None, "notable": True}
     looked, filled = collect.resolve_albums([row], lambda q: ATOMIC_OWL_RESULTS, NOW)
     assert (looked, filled) == (1, 1)
-    assert row["albumTitle"] == "Atomic Owl (Original Game Soundtrack)"
+    assert row["albumTitle"] == "Atomic Owl (Original Game Soundtrack)"  # YTM's name beats the heuristic
     assert row["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_owl"
     assert row["art"] == "https://img.example/owl.jpg"
     assert row["composers"] == ["Some Composer"]

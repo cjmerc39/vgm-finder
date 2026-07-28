@@ -102,12 +102,58 @@ def parse_vgmo(raw, resolve=None):
     return _feed(raw, {"News", "Album Reviews"})
 
 
+# editorial headlines carry the album name wrapped in news prose; these cuts
+# recover a display label ("Atomic Owl vinyl reissue is now available from
+# Ghost Mutt Records" -> "Atomic Owl"). Display-only: identity and dedupe
+# always use the raw title.
+_LEAD_CUTS = (" announces ", " reveals ", " to reissue ", " ready with preorders for ",
+              " ready with ")
+_TRAIL_CUTS = (" is now ", " is already ", " is out", " is finally", " has arrived",
+               " have arrived", " finally hits", " hits ", " arrives", " debuts",
+               " lands ", " drops ", " up for preorder", " now up for",
+               " is now available", " available now", " out now", " via ",
+               " on vinyl", " to vinyl", " teases ", " vinyl reissue", " 3lp", " 2lp")
+_LEAD_ARTICLES = re.compile(r"^(?:the|a|an)\s+", re.IGNORECASE)
+
+
+def headline_album(title):
+    t = " ".join(title.split())
+    low = t.lower()
+    for cut in _LEAD_CUTS:
+        i = low.find(cut)
+        if i != -1:
+            t = t[i + len(cut):]
+            low = t.lower()
+            break
+    best = len(t)
+    for cut in _TRAIL_CUTS:
+        i = low.find(cut)
+        if 0 < i < best:
+            best = i
+    t = t[:best].strip(" ,;:–—-")
+    if " : " in t:  # spaced colon = editorial lead-in; "Title: Subtitle" albums use ": "
+        head, _, tail = t.partition(" : ")
+        if _SOUNDTRACKY.search(tail) and not _SOUNDTRACKY.search(head):
+            t = tail.strip()
+    t = _LEAD_ARTICLES.sub("", t).strip()
+    return t if len(t) >= 4 and t.lower() != title.strip().lower() else None
+
+
+def _headline_items(raw, keep):
+    items = _feed(raw, keep)
+    for it in items:
+        alt = headline_album(it["title"])
+        if alt:
+            it["albumTitle"] = alt
+    return items
+
+
 def parse_nowplaying(raw, resolve=None):
-    return _feed(raw, {"OST", "Vinyl"})
+    return _headline_items(raw, {"OST", "Vinyl"})
 
 
 def parse_blipblop(raw, resolve=None):
-    return _feed(raw, {"Confirmed Release"})
+    return _headline_items(raw, {"Confirmed Release"})
 
 
 # Steam search rows: href sits before class in the <a>, so anchor on the pair
@@ -330,6 +376,8 @@ def merge(releases, items, source, seen_at):
                 merged += 1
             if it["date"] and (not target["date"] or it["date"] < target["date"]):
                 target["date"] = it["date"]
+            if not target.get("albumTitle") and it.get("albumTitle"):
+                target["albumTitle"] = it["albumTitle"]
             if not target.get("game") and it.get("game"):
                 target["game"] = it["game"]
             if not target.get("composers") and it.get("composers"):
@@ -344,6 +392,8 @@ def merge(releases, items, source, seen_at):
                      "date": it["date"], "sources": [src],
                      "ytmSearchUrl": ytm_search_url(it["title"], it.get("game")),
                      "ytmAlbumUrl": it.get("ytmAlbumUrl"), "art": it.get("art"), "notable": True}
+            if it.get("albumTitle"):
+                entry["albumTitle"] = it["albumTitle"]
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
@@ -375,8 +425,8 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
         if not r.get("ytmAlbumUrl"):
             r["ytmAlbumUrl"] = hit["url"]
             filled += 1
-        if not r.get("albumTitle") and normalize_title(hit["title"]) != norm:
-            r["albumTitle"] = hit["title"]  # headline rows: display the album, keep the headline in `title`
+        if normalize_title(hit["title"]) != norm:
+            r["albumTitle"] = hit["title"]  # YTM's canonical name overrides any headline-derived label
         if not r.get("art") and hit["art"]:
             r["art"] = hit["art"]
         if not r.get("composers") and hit["composers"]:
