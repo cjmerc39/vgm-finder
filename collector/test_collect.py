@@ -5,7 +5,6 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-import feedparser
 import pytest
 
 import collect
@@ -18,16 +17,17 @@ FEED_FILES = {
     "https://nowplaying.cool/rss/": "nowplaying-feed.xml",
     "https://blipblop.net/feed/": "blipblop-feed.xml",
     "https://www.vgmonline.net/feed/": "vgmo-feed.xml",
-    "https://www.reddit.com/r/gamemusic/top/.rss?t=week": "gamemusic-top-week.atom",
 }
+STEAM_URL = next(s["url"] for s in collect.SOURCES if s["name"] == "steam")
+FEED_FILES[STEAM_URL] = "steam-soundtracks.json"
 
 
-def load_feed(name):
-    return feedparser.parse((FIXTURES / name).read_bytes())
+def raw(name):
+    return (FIXTURES / name).read_bytes()
 
 
 def fixture_fetch(url):
-    return (FIXTURES / FEED_FILES[url]).read_bytes()
+    return raw(FEED_FILES[url])
 
 
 def src(name="test", type="editorial"):
@@ -37,7 +37,7 @@ def src(name="test", type="editorial"):
 # ---------------- per-source parsing ----------------
 
 def test_nowplaying_keeps_ost_and_vinyl_only():
-    items = collect.parse_nowplaying(load_feed("nowplaying-feed.xml"))
+    items = collect.parse_nowplaying(raw("nowplaying-feed.xml"))
     assert len(items) == 10  # 15 in feed, 5 are News (singles/previews)
     titles = " | ".join(i["title"] for i in items)
     assert "UNBEATABLE" in titles
@@ -48,7 +48,7 @@ def test_nowplaying_keeps_ost_and_vinyl_only():
 
 
 def test_blipblop_keeps_confirmed_release_only():
-    items = collect.parse_blipblop(load_feed("blipblop-feed.xml"))
+    items = collect.parse_blipblop(raw("blipblop-feed.xml"))
     assert len(items) == 9  # 10 in feed; the Sonic Frontiers EP campaign isn't a confirmed release
     titles = " | ".join(i["title"] for i in items)
     assert "Plague Tale" in titles
@@ -56,18 +56,35 @@ def test_blipblop_keeps_confirmed_release_only():
 
 
 def test_vgmo_keeps_news_and_album_reviews_only():
-    items = collect.parse_vgmo(load_feed("vgmo-feed.xml"))
+    items = collect.parse_vgmo(raw("vgmo-feed.xml"))
     assert len(items) == 5  # 10 in feed, 5 are Editorials
     titles = " | ".join(i["title"] for i in items)
     assert "NieR:Piano Journeys" in titles
     assert "Listener" not in titles  # the Listener's Guide editorials
 
 
-def test_gamemusic_takes_top_ten():
-    items = collect.parse_gamemusic(load_feed("gamemusic-top-week.atom"))
-    assert len(items) == 10
-    assert all(i["url"].startswith("https://www.reddit.com/r/gamemusic/") for i in items)
-    assert all(i["date"] for i in items)
+def test_steam_parses_search_rows():
+    items = collect.parse_steam(raw("steam-soundtracks.json"))
+    assert len(items) == 25
+    assert items[0]["title"] == "Endacopia Soundtrack"
+    assert items[0]["url"].startswith("https://store.steampowered.com/app/")
+    assert "?" not in items[0]["url"]  # tracking query stripped so reruns dedupe
+    assert all(i["date"] and i["date"].startswith("2026-") for i in items)
+    assert items[0]["date"] == "2026-07-28"
+
+
+def test_steam_skips_unreleased_rows():
+    blob = json.dumps({"success": 1, "results_html":
+        '<a href="https://store.steampowered.com/app/1/A/?snr=x" class="search_result_row">'
+        '<span class="title">Real Album Soundtrack</span>'
+        '<div class="search_released">Jul 20, 2026</div></a>'
+        '<a href="https://store.steampowered.com/app/2/B/" class="search_result_row">'
+        '<span class="title">Vapor Soundtrack</span>'
+        '<div class="search_released">Coming soon</div></a>'}).encode()
+    items = collect.parse_steam(blob)
+    assert [i["title"] for i in items] == ["Real Album Soundtrack"]
+    assert items[0]["date"] == "2026-07-20"
+    assert items[0]["url"] == "https://store.steampowered.com/app/1/A/"
 
 
 # ---------------- slugs and normalization ----------------
@@ -76,6 +93,7 @@ def test_gamemusic_takes_top_ten():
     ("Chrono Trigger OST", "chrono-trigger"),
     ("DOOM: The Dark Ages (Original Game Soundtrack)", "doom-the-dark-ages"),
     ("Hades II - Original Soundtrack", "hades-ii"),
+    ("Endacopia Soundtrack", "endacopia"),
     ("Celeste: Farewell (Original Soundtrack)", "celeste-farewell"),
     ("NieR:Piano Journeys", "nier-piano-journeys"),
     ("Stardew Valley 1.6 Original Sound Track", "stardew-valley-1-6"),
@@ -175,13 +193,13 @@ def test_new_entry_shape_matches_schema():
     releases = []
     collect.merge(releases, [{"title": "Tunic Soundtrack",
                               "url": "https://a.example/tunic", "date": "2026-06-01"}],
-                  src("a", type="community"), SEEN)
+                  src("a", type="catalog"), SEEN)
     entry = releases[0]
     assert set(entry) == {"id", "title", "game", "composers", "date", "sources",
                           "ytmSearchUrl", "ytmAlbumUrl", "art", "notable"}
     assert entry["game"] is None and entry["composers"] == []
     assert entry["ytmAlbumUrl"] is None and entry["art"] is None and entry["notable"] is True
-    assert entry["sources"][0] == {"name": "a", "type": "community",
+    assert entry["sources"][0] == {"name": "a", "type": "catalog",
                                    "url": "https://a.example/tunic", "seenAt": SEEN}
 
 
@@ -192,10 +210,10 @@ def test_run_collects_all_sources_and_is_stable(tmp_path):
     assert collect.run(fetch_fn=fixture_fetch, data_path=data_path, now=NOW) == 0
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert data["updatedAt"] == SEEN
-    assert len(data["releases"]) == 34  # 10 + 9 + 5 + 10, no cross-source collisions in these fixtures
+    assert len(data["releases"]) == 49  # 10 + 9 + 5 + 25, no cross-source collisions in these fixtures
     assert all(r["notable"] for r in data["releases"])
-    community = [r for r in data["releases"] if r["sources"][0]["type"] == "community"]
-    assert len(community) == 10
+    catalog = [r for r in data["releases"] if r["sources"][0]["type"] == "catalog"]
+    assert len(catalog) == 25
 
     # a second run over identical feeds must not rewrite the file
     first = data_path.read_text(encoding="utf-8")
@@ -206,14 +224,14 @@ def test_run_collects_all_sources_and_is_stable(tmp_path):
 
 def test_run_survives_one_source_failing(tmp_path, capsys):
     def flaky(url):
-        if "reddit" in url:
+        if "blipblop" in url:
             raise OSError("simulated network failure")
         return fixture_fetch(url)
     data_path = tmp_path / "releases.json"
     assert collect.run(fetch_fn=flaky, data_path=data_path, now=NOW) == 0
     out = capsys.readouterr().out
-    assert "::warning::r/gamemusic failed" in out
-    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 24
+    assert "::warning::blipblop failed" in out
+    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 40
 
 
 def test_run_fails_red_when_every_source_fails(tmp_path, capsys):

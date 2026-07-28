@@ -26,7 +26,7 @@ const FIXTURE = {
       sources: [{ name: 'vgmo', type: 'editorial', url: 'https://vgmonline.net/z', seenAt: '2026-07-13T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
-    { id: 'evil', title: '<img src=x onerror="window.__pwned=1">Evil OST', game: null, composers: [], date: '2026-07-10',
+    { id: 'evil', title: '<img src=x onerror="window.__pwned=1">Evil OST', game: null, composers: [], date: '2026-07-18',
       sources: [{ name: 'r/gamemusic', type: 'community', url: 'https://reddit.com/e', seenAt: '2026-07-14T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Evil+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
@@ -71,6 +71,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rows()[5].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'oldest release renders last');
   assert(rows()[5].querySelector('.tno').textContent === 'TRACK 001', 'first-collected row is TRACK 001');
   assert(rows()[0].querySelector('time').textContent === 'JUL 28', 'current-year dates render without the year');
+  assert(rows()[2].dataset.id === 'ratchet-clank-rift-apart' && rows()[3].dataset.id === 'evil',
+    'on equal dates, editorial ranks above community');
 
   // new-since-last-visit badging
   assert(d.querySelectorAll('#list .new').length === 1, 'exactly one row is NEW vs the 07-25 visit');

@@ -16,7 +16,10 @@ listened marks, and hides are yours alone — they live in `localStorage`
 | [NOWPLAYING](https://nowplaying.cool) | editorial, daily VGM release tracking | `OST` + `Vinyl` categories |
 | [Blip Blop](https://blipblop.net) | editorial, vinyl/physical announcements | `Confirmed Release` category |
 | [VGMO](https://vgmonline.net) | editorial, long-form game music writing | `News` + `Album Reviews` |
-| [r/gamemusic](https://reddit.com/r/gamemusic) | community weekly top (badged) | top 10 of the week |
+| Steam Soundtracks | catalog: every album shipped on Steam | newest 25, released only |
+
+On equal dates the list ranks editorial picks above catalog rows above
+community rows (a few early community rows remain in the data from v1).
 
 ## Run the collector locally
 

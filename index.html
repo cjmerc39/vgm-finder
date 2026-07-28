@@ -157,9 +157,15 @@ function firstSeen(r){
 }
 function isNew(r){ return PREV_SEEN > 0 && firstSeen(r) > PREV_SEEN; }
 function ytmUrl(r){ return r.ytmAlbumUrl || r.ytmSearchUrl; }
+const SRC_RANK = { editorial: 0, catalog: 1, community: 2 };
+function srcRank(r){
+  const ranks = (r.sources || []).map(s => SRC_RANK[s.type] ?? 1);
+  return ranks.length ? Math.min(...ranks) : 1;
+}
 function sorted(){
   return R.releases.slice().sort((a, b) =>
     String(b.date || '').localeCompare(String(a.date || '')) ||
+    srcRank(a) - srcRank(b) ||   // same day: an editor's pick outranks the firehose outranks the crowd
     firstSeen(b) - firstSeen(a) ||
     TRACKNO[b.id] - TRACKNO[a.id]);
 }

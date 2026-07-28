@@ -9,6 +9,7 @@ import re
 import sys
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
+from html import unescape
 from pathlib import Path
 from urllib.parse import quote_plus
 
@@ -19,7 +20,6 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "releases.json"
 USER_AGENT = "vgm-finder collector (+https://github.com/cjmerc39/vgm-finder)"
 FUZZY_THRESHOLD = 0.92
-REDDIT_TOP_N = 10
 
 
 def fetch_feed(url):
@@ -45,23 +45,56 @@ def _item(entry):
     return {"title": title, "url": entry.get("link"), "date": entry_date(entry)}
 
 
-def parse_vgmo(feed):
-    keep = {"News", "Album Reviews"}
+def _feed(raw, keep):
+    feed = feedparser.parse(raw)
+    if not feed.entries:
+        raise RuntimeError("feed parsed to zero entries")
     return [_item(e) for e in feed.entries if entry_categories(e) & keep]
 
 
-def parse_nowplaying(feed):
-    keep = {"OST", "Vinyl"}
-    return [_item(e) for e in feed.entries if entry_categories(e) & keep]
+def parse_vgmo(raw):
+    return _feed(raw, {"News", "Album Reviews"})
 
 
-def parse_blipblop(feed):
-    keep = {"Confirmed Release"}
-    return [_item(e) for e in feed.entries if entry_categories(e) & keep]
+def parse_nowplaying(raw):
+    return _feed(raw, {"OST", "Vinyl"})
 
 
-def parse_gamemusic(feed):
-    return [_item(e) for e in feed.entries[:REDDIT_TOP_N]]
+def parse_blipblop(raw):
+    return _feed(raw, {"Confirmed Release"})
+
+
+# Steam search rows: href sits before class in the <a>, so anchor on the pair
+_STEAM_ROW = re.compile(
+    r'href="(https://store\.steampowered\.com/app/[^"]+)"[^>]*class="search_result_row'
+    r'[\s\S]*?<span class="title">([\s\S]*?)</span>'
+    r'[\s\S]*?search_released[^>]*>\s*([^<]*)')
+_MONTHS = {m: i for i, m in enumerate(
+    ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
+
+
+def _steam_date(text):
+    m = re.match(r"([A-Z][a-z]{2}) (\d{1,2}), (\d{4})$", text.strip())
+    if not m or m.group(1) not in _MONTHS:
+        return None
+    return f"{m.group(3)}-{_MONTHS[m.group(1)]:02d}-{int(m.group(2)):02d}"
+
+
+def parse_steam(raw):
+    data = json.loads(raw)
+    blob = data.get("results_html") or ""
+    if not data.get("success") or not blob:
+        raise RuntimeError("steam search returned no results_html")
+    items = []
+    for m in _STEAM_ROW.finditer(blob):
+        date = _steam_date(m.group(3))
+        if not date:
+            continue  # "Coming soon" / quarter placeholders: not a release yet
+        title = re.sub(r"\s+", " ", unescape(m.group(2))).strip()
+        items.append({"title": title, "url": m.group(1).split("?")[0], "date": date})
+    if not items:
+        raise RuntimeError("steam rows parsed to zero items")
+    return items
 
 
 SOURCES = [
@@ -71,8 +104,10 @@ SOURCES = [
      "url": "https://blipblop.net/feed/", "parse": parse_blipblop},
     {"name": "vgmo", "type": "editorial",
      "url": "https://www.vgmonline.net/feed/", "parse": parse_vgmo},
-    {"name": "r/gamemusic", "type": "community",
-     "url": "https://www.reddit.com/r/gamemusic/top/.rss?t=week", "parse": parse_gamemusic},
+    {"name": "steam", "type": "catalog",
+     "url": "https://store.steampowered.com/search/results/"
+            "?query&start=0&count=25&category1=990&sort_by=Released_DESC&infinite=1&l=english&cc=US",
+     "parse": parse_steam},
 ]
 
 _PUNCT = re.compile(r"[^\w\s]", re.UNICODE)
@@ -174,10 +209,7 @@ def run(fetch_fn=fetch_feed, data_path=DATA_PATH, now=None):
     ok = 0
     for source in SOURCES:
         try:
-            feed = feedparser.parse(fetch_fn(source["url"]))
-            if not feed.entries:
-                raise RuntimeError("feed parsed to zero entries")
-            items = source["parse"](feed)
+            items = source["parse"](fetch_fn(source["url"]))
             added, merged = merge(releases, items, source, seen_at)
             print(f"{source['name']}: {len(items)} items -> {added} new, {merged} merged")
             ok += 1
