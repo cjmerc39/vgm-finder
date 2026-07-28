@@ -49,7 +49,7 @@ def igdb_fetch():
     now = int(time.time())
     start = now - IGDB_WINDOW_DAYS * 86400
     # game_type replaced the old (now dead) category field; 0/4/8/9 = main/expansion/remake/remaster
-    query = (f"fields name, slug, first_release_date, hypes, game_type; "
+    query = (f"fields name, slug, first_release_date, hypes, game_type, cover.image_id; "
              f"where first_release_date >= {start} & first_release_date <= {now} "
              f"& game_type = (0,4,8,9) & hypes >= {IGDB_HYPES_MIN}; "
              f"sort hypes desc; limit {IGDB_LIMIT};")
@@ -126,6 +126,24 @@ def _steam_date(text):
     return f"{m.group(3)}-{_MONTHS[m.group(1)]:02d}-{int(m.group(2)):02d}"
 
 
+# "«Game» Original/Official/etc Soundtrack" -> the game's display name
+_GAME_SUFFIX = re.compile(
+    r"\s*[-–—:]?\s*\(?\s*(?:(?:original|official|digital|complete|deluxe|additional|bonus)\s+)*"
+    r"(?:(?:game|video\s*game)\s+)?(?:soundtrack|sound\s*track|ost|score)\s*\)?\s*$",
+    re.IGNORECASE)
+
+
+def _steam_game(title):
+    game = _GAME_SUFFIX.sub("", title).strip(" -–—:")
+    return game if game and game != title.strip() else None
+
+
+def _steam_art(row_html):
+    # swap the search capsule filename for the full-size header on the same CDN path
+    m = re.search(r'<img[^>]*\ssrc="([^"]+)"', row_html)
+    return re.sub(r"/[^/?]+(\?.*)?$", "/header.jpg", m.group(1)) if m else None
+
+
 def parse_steam(raw, resolve=None):
     data = json.loads(raw)
     blob = data.get("results_html") or ""
@@ -137,7 +155,8 @@ def parse_steam(raw, resolve=None):
         if not date:
             continue  # "Coming soon" / quarter placeholders: not a release yet
         title = re.sub(r"\s+", " ", unescape(m.group(2))).strip()
-        items.append({"title": title, "url": m.group(1).split("?")[0], "date": date})
+        items.append({"title": title, "url": m.group(1).split("?")[0], "date": date,
+                      "game": _steam_game(title), "art": _steam_art(m.group(0))})
     if not items:
         raise RuntimeError("steam rows parsed to zero items")
     return items
@@ -167,7 +186,10 @@ def _match_album(results, want_norm):
                      and normalize_title(a["name"]) != want_norm]
         if not composers:
             continue  # only credit was the game/band name itself: too ambiguous
+        thumbs = sorted((t for t in r.get("thumbnails", []) if t.get("url")),
+                        key=lambda t: t.get("width") or 0)
         return {"title": r["title"], "composers": composers,
+                "art": thumbs[-1]["url"] if thumbs else None,
                 "url": "https://music.youtube.com/browse/" + r["browseId"]}
     return None
 
@@ -189,11 +211,13 @@ def parse_igdb(raw, resolve):
             continue
         if not hit:
             continue  # released game, but no confidently-matching album on YTM
+        cover = (g.get("cover") or {}).get("image_id")
         items.append({
             "title": hit["title"], "game": name, "composers": hit["composers"],
             "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
             "date": datetime.fromtimestamp(stamp, tz=timezone.utc).strftime("%Y-%m-%d"),
-            "ytmAlbumUrl": hit["url"]})
+            "ytmAlbumUrl": hit["url"],
+            "art": hit["art"] or (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg" if cover else None)})
     if errors and not items:
         raise RuntimeError(f"all {errors} album lookups failed")
     return items
@@ -287,12 +311,14 @@ def merge(releases, items, source, seen_at):
                 target["composers"] = list(it["composers"])
             if not target.get("ytmAlbumUrl") and it.get("ytmAlbumUrl"):
                 target["ytmAlbumUrl"] = it["ytmAlbumUrl"]
+            if not target.get("art") and it.get("art"):
+                target["art"] = it["art"]
         else:
             entry = {"id": slug, "title": it["title"], "game": it.get("game"),
                      "composers": list(it.get("composers") or []),
                      "date": it["date"], "sources": [src],
                      "ytmSearchUrl": ytm_search_url(it["title"], it.get("game")),
-                     "ytmAlbumUrl": it.get("ytmAlbumUrl"), "art": None, "notable": True}
+                     "ytmAlbumUrl": it.get("ytmAlbumUrl"), "art": it.get("art"), "notable": True}
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
@@ -306,7 +332,9 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
     cutoff = (now - timedelta(days=RESOLVE_WINDOW_DAYS)).strftime("%Y-%m-%d")
     looked = filled = 0
     for r in releases:
-        if r.get("ytmAlbumUrl") or not r.get("date") or r["date"] < cutoff:
+        if not r.get("date") or r["date"] < cutoff:
+            continue
+        if r.get("ytmAlbumUrl") and r.get("art"):
             continue
         if looked >= cap:
             break
@@ -317,10 +345,13 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
             continue
         if not hit:
             continue
-        r["ytmAlbumUrl"] = hit["url"]
+        if not r.get("ytmAlbumUrl"):
+            r["ytmAlbumUrl"] = hit["url"]
+            filled += 1
+        if not r.get("art") and hit["art"]:
+            r["art"] = hit["art"]
         if not r.get("composers") and hit["composers"]:
             r["composers"] = hit["composers"]
-        filled += 1
     return looked, filled
 
 

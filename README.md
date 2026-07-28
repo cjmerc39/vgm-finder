@@ -27,6 +27,16 @@ rows with one open the album; everything else opens a YTM search. IGDB needs
 `TWITCH_CLIENT_ID` / `TWITCH_CLIENT_SECRET` (free at dev.twitch.tv) in the
 environment; without them that source warns and the rest still run.
 
+Rows carry cover art (`art`): YTM album thumbnails when matched, Steam
+header images, IGDB game covers as fallback. Steam rows also derive the
+game name from the album title, so game/composer search actually hits.
+
+`collector/backfill.py` (dispatch `.github/workflows/backfill.yml`) walks
+the classics into the catalog: Steam's most-reviewed soundtracks plus
+IGDB's top-rated games (200+ ratings) checked against YTM. Capped per run
+with a committed cursor (`collector/backfill-state.json`) — dispatch until
+it logs "backfill complete".
+
 ## Run the collector locally
 
 ```

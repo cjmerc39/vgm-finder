@@ -19,7 +19,8 @@ const FIXTURE = {
       sources: [{ name: 'nowplaying', type: 'editorial', url: 'https://nowplaying.cool/h', seenAt: '2026-07-10T10:00:00Z' },
                 { name: 'r/gamemusic', type: 'community', url: 'https://reddit.com/h', seenAt: '2026-07-11T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Hades+II+Original+Soundtrack+soundtrack',
-      ytmAlbumUrl: 'https://music.youtube.com/playlist?list=OLAK5uy_hades2', art: null, notable: true },
+      ytmAlbumUrl: 'https://music.youtube.com/playlist?list=OLAK5uy_hades2',
+      art: 'https://example.com/art/hades"><script>bad</script>.jpg', notable: true },
     { id: 'ratchet-clank-rift-apart', title: 'Ratchet & Clank: Rift Apart OST', game: null, composers: [], date: '2026-07-18',
       sources: [{ name: 'blipblop', type: 'editorial', url: 'https://blipblop.net/r', seenAt: '2026-07-12T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
@@ -89,8 +90,15 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'date sort with editorial-over-community tiebreak intact');
   assert(d.querySelectorAll('#list .new').length === 1 && rowById('fresh-drop').querySelector('.new') !== null,
     'NEW badging preserved through migration');
-  assert(d.querySelector('#list img') === null && w.__pwned === undefined, 'hostile titles still render inert');
+  assert(w.__pwned === undefined && d.querySelector('#list script') === null, 'hostile titles still render inert');
   assert(rowById('chrono-cross-the-radical-dreamers-edition').classList.contains('heard'), 'migrated listen dims its feed row');
+
+  // ---------- cover art ----------
+  const hadesImg = rowById('hades-ii').querySelector('.rart img');
+  assert(hadesImg !== null && hadesImg.getAttribute('loading') === 'lazy', 'art renders as a lazy image');
+  assert(hadesImg.getAttribute('src').includes('hades'), 'art src comes from the shared data');
+  assert(rowById('hades-ii').querySelectorAll('script').length === 0, 'hostile art URL renders inert');
+  assert(rowById('fresh-drop').querySelector('.rart.noart') !== null, 'artless rows get the placeholder tile');
 
   // ---------- tabs and counts ----------
   assert(tab('feed').classList.contains('on'), 'feed tab active by default');

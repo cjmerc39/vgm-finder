@@ -85,6 +85,27 @@ def test_steam_parses_search_rows():
     assert items[0]["date"] == "2026-07-28"
 
 
+def test_steam_rows_carry_game_and_art():
+    items = collect.parse_steam(raw("steam-soundtracks.json"), no_resolve)
+    assert items[0]["game"] == "Endacopia"
+    assert items[0]["art"] and items[0]["art"].endswith("/header.jpg")
+    assert "/apps/" in items[0]["art"]
+    assert all(i["art"] for i in items)  # every search row ships a capsule image
+
+
+@pytest.mark.parametrize("title,game", [
+    ("Hollow Knight - Official Soundtrack", "Hollow Knight"),
+    ("Clair Obscur: Expedition 33 – Original Soundtrack", "Clair Obscur: Expedition 33"),
+    ("Ori and the Blind Forest (Additional Soundtrack)", "Ori and the Blind Forest"),
+    ("Dying Light Original Soundtrack", "Dying Light"),
+    ("Stardew Valley 1.6 Original Sound Track", "Stardew Valley 1.6"),
+    ("Fight Songs: The Music Of Team Fortress 2", None),  # no soundtrack suffix to strip
+    ("OST", None),
+])
+def test_steam_game_derivation(title, game):
+    assert collect._steam_game(title) == game
+
+
 def test_steam_skips_unreleased_rows():
     blob = json.dumps({"success": 1, "results_html":
         '<a href="https://store.steampowered.com/app/1/A/?snr=x" class="search_result_row">'
@@ -110,6 +131,7 @@ def test_igdb_yields_only_games_with_confident_albums():
     assert fading["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_hK34tOz4ENm"
     assert fading["url"] == "https://www.igdb.com/games/fading-echo"
     assert fading["date"] == "2026-07-21"
+    assert fading["art"] and "googleusercontent" in fading["art"]  # album art from the YTM match
     # Halo: Campaign Evolved is in the games fixture but YTM only offers the
     # 2001 Combat Evolved album — the strict matcher must refuse it
     assert not any(i["game"] == "Halo: Campaign Evolved" for i in items)
@@ -151,14 +173,26 @@ def test_resolver_backfills_recent_unresolved_rows():
     headline = row("Mahou Arms finally hits 1.0, and Dale North's full OST is a vibe", "2026-07-27")
     ancient = row("Fading Echo Soundtrack", "2026-01-01")  # matchable but outside the window
     done = row("Hades II", "2026-07-20", album="https://music.youtube.com/browse/existing")
+    done["art"] = "https://example.com/done.jpg"  # fully resolved rows cost no lookup
     releases = [steamish, headline, ancient, done]
     looked, filled = collect.resolve_albums(releases, fake_resolve, NOW)
     assert (looked, filled) == (2, 1)  # ancient + done never looked up
     assert steamish["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_8VX7LFDliIy"
+    assert steamish["art"] and "googleusercontent" in steamish["art"]
     assert "Tee Lopes" in steamish["composers"]
     assert headline["ytmAlbumUrl"] is None  # editorial headlines never equal album titles
     assert ancient["ytmAlbumUrl"] is None
     assert done["ytmAlbumUrl"] == "https://music.youtube.com/browse/existing"
+
+
+def test_resolver_fills_art_on_rows_that_already_have_albums():
+    r = {"id": "denshattack", "title": "Denshattack! Soundtrack", "game": None, "composers": ["x"],
+         "date": "2026-07-25", "sources": [], "ytmSearchUrl": "s",
+         "ytmAlbumUrl": "https://music.youtube.com/browse/already", "art": None, "notable": True}
+    looked, filled = collect.resolve_albums([r], fake_resolve, NOW)
+    assert (looked, filled) == (1, 0)  # a lookup, but no album overwrite
+    assert r["ytmAlbumUrl"] == "https://music.youtube.com/browse/already"
+    assert r["art"] and "googleusercontent" in r["art"]
 
 
 def test_resolver_respects_cap():
@@ -177,7 +211,7 @@ def test_merge_enriches_nulls_without_touching_the_rest():
     collect.merge(releases, [{"title": "Denshattack! (Original Game Soundtrack)",
                               "game": "Denshattack!", "composers": ["Tee Lopes"],
                               "url": "https://www.igdb.com/games/denshattack",
-                              "date": "2026-07-15",
+                              "date": "2026-07-15", "art": "https://example.com/densh.jpg",
                               "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_8VX7LFDliIy"}],
                   src("igdb", "catalog"), SEEN)
     assert len(releases) == 1  # both normalize to "denshattack"
@@ -186,6 +220,7 @@ def test_merge_enriches_nulls_without_touching_the_rest():
     assert entry["game"] == "Denshattack!"              # null filled
     assert entry["composers"] == ["Tee Lopes"]          # empty filled
     assert entry["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_8VX7LFDliIy"
+    assert entry["art"] == "https://example.com/densh.jpg"  # art null-filled, never overwritten
     assert entry["date"] == "2026-07-15"                # earliest (game release) wins
     assert [s["name"] for s in entry["sources"]] == ["steam", "igdb"]
 
@@ -317,7 +352,9 @@ def test_run_collects_all_sources_and_is_stable(tmp_path):
     assert len(data["releases"]) == 52  # 10 + 9 + 5 + 25 + 3 igdb, no cross-source collisions
     igdb_rows = [r for r in data["releases"] if r["sources"][0]["name"] == "igdb"]
     assert len(igdb_rows) == 3
-    assert all(r["ytmAlbumUrl"] and r["game"] and r["composers"] for r in igdb_rows)
+    assert all(r["ytmAlbumUrl"] and r["game"] and r["composers"] and r["art"] for r in igdb_rows)
+    steam_rows = [r for r in data["releases"] if r["sources"][0]["name"] == "steam"]
+    assert all(r["art"] for r in steam_rows)  # every steam row derives header art
 
     # a second run over identical feeds must not rewrite the file
     first = data_path.read_text(encoding="utf-8")
