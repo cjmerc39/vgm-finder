@@ -49,7 +49,8 @@ def igdb_top_fetch(offset):
     tok = requests.post("https://id.twitch.tv/oauth2/token", timeout=30, params={
         "client_id": cid, "client_secret": secret,
         "grant_type": "client_credentials"}).json()["access_token"]
-    query = (f"fields name, slug, first_release_date, rating_count, cover.image_id; "
+    query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, "
+             f"involved_companies.company.name, involved_companies.developer; "
              f"where rating_count >= {IGDB_BAR} & game_type = (0,4,8,9); "
              f"sort rating_count desc; limit {IGDB_PAGE}; offset {offset};")
     resp = requests.post("https://api.igdb.com/v4/games", data=query.encode(), timeout=30,
@@ -131,8 +132,10 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at):
             cover = (g.get("cover") or {}).get("image_id")
             cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
                          if cover else None)
+            company = collect.company_of(g)
             if hit:
                 item = {"title": hit["title"], "game": name, "composers": hit["composers"],
+                        "company": company,
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"),
                         "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url}
@@ -141,6 +144,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at):
                 # compilations): a search row beats absence, and it upgrades
                 # itself by slug collision if a real album ever appears
                 item = {"title": f"{name} Soundtrack", "game": name, "composers": [],
+                        "company": company,
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"), "art": cover_url}
             else:
@@ -158,7 +162,10 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at):
     return added, exhausted
 
 
-def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve,
+TOPTRACKS_CAP_BACKFILL = 150
+
+
+def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect.ytm_album,
         data_path=collect.DATA_PATH, state_path=STATE_PATH, now=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -169,6 +176,8 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve,
 
     steam_leg(releases, state, fetch_fn, seen_at)
     _, igdb_done = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at)
+    fetched = collect.fill_top_tracks(releases, album_fn, cap=TOPTRACKS_CAP_BACKFILL)
+    print(f"top tracks: {fetched} albums fetched")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data["updatedAt"] = seen_at

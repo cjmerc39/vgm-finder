@@ -17,6 +17,9 @@ const FIXTURE = {
       ytmSearchUrl: 'https://music.youtube.com/search?q=Chrono+Cross%3A+The+Radical+Dreamers+Edition+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'hades-ii', title: 'Hades II Original Soundtrack', game: 'Hades II', composers: ['Darren Korb'], date: '2026-07-20',
+      company: 'Supergiant Games',
+      topTracks: [{ title: 'No Escape', plays: '1.2M plays' }, { title: 'The Painted World', plays: '900K plays' },
+                  { title: 'Coral Crown', plays: '500K plays' }],
       sources: [{ name: 'nowplaying', type: 'editorial', url: 'https://nowplaying.cool/h', seenAt: '2026-07-10T10:00:00Z' },
                 { name: 'r/gamemusic', type: 'community', url: 'https://reddit.com/h', seenAt: '2026-07-11T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Hades+II+Original+Soundtrack+soundtrack',
@@ -27,6 +30,7 @@ const FIXTURE = {
       ytmSearchUrl: 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'ゼルダの伝説', title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム OST', game: null, composers: [], date: '2026-07-15',
+      topTracks: [{ title: 'メインテーマ', plays: null }, { title: 'ハイラル平原', plays: null }],
       sources: [{ name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z', seenAt: '2026-07-13T10:00:00Z' },
                 { name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z2', seenAt: '2026-07-14T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC+OST+soundtrack',
@@ -36,18 +40,20 @@ const FIXTURE = {
       ytmSearchUrl: 'https://music.youtube.com/search?q=Evil+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'fresh-drop', title: 'Fresh Drop: A Brand New Soundtrack', game: 'Fresh Drop', composers: ['New Person'], date: '2026-07-28',
+      company: 'Nintendo',
       sources: [{ name: 'nowplaying', type: 'editorial', url: 'https://nowplaying.cool/f', seenAt: '2026-07-27T09:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Fresh+Drop%3A+A+Brand+New+Soundtrack+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
   ],
 };
 
-function makeDom(fetchImpl, prefill) {
+function makeDom(fetchImpl, prefill, standalone) {
   const errors = [];
   const dom = new JSDOM(html, {
     runScripts: 'dangerously', url: 'https://example.com/',
     beforeParse(w) {
       w.fetch = fetchImpl;
+      if (standalone) Object.defineProperty(w.navigator, 'standalone', { value: true, configurable: true });
       w.open = (url) => {
         w.__opened = url;
         w.__handle = { opener: 'leaky', closed: false, close(){ this.closed = true; } };
@@ -133,17 +139,50 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   d.querySelector('#subctl button[data-fs="date"]').click(); await sleep(20);
   assert(rows()[0].dataset.id === 'fresh-drop', 'newest-first restored');
 
-  // ---------- YTM tap-through unchanged ----------
+  // ---------- year rails + company facets ----------
+  assert(d.querySelectorAll('#list .yhead').length === 1
+    && d.querySelector('#list .yhead').textContent === '2026', 'date sorts group rows under year rails');
+  assert(d.querySelectorAll('#subctl button[data-fc]').length === 3, 'company facet chips render');
+  d.querySelector('#subctl button[data-fc="big"]').click(); await sleep(20);
+  assert(rows().length === 1 && rows()[0].dataset.id === 'fresh-drop', 'big-studios facet keeps the Nintendo row');
+  d.querySelector('#subctl button[data-fc="indie"]').click(); await sleep(20);
+  assert(rows().length === 1 && rows()[0].dataset.id === 'hades-ii', 'indie facet keeps the Supergiant row');
+  assert(stored().feedCo === 'indie', 'company facet persists');
+  d.querySelector('#subctl button[data-fc="all"]').click(); await sleep(20);
+  assert(rows().length === 5, 'all restores the unfaceted feed');
+
+  // ---------- expand, then listen ----------
   rowById('ratchet-clank-rift-apart').click();
+  assert(rowById('ratchet-clank-rift-apart').getAttribute('aria-expanded') === 'true'
+    && rowById('ratchet-clank-rift-apart').querySelector('.rx') !== null, 'row tap expands the detail panel');
+  assert(w.__opened === undefined, 'expanding does not open YTM');
+  rowById('ratchet-clank-rift-apart').querySelector('[data-act="listen"]').click();
   assert(w.__opened === 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
-    'row tap opens the encoded YTM search URL untouched');
+    'listen opens the encoded YTM search URL untouched');
+  rowById('ratchet-clank-rift-apart').click();
+  assert(rowById('ratchet-clank-rift-apart').querySelector('.rx') === null, 'second tap collapses the panel');
+
   rowById('hades-ii').click();
+  const hx = rowById('hades-ii').querySelector('.rx');
+  assert(hx.textContent.includes('Supergiant Games'), 'expanded panel shows the studio');
+  assert(hx.textContent.includes('TOP TRACKS') && hx.textContent.includes('No Escape')
+    && hx.textContent.includes('1.2M plays'), 'top tracks list with play counts');
+  const srcLink = hx.querySelector('a.xsrc');
+  assert(srcLink && srcLink.getAttribute('href') === 'https://nowplaying.cool/h'
+    && srcLink.getAttribute('target') === '_blank', 'coverage links go to the source articles');
+  hx.querySelector('[data-act="listen"]').click();
   assert(w.__opened === 'https://music.youtube.com/playlist?list=OLAK5uy_hades2', 'album URL preferred when present');
 
   // iOS return-trip: the opened sheet is severed and closed when we regain focus
   assert(w.__handle.opener === null, 'opened window gets its opener severed');
   d.dispatchEvent(new w.Event('visibilitychange'));
   assert(w.__handle.closed === true, 'leftover sheet closes when the app becomes visible again');
+  rowById('hades-ii').click();
+
+  rowById('ゼルダの伝説').click();
+  assert(rowById('ゼルダの伝説').querySelector('.rx').textContent.includes('FROM THE TRACKLIST'),
+    'tracks without play counts get the honest header');
+  rowById('ゼルダの伝説').click();
 
   // friendly source labels, deduped per row
   assert(rowById('ゼルダの伝説').querySelector('.chip').textContent === 'catalog', 'igdb source displays as "catalog"');
@@ -163,9 +202,13 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rows().length === 2, 'queue lists both queued rows');
   assert(rows()[0].dataset.id === 'fresh-drop', 'queue sorts by release date, newest first');
   assert(rows()[0].textContent.includes('queued'), 'queue rows show when they were queued');
+  assert(rowById('ゼルダの伝説').querySelector('[data-act="queue"]') === null,
+    'queue rows carry no remove button — nothing to fat-finger');
+  tab('feed').click(); await sleep(20);
   rowById('ゼルダの伝説').querySelector('[data-act="queue"]').click();
-  assert(rows().length === 1 && stored().entries['ゼルダの伝説'] === undefined,
-    'dequeue removes the row and prunes the blank entry');
+  assert(stored().entries['ゼルダの伝説'] === undefined, 'unqueueing lives in the feed toggle and prunes the blank entry');
+  tab('queue').click(); await sleep(20);
+  assert(rows().length === 1, 'queue reflects the removal');
 
   // ---------- the logging ritual: two taps for a bare listen ----------
   rowById('fresh-drop').querySelector('[data-act="log"]').click();
@@ -300,6 +343,15 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   const broken = makeDom(async () => ({ ok: false, status: 404, json: async () => ({}) }));
   await sleep(60);
   assert(broken.d.querySelector('#list .state').textContent.includes('HTTP 404'), 'fetch failure states the status');
+
+  // ---------- installed-app (standalone) navigation ----------
+  const alone = makeDom(okFetch(FIXTURE), null, true);
+  await sleep(120);
+  alone.w.eval('navTo = u => { window.__nav = u; }');
+  alone.w.eval("openTrack(byId('hades-ii'))");
+  assert(alone.w.__nav === 'https://music.youtube.com/playlist?list=OLAK5uy_hades2'
+    && alone.w.__opened === undefined,
+    'standalone mode navigates directly so the universal link takes over — no leftover sheet');
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

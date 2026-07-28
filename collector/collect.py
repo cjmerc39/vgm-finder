@@ -49,7 +49,8 @@ def igdb_fetch():
     now = int(time.time())
     start = now - IGDB_WINDOW_DAYS * 86400
     # game_type replaced the old (now dead) category field; 0/4/8/9 = main/expansion/remake/remaster
-    query = (f"fields name, slug, first_release_date, hypes, game_type, cover.image_id; "
+    query = (f"fields name, slug, first_release_date, hypes, game_type, cover.image_id, "
+             f"involved_companies.company.name, involved_companies.developer; "
              f"where first_release_date >= {start} & first_release_date <= {now} "
              f"& game_type = (0,4,8,9) & hypes >= {IGDB_HYPES_MIN}; "
              f"sort hypes desc; limit {IGDB_LIMIT};")
@@ -72,6 +73,55 @@ def ytm_resolve(query):
         from ytmusicapi import YTMusic  # lazy: only the resolver path needs it
         _YT = YTMusic()
     return _YT.search(query, filter="albums", limit=5)
+
+
+def ytm_album(browse_id):
+    global _YT
+    if _YT is None:
+        from ytmusicapi import YTMusic
+        _YT = YTMusic()
+    return _YT.get_album(browse_id)
+
+
+TOPTRACKS_CAP = 25
+
+
+def _plays_num(text):
+    m = re.match(r"([\d.,]+)\s*([KMB])?", str(text or "").strip(), re.IGNORECASE)
+    if not m:
+        return None
+    try:
+        n = float(m.group(1).replace(",", ""))
+    except ValueError:
+        return None
+    return n * {"K": 1e3, "M": 1e6, "B": 1e9}.get((m.group(2) or "").upper(), 1)
+
+
+def top_tracks_from(album):
+    """Top 3 by play count when YTM exposes it, else the opening tracks."""
+    tracks = [t for t in (album or {}).get("tracks", []) if t.get("title")]
+    scored = [(t, _plays_num(t.get("views"))) for t in tracks]
+    if any(n is not None for _, n in scored):
+        scored.sort(key=lambda p: p[1] if p[1] is not None else -1, reverse=True)
+    return [{"title": t["title"], "plays": t.get("views") or None} for t, _ in scored[:3]]
+
+
+def fill_top_tracks(releases, album_fn, cap=TOPTRACKS_CAP):
+    """Attach topTracks to album-linked rows, capped per run. An empty list is
+    a completed check (album has no listed tracks), so rows never re-fetch."""
+    looked = 0
+    for r in releases:
+        url = r.get("ytmAlbumUrl") or ""
+        if "topTracks" in r or "/browse/" not in url:
+            continue
+        if looked >= cap:
+            break
+        looked += 1
+        try:
+            r["topTracks"] = top_tracks_from(album_fn(url.rsplit("/", 1)[1]))
+        except Exception:
+            continue  # transient: retry on a later run
+    return looked
 
 
 def entry_categories(entry):
@@ -272,6 +322,13 @@ def _match_album_within(results, hay_norm):
     return None
 
 
+def company_of(game):
+    companies = game.get("involved_companies") or []
+    devs = [c for c in companies if c.get("developer")] or companies
+    name = ((devs[0].get("company") or {}).get("name") or "").strip() if devs else ""
+    return name or None
+
+
 def parse_igdb(raw, resolve):
     games = json.loads(raw)
     if not isinstance(games, list):
@@ -293,6 +350,7 @@ def parse_igdb(raw, resolve):
         cover = (g.get("cover") or {}).get("image_id")
         items.append({
             "title": hit["title"], "game": name, "composers": hit["composers"],
+            "company": company_of(g),
             "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
             "date": when.strftime("%Y-%m-%d"),
             "ytmAlbumUrl": hit["url"],
@@ -390,6 +448,8 @@ def merge(releases, items, source, seen_at):
                 target["date"] = it["date"]
             if not target.get("albumTitle") and it.get("albumTitle"):
                 target["albumTitle"] = it["albumTitle"]
+            if not target.get("company") and it.get("company"):
+                target["company"] = it["company"]
             if not target.get("game") and it.get("game"):
                 target["game"] = it["game"]
             if not target.get("composers") and it.get("composers"):
@@ -406,6 +466,8 @@ def merge(releases, items, source, seen_at):
                      "ytmAlbumUrl": it.get("ytmAlbumUrl"), "art": it.get("art"), "notable": True}
             if it.get("albumTitle"):
                 entry["albumTitle"] = it["albumTitle"]
+            if it.get("company"):
+                entry["company"] = it["company"]
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
@@ -456,7 +518,8 @@ def load_data(path):
     return {"updatedAt": None, "releases": []}
 
 
-def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, data_path=DATA_PATH, now=None):
+def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
+        data_path=DATA_PATH, now=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_data(data_path)
@@ -478,6 +541,8 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, data_path=DATA_PATH, now=Non
 
     looked, filled = resolve_albums(releases, resolve_fn, now)
     print(f"album resolver: {looked} lookups, {filled} filled")
+    fetched = fill_top_tracks(releases, album_fn)
+    print(f"top tracks: {fetched} albums fetched")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data["updatedAt"] = seen_at

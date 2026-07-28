@@ -34,6 +34,10 @@ def no_resolve(query):
     return []
 
 
+def no_album(browse_id):
+    return {"tracks": []}
+
+
 def raw(name):
     return (FIXTURES / name).read_bytes()
 
@@ -313,6 +317,56 @@ def test_merge_enriches_nulls_without_touching_the_rest():
     assert [s["name"] for s in entry["sources"]] == ["steam", "igdb"]
 
 
+# ---------------- top tracks + companies ----------------
+
+def test_plays_num_parses_ytm_counts():
+    assert collect._plays_num("9 plays") == 9
+    assert collect._plays_num("1.2M plays") == 1_200_000
+    assert collect._plays_num("12,345 plays") == 12_345
+    assert collect._plays_num("3B plays") == 3_000_000_000
+    assert collect._plays_num(None) is None
+
+
+def test_top_tracks_prefers_play_counts_and_falls_back_to_order():
+    ranked = {"tracks": [{"title": "Quiet", "views": "10 plays"},
+                         {"title": "Hit", "views": "2M plays"},
+                         {"title": "Mid", "views": "500K plays"},
+                         {"title": "Deep", "views": "1K plays"}]}
+    top = collect.top_tracks_from(ranked)
+    assert [t["title"] for t in top] == ["Hit", "Mid", "Deep"]
+    assert top[0]["plays"] == "2M plays"
+    unranked = {"tracks": [{"title": "One"}, {"title": "Two"}, {"title": "Three"}, {"title": "Four"}]}
+    assert [t["title"] for t in collect.top_tracks_from(unranked)] == ["One", "Two", "Three"]
+    assert all(t["plays"] is None for t in collect.top_tracks_from(unranked))
+
+
+def test_fill_top_tracks_caps_and_never_refetches():
+    def album(bid):
+        return {"tracks": [{"title": f"T-{bid}", "views": "5 plays"}]}
+    rows = [
+        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_a"},
+        {"ytmAlbumUrl": "https://music.youtube.com/playlist?list=x"},  # not a browseable album
+        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_b"},
+        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_c", "topTracks": []},  # already checked
+    ]
+    assert collect.fill_top_tracks(rows, album, cap=1) == 1
+    assert rows[0]["topTracks"][0]["title"] == "T-MPREb_a"
+    assert "topTracks" not in rows[1] and "topTracks" not in rows[2]
+    assert collect.fill_top_tracks(rows, album, cap=10) == 1  # only the remaining browse row
+    assert rows[2]["topTracks"][0]["title"] == "T-MPREb_b"
+    assert rows[3]["topTracks"] == []  # empty result stays a completed check
+
+
+def test_company_of_prefers_the_developer():
+    g = {"involved_companies": [
+        {"developer": False, "company": {"name": "Big Publisher"}},
+        {"developer": True, "company": {"name": "Tiny Studio"}}]}
+    assert collect.company_of(g) == "Tiny Studio"
+    assert collect.company_of({"involved_companies": [
+        {"developer": False, "company": {"name": "Only Publisher"}}]}) == "Only Publisher"
+    assert collect.company_of({}) is None
+
+
 # ---------------- slugs and normalization ----------------
 
 @pytest.mark.parametrize("title,slug", [
@@ -468,7 +522,7 @@ def test_new_entry_shape_matches_schema():
 
 def test_run_collects_all_sources_and_is_stable(tmp_path):
     data_path = tmp_path / "releases.json"
-    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve,
+    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve, album_fn=no_album,
                        data_path=data_path, now=NOW) == 0
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert data["updatedAt"] == SEEN
@@ -482,7 +536,7 @@ def test_run_collects_all_sources_and_is_stable(tmp_path):
     # a second run over identical feeds must not rewrite the file
     first = data_path.read_text(encoding="utf-8")
     later = datetime(2026, 7, 29, 10, 0, 0, tzinfo=timezone.utc)
-    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve,
+    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve, album_fn=no_album,
                        data_path=data_path, now=later) == 0
     assert data_path.read_text(encoding="utf-8") == first
 
@@ -493,7 +547,7 @@ def test_run_survives_one_source_failing(tmp_path, capsys):
             raise OSError("simulated network failure")
         return fixture_fetch(url)
     data_path = tmp_path / "releases.json"
-    assert collect.run(fetch_fn=flaky, resolve_fn=fake_resolve,
+    assert collect.run(fetch_fn=flaky, resolve_fn=fake_resolve, album_fn=no_album,
                        data_path=data_path, now=NOW) == 0
     out = capsys.readouterr().out
     assert "::warning::blipblop failed" in out
@@ -503,6 +557,6 @@ def test_run_survives_one_source_failing(tmp_path, capsys):
 def test_run_fails_red_when_every_source_fails(tmp_path, capsys):
     def dead(url):
         raise OSError("nope")
-    assert collect.run(fetch_fn=dead, resolve_fn=no_resolve,
+    assert collect.run(fetch_fn=dead, resolve_fn=no_resolve, album_fn=no_album,
                        data_path=tmp_path / "releases.json", now=NOW) == 1
     assert "::error::" in capsys.readouterr().out

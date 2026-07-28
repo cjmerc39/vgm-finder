@@ -88,6 +88,18 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
   .racts button:active{transform:scale(1.25)}
 }
 
+.yhead{font-family:var(--disp);font-size:10.5px;color:var(--dim);letter-spacing:1px;padding:20px 8px 6px;border-bottom:1px solid var(--line)}
+.row[aria-expanded="true"]{background:var(--bg2)}
+.rx{margin-top:10px;border-top:1px dashed var(--line);padding-top:12px;cursor:default}
+.xlisten{display:block;width:100%;background:var(--amber);color:#241a08;font-weight:700;letter-spacing:1.5px;border-radius:10px;padding:12px;font-size:12.5px;text-align:center}
+.xinfo{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin-top:11px;font-size:12.5px}
+.xk{color:var(--dim);text-transform:uppercase;letter-spacing:1.2px;font-size:9.5px;padding-top:3px}
+.xv{color:var(--mut);overflow-wrap:anywhere}
+.xh{font-family:var(--disp);font-size:10px;color:var(--amber);letter-spacing:1px;margin:13px 0 5px}
+.xtrack{display:flex;gap:9px;align-items:baseline;font-size:13px;padding:3px 0}
+.xplays{margin-left:auto;color:var(--dim);font-size:11px;white-space:nowrap}
+.xlinks{display:flex;gap:6px;flex-wrap:wrap}
+a.xsrc{text-decoration:none}
 .state{padding:48px 16px;text-align:center;color:var(--mut)}
 .state .big{font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--amber);margin-bottom:12px}
 .state p{max-width:34ch;margin:0 auto;line-height:1.6}
@@ -164,12 +176,25 @@ let TRACKNO = {};                             // id -> position in the append-on
 let Q = '';                                   // search text, deliberately not persisted
 let SHEET = null;                             // {id, draft} while the logging sheet is open
 let IMPMSG = '';                              // one-shot import feedback line
+let EXPANDED = null;                          // id of the row opened into its detail panel
+const STANDALONE = (window.matchMedia && matchMedia('(display-mode: standalone)').matches)
+  || window.navigator.standalone === true;
+const BIG_STUDIOS = ['nintendo','sony','playstation','capcom','square enix','squaresoft','sega',
+  'electronic arts','ea sports','ubisoft','activision','blizzard','microsoft','xbox','bandai namco',
+  'namco','konami','rockstar','take-two','2k games','cd projekt','bethesda','valve','epic games',
+  'fromsoftware','atlus','koei tecmo','naughty dog','insomniac','santa monica','guerrilla','bungie',
+  'id software','respawn','infinity ward','treyarch'];
+function coTier(r){
+  if(!r.company) return null;
+  const c = r.company.toLowerCase();
+  return BIG_STUDIOS.some(b => c.includes(b)) ? 'big' : 'indie';
+}
 
 function blank(){ return { status:'unsorted', rating:null, liked:false, note:'', listenedOn:null, queuedOn:null }; }
 function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', libSort:'listenedOn', libLiked:false, showHidden:false }; }
+function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', libSort:'listenedOn', libLiked:false, showHidden:false }; }
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -192,6 +217,7 @@ function validateState(d){
   s.lastSeen = typeof d.lastSeen === 'number' ? d.lastSeen : 0;
   s.view = VIEWS.includes(d.view) ? d.view : 'feed';
   s.feedSort = FEED_SORTS.includes(d.feedSort) ? d.feedSort : 'date';
+  s.feedCo = ['all', 'big', 'indie'].includes(d.feedCo) ? d.feedCo : 'all';
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
   s.showHidden = d.showHidden === true;
@@ -237,6 +263,8 @@ function editEntry(id, fn){
 function setView(v){ if(VIEWS.includes(v)){ S.view = v; save(); renderAll(); } }
 function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
 function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
+function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
+function toggleExpand(id){ EXPANDED = EXPANDED === id ? null : id; renderList(); }
 function toggleLibLiked(){ S.libLiked = !S.libLiked; save(); renderAll(); }
 function toggleQueued(id){ editEntry(id, e => {
   const on = e.status === 'queued';
@@ -300,13 +328,14 @@ function sorted(){
 function label(r){ return r.albumTitle || r.title; }
 function matches(r, q){
   if(!q) return true;
-  const hay = [r.title, r.albumTitle, r.game, ...(r.composers || []), E(r.id).note]
+  const hay = [r.title, r.albumTitle, r.game, r.company, ...(r.composers || []), E(r.id).note]
     .filter(Boolean).join(' ').toLowerCase();
   return hay.includes(q.toLowerCase());
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
 function feedRows(){
-  const rows = sorted().filter(r => E(r.id).status !== 'hidden');
+  let rows = sorted().filter(r => E(r.id).status !== 'hidden');
+  if(S.feedCo !== 'all') rows = rows.filter(r => coTier(r) === S.feedCo);
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
   else if(S.feedSort === 'az')
@@ -373,8 +402,11 @@ function renderControls(){
   const el = document.getElementById('subctl');
   if(S.view === 'feed'){
     const sorts = [['date', 'newest'], ['oldest', 'oldest'], ['az', 'a–z'], ['added', 'added']];
+    const cos = [['all', 'all'], ['big', 'big studios'], ['indie', 'indie']];
     el.innerHTML = sorts.map(([k, name]) =>
-      `<button data-fs="${k}" class="${S.feedSort === k ? 'on' : ''}">${name}</button>`).join('');
+      `<button data-fs="${k}" class="${S.feedSort === k ? 'on' : ''}">${name}</button>`).join('') +
+      cos.map(([k, name]) =>
+      `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('');
     return;
   }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
@@ -406,8 +438,7 @@ function rowHtml(r, view, ghost){
       <button class="hide" data-act="hide" aria-label="Hide ${esc(label(r))}">✕</button>`;
   } else if(view === 'queue'){
     meta += `<span class="chip">queued ${esc(fmtDate(e.queuedOn).toLowerCase())}</span>`;
-    acts = `<button class="log" data-act="log" aria-label="Mark listened">▷</button>
-      <button class="hide" data-act="queue" aria-label="Remove from queue">−</button>`;
+    acts = `<button class="log" data-act="log" aria-label="Mark listened">▷</button>`;
   } else { // library
     const bits = [];
     if(e.rating != null) bits.push(`<span class="minis">${minis(e.rating)}</span>`);
@@ -420,7 +451,8 @@ function rowHtml(r, view, ghost){
   const art = r.art
     ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noart');this.remove()"></div>`
     : `<div class="rart noart"></div>`;
-  return `<div class="row${heard && view === 'feed' ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="link" aria-label="Open in YouTube Music: ${esc(label(r))}">
+  const expanded = !ghost && EXPANDED === r.id;
+  return `<div class="row${heard && view === 'feed' ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="button" aria-expanded="${expanded}" aria-label="${esc(label(r))}">
     ${art}
     <div class="rmain">
       <div class="rtop"><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span>${view === 'feed' && isNew(r) ? '<span class="new">NEW</span>' : ''}<time>${topDate}</time></div>
@@ -428,7 +460,31 @@ function rowHtml(r, view, ghost){
       ${sub ? `<div class="rsub">${esc(sub)}</div>` : ''}
       ${view === 'library' && e.note ? `<div class="rnote">“${esc(e.note)}”</div>` : ''}
       <div class="rbar">${meta}<div class="racts">${acts}</div></div>
+      ${expanded ? expandedHtml(r, e) : ''}
     </div>
+  </div>`;
+}
+
+function expandedHtml(r, e){
+  const info = [];
+  if(r.game) info.push(['game', r.game]);
+  if((r.composers || []).length) info.push(['composer', r.composers.join(', ')]);
+  if(r.company) info.push(['studio', r.company]);
+  if(r.date) info.push(['released', fmtDate(r.date)]);
+  if(e.listenedOn) info.push(['heard on', fmtDate(e.listenedOn)]);
+  const tt = r.topTracks || [];
+  const anyPlays = tt.some(t => t && t.plays);
+  const tracks = tt.length
+    ? `<div class="xh">${anyPlays ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` + tt.map((t, i) =>
+      `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}</div>`).join('')
+    : '';
+  const links = (r.sources || []).map(s =>
+    `<a class="chip xsrc" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(SRC_LABEL[s.name] || s.name)} ↗</a>`).join('');
+  return `<div class="rx">
+    <button class="xlisten" data-act="listen">▶ &nbsp;LISTEN ON YT MUSIC</button>
+    ${info.length ? `<div class="xinfo">${info.map(([k, v]) => `<span class="xk">${k}</span><span class="xv">${esc(v)}</span>`).join('')}</div>` : ''}
+    ${tracks}
+    ${links ? `<div class="xh">COVERAGE</div><div class="xlinks">${links}</div>` : ''}
   </div>`;
 }
 
@@ -457,7 +513,20 @@ function renderList(){
     return;
   }
   const rows = searched(S.view === 'queue' ? queueRows() : S.view === 'library' ? libraryRows() : feedRows());
-  let html = rows.length ? rows.map(r => rowHtml(r, S.view, false)).join('') : emptyHtml();
+  let html;
+  if(!rows.length){
+    html = emptyHtml();
+  } else if(S.view === 'feed' && (S.feedSort === 'date' || S.feedSort === 'oldest')){
+    let year = null;
+    html = rows.map(r => {
+      const y = (r.date || '').slice(0, 4) || '····';
+      const head = y !== year ? `<div class="yhead">${y}</div>` : '';
+      year = y;
+      return head + rowHtml(r, S.view, false);
+    }).join('');
+  } else {
+    html = rows.map(r => rowHtml(r, S.view, false)).join('');
+  }
   if(S.showHidden && hiddenRows().length){
     html += `<div id="hidhead">HIDDEN (${hiddenRows().length})</div>` +
             hiddenRows().map(r => rowHtml(r, S.view, true)).join('');
@@ -509,9 +578,12 @@ function renderSheet(){
 
 /* =========================== events ============================ */
 let PENDING_OPEN = null;
+function navTo(url){ location.href = url; }
 function openTrack(r){
   if(!r) return;
-  const w2 = window.open(ytmUrl(r), '_blank');
+  const url = ytmUrl(r);
+  if(STANDALONE){ navTo(url); return; }  // universal link hands straight to the app: no leftover sheet
+  const w2 = window.open(url, '_blank');
   if(w2){ try{ w2.opener = null; }catch(e){} PENDING_OPEN = w2; }
 }
 document.addEventListener('visibilitychange', () => {
@@ -524,6 +596,7 @@ document.addEventListener('visibilitychange', () => {
 });
 
 document.getElementById('list').addEventListener('click', e => {
+  if(e.target.closest('a')) return;  // article links navigate normally
   const btn = e.target.closest('[data-act]');
   const row = e.target.closest('.row');
   if(!row) return;
@@ -534,14 +607,15 @@ document.getElementById('list').addEventListener('click', e => {
     else if(btn.dataset.act === 'like') toggleLiked(id);
     else if(btn.dataset.act === 'hide') hideTrack(id);
     else if(btn.dataset.act === 'restore') unhideTrack(id);
+    else if(btn.dataset.act === 'listen') openTrack(byId(id));
     return;
   }
-  openTrack(byId(id));
+  if(!row.classList.contains('ghost')) toggleExpand(id);
 });
 document.getElementById('list').addEventListener('keydown', e => {
   if(e.key !== 'Enter' && e.key !== ' ') return;
   const row = e.target.closest('.row');
-  if(row){ e.preventDefault(); openTrack(byId(row.dataset.id)); }
+  if(row && e.target === row){ e.preventDefault(); toggleExpand(row.dataset.id); }
 });
 document.querySelector('#tabbar .trow').addEventListener('click', e => {
   const b = e.target.closest('button[data-v]');
@@ -550,6 +624,8 @@ document.querySelector('#tabbar .trow').addEventListener('click', e => {
 document.getElementById('subctl').addEventListener('click', e => {
   const f = e.target.closest('button[data-fs]');
   if(f){ setFeedSort(f.dataset.fs); return; }
+  const c = e.target.closest('button[data-fc]');
+  if(c){ setFeedCo(c.dataset.fc); return; }
   const s = e.target.closest('button[data-ls]');
   if(s){ setLibSort(s.dataset.ls); return; }
   if(e.target.closest('#libliked')) toggleLibLiked();
