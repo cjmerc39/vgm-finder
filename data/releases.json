@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T22:06:45Z",
+  "updatedAt": "2026-07-28T22:25:41Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -14552,13 +14552,19 @@
       "composers": [
         "Jack Wall"
       ],
-      "date": "2015-11-06",
+      "date": "2012-11-12",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/call-of-duty-black-ops-iii",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-black-ops-ii",
+          "seenAt": "2026-07-28T22:25:41Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%3A+Black+Ops+III+%28Official+Soundtrack%29+Call+of+Duty%3A+Black+Ops+III+soundtrack",
@@ -16919,6 +16925,179 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=Command+%26+Conquer+3%3A+Tiberium+Wars+%28Original+Soundtrack%29+Command+%26+Conquer+3%3A+Tiberium+Wars+soundtrack",
       "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZP0cppTwzDu",
       "art": "https://yt3.googleusercontent.com/eJ5htwpz5PMBQq0j6LUhH6YStlg3DSAMfbjkwKp8zfU-c1l-PqCcBb25mezI3KjyWc0dpw2vZphjPRyq=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "marvel-s-spider-man",
+      "title": "Marvel's Spider-Man (Original Video Game Soundtrack)",
+      "game": "Marvel's Spider-Man",
+      "composers": [
+        "John Paesano"
+      ],
+      "date": "2018-09-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvels-spider-man",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Marvel%27s+Spider-Man+%28Original+Video+Game+Soundtrack%29+Marvel%27s+Spider-Man+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NTFJxsBy47e",
+      "art": "https://yt3.googleusercontent.com/2W3ykq1EWVoHErle47hqEN6VH-h9_NzdQDxYCW3uqlIDrtekZfsQWLn60MchG7xMhpdTtisEFezRAg1tHg=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "ghost-of-tsushima",
+      "title": "Ghost of Tsushima (Music from the Video Game)",
+      "game": "Ghost of Tsushima",
+      "composers": [
+        "Ilan Eshkeri",
+        "Shigeru Umebayashi"
+      ],
+      "date": "2020-07-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ghost-of-tsushima",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ghost+of+Tsushima+%28Music+from+the+Video+Game%29+Ghost+of+Tsushima+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_bF2F6LcFNPK",
+      "art": "https://yt3.googleusercontent.com/4rOTV-H2A2S-U0Oqsg9EsMWV9hSlzFGE6-oylUDlnLdZCu-mTJovd5ZxB4esCDGCe3ZBP8hyJ_Mhok_h=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "star-wars-jedi-fallen-order",
+      "title": "Star Wars Jedi: Fallen Order (Original Video Game Soundtrack)",
+      "game": "Star Wars Jedi: Fallen Order",
+      "composers": [
+        "Stephen Barton",
+        "Gordy Haab"
+      ],
+      "date": "2019-11-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-jedi-fallen-order",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars+Jedi%3A+Fallen+Order+%28Original+Video+Game+Soundtrack%29+Star+Wars+Jedi%3A+Fallen+Order+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_T60UFJDLG3l",
+      "art": "https://yt3.googleusercontent.com/VBNoEC3Z6bDUdR4ZtiwD1AnWLtn8HhTu2PM4_dBWddSfV5muEoXJ1h06fQd9-5S-RlZ6uzCZ_kqiA7g=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "star-wars-knights-of-the-old-republic-ii-the-sith-lords",
+      "title": "Star Wars: Knights of the Old Republic II – The Sith Lords (Original Video Game Soundtrack)",
+      "game": "Star Wars: Knights of the Old Republic II - The Sith Lords",
+      "composers": [
+        "Mark Griskey"
+      ],
+      "date": "2004-12-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-knights-of-the-old-republic-ii-the-sith-lords",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+Knights+of+the+Old+Republic+II+%E2%80%93+The+Sith+Lords+%28Original+Video+Game+Soundtrack%29+Star+Wars%3A+Knights+of+the+Old+Republic+II+-+The+Sith+Lords+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5rJsnpuRpAN",
+      "art": "https://yt3.googleusercontent.com/SI1Q5XeqzPB0p1o2XYWaqwc2NEGt5EaGor8Xb1pqFqbragAElTjlZ-1eV6JuKW2-BFUBgMBSRwBe_F37=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "star-wars-battlefront-ii",
+      "title": "Star Wars: Battlefront II (Original Video Game Soundtrack)",
+      "game": "Star Wars: Battlefront II",
+      "composers": [
+        "Gordy Haab"
+      ],
+      "date": "2005-10-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-battlefront-ii",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+Battlefront+II+%28Original+Video+Game+Soundtrack%29+Star+Wars%3A+Battlefront+II+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MevizFNC91w",
+      "art": "https://yt3.googleusercontent.com/hqHZ21AI8oTDEZBour6rRMXknI7UAnr9cdC7lBmXWD8AL8jaKkcbCP1QW07qtWglZQOmGTrzhc4Pyhw=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "alien-isolation",
+      "title": "Alien: Isolation (Original Video Game Soundtrack)",
+      "game": "Alien: Isolation",
+      "composers": [
+        "The Flight",
+        "Christian Henson"
+      ],
+      "date": "2014-10-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/alien-isolation",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Alien%3A+Isolation+%28Original+Video+Game+Soundtrack%29+Alien%3A+Isolation+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_vakHCu4jTqH",
+      "art": "https://yt3.googleusercontent.com/Jlun_2wDJV1ClcsdGUfPcrkgjCqMBNL0s44Qo08N9D5dUG8Dg4a5lNv-I9i70u9iv6TAt51loQH_7N33=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "hogwarts-legacy",
+      "title": "Hogwarts Legacy (Original Video Game Soundtrack)",
+      "game": "Hogwarts Legacy",
+      "composers": [
+        "chuck e. myers 'sea'",
+        "J Scott Rakozy",
+        "Peter Murray"
+      ],
+      "date": "2023-02-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hogwarts-legacy",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hogwarts+Legacy+%28Original+Video+Game+Soundtrack%29+Hogwarts+Legacy+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_w47pQAuBclY",
+      "art": "https://yt3.googleusercontent.com/RCtZZNXZvfa4eZ4gUb55CNlm_Bjc8bL47Q8hflFE9Vg8wZvLRf8roCqmBCweQ9zaQUDz_5kpi2gk7Pi6=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "plants-vs-zombies",
+      "title": "Plants Vs. Zombies (Original Video Game Soundtrack)",
+      "game": "Plants vs. Zombies",
+      "composers": [
+        "Laura Shigihara"
+      ],
+      "date": "2009-05-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/plants-vs-zombies",
+          "seenAt": "2026-07-28T22:25:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Plants+Vs.+Zombies+%28Original+Video+Game+Soundtrack%29+Plants+vs.+Zombies+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7ANhczyNNpf",
+      "art": "https://yt3.googleusercontent.com/6LsR20p6l3kkIi94Gp4NmsACYoiWKoYo_CXgc1VzuZS_DdIW7RIniG9FC15cAEm3HzijhyklFzaGzyep=w544-h544-l90-rj",
       "notable": true
     }
   ]
