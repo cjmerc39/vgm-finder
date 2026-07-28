@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T22:25:41Z",
+  "updatedAt": "2026-07-28T22:27:51Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -4943,7 +4943,9 @@
       "id": "the-talos-principle",
       "title": "The Talos Principle: Soundtrack",
       "game": "The Talos Principle",
-      "composers": [],
+      "composers": [
+        "Damjan Mravunac"
+      ],
       "date": "2014-12-11",
       "sources": [
         {
@@ -4951,10 +4953,16 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/322020/The_Talos_Principle_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-talos-principle",
+          "seenAt": "2026-07-28T22:27:51Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Talos+Principle%3A+Soundtrack+The+Talos+Principle+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ilPpfbp7chO",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/322020/header.jpg",
       "notable": true
     },
@@ -16941,6 +16949,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/marvels-spider-man",
           "seenAt": "2026-07-28T22:25:41Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvels-spider-man-2",
+          "seenAt": "2026-07-28T22:27:51Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Marvel%27s+Spider-Man+%28Original+Video+Game+Soundtrack%29+Marvel%27s+Spider-Man+soundtrack",
@@ -17020,13 +17034,31 @@
       "composers": [
         "Gordy Haab"
       ],
-      "date": "2005-10-31",
+      "date": "2004-09-17",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/star-wars-battlefront-ii",
           "seenAt": "2026-07-28T22:25:41Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-battlefront-ii--1",
+          "seenAt": "2026-07-28T22:27:51Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-battlefront--1",
+          "seenAt": "2026-07-28T22:27:51Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-battlefront",
+          "seenAt": "2026-07-28T22:27:51Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+Battlefront+II+%28Original+Video+Game+Soundtrack%29+Star+Wars%3A+Battlefront+II+soundtrack",
@@ -17098,6 +17130,70 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=Plants+Vs.+Zombies+%28Original+Video+Game+Soundtrack%29+Plants+vs.+Zombies+soundtrack",
       "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7ANhczyNNpf",
       "art": "https://yt3.googleusercontent.com/6LsR20p6l3kkIi94Gp4NmsACYoiWKoYo_CXgc1VzuZS_DdIW7RIniG9FC15cAEm3HzijhyklFzaGzyep=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "marvel-s-spider-man-miles-morales",
+      "title": "Marvel’s Spider-Man: Miles Morales (Original Video Game Soundtrack)",
+      "game": "Marvel's Spider-Man: Miles Morales",
+      "composers": [
+        "John Paesano"
+      ],
+      "date": "2020-11-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvels-spider-man-miles-morales",
+          "seenAt": "2026-07-28T22:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Marvel%E2%80%99s+Spider-Man%3A+Miles+Morales+%28Original+Video+Game+Soundtrack%29+Marvel%27s+Spider-Man%3A+Miles+Morales+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KtvfzsnrXJw",
+      "art": "https://yt3.googleusercontent.com/cT_jJR0iQHAYFtMFzz4yzikXL9wWeGmd-PHofWGYfAE73X7wOaFDcgkLXIZS3dsBKLfPz49izhg3qkfl=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "warframe",
+      "title": "Warframe (Original Video Game Soundtrack)",
+      "game": "Warframe",
+      "composers": [
+        "Keith Power",
+        "George Spanos"
+      ],
+      "date": "2013-03-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/warframe",
+          "seenAt": "2026-07-28T22:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Warframe+%28Original+Video+Game+Soundtrack%29+Warframe+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_bIOeJzM3vAM",
+      "art": "https://yt3.googleusercontent.com/1ndi34RvRH9dQbmS3Wma5uTVKXAGRVnE0dDOkQK6D0gvzL--WB4oQ-nOn83OJ8eGvkK7wr9qS6Rm1Gfajg=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "marvel-s-guardians-of-the-galaxy",
+      "title": "Marvel's Guardians of the Galaxy (Original Video Game Soundtrack)",
+      "game": "Marvel's Guardians of the Galaxy",
+      "composers": [
+        "Richard Jacques"
+      ],
+      "date": "2021-10-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvels-guardians-of-the-galaxy",
+          "seenAt": "2026-07-28T22:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Marvel%27s+Guardians+of+the+Galaxy+%28Original+Video+Game+Soundtrack%29+Marvel%27s+Guardians+of+the+Galaxy+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5BK1plEaChA",
+      "art": "https://yt3.googleusercontent.com/irvmZhgs4LyxJhFHEOvXKCGzcTFdCAjvdgVS3Mmqv8VJ3kc74OHGpKzQ6lrRawDwzbuXcRKvDPerQbo=w544-h544-l90-rj",
       "notable": true
     }
   ]
