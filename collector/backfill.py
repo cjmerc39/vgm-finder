@@ -23,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import collect
 
 STATE_PATH = collect.ROOT / "collector" / "backfill-state.json"
+SEEDS_PATH = collect.ROOT / "collector" / "seeds.json"
 IGDB_BAR = 200          # rating_count floor: the "deep catalog" tier, ~900 games
 IGDB_RECENT_BAR = 15    # recent releases can't have old-game rating counts
 IGDB_RECENT_YEARS = 3
@@ -61,7 +62,21 @@ def _igdb_query(where, offset):
     return resp.content
 
 
+def load_seeds(path=None):
+    try:
+        d = json.loads(Path(path or SEEDS_PATH).read_text(encoding="utf-8"))
+        return [s for s in d.get("igdb", []) if isinstance(s, str) and s]
+    except (OSError, ValueError):
+        return []
+
+
 def default_fetch(url):
+    if url.startswith("igdb-seeds:"):
+        slugs = load_seeds()
+        if not slugs:
+            return b"[]"
+        quoted = ",".join(f'"{s}"' for s in slugs)
+        return _igdb_query(f"slug = ({quoted})", 0)
     if url.startswith("igdb-top:"):
         return _igdb_query(f"rating_count >= {IGDB_BAR}", int(url.split(":", 1)[1]))
     if url.startswith("igdb-recent:"):
@@ -100,6 +115,43 @@ def steam_leg(releases, state, fetch_fn, seen_at):
         state["steamStart"] += STEAM_PAGE
         pages += 1
     print(f"steam leg: cursor {state['steamStart']}/{STEAM_TARGET}, {added} new, {merged} merged")
+    return added
+
+
+def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
+    """Hand-picked franchise favorites: always a row, no rating bars, and the
+    checked set is ignored so seeds keep self-upgrading toward real albums."""
+    try:
+        games = json.loads(fetch_fn("igdb-seeds:0"))
+    except Exception as exc:
+        print(f"::warning::seeds leg failed: {exc}")
+        return 0
+    added = 0
+    for g in games if isinstance(games, list) else []:
+        name = (g.get("name") or "").strip()
+        stamp = g.get("first_release_date")
+        if not name or not stamp:
+            continue
+        when = datetime.fromtimestamp(stamp, tz=timezone.utc)
+        try:
+            hit = collect._match_album(resolve_fn(collect._query(name)),
+                                       collect.normalize_title(name), year=when.year)
+        except Exception:
+            continue
+        cover = (g.get("cover") or {}).get("image_id")
+        cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
+                     if cover else None)
+        item = {"game": name, "company": collect.company_of(g),
+                "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
+                "date": when.strftime("%Y-%m-%d")}
+        if hit:
+            item.update({"title": hit["title"], "composers": hit["composers"],
+                         "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url})
+        else:
+            item.update({"title": f"{name} Soundtrack", "composers": [], "art": cover_url})
+        a, _ = collect.merge(releases, [item], IGDB_SRC, seen_at)
+        added += a
+    print(f"seeds leg: {len(games) if isinstance(games, list) else 0} seeds, {added} new rows")
     return added
 
 
@@ -184,6 +236,7 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     state = load_state(state_path)
     before = json.dumps(releases, sort_keys=True, ensure_ascii=False)
 
+    seeds_leg(releases, fetch_fn, resolve_fn, seen_at)
     steam_leg(releases, state, fetch_fn, seen_at)
     _, top_done, spent = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at)
     _, recent_done, _ = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,

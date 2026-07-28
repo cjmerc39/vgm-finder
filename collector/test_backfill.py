@@ -18,8 +18,8 @@ def make_fetch(counter=None):
             counter.append(url)
         if url.startswith("igdb-top:"):
             return raw("igdb-games.json")  # 25 games < page size -> leg exhausts
-        if url.startswith("igdb-recent:"):
-            return b"[]"  # recent leg exhausts immediately in fixture runs
+        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:"):
+            return b"[]"  # these legs are exercised by their own tests
         if "store.steampowered.com" in url:
             return raw("steam-top-soundtracks.json")
         raise AssertionError("unexpected url " + url)
@@ -95,7 +95,7 @@ def test_backfill_gives_canon_games_search_rows_when_no_album_exists(tmp_path, m
     def fetch(url):
         if url.startswith("igdb-top:"):
             return page
-        if url.startswith("igdb-recent:"):
+        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:"):
             return b"[]"
         raise AssertionError(url)
     monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
@@ -117,7 +117,7 @@ def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatc
                           "first_release_date": 1745452800, "rating_count": 890,
                           "involved_companies": [{"developer": True, "company": {"name": "Sandfall Interactive"}}]}]).encode()
     def fetch(url):
-        if url.startswith("igdb-top:"):
+        if url.startswith("igdb-top:") or url.startswith("igdb-seeds:"):
             return b"[]"
         if url.startswith("igdb-recent:"):
             return recent
@@ -147,6 +147,38 @@ def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatc
     backfill.run(fetch_fn=fetch, resolve_fn=resolve, album_fn=no_album,
                  data_path=data_path, state_path=state_path, now=NOW)
     assert lookups == []
+
+
+def test_seeds_always_get_rows_regardless_of_bars(tmp_path, monkeypatch):
+    seeds = json.dumps([
+        {"id": 51, "name": "Pokémon Gold Version", "slug": "pokemon-gold-version",
+         "first_release_date": 943142400, "rating_count": 396,  # below the 400 search-row bar
+         "cover": {"image_id": "gold"}},
+        {"id": 52, "name": "Kirby and the Forgotten Land", "slug": "kirby-and-the-forgotten-land",
+         "first_release_date": 1648166400, "rating_count": 98},
+    ]).encode()
+    def fetch(url):
+        if url.startswith("igdb-seeds:"):
+            return seeds
+        if url.startswith("igdb-top:") or url.startswith("igdb-recent:"):
+            return b"[]"
+        raise AssertionError(url)
+    monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
+    data_path = tmp_path / "releases.json"
+    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album,
+                 data_path=data_path, state_path=tmp_path / "s.json", now=NOW)
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+    assert {r["game"] for r in data["releases"]} == {"Pokémon Gold Version", "Kirby and the Forgotten Land"}
+    gold = next(r for r in data["releases"] if "Gold" in r["title"])
+    assert gold["ytmAlbumUrl"] is None and gold["art"].endswith("/gold.jpg")
+    # second run: idempotent, rows not duplicated
+    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album,
+                 data_path=data_path, state_path=tmp_path / "s.json", now=NOW)
+    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 2
+
+
+def test_missing_seeds_file_is_a_quiet_no_op():
+    assert backfill.load_seeds("does/not/exist.json") == []
 
 
 def test_backfill_steam_cursor_pages_across_runs(tmp_path, monkeypatch):

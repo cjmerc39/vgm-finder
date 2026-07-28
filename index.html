@@ -326,11 +326,12 @@ function sorted(){
     TRACKNO[b.id] - TRACKNO[a.id]);
 }
 function label(r){ return r.albumTitle || r.title; }
+function fold(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }  // pokemon finds Pokémon
 function matches(r, q){
   if(!q) return true;
   const hay = [r.title, r.albumTitle, r.game, r.company, ...(r.composers || []), E(r.id).note]
-    .filter(Boolean).join(' ').toLowerCase();
-  return hay.includes(q.toLowerCase());
+    .filter(Boolean).join(' ');
+  return fold(hay).includes(fold(q));
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
 function feedRows(){

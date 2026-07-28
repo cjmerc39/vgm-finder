@@ -299,6 +299,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   const type = (s) => { q.value = s; q.dispatchEvent(new w.Event('input', { bubbles: true })); };
   type('mitsuda');
   assert(rows().length === 1 && rows()[0].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'search matches composers');
+  type('hadés');
+  assert(rows().length === 1 && rows()[0].dataset.id === 'hades-ii', 'search folds diacritics (pokemon finds Pokémon)');
   type('radical dreamers edition ost');
   assert(rows().length === 1, 'original headline text stays searchable behind the album label');
   type('slaps');
