@@ -24,6 +24,7 @@ import collect
 
 STATE_PATH = collect.ROOT / "collector" / "backfill-state.json"
 IGDB_BAR = 200          # rating_count floor: the "deep catalog" tier, ~900 games
+NOALBUM_BAR = 400       # canon tier: games this notable get a search row even with no YTM album
 IGDB_PAGE = 500
 STEAM_TARGET = 600      # most-reviewed soundtracks to ingest overall
 STEAM_PAGE = 50
@@ -120,20 +121,30 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at):
                 page_done = False
                 break
             looked += 1
+            when = datetime.fromtimestamp(stamp, tz=timezone.utc)
             try:
                 hit = collect._match_album(resolve_fn(collect._query(name)),
-                                           collect.normalize_title(name))
+                                           collect.normalize_title(name), year=when.year)
             except Exception:
                 continue  # transient lookup failure: leave unchecked, retry next run
             checked.add(gid)
-            if not hit:
-                continue
             cover = (g.get("cover") or {}).get("image_id")
-            item = {"title": hit["title"], "game": name, "composers": hit["composers"],
-                    "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
-                    "date": datetime.fromtimestamp(stamp, tz=timezone.utc).strftime("%Y-%m-%d"),
-                    "ytmAlbumUrl": hit["url"],
-                    "art": hit["art"] or (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg" if cover else None)}
+            cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
+                         if cover else None)
+            if hit:
+                item = {"title": hit["title"], "game": name, "composers": hit["composers"],
+                        "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
+                        "date": when.strftime("%Y-%m-%d"),
+                        "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url}
+            elif (g.get("rating_count") or 0) >= NOALBUM_BAR:
+                # canon-tier game with no verifiable album (Nintendo, licensed
+                # compilations): a search row beats absence, and it upgrades
+                # itself by slug collision if a real album ever appears
+                item = {"title": f"{name} Soundtrack", "game": name, "composers": [],
+                        "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
+                        "date": when.strftime("%Y-%m-%d"), "art": cover_url}
+            else:
+                continue
             a, _ = collect.merge(releases, [item], IGDB_SRC, seen_at)
             added += a
         if page_done:

@@ -350,6 +350,21 @@ def test_matcher_accepts_console_exclusive_album_namings():
     assert collect._match_album(bare, n("The Last of Us")) is None
 
 
+def test_year_anchor_blocks_franchise_crossmatches():
+    n = collect.normalize_title
+    reboot_ost = [{"resultType": "album", "browseId": "MPREb_tr", "year": "2013",
+                   "title": "Tomb Raider (Original Soundtrack)",
+                   "artists": [{"name": "Jason Graves"}], "thumbnails": []}]
+    # the 1996 game must not adopt the 2013 reboot's album...
+    assert collect._match_album(reboot_ost, n("Tomb Raider"), year=1996) is None
+    # ...while the reboot itself still matches, as does an unanchored lookup
+    assert collect._match_album(reboot_ost, n("Tomb Raider"), year=2013) is not None
+    assert collect._match_album(reboot_ost, n("Tomb Raider")) is not None
+    # albums with missing/garbage year metadata aren't punished
+    no_year = [dict(reboot_ost[0], year=None)]
+    assert collect._match_album(no_year, n("Tomb Raider"), year=1996) is not None
+
+
 def test_slug_is_stable_across_source_phrasings():
     a = collect.slugify("Silksong — Official Soundtrack")
     b = collect.slugify("silksong official soundtrack")

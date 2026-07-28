@@ -389,8 +389,11 @@ const SRC_LABEL = { igdb: 'catalog' };  // site names read fine; api names get f
 function rowHtml(r, view, ghost){
   const e = E(r.id);
   const heard = e.status === 'listened', queued = e.status === 'queued';
-  const chips = (r.sources || []).map(s =>
-    `<span class="chip${s.type === 'community' ? ' community' : ''}">${esc(SRC_LABEL[s.name] || s.name)}</span>`).join('');
+  const seen = new Set();
+  const chips = (r.sources || [])
+    .map(s => ({ label: SRC_LABEL[s.name] || s.name, community: s.type === 'community' }))
+    .filter(c => !seen.has(c.label) && seen.add(c.label))
+    .map(c => `<span class="chip${c.community ? ' community' : ''}">${esc(c.label)}</span>`).join('');
   const sub = [r.game, (r.composers || []).join(', ')].filter(Boolean).join(' · ');
   const topDate = view === 'library' ? (e.listenedOn ? fmtDate(e.listenedOn) : '') : fmtDate(r.date);
 

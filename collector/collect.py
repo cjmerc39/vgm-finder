@@ -229,11 +229,12 @@ def _hit_from(r):
             "url": "https://music.youtube.com/browse/" + r["browseId"]}
 
 
-def _match_album(results, want_norm):
+def _match_album(results, want_norm, year=None):
     """Strict: the album title must normalize to exactly the wanted name, must
     say it's a soundtrack, and must have a credited artist besides the game.
-    Rejects fan albums, near-names (Combat vs Campaign Evolved), and
-    same-name band albums (ZeroSpace the game vs Zerøspace the album)."""
+    With a year anchor, the album must sit within 2 years of it — franchises
+    reuse titles (Tomb Raider 1996 vs 2013), and the reboot's album must not
+    attach to the original game."""
     for r in results or []:
         if r.get("resultType") != "album" or not r.get("browseId"):
             continue
@@ -241,6 +242,12 @@ def _match_album(results, want_norm):
             continue
         if not _SOUNDTRACKY.search(r.get("title", "")):
             continue
+        if year is not None:
+            try:
+                if r.get("year") and abs(int(r["year"]) - year) > 2:
+                    continue
+            except (TypeError, ValueError):
+                pass  # unparseable year: don't punish the album for bad metadata
         hit = _hit_from(r)
         if hit:
             return hit
@@ -275,8 +282,9 @@ def parse_igdb(raw, resolve):
         stamp = g.get("first_release_date")
         if not name or not stamp:
             continue
+        when = datetime.fromtimestamp(stamp, tz=timezone.utc)
         try:
-            hit = _match_album(resolve(_query(name)), normalize_title(name))
+            hit = _match_album(resolve(_query(name)), normalize_title(name), year=when.year)
         except Exception:
             errors += 1
             continue
@@ -286,7 +294,7 @@ def parse_igdb(raw, resolve):
         items.append({
             "title": hit["title"], "game": name, "composers": hit["composers"],
             "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
-            "date": datetime.fromtimestamp(stamp, tz=timezone.utc).strftime("%Y-%m-%d"),
+            "date": when.strftime("%Y-%m-%d"),
             "ytmAlbumUrl": hit["url"],
             "art": hit["art"] or (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg" if cover else None)})
     if errors and not items:

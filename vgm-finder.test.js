@@ -27,7 +27,8 @@ const FIXTURE = {
       ytmSearchUrl: 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'ゼルダの伝説', title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム OST', game: null, composers: [], date: '2026-07-15',
-      sources: [{ name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z', seenAt: '2026-07-13T10:00:00Z' }],
+      sources: [{ name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z', seenAt: '2026-07-13T10:00:00Z' },
+                { name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z2', seenAt: '2026-07-14T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'evil', title: '<img src=x onerror="window.__pwned=1">Evil OST', game: null, composers: [], date: '2026-07-18',
@@ -144,8 +145,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   d.dispatchEvent(new w.Event('visibilitychange'));
   assert(w.__handle.closed === true, 'leftover sheet closes when the app becomes visible again');
 
-  // friendly source labels
+  // friendly source labels, deduped per row
   assert(rowById('ゼルダの伝説').querySelector('.chip').textContent === 'catalog', 'igdb source displays as "catalog"');
+  assert(rowById('ゼルダの伝説').querySelectorAll('.chip').length === 1, 'duplicate same-source chips collapse to one');
 
   // ---------- queue flow ----------
   w.__opened = null;

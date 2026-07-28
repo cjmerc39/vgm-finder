@@ -82,6 +82,32 @@ def test_backfill_respects_ytm_cap_and_reports_progress(tmp_path, monkeypatch, c
     assert "in progress" in capsys.readouterr().out
 
 
+def test_backfill_gives_canon_games_search_rows_when_no_album_exists(tmp_path, monkeypatch):
+    page = json.dumps([
+        {"id": 1, "name": "The Legend of Zelda: Breath of the Wild",
+         "slug": "botw", "first_release_date": 1488499200, "rating_count": 2926,
+         "cover": {"image_id": "co3p2d"}},
+        {"id": 2, "name": "Obscure Indie Nobody Rated", "slug": "obscure",
+         "first_release_date": 1488499200, "rating_count": 210},
+    ]).encode()
+    def fetch(url):
+        if url.startswith("igdb-top:"):
+            return page
+        raise AssertionError(url)
+    monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
+    data_path = tmp_path / "releases.json"
+    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [],  # YTM offers nothing
+                 data_path=data_path, state_path=tmp_path / "s.json", now=NOW)
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+    assert len(data["releases"]) == 1  # canon game lands, obscure one doesn't
+    row = data["releases"][0]
+    assert row["title"] == "The Legend of Zelda: Breath of the Wild Soundtrack"
+    assert row["game"] == "The Legend of Zelda: Breath of the Wild"
+    assert row["ytmAlbumUrl"] is None  # tap falls back to the YTM search
+    assert row["art"] == "https://images.igdb.com/igdb/image/upload/t_cover_big/co3p2d.jpg"
+    assert row["ytmSearchUrl"].startswith("https://music.youtube.com/search?q=")
+
+
 def test_backfill_steam_cursor_pages_across_runs(tmp_path, monkeypatch):
     fetches = []
     _, state = run_once(tmp_path, monkeypatch, fetches=fetches,
