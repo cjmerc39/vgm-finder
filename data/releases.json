@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T21:31:40Z",
+  "updatedAt": "2026-07-28T21:33:56Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -4096,7 +4096,9 @@
       "id": "satisfactory",
       "title": "Satisfactory Soundtrack",
       "game": "Satisfactory",
-      "composers": [],
+      "composers": [
+        "Dream Thing"
+      ],
       "date": "2024-03-28",
       "sources": [
         {
@@ -4104,10 +4106,16 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/2873550/Satisfactory_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/satisfactory",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Satisfactory+Soundtrack+Satisfactory+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ReplLbZ7xYn",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2873550/b2eb721986e582ad38b063e34be6a73c66af46b9/header.jpg",
       "notable": true
     },
@@ -7660,6 +7668,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/dead-space",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dead-space--1",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Dead+Space+%28Original+Soundtrack%29+Dead+Space+soundtrack",
@@ -7922,6 +7936,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/final-fantasy-xv",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/final-fantasy-xvi",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=FINAL+FANTASY+X+Original+Soundtrack+Final+Fantasy+X+soundtrack",
@@ -8603,13 +8623,19 @@
       "composers": [
         "Sarah Schachner"
       ],
-      "date": "2017-05-04",
+      "date": "2006-07-11",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/prey--1",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/prey",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Prey+%28Original+Soundtrack%29+Prey+soundtrack",
@@ -9514,18 +9540,26 @@
       "id": "grim-dawn",
       "title": "Grim Dawn Soundtrack",
       "game": "Grim Dawn",
-      "composers": [],
-      "date": "2020-02-21",
+      "composers": [
+        "Steve Pardo"
+      ],
+      "date": "2016-02-25",
       "sources": [
         {
           "name": "steam",
           "type": "catalog",
           "url": "https://store.steampowered.com/app/1250890/Grim_Dawn_Soundtrack/",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/grim-dawn",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Grim+Dawn+Soundtrack+Grim+Dawn+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_6nvdSErF8um",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1250890/header.jpg",
       "notable": true
     },
@@ -11713,7 +11747,9 @@
       "id": "dredge",
       "title": "DREDGE - Original Soundtrack",
       "game": "DREDGE",
-      "composers": [],
+      "composers": [
+        "Jack Burmeister"
+      ],
       "date": "2023-03-30",
       "sources": [
         {
@@ -11721,10 +11757,16 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/2198580/DREDGE__Original_Soundtrack/",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dredge",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=DREDGE+-+Original+Soundtrack+DREDGE+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cceRHxrVNa9",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2198580/a98d3ad65be9e18d2c44461cdcbab585e1124bbe/header.jpg",
       "notable": true
     },
@@ -14641,6 +14683,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/gears-of-war-3",
           "seenAt": "2026-07-28T21:31:40Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gears-of-war-4",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Gears+of+War+%28Original+Soundtrack%29+Gears+of+War+soundtrack",
@@ -15011,6 +15059,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/command-conquer-red-alert",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/command-conquer-red-alert-3",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Command+%26+Conquer%3A+Red+Alert+2+%28Original+Soundtrack%29+Command+%26+Conquer%3A+Red+Alert+2+soundtrack",
@@ -15161,6 +15215,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/demon-s-souls",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/demons-souls",
+          "seenAt": "2026-07-28T21:33:56Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Demon%27s+Souls+Original+Soundtrack+Demon%27s+Souls+soundtrack",
@@ -16367,6 +16427,481 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=Outlast+II+%28Original+Game+Soundtrack%29+Outlast+II+soundtrack",
       "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_n81p39Pj7Gg",
       "art": "https://yt3.googleusercontent.com/pMnz4d0s3RqOFnplp9NlWoM2q7xuMM53kzLJAKiNsBpCHiILCnsz43j1PBBRvT1uJWJr8Xb16AgrHpY=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "phasmophobia",
+      "title": "Phasmophobia (Original Soundtrack)",
+      "game": "Phasmophobia",
+      "composers": [
+        "Gijs Knol"
+      ],
+      "date": "2020-09-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/phasmophobia",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Phasmophobia+%28Original+Soundtrack%29+Phasmophobia+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wE8SwoEytym",
+      "art": "https://yt3.googleusercontent.com/ln8Vqe0Y1FW2cAMUK5HMoxHYhyFLlQkMT9Fqho5BkXnWDFLklbkxp77CQWJtpHhjwhcCifTywG2f8gczdw=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "unpacking",
+      "title": "Unpacking (Original Game Soundtrack)",
+      "game": "Unpacking",
+      "composers": [
+        "Jeff van Dyck"
+      ],
+      "date": "2021-11-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/unpacking",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Unpacking+%28Original+Game+Soundtrack%29+Unpacking+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gk7m2e0LV8r",
+      "art": "https://yt3.googleusercontent.com/nPo7i57ORHkc7HgWcZQceEhbeUVnxvbpBXosNe9LcktMyYUuLVFE7iuy0JiKZQeJiD8GIMm6neFtpHo=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "war-thunder",
+      "title": "War Thunder (Original Game Soundtrack)",
+      "game": "War Thunder",
+      "composers": [
+        "Gaijin Entertainment",
+        "Jimmie Asche"
+      ],
+      "date": "2013-01-28",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/war-thunder",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=War+Thunder+%28Original+Game+Soundtrack%29+War+Thunder+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_UO9cfc06kxy",
+      "art": "https://yt3.googleusercontent.com/S4haviHJPUgYrsflqLCpg49YNCB9wuYmgGl5zpo_j4Oo9K-9M8PwbBG3E1gDlvAK1wKhgMtjdUJbxr1u=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "vanquish",
+      "title": "Vanquish (Original Game Soundtrack)",
+      "game": "Vanquish",
+      "composers": [
+        "Jonwg"
+      ],
+      "date": "2010-10-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/vanquish",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Vanquish+%28Original+Game+Soundtrack%29+Vanquish+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wUy7TRFRl7U",
+      "art": "https://yt3.googleusercontent.com/8ieCcbCzcRPkhxpk7HbDwQBgRfnsYDpZJmtTTEgZ87B5ELHJ15etDbqATUmRk5g3P-1aADnr5Vskrf79cw=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "need-for-speed-heat",
+      "title": "Need for Speed: Heat (Original Soundtrack)",
+      "game": "Need for Speed: Heat",
+      "composers": [
+        "Pedro Bromfman",
+        "EA Games Soundtrack"
+      ],
+      "date": "2019-11-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/need-for-speed-heat",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Need+for+Speed%3A+Heat+%28Original+Soundtrack%29+Need+for+Speed%3A+Heat+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_r03PRDyPwSC",
+      "art": "https://yt3.googleusercontent.com/OLb7IeoUgV8ZB0_pMMtBu31eLRfEU5vNuA2rUK77M9oO2kb7CISjDLBFpgXj7tb6RfTgdYWb_2cM0qKW=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "halo-combat-evolved-anniversary",
+      "title": "Halo: Combat Evolved Anniversary (Original Soundtrack)",
+      "game": "Halo: Combat Evolved Anniversary",
+      "composers": [
+        "Halo",
+        "Brian Trifon",
+        "Lennie Moore",
+        "Paul Lipson"
+      ],
+      "date": "2011-11-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/halo-combat-evolved-anniversary",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Halo%3A+Combat+Evolved+Anniversary+%28Original+Soundtrack%29+Halo%3A+Combat+Evolved+Anniversary+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GeXxs2xEqfs",
+      "art": "https://yt3.googleusercontent.com/5GcZObCRKDlLK3b7RfEGLKHSuh4CDZJCSV4Ytc69DjGUL8IeEtzkL9chzIk-x5SpPMTzJbwxaSwlKpU=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "the-quarry",
+      "title": "The Quarry (Original Soundtrack)",
+      "game": "The Quarry",
+      "composers": [
+        "Ian Livingstone"
+      ],
+      "date": "2022-06-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-quarry",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Quarry+%28Original+Soundtrack%29+The+Quarry+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7fZwcv5hFZ6",
+      "art": "https://yt3.googleusercontent.com/fhVyR4GdV27pzw19lWvrkWVZVYLuSoHyVM-0ciaaIOtCNiVC9zT6kHd12b0TUrNPwQSZ_aQVDpgVegb2=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "need-for-speed-payback",
+      "title": "Need for Speed Payback (Original Game Soundtrack)",
+      "game": "Need for Speed: Payback",
+      "composers": [
+        "Joseph Trapanese",
+        "EA Games Soundtrack"
+      ],
+      "date": "2017-11-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/need-for-speed-payback",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Need+for+Speed+Payback+%28Original+Game+Soundtrack%29+Need+for+Speed%3A+Payback+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_bsFE689jdb9",
+      "art": "https://yt3.googleusercontent.com/TmYiYMd3eTXp2dQI6k2xhWt5dqQQVxERI3QqfCAPfuZLs86GUCu1dgCsnr4Wg5pDFxO-sWdWJB_VizdX=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "dante-s-inferno",
+      "title": "Dante's Inferno (Original Soundtrack)",
+      "game": "Dante's Inferno",
+      "composers": [
+        "Garry Schyman",
+        "Paul Gorman",
+        "EA Games Soundtrack"
+      ],
+      "date": "2010-02-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dante-s-inferno",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dante%27s+Inferno+%28Original+Soundtrack%29+Dante%27s+Inferno+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_umqSr02v6tX",
+      "art": "https://yt3.googleusercontent.com/h4GwCdFOJmNUssFn9kCYZbrQlK4mWMy1ftEKeLLufc5vrMk4r8vtNX4I9qi_8r97e-3c6FwjSs-2XSSh=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "monument-valley",
+      "title": "Monument Valley (Original Soundtrack)",
+      "game": "Monument Valley",
+      "composers": [
+        "Stafford Bawler",
+        "OBFUSC",
+        "Grigori"
+      ],
+      "date": "2014-04-03",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/monument-valley",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Monument+Valley+%28Original+Soundtrack%29+Monument+Valley+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_AQmYw8DaZ9B",
+      "art": "https://yt3.googleusercontent.com/F5VB-zcG8qLeHvBmvHu-hlEV51nEqTvdxeGw8dD9OnN5KiKFLMT1lIpuDYjkek37BQiUsVM0V3cA3QyF=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "ghostrunner",
+      "title": "Ghostrunner (Original Soundtrack)",
+      "game": "Ghostrunner",
+      "composers": [
+        "Daniel Deluxe"
+      ],
+      "date": "2020-10-27",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ghostrunner",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ghostrunner+%28Original+Soundtrack%29+Ghostrunner+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Sj2WXbTHeFl",
+      "art": "https://yt3.googleusercontent.com/RWoZlQLZKDl8IqHoYXhirWaETdxmRwo8yiWSWq6hSkpOsWMHYsEa2TK7-cAN2bNSMRCCeLetofGXA4mPZA=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "twelve-minutes",
+      "title": "Twelve Minutes (Original Soundtrack)",
+      "game": "Twelve Minutes",
+      "composers": [
+        "Neil Bones"
+      ],
+      "date": "2021-08-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/twelve-minutes",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Twelve+Minutes+%28Original+Soundtrack%29+Twelve+Minutes+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_I44RFnIScTK",
+      "art": "https://yt3.googleusercontent.com/DGE0EDhYO05qr8_51pJjpxOAbgX9oQZtFO5ETCC7ME0b9hgxVktDmv0jJkYx3n_GUpob0nafbJ_PrAslAQ=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "split-fiction",
+      "title": "Split Fiction (Original Soundtrack)",
+      "game": "Split Fiction",
+      "composers": [
+        "Gustaf Grefberg",
+        "Jonatan Järpehag"
+      ],
+      "date": "2025-03-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/split-fiction",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Split+Fiction+%28Original+Soundtrack%29+Split+Fiction+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5U9PB2CVbOl",
+      "art": "https://yt3.googleusercontent.com/lgg4rF1fckSrWP-nCf9AdROJBGVqqPd8fwiggYGPcuat5LDbKAq473PekDXpo9Kgf8MVDeccMaghAune=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "dying-light-2-stay-human",
+      "title": "Dying Light 2 Stay Human (Original Game Soundtrack)",
+      "game": "Dying Light 2: Stay Human",
+      "composers": [
+        "Olivier Deriviere"
+      ],
+      "date": "2022-02-03",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dying-light-2-stay-human",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dying+Light+2+Stay+Human+%28Original+Game+Soundtrack%29+Dying+Light+2%3A+Stay+Human+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_aJ1OUwBq5yZ",
+      "art": "https://yt3.googleusercontent.com/19BWXlR3ngRJIfoygxSYgRV8GVGQZ8Bs1poHk_oB61pIrr5OhRCRob66E8MEeSYulSAXhmVYs10UZVEy=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "simcity-4",
+      "title": "SimCity 4 (Original Soundtrack)",
+      "game": "SimCity 4",
+      "composers": [
+        "EA Games Soundtrack"
+      ],
+      "date": "2003-01-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/simcity-4",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SimCity+4+%28Original+Soundtrack%29+SimCity+4+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cRoKCRWpir8",
+      "art": "https://yt3.googleusercontent.com/FQhgFC3186O8l87_DoC8UCWnLL68o-wZIBQyM3HQrpxN8-ahDS05UGdiXbncHx0bt_XUYza3sG1yngE=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "donut-county",
+      "title": "Donut County (Original Soundtrack)",
+      "game": "Donut County",
+      "composers": [
+        "Daniel Koestner"
+      ],
+      "date": "2018-08-28",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/donut-county",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Donut+County+%28Original+Soundtrack%29+Donut+County+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OkWXR4p9k95",
+      "art": "https://yt3.googleusercontent.com/NrWBvYW6LvIH9AAM7GldeM8xvgOMQoU8gRrzJ5MauGuDrxzSl_kKTAQTPC0gwQQW5cOu3jJKiKm-1ZfU=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "hearts-of-iron-iv",
+      "title": "Hearts of Iron IV (Original Game Soundtrack)",
+      "game": "Hearts of Iron IV",
+      "composers": [
+        "Andreas Waldetoft"
+      ],
+      "date": "2016-06-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hearts-of-iron-iv",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hearts+of+Iron+IV+%28Original+Game+Soundtrack%29+Hearts+of+Iron+IV+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_nwHFwxoO3li",
+      "art": "https://yt3.googleusercontent.com/a5B5x0WmD5p9KPL8FLJDW6WEO_DGNlapl4DbUDJdzp4DT8XnvNiqWfprK__1ETykfJoF9XSrDhXExatV=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "secret-of-mana",
+      "title": "Secret of Mana(Original Soundtrack)",
+      "game": "Secret of Mana",
+      "composers": [
+        "Hiroki Kikuta"
+      ],
+      "date": "1993-08-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/secret-of-mana",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Secret+of+Mana%28Original+Soundtrack%29+Secret+of+Mana+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fikIMQaL8wM",
+      "art": "https://yt3.googleusercontent.com/7OxGUwARP3jZ6SM7dnAkOp6LkEOYNx6cWUHJTyXORgTyErtnwUNcTbJpVIMX8VM63MZYdiY-Rqaqfv4=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "ni-no-kuni-wrath-of-the-white-witch",
+      "title": "Ni no Kuni: Wrath of the White Witch [Original Soundtrack]",
+      "game": "Ni no Kuni: Wrath of the White Witch",
+      "composers": [
+        "Joe Hisaishi"
+      ],
+      "date": "2011-11-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ni-no-kuni-wrath-of-the-white-witch",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ni+no+Kuni%3A+Wrath+of+the+White+Witch+%5BOriginal+Soundtrack%5D+Ni+no+Kuni%3A+Wrath+of+the+White+Witch+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Zf2bPLsiAGe",
+      "art": "https://yt3.googleusercontent.com/eiBnHYuexkh3iXgyvy_pstZXL6g0j3yXQDrSDsAtQKe-Ip5A4cz4FMgdQu_MGY0AbqwctjMUK885MgA=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "unravel-two",
+      "title": "Unravel Two (Original Soundtrack)",
+      "game": "Unravel Two",
+      "composers": [
+        "Frida Johansson",
+        "Henrik Oja"
+      ],
+      "date": "2018-06-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/unravel-two",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Unravel+Two+%28Original+Soundtrack%29+Unravel+Two+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xwGx6G72kG2",
+      "art": "https://yt3.googleusercontent.com/6HLPPF-WtiZYfX9mdCmbOngBan0yo9LbxCwE894RwfYe968n0jeUcM6SSVv-WrXyIIAFyXhV2lCo52I=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "stronghold",
+      "title": "Stronghold (Original Game Soundtrack)",
+      "game": "Stronghold",
+      "composers": [
+        "Robert L. Euvino"
+      ],
+      "date": "2001-10-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/stronghold",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stronghold+%28Original+Game+Soundtrack%29+Stronghold+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YVZLhZBCdMJ",
+      "art": "https://yt3.googleusercontent.com/rD8dgKVwBnOSmlTTRSq-i-a3rOuKJxoWB8B5vG48EqYIaCAhSX4GS7LbDd7Vy9mYPZXz5p7Ah2Fn-mdP=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "command-conquer-3-tiberium-wars",
+      "title": "Command & Conquer 3: Tiberium Wars (Original Soundtrack)",
+      "game": "Command & Conquer 3: Tiberium Wars",
+      "composers": [
+        "Steve Jablonsky",
+        "EA Games Soundtrack"
+      ],
+      "date": "2007-03-28",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/command-conquer-3-tiberium-wars",
+          "seenAt": "2026-07-28T21:33:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Command+%26+Conquer+3%3A+Tiberium+Wars+%28Original+Soundtrack%29+Command+%26+Conquer+3%3A+Tiberium+Wars+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZP0cppTwzDu",
+      "art": "https://yt3.googleusercontent.com/eJ5htwpz5PMBQq0j6LUhH6YStlg3DSAMfbjkwKp8zfU-c1l-PqCcBb25mezI3KjyWc0dpw2vZphjPRyq=w544-h544-l90-rj",
       "notable": true
     }
   ]
