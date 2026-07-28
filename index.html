@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VGM Finder</title>
+<meta name="theme-color" content="#0b0e14">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0e14; --bg2:#10141d; --bg3:#151b27; --line:#212837;
+  --ink:#f0e9d6; --mut:#8e97a8; --dim:#5b6474;
+  --amber:#f5a83c; --amber2:#ffc878; --amberdim:#7d5a24;
+  --disp:'Silkscreen',ui-monospace,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{height:100%;background:var(--bg);touch-action:manipulation}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 var(--sans);height:100%;display:flex;flex-direction:column;overflow:hidden}
+@supports (height:100dvh){body{height:100dvh}}
+@media (display-mode: standalone){
+  @supports (height:100lvh){body{height:100lvh}}
+}
+/* faint phosphor wash + vignette; static, so reduced-motion needs no exception */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(120% 80% at 50% 0%, rgba(245,168,60,.05), transparent 55%),
+             radial-gradient(140% 120% at 50% 112%, rgba(0,0,0,.55), transparent 60%)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:4px}
+input{font:inherit;font-size:16px;color:var(--ink);background:var(--bg3);border:1px solid var(--line);border-radius:8px;padding:9px 12px;width:100%} /* 16px floor: iOS auto-zooms focused inputs below 16px */
+input:focus{outline:1px solid var(--amberdim)}
+::placeholder{color:var(--dim)}
+
+#topbar{flex:none;width:100%;max-width:560px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 16px 4px;display:flex;align-items:baseline;gap:10px}
+#topbar h1{font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:1px;color:var(--amber2);
+  text-shadow:0 0 14px rgba(245,168,60,.35)}
+#topbar .sub{color:var(--dim);font-size:10.5px;letter-spacing:3px;text-transform:uppercase}
+#sync{margin-left:auto;color:var(--dim);font-size:11px;white-space:nowrap}
+
+#controls{flex:none;width:100%;max-width:560px;margin:0 auto;padding:8px 16px 10px;border-bottom:1px solid var(--line)}
+#chips{display:flex;gap:6px;margin-top:8px}
+#chips button{flex:0 0 auto;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim);
+  border:1px solid var(--line);border-radius:99px;padding:6px 13px}
+#chips button.on{color:var(--amber2);border-color:var(--amberdim)}
+#chips button .n{color:var(--dim);margin-left:4px}
+#chips button.on .n{color:var(--amberdim)}
+
+main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 8px 20px}
+
+.row{display:flex;align-items:stretch;gap:4px;border-bottom:1px solid var(--line);padding:11px 4px 11px 8px;cursor:pointer}
+.row:active{background:var(--bg2)}
+.rmain{flex:1;min-width:0}
+.rtop{display:flex;align-items:baseline;gap:8px}
+.tno{font-family:var(--disp);font-size:10.5px;letter-spacing:.5px;color:var(--amber);white-space:nowrap}
+.new{font-size:8.5px;font-weight:700;letter-spacing:1.5px;color:var(--bg);background:var(--amber);border-radius:3px;padding:1.5px 5px 1px}
+.rtop time{margin-left:auto;color:var(--dim);font-size:10.5px;letter-spacing:1px;white-space:nowrap}
+.rtitle{margin-top:3px;font-size:15px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
+.rmeta{margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.chip{font-size:10px;letter-spacing:.8px;text-transform:lowercase;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:2px 8px}
+.chip.community{border-style:dashed;color:var(--dim)}
+.xhide{margin-left:auto;color:var(--dim);font-size:13px;padding:4px 10px}
+.racts{flex:none;display:flex;flex-direction:column;justify-content:center}
+.racts button{width:46px;height:44px;font-size:19px;color:var(--dim)}
+.racts .star.on{color:var(--amber2)}
+.racts .heard.on{color:var(--amber)}
+.row.heard .rmain{opacity:.5}
+.row.heard .rtitle{color:var(--mut);font-weight:500}
+@media (prefers-reduced-motion: no-preference){
+  .row{transition:background .15s}
+  .racts button{transition:color .15s,transform .12s}
+  .racts button:active{transform:scale(1.25)}
+}
+
+.state{padding:48px 16px;text-align:center;color:var(--mut)}
+.state .big{font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--amber);margin-bottom:12px}
+.state p{max-width:34ch;margin:0 auto;line-height:1.6}
+
+#hidhead{font-family:var(--disp);font-size:10.5px;color:var(--dim);letter-spacing:1px;padding:22px 8px 6px;border-bottom:1px solid var(--line)}
+.row.ghost .rmain{opacity:.45}
+.restore{flex:none;align-self:center;color:var(--amber);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:12px 14px}
+
+#footer{flex:none;width:100%;max-width:560px;margin:0 auto;border-top:1px solid var(--line);
+  padding:9px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:8px;
+  color:var(--dim);font-size:11px;letter-spacing:.5px}
+#hidtoggle{color:var(--mut);text-decoration:underline;text-underline-offset:2px;padding:4px}
+#footer .r{margin-left:auto;text-align:right}
+</style>
+</head>
+<body>
+<header id="topbar">
+  <h1>VGM FINDER</h1>
+  <span class="sub">Sound Test</span>
+  <span id="sync"></span>
+</header>
+<div id="controls">
+  <input id="q" type="search" placeholder="Search title, game, composer" autocomplete="off" aria-label="Search releases">
+  <div id="chips" role="tablist" aria-label="Filter"></div>
+</div>
+<main><div id="list" aria-live="polite"></div></main>
+<footer id="footer"></footer>
+<script>
+/* ============================ state ============================ */
+const KEY = 'vgm-v1';
+const FILTERS = ['all', 'unlistened', 'starred'];
+let R = { updatedAt: null, releases: [] };   // shared data from the collector; never written here
+let LOADSTATE = 'loading';                    // loading | ok | empty | error
+let LOADERR = '';
+let TRACKNO = {};                             // id -> position in the append-only history
+let Q = '';                                   // search text, deliberately not persisted
+
+function fresh(){ return { v:1, starred:{}, listened:{}, hidden:{}, lastSeen:0, filter:'all', showHidden:false }; }
+function load(){
+  let raw = null;
+  try{ raw = localStorage.getItem(KEY); }catch(e){}
+  if(!raw) return fresh();
+  let d = null;
+  try{ d = JSON.parse(raw); }catch(e){}
+  if(!d || typeof d !== 'object' || d.v !== 1){
+    try{ localStorage.setItem(KEY + '-backup', raw); }catch(e){}  // unknown schema: keep a copy, start clean
+    return fresh();
+  }
+  for(const k of ['starred','listened','hidden']) if(!d[k] || typeof d[k] !== 'object' || Array.isArray(d[k])) d[k] = {};
+  if(typeof d.lastSeen !== 'number') d.lastSeen = 0;
+  if(!FILTERS.includes(d.filter)) d.filter = 'all';
+  d.showHidden = d.showHidden === true;
+  return d;
+}
+let S = load();
+const PREV_SEEN = S.lastSeen;   // frozen at boot: "new since last visit" compares against the previous visit
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+
+/* ========================== mutations ========================== */
+/* every state change goes through one of these; no render path mutates */
+function toggleStar(id){ if(S.starred[id]) delete S.starred[id]; else S.starred[id] = true; save(); renderAll(); }
+function toggleHeard(id){ if(S.listened[id]) delete S.listened[id]; else S.listened[id] = true; save(); renderAll(); }
+function hideTrack(id){ S.hidden[id] = true; save(); renderAll(); }
+function unhideTrack(id){ delete S.hidden[id]; save(); renderAll(); }
+function setFilter(f){ if(FILTERS.includes(f)){ S.filter = f; save(); renderAll(); } }
+function setQuery(q){ Q = q; renderAll(); }
+function toggleShowHidden(){ S.showHidden = !S.showHidden; save(); renderAll(); }
+function markVisit(){ S.lastSeen = Date.now(); save(); }
+
+/* ========================== derived ============================ */
+function byId(id){ return R.releases.find(r => r.id === id); }
+function firstSeen(r){
+  let t = Infinity;
+  for(const s of r.sources || []){ const p = Date.parse(s.seenAt); if(p && p < t) t = p; }
+  return t === Infinity ? 0 : t;
+}
+function isNew(r){ return PREV_SEEN > 0 && firstSeen(r) > PREV_SEEN; }
+function ytmUrl(r){ return r.ytmAlbumUrl || r.ytmSearchUrl; }
+function sorted(){
+  return R.releases.slice().sort((a, b) =>
+    String(b.date || '').localeCompare(String(a.date || '')) ||
+    firstSeen(b) - firstSeen(a) ||
+    TRACKNO[b.id] - TRACKNO[a.id]);
+}
+function matches(r, q){
+  if(!q) return true;
+  const hay = [r.title, r.game, ...(r.composers || [])].filter(Boolean).join(' ').toLowerCase();
+  return hay.includes(q.toLowerCase());
+}
+function visibleRows(){
+  let rows = sorted().filter(r => !S.hidden[r.id]);
+  if(S.filter === 'unlistened') rows = rows.filter(r => !S.listened[r.id]);
+  if(S.filter === 'starred') rows = rows.filter(r => S.starred[r.id]);
+  return rows.filter(r => matches(r, Q.trim()));
+}
+function hiddenRows(){ return sorted().filter(r => S.hidden[r.id]); }
+
+const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+function fmtDate(iso){
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
+  if(!m) return '';
+  const label = MONTHS[+m[2] - 1] + ' ' + (+m[3]);
+  return +m[1] === new Date().getFullYear() ? label : label + ' ' + m[1];
+}
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function pad3(n){ return String(n).padStart(3, '0'); }
+
+/* =========================== render ============================ */
+function renderAll(){ renderSync(); renderChips(); renderList(); renderFooter(); }
+
+function renderSync(){
+  const el = document.getElementById('sync');
+  el.textContent = R.updatedAt ? 'synced ' + fmtDate(R.updatedAt).toLowerCase() : '';
+}
+
+function renderChips(){
+  const base = sorted().filter(r => !S.hidden[r.id]);
+  const counts = { all: base.length,
+    unlistened: base.filter(r => !S.listened[r.id]).length,
+    starred: base.filter(r => S.starred[r.id]).length };
+  document.getElementById('chips').innerHTML = FILTERS.map(f =>
+    `<button data-f="${f}" role="tab" aria-selected="${S.filter === f}" class="${S.filter === f ? 'on' : ''}">` +
+    `${f}<span class="n">${counts[f]}</span></button>`).join('');
+}
+
+function rowHtml(r, ghost){
+  const heard = !!S.listened[r.id], star = !!S.starred[r.id];
+  const chips = (r.sources || []).map(s =>
+    `<span class="chip${s.type === 'community' ? ' community' : ''}">${esc(s.name)}</span>`).join('');
+  const sub = [r.game, (r.composers || []).join(', ')].filter(Boolean).join(' · ');
+  return `<div class="row${heard ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="link" aria-label="Open in YouTube Music: ${esc(r.title)}">
+    <div class="rmain">
+      <div class="rtop"><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span>${isNew(r) ? '<span class="new">NEW</span>' : ''}<time>${fmtDate(r.date)}</time></div>
+      <div class="rtitle">${esc(r.title)}</div>
+      ${sub ? `<div class="rmeta" style="margin-top:2px"><span style="color:var(--mut);font-size:12.5px">${esc(sub)}</span></div>` : ''}
+      <div class="rmeta">${chips}${ghost ? '' : `<button class="xhide" data-act="hide" aria-label="Hide ${esc(r.title)}">✕</button>`}</div>
+    </div>
+    ${ghost
+      ? `<button class="restore" data-act="restore">Restore</button>`
+      : `<div class="racts">
+          <button class="star${star ? ' on' : ''}" data-act="star" aria-pressed="${star}" aria-label="Star">${star ? '★' : '☆'}</button>
+          <button class="heard${heard ? ' on' : ''}" data-act="heard" aria-pressed="${heard}" aria-label="Mark listened">${heard ? '▶' : '▷'}</button>
+        </div>`}
+  </div>`;
+}
+
+function stateHtml(big, body){ return `<div class="state"><div class="big">${big}</div><p>${body}</p></div>`; }
+
+function renderList(){
+  const el = document.getElementById('list');
+  if(LOADSTATE === 'loading'){ el.innerHTML = stateHtml('LOADING…', 'Reading the release log.'); return; }
+  if(LOADSTATE === 'error'){
+    el.innerHTML = stateHtml('READ ERROR', `Couldn't load <code>data/releases.json</code> (${esc(LOADERR)}). ` +
+      'If this deploy is brand new, GitHub Pages is probably still building — reload in a minute.');
+    return;
+  }
+  if(LOADSTATE === 'empty'){
+    el.innerHTML = stateHtml('NO TRACKS YET', 'The collector runs every morning at 6 ET. The first batch lands after its next run.');
+    return;
+  }
+  const rows = visibleRows();
+  let html = rows.map(r => rowHtml(r, false)).join('');
+  if(!rows.length){
+    const q = Q.trim();
+    if(q) html = stateHtml('NO MATCHES', `Nothing matches “${esc(q)}” in titles, games, or composers.`);
+    else if(S.filter === 'unlistened') html = stateHtml('SOUND TEST COMPLETE', 'Every track is marked listened.');
+    else if(S.filter === 'starred') html = stateHtml('NO STARRED TRACKS', 'Tap ☆ on anything worth coming back to.');
+    else html = stateHtml('ALL TRACKS HIDDEN', 'Everything is hidden. Use “show” below to bring tracks back.');
+  }
+  if(S.showHidden && hiddenRows().length){
+    html += `<div id="hidhead">HIDDEN (${hiddenRows().length})</div>` +
+            hiddenRows().map(r => rowHtml(r, true)).join('');
+  }
+  el.innerHTML = html;
+}
+
+function renderFooter(){
+  const el = document.getElementById('footer');
+  if(LOADSTATE !== 'ok'){ el.innerHTML = ''; return; }
+  const h = hiddenRows().length;
+  el.innerHTML =
+    `<span>${R.releases.length} tracks</span>` +
+    (h ? `<button id="hidtoggle">${h} hidden · ${S.showHidden ? 'tuck away' : 'show'}</button>` : '') +
+    `<span class="r">collected daily · 6am ET</span>`;
+}
+
+/* =========================== events ============================ */
+function openTrack(r){ if(r) window.open(ytmUrl(r), '_blank', 'noopener'); }
+
+document.getElementById('list').addEventListener('click', e => {
+  const btn = e.target.closest('[data-act]');
+  const row = e.target.closest('.row');
+  if(!row) return;
+  const id = row.dataset.id;
+  if(btn){
+    e.stopPropagation();
+    if(btn.dataset.act === 'star') toggleStar(id);
+    else if(btn.dataset.act === 'heard') toggleHeard(id);
+    else if(btn.dataset.act === 'hide') hideTrack(id);
+    else if(btn.dataset.act === 'restore') unhideTrack(id);
+    return;
+  }
+  openTrack(byId(id));
+});
+document.getElementById('list').addEventListener('keydown', e => {
+  if(e.key !== 'Enter' && e.key !== ' ') return;
+  const row = e.target.closest('.row');
+  if(row){ e.preventDefault(); openTrack(byId(row.dataset.id)); }
+});
+document.getElementById('chips').addEventListener('click', e => {
+  const b = e.target.closest('button[data-f]');
+  if(b) setFilter(b.dataset.f);
+});
+document.getElementById('footer').addEventListener('click', e => {
+  if(e.target.closest('#hidtoggle')) toggleShowHidden();
+});
+document.getElementById('q').addEventListener('input', e => setQuery(e.target.value));
+
+/* ============================ boot ============================= */
+renderAll();
+fetch('data/releases.json', { cache: 'no-store' })
+  .then(resp => { if(!resp.ok) throw new Error('HTTP ' + resp.status); return resp.json(); })
+  .then(data => {
+    if(!data || !Array.isArray(data.releases)) throw new Error('bad shape');
+    R = data;
+    R.releases.forEach((r, i) => { TRACKNO[r.id] = i + 1; });  // append-only order: numbers never reshuffle
+    LOADSTATE = R.releases.length ? 'ok' : 'empty';
+    renderAll();
+    markVisit();  // after render: this visit's NEW badges compare against the previous visit
+  })
+  .catch(err => { LOADSTATE = 'error'; LOADERR = err.message; renderAll(); });
+</script>
+</body>
+</html>
