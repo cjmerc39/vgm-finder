@@ -396,7 +396,7 @@ function rowHtml(r, view, ghost){
   }
 
   const art = r.art
-    ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async"></div>`
+    ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noart');this.remove()"></div>`
     : `<div class="rart noart"></div>`;
   return `<div class="row${heard && view === 'feed' ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="link" aria-label="Open in YouTube Music: ${esc(r.title)}">
     ${art}
