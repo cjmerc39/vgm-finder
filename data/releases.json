@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T22:33:35Z",
+  "updatedAt": "2026-07-28T22:35:49Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -1367,6 +1367,12 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/3928720/Hollow_Knight_Silksong__Official_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hollow-knight-silksong",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Hollow+Knight%3A+Silksong+-+Official+Soundtrack+Hollow+Knight%3A+Silksong+soundtrack",
@@ -1653,6 +1659,18 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/devil-may-cry",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/devil-may-cry-5",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/devil-may-cry-4",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Devil+May+Cry+5+Original+Soundtrack+Devil+May+Cry+5+soundtrack",
@@ -4094,13 +4112,19 @@
       "title": "Ori and the Will of the Wisps Soundtrack",
       "game": "Ori and the Will of the Wisps",
       "composers": [],
-      "date": "2020-03-11",
+      "date": "2020-03-10",
       "sources": [
         {
           "name": "steam",
           "type": "catalog",
           "url": "https://store.steampowered.com/app/1258740/Ori_and_the_Will_of_the_Wisps_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ori-and-the-will-of-the-wisps",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Ori+and+the+Will+of+the+Wisps+Soundtrack+Ori+and+the+Will+of+the+Wisps+soundtrack",
@@ -4783,13 +4807,19 @@
       "title": "Divinity: Original Sin 2 - Official Soundtrack",
       "game": "Divinity: Original Sin 2",
       "composers": [],
-      "date": "2017-09-17",
+      "date": "2017-09-14",
       "sources": [
         {
           "name": "steam",
           "type": "catalog",
           "url": "https://store.steampowered.com/app/1247270/Divinity_Original_Sin_2__Official_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/divinity-original-sin-ii",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Divinity%3A+Original+Sin+2+-+Official+Soundtrack+Divinity%3A+Original+Sin+2+soundtrack",
@@ -4961,7 +4991,9 @@
       "id": "the-talos-principle",
       "title": "The Talos Principle: Soundtrack",
       "game": "The Talos Principle",
-      "composers": [],
+      "composers": [
+        "Damjan Mravunac"
+      ],
       "date": "2014-12-11",
       "sources": [
         {
@@ -4969,10 +5001,16 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/322020/The_Talos_Principle_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-talos-principle",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Talos+Principle%3A+Soundtrack+The+Talos+Principle+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ilPpfbp7chO",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/322020/header.jpg",
       "notable": true
     },
@@ -5000,13 +5038,19 @@
       "title": "Monster Hunter: World Original Soundtrack",
       "game": "Monster Hunter: World",
       "composers": [],
-      "date": "2018-08-09",
+      "date": "2018-01-26",
       "sources": [
         {
           "name": "steam",
           "type": "catalog",
           "url": "https://store.steampowered.com/app/912540/Monster_Hunter_World_Original_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/monster-hunter-world",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Monster+Hunter%3A+World+Original+Soundtrack+Monster+Hunter%3A+World+soundtrack",
@@ -5659,13 +5703,19 @@
       "title": "Kingdom Come: Deliverance II Soundtrack",
       "game": "Kingdom Come: Deliverance II",
       "composers": [],
-      "date": "2025-02-04",
+      "date": "2018-02-13",
       "sources": [
         {
           "name": "steam",
           "type": "catalog",
           "url": "https://store.steampowered.com/app/3468550/Kingdom_Come_Deliverance_II_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-come-deliverance",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Come%3A+Deliverance+II+Soundtrack+Kingdom+Come%3A+Deliverance+II+soundtrack",
@@ -6438,6 +6488,12 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/345800/Darkest_Dungeon_Soundtrack/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/darkest-dungeon",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Darkest+Dungeon+Soundtrack+Darkest+Dungeon+soundtrack",
@@ -7030,6 +7086,12 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/433430/Oxenfree__OST/",
           "seenAt": "2026-07-28T21:27:02Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/oxenfree",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Oxenfree+-+OST+Oxenfree+soundtrack",
@@ -12667,7 +12729,7 @@
       "title": "Grand Theft Auto V Soundtrack",
       "game": "Grand Theft Auto V",
       "composers": [],
-      "date": "2008-04-29",
+      "date": "1997-10-21",
       "sources": [
         {
           "name": "igdb",
@@ -12680,6 +12742,18 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/grand-theft-auto-iv",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/grand-theft-auto-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/grand-theft-auto",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Grand+Theft+Auto+V+Soundtrack+Grand+Theft+Auto+V+soundtrack",
@@ -13103,13 +13177,19 @@
       "composers": [
         "Jason Graves"
       ],
-      "date": "2013-03-04",
+      "date": "1996-10-24",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/tomb-raider--2",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tomb-raider",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Tomb+Raider+%28Original+Soundtrack%29+Tomb+Raider+soundtrack",
@@ -13192,6 +13272,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/the-legend-of-zelda-ocarina-of-time",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-ocarina-of-time-3d",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+Zelda%3A+Ocarina+of+Time+Soundtrack+The+Legend+of+Zelda%3A+Ocarina+of+Time+soundtrack",
@@ -13213,6 +13299,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/marvels-spider-man",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvels-spider-man-2",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Marvel%27s+Spider-Man+%28Original+Video+Game+Soundtrack%29+Marvel%27s+Spider-Man+soundtrack",
@@ -13373,6 +13465,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/borderlands-2",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/borderlands-3",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Borderlands+2+Soundtrack+Borderlands+2+soundtrack",
@@ -13446,6 +13544,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/call-of-duty-modern-warfare-3",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-modern-warfare",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty+4%3A+Modern+Warfare+Soundtrack+Call+of+Duty+4%3A+Modern+Warfare+soundtrack",
@@ -13749,7 +13853,7 @@
       "title": "Resident Evil 4 Soundtrack",
       "game": "Resident Evil 4",
       "composers": [],
-      "date": "2005-01-11",
+      "date": "1996-03-22",
       "sources": [
         {
           "name": "igdb",
@@ -13774,6 +13878,36 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/resident-evil-4--1",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/resident-evil-3",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/resident-evil-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/resident-evil-6",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/resident-evil--3",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/resident-evil",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Resident+Evil+4+Soundtrack+Resident+Evil+4+soundtrack",
@@ -14344,6 +14478,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/mafia-ii",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mafia-iii",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Mafia+II+Soundtrack+Mafia+II+soundtrack",
@@ -14501,6 +14641,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/silent-hill-2",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/silent-hill-3",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Silent+Hill+2+Soundtrack+Silent+Hill+2+soundtrack",
@@ -14520,6 +14666,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/overwatch",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/overwatch--1",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Overwatch+Soundtrack+Overwatch+soundtrack",
@@ -14579,6 +14731,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/sid-meier-s-civilization-v",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sid-meiers-civilization-vi",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sid+Meier%27s+Civilization+V+Soundtrack+Sid+Meier%27s+Civilization+V+soundtrack",
@@ -14825,6 +14983,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/final-fantasy-ix",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/final-fantasy-xv",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=FINAL+FANTASY+X+Original+Soundtrack+Final+Fantasy+X+soundtrack",
@@ -14969,6 +15133,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/battlefield-1",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/battlefield-v",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Battlefield+3+%28Original+Soundtrack%29+Battlefield+3+soundtrack",
@@ -15255,6 +15425,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/need-for-speed-most-wanted",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/need-for-speed-most-wanted-53b9fef3-adb4-41a0-8ca0-ffcbb0060467",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Need+for+Speed%3A+Most+Wanted+%28Original+Soundtrack%29+Need+for+Speed%3A+Most+Wanted+soundtrack",
@@ -16045,7 +16221,9 @@
       "id": "final-fantasy-iii",
       "title": "Final Fantasy III Soundtrack",
       "game": "Final Fantasy III",
-      "composers": [],
+      "composers": [
+        "Nobuo Uematsu"
+      ],
       "date": "1994-04-02",
       "sources": [
         {
@@ -16053,10 +16231,22 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/final-fantasy-iii--7",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/final-fantasy-viii",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/final-fantasy-xiii",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Final+Fantasy+III+Soundtrack+Final+Fantasy+III+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ja7U2uHv7xt",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaq5k.jpg",
       "notable": true
     },
@@ -16226,6 +16416,18 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/star-wars-battlefront-ii",
           "seenAt": "2026-07-28T22:33:35Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-battlefront-ii--1",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-battlefront--1",
+          "seenAt": "2026-07-28T22:35:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+Battlefront+II+Soundtrack+Star+Wars%3A+Battlefront+II+soundtrack",
@@ -16911,6 +17113,3105 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+3+%28Original+Soundtrack%29+The+Sims+3+soundtrack",
       "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_35Ahzl2evqz",
       "art": "https://yt3.googleusercontent.com/oPTiQr6A8UutbFnS6oOuKRb_62wBw9hNtPMj7lwH7SDmxJ111NSz9ftvoeSJGWTxb6qPeGKE_z0F2h76=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "the-outer-worlds",
+      "title": "The Outer Worlds (Original Soundtrack)",
+      "game": "The Outer Worlds",
+      "composers": [
+        "Justin E. Bell"
+      ],
+      "date": "2019-10-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-outer-worlds",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Outer+Worlds+%28Original+Soundtrack%29+The+Outer+Worlds+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gU1APt0gPVi",
+      "art": "https://yt3.googleusercontent.com/15M3ODzpReG8cOC4FvsI_p6ZZMjBRaVO_SbZlOjsOxvxsrBHn7S6sJGEkaF5FbQKmLKw3h6KEjsh3q02=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "crysis-2",
+      "title": "Crysis 2 Soundtrack",
+      "game": "Crysis 2",
+      "composers": [],
+      "date": "2011-03-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/crysis-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Crysis+2+Soundtrack+Crysis+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on2.jpg",
+      "notable": true
+    },
+    {
+      "id": "wolfenstein-ii-the-new-colossus",
+      "title": "Wolfenstein II: The New Colossus Soundtrack",
+      "game": "Wolfenstein II: The New Colossus",
+      "composers": [],
+      "date": "2017-10-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/wolfenstein-ii-the-new-colossus",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wolfenstein+II%3A+The+New+Colossus+Soundtrack+Wolfenstein+II%3A+The+New+Colossus+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21c5.jpg",
+      "notable": true
+    },
+    {
+      "id": "destiny-2",
+      "title": "Destiny 2 Soundtrack",
+      "game": "Destiny 2",
+      "composers": [],
+      "date": "2017-09-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/destiny-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Destiny+2+Soundtrack+Destiny+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc89g.jpg",
+      "notable": true
+    },
+    {
+      "id": "sonic-the-hedgehog",
+      "title": "Sonic the Hedgehog Soundtrack",
+      "game": "Sonic the Hedgehog",
+      "composers": [],
+      "date": "1991-06-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-the-hedgehog",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-the-hedgehog-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+the+Hedgehog+Soundtrack+Sonic+the+Hedgehog+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coanlj.jpg",
+      "notable": true
+    },
+    {
+      "id": "no-man-s-sky",
+      "title": "No Man's Sky Soundtrack",
+      "game": "No Man's Sky",
+      "composers": [],
+      "date": "2016-08-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/no-man-s-sky",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=No+Man%27s+Sky+Soundtrack+No+Man%27s+Sky+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coacrk.jpg",
+      "notable": true
+    },
+    {
+      "id": "call-of-duty-advanced-warfare",
+      "title": "Call of Duty: Advanced Warfare (Original Game Soundtrack)",
+      "game": "Call of Duty: Advanced Warfare",
+      "composers": [
+        "Audiomachine",
+        "Harry Gregson-Williams"
+      ],
+      "date": "2014-11-03",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-advanced-warfare",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%3A+Advanced+Warfare+%28Original+Game+Soundtrack%29+Call+of+Duty%3A+Advanced+Warfare+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5DycZGJGKj1",
+      "art": "https://yt3.googleusercontent.com/P4CZlIBZIgWhf-nJQKztW9bxWFZMNMq9EKEBNy81GwjiIOj96S0G69vg-oI_V6HzY1YXIHlK92RBrZM=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "vampire-the-masquerade-bloodlines",
+      "title": "Vampire: The Masquerade - Bloodlines Soundtrack",
+      "game": "Vampire: The Masquerade - Bloodlines",
+      "composers": [],
+      "date": "2004-11-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/vampire-the-masquerade-bloodlines",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Vampire%3A+The+Masquerade+-+Bloodlines+Soundtrack+Vampire%3A+The+Masquerade+-+Bloodlines+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n14.jpg",
+      "notable": true
+    },
+    {
+      "id": "pubg-battlegrounds",
+      "title": "PUBG: Battlegrounds Soundtrack",
+      "game": "PUBG: Battlegrounds",
+      "composers": [],
+      "date": "2017-12-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/pubg-battlegrounds",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=PUBG%3A+Battlegrounds+Soundtrack+PUBG%3A+Battlegrounds+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaam4.jpg",
+      "notable": true
+    },
+    {
+      "id": "braid",
+      "title": "Braid Soundtrack",
+      "game": "Braid",
+      "composers": [],
+      "date": "2008-08-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/braid",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Braid+Soundtrack+Braid+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25ni.jpg",
+      "notable": true
+    },
+    {
+      "id": "mario-kart-64",
+      "title": "Mario Kart 64 Soundtrack",
+      "game": "Mario Kart 64",
+      "composers": [],
+      "date": "1996-12-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mario-kart-64",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mario+Kart+64+Soundtrack+Mario+Kart+64+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co67hm.jpg",
+      "notable": true
+    },
+    {
+      "id": "call-of-duty-wwii",
+      "title": "Call of Duty®: WWII (Official Soundtrack)",
+      "game": "Call of Duty: WWII",
+      "composers": [
+        "Wilbert Roget, II"
+      ],
+      "date": "2017-11-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-wwii",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%C2%AE%3A+WWII+%28Official+Soundtrack%29+Call+of+Duty%3A+WWII+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_lPPvmy4dGmj",
+      "art": "https://yt3.googleusercontent.com/ryZgvLIx8hNyiO1Y3Di1DDpLqWbBecZ9xZmpk_zV702FSY8IUoZR2wJ27j-F8LblPFiR84zradR_bAnd=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "donkey-kong-country",
+      "title": "Donkey Kong Country Soundtrack",
+      "game": "Donkey Kong Country",
+      "composers": [],
+      "date": "1994-11-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/donkey-kong-country",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Donkey+Kong+Country+Soundtrack+Donkey+Kong+Country+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co70qn.jpg",
+      "notable": true
+    },
+    {
+      "id": "diablo",
+      "title": "Diablo Soundtrack",
+      "game": "Diablo",
+      "composers": [],
+      "date": "1996-12-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/diablo",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Diablo+Soundtrack+Diablo+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ggo.jpg",
+      "notable": true
+    },
+    {
+      "id": "days-gone",
+      "title": "Days Gone (Original Soundtrack)",
+      "game": "Days Gone",
+      "composers": [
+        "Nathan Whitehead"
+      ],
+      "date": "2019-04-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/days-gone",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Days+Gone+%28Original+Soundtrack%29+Days+Gone+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_J9jyK5NSnh8",
+      "art": "https://yt3.googleusercontent.com/oloEue3tc7xB-bL-Zm7bWUpC0EFCdGvURnfnd-_ooyeAUjTI2SMhFUzdbm3-sQFqowjtpewdSDp3i_jpLw=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "mario-kart-wii",
+      "title": "Mario Kart Wii Soundtrack",
+      "game": "Mario Kart Wii",
+      "composers": [],
+      "date": "2008-04-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mario-kart-wii",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mario+Kart+Wii+Soundtrack+Mario+Kart+Wii+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co214e.jpg",
+      "notable": true
+    },
+    {
+      "id": "pokémon-red-version",
+      "title": "Pokémon Red Version Soundtrack",
+      "game": "Pokémon Red Version",
+      "composers": [],
+      "date": "1996-02-27",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/pokemon-red-version",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pok%C3%A9mon+Red+Version+Soundtrack+Pok%C3%A9mon+Red+Version+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pi4.jpg",
+      "notable": true
+    },
+    {
+      "id": "super-smash-bros-brawl",
+      "title": "Super Smash Bros. Brawl Soundtrack",
+      "game": "Super Smash Bros. Brawl",
+      "composers": [],
+      "date": "2008-01-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/super-smash-bros-brawl",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Super+Smash+Bros.+Brawl+Soundtrack+Super+Smash+Bros.+Brawl+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co221w.jpg",
+      "notable": true
+    },
+    {
+      "id": "monkey-island-2-lechuck-s-revenge",
+      "title": "Monkey Island 2: LeChuck's Revenge Soundtrack",
+      "game": "Monkey Island 2: LeChuck's Revenge",
+      "composers": [],
+      "date": "1991-12-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/monkey-island-2-lechuck-s-revenge",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Monkey+Island+2%3A+LeChuck%27s+Revenge+Soundtrack+Monkey+Island+2%3A+LeChuck%27s+Revenge+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co30yr.jpg",
+      "notable": true
+    },
+    {
+      "id": "among-us",
+      "title": "Among Us Soundtrack",
+      "game": "Among Us",
+      "composers": [],
+      "date": "2018-06-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/among-us",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Among+Us+Soundtrack+Among+Us+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6kqt.jpg",
+      "notable": true
+    },
+    {
+      "id": "kingdom-hearts",
+      "title": "Kingdom Hearts Soundtrack",
+      "game": "Kingdom Hearts",
+      "composers": [],
+      "date": "2002-03-28",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+Soundtrack+Kingdom+Hearts+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co30zf.jpg",
+      "notable": true
+    },
+    {
+      "id": "f-e-a-r",
+      "title": "F.E.A.R. Soundtrack",
+      "game": "F.E.A.R.",
+      "composers": [],
+      "date": "2005-10-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/f-e-a-r",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=F.E.A.R.+Soundtrack+F.E.A.R.+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1utk.jpg",
+      "notable": true
+    },
+    {
+      "id": "call-of-duty-black-ops-iii",
+      "title": "Call of Duty: Black Ops III (Official Soundtrack)",
+      "game": "Call of Duty: Black Ops III",
+      "composers": [
+        "Jack Wall"
+      ],
+      "date": "2015-11-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-black-ops-iii",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%3A+Black+Ops+III+%28Official+Soundtrack%29+Call+of+Duty%3A+Black+Ops+III+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_FwFXPaO1VaW",
+      "art": "https://yt3.googleusercontent.com/LBuxwiJmOTCLUdix4HTxH9JN8xpPJmBXXJ16eXCv8gLsLLFQGC36gOFRaQsuAT4VefILqRDT4uOD7BCg=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "silent-hill",
+      "title": "Silent Hill Soundtrack",
+      "game": "Silent Hill",
+      "composers": [],
+      "date": "1999-02-24",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/silent-hill",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Silent+Hill+Soundtrack+Silent+Hill+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vye.jpg",
+      "notable": true
+    },
+    {
+      "id": "resident-evil-village",
+      "title": "Resident Evil Village Soundtrack",
+      "game": "Resident Evil Village",
+      "composers": [],
+      "date": "2021-05-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/resident-evil-village",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Resident+Evil+Village+Soundtrack+Resident+Evil+Village+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab9q.jpg",
+      "notable": true
+    },
+    {
+      "id": "assassin-s-creed-rogue",
+      "title": "Assassin's Creed Rogue (Original Game Soundtrack)",
+      "game": "Assassin's Creed Rogue",
+      "composers": [
+        "Elitsa Alexandrova"
+      ],
+      "date": "2014-11-11",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/assassins-creed-rogue",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Assassin%27s+Creed+Rogue+%28Original+Game+Soundtrack%29+Assassin%27s+Creed+Rogue+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZzmGNBfy6J7",
+      "art": "https://yt3.googleusercontent.com/3GY1bhWiq0mjpfPmDixl3sk5C7WMTamUf2GkCwe-lPU1Epkv2FEFCnxhWvxfbTfCxP51vIyU5IumkhS0=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "saints-row-iv",
+      "title": "Saints Row IV Soundtrack",
+      "game": "Saints Row IV",
+      "composers": [],
+      "date": "2013-08-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/saints-row-iv",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Saints+Row+IV+Soundtrack+Saints+Row+IV+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nrn.jpg",
+      "notable": true
+    },
+    {
+      "id": "tales-from-the-borderlands",
+      "title": "Tales from the Borderlands Soundtrack",
+      "game": "Tales from the Borderlands",
+      "composers": [],
+      "date": "2014-11-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tales-from-the-borderlands",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tales+from+the+Borderlands+Soundtrack+Tales+from+the+Borderlands+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20tr.jpg",
+      "notable": true
+    },
+    {
+      "id": "earthbound",
+      "title": "EarthBound Soundtrack",
+      "game": "EarthBound",
+      "composers": [],
+      "date": "1994-08-27",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/earthbound",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=EarthBound+Soundtrack+EarthBound+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6v07.jpg",
+      "notable": true
+    },
+    {
+      "id": "crash-bandicoot-warped",
+      "title": "Crash Bandicoot: Warped Soundtrack",
+      "game": "Crash Bandicoot: Warped",
+      "composers": [],
+      "date": "1998-11-03",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/crash-bandicoot-warped",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Crash+Bandicoot%3A+Warped+Soundtrack+Crash+Bandicoot%3A+Warped+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co873w.jpg",
+      "notable": true
+    },
+    {
+      "id": "mad-max",
+      "title": "Mad Max Soundtrack",
+      "game": "Mad Max",
+      "composers": [],
+      "date": "2015-09-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mad-max",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mad+Max+Soundtrack+Mad+Max+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1uuh.jpg",
+      "notable": true
+    },
+    {
+      "id": "fall-guys",
+      "title": "Fall Guys (Original Soundtrack)",
+      "game": "Fall Guys",
+      "composers": [
+        "Jukio Kallio",
+        "Daniel Hagström"
+      ],
+      "date": "2020-08-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/fall-guys",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Fall+Guys+%28Original+Soundtrack%29+Fall+Guys+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_55cvZ89XdNp",
+      "art": "https://yt3.googleusercontent.com/4WDWVRLme8ikyHlifuHvsxnMVNGino11LTf1HsdbWpSL398E1NqJgNH3cKsFMWE5zjx9PADLRye2FWQN=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "hitman",
+      "title": "Hitman Soundtrack",
+      "game": "Hitman",
+      "composers": [],
+      "date": "2016-03-11",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hitman",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hitman+Soundtrack+Hitman+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2fgr.jpg",
+      "notable": true
+    },
+    {
+      "id": "deus-ex-mankind-divided",
+      "title": "Deus Ex: Mankind Divided Soundtrack",
+      "game": "Deus Ex: Mankind Divided",
+      "composers": [],
+      "date": "2016-08-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/deus-ex-mankind-divided",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Deus+Ex%3A+Mankind+Divided+Soundtrack+Deus+Ex%3A+Mankind+Divided+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25jt.jpg",
+      "notable": true
+    },
+    {
+      "id": "marvel-s-spider-man-miles-morales",
+      "title": "Marvel’s Spider-Man: Miles Morales (Original Video Game Soundtrack)",
+      "game": "Marvel's Spider-Man: Miles Morales",
+      "composers": [
+        "John Paesano"
+      ],
+      "date": "2020-11-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvels-spider-man-miles-morales",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Marvel%E2%80%99s+Spider-Man%3A+Miles+Morales+%28Original+Video+Game+Soundtrack%29+Marvel%27s+Spider-Man%3A+Miles+Morales+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KtvfzsnrXJw",
+      "art": "https://yt3.googleusercontent.com/cT_jJR0iQHAYFtMFzz4yzikXL9wWeGmd-PHofWGYfAE73X7wOaFDcgkLXIZS3dsBKLfPz49izhg3qkfl=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "xcom-enemy-unknown",
+      "title": "XCOM: Enemy Unknown Soundtrack",
+      "game": "XCOM: Enemy Unknown",
+      "composers": [],
+      "date": "2012-10-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/xcom-enemy-unknown",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=XCOM%3A+Enemy+Unknown+Soundtrack+XCOM%3A+Enemy+Unknown+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29i2.jpg",
+      "notable": true
+    },
+    {
+      "id": "rainbow-six-siege",
+      "title": "Rainbow Six Siege Soundtrack",
+      "game": "Rainbow Six Siege",
+      "composers": [],
+      "date": "2015-12-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/rainbow-six-siege",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rainbow+Six+Siege+Soundtrack+Rainbow+Six+Siege+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9yqs.jpg",
+      "notable": true
+    },
+    {
+      "id": "far-cry-2",
+      "title": "Far Cry 2 (Original Game Soundtrack)",
+      "game": "Far Cry 2",
+      "composers": [
+        "Marc Canham"
+      ],
+      "date": "2008-10-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/far-cry-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Far+Cry+2+%28Original+Game+Soundtrack%29+Far+Cry+2+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QdQVGLionzs",
+      "art": "https://yt3.googleusercontent.com/sDdixLK8fAGRg2J8l0H9NNI4_o9zqF6ugLps5RwFtc-qoDRSaanbiDZByKc9dxAh71pVeQJ0Nsm3DIg=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "need-for-speed-carbon",
+      "title": "Need for Speed: Carbon (Original Soundtrack)",
+      "game": "Need for Speed: Carbon",
+      "composers": [
+        "Ekstrak",
+        "EA Games Soundtrack"
+      ],
+      "date": "2006-10-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/need-for-speed-carbon",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Need+for+Speed%3A+Carbon+%28Original+Soundtrack%29+Need+for+Speed%3A+Carbon+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_FhyMG6dWQNS",
+      "art": "https://yt3.googleusercontent.com/OqKL4sWWzaSHVp14lL_cC0mXd3y09Aa9FfjVaf3pi_qD7U56PoWl1xAngZU3FOyj9sojXdFyUl8tEEYh=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "paper-mario-the-thousand-year-door",
+      "title": "Paper Mario: The Thousand-Year Door Soundtrack",
+      "game": "Paper Mario: The Thousand-Year Door",
+      "composers": [],
+      "date": "2004-07-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/paper-mario-the-thousand-year-door",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Paper+Mario%3A+The+Thousand-Year+Door+Soundtrack+Paper+Mario%3A+The+Thousand-Year+Door+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25us.jpg",
+      "notable": true
+    },
+    {
+      "id": "pokémon-firered-version",
+      "title": "Pokémon FireRed Version Soundtrack",
+      "game": "Pokémon FireRed Version",
+      "composers": [],
+      "date": "2004-01-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/pokemon-firered-version",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pok%C3%A9mon+FireRed+Version+Soundtrack+Pok%C3%A9mon+FireRed+Version+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ziq.jpg",
+      "notable": true
+    },
+    {
+      "id": "hitman-blood-money",
+      "title": "Hitman: Blood Money Soundtrack",
+      "game": "Hitman: Blood Money",
+      "composers": [],
+      "date": "2006-05-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hitman-blood-money",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hitman%3A+Blood+Money+Soundtrack+Hitman%3A+Blood+Money+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2dm6.jpg",
+      "notable": true
+    },
+    {
+      "id": "bayonetta",
+      "title": "Bayonetta Soundtrack",
+      "game": "Bayonetta",
+      "composers": [],
+      "date": "2009-10-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/bayonetta",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bayonetta+Soundtrack+Bayonetta+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8nf4.jpg",
+      "notable": true
+    },
+    {
+      "id": "tekken-3",
+      "title": "Tekken 3 Soundtrack",
+      "game": "Tekken 3",
+      "composers": [],
+      "date": "1997-03-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tekken-3",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tekken+3+Soundtrack+Tekken+3+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8d7q.jpg",
+      "notable": true
+    },
+    {
+      "id": "dark-souls-remastered",
+      "title": "Dark Souls: Remastered Soundtrack",
+      "game": "Dark Souls: Remastered",
+      "composers": [],
+      "date": "2018-05-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dark-souls-remastered",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dark+Souls%3A+Remastered+Soundtrack+Dark+Souls%3A+Remastered+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobazz.jpg",
+      "notable": true
+    },
+    {
+      "id": "baldur-s-gate-ii-shadows-of-amn",
+      "title": "Baldur's Gate II: Shadows of Amn Soundtrack",
+      "game": "Baldur's Gate II: Shadows of Amn",
+      "composers": [],
+      "date": "2000-09-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/baldurs-gate-ii-shadows-of-amn",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Baldur%27s+Gate+II%3A+Shadows+of+Amn+Soundtrack+Baldur%27s+Gate+II%3A+Shadows+of+Amn+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co71yr.jpg",
+      "notable": true
+    },
+    {
+      "id": "superhot",
+      "title": "SuperHot Soundtrack",
+      "game": "SuperHot",
+      "composers": [],
+      "date": "2016-02-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/superhot",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SuperHot+Soundtrack+SuperHot+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ybp.jpg",
+      "notable": true
+    },
+    {
+      "id": "gears-of-war",
+      "title": "Gears of War Soundtrack",
+      "game": "Gears of War",
+      "composers": [],
+      "date": "2006-11-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gears-of-war",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gears-of-war-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gears+of+War+Soundtrack+Gears+of+War+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8rkr.jpg",
+      "notable": true
+    },
+    {
+      "id": "black-mesa",
+      "title": "Black Mesa Soundtrack",
+      "game": "Black Mesa",
+      "composers": [],
+      "date": "2020-03-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/black-mesa",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Black+Mesa+Soundtrack+Black+Mesa+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20n4.jpg",
+      "notable": true
+    },
+    {
+      "id": "far-cry",
+      "title": "Far Cry Soundtrack",
+      "game": "Far Cry",
+      "composers": [],
+      "date": "2004-03-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/far-cry",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Far+Cry+Soundtrack+Far+Cry+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpf.jpg",
+      "notable": true
+    },
+    {
+      "id": "gone-home",
+      "title": "Gone Home: Original Soundtrack",
+      "game": "Gone Home",
+      "composers": [
+        "Chris Remo"
+      ],
+      "date": "2013-08-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gone-home",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gone+Home%3A+Original+Soundtrack+Gone+Home+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_alM4GBKD43v",
+      "art": "https://yt3.googleusercontent.com/jdsG2C1LZ_CGyrvXKZx7tYKi5ddchh6Cr9-3NtOMzSvklBzLx-LtrLI-QDxQwsViyQ5ZfJ_8KbthRL0znw=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "halo-4",
+      "title": "Halo 4 (Original Soundtrack)",
+      "game": "Halo 4",
+      "composers": [
+        "Halo"
+      ],
+      "date": "2012-11-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/halo-4",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Halo+4+%28Original+Soundtrack%29+Halo+4+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_rT7p6Y746vD",
+      "art": "https://yt3.googleusercontent.com/VS7UmTQY1f_-_61lHpVB5q66PJ99ZtTIVf5EHSb8cDHiQ6CCmTCGWluqWBX33rNPLhz7oc9bzB6e930t=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "dead-island",
+      "title": "Dead Island Soundtrack",
+      "game": "Dead Island",
+      "composers": [],
+      "date": "2011-09-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dead-island",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dead+Island+Soundtrack+Dead+Island+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3lym.jpg",
+      "notable": true
+    },
+    {
+      "id": "metal-gear-rising-revengeance",
+      "title": "Metal Gear Rising: Revengeance Soundtrack",
+      "game": "Metal Gear Rising: Revengeance",
+      "composers": [],
+      "date": "2013-02-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/metal-gear-rising-revengeance",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Metal+Gear+Rising%3A+Revengeance+Soundtrack+Metal+Gear+Rising%3A+Revengeance+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l1t.jpg",
+      "notable": true
+    },
+    {
+      "id": "counter-strike-source",
+      "title": "Counter-Strike: Source Soundtrack",
+      "game": "Counter-Strike: Source",
+      "composers": [],
+      "date": "2004-10-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/counter-strike-source",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Counter-Strike%3A+Source+Soundtrack+Counter-Strike%3A+Source+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1txv.jpg",
+      "notable": true
+    },
+    {
+      "id": "the-sims-2",
+      "title": "The Sims 2 (Original Soundtrack)",
+      "game": "The Sims 2",
+      "composers": [
+        "Mark Mothersbaugh",
+        "EA Games Soundtrack"
+      ],
+      "date": "2004-09-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+2+%28Original+Soundtrack%29+The+Sims+2+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2mAn6B6LY56",
+      "art": "https://yt3.googleusercontent.com/-alqM6gYPj9oEjxJoJuU5vmYl2sdw-LMR1UJii-qjFHFSdV03Y4aRdR5h8ENPm10Z7xWpMzK7nO1CI4=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "crash-bandicoot-2-cortex-strikes-back",
+      "title": "Crash Bandicoot 2: Cortex Strikes Back Soundtrack",
+      "game": "Crash Bandicoot 2: Cortex Strikes Back",
+      "composers": [],
+      "date": "1997-11-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/crash-bandicoot-2-cortex-strikes-back",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Crash+Bandicoot+2%3A+Cortex+Strikes+Back+Soundtrack+Crash+Bandicoot+2%3A+Cortex+Strikes+Back+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co82vt.jpg",
+      "notable": true
+    },
+    {
+      "id": "amnesia-the-dark-descent",
+      "title": "Amnesia: The Dark Descent (Original Game Soundtrack)",
+      "game": "Amnesia: The Dark Descent",
+      "composers": [
+        "Mikko Tarmia"
+      ],
+      "date": "2010-09-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/amnesia-the-dark-descent",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Amnesia%3A+The+Dark+Descent+%28Original+Game+Soundtrack%29+Amnesia%3A+The+Dark+Descent+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ckguyz8IPbG",
+      "art": "https://yt3.googleusercontent.com/GLKYjjEHtdENJi8wqurvF10XkjKpcCSZ84byu0Xxj_YOHcGto1TKoT3PblIafSPhMbIzniI0uMM0sC2L=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "slay-the-spire",
+      "title": "Slay the Spire (Original Soundtrack)",
+      "game": "Slay the Spire",
+      "composers": [
+        "Clark Aboud"
+      ],
+      "date": "2019-01-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/slay-the-spire",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Slay+the+Spire+%28Original+Soundtrack%29+Slay+the+Spire+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_01vqa7IfoNL",
+      "art": "https://yt3.googleusercontent.com/lColThTdtPY7RcX79FIcaM8fsQqWldIu1hM4NIoROzsCJMueZUE_Z-KCOenkijKz5MQ9KCVXN9kH751jqQ=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "uncharted-the-lost-legacy",
+      "title": "Uncharted: The Lost Legacy (Original Soundtrack)",
+      "game": "Uncharted: The Lost Legacy",
+      "composers": [
+        "Henry Jackman"
+      ],
+      "date": "2017-08-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/uncharted-the-lost-legacy",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Uncharted%3A+The+Lost+Legacy+%28Original+Soundtrack%29+Uncharted%3A+The+Lost+Legacy+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_S4VmUGRyvhq",
+      "art": "https://yt3.googleusercontent.com/K0Wrxv_AbPwWAtztxfF24gA6edR_yZ18X20mfwA2vwTD_kePmt0bRw1K_hfc7R3DTa_jrsAEKWmoKohR=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "prince-of-persia-warrior-within",
+      "title": "Prince of Persia: Warrior Within Soundtrack",
+      "game": "Prince of Persia: Warrior Within",
+      "composers": [],
+      "date": "2004-11-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/prince-of-persia-warrior-within",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Prince+of+Persia%3A+Warrior+Within+Soundtrack+Prince+of+Persia%3A+Warrior+Within+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9x1a.jpg",
+      "notable": true
+    },
+    {
+      "id": "doki-doki-literature-club",
+      "title": "Doki Doki Literature Club! (Original Soundtrack)",
+      "game": "Doki Doki Literature Club!",
+      "composers": [
+        "Dan Salvato"
+      ],
+      "date": "2017-09-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/doki-doki-literature-club",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Doki+Doki+Literature+Club%21+%28Original+Soundtrack%29+Doki+Doki+Literature+Club%21+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Z07KHZnrb6g",
+      "art": "https://yt3.googleusercontent.com/pwycCAShShYwMCNmAngw44Dcqa8MBwKG7WavKk7d2PYQtd04HfiNx21QBx0ZmoNTgbedbLB49yApZOM=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "mass-effect-andromeda",
+      "title": "Mass Effect Andromeda (Original Game Soundtrack)",
+      "game": "Mass Effect: Andromeda",
+      "composers": [
+        "John Paesano",
+        "EA Games Soundtrack"
+      ],
+      "date": "2017-03-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mass-effect-andromeda--1",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mass+Effect+Andromeda+%28Original+Game+Soundtrack%29+Mass+Effect%3A+Andromeda+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QyvUFNJVY4g",
+      "art": "https://yt3.googleusercontent.com/k-dwh69wYaeNF4xum365oemkMqjMtwVxoc2O6o0apAN2bLvkx0VgllpZPNvZnlTqatLv8xjtw847gAk=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "doom-ii-hell-on-earth",
+      "title": "Doom II: Hell on Earth Soundtrack",
+      "game": "Doom II: Hell on Earth",
+      "composers": [],
+      "date": "1994-09-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/doom-ii-hell-on-earth",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Doom+II%3A+Hell+on+Earth+Soundtrack+Doom+II%3A+Hell+on+Earth+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6iip.jpg",
+      "notable": true
+    },
+    {
+      "id": "super-mario-sunshine",
+      "title": "Super Mario Sunshine Soundtrack",
+      "game": "Super Mario Sunshine",
+      "composers": [],
+      "date": "2002-07-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/super-mario-sunshine",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Super+Mario+Sunshine+Soundtrack+Super+Mario+Sunshine+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8q1.jpg",
+      "notable": true
+    },
+    {
+      "id": "shovel-knight",
+      "title": "Shovel Knight Soundtrack",
+      "game": "Shovel Knight",
+      "composers": [],
+      "date": "2014-06-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/shovel-knight",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Shovel+Knight+Soundtrack+Shovel+Knight+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobaa7.jpg",
+      "notable": true
+    },
+    {
+      "id": "the-witness",
+      "title": "The Witness Soundtrack",
+      "game": "The Witness",
+      "composers": [],
+      "date": "2016-01-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-witness",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Witness+Soundtrack+The+Witness+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3hih.jpg",
+      "notable": true
+    },
+    {
+      "id": "the-sims",
+      "title": "The Sims Soundtrack",
+      "game": "The Sims",
+      "composers": [],
+      "date": "2000-02-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+Soundtrack+The+Sims+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8j9a.jpg",
+      "notable": true
+    },
+    {
+      "id": "infamous-second-son",
+      "title": "inFAMOUS: Second Son (Original Soundtrack)",
+      "game": "Infamous: Second Son",
+      "composers": [
+        "Marc Canham",
+        "Nathan Johnson",
+        "Brain"
+      ],
+      "date": "2014-03-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/infamous-second-son",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=inFAMOUS%3A+Second+Son+%28Original+Soundtrack%29+Infamous%3A+Second+Son+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WH7aB1cQbw2",
+      "art": "https://yt3.googleusercontent.com/vNjnyuGjYgEOubV0tInd69flNCW05AzctDHrHqM5LtLOqWI2VTIEZtm5uvp23z-BD-izOf1F4XqcnKE=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "burnout-paradise",
+      "title": "Burnout Paradise Soundtrack",
+      "game": "Burnout Paradise",
+      "composers": [],
+      "date": "2008-01-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/burnout-paradise",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Burnout+Paradise+Soundtrack+Burnout+Paradise+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28p7.jpg",
+      "notable": true
+    },
+    {
+      "id": "warframe",
+      "title": "Warframe Soundtrack",
+      "game": "Warframe",
+      "composers": [],
+      "date": "2013-03-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/warframe",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Warframe+Soundtrack+Warframe+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocase.jpg",
+      "notable": true
+    },
+    {
+      "id": "valorant",
+      "title": "Valorant Soundtrack",
+      "game": "Valorant",
+      "composers": [],
+      "date": "2020-06-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/valorant",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Valorant+Soundtrack+Valorant+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocbci.jpg",
+      "notable": true
+    },
+    {
+      "id": "yakuza-0",
+      "title": "Yakuza 0 Soundtrack",
+      "game": "Yakuza 0",
+      "composers": [],
+      "date": "2015-03-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/yakuza-0",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Yakuza+0+Soundtrack+Yakuza+0+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co252x.jpg",
+      "notable": true
+    },
+    {
+      "id": "donkey-kong-country-2-diddy-s-kong-quest",
+      "title": "Donkey Kong Country 2: Diddy's Kong Quest Soundtrack",
+      "game": "Donkey Kong Country 2: Diddy's Kong Quest",
+      "composers": [],
+      "date": "1995-11-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/donkey-kong-country-2-diddy-s-kong-quest",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Donkey+Kong+Country+2%3A+Diddy%27s+Kong+Quest+Soundtrack+Donkey+Kong+Country+2%3A+Diddy%27s+Kong+Quest+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co217m.jpg",
+      "notable": true
+    },
+    {
+      "id": "life-is-strange-before-the-storm",
+      "title": "Life is Strange: Before the Storm Soundtrack",
+      "game": "Life is Strange: Before the Storm",
+      "composers": [],
+      "date": "2017-08-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/life-is-strange-before-the-storm",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Life+is+Strange%3A+Before+the+Storm+Soundtrack+Life+is+Strange%3A+Before+the+Storm+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1twj.jpg",
+      "notable": true
+    },
+    {
+      "id": "return-of-the-obra-dinn",
+      "title": "Return of the Obra Dinn Soundtrack",
+      "game": "Return of the Obra Dinn",
+      "composers": [],
+      "date": "2018-10-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/return-of-the-obra-dinn",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Return+of+the+Obra+Dinn+Soundtrack+Return+of+the+Obra+Dinn+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27j9.jpg",
+      "notable": true
+    },
+    {
+      "id": "dmc-devil-may-cry",
+      "title": "DmC: Devil May Cry Soundtrack",
+      "game": "DmC: Devil May Cry",
+      "composers": [],
+      "date": "2013-01-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dmc-devil-may-cry",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DmC%3A+Devil+May+Cry+Soundtrack+DmC%3A+Devil+May+Cry+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u77.jpg",
+      "notable": true
+    },
+    {
+      "id": "metal-gear-solid-v-ground-zeroes",
+      "title": "Metal Gear Solid V: Ground Zeroes Soundtrack",
+      "game": "Metal Gear Solid V: Ground Zeroes",
+      "composers": [],
+      "date": "2014-03-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/metal-gear-solid-v-ground-zeroes",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Metal+Gear+Solid+V%3A+Ground+Zeroes+Soundtrack+Metal+Gear+Solid+V%3A+Ground+Zeroes+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v88.jpg",
+      "notable": true
+    },
+    {
+      "id": "animal-crossing-new-horizons",
+      "title": "Animal Crossing: New Horizons Soundtrack",
+      "game": "Animal Crossing: New Horizons",
+      "composers": [],
+      "date": "2020-03-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/animal-crossing-new-horizons",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Animal+Crossing%3A+New+Horizons+Soundtrack+Animal+Crossing%3A+New+Horizons+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wls.jpg",
+      "notable": true
+    },
+    {
+      "id": "final-fantasy-vii-remake",
+      "title": "FINAL FANTASY VII REMAKE Original Soundtrack",
+      "game": "Final Fantasy VII Remake",
+      "composers": [
+        "SQUARE ENIX MUSIC"
+      ],
+      "date": "2020-04-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/final-fantasy-vii-remake",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=FINAL+FANTASY+VII+REMAKE+Original+Soundtrack+Final+Fantasy+VII+Remake+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_i8eZ7kq87Bk",
+      "art": "https://yt3.googleusercontent.com/CuHYURud6-tYCgnXer5PtqATdJVmDoFlzc8r1-xBdwigZ-9x2y4PqIefd_ZelEKTLDX9Jtxo1Ezcr2eoyA=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "the-secret-of-monkey-island",
+      "title": "The Secret of Monkey Island Soundtrack",
+      "game": "The Secret of Monkey Island",
+      "composers": [],
+      "date": "1990-10-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-secret-of-monkey-island",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Secret+of+Monkey+Island+Soundtrack+The+Secret+of+Monkey+Island+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28bp.jpg",
+      "notable": true
+    },
+    {
+      "id": "payday-2",
+      "title": "Payday 2 Soundtrack",
+      "game": "Payday 2",
+      "composers": [],
+      "date": "2013-08-13",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/payday-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Payday+2+Soundtrack+Payday+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaqu.jpg",
+      "notable": true
+    },
+    {
+      "id": "pokémon-go",
+      "title": "Pokémon Go Soundtrack",
+      "game": "Pokémon Go",
+      "composers": [],
+      "date": "2016-07-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/pokemon-go",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pok%C3%A9mon+Go+Soundtrack+Pok%C3%A9mon+Go+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gmb.jpg",
+      "notable": true
+    },
+    {
+      "id": "path-of-exile",
+      "title": "Path of Exile Soundtrack",
+      "game": "Path of Exile",
+      "composers": [],
+      "date": "2013-10-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/path-of-exile",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Path+of+Exile+Soundtrack+Path+of+Exile+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n6w.jpg",
+      "notable": true
+    },
+    {
+      "id": "far-cry-primal",
+      "title": "Far Cry Primal (Original Game Soundtrack)",
+      "game": "Far Cry: Primal",
+      "composers": [
+        "Jason Graves"
+      ],
+      "date": "2016-02-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/far-cry-primal",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Far+Cry+Primal+%28Original+Game+Soundtrack%29+Far+Cry%3A+Primal+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_drZbZzpnZ4d",
+      "art": "https://yt3.googleusercontent.com/I97sUQb71fvE_rUCZ9YtTpYPhcSuJmdOQO1cNea0d9-xLKthiwLi2qL5dR3o-QftSKTmEbSa9n0Vhqxi=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "destiny",
+      "title": "Destiny Soundtrack",
+      "game": "Destiny",
+      "composers": [],
+      "date": "2014-09-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/destiny",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Destiny+Soundtrack+Destiny+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rco.jpg",
+      "notable": true
+    },
+    {
+      "id": "pokémon-blue-version",
+      "title": "Pokémon Blue Version Soundtrack",
+      "game": "Pokémon Blue Version",
+      "composers": [],
+      "date": "1996-10-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/pokemon-blue-version",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pok%C3%A9mon+Blue+Version+Soundtrack+Pok%C3%A9mon+Blue+Version+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pi7.jpg",
+      "notable": true
+    },
+    {
+      "id": "mortal-kombat-x",
+      "title": "Mortal Kombat X Soundtrack",
+      "game": "Mortal Kombat X",
+      "composers": [],
+      "date": "2011-04-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mortal-kombat-x",
+          "seenAt": "2026-07-28T22:35:49Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mortal-kombat",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mortal+Kombat+X+Soundtrack+Mortal+Kombat+X+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y08.jpg",
+      "notable": true
+    },
+    {
+      "id": "just-cause-2",
+      "title": "Just Cause 2 Soundtrack",
+      "game": "Just Cause 2",
+      "composers": [],
+      "date": "2010-03-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/just-cause-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Just+Cause+2+Soundtrack+Just+Cause+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qri.jpg",
+      "notable": true
+    },
+    {
+      "id": "s-t-a-l-k-e-r-shadow-of-chernobyl",
+      "title": "S.T.A.L.K.E.R.: Shadow of Chernobyl Soundtrack",
+      "game": "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+      "composers": [],
+      "date": "2007-03-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/s-t-a-l-k-e-r-shadow-of-chernobyl",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=S.T.A.L.K.E.R.%3A+Shadow+of+Chernobyl+Soundtrack+S.T.A.L.K.E.R.%3A+Shadow+of+Chernobyl+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa4s4.jpg",
+      "notable": true
+    },
+    {
+      "id": "middle-earth-shadow-of-war",
+      "title": "Middle-earth: Shadow of War Soundtrack",
+      "game": "Middle-earth: Shadow of War",
+      "composers": [],
+      "date": "2017-10-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/middle-earth-shadow-of-war",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Middle-earth%3A+Shadow+of+War+Soundtrack+Middle-earth%3A+Shadow+of+War+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20pq.jpg",
+      "notable": true
+    },
+    {
+      "id": "prince-of-persia-the-two-thrones",
+      "title": "Prince of Persia: The Two Thrones Soundtrack",
+      "game": "Prince of Persia: The Two Thrones",
+      "composers": [],
+      "date": "2005-12-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/prince-of-persia-the-two-thrones",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Prince+of+Persia%3A+The+Two+Thrones+Soundtrack+Prince+of+Persia%3A+The+Two+Thrones+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ta0.jpg",
+      "notable": true
+    },
+    {
+      "id": "super-smash-bros",
+      "title": "Super Smash Bros. Soundtrack",
+      "game": "Super Smash Bros.",
+      "composers": [],
+      "date": "1999-01-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/super-smash-bros",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Super+Smash+Bros.+Soundtrack+Super+Smash+Bros.+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2tso.jpg",
+      "notable": true
+    },
+    {
+      "id": "abzu",
+      "title": "Abzu Soundtrack",
+      "game": "Abzu",
+      "composers": [],
+      "date": "2016-08-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/abzu",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Abzu+Soundtrack+Abzu+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28sy.jpg",
+      "notable": true
+    },
+    {
+      "id": "garry-s-mod",
+      "title": "Garry's Mod Soundtrack",
+      "game": "Garry's Mod",
+      "composers": [],
+      "date": "2004-12-24",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/garry-s-mod",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Garry%27s+Mod+Soundtrack+Garry%27s+Mod+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8pgw.jpg",
+      "notable": true
+    },
+    {
+      "id": "age-of-mythology",
+      "title": "Age of Mythology Soundtrack",
+      "game": "Age of Mythology",
+      "composers": [],
+      "date": "2002-10-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/age-of-mythology",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Age+of+Mythology+Soundtrack+Age+of+Mythology+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co907c.jpg",
+      "notable": true
+    },
+    {
+      "id": "return-to-castle-wolfenstein",
+      "title": "Return to Castle Wolfenstein Soundtrack",
+      "game": "Return to Castle Wolfenstein",
+      "composers": [],
+      "date": "2001-11-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/return-to-castle-wolfenstein",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Return+to+Castle+Wolfenstein+Soundtrack+Return+to+Castle+Wolfenstein+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xzr.jpg",
+      "notable": true
+    },
+    {
+      "id": "day-of-the-tentacle",
+      "title": "Day of the Tentacle Soundtrack",
+      "game": "Day of the Tentacle",
+      "composers": [],
+      "date": "1993-06-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/day-of-the-tentacle",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Day+of+the+Tentacle+Soundtrack+Day+of+the+Tentacle+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co30yt.jpg",
+      "notable": true
+    },
+    {
+      "id": "ratchet-clank",
+      "title": "Ratchet & Clank Soundtrack",
+      "game": "Ratchet & Clank",
+      "composers": [],
+      "date": "2016-04-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/ratchet-and-clank",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ratchet+%26+Clank+Soundtrack+Ratchet+%26+Clank+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co230k.jpg",
+      "notable": true
+    },
+    {
+      "id": "super-mario-kart",
+      "title": "Super Mario Kart Soundtrack",
+      "game": "Super Mario Kart",
+      "composers": [],
+      "date": "1992-08-27",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/super-mario-kart",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Super+Mario+Kart+Soundtrack+Super+Mario+Kart+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21w8.jpg",
+      "notable": true
+    },
+    {
+      "id": "darksiders",
+      "title": "Darksiders Soundtrack",
+      "game": "Darksiders",
+      "composers": [],
+      "date": "2010-01-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/darksiders",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Darksiders+Soundtrack+Darksiders+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29t0.jpg",
+      "notable": true
+    },
+    {
+      "id": "assassin-s-creed-valhalla",
+      "title": "Assassin's Creed Valhalla (Original Game Soundtrack)",
+      "game": "Assassin's Creed Valhalla",
+      "composers": [
+        "Jesper Kyd",
+        "Sarah Schachner",
+        "Einar Selvik"
+      ],
+      "date": "2020-11-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/assassins-creed-valhalla",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Assassin%27s+Creed+Valhalla+%28Original+Game+Soundtrack%29+Assassin%27s+Creed+Valhalla+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Udlu17ch1Nj",
+      "art": "https://yt3.googleusercontent.com/iW34LtCM-Td0IwNKolaE5J1mFJJc4KK6wmpTj6VLf4pFlpSqhUk5GqrSISAQB4utHYpIJgCsr6g1qKIyOA=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "hotline-miami-2-wrong-number",
+      "title": "Hotline Miami 2: Wrong Number Soundtrack",
+      "game": "Hotline Miami 2: Wrong Number",
+      "composers": [],
+      "date": "2015-03-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hotline-miami-2-wrong-number",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hotline+Miami+2%3A+Wrong+Number+Soundtrack+Hotline+Miami+2%3A+Wrong+Number+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wf6.jpg",
+      "notable": true
+    },
+    {
+      "id": "age-of-empires-iii",
+      "title": "Age of Empires III Soundtrack",
+      "game": "Age of Empires III",
+      "composers": [],
+      "date": "2005-10-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/age-of-empires-iii",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Age+of+Empires+III+Soundtrack+Age+of+Empires+III+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xy6.jpg",
+      "notable": true
+    },
+    {
+      "id": "resident-evil-3-nemesis",
+      "title": "Resident Evil 3: Nemesis Soundtrack",
+      "game": "Resident Evil 3: Nemesis",
+      "composers": [],
+      "date": "1999-09-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/resident-evil-3-nemesis",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Resident+Evil+3%3A+Nemesis+Soundtrack+Resident+Evil+3%3A+Nemesis+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vvb.jpg",
+      "notable": true
+    },
+    {
+      "id": "the-evil-within",
+      "title": "The Evil Within Soundtrack",
+      "game": "The Evil Within",
+      "composers": [],
+      "date": "2014-10-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-evil-within",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Evil+Within+Soundtrack+The+Evil+Within+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5wgs.jpg",
+      "notable": true
+    },
+    {
+      "id": "star-wars-the-force-unleashed",
+      "title": "Star Wars: The Force Unleashed Soundtrack",
+      "game": "Star Wars: The Force Unleashed",
+      "composers": [],
+      "date": "2008-09-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-the-force-unleashed",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+The+Force+Unleashed+Soundtrack+Star+Wars%3A+The+Force+Unleashed+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25xx.jpg",
+      "notable": true
+    },
+    {
+      "id": "duke-nukem-3d",
+      "title": "Duke Nukem 3D Soundtrack",
+      "game": "Duke Nukem 3D",
+      "composers": [],
+      "date": "1996-04-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/duke-nukem-3d",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Duke+Nukem+3D+Soundtrack+Duke+Nukem+3D+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y7x.jpg",
+      "notable": true
+    },
+    {
+      "id": "gothic-ii",
+      "title": "Gothic II Soundtrack",
+      "game": "Gothic II",
+      "composers": [],
+      "date": "2002-11-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gothic-ii",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gothic+II+Soundtrack+Gothic+II+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25ag.jpg",
+      "notable": true
+    },
+    {
+      "id": "wolfenstein-the-old-blood",
+      "title": "Wolfenstein: The Old Blood Soundtrack",
+      "game": "Wolfenstein: The Old Blood",
+      "composers": [],
+      "date": "2015-05-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/wolfenstein-the-old-blood",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wolfenstein%3A+The+Old+Blood+Soundtrack+Wolfenstein%3A+The+Old+Blood+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21et.jpg",
+      "notable": true
+    },
+    {
+      "id": "gothic",
+      "title": "Gothic Soundtrack",
+      "game": "Gothic",
+      "composers": [],
+      "date": "2001-10-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gothic",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gothic+Soundtrack+Gothic+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25r2.jpg",
+      "notable": true
+    },
+    {
+      "id": "crash-team-racing",
+      "title": "Crash Team Racing Soundtrack",
+      "game": "Crash Team Racing",
+      "composers": [],
+      "date": "1999-10-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/crash-team-racing",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Crash+Team+Racing+Soundtrack+Crash+Team+Racing+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7r52.jpg",
+      "notable": true
+    },
+    {
+      "id": "wii-sports",
+      "title": "Wii Sports Soundtrack",
+      "game": "Wii Sports",
+      "composers": [],
+      "date": "2006-11-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/wii-sports",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wii+Sports+Soundtrack+Wii+Sports+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3vge.jpg",
+      "notable": true
+    },
+    {
+      "id": "roblox",
+      "title": "Roblox Soundtrack",
+      "game": "Roblox",
+      "composers": [],
+      "date": "2006-09-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/roblox",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Roblox+Soundtrack+Roblox+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cociyw.jpg",
+      "notable": true
+    },
+    {
+      "id": "super-mario-3d-world",
+      "title": "Super Mario 3D World Soundtrack",
+      "game": "Super Mario 3D World",
+      "composers": [],
+      "date": "2013-11-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/super-mario-3d-world",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Super+Mario+3D+World+Soundtrack+Super+Mario+3D+World+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8wi.jpg",
+      "notable": true
+    },
+    {
+      "id": "the-legend-of-zelda-the-minish-cap",
+      "title": "The Legend of Zelda: The Minish Cap Soundtrack",
+      "game": "The Legend of Zelda: The Minish Cap",
+      "composers": [],
+      "date": "2004-11-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-the-minish-cap",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+Zelda%3A+The+Minish+Cap+Soundtrack+The+Legend+of+Zelda%3A+The+Minish+Cap+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nsk.jpg",
+      "notable": true
+    },
+    {
+      "id": "valiant-hearts-the-great-war",
+      "title": "Valiant Hearts: The Great War Soundtrack",
+      "game": "Valiant Hearts: The Great War",
+      "composers": [],
+      "date": "2014-06-24",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/valiant-hearts-the-great-war",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Valiant+Hearts%3A+The+Great+War+Soundtrack+Valiant+Hearts%3A+The+Great+War+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25zo.jpg",
+      "notable": true
+    },
+    {
+      "id": "hitman-2-silent-assassin",
+      "title": "Hitman 2: Silent Assassin (Original Soundtrack)",
+      "game": "Hitman 2: Silent Assassin",
+      "composers": [
+        "Jesper Kyd"
+      ],
+      "date": "2002-09-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hitman-2-silent-assassin",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hitman+2%3A+Silent+Assassin+%28Original+Soundtrack%29+Hitman+2%3A+Silent+Assassin+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_dSpsry7fCx0",
+      "art": "https://yt3.googleusercontent.com/kg6Z95sveoNS66hHZ6u4yO3dcuG8mGpEXN07wusAHVeMtGr_vCkA5yhWKqvo_ee-APd6q6FtPmp6PKnY=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "doom-3",
+      "title": "Doom 3 Soundtrack",
+      "game": "Doom 3",
+      "composers": [],
+      "date": "2004-08-03",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/doom-3",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Doom+3+Soundtrack+Doom+3+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v3n.jpg",
+      "notable": true
+    },
+    {
+      "id": "machinarium",
+      "title": "Machinarium Soundtrack",
+      "game": "Machinarium",
+      "composers": [],
+      "date": "2009-10-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/machinarium",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Machinarium+Soundtrack+Machinarium+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27lo.jpg",
+      "notable": true
+    },
+    {
+      "id": "the-binding-of-isaac",
+      "title": "The Binding of Isaac Soundtrack",
+      "game": "The Binding of Isaac",
+      "composers": [],
+      "date": "2011-09-28",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-binding-of-isaac",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Binding+of+Isaac+Soundtrack+The+Binding+of+Isaac+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qll.jpg",
+      "notable": true
+    },
+    {
+      "id": "indiana-jones-and-the-fate-of-atlantis",
+      "title": "Indiana Jones and the Fate of Atlantis Soundtrack",
+      "game": "Indiana Jones and the Fate of Atlantis",
+      "composers": [],
+      "date": "1992-06-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/indiana-jones-and-the-fate-of-atlantis--1",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Indiana+Jones+and+the+Fate+of+Atlantis+Soundtrack+Indiana+Jones+and+the+Fate+of+Atlantis+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ys2.jpg",
+      "notable": true
+    },
+    {
+      "id": "forza-horizon-4",
+      "title": "Forza Horizon 4 Soundtrack",
+      "game": "Forza Horizon 4",
+      "composers": [],
+      "date": "2018-10-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/forza-horizon-4",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Forza+Horizon+4+Soundtrack+Forza+Horizon+4+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e1a.jpg",
+      "notable": true
+    },
+    {
+      "id": "dead-space-3",
+      "title": "Dead Space 3 Soundtrack",
+      "game": "Dead Space 3",
+      "composers": [],
+      "date": "2013-02-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dead-space-3",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dead+Space+3+Soundtrack+Dead+Space+3+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2int.jpg",
+      "notable": true
+    },
+    {
+      "id": "command-conquer-red-alert-2",
+      "title": "Command & Conquer: Red Alert 2 Soundtrack",
+      "game": "Command & Conquer: Red Alert 2",
+      "composers": [],
+      "date": "2000-10-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/command-conquer-red-alert-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Command+%26+Conquer%3A+Red+Alert+2+Soundtrack+Command+%26+Conquer%3A+Red+Alert+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coar4c.jpg",
+      "notable": true
+    },
+    {
+      "id": "pokémon-silver-version",
+      "title": "Pokémon Silver Version Soundtrack",
+      "game": "Pokémon Silver Version",
+      "composers": [],
+      "date": "1999-11-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/pokemon-silver-version",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pok%C3%A9mon+Silver+Version+Soundtrack+Pok%C3%A9mon+Silver+Version+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pid.jpg",
+      "notable": true
+    },
+    {
+      "id": "dead-by-daylight",
+      "title": "Dead by Daylight Soundtrack",
+      "game": "Dead by Daylight",
+      "composers": [],
+      "date": "2016-06-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dead-by-daylight",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dead+by+Daylight+Soundtrack+Dead+by+Daylight+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5zky.jpg",
+      "notable": true
+    },
+    {
+      "id": "just-cause-3",
+      "title": "Just Cause 3 Soundtrack",
+      "game": "Just Cause 3",
+      "composers": [],
+      "date": "2015-11-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/just-cause-3",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Just+Cause+3+Soundtrack+Just+Cause+3+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab5n.jpg",
+      "notable": true
+    },
+    {
+      "id": "goldeneye-007",
+      "title": "GoldenEye 007 Soundtrack",
+      "game": "GoldenEye 007",
+      "composers": [],
+      "date": "1997-08-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/goldeneye-007",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=GoldenEye+007+Soundtrack+GoldenEye+007+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocckw.jpg",
+      "notable": true
+    },
+    {
+      "id": "the-elder-scrolls-v-skyrim-special-edition",
+      "title": "The Elder Scrolls V: Skyrim - Special Edition Soundtrack",
+      "game": "The Elder Scrolls V: Skyrim - Special Edition",
+      "composers": [],
+      "date": "2016-10-27",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-elder-scrolls-v-skyrim-special-edition",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Elder+Scrolls+V%3A+Skyrim+-+Special+Edition+Soundtrack+The+Elder+Scrolls+V%3A+Skyrim+-+Special+Edition+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vco.jpg",
+      "notable": true
+    },
+    {
+      "id": "star-wars-jedi-knight-jedi-academy",
+      "title": "Star Wars: Jedi Knight - Jedi Academy Soundtrack",
+      "game": "Star Wars: Jedi Knight - Jedi Academy",
+      "composers": [],
+      "date": "2003-09-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-jedi-knight-jedi-academy",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+Jedi+Knight+-+Jedi+Academy+Soundtrack+Star+Wars%3A+Jedi+Knight+-+Jedi+Academy+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5c44.jpg",
+      "notable": true
+    },
+    {
+      "id": "planescape-torment",
+      "title": "Planescape: Torment Soundtrack",
+      "game": "Planescape: Torment",
+      "composers": [],
+      "date": "1999-12-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/planescape-torment",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Planescape%3A+Torment+Soundtrack+Planescape%3A+Torment+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ggb.jpg",
+      "notable": true
+    },
+    {
+      "id": "xcom-2",
+      "title": "XCOM 2 Soundtrack",
+      "game": "XCOM 2",
+      "composers": [],
+      "date": "2016-02-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/xcom-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=XCOM+2+Soundtrack+XCOM+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1mvj.jpg",
+      "notable": true
+    },
+    {
+      "id": "tom-clancy-s-splinter-cell",
+      "title": "Tom Clancy's Splinter Cell Soundtrack",
+      "game": "Tom Clancy's Splinter Cell",
+      "composers": [],
+      "date": "2002-11-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tom-clancy-s-splinter-cell",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tom+Clancy%27s+Splinter+Cell+Soundtrack+Tom+Clancy%27s+Splinter+Cell+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95ri.jpg",
+      "notable": true
+    },
+    {
+      "id": "quake-iii-arena",
+      "title": "Quake III Arena Soundtrack",
+      "game": "Quake III Arena",
+      "composers": [],
+      "date": "1999-12-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/quake-iii-arena",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Quake+III+Arena+Soundtrack+Quake+III+Arena+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ybj.jpg",
+      "notable": true
+    },
+    {
+      "id": "psychonauts",
+      "title": "Psychonauts Soundtrack",
+      "game": "Psychonauts",
+      "composers": [],
+      "date": "2005-04-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/psychonauts",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Psychonauts+Soundtrack+Psychonauts+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob7ms.jpg",
+      "notable": true
+    },
+    {
+      "id": "tony-hawk-s-pro-skater-2",
+      "title": "Tony Hawk's Pro Skater 2 Soundtrack",
+      "game": "Tony Hawk's Pro Skater 2",
+      "composers": [],
+      "date": "2000-09-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tony-hawk-s-pro-skater-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tony+Hawk%27s+Pro+Skater+2+Soundtrack+Tony+Hawk%27s+Pro+Skater+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y77.jpg",
+      "notable": true
+    },
+    {
+      "id": "euro-truck-simulator-2",
+      "title": "Euro Truck Simulator 2 Soundtrack",
+      "game": "Euro Truck Simulator 2",
+      "composers": [],
+      "date": "2012-10-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/euro-truck-simulator-2",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Euro+Truck+Simulator+2+Soundtrack+Euro+Truck+Simulator+2+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7et5.jpg",
+      "notable": true
+    },
+    {
+      "id": "lego-star-wars-the-complete-saga",
+      "title": "LEGO Star Wars: The Complete Saga Soundtrack",
+      "game": "LEGO Star Wars: The Complete Saga",
+      "composers": [],
+      "date": "2007-11-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/lego-star-wars-the-complete-saga",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=LEGO+Star+Wars%3A+The+Complete+Saga+Soundtrack+LEGO+Star+Wars%3A+The+Complete+Saga+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrr.jpg",
+      "notable": true
+    },
+    {
+      "id": "mario-kart-ds",
+      "title": "Mario Kart DS Soundtrack",
+      "game": "Mario Kart DS",
+      "composers": [],
+      "date": "2005-11-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mario-kart-ds",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mario+Kart+DS+Soundtrack+Mario+Kart+DS+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9rx.jpg",
+      "notable": true
+    },
+    {
+      "id": "borderlands-the-pre-sequel",
+      "title": "Borderlands: The Pre-Sequel Soundtrack",
+      "game": "Borderlands: The Pre-Sequel",
+      "composers": [],
+      "date": "2014-10-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/borderlands-the-pre-sequel",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Borderlands%3A+The+Pre-Sequel+Soundtrack+Borderlands%3A+The+Pre-Sequel+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20tq.jpg",
+      "notable": true
+    },
+    {
+      "id": "new-super-mario-bros",
+      "title": "New Super Mario Bros. Soundtrack",
+      "game": "New Super Mario Bros.",
+      "composers": [],
+      "date": "2006-05-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/new-super-mario-bros",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=New+Super+Mario+Bros.+Soundtrack+New+Super+Mario+Bros.+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21rm.jpg",
+      "notable": true
+    },
+    {
+      "id": "spore",
+      "title": "Spore Soundtrack",
+      "game": "Spore",
+      "composers": [],
+      "date": "2008-09-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/spore",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Spore+Soundtrack+Spore+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ac9.jpg",
+      "notable": true
+    },
+    {
+      "id": "tom-clancy-s-the-division",
+      "title": "Tom Clancy's The Division Soundtrack",
+      "game": "Tom Clancy's The Division",
+      "composers": [],
+      "date": "2016-03-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tom-clancy-s-the-division",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tom+Clancy%27s+The+Division+Soundtrack+Tom+Clancy%27s+The+Division+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yvf.jpg",
+      "notable": true
+    },
+    {
+      "id": "prototype",
+      "title": "Prototype Soundtrack",
+      "game": "Prototype",
+      "composers": [],
+      "date": "2009-06-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/prototype",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Prototype+Soundtrack+Prototype+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ql2.jpg",
+      "notable": true
+    },
+    {
+      "id": "indigo-prophecy",
+      "title": "Indigo Prophecy Soundtrack",
+      "game": "Indigo Prophecy",
+      "composers": [],
+      "date": "2005-09-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/indigo-prophecy",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Indigo+Prophecy+Soundtrack+Indigo+Prophecy+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3rhh.jpg",
+      "notable": true
+    },
+    {
+      "id": "call-of-duty-infinite-warfare",
+      "title": "Call of Duty: Infinite Warfare (Original Soundtrack)",
+      "game": "Call of Duty: Infinite Warfare",
+      "composers": [
+        "Sarah Schachner"
+      ],
+      "date": "2016-11-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/call-of-duty-infinite-warfare",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Call+of+Duty%3A+Infinite+Warfare+%28Original+Soundtrack%29+Call+of+Duty%3A+Infinite+Warfare+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_PyLtPSX0jU1",
+      "art": "https://yt3.googleusercontent.com/lBNMVk1gpyNfkAwgfXcTHZSxClT9Hg_hP9mxyoUvF3S46p8Fdok2jVGkWjkCdFkkzFGZnn_HAMKEqujA=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "crysis-3",
+      "title": "Crysis 3 Soundtrack",
+      "game": "Crysis 3",
+      "composers": [],
+      "date": "2013-02-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/crysis-3",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Crysis+3+Soundtrack+Crysis+3+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2on3.jpg",
+      "notable": true
+    },
+    {
+      "id": "fallout-shelter",
+      "title": "Fallout Shelter Soundtrack",
+      "game": "Fallout Shelter",
+      "composers": [],
+      "date": "2015-06-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/fallout-shelter",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Fallout+Shelter+Soundtrack+Fallout+Shelter+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6p4w.jpg",
+      "notable": true
+    },
+    {
+      "id": "far-cry-3-blood-dragon",
+      "title": "Far Cry 3: Blood Dragon (Original Game Soundtrack)",
+      "game": "Far Cry 3: Blood Dragon",
+      "composers": [
+        "Power Glove"
+      ],
+      "date": "2013-04-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/far-cry-3-blood-dragon",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Far+Cry+3%3A+Blood+Dragon+%28Original+Game+Soundtrack%29+Far+Cry+3%3A+Blood+Dragon+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_JniLZvKli2G",
+      "art": "https://yt3.googleusercontent.com/eVY5RsPjCdoHugsb1dvwGL1GaTwAzDbGNTghjMZJ_-yQswyvZakmcKLWQeViog08JKr6VN17noWhuEXVxw=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "halo-3-odst",
+      "title": "Halo 3: ODST (Original Soundtrack)",
+      "game": "Halo 3: ODST",
+      "composers": [
+        "Halo",
+        "Martin O'Donnell",
+        "Michael Salvatori"
+      ],
+      "date": "2009-09-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/halo-3-odst",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Halo+3%3A+ODST+%28Original+Soundtrack%29+Halo+3%3A+ODST+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9HtGfAtDyX2",
+      "art": "https://yt3.googleusercontent.com/gZ3eZmSuV_hsw6wdWE0ZMUH-28d5722evqyV-PTJoiJUlDuHPF9ZqSuzvaLy8HkVIS1wXzuEABWXQnNucQ=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "marvel-s-guardians-of-the-galaxy",
+      "title": "Marvel's Guardians of the Galaxy (Original Video Game Soundtrack)",
+      "game": "Marvel's Guardians of the Galaxy",
+      "composers": [
+        "Richard Jacques"
+      ],
+      "date": "2021-10-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvels-guardians-of-the-galaxy",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Marvel%27s+Guardians+of+the+Galaxy+%28Original+Video+Game+Soundtrack%29+Marvel%27s+Guardians+of+the+Galaxy+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5BK1plEaChA",
+      "art": "https://yt3.googleusercontent.com/irvmZhgs4LyxJhFHEOvXKCGzcTFdCAjvdgVS3Mmqv8VJ3kc74OHGpKzQ6lrRawDwzbuXcRKvDPerQbo=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "quantum-break",
+      "title": "Quantum Break - Original Game Soundtrack",
+      "game": "Quantum Break",
+      "composers": [
+        "Petri Alanko"
+      ],
+      "date": "2016-04-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/quantum-break",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Quantum+Break+-+Original+Game+Soundtrack+Quantum+Break+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_lXyb73enNHh",
+      "art": "https://yt3.googleusercontent.com/N1W_HQU4gNLhs_o0iPNtXqE4M4EGNNYfV0rZtHPXYLTejM3P_dEyCrt6qc_cK81lRMOSrHCEFTb7UOdA=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "diablo-iv",
+      "title": "Diablo IV (Original Soundtrack)",
+      "game": "Diablo IV",
+      "composers": [
+        "Diablo",
+        "Blizzard Entertainment"
+      ],
+      "date": "2023-06-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/diablo-iv",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Diablo+IV+%28Original+Soundtrack%29+Diablo+IV+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QO488LET8m2",
+      "art": "https://yt3.googleusercontent.com/0lHW4ae4SjY4iJ7EdrTgRPKxoAiuneSjjpGxFerrkCLoog06ZJv1lVTlWUsen5I8IRw8uMPu1OZpLB8=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "broforce",
+      "title": "Broforce (Original Game Soundtrack)",
+      "game": "Broforce",
+      "composers": [
+        "Deon Van Heerden"
+      ],
+      "date": "2015-10-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/broforce",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Broforce+%28Original+Game+Soundtrack%29+Broforce+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_0s2Q26tQu5J",
+      "art": "https://yt3.googleusercontent.com/8HBGi_WYoVCj4Zo3u3tOfeDY20wbAn4MIE1TXq0CHTsQDt8r_qy8d2jKd7V7TRintNqXwT1OvLbH3jJupA=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "infamous",
+      "title": "inFAMOUS (Original Game Soundtrack)",
+      "game": "Infamous",
+      "composers": [
+        "Amon Tobin",
+        "James Dooley"
+      ],
+      "date": "2009-05-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/infamous",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=inFAMOUS+%28Original+Game+Soundtrack%29+Infamous+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QWC8LSPgczY",
+      "art": "https://yt3.googleusercontent.com/6zuJvDYSv6TCiUk1aDwPx27WEtqcD5UNx6sn23BC1R91dhSUzBcPAnGyWXuegRRdrtlolXvf7G7jIPbd=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "danganronpa-trigger-happy-havoc",
+      "title": "Danganronpa : Trigger Happy Havoc Original Soundtrack",
+      "game": "Danganronpa: Trigger Happy Havoc",
+      "composers": [
+        "Masafumi Takada"
+      ],
+      "date": "2010-11-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/danganronpa-trigger-happy-havoc",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Danganronpa+%3A+Trigger+Happy+Havoc+Original+Soundtrack+Danganronpa%3A+Trigger+Happy+Havoc+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_SjzLps8KIJR",
+      "art": "https://yt3.googleusercontent.com/7EViF-YD20b7fNA12jrT9gS61jxh5ZsqcPfKauRnh9owJjyLyrS08K9Swx_tA2gCG-VGOtvjOeb9XpQl=w544-h544-l90-rj",
+      "notable": true
+    },
+    {
+      "id": "bully",
+      "title": "Bully (Original Soundtrack)",
+      "game": "Bully",
+      "composers": [
+        "Shawn Lee"
+      ],
+      "date": "2006-10-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/bully",
+          "seenAt": "2026-07-28T22:35:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bully+%28Original+Soundtrack%29+Bully+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_eCmzNRF1eKX",
+      "art": "https://yt3.googleusercontent.com/Q_6iQoB-TqfH-WIFWSTN20AxjDKlRHlCLGXQsjS61Mm-tbe8_AZ1G_en-HmJW1G5I4cygXfpSI3iq04k=w544-h544-l90-rj",
       "notable": true
     }
   ]
