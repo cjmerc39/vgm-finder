@@ -24,6 +24,8 @@ import collect
 
 STATE_PATH = collect.ROOT / "collector" / "backfill-state.json"
 IGDB_BAR = 200          # rating_count floor: the "deep catalog" tier, ~900 games
+IGDB_RECENT_BAR = 15    # recent releases can't have old-game rating counts
+IGDB_RECENT_YEARS = 3
 NOALBUM_BAR = 400       # canon tier: games this notable get a search row even with no YTM album
 IGDB_PAGE = 500
 STEAM_TARGET = 600      # most-reviewed soundtracks to ingest overall
@@ -41,7 +43,7 @@ def steam_page_url(start):
             "&sort_by=Reviews_DESC&infinite=1&l=english&cc=US")
 
 
-def igdb_top_fetch(offset):
+def _igdb_query(where, offset):
     cid = os.environ.get("TWITCH_CLIENT_ID")
     secret = os.environ.get("TWITCH_CLIENT_SECRET")
     if not cid or not secret:
@@ -51,7 +53,7 @@ def igdb_top_fetch(offset):
         "grant_type": "client_credentials"}).json()["access_token"]
     query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, "
              f"involved_companies.company.name, involved_companies.developer; "
-             f"where rating_count >= {IGDB_BAR} & game_type = (0,4,8,9); "
+             f"where {where} & game_type = (0,4,8,9); "
              f"sort rating_count desc; limit {IGDB_PAGE}; offset {offset};")
     resp = requests.post("https://api.igdb.com/v4/games", data=query.encode(), timeout=30,
                          headers={"Client-ID": cid, "Authorization": f"Bearer {tok}"})
@@ -61,7 +63,12 @@ def igdb_top_fetch(offset):
 
 def default_fetch(url):
     if url.startswith("igdb-top:"):
-        return igdb_top_fetch(int(url.split(":", 1)[1]))
+        return _igdb_query(f"rating_count >= {IGDB_BAR}", int(url.split(":", 1)[1]))
+    if url.startswith("igdb-recent:"):
+        import time
+        cutoff = int(time.time()) - IGDB_RECENT_YEARS * 365 * 86400
+        return _igdb_query(f"rating_count >= {IGDB_RECENT_BAR} & first_release_date >= {cutoff}",
+                           int(url.split(":", 1)[1]))
     return collect.fetch_feed(url)
 
 
@@ -71,10 +78,11 @@ def load_state(path):
         if isinstance(d, dict):
             return {"steamStart": int(d.get("steamStart", 0)),
                     "igdbOffset": int(d.get("igdbOffset", 0)),
+                    "igdbRecentOffset": int(d.get("igdbRecentOffset", 0)),
                     "checked": list(d.get("checked", []))}
     except (OSError, ValueError):
         pass
-    return {"steamStart": 0, "igdbOffset": 0, "checked": []}
+    return {"steamStart": 0, "igdbOffset": 0, "igdbRecentOffset": 0, "checked": []}
 
 
 def steam_leg(releases, state, fetch_fn, seen_at):
@@ -95,16 +103,18 @@ def steam_leg(releases, state, fetch_fn, seen_at):
     return added
 
 
-def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at):
+def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
+             prefix="igdb-top", offset_key="igdbOffset", cap=None):
+    cap = YTM_CAP if cap is None else cap
     checked = set(state["checked"])
     looked = added = 0
     exhausted = False
-    while looked < YTM_CAP and not exhausted:
+    while looked < cap and not exhausted:
         try:
-            games = json.loads(fetch_fn(f"igdb-top:{state['igdbOffset']}"))
+            games = json.loads(fetch_fn(f"{prefix}:{state[offset_key]}"))
         except Exception as exc:
-            print(f"::warning::igdb backfill page {state['igdbOffset']} failed: {exc}")
-            return added, False
+            print(f"::warning::{prefix} backfill page {state[offset_key]} failed: {exc}")
+            return added, False, looked
         if not isinstance(games, list) or not games:
             exhausted = True
             break
@@ -118,7 +128,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at):
             if not name or not stamp:
                 checked.add(gid)
                 continue
-            if looked >= YTM_CAP:
+            if looked >= cap:
                 page_done = False
                 break
             looked += 1
@@ -155,11 +165,11 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at):
             if len(games) < IGDB_PAGE:
                 exhausted = True
             else:
-                state["igdbOffset"] += IGDB_PAGE
+                state[offset_key] += IGDB_PAGE
     state["checked"] = sorted(checked)
-    print(f"igdb leg: {looked} lookups, {len(checked)} games checked, {added} albums added"
+    print(f"{prefix} leg: {looked} lookups, {len(checked)} games checked, {added} albums added"
           + (", exhausted" if exhausted else ""))
-    return added, exhausted
+    return added, exhausted, looked
 
 
 TOPTRACKS_CAP_BACKFILL = 150
@@ -175,7 +185,11 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     before = json.dumps(releases, sort_keys=True, ensure_ascii=False)
 
     steam_leg(releases, state, fetch_fn, seen_at)
-    _, igdb_done = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at)
+    _, top_done, spent = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at)
+    _, recent_done, _ = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
+                                 prefix="igdb-recent", offset_key="igdbRecentOffset",
+                                 cap=YTM_CAP - spent)
+    igdb_done = top_done and recent_done
     fetched = collect.fill_top_tracks(releases, album_fn, cap=TOPTRACKS_CAP_BACKFILL)
     print(f"top tracks: {fetched} albums fetched")
 

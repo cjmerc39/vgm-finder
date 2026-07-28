@@ -18,6 +18,8 @@ def make_fetch(counter=None):
             counter.append(url)
         if url.startswith("igdb-top:"):
             return raw("igdb-games.json")  # 25 games < page size -> leg exhausts
+        if url.startswith("igdb-recent:"):
+            return b"[]"  # recent leg exhausts immediately in fixture runs
         if "store.steampowered.com" in url:
             return raw("steam-top-soundtracks.json")
         raise AssertionError("unexpected url " + url)
@@ -93,6 +95,8 @@ def test_backfill_gives_canon_games_search_rows_when_no_album_exists(tmp_path, m
     def fetch(url):
         if url.startswith("igdb-top:"):
             return page
+        if url.startswith("igdb-recent:"):
+            return b"[]"
         raise AssertionError(url)
     monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
     data_path = tmp_path / "releases.json"
@@ -106,6 +110,43 @@ def test_backfill_gives_canon_games_search_rows_when_no_album_exists(tmp_path, m
     assert row["ytmAlbumUrl"] is None  # tap falls back to the YTM search
     assert row["art"] == "https://images.igdb.com/igdb/image/upload/t_cover_big/co3p2d.jpg"
     assert row["ytmSearchUrl"].startswith("https://music.youtube.com/search?q=")
+
+
+def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatch):
+    recent = json.dumps([{"id": 901, "name": "Clair Obscur: Expedition 33", "slug": "clair-obscur",
+                          "first_release_date": 1745452800, "rating_count": 890,
+                          "involved_companies": [{"developer": True, "company": {"name": "Sandfall Interactive"}}]}]).encode()
+    def fetch(url):
+        if url.startswith("igdb-top:"):
+            return b"[]"
+        if url.startswith("igdb-recent:"):
+            return recent
+        raise AssertionError(url)
+    hit = [{"resultType": "album", "browseId": "MPREb_co33", "year": "2025",
+            "title": "Clair Obscur: Expedition 33 (Original Soundtrack)",
+            "artists": [{"name": "Lorien Testard"}],
+            "thumbnails": [{"url": "https://img.example/co33.jpg", "width": 544}]}]
+    monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
+    data_path = tmp_path / "releases.json"
+    state_path = tmp_path / "s.json"
+    lookups = []
+    def resolve(q):
+        lookups.append(q)
+        return hit
+    backfill.run(fetch_fn=fetch, resolve_fn=resolve, album_fn=no_album,
+                 data_path=data_path, state_path=state_path, now=NOW)
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+    row = data["releases"][0]
+    assert row["game"] == "Clair Obscur: Expedition 33"
+    assert row["company"] == "Sandfall Interactive"
+    assert row["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_co33"
+    state = json.loads(state_path.read_text(encoding="utf-8"))
+    assert state["checked"] == [901] and "igdbRecentOffset" in state
+    # second run: the recent game is in the shared checked set — no repeat lookup
+    lookups.clear()
+    backfill.run(fetch_fn=fetch, resolve_fn=resolve, album_fn=no_album,
+                 data_path=data_path, state_path=state_path, now=NOW)
+    assert lookups == []
 
 
 def test_backfill_steam_cursor_pages_across_runs(tmp_path, monkeypatch):
