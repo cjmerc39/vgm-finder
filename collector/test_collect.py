@@ -357,6 +357,25 @@ def test_fill_top_tracks_caps_and_never_refetches():
     assert rows[3]["topTracks"] == []  # empty result stays a completed check
 
 
+def test_is_console_classification():
+    assert collect.is_console({"platforms": [6]}) is False              # PC only
+    assert collect.is_console({"platforms": [6, 14, 3]}) is False       # PC/Mac/Linux
+    assert collect.is_console({"platforms": [6, 130]}) is True          # PC + Switch
+    assert collect.is_console({"platforms": [508]}) is True             # unknown/future id counts as console
+    assert collect.is_console({"platforms": [39, 34]}) is False         # mobile-only
+    assert collect.is_console({}) is None                               # unknown stays unknown
+
+
+def test_merge_carries_console_flag():
+    releases = []
+    collect.merge(releases, [{"title": "Tunic Soundtrack", "url": "https://a.example/t",
+                              "date": "2026-06-01", "console": True}], src("a"), SEEN)
+    assert releases[0]["console"] is True
+    collect.merge(releases, [{"title": "Tunic Soundtrack", "url": "https://b.example/t",
+                              "date": "2026-06-01", "console": False}], src("b"), SEEN)
+    assert releases[0]["console"] is True  # known value never overwritten
+
+
 def test_company_of_prefers_the_developer():
     g = {"involved_companies": [
         {"developer": False, "company": {"name": "Big Publisher"}},

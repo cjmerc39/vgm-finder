@@ -52,7 +52,7 @@ def _igdb_query(where, offset):
     tok = requests.post("https://id.twitch.tv/oauth2/token", timeout=30, params={
         "client_id": cid, "client_secret": secret,
         "grant_type": "client_credentials"}).json()["access_token"]
-    query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, "
+    query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, platforms, "
              f"involved_companies.company.name, involved_companies.developer; "
              f"where {where} & game_type = (0,4,8,9); "
              f"sort rating_count desc; limit {IGDB_PAGE}; offset {offset};")
@@ -141,7 +141,7 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
         cover = (g.get("cover") or {}).get("image_id")
         cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
                      if cover else None)
-        item = {"game": name, "company": collect.company_of(g),
+        item = {"game": name, "company": collect.company_of(g), "console": collect.is_console(g),
                 "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
                 "date": when.strftime("%Y-%m-%d")}
         if hit:
@@ -195,9 +195,10 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
             cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
                          if cover else None)
             company = collect.company_of(g)
+            console = collect.is_console(g)
             if hit:
                 item = {"title": hit["title"], "game": name, "composers": hit["composers"],
-                        "company": company,
+                        "company": company, "console": console,
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"),
                         "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url}
@@ -206,7 +207,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                 # compilations): a search row beats absence, and it upgrades
                 # itself by slug collision if a real album ever appears
                 item = {"title": f"{name} Soundtrack", "game": name, "composers": [],
-                        "company": company,
+                        "company": company, "console": console,
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"), "art": cover_url}
             else:

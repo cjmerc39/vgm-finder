@@ -194,7 +194,7 @@ function blank(){ return { status:'unsorted', rating:null, liked:false, note:'',
 function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', libSort:'listenedOn', libLiked:false, showHidden:false }; }
+function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, libSort:'listenedOn', libLiked:false, showHidden:false }; }
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -218,6 +218,7 @@ function validateState(d){
   s.view = VIEWS.includes(d.view) ? d.view : 'feed';
   s.feedSort = FEED_SORTS.includes(d.feedSort) ? d.feedSort : 'date';
   s.feedCo = ['all', 'big', 'indie'].includes(d.feedCo) ? d.feedCo : 'all';
+  s.feedConsole = d.feedConsole === true;
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
   s.showHidden = d.showHidden === true;
@@ -264,6 +265,7 @@ function setView(v){ if(VIEWS.includes(v)){ S.view = v; save(); renderAll(); } }
 function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
 function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
+function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(); }
 function toggleExpand(id){ EXPANDED = EXPANDED === id ? null : id; renderList(); }
 function toggleLibLiked(){ S.libLiked = !S.libLiked; save(); renderAll(); }
 function toggleQueued(id){ editEntry(id, e => {
@@ -337,6 +339,7 @@ function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, 
 function feedRows(){
   let rows = sorted().filter(r => E(r.id).status !== 'hidden');
   if(S.feedCo !== 'all') rows = rows.filter(r => coTier(r) === S.feedCo);
+  if(S.feedConsole) rows = rows.filter(r => r.console === true);
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
   else if(S.feedSort === 'az')
@@ -407,7 +410,8 @@ function renderControls(){
     el.innerHTML = sorts.map(([k, name]) =>
       `<button data-fs="${k}" class="${S.feedSort === k ? 'on' : ''}">${name}</button>`).join('') +
       cos.map(([k, name]) =>
-      `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('');
+      `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('') +
+      `<button id="fconsole" class="${S.feedConsole ? 'on' : ''}" aria-pressed="${S.feedConsole}">console</button>`;
     return;
   }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
@@ -627,6 +631,7 @@ document.getElementById('subctl').addEventListener('click', e => {
   if(f){ setFeedSort(f.dataset.fs); return; }
   const c = e.target.closest('button[data-fc]');
   if(c){ setFeedCo(c.dataset.fc); return; }
+  if(e.target.closest('#fconsole')){ toggleFeedConsole(); return; }
   const s = e.target.closest('button[data-ls]');
   if(s){ setLibSort(s.dataset.ls); return; }
   if(e.target.closest('#libliked')) toggleLibLiked();

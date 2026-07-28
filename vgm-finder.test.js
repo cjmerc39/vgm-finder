@@ -12,12 +12,12 @@ const FIXTURE = {
   releases: [
     { id: 'chrono-cross-the-radical-dreamers-edition', title: 'Chrono Cross: The Radical Dreamers Edition OST',
       albumTitle: 'Chrono Cross: The Radical Dreamers Edition (Original Soundtrack)',
-      game: 'Chrono Cross', composers: ['Yasunori Mitsuda'], date: '2026-06-01',
+      game: 'Chrono Cross', composers: ['Yasunori Mitsuda'], date: '2026-06-01', console: true,
       sources: [{ name: 'vgmo', type: 'editorial', url: 'https://vgmonline.net/a', seenAt: '2026-07-01T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Chrono+Cross%3A+The+Radical+Dreamers+Edition+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'hades-ii', title: 'Hades II Original Soundtrack', game: 'Hades II', composers: ['Darren Korb'], date: '2026-07-20',
-      company: 'Supergiant Games',
+      company: 'Supergiant Games', console: true,
       topTracks: [{ title: 'No Escape', plays: '1.2M plays' }, { title: 'The Painted World', plays: '900K plays' },
                   { title: 'Coral Crown', plays: '500K plays' }],
       sources: [{ name: 'nowplaying', type: 'editorial', url: 'https://nowplaying.cool/h', seenAt: '2026-07-10T10:00:00Z' },
@@ -25,7 +25,7 @@ const FIXTURE = {
       ytmSearchUrl: 'https://music.youtube.com/search?q=Hades+II+Original+Soundtrack+soundtrack',
       ytmAlbumUrl: 'https://music.youtube.com/playlist?list=OLAK5uy_hades2',
       art: 'https://example.com/art/hades"><script>bad</script>.jpg', notable: true },
-    { id: 'ratchet-clank-rift-apart', title: 'Ratchet & Clank: Rift Apart OST', game: null, composers: [], date: '2026-07-18',
+    { id: 'ratchet-clank-rift-apart', title: 'Ratchet & Clank: Rift Apart OST', game: null, composers: [], date: '2026-07-18', console: true,
       sources: [{ name: 'blipblop', type: 'editorial', url: 'https://blipblop.net/r', seenAt: '2026-07-12T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
@@ -35,12 +35,12 @@ const FIXTURE = {
                 { name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z2', seenAt: '2026-07-14T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
-    { id: 'evil', title: '<img src=x onerror="window.__pwned=1">Evil OST', game: null, composers: [], date: '2026-07-18',
+    { id: 'evil', title: '<img src=x onerror="window.__pwned=1">Evil OST', game: null, composers: [], date: '2026-07-18', console: false,
       sources: [{ name: 'r/gamemusic', type: 'community', url: 'https://reddit.com/e', seenAt: '2026-07-14T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Evil+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'fresh-drop', title: 'Fresh Drop: A Brand New Soundtrack', game: 'Fresh Drop', composers: ['New Person'], date: '2026-07-28',
-      company: 'Nintendo',
+      company: 'Nintendo', console: true,
       sources: [{ name: 'nowplaying', type: 'editorial', url: 'https://nowplaying.cool/f', seenAt: '2026-07-27T09:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Fresh+Drop%3A+A+Brand+New+Soundtrack+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
@@ -150,6 +150,12 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(stored().feedCo === 'indie', 'company facet persists');
   d.querySelector('#subctl button[data-fc="all"]').click(); await sleep(20);
   assert(rows().length === 5, 'all restores the unfaceted feed');
+  d.querySelector('#fconsole').click(); await sleep(20);
+  assert(rows().length === 4 && rowById('ゼルダの伝説') === null,
+    'console filter keeps confirmed console games, drops PC-only and unknown');
+  assert(stored().feedConsole === true, 'console filter persists');
+  d.querySelector('#fconsole').click(); await sleep(20);
+  assert(rows().length === 5, 'console filter toggles back off');
 
   // ---------- expand, then listen ----------
   rowById('ratchet-clank-rift-apart').click();

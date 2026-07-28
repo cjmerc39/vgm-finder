@@ -49,7 +49,7 @@ def igdb_fetch():
     now = int(time.time())
     start = now - IGDB_WINDOW_DAYS * 86400
     # game_type replaced the old (now dead) category field; 0/4/8/9 = main/expansion/remake/remaster
-    query = (f"fields name, slug, first_release_date, hypes, game_type, cover.image_id, "
+    query = (f"fields name, slug, first_release_date, hypes, game_type, cover.image_id, platforms, "
              f"involved_companies.company.name, involved_companies.developer; "
              f"where first_release_date >= {start} & first_release_date <= {now} "
              f"& game_type = (0,4,8,9) & hypes >= {IGDB_HYPES_MIN}; "
@@ -329,6 +329,18 @@ def company_of(game):
     return name or None
 
 
+# IGDB platform ids that are NOT consoles; anything else (PlayStation, Xbox,
+# Nintendo, handhelds, and any future id) counts as a console release
+_NONCONSOLE_PLATFORMS = {3, 6, 13, 14, 34, 39, 82, 163}  # Linux, PC, DOS, Mac, Android, iOS, web, SteamVR
+
+
+def is_console(game):
+    platforms = game.get("platforms") or []
+    if not platforms:
+        return None  # unknown, not "PC-only"
+    return any(p not in _NONCONSOLE_PLATFORMS for p in platforms)
+
+
 def parse_igdb(raw, resolve):
     games = json.loads(raw)
     if not isinstance(games, list):
@@ -350,7 +362,7 @@ def parse_igdb(raw, resolve):
         cover = (g.get("cover") or {}).get("image_id")
         items.append({
             "title": hit["title"], "game": name, "composers": hit["composers"],
-            "company": company_of(g),
+            "company": company_of(g), "console": is_console(g),
             "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
             "date": when.strftime("%Y-%m-%d"),
             "ytmAlbumUrl": hit["url"],
@@ -480,6 +492,8 @@ def merge(releases, items, source, seen_at):
                 target["albumTitle"] = it["albumTitle"]
             if not target.get("company") and it.get("company"):
                 target["company"] = it["company"]
+            if target.get("console") is None and it.get("console") is not None:
+                target["console"] = it["console"]
             if not target.get("game") and it.get("game"):
                 target["game"] = it["game"]
             if not target.get("composers") and it.get("composers"):
@@ -498,6 +512,8 @@ def merge(releases, items, source, seen_at):
                 entry["albumTitle"] = it["albumTitle"]
             if it.get("company"):
                 entry["company"] = it["company"]
+            if it.get("console") is not None:
+                entry["console"] = it["console"]
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
