@@ -641,7 +641,7 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
 
     looked, filled = resolve_albums(releases, resolve_fn, now)
     print(f"album resolver: {looked} lookups, {filled} filled")
-    fetched = fill_tracks(releases, album_fn, itunes_fn)
+    fetched = fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP)
     print(f"tracklists: {fetched} looked up")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:

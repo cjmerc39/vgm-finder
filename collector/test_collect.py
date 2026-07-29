@@ -586,7 +586,8 @@ def test_new_entry_shape_matches_schema():
 
 # ---------------- end to end against all fixtures ----------------
 
-def test_run_collects_all_sources_and_is_stable(tmp_path):
+def test_run_collects_all_sources_and_is_stable(tmp_path, monkeypatch):
+    monkeypatch.setattr(collect, "TRACKS_CAP", 100)  # settle every row in run one
     data_path = tmp_path / "releases.json"
     assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve, album_fn=no_album, itunes_fn=no_itunes,
                        data_path=data_path, now=NOW) == 0
