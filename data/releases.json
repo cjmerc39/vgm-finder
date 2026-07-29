@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T02:16:29Z",
+  "updatedAt": "2026-07-29T02:19:13Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -26397,7 +26397,9 @@
       "id": "blasphemous-2",
       "title": "Blasphemous 2 - OST",
       "game": "Blasphemous 2",
-      "composers": [],
+      "composers": [
+        "Carlos Viola"
+      ],
       "date": "2023-08-24",
       "sources": [
         {
@@ -26405,10 +26407,16 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/2500170/Blasphemous_2__OST/",
           "seenAt": "2026-07-28T21:29:20Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/blasphemous-ii",
+          "seenAt": "2026-07-29T02:19:13Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Blasphemous+2+-+OST+Blasphemous+2+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_6UqmVAg0yYe",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2500170/header.jpg",
       "notable": true,
       "tracks": [
@@ -26536,7 +26544,9 @@
           "title": "Jardín de Altos Coros",
           "plays": null
         }
-      ]
+      ],
+      "company": "The Game Kitchen",
+      "console": true
     },
     {
       "id": "othercide",
@@ -127538,6 +127548,307 @@
           "title": "End of an Era",
           "plays": "165K plays",
           "videoId": "cg2uFZskNKw"
+        }
+      ]
+    },
+    {
+      "id": "starcraft-2-legacy-of-the-void",
+      "title": "StarCraft 2: Legacy of the Void Soundtrack",
+      "game": "StarCraft II: Legacy of the Void",
+      "composers": [
+        "StarCraft",
+        "Blizzard Entertainment"
+      ],
+      "date": "2015-11-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/starcraft-ii-legacy-of-the-void",
+          "seenAt": "2026-07-29T02:19:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=StarCraft+2%3A+Legacy+of+the+Void+Soundtrack+StarCraft+II%3A+Legacy+of+the+Void+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YLhkMYEu94L",
+      "art": "https://yt3.googleusercontent.com/NNpM9LFdiHlxPseE8pYq6Y4QBC1WAE_Jm5RNC_J5EojY901OTHDTcDN5Kx51lDq_5q42D9m18osuYDLd=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Blizzard Entertainment",
+      "console": false,
+      "tracks": [
+        {
+          "title": "The Stars Our Home",
+          "plays": "45K plays",
+          "videoId": "FCvzNrHoTME"
+        },
+        {
+          "title": "Khala's End",
+          "plays": "15K plays",
+          "videoId": "R8nIbXm5Y2g"
+        },
+        {
+          "title": "Valor My Shield",
+          "plays": "16K plays",
+          "videoId": "gPFNP7JtSos"
+        },
+        {
+          "title": "Oblivion Awaits",
+          "plays": "12K plays",
+          "videoId": "k36tCkN5l8s"
+        },
+        {
+          "title": "Attack on Korhal",
+          "plays": "13K plays",
+          "videoId": "IiKfPVblcKg"
+        },
+        {
+          "title": "The Keystone",
+          "plays": "8K plays",
+          "videoId": "o_Y-PapbQlY"
+        },
+        {
+          "title": "We Stand Ready",
+          "plays": "13K plays",
+          "videoId": "WU8S5_f-VC4"
+        },
+        {
+          "title": "The Fall of Shakuras",
+          "plays": "10K plays",
+          "videoId": "iZXY4Zu6iag"
+        },
+        {
+          "title": "Blades of Justice",
+          "plays": "22K plays",
+          "videoId": "HG9gmtVcnA4"
+        },
+        {
+          "title": "Last Stand",
+          "plays": "24K plays",
+          "videoId": "Napn_E0ReWg"
+        },
+        {
+          "title": "The Preserver",
+          "plays": "6K plays",
+          "videoId": "iO9fktiiGcQ"
+        },
+        {
+          "title": "My Path Is Set",
+          "plays": "8.8K plays",
+          "videoId": "O1YmTEvJtN8"
+        },
+        {
+          "title": "The Golden Armada",
+          "plays": "50K plays",
+          "videoId": "yzZqOr48n5I"
+        },
+        {
+          "title": "The Dark Voice",
+          "plays": "8.4K plays",
+          "videoId": "AffRwdGRKGw"
+        },
+        {
+          "title": "Unity",
+          "plays": "35K plays",
+          "videoId": "EFq8MFf0TNA"
+        },
+        {
+          "title": "Honor Guide Me",
+          "plays": "12K plays",
+          "videoId": "BRF8c7Ghakc"
+        },
+        {
+          "title": "Second Chances",
+          "plays": "6.4K plays",
+          "videoId": "BcU4y_yKndg"
+        },
+        {
+          "title": "The Firstborn",
+          "plays": "14K plays",
+          "videoId": "MjBRgGrKzG4"
+        },
+        {
+          "title": "The Spear of Adun",
+          "plays": "7.6K plays",
+          "videoId": "xIK9k0wPb-w"
+        },
+        {
+          "title": "Holding Up the Sky",
+          "plays": "25K plays",
+          "videoId": "0xKDCrdPByU"
+        },
+        {
+          "title": "My Life for Aiur",
+          "plays": "13K plays",
+          "videoId": "EQOtg7U1GsE"
+        }
+      ]
+    },
+    {
+      "id": "warhammer-40-000-space-marine-2",
+      "title": "Warhammer 40,000: Space Marine 2 (Original Soundtrack)",
+      "game": "Warhammer 40,000: Space Marine II",
+      "composers": [
+        "Nima Fakhrara & Steve Molitz"
+      ],
+      "date": "2024-09-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/warhammer-40000-space-marine-ii",
+          "seenAt": "2026-07-29T02:19:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Warhammer+40%2C000%3A+Space+Marine+2+%28Original+Soundtrack%29+Warhammer+40%2C000%3A+Space+Marine+II+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NCdfRwDvqa3",
+      "art": "https://yt3.googleusercontent.com/DUUZq_p0f4hJWdmhNtDXlAIFGCriB8KBdLd5-g8dZc19jOYoyPcvcmiUf-F0musXOGo-GpOfQhGAyZxiBA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Saber Interactive",
+      "console": true,
+      "tracks": [
+        {
+          "title": "Brood Tidings",
+          "plays": "226K plays",
+          "videoId": "Km5bwxNs71c"
+        },
+        {
+          "title": "Death Is My Duty",
+          "plays": "104K plays",
+          "videoId": "8bkZXPLBwTU"
+        },
+        {
+          "title": "Intrepid",
+          "plays": "103K plays",
+          "videoId": "kYge0PZSOSE"
+        },
+        {
+          "title": "Chitinous Swarm",
+          "plays": "53K plays",
+          "videoId": "TLQGwVYY3-M"
+        },
+        {
+          "title": "Onslaught",
+          "plays": "100K plays",
+          "videoId": "SISNd6oZGLY"
+        },
+        {
+          "title": "Skyfire",
+          "plays": "189K plays",
+          "videoId": "YfpTwnZUz4Q"
+        },
+        {
+          "title": "Severance Ambient",
+          "plays": "38K plays",
+          "videoId": "a-ZTGyLdqZk"
+        },
+        {
+          "title": "Severance Combat",
+          "plays": "100K plays",
+          "videoId": "-jk5mfJ-JhE"
+        },
+        {
+          "title": "Machinus Divinitus Intro",
+          "plays": "31K plays",
+          "videoId": "fxs90L_Uu3M"
+        },
+        {
+          "title": "Machinus Divinitus Combat",
+          "plays": "52K plays",
+          "videoId": "t523O187ick"
+        },
+        {
+          "title": "Sons of Magnus",
+          "plays": "33K plays",
+          "videoId": "ZbhmZHVF2JI"
+        },
+        {
+          "title": "Warp Whispers",
+          "plays": "25K plays",
+          "videoId": "oaMrSUpAVog"
+        },
+        {
+          "title": "Cry of Heresy",
+          "plays": "40K plays",
+          "videoId": "kGYSBg85UIw"
+        },
+        {
+          "title": "Servant of the Machine Intro",
+          "plays": "23K plays",
+          "videoId": "lupAzoujWPM"
+        },
+        {
+          "title": "Voidsong",
+          "plays": "115K plays",
+          "videoId": "gYX-VJWer0Y"
+        },
+        {
+          "title": "Dust in Armour",
+          "plays": "25K plays",
+          "videoId": "91rK8rbzGYY"
+        },
+        {
+          "title": "The Resilient",
+          "plays": "50K plays",
+          "videoId": "AlB6UhHmkCM"
+        },
+        {
+          "title": "Imurah Phases",
+          "plays": "56K plays",
+          "videoId": "pEukIJY2PTE"
+        },
+        {
+          "title": "Demerium Battle Plan",
+          "plays": "19K plays",
+          "videoId": "5D099pcnQYY"
+        },
+        {
+          "title": "Sub-orbital Drop",
+          "plays": "28K plays",
+          "videoId": "1GXpA4ShNtE"
+        },
+        {
+          "title": "Courage and Honour",
+          "plays": "82K plays",
+          "videoId": "oJ-NqqCdNbo"
+        },
+        {
+          "title": "There Is Only War",
+          "plays": "87K plays",
+          "videoId": "bGESJArTR-k"
+        },
+        {
+          "title": "The Scourge",
+          "plays": "21K plays",
+          "videoId": "6RwoJKKkjyk"
+        },
+        {
+          "title": "Imurah",
+          "plays": "27K plays",
+          "videoId": "BQshadhpMKo"
+        },
+        {
+          "title": "Leuze's Gambit",
+          "plays": "18K plays",
+          "videoId": "wtPqlF0hCVc"
+        },
+        {
+          "title": "Imurah's Ascension",
+          "plays": "24K plays",
+          "videoId": "0LmM1R8J7qo"
+        },
+        {
+          "title": "The Might of the Emperor",
+          "plays": "70K plays",
+          "videoId": "h1Mzwxxsys4"
+        },
+        {
+          "title": "Chapter Master",
+          "plays": "90K plays",
+          "videoId": "GIsupMveeVw"
+        },
+        {
+          "title": "Duty Without End Outro",
+          "plays": "153K plays",
+          "videoId": "e9nRSHiFcW4"
         }
       ]
     }
