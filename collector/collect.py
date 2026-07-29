@@ -397,15 +397,42 @@ def _numfold(norm):
     return " ".join(str(_ROMAN_TOKENS[t]) if t in _ROMAN_TOKENS else t for t in norm.split())
 
 
+# serial tribute acts: real artist names that are never the game's composer
+_COVERS_ARTISTS = {"london music works", "city of prague philharmonic orchestra",
+                   "vitamin string quartet", "geek music", "l'orchestra cinematique",
+                   "rmaster", "video game players", "8-bit arcade", "piano tribute players",
+                   "the marcus hedges trend orchestra", "magnus deus", "sheet music boss"}
+
+# publisher wording that marks an album as the official release
+_OFFICIAL_WORDING = re.compile(
+    r"\bsoundtracks?\b|\boriginal\s+(game\s+)?(music|score|sound)|\bthe score\b",
+    re.IGNORECASE)
+
+
 def _hit_from(r):
     n = normalize_title(r.get("title", ""))
+    title = r.get("title", "")
     artists = [a["name"] for a in r.get("artists", []) if a.get("name")]
+    if any(a.lower() in _COVERS_ARTISTS for a in artists):
+        return None
     composers = [a for a in artists
                  if a.lower() != "various artists" and normalize_title(a) != n]
-    if not composers and not any(a.lower() == "various artists" for a in artists):
-        return None  # only credit is the album's own name: too ambiguous
-    # "Various Artists" is licensed-compilation convention (Hi-Fi Rush, sports
-    # titles) — a legitimate credit that just names no composer
+    if not composers:
+        if not any(a.lower() == "various artists" for a in artists):
+            # the only credit is the album's own name. Publishers do run the
+            # artist page under the game's name ("Horizon Forbidden West"),
+            # so official soundtrack wording on a distinctive multi-word name
+            # vouches for it; single-word self-credits ("Lifted" by Lifted)
+            # collide with band namespaces and stay too ambiguous
+            if len(n.split()) < 2 or not _OFFICIAL_WORDING.search(title) \
+                    or _GAAS_BLACKLIST.search(title):
+                return None
+        # "Various Artists" is licensed-compilation convention (Hi-Fi Rush,
+        # sports titles, "The Music of GTA V") — but fan tributes hide behind
+        # it too ("Music from The Legend of Zelda"), so a VA-only credit must
+        # carry official wording and dodge the tribute vocabulary
+        elif not _OFFICIAL_WORDING.search(title) or _GAAS_BLACKLIST.search(title):
+            return None
     thumbs = sorted((t for t in r.get("thumbnails", []) if t.get("url")),
                     key=lambda t: t.get("width") or 0)
     return {"title": r["title"], "composers": composers,
@@ -449,7 +476,7 @@ _TOKENS_OK = {"the", "a", "an", "and", "of", "vol", "volume", "original", "offic
               "inspired", "by", "alpha", "beta"}  # seed-vouched; alpha/beta are volume names (Minecraft)
 
 
-def _match_album_tokens(results, game_name):
+def _match_album_tokens(results, game_name, year=None):
     """Seed-vouched relaxation: the album's content words must equal the
     game's content words — "Sly Cooper Vol. I: The Thievius Raccoonus
     (Original Videogame Soundtrack)" passes for Sly Cooper and the Thievius
@@ -466,6 +493,7 @@ def _match_album_tokens(results, game_name):
             wants.append(head)
     if not wants[0]:
         return None
+    bare_name = _numeral_tail(normalize_title(game_name)) is None
     for r in results or []:
         if r.get("resultType") != "album" or not r.get("browseId"):
             continue
@@ -474,13 +502,22 @@ def _match_album_tokens(results, game_name):
         cand = content(normalize_title(r.get("title", "")))
         if cand not in wants:
             continue
+        if year is not None and bare_name:
+            # same era rule as the strict tier: bare franchise names span
+            # reboots (Tomb Raider 1996/2013), so a dated album must sit
+            # near the game
+            try:
+                if r.get("year") and abs(int(r["year"]) - year) > 2:
+                    continue
+            except (TypeError, ValueError):
+                pass
         hit = _hit_from(r)
         if hit:
             return hit
     return None
 
 
-def _match_album_contains(results, game_name):
+def _match_album_contains(results, game_name, year=None):
     """Seed-vouched containment: the album title carries the full game name
     plus soundtrack wording ("Portal 2: Songs to Test By (Original Game
     Soundtrack)"), with the live-service blacklist applied."""
@@ -488,6 +525,7 @@ def _match_album_contains(results, game_name):
             if t not in _TOKENS_OK and t != "i"}
     if not want:
         return None
+    bare_name = _numeral_tail(normalize_title(game_name)) is None
     for r in results or []:
         if r.get("resultType") != "album" or not r.get("browseId"):
             continue
@@ -498,6 +536,12 @@ def _match_album_contains(results, game_name):
                 if t not in _TOKENS_OK and t != "i"}
         if not want.issubset(cand):
             continue
+        if year is not None and bare_name:
+            try:
+                if r.get("year") and abs(int(r["year"]) - year) > 2:
+                    continue
+            except (TypeError, ValueError):
+                pass
         hit = _hit_from(r)
         if hit:
             return hit
@@ -750,6 +794,7 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
     """Fill ytmAlbumUrl for recent rows that lack one, with the same strict
     matcher. Bounded per run; unresolved rows retry until they age out."""
     cutoff = (now - timedelta(days=RESOLVE_WINDOW_DAYS)).strftime("%Y-%m-%d")
+    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
     looked = filled = 0
     for r in releases:
         if not r.get("date") or r["date"] < cutoff:
@@ -760,14 +805,22 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
             break
         looked += 1
         norm = normalize_title(r["title"])
+        year = None
+        try:
+            year = int(r["date"][:4])
+        except (TypeError, ValueError):
+            pass
         try:
             results = resolve(_query(r["title"]))
         except Exception:
             continue
-        hit = _match_album(results, norm) or _match_album_within(results, norm)
+        hit = _match_album(results, norm, year=year) or _match_album_within(results, norm)
         if not hit:
             continue
         if not r.get("ytmAlbumUrl"):
+            if hit["url"] in claimed:
+                continue  # one album, one row: never let a second row wear it
+            claimed.add(hit["url"])
             r["ytmAlbumUrl"] = hit["url"]
             r.pop("tracks", None)  # refresh with the album's own tracklist
             r.pop("ytmPlaylistId", None)
@@ -800,6 +853,12 @@ def gaas_albums(releases, resolve, seen_at, names=None):
     album, so each season's soundtrack stands alone and reruns pick up new
     ones automatically."""
     names = gaas_names() if names is None else names
+    # an album already worn by some other row (a plain game row, usually a
+    # spin-off like Rocket League Sideswipe) must not spawn a twin album row
+    claimed = {}
+    for x in releases:
+        if x.get("ytmAlbumUrl"):
+            claimed[x["ytmAlbumUrl"]] = x["id"]
     added = merged = 0
     for name in names:
         try:
@@ -828,6 +887,9 @@ def gaas_albums(releases, resolve, seen_at, names=None):
                 continue
             if not hit["composers"] and not re.search(r"original .*soundtrack", title, re.IGNORECASE):
                 continue  # VA with vague naming: fan-compilation territory
+            owner = claimed.get(hit["url"])
+            if owner and owner != slugify(hit["title"]):
+                continue  # another row already wears this album
             year = str(r.get("year") or "")
             items.append({"title": hit["title"], "game": name, "composers": hit["composers"],
                           "url": hit["url"], "date": f"{year}-01-01" if year.isdigit() else None,

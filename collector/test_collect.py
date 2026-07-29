@@ -779,3 +779,88 @@ def test_run_fails_red_when_every_source_fails(tmp_path, capsys):
     assert collect.run(fetch_fn=dead, resolve_fn=no_resolve, album_fn=no_album, itunes_fn=no_itunes,
                        data_path=tmp_path / "releases.json", now=NOW) == 1
     assert "::error::" in capsys.readouterr().out
+
+
+# --- one-album-one-row guards (the Zelda covers-album incident) ---
+
+_COVERS_ALBUM = {"resultType": "album", "browseId": "MPREb_zeldacovers", "year": "2018",
+                 "title": "Music from The Legend of Zelda",
+                 "artists": [{"name": "Various Artists"}], "thumbnails": []}
+
+
+def test_va_credit_needs_soundtrack_wording():
+    # a Various Artists tribute that never says "soundtrack" is fan territory,
+    # even though "music from" satisfies the soundtracky keyword check
+    assert collect._match_album_tokens([_COVERS_ALBUM], "The Legend of Zelda: Ocarina of Time") is None
+    assert collect._match_album([_COVERS_ALBUM], collect.normalize_title("Music from The Legend of Zelda")) is None
+    # but VA plus explicit soundtrack wording stays a legitimate credit
+    licensed = dict(_COVERS_ALBUM, title="Hi-Fi RUSH (Original Soundtrack)")
+    assert collect._hit_from(licensed)
+    tribute = dict(_COVERS_ALBUM, title="The Legend of Zelda Tribute Soundtrack")
+    assert collect._hit_from(tribute) is None  # blacklist wording still kills it
+
+
+def test_relaxed_tiers_respect_the_era_guard():
+    reboot = {"resultType": "album", "browseId": "MPREb_tr2013", "year": "2013",
+              "title": "Tomb Raider (Original Soundtrack)",
+              "artists": [{"name": "Jason Graves"}], "thumbnails": []}
+    assert collect._match_album_tokens([reboot], "Tomb Raider", year=1996) is None
+    assert collect._match_album_tokens([reboot], "Tomb Raider", year=2013)
+    assert collect._match_album_contains([reboot], "Tomb Raider", year=1996) is None
+    assert collect._match_album_contains([reboot], "Tomb Raider", year=2012)
+    # numbered names stay exempt: classics reach streaming decades late
+    civ = {"resultType": "album", "browseId": "MPREb_civ5", "year": "2025",
+           "title": "Civilization V Original Soundtrack",
+           "artists": [{"name": "Geoff Knorr"}], "thumbnails": []}
+    assert collect._match_album_tokens([civ], "Civilization V", year=2010)
+
+
+def test_resolver_never_reassigns_a_claimed_album():
+    owner = {"id": "outer-wilds", "title": "Outer Wilds Soundtrack", "date": "2026-07-20",
+             "url": "https://x.example/ow", "sources": [], "notable": True,
+             "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ow", "art": "https://a.example/ow.jpg"}
+    dlc = {"id": "outer-wilds-echoes", "title": "Outer Wilds Soundtrack", "date": "2026-07-21",
+           "url": "https://x.example/echoes", "sources": [], "notable": True,
+           "ytmAlbumUrl": None, "art": None}
+    hit = [{"resultType": "album", "browseId": "MPREb_ow", "year": "2019",
+            "title": "Outer Wilds (Original Soundtrack)",
+            "artists": [{"name": "Andrew Prahlow"}], "thumbnails": []}]
+    looked, filled = collect.resolve_albums([owner, dlc], lambda q: hit, NOW)
+    assert filled == 0 and dlc["ytmAlbumUrl"] is None  # the base game keeps its album
+
+
+def test_gaas_scan_skips_albums_other_rows_wear():
+    sideswipe_row = {"id": "rocket-league-sideswipe", "title": "Rocket League Sideswipe Soundtrack",
+                     "game": "Rocket League Sideswipe", "date": "2021-11-15", "sources": [],
+                     "url": "https://x.example/ss", "notable": True,
+                     "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ss"}
+    results = [{"resultType": "album", "browseId": "MPREb_ss", "year": "2021",
+                "title": "Rocket League Sideswipe (Original Game Soundtrack)",
+                "artists": [{"name": "Mike Ault"}], "thumbnails": []}]
+    releases = [sideswipe_row]
+    added, _ = collect.gaas_albums(releases, lambda q, limit=5: results, SEEN,
+                                   names=["Rocket League"])
+    assert added == 0 and len(releases) == 1  # the game row already wears it
+
+
+def test_hit_gates_cover_the_publisher_conventions():
+    # a covers orchestra with a real name never qualifies, whatever the title
+    lmw = {"resultType": "album", "browseId": "MPREb_lmw", "year": "2024",
+           "title": "Music from the Legend of Zelda",
+           "artists": [{"name": "London Music Works"}, {"name": "Scott Buckley"}], "thumbnails": []}
+    assert collect._hit_from(lmw) is None
+    # the artist page named after the game is fine when the wording is official
+    hfw = {"resultType": "album", "browseId": "MPREb_hfw", "year": "2022",
+           "title": "Horizon Forbidden West (Original Soundtrack)",
+           "artists": [{"name": "Horizon Forbidden West"}], "thumbnails": []}
+    hit = collect._hit_from(hfw)
+    assert hit and hit["composers"] == []
+    # ...but a bare self-credit with no soundtrack wording stays out (Lifted)
+    band = {"resultType": "album", "browseId": "MPREb_band", "year": "2020",
+            "title": "Lifted", "artists": [{"name": "Lifted"}], "thumbnails": []}
+    assert collect._hit_from(band) is None
+    # Rockstar's "Vol. 2: The Score" phrasing counts as official for VA
+    gta = {"resultType": "album", "browseId": "MPREb_gta2", "year": "2013",
+           "title": "The Music of Grand Theft Auto V, Vol. 2: The Score",
+           "artists": [{"name": "Various Artists"}], "thumbnails": []}
+    assert collect._hit_from(gta)

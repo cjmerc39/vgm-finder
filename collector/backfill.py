@@ -150,6 +150,7 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
         print(f"::warning::seeds leg failed: {exc}")
         return 0
     added = 0
+    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
     for g in games if isinstance(games, list) else []:
         name = (g.get("name") or "").strip()
         stamp = g.get("first_release_date")
@@ -158,19 +159,24 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
         when = datetime.fromtimestamp(stamp, tz=timezone.utc)
         try:
             results = resolve_fn(collect._query(name))
-            # seeds are hand-vouched single games: strict first, then the
-            # token-vocabulary relaxation, and no year anchor (classic albums
-            # often reach streaming decades late)
+            # seeds are hand-vouched single games: strict with no year anchor
+            # (classic albums often reach streaming decades late), then the
+            # relaxed tiers year-anchored — relaxation without an era check is
+            # how Tomb Raider 1996 once wore the 2013 reboot's album
             hit = (collect._match_album(results, collect.normalize_title(name))
-                   or collect._match_album_tokens(results, name)
-                   or collect._match_album_contains(results, name))
+                   or collect._match_album_tokens(results, name, year=when.year)
+                   or collect._match_album_contains(results, name, year=when.year))
             if not hit and ":" in name:
                 # subtitled names pollute the search; retry on the head
                 results = resolve_fn(collect._query(name.split(":", 1)[0].strip()))
-                hit = (collect._match_album_tokens(results, name)
-                       or collect._match_album_contains(results, name))
+                hit = (collect._match_album_tokens(results, name, year=when.year)
+                       or collect._match_album_contains(results, name, year=when.year))
         except Exception:
             continue
+        if hit and hit["url"] in claimed:
+            hit = None  # already worn by some row (base game, sibling): a
+            # subtitled seed must not steal it; merge null-fill keeps whatever
+            # this seed's own row already has
         cover = (g.get("cover") or {}).get("image_id")
         cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
                      if cover else None)
@@ -180,6 +186,7 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
                 "date": when.strftime("%Y-%m-%d"),
                 "title": f"{name} Soundtrack", "composers": []}  # stable slug: upgrades the existing row
         if hit:
+            claimed.add(hit["url"])
             item.update({"albumTitle": hit["title"], "composers": hit["composers"],
                          "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url})
         else:
@@ -194,6 +201,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
              prefix="igdb-top", offset_key="igdbOffset", cap=None, noalbum_bar=None):
     cap = YTM_CAP if cap is None else cap
     checked = set(state["checked"])
+    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
     looked = added = 0
     exhausted = False
     while looked < cap and not exhausted:
@@ -227,10 +235,12 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                     # famous games hide behind loose album naming ("The Music
                     # of Red Dead Redemption 2, Vol. 1"); multi-word names are
                     # specific enough for the token matcher
-                    hit = collect._match_album_tokens(results, name)
+                    hit = collect._match_album_tokens(results, name, year=when.year)
             except Exception:
                 continue  # transient lookup failure: leave unchecked, retry next run
             checked.add(gid)
+            if hit and hit["url"] in claimed:
+                hit = None  # another row already wears this album
             cover = (g.get("cover") or {}).get("image_id")
             cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
                          if cover else None)
@@ -276,6 +286,7 @@ def resolve_leg(releases, state, resolve_fn, cap):
     """One shot per album-less row: strict + token matching against YTM, with
     a tried-marker so misses never burn future caps."""
     tried = set(state.get("resolveTried", []))
+    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
     looked = filled = 0
     untried_left = False
     for r in releases:
@@ -288,16 +299,22 @@ def resolve_leg(releases, state, resolve_fn, cap):
             untried_left = True
             break
         looked += 1
+        year = None
+        try:
+            year = int((r.get("date") or "")[:4])
+        except ValueError:
+            pass
         try:
             results = resolve_fn(collect._query(name))
             hit = (collect._match_album(results, collect.normalize_title(name))
-                   or (len(name.split()) >= 2 and collect._match_album_tokens(results, name))
+                   or (len(name.split()) >= 2 and collect._match_album_tokens(results, name, year=year))
                    or None)
         except Exception:
             continue  # transient: not marked, retried later
         tried.add(r["id"])
-        if not hit:
-            continue
+        if not hit or hit["url"] in claimed:
+            continue  # no album, or one that some other row already wears
+        claimed.add(hit["url"])
         r["ytmAlbumUrl"] = hit["url"]
         r.pop("tracks", None)
         r.pop("ytmPlaylistId", None)
