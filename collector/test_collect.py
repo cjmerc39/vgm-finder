@@ -221,6 +221,18 @@ def test_headline_parsers_attach_display_labels():
     assert owl["albumTitle"] == "Atomic Owl"
 
 
+def test_arriving_album_invalidates_stale_tracklists():
+    releases = []
+    collect.merge(releases, [{"title": "Hi-Fi Rush Soundtrack",
+                              "url": "https://a.example/hfr", "date": "2023-01-25"}], src("a"), SEEN)
+    releases[0]["tracks"] = []  # checked while it was a search row: nothing found
+    collect.merge(releases, [{"title": "Hi-Fi Rush Soundtrack", "albumTitle": "Hi-Fi RUSH OST",
+                              "url": "https://b.example/hfr", "date": "2023-01-25",
+                              "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hfr"}], src("b"), SEEN)
+    assert "tracks" not in releases[0]  # stale check cleared: fill refetches with plays
+    assert releases[0]["ytmAlbumUrl"]
+
+
 def test_merge_carries_and_fills_album_titles():
     releases = []
     collect.merge(releases, [{"title": "Atomic Owl vinyl reissue is now available from Ghost Mutt Records",

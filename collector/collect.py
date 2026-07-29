@@ -680,6 +680,8 @@ def merge(releases, items, source, seen_at):
                 target["composers"] = list(it["composers"])
             if not target.get("ytmAlbumUrl") and it.get("ytmAlbumUrl"):
                 target["ytmAlbumUrl"] = it["ytmAlbumUrl"]
+                target.pop("tracks", None)  # a real album arrived: refresh the tracklist with plays
+                target.pop("ytmPlaylistId", None)
             if not target.get("art") and it.get("art"):
                 target["art"] = it["art"]
         else:
@@ -727,6 +729,8 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
             continue
         if not r.get("ytmAlbumUrl"):
             r["ytmAlbumUrl"] = hit["url"]
+            r.pop("tracks", None)  # refresh with the album's own tracklist
+            r.pop("ytmPlaylistId", None)
             filled += 1
         if normalize_title(hit["title"]) != norm:
             r["albumTitle"] = hit["title"]  # YTM's canonical name overrides any headline-derived label
