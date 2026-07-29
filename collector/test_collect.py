@@ -895,3 +895,20 @@ def test_video_edition_tracks_take_ids_from_the_audio_playlist():
     collect.fill_tracks([r2], lambda b: clean, no_itunes, cap=5,
                         playlist_fn=lambda p: (_ for _ in ()).throw(AssertionError("no fetch")))
     assert r2["tracks"][0]["videoId"] == "vidFlake"
+
+
+def test_purename_album_needs_composer_and_matching_era():
+    kyd = [{"resultType": "album", "browseId": "MPREb_hbm", "year": "2006",
+            "title": "Hitman: Blood Money", "artists": [{"name": "Jesper Kyd"}],
+            "thumbnails": []}]
+    n = collect.normalize_title("Hitman: Blood Money")
+    hit = collect._match_album_purename(kyd, n, 2006)
+    assert hit and hit["composers"] == ["Jesper Kyd"]
+    # the ZeroSpace trap: same-name band album two decades off stays out
+    band = [{"resultType": "album", "browseId": "MPREb_kt", "year": "2002",
+             "title": "Zerospace", "artists": [{"name": "Kidneythieves"}], "thumbnails": []}]
+    assert collect._match_album_purename(band, collect.normalize_title("ZeroSpace"), 2023) is None
+    # no album year, or no year anchor at all: too risky for a wordless match
+    undated = [dict(kyd[0], year=None)]
+    assert collect._match_album_purename(undated, n, 2006) is None
+    assert collect._match_album_purename(kyd, n, None) is None

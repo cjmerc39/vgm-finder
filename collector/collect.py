@@ -581,6 +581,32 @@ def _match_album_contains(results, game_name, year=None):
     return None
 
 
+def _match_album_purename(results, want_norm, year):
+    """Some official albums carry no soundtrack wording at all — Jesper Kyd's
+    "Hitman: Blood Money" is just the game's name. Accept the exact name when
+    a real composer is credited AND the album year sits on the game's era;
+    the year anchor is mandatory, because a same-name band album with no year
+    proximity is exactly the ZeroSpace/Kidneythieves trap."""
+    if year is None:
+        return None
+    for r in results or []:
+        if r.get("resultType") != "album" or not r.get("browseId"):
+            continue
+        if _numfold(normalize_title(r.get("title", ""))) != _numfold(want_norm):
+            continue
+        if _GAAS_BLACKLIST.search(r.get("title", "")):
+            continue
+        try:
+            if not r.get("year") or abs(int(r["year"]) - year) > 2:
+                continue
+        except (TypeError, ValueError):
+            continue
+        hit = _hit_from(r)
+        if hit and hit["composers"]:  # named composer only: VA or self-credit stays out
+            return hit
+    return None
+
+
 def _match_album_within(results, hay_norm):
     """Containment: an editorial headline carries the album's name inside it
     ("Atomic Owl vinyl reissue is now available…" ⊇ "Atomic Owl (OST)").

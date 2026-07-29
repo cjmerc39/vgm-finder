@@ -165,7 +165,9 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
             # how Tomb Raider 1996 once wore the 2013 reboot's album
             hit = (collect._match_album(results, collect.normalize_title(name))
                    or collect._match_album_tokens(results, name, year=when.year)
-                   or collect._match_album_contains(results, name, year=when.year))
+                   or collect._match_album_contains(results, name, year=when.year)
+                   or collect._match_album_purename(results, collect.normalize_title(name),
+                                                    when.year))
             if not hit and ":" in name:
                 # subtitled names pollute the search; retry on the head
                 results = resolve_fn(collect._query(name.split(":", 1)[0].strip()))
@@ -308,6 +310,7 @@ def resolve_leg(releases, state, resolve_fn, cap):
             results = resolve_fn(collect._query(name))
             hit = (collect._match_album(results, collect.normalize_title(name))
                    or (len(name.split()) >= 2 and collect._match_album_tokens(results, name, year=year))
+                   or collect._match_album_purename(results, collect.normalize_title(name), year)
                    or None)
         except Exception:
             continue  # transient: not marked, retried later
