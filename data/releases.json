@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T23:12:30Z",
+  "updatedAt": "2026-07-29T23:33:17Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -287174,6 +287174,33 @@
         }
       ],
       "ytmPlaylistId": "OLAK5uy_m8zAT_LTt1_uTGZFEmLvkKshCJ5j4qJE0"
+    },
+    {
+      "id": "lego-2k-drive",
+      "title": "LEGO 2K Drive Soundtrack",
+      "game": "LEGO 2K Drive",
+      "composers": [],
+      "date": "2023-05-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/lego-2k-drive",
+          "seenAt": "2026-07-29T23:33:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=LEGO+2K+Drive+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ajx.jpg",
+      "notable": true,
+      "company": "Visual Concepts",
+      "console": true,
+      "genres": [
+        "Racing",
+        "Adventure",
+        "Arcade"
+      ],
+      "tracks": []
     }
   ]
 }
