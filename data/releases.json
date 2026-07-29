@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T19:26:42Z",
+  "updatedAt": "2026-07-29T21:06:39Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -255803,6 +255803,38 @@
         },
         {
           "title": "Holding Out for a Hero",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "palworld",
+      "title": "Palworld Soundtrack",
+      "game": "Palworld",
+      "composers": [],
+      "date": "2026-07-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/palworld",
+          "seenAt": "2026-07-29T21:06:29Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Palworld+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7n02.jpg",
+      "notable": true,
+      "company": "PocketPair",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up"
+      ],
+      "tracks": [
+        {
+          "title": "Slaverys the Game",
           "plays": null
         }
       ]
