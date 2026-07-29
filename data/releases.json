@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T23:33:17Z",
+  "updatedAt": "2026-07-29T23:38:13Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -287199,6 +287199,31 @@
         "Racing",
         "Adventure",
         "Arcade"
+      ],
+      "tracks": []
+    },
+    {
+      "id": "cars-3-driven-to-win",
+      "title": "Cars 3: Driven to Win Soundtrack",
+      "game": "Cars 3: Driven to Win",
+      "composers": [],
+      "date": "2017-06-13",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/cars-3-driven-to-win",
+          "seenAt": "2026-07-29T23:38:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cars+3%3A+Driven+to+Win+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co22v7.jpg",
+      "notable": true,
+      "company": "Avalanche Software",
+      "console": true,
+      "genres": [
+        "Racing"
       ],
       "tracks": []
     }
