@@ -413,7 +413,11 @@ def _match_album(results, want_norm, year=None):
             continue
         if not _SOUNDTRACKY.search(r.get("title", "")):
             continue
-        if year is not None:
+        if year is not None and _numeral_tail(want_norm) is None:
+            # bare franchise names (Tomb Raider, DOOM) can belong to several
+            # eras, so the album year must sit near the game. Numbered names
+            # are unambiguous — publishers upload classics decades late
+            # (the whole Civilization discography arrived in 2025).
             try:
                 if r.get("year") and abs(int(r["year"]) - year) > 2:
                     continue

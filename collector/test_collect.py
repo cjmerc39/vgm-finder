@@ -484,6 +484,11 @@ def test_year_anchor_blocks_franchise_crossmatches():
     # albums with missing/garbage year metadata aren't punished
     no_year = [dict(reboot_ost[0], year=None)]
     assert collect._match_album(no_year, n("Tomb Raider"), year=1996) is not None
+    # numbered names are era-unambiguous: late uploads are welcome
+    civ5 = [{"resultType": "album", "browseId": "MPREb_civ5", "year": "2025",
+             "title": "Sid Meier's Civilization V (Original Game Soundtrack)",
+             "artists": [{"name": "Geoff Knorr"}, {"name": "Michael Curran"}], "thumbnails": []}]
+    assert collect._match_album(civ5, n("Sid Meier's Civilization V"), year=2010) is not None
 
 
 def test_slug_is_stable_across_source_phrasings():
