@@ -18,8 +18,11 @@ const FIXTURE = {
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'hades-ii', title: 'Hades II Original Soundtrack', game: 'Hades II', composers: ['Darren Korb'], date: '2026-07-20',
       company: 'Supergiant Games', console: true,
-      topTracks: [{ title: 'No Escape', plays: '1.2M plays' }, { title: 'The Painted World', plays: '900K plays' },
-                  { title: 'Coral Crown', plays: '500K plays' }],
+      tracks: [{ title: 'No Escape', plays: '1.2M plays', videoId: 'vidNE' },
+               { title: 'Quiet Interlude', plays: '10 plays', videoId: 'vidQI' },
+               { title: 'The Painted World', plays: '900K plays', videoId: 'vidPW' },
+               { title: 'Coral Crown', plays: '500K plays', videoId: 'vidCC' },
+               { title: 'Bonus Reel', plays: null, videoId: null }],
       sources: [{ name: 'nowplaying', type: 'editorial', url: 'https://nowplaying.cool/h', seenAt: '2026-07-10T10:00:00Z' },
                 { name: 'r/gamemusic', type: 'community', url: 'https://reddit.com/h', seenAt: '2026-07-11T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Hades+II+Original+Soundtrack+soundtrack',
@@ -187,8 +190,30 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
 
   rowById('ゼルダの伝説').click();
   assert(rowById('ゼルダの伝説').querySelector('.rx').textContent.includes('FROM THE TRACKLIST'),
-    'tracks without play counts get the honest header');
+    'legacy topTracks rows keep the honest header');
+  assert(rowById('ゼルダの伝説').querySelector('.xall') === null, 'no album page without a full tracklist');
   rowById('ゼルダの伝説').click();
+
+  // ---------- the album page ----------
+  rowById('hades-ii').click();
+  const hx2 = rowById('hades-ii').querySelector('.rx');
+  assert(hx2.textContent.includes('TOP TRACKS') && hx2.textContent.includes('No Escape'),
+    'expanded top-3 derives from the full tracklist by plays');
+  hx2.querySelector('[data-act="album"]').click();
+  assert(d.querySelector('#album') !== null, 'All tracks opens the album page');
+  assert(d.querySelector('#album .aart img') !== null, 'album art sits front and center');
+  assert(d.querySelectorAll('#album .atrack').length === 5, 'every track listed in album order');
+  assert(d.querySelector('#album .atrack[data-i="0"] .medal').textContent === '1', 'top track wears the 1');
+  assert(d.querySelector('#album .atrack[data-i="2"] .medal').textContent === '2', 'second-most-played wears the 2');
+  assert(d.querySelector('#album .atrack[data-i="1"] .medal') === null, 'low-play tracks get no medal');
+  d.querySelector('#album .atrack[data-i="0"]').click();
+  assert(w.__opened === 'https://music.youtube.com/watch?v=vidNE', 'tracks with videoIds link straight to the song');
+  d.querySelector('#album .atrack[data-i="4"]').click();
+  assert(w.__opened.startsWith('https://music.youtube.com/search?q=') && w.__opened.includes('Bonus%20Reel')
+    && w.__opened.includes('Hades%20II'), 'unlinked tracks fall back to game + song search');
+  d.querySelector('#album .aclose').click();
+  assert(d.querySelector('#album') === null, 'close returns to the list');
+  rowById('hades-ii').click();
 
   // friendly source labels, deduped per row
   assert(rowById('ゼルダの伝説').querySelector('.chip').textContent === 'catalog', 'igdb source displays as "catalog"');

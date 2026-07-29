@@ -225,11 +225,12 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
     return added, exhausted, looked
 
 
-TOPTRACKS_CAP_BACKFILL = 150
+TRACKS_CAP_BACKFILL = 250
 
 
 def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect.ytm_album,
-        data_path=collect.DATA_PATH, state_path=STATE_PATH, now=None):
+        itunes_fn=collect.itunes_tracks, data_path=collect.DATA_PATH,
+        state_path=STATE_PATH, now=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = collect.load_data(data_path)
@@ -244,8 +245,8 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
                                  prefix="igdb-recent", offset_key="igdbRecentOffset",
                                  cap=YTM_CAP - spent)
     igdb_done = top_done and recent_done
-    fetched = collect.fill_top_tracks(releases, album_fn, cap=TOPTRACKS_CAP_BACKFILL)
-    print(f"top tracks: {fetched} albums fetched")
+    fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL)
+    print(f"tracklists: {fetched} looked up")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data["updatedAt"] = seen_at

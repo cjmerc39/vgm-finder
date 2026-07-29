@@ -7,7 +7,7 @@ import pytest
 
 import backfill
 import collect
-from test_collect import fake_resolve, no_album, raw
+from test_collect import fake_resolve, no_album, no_itunes, raw
 
 NOW = datetime(2026, 7, 28, 12, 0, 0, tzinfo=timezone.utc)
 
@@ -38,7 +38,7 @@ def run_once(tmp_path, monkeypatch, resolve=None, fetches=None, **caps):
         monkeypatch.setattr(backfill, k, v)
     data_path = tmp_path / "releases.json"
     state_path = tmp_path / "backfill-state.json"
-    assert backfill.run(fetch_fn=make_fetch(fetches), resolve_fn=resolve or fake_resolve, album_fn=no_album,
+    assert backfill.run(fetch_fn=make_fetch(fetches), resolve_fn=resolve or fake_resolve, album_fn=no_album, itunes_fn=no_itunes,
                         data_path=data_path, state_path=state_path, now=NOW) == 0
     return (json.loads(data_path.read_text(encoding="utf-8")),
             json.loads(state_path.read_text(encoding="utf-8")))
@@ -64,11 +64,11 @@ def test_backfill_second_run_skips_checked_and_rewrites_nothing(tmp_path, monkey
     state_path = tmp_path / "backfill-state.json"
     monkeypatch.setattr(backfill, "STEAM_TARGET", 50)
     monkeypatch.setattr(backfill, "STEAM_PAGES_PER_RUN", 1)
-    backfill.run(fetch_fn=make_fetch(), resolve_fn=fake_resolve, album_fn=no_album,
+    backfill.run(fetch_fn=make_fetch(), resolve_fn=fake_resolve, album_fn=no_album, itunes_fn=no_itunes,
                  data_path=data_path, state_path=state_path, now=NOW)
     first = data_path.read_text(encoding="utf-8")
     lookups = []
-    backfill.run(fetch_fn=make_fetch(), resolve_fn=counting_resolve(lookups), album_fn=no_album,
+    backfill.run(fetch_fn=make_fetch(), resolve_fn=counting_resolve(lookups), album_fn=no_album, itunes_fn=no_itunes,
                  data_path=data_path, state_path=state_path,
                  now=datetime(2026, 7, 29, 12, 0, 0, tzinfo=timezone.utc))
     assert lookups == []  # every game already checked: zero repeat album lookups
@@ -100,7 +100,7 @@ def test_backfill_gives_canon_games_search_rows_when_no_album_exists(tmp_path, m
         raise AssertionError(url)
     monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
     data_path = tmp_path / "releases.json"
-    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album,  # YTM offers nothing
+    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album, itunes_fn=no_itunes,  # YTM offers nothing
                  data_path=data_path, state_path=tmp_path / "s.json", now=NOW)
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert len(data["releases"]) == 1  # canon game lands, obscure one doesn't
@@ -133,7 +133,7 @@ def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatc
     def resolve(q):
         lookups.append(q)
         return hit
-    backfill.run(fetch_fn=fetch, resolve_fn=resolve, album_fn=no_album,
+    backfill.run(fetch_fn=fetch, resolve_fn=resolve, album_fn=no_album, itunes_fn=no_itunes,
                  data_path=data_path, state_path=state_path, now=NOW)
     data = json.loads(data_path.read_text(encoding="utf-8"))
     row = data["releases"][0]
@@ -144,7 +144,7 @@ def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatc
     assert state["checked"] == [901] and "igdbRecentOffset" in state
     # second run: the recent game is in the shared checked set — no repeat lookup
     lookups.clear()
-    backfill.run(fetch_fn=fetch, resolve_fn=resolve, album_fn=no_album,
+    backfill.run(fetch_fn=fetch, resolve_fn=resolve, album_fn=no_album, itunes_fn=no_itunes,
                  data_path=data_path, state_path=state_path, now=NOW)
     assert lookups == []
 
@@ -165,14 +165,14 @@ def test_seeds_always_get_rows_regardless_of_bars(tmp_path, monkeypatch):
         raise AssertionError(url)
     monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
     data_path = tmp_path / "releases.json"
-    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album,
+    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album, itunes_fn=no_itunes,
                  data_path=data_path, state_path=tmp_path / "s.json", now=NOW)
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert {r["game"] for r in data["releases"]} == {"Pokémon Gold Version", "Kirby and the Forgotten Land"}
     gold = next(r for r in data["releases"] if "Gold" in r["title"])
     assert gold["ytmAlbumUrl"] is None and gold["art"].endswith("/gold.jpg")
     # second run: idempotent, rows not duplicated
-    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album,
+    backfill.run(fetch_fn=fetch, resolve_fn=lambda q: [], album_fn=no_album, itunes_fn=no_itunes,
                  data_path=data_path, state_path=tmp_path / "s.json", now=NOW)
     assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 2
 

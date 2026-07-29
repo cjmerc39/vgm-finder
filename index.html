@@ -121,6 +121,31 @@ a.xsrc{text-decoration:none}
 #tabbar button.on .n{color:var(--amberdim)}
 #tabbar .nb{margin-left:5px;font-size:8.5px;font-weight:700;letter-spacing:1px;color:var(--bg);background:var(--amber);border-radius:3px;padding:1.5px 4px 1px;vertical-align:2px}
 
+/* the album page */
+#albumwrap:empty{display:none}
+#album{position:fixed;inset:0;z-index:7;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
+#album .ahead{position:sticky;top:0;background:rgba(9,11,17,.96);display:flex;align-items:center;
+  padding:calc(10px + env(safe-area-inset-top)) 12px 10px;border-bottom:1px solid var(--line);z-index:1}
+#album .aclose{width:44px;height:40px;font-size:18px;color:var(--mut)}
+#album .ahead .tno{margin-left:4px}
+#album .abody{max-width:560px;margin:0 auto;padding:22px 18px calc(30px + env(safe-area-inset-bottom))}
+#album .aart{width:min(62vw,260px);height:min(62vw,260px);margin:0 auto;border-radius:14px;overflow:hidden;
+  background:var(--bg3);border:1px solid var(--line);position:relative;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+#album .aart img{width:100%;height:100%;object-fit:cover;display:block}
+#album .aart.noart::after{content:'▷';position:absolute;inset:0;display:grid;place-items:center;color:var(--dim);font-size:44px}
+#album .atitle{margin-top:18px;text-align:center;font-size:17px;font-weight:600;overflow-wrap:anywhere}
+#album .asub{margin-top:5px;text-align:center;color:var(--mut);font-size:13px}
+#album .ameta{margin-top:3px;text-align:center;color:var(--dim);font-size:11.5px;letter-spacing:.5px}
+#album .alist{margin-top:22px}
+.atrack{display:flex;align-items:baseline;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.atrack:active{background:var(--bg2)}
+.atrack .tix{font-family:var(--disp);font-size:10px;color:var(--dim);min-width:22px}
+.atrack .ttl{flex:1;min-width:0;font-size:14px;overflow-wrap:anywhere}
+.atrack .medal{font-family:var(--disp);font-size:10px;color:var(--bg);background:var(--amber);border-radius:4px;padding:2px 6px}
+.atrack .tplays{color:var(--dim);font-size:11px;white-space:nowrap}
+.xall{margin-top:12px;display:block;width:100%;text-align:center;color:var(--amber);font-size:11.5px;
+  letter-spacing:1.6px;text-transform:uppercase;border:1px solid var(--amberdim);border-radius:10px;padding:11px}
+
 /* the logging ritual sheet */
 #scrim{position:fixed;inset:0;background:rgba(4,5,9,.6);z-index:8}
 #sheet{position:fixed;left:0;right:0;bottom:0;z-index:9;max-width:560px;margin:0 auto;
@@ -161,6 +186,7 @@ a.xsrc{text-decoration:none}
 </div>
 <main><div id="list" aria-live="polite"></div><div id="colophon"></div></main>
 <nav id="tabbar" aria-label="Views"><div class="trow"></div></nav>
+<div id="albumwrap"></div>
 <div id="sheetwrap"></div>
 <script>
 /* ============================ state ============================ */
@@ -177,6 +203,7 @@ let Q = '';                                   // search text, deliberately not p
 let SHEET = null;                             // {id, draft} while the logging sheet is open
 let IMPMSG = '';                              // one-shot import feedback line
 let EXPANDED = null;                          // id of the row opened into its detail panel
+let ALBUM = null;                             // id of the row opened into the full album page
 const STANDALONE = (window.matchMedia && matchMedia('(display-mode: standalone)').matches)
   || window.navigator.standalone === true;
 const BIG_STUDIOS = ['nintendo','sony','playstation','capcom','square enix','squaresoft','sega',
@@ -267,6 +294,8 @@ function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); ren
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
 function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(); }
 function toggleExpand(id){ EXPANDED = EXPANDED === id ? null : id; renderList(); }
+function openAlbum(id){ ALBUM = id; renderAlbum(); }
+function closeAlbum(){ ALBUM = null; renderAlbum(); }
 function toggleLibLiked(){ S.libLiked = !S.libLiked; save(); renderAll(); }
 function toggleQueued(id){ editEntry(id, e => {
   const on = e.status === 'queued';
@@ -381,9 +410,27 @@ function minis(rating){
   if(rating == null) return '';
   return '★'.repeat(Math.floor(rating)) + (rating % 1 ? '½' : '');
 }
+function playsNum(s){
+  const m = /^([\d.,]+)\s*([KMB])?/i.exec(String(s || '').trim());
+  if(!m) return null;
+  const n = parseFloat(m[1].replace(/,/g, ''));
+  return isNaN(n) ? null : n * ({ K:1e3, M:1e6, B:1e9 }[(m[2] || '').toUpperCase()] || 1);
+}
+function top3Of(r){
+  const tt = r.tracks || [];
+  const scored = tt.map((t, i) => ({ i, n: playsNum(t.plays) }));
+  if(!scored.some(x => x.n != null)) return { idx: new Set(), ranked: tt.slice(0, 3), byPlays: false };
+  scored.sort((a, b) => (b.n ?? -1) - (a.n ?? -1));
+  const top = scored.slice(0, 3);
+  return { idx: new Set(top.map(x => x.i)), ranked: top.map(x => tt[x.i]), byPlays: true };
+}
+function trackUrl(r, t){
+  if(t.videoId) return 'https://music.youtube.com/watch?v=' + t.videoId;
+  return 'https://music.youtube.com/search?q=' + encodeURIComponent((r.game || label(r)) + ' ' + t.title);
+}
 
 /* =========================== render ============================ */
-function renderAll(){ renderSync(); renderTabs(); renderControls(); renderList(); renderColophon(); renderSheet(); }
+function renderAll(){ renderSync(); renderTabs(); renderControls(); renderList(); renderColophon(); renderAlbum(); renderSheet(); }
 
 function renderSync(){
   const el = document.getElementById('sync');
@@ -477,12 +524,18 @@ function expandedHtml(r, e){
   if(r.company) info.push(['studio', r.company]);
   if(r.date) info.push(['released', fmtDate(r.date)]);
   if(e.listenedOn) info.push(['heard on', fmtDate(e.listenedOn)]);
-  const tt = r.topTracks || [];
-  const anyPlays = tt.some(t => t && t.plays);
-  const tracks = tt.length
-    ? `<div class="xh">${anyPlays ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` + tt.map((t, i) =>
-      `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}</div>`).join('')
-    : '';
+  let tracks = '';
+  if((r.tracks || []).length){
+    const t3 = top3Of(r);
+    tracks = `<div class="xh">${t3.byPlays ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` +
+      t3.ranked.map((t, i) =>
+        `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}</div>`).join('') +
+      `<button class="xall" data-act="album">All ${r.tracks.length} tracks ›</button>`;
+  } else if((r.topTracks || []).length){  // legacy shape until the collector refetches
+    const tt = r.topTracks;
+    tracks = `<div class="xh">${tt.some(t => t && t.plays) ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` + tt.map((t, i) =>
+      `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}</div>`).join('');
+  }
   const links = (r.sources || []).map(s =>
     `<a class="chip xsrc" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(SRC_LABEL[s.name] || s.name)} ↗</a>`).join('');
   return `<div class="rx">
@@ -490,6 +543,35 @@ function expandedHtml(r, e){
     ${info.length ? `<div class="xinfo">${info.map(([k, v]) => `<span class="xk">${k}</span><span class="xv">${esc(v)}</span>`).join('')}</div>` : ''}
     ${tracks}
     ${links ? `<div class="xh">COVERAGE</div><div class="xlinks">${links}</div>` : ''}
+  </div>`;
+}
+
+function renderAlbum(){
+  const wrap = document.getElementById('albumwrap');
+  const r = ALBUM && byId(ALBUM);
+  if(!r){ wrap.innerHTML = ''; return; }
+  const e = E(r.id);
+  const t3 = top3Of(r);
+  const medal = { };
+  t3.ranked.forEach((t, rank) => { medal[(r.tracks || []).indexOf(t)] = rank + 1; });
+  const meta = [r.company, (r.date || '').slice(0, 4)].filter(Boolean).join(' · ');
+  const rows = (r.tracks || []).map((t, i) =>
+    `<div class="atrack" data-i="${i}" role="link" tabindex="0">
+      <span class="tix">${String(i + 1).padStart(2, '0')}</span>
+      <span class="ttl">${esc(t.title)}</span>
+      ${t3.byPlays && medal[i] ? `<span class="medal">${medal[i]}</span>` : ''}
+      ${t.plays ? `<span class="tplays">${esc(t.plays)}</span>` : ''}
+    </div>`).join('');
+  wrap.innerHTML = `<div id="album">
+    <div class="ahead"><button class="aclose" aria-label="Back">✕</button><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span></div>
+    <div class="abody">
+      <div class="aart${r.art ? '' : ' noart'}">${r.art ? `<img src="${esc(r.art)}" alt="" onerror="this.parentNode.classList.add('noart');this.remove()">` : ''}</div>
+      <div class="atitle">${esc(label(r))}</div>
+      ${[r.game, (r.composers || []).join(', ')].filter(Boolean).length ? `<div class="asub">${esc([r.game, (r.composers || []).join(', ')].filter(Boolean).join(' · '))}</div>` : ''}
+      ${meta ? `<div class="ameta">${esc(meta)}</div>` : ''}
+      ${e.rating != null ? `<div class="ameta"><span class="minis">${minis(e.rating)}</span></div>` : ''}
+      <div class="alist">${rows}</div>
+    </div>
   </div>`;
 }
 
@@ -584,13 +666,12 @@ function renderSheet(){
 /* =========================== events ============================ */
 let PENDING_OPEN = null;
 function navTo(url){ location.href = url; }
-function openTrack(r){
-  if(!r) return;
-  const url = ytmUrl(r);
+function openUrl(url){
   if(STANDALONE){ navTo(url); return; }  // universal link hands straight to the app: no leftover sheet
   const w2 = window.open(url, '_blank');
   if(w2){ try{ w2.opener = null; }catch(e){} PENDING_OPEN = w2; }
 }
+function openTrack(r){ if(r) openUrl(ytmUrl(r)); }
 document.addEventListener('visibilitychange', () => {
   // iOS standalone: the _blank sheet is left blank once the YT Music app takes
   // over; closing it when we regain focus lands the return trip on the app
@@ -613,6 +694,7 @@ document.getElementById('list').addEventListener('click', e => {
     else if(btn.dataset.act === 'hide') hideTrack(id);
     else if(btn.dataset.act === 'restore') unhideTrack(id);
     else if(btn.dataset.act === 'listen') openTrack(byId(id));
+    else if(btn.dataset.act === 'album') openAlbum(id);
     return;
   }
   if(!row.classList.contains('ghost')) toggleExpand(id);
@@ -664,7 +746,17 @@ sheetwrap.addEventListener('input', e => {
   if(e.target.id === 'sh-note') SHEET.draft.note = e.target.value;
   if(e.target.id === 'sh-date') SHEET.draft.listenedOn = e.target.value;
 });
-window.addEventListener('keydown', e => { if(e.key === 'Escape' && SHEET) closeLog(); });
+document.getElementById('albumwrap').addEventListener('click', e => {
+  if(e.target.closest('.aclose')){ closeAlbum(); return; }
+  const t = e.target.closest('.atrack');
+  const r = ALBUM && byId(ALBUM);
+  if(t && r){ const tr = (r.tracks || [])[+t.dataset.i]; if(tr) openUrl(trackUrl(r, tr)); }
+});
+window.addEventListener('keydown', e => {
+  if(e.key !== 'Escape') return;
+  if(SHEET) closeLog();
+  else if(ALBUM) closeAlbum();
+});
 
 /* ======================= backup lifeboat ======================= */
 function buildExport(){ return { app: 'vgm-finder', exportedAt: new Date().toISOString(), state: S }; }

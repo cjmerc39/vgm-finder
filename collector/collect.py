@@ -83,7 +83,49 @@ def ytm_album(browse_id):
     return _YT.get_album(browse_id)
 
 
-TOPTRACKS_CAP = 25
+TRACKS_CAP = 25
+
+
+def _itunes_album_matches(collection_name, want_norm):
+    """Track names are the goal, so any artist is fine (even covers), but the
+    album must be this game's music: exact name, or the game's name inside a
+    music-flavored title ("Pokémon Diamond & Pokémon Pearl: Super Music
+    Collection" for the game "Pokémon Diamond Version")."""
+    cand = normalize_title(collection_name or "")
+    wants = {want_norm}
+    if want_norm.endswith(" version"):
+        wants.add(want_norm[: -len(" version")].strip())
+    for w in wants:
+        if not w or len(w) < 6:
+            continue
+        if cand == w:
+            return True
+        if w in cand and ("music" in cand or "soundtrack" in cand or "ost" in cand):
+            return True
+    return False
+
+
+def itunes_tracks(query):
+    """Full tracklist from Apple's free search API — the fallback for albums
+    YTM doesn't carry (Nintendo, the Pokémon Super Music Collections)."""
+    resp = requests.get("https://itunes.apple.com/search", timeout=30,
+                        params={"term": query, "entity": "album", "limit": 5},
+                        headers={"User-Agent": USER_AGENT})
+    resp.raise_for_status()
+    want = normalize_title(query)
+    for album in resp.json().get("results", []):
+        if not _itunes_album_matches(album.get("collectionName"), want):
+            continue
+        lk = requests.get("https://itunes.apple.com/lookup", timeout=30,
+                          params={"id": album.get("collectionId"), "entity": "song"},
+                          headers={"User-Agent": USER_AGENT})
+        lk.raise_for_status()
+        songs = [x for x in lk.json().get("results", []) if x.get("wrapperType") == "track"]
+        songs.sort(key=lambda x: ((x.get("discNumber") or 1), (x.get("trackNumber") or 0)))
+        tracks = [{"title": x["trackName"], "plays": None} for x in songs if x.get("trackName")]
+        if tracks:
+            return tracks
+    return None
 
 
 def _plays_num(text):
@@ -97,30 +139,42 @@ def _plays_num(text):
     return n * {"K": 1e3, "M": 1e6, "B": 1e9}.get((m.group(2) or "").upper(), 1)
 
 
-def top_tracks_from(album):
-    """Top 3 by play count when YTM exposes it, else the opening tracks."""
-    tracks = [t for t in (album or {}).get("tracks", []) if t.get("title")]
-    scored = [(t, _plays_num(t.get("views"))) for t in tracks]
-    if any(n is not None for _, n in scored):
-        scored.sort(key=lambda p: p[1] if p[1] is not None else -1, reverse=True)
-    return [{"title": t["title"], "plays": t.get("views") or None} for t, _ in scored[:3]]
+def ytm_tracks_from(album):
+    out = []
+    for t in (album or {}).get("tracks", []):
+        if t.get("title"):
+            out.append({"title": t["title"], "plays": t.get("views") or None,
+                        "videoId": t.get("videoId") or None})
+    return out
 
 
-def fill_top_tracks(releases, album_fn, cap=TOPTRACKS_CAP):
-    """Attach topTracks to album-linked rows, capped per run. An empty list is
-    a completed check (album has no listed tracks), so rows never re-fetch."""
+def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP):
+    """Full tracklists, capped per run: YTM albums carry plays + per-track
+    videoIds; game-named rows without a YTM album fall back to Apple's
+    catalog. [] is a completed check, and legacy topTracks is retired."""
     looked = 0
     for r in releases:
-        url = r.get("ytmAlbumUrl") or ""
-        if "topTracks" in r or "/browse/" not in url:
+        if "tracks" in r:
             continue
         if looked >= cap:
             break
-        looked += 1
-        try:
-            r["topTracks"] = top_tracks_from(album_fn(url.rsplit("/", 1)[1]))
-        except Exception:
-            continue  # transient: retry on a later run
+        url = r.get("ytmAlbumUrl") or ""
+        if "/browse/" in url:
+            looked += 1
+            try:
+                r["tracks"] = ytm_tracks_from(album_fn(url.rsplit("/", 1)[1]))
+            except Exception:
+                continue  # transient: retry on a later run
+        elif r.get("game"):
+            looked += 1
+            try:
+                got = itunes_fn(_query(r["game"]))
+            except Exception:
+                continue
+            r["tracks"] = got or []
+        else:
+            continue  # headline rows with no game name: nothing to look up
+        r.pop("topTracks", None)
     return looked
 
 
@@ -565,7 +619,7 @@ def load_data(path):
 
 
 def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
-        data_path=DATA_PATH, now=None):
+        itunes_fn=itunes_tracks, data_path=DATA_PATH, now=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_data(data_path)
@@ -587,8 +641,8 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
 
     looked, filled = resolve_albums(releases, resolve_fn, now)
     print(f"album resolver: {looked} lookups, {filled} filled")
-    fetched = fill_top_tracks(releases, album_fn)
-    print(f"top tracks: {fetched} albums fetched")
+    fetched = fill_tracks(releases, album_fn, itunes_fn)
+    print(f"tracklists: {fetched} looked up")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data["updatedAt"] = seen_at

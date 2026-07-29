@@ -38,6 +38,10 @@ def no_album(browse_id):
     return {"tracks": []}
 
 
+def no_itunes(query):
+    return None
+
+
 def raw(name):
     return (FIXTURES / name).read_bytes()
 
@@ -327,34 +331,46 @@ def test_plays_num_parses_ytm_counts():
     assert collect._plays_num(None) is None
 
 
-def test_top_tracks_prefers_play_counts_and_falls_back_to_order():
-    ranked = {"tracks": [{"title": "Quiet", "views": "10 plays"},
-                         {"title": "Hit", "views": "2M plays"},
-                         {"title": "Mid", "views": "500K plays"},
-                         {"title": "Deep", "views": "1K plays"}]}
-    top = collect.top_tracks_from(ranked)
-    assert [t["title"] for t in top] == ["Hit", "Mid", "Deep"]
-    assert top[0]["plays"] == "2M plays"
-    unranked = {"tracks": [{"title": "One"}, {"title": "Two"}, {"title": "Three"}, {"title": "Four"}]}
-    assert [t["title"] for t in collect.top_tracks_from(unranked)] == ["One", "Two", "Three"]
-    assert all(t["plays"] is None for t in collect.top_tracks_from(unranked))
+def test_itunes_album_matching():
+    n = collect.normalize_title
+    m = collect._itunes_album_matches
+    assert m("Pokémon Diamond & Pokémon Pearl: Super Music Collection", n("Pokémon Diamond Version"))
+    assert m("Pokémon X & Pokémon Y: Super Music Collection", n("Pokémon X"))
+    assert m("Kirby and the Forgotten Land", n("Kirby and the Forgotten Land"))  # exact, any artist
+    assert not m("Kirby and the Forgotten Land (Covers)", n("Kirby and the Forgotten Land"))  # no music wording
+    assert not m("Unrelated Music Collection", n("Pokémon Diamond Version"))
+    assert not m("Pearl Music", n("Pearl"))  # too short to trust containment
 
 
-def test_fill_top_tracks_caps_and_never_refetches():
+def test_ytm_tracks_capture_plays_and_video_ids():
+    album = {"tracks": [{"title": "Hit", "views": "2M plays", "videoId": "vidH"},
+                        {"title": "Quiet", "views": None, "videoId": None},
+                        {"title": ""}]}
+    tracks = collect.ytm_tracks_from(album)
+    assert tracks == [{"title": "Hit", "plays": "2M plays", "videoId": "vidH"},
+                      {"title": "Quiet", "plays": None, "videoId": None}]
+
+
+def test_fill_tracks_uses_ytm_then_itunes_and_never_refetches():
     def album(bid):
-        return {"tracks": [{"title": f"T-{bid}", "views": "5 plays"}]}
+        return {"tracks": [{"title": f"T-{bid}", "views": "5 plays", "videoId": "v"}]}
+    def itunes(query):
+        return [{"title": "Apple Track", "plays": None}] if "Gold" in query else None
     rows = [
-        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_a"},
-        {"ytmAlbumUrl": "https://music.youtube.com/playlist?list=x"},  # not a browseable album
-        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_b"},
-        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_c", "topTracks": []},  # already checked
+        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_a", "topTracks": []},
+        {"ytmAlbumUrl": None, "game": "Pokémon Gold Version"},
+        {"ytmAlbumUrl": None, "game": "Obscure Nothing"},
+        {"ytmAlbumUrl": None, "game": None, "title": "headline row"},  # nothing to look up
+        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_b", "tracks": []},  # already checked
     ]
-    assert collect.fill_top_tracks(rows, album, cap=1) == 1
-    assert rows[0]["topTracks"][0]["title"] == "T-MPREb_a"
-    assert "topTracks" not in rows[1] and "topTracks" not in rows[2]
-    assert collect.fill_top_tracks(rows, album, cap=10) == 1  # only the remaining browse row
-    assert rows[2]["topTracks"][0]["title"] == "T-MPREb_b"
-    assert rows[3]["topTracks"] == []  # empty result stays a completed check
+    assert collect.fill_tracks(rows, album, itunes, cap=1) == 1
+    assert rows[0]["tracks"][0] == {"title": "T-MPREb_a", "plays": "5 plays", "videoId": "v"}
+    assert "topTracks" not in rows[0]  # legacy field retired on refetch
+    assert collect.fill_tracks(rows, album, itunes, cap=10) == 2
+    assert rows[1]["tracks"] == [{"title": "Apple Track", "plays": None}]  # Apple fallback
+    assert rows[2]["tracks"] == []  # no match anywhere: completed check
+    assert "tracks" not in rows[3]
+    assert collect.fill_tracks(rows, album, itunes, cap=10) == 0  # everything settled
 
 
 def test_is_console_classification():
@@ -572,7 +588,7 @@ def test_new_entry_shape_matches_schema():
 
 def test_run_collects_all_sources_and_is_stable(tmp_path):
     data_path = tmp_path / "releases.json"
-    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve, album_fn=no_album,
+    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve, album_fn=no_album, itunes_fn=no_itunes,
                        data_path=data_path, now=NOW) == 0
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert data["updatedAt"] == SEEN
@@ -586,7 +602,7 @@ def test_run_collects_all_sources_and_is_stable(tmp_path):
     # a second run over identical feeds must not rewrite the file
     first = data_path.read_text(encoding="utf-8")
     later = datetime(2026, 7, 29, 10, 0, 0, tzinfo=timezone.utc)
-    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve, album_fn=no_album,
+    assert collect.run(fetch_fn=fixture_fetch, resolve_fn=fake_resolve, album_fn=no_album, itunes_fn=no_itunes,
                        data_path=data_path, now=later) == 0
     assert data_path.read_text(encoding="utf-8") == first
 
@@ -597,7 +613,7 @@ def test_run_survives_one_source_failing(tmp_path, capsys):
             raise OSError("simulated network failure")
         return fixture_fetch(url)
     data_path = tmp_path / "releases.json"
-    assert collect.run(fetch_fn=flaky, resolve_fn=fake_resolve, album_fn=no_album,
+    assert collect.run(fetch_fn=flaky, resolve_fn=fake_resolve, album_fn=no_album, itunes_fn=no_itunes,
                        data_path=data_path, now=NOW) == 0
     out = capsys.readouterr().out
     assert "::warning::blipblop failed" in out
@@ -607,6 +623,6 @@ def test_run_survives_one_source_failing(tmp_path, capsys):
 def test_run_fails_red_when_every_source_fails(tmp_path, capsys):
     def dead(url):
         raise OSError("nope")
-    assert collect.run(fetch_fn=dead, resolve_fn=no_resolve, album_fn=no_album,
+    assert collect.run(fetch_fn=dead, resolve_fn=no_resolve, album_fn=no_album, itunes_fn=no_itunes,
                        data_path=tmp_path / "releases.json", now=NOW) == 1
     assert "::error::" in capsys.readouterr().out
