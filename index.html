@@ -307,7 +307,12 @@ function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(
 function setFeedGenre(g){ S.feedGenre = g || 'all'; save(); renderAll(); }
 function randomListen(){
   const rows = searched(feedRows());
-  if(rows.length) openTrack(rows[Math.floor(Math.random() * rows.length)]);
+  if(!rows.length) return;
+  const pick = rows[Math.floor(Math.random() * rows.length)];
+  EXPANDED = pick.id;  // open it here first; LISTEN is one tap away
+  renderList();
+  const el = document.querySelector(`.row[data-id="${CSS.escape(pick.id)}"]`);
+  if(el && el.scrollIntoView) el.scrollIntoView({ block: 'center' });
 }
 function toggleExpand(id){ EXPANDED = EXPANDED === id ? null : id; renderList(); }
 function openAlbum(id){ ALBUM = id; renderAlbum(); }

@@ -474,7 +474,7 @@ def test_numeral_folding_matches_roman_against_arabic():
 
 def test_token_matcher_accepts_reworded_albums_but_not_tributes():
     sly = [{"resultType": "album", "browseId": "MPREb_sly",
-            "title": "Sly Cooper Vol. I: The Thievius Raccoonus (Original Videogame Soundtrack)",
+            "title": "Sly Cooper Vol. I: The Thievius Raccoonus (Music Inspired by the Videogame Soundtrack)",
             "artists": [{"name": "Saliscore"}], "thumbnails": []}]
     hit = collect._match_album_tokens(sly, "Sly Cooper and the Thievius Raccoonus")
     assert hit and hit["url"].endswith("MPREb_sly")

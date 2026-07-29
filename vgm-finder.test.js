@@ -174,8 +174,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   w.__opened = null;
   w.eval('Math.random = () => 0');
   d.querySelector('#frandom').click();
-  assert(w.__opened === 'https://music.youtube.com/search?q=Fresh+Drop%3A+A+Brand+New+Soundtrack+soundtrack',
-    'random listen opens a random visible row on YT Music');
+  assert(rowById('fresh-drop').getAttribute('aria-expanded') === 'true' && w.__opened === null,
+    'random expands a pick in-app instead of leaving the app');
+  rowById('fresh-drop').click();
 
   // ---------- expand, then listen ----------
   w.__opened = null;

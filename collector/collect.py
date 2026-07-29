@@ -441,7 +441,8 @@ def _match_album(results, want_norm, year=None):
 # bookkeeping words an album title may add without changing which music it is
 _TOKENS_OK = {"the", "a", "an", "and", "of", "vol", "volume", "original", "official",
               "video", "videogame", "game", "soundtrack", "ost", "score", "music",
-              "from", "complete", "deluxe", "edition", "remastered", "remaster"}
+              "from", "complete", "deluxe", "edition", "remastered", "remaster",
+              "inspired", "by"}  # seed-vouched: "inspired by" rips are often the only album there is
 
 
 def _match_album_tokens(results, game_name):

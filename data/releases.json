@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T03:44:46Z",
+  "updatedAt": "2026-07-29T03:57:36Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -148412,7 +148412,9 @@
       "id": "sly-cooper-and-the-thievius-raccoonus",
       "title": "Sly Cooper and the Thievius Raccoonus Soundtrack",
       "game": "Sly Cooper and the Thievius Raccoonus",
-      "composers": [],
+      "composers": [
+        "Saliscore"
+      ],
       "date": "2002-09-23",
       "sources": [
         {
@@ -148423,7 +148425,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sly+Cooper+and+the+Thievius+Raccoonus+Soundtrack+Sly+Cooper+and+the+Thievius+Raccoonus+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_B2yx3iyJS5N",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p0r.jpg",
       "notable": true,
       "company": "Sucker Punch Productions",
@@ -148773,7 +148775,8 @@
           "title": "Credits",
           "plays": null
         }
-      ]
+      ],
+      "albumTitle": "Sly Cooper Vol. I: The Thievius Raccoonus (Original Videogame Inspired Soundtrack)"
     },
     {
       "id": "sly-2-band-of-thieves",
