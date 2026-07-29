@@ -18,7 +18,7 @@ def make_fetch(counter=None):
             counter.append(url)
         if url.startswith("igdb-top:"):
             return raw("igdb-games.json")  # 25 games < page size -> leg exhausts
-        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:") or url.startswith("igdb-franchise:"):
+        if url.startswith(("igdb-recent:", "igdb-seeds:", "igdb-franchise:", "igdb-gap:")):
             return b"[]"  # these legs are exercised by their own tests
         if "store.steampowered.com" in url:
             return raw("steam-top-soundtracks.json")
@@ -95,7 +95,7 @@ def test_backfill_gives_canon_games_search_rows_when_no_album_exists(tmp_path, m
     def fetch(url):
         if url.startswith("igdb-top:"):
             return page
-        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:") or url.startswith("igdb-franchise:"):
+        if url.startswith(("igdb-recent:", "igdb-seeds:", "igdb-franchise:", "igdb-gap:")):
             return b"[]"
         raise AssertionError(url)
     monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
@@ -117,7 +117,7 @@ def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatc
                           "first_release_date": 1745452800, "rating_count": 890,
                           "involved_companies": [{"developer": True, "company": {"name": "Sandfall Interactive"}}]}]).encode()
     def fetch(url):
-        if url.startswith("igdb-top:") or url.startswith("igdb-seeds:") or url.startswith("igdb-franchise:"):
+        if url.startswith(("igdb-top:", "igdb-seeds:", "igdb-franchise:", "igdb-gap:")):
             return b"[]"
         if url.startswith("igdb-recent:"):
             return recent
@@ -160,7 +160,7 @@ def test_seeds_always_get_rows_regardless_of_bars(tmp_path, monkeypatch):
     def fetch(url):
         if url.startswith("igdb-seeds:"):
             return seeds
-        if url.startswith("igdb-top:") or url.startswith("igdb-recent:"):
+        if url.startswith(("igdb-top:", "igdb-recent:", "igdb-gap:")):
             return b"[]"
         raise AssertionError(url)
     monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
@@ -188,3 +188,24 @@ def test_backfill_steam_cursor_pages_across_runs(tmp_path, monkeypatch):
     steam_urls = [u for u in fetches if "steampowered" in u]
     assert ["start=0" in steam_urls[0], "start=50" in steam_urls[1]] == [True, True]
     assert state["steamStart"] == 100  # resumes at page 3 next run
+
+
+def test_gap_leg_state_and_dispatch(tmp_path):
+    # state carries the gap cursor through save/load
+    p = tmp_path / "state.json"
+    p.write_text('{"igdbGapOffset": 300, "checked": [7]}', encoding="utf-8")
+    st = backfill.load_state(p)
+    assert st["igdbGapOffset"] == 300 and st["checked"] == [7]
+    assert backfill.load_state(tmp_path / "missing.json")["igdbGapOffset"] == 0
+    # the gap leg re-examines games earlier legs checked and dropped
+    game = {"id": 7, "name": "Gap Console Game", "first_release_date": 1760000000,
+            "rating_count": 9, "platforms": [167], "cover": {"image_id": "gapart"}}
+    state = {"igdbGapOffset": 0, "checked": [7], "resolveTried": []}
+    def fetch(url):
+        assert url.startswith("igdb-gap:")
+        return json.dumps([game] if url == "igdb-gap:0" else [])
+    added, done, looked = backfill.igdb_leg(
+        [], state, fetch, lambda q: [], "2026-07-29T00:00:00Z",
+        prefix="igdb-gap", offset_key="igdbGapOffset",
+        noalbum_bar=backfill.GAP_NOALBUM_BAR, skip_checked=False)
+    assert (added, done, looked) == (1, True, 1)  # search row despite being checked

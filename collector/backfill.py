@@ -27,6 +27,11 @@ SEEDS_PATH = collect.ROOT / "collector" / "seeds.json"
 IGDB_BAR = 200          # rating_count floor: the "deep catalog" tier, ~900 games
 IGDB_RECENT_BAR = 15    # recent releases can't have old-game rating counts
 IGDB_RECENT_YEARS = 3
+GAP_START = 1746057600  # 2025-05-01: after this, even 15 ratings is too high a bar
+GAP_END = 1753747200    # 2026-07-29: the dailies took over from here
+GAP_RATINGS = 2
+GAP_HYPES = 8
+GAP_NOALBUM_BAR = 8     # search-row bar for gap games with no findable album
 NOALBUM_BAR = 400       # canon tier: games this notable get a search row even with no YTM album
 IGDB_PAGE = 500
 STEAM_TARGET = 600      # most-reviewed soundtracks to ingest overall
@@ -104,6 +109,13 @@ def default_fetch(url):
         cutoff = int(time.time()) - IGDB_RECENT_YEARS * 365 * 86400
         return _igdb_query(f"rating_count >= {IGDB_RECENT_BAR} & first_release_date >= {cutoff}",
                            int(url.split(":", 1)[1]))
+    if url.startswith("igdb-gap:"):
+        # fresh releases haven't had time to accumulate ratings, so the
+        # recent leg's bar misses them wholesale — hype stands in for the
+        # crowd that hasn't voted yet
+        return _igdb_query(f"first_release_date >= {GAP_START} & first_release_date <= {GAP_END}"
+                           f" & (rating_count >= {GAP_RATINGS} | hypes >= {GAP_HYPES})",
+                           int(url.split(":", 1)[1]))
     return collect.fetch_feed(url)
 
 
@@ -115,12 +127,13 @@ def load_state(path):
                     "igdbOffset": int(d.get("igdbOffset", 0)),
                     "igdbRecentOffset": int(d.get("igdbRecentOffset", 0)),
                     "igdbFranchiseOffset": int(d.get("igdbFranchiseOffset", 0)),
+                    "igdbGapOffset": int(d.get("igdbGapOffset", 0)),
                     "checked": list(d.get("checked", [])),
                     "resolveTried": list(d.get("resolveTried", []))}
     except (OSError, ValueError):
         pass
     return {"steamStart": 0, "igdbOffset": 0, "igdbRecentOffset": 0,
-            "igdbFranchiseOffset": 0, "checked": [], "resolveTried": []}
+            "igdbFranchiseOffset": 0, "igdbGapOffset": 0, "checked": [], "resolveTried": []}
 
 
 def steam_leg(releases, state, fetch_fn, seen_at):
@@ -200,7 +213,11 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
 
 
 def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
-             prefix="igdb-top", offset_key="igdbOffset", cap=None, noalbum_bar=None):
+             prefix="igdb-top", offset_key="igdbOffset", cap=None, noalbum_bar=None,
+             skip_checked=True):
+    """skip_checked=False re-examines games earlier legs checked and dropped:
+    the gap leg runs at a lower search-row bar than the legs that came before
+    it, so their rejections aren't final here."""
     cap = YTM_CAP if cap is None else cap
     checked = set(state["checked"])
     claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
@@ -220,7 +237,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
             gid = g.get("id")
             name = (g.get("name") or "").strip()
             stamp = g.get("first_release_date")
-            if gid is None or gid in checked:
+            if gid is None or (skip_checked and gid in checked):
                 continue
             if not name or not stamp:
                 checked.add(gid)
@@ -353,9 +370,13 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     _, fran_done, spent3 = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                                     prefix="igdb-franchise", offset_key="igdbFranchiseOffset",
                                     cap=YTM_CAP - spent - spent2, noalbum_bar=40)
+    _, gap_done, spent4 = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
+                                   prefix="igdb-gap", offset_key="igdbGapOffset",
+                                   cap=max(0, YTM_CAP - spent - spent2 - spent3),
+                                   noalbum_bar=GAP_NOALBUM_BAR, skip_checked=False)
     resolve_done = resolve_leg(releases, state, resolve_fn,
-                               cap=max(0, YTM_CAP - spent - spent2 - spent3))
-    igdb_done = top_done and recent_done and fran_done and resolve_done
+                               cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4))
+    igdb_done = top_done and recent_done and fran_done and gap_done and resolve_done
     fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL)
     print(f"tracklists: {fetched} looked up")
 
