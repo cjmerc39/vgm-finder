@@ -134,8 +134,12 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
             continue
         when = datetime.fromtimestamp(stamp, tz=timezone.utc)
         try:
-            hit = collect._match_album(resolve_fn(collect._query(name)),
-                                       collect.normalize_title(name), year=when.year)
+            results = resolve_fn(collect._query(name))
+            # seeds are hand-vouched single games: strict first, then the
+            # token-vocabulary relaxation, and no year anchor (classic albums
+            # often reach streaming decades late)
+            hit = (collect._match_album(results, collect.normalize_title(name))
+                   or collect._match_album_tokens(results, name))
         except Exception:
             continue
         cover = (g.get("cover") or {}).get("image_id")
@@ -143,12 +147,13 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
                      if cover else None)
         item = {"game": name, "company": collect.company_of(g), "console": collect.is_console(g),
                 "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
-                "date": when.strftime("%Y-%m-%d")}
+                "date": when.strftime("%Y-%m-%d"),
+                "title": f"{name} Soundtrack", "composers": []}  # stable slug: upgrades the existing row
         if hit:
-            item.update({"title": hit["title"], "composers": hit["composers"],
+            item.update({"albumTitle": hit["title"], "composers": hit["composers"],
                          "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url})
         else:
-            item.update({"title": f"{name} Soundtrack", "composers": [], "art": cover_url})
+            item.update({"art": cover_url})
         a, _ = collect.merge(releases, [item], IGDB_SRC, seen_at)
         added += a
     print(f"seeds leg: {len(games) if isinstance(games, list) else 0} seeds, {added} new rows")

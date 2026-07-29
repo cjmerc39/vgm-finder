@@ -453,6 +453,24 @@ def test_numeral_folding_matches_roman_against_arabic():
     assert collect._itunes_album_matches("Final Fantasy 9 Original Soundtrack", n("Final Fantasy IX"))
 
 
+def test_token_matcher_accepts_reworded_albums_but_not_tributes():
+    sly = [{"resultType": "album", "browseId": "MPREb_sly",
+            "title": "Sly Cooper Vol. I: The Thievius Raccoonus (Original Videogame Soundtrack)",
+            "artists": [{"name": "Saliscore"}], "thumbnails": []}]
+    hit = collect._match_album_tokens(sly, "Sly Cooper and the Thievius Raccoonus")
+    assert hit and hit["url"].endswith("MPREb_sly")
+    remix = [{"resultType": "album", "browseId": "MPREb_rx",
+              "title": 'Spyro Remixed: Music from "Spyro The Dragon"',
+              "artists": [{"name": "Tiny Waves"}], "thumbnails": []}]
+    assert collect._match_album_tokens(remix, "Spyro the Dragon") is None  # 'remixed' is foreign
+    fever = [{"resultType": "album", "browseId": "MPREb_f", "title": "Pac-Man Fever (Soundtrack)",
+              "artists": [{"name": "Buckner & Garcia"}], "thumbnails": []}]
+    assert collect._match_album_tokens(fever, "Pac-Man") is None  # 'fever' is foreign
+    symphony = [{"resultType": "album", "browseId": "MPREb_s", "title": "Donkey Kong 64 Symphony (Original Score)",
+                 "artists": [{"name": "Orchestra"}], "thumbnails": []}]
+    assert collect._match_album_tokens(symphony, "Donkey Kong 64") is None  # 'symphony' is foreign
+
+
 def test_year_anchor_blocks_franchise_crossmatches():
     n = collect.normalize_title
     reboot_ost = [{"resultType": "album", "browseId": "MPREb_tr", "year": "2013",

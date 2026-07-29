@@ -425,6 +425,37 @@ def _match_album(results, want_norm, year=None):
     return None
 
 
+# bookkeeping words an album title may add without changing which music it is
+_TOKENS_OK = {"the", "a", "an", "and", "of", "vol", "volume", "original", "official",
+              "video", "videogame", "game", "soundtrack", "ost", "score", "music",
+              "from", "complete", "deluxe", "edition", "remastered", "remaster"}
+
+
+def _match_album_tokens(results, game_name):
+    """Seed-vouched relaxation: the album's content words must equal the
+    game's content words — "Sly Cooper Vol. I: The Thievius Raccoonus
+    (Original Videogame Soundtrack)" passes for Sly Cooper and the Thievius
+    Raccoonus, while "Spyro Remixed" or "Pac-Man Fever" introduce foreign
+    words and stay rejected."""
+    def content(norm):
+        return {t for t in _numfold(norm).split()
+                if t not in _TOKENS_OK and t != "i" and not t.isdigit()}
+    want = content(normalize_title(game_name))
+    if not want:
+        return None
+    for r in results or []:
+        if r.get("resultType") != "album" or not r.get("browseId"):
+            continue
+        if not _SOUNDTRACKY.search(r.get("title", "")):
+            continue
+        if content(normalize_title(r.get("title", ""))) != want:
+            continue
+        hit = _hit_from(r)
+        if hit:
+            return hit
+    return None
+
+
 def _match_album_within(results, hay_norm):
     """Containment: an editorial headline carries the album's name inside it
     ("Atomic Owl vinyl reissue is now available…" ⊇ "Atomic Owl (OST)").
@@ -511,9 +542,11 @@ _PUNCT = re.compile(r"[^\w\s]", re.UNICODE)
 # longest first so "original soundtrack" goes before "soundtrack" etc.
 _SUFFIXES = (
     "original video game soundtrack",
+    "original videogame soundtrack",
     "music from the video game",
     "original game soundtrack",
     "video game soundtrack",
+    "videogame soundtrack",
     "music from the game",
     "original sound track",
     "original soundtrack",

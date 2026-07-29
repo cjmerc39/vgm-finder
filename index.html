@@ -57,7 +57,7 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 
 .row{display:flex;align-items:stretch;gap:10px;border-bottom:1px solid var(--line);padding:10px 4px 10px 8px;cursor:pointer}
 .row:active{background:var(--bg2)}
-.rart{flex:none;width:54px;height:54px;border-radius:8px;overflow:hidden;background:var(--bg3);border:1px solid var(--line);align-self:center;position:relative}
+.rart{flex:none;width:54px;height:54px;border-radius:8px;overflow:hidden;background:var(--bg3);border:1px solid var(--line);align-self:flex-start;margin-top:2px;position:relative}
 .rart img{width:100%;height:100%;object-fit:cover;display:block}
 .rart.noart::after{content:'▷';position:absolute;inset:0;display:grid;place-items:center;color:var(--dim);font-size:18px}
 .row.ghost .rart,.row.heard .rart{opacity:.5}
