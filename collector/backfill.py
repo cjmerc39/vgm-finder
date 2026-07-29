@@ -237,7 +237,11 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
             company = collect.company_of(g)
             console = collect.is_console(g)
             if hit:
-                item = {"title": hit["title"], "game": name, "composers": hit["composers"],
+                # stable "<game> Soundtrack" title so the row collides with any
+                # existing search row instead of duplicating it; the album's
+                # real name shows via albumTitle
+                item = {"title": f"{name} Soundtrack", "albumTitle": hit["title"],
+                        "game": name, "composers": hit["composers"],
                         "company": company, "console": console, "genres": collect.genres_of(g),
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"),

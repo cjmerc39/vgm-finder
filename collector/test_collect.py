@@ -134,7 +134,8 @@ def test_igdb_yields_only_games_with_confident_albums():
     items = collect.parse_igdb(raw("igdb-games.json"), fake_resolve)
     assert {i["game"] for i in items} == {"Fading Echo", "Scarlet Deer Inn", "Denshattack!"}
     fading = next(i for i in items if i["game"] == "Fading Echo")
-    assert fading["title"] == "Fading Echo (Original Soundtrack)"
+    assert fading["title"] == "Fading Echo Soundtrack"
+    assert fading["albumTitle"] == "Fading Echo (Original Soundtrack)"
     assert fading["composers"] == ["Maxwell Sterling"]
     assert fading["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_hK34tOz4ENm"
     assert fading["url"] == "https://www.igdb.com/games/fading-echo"

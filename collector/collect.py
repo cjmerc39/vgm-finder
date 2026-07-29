@@ -566,7 +566,8 @@ def parse_igdb(raw, resolve):
             continue  # released game, but no confidently-matching album on YTM
         cover = (g.get("cover") or {}).get("image_id")
         items.append({
-            "title": hit["title"], "game": name, "composers": hit["composers"],
+            "title": f"{name} Soundtrack", "albumTitle": hit["title"],
+            "game": name, "composers": hit["composers"],
             "company": company_of(g), "console": is_console(g), "genres": genres_of(g),
             "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
             "date": when.strftime("%Y-%m-%d"),

@@ -48,7 +48,7 @@ def test_backfill_ingests_both_legs(tmp_path, monkeypatch, capsys):
     data, state = run_once(tmp_path, monkeypatch, STEAM_TARGET=50, STEAM_PAGES_PER_RUN=1)
     titles = " | ".join(r["title"] for r in data["releases"])
     assert "Hollow Knight - Official Soundtrack" in titles  # steam classics leg
-    assert "Fading Echo (Original Soundtrack)" in titles    # igdb album leg
+    assert "Fading Echo Soundtrack" in titles    # igdb album leg (stable title, album name in albumTitle)
     hk = next(r for r in data["releases"] if r["title"] == "Hollow Knight - Official Soundtrack")
     assert hk["game"] == "Hollow Knight" and hk["art"].endswith("/header.jpg")
     assert hk["date"] == "2017-02-24"  # classics keep their historical dates
@@ -137,7 +137,7 @@ def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatc
                  data_path=data_path, state_path=state_path, now=NOW)
     data = json.loads(data_path.read_text(encoding="utf-8"))
     row = data["releases"][0]
-    assert row["game"] == "Clair Obscur: Expedition 33"
+    assert row["game"] == "Clair Obscur: Expedition 33" and row["albumTitle"].startswith("Clair Obscur")
     assert row["company"] == "Sandfall Interactive"
     assert row["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_co33"
     state = json.loads(state_path.read_text(encoding="utf-8"))
