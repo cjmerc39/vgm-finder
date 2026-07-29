@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T05:36:18Z",
+  "updatedAt": "2026-07-29T05:40:05Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -116246,7 +116246,10 @@
       "id": "the-legend-of-zelda-the-minish-cap",
       "title": "The Legend of Zelda: The Minish Cap Soundtrack",
       "game": "The Legend of Zelda: The Minish Cap",
-      "composers": [],
+      "composers": [
+        "London Music Works",
+        "Scott Buckley"
+      ],
       "date": "2004-11-04",
       "sources": [
         {
@@ -116257,53 +116260,109 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+Zelda%3A+The+Minish+Cap+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wFxajY5HNbE",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nsk.jpg",
       "notable": true,
       "company": "Capcom Production Studio 1",
       "console": true,
-      "tracks": [
-        {
-          "title": "The Legend of Zelda : The Minish Cap (Main Theme)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (Royal Crypt)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (The Great Fairy)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (Zelda Lullaby)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (Vatti & Ezlo)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (Legend Of Minish)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (Dark Hyrule Castle)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (Zelda's Despair)",
-          "plays": null
-        },
-        {
-          "title": "The Legend of Zelda : The Minish Cap (End Theme)",
-          "plays": null
-        }
-      ],
       "genres": [
         "Puzzle",
         "Adventure"
-      ]
+      ],
+      "albumTitle": "Music from the Legend of Zelda",
+      "tracks": [
+        {
+          "title": "Main Theme (From \"The Legend of Zelda\")",
+          "plays": "61K plays",
+          "videoId": "6hNLbZceSBU"
+        },
+        {
+          "title": "Zelda II: The Adventure of Link (Palace Theme) [From \"The Legend of Zelda 2\"]",
+          "plays": "29K plays",
+          "videoId": "kCQbsaNwszc"
+        },
+        {
+          "title": "Dark World (From \"The Legend of Zelda: A Link to the Past\")",
+          "plays": "26K plays",
+          "videoId": "fvwi_NVGEmc"
+        },
+        {
+          "title": "Ballad of the Windfish (From \"The Legend of Zelda: Link's Awakening\")",
+          "plays": "24K plays",
+          "videoId": "mLM2BaGdSbY"
+        },
+        {
+          "title": "Song of Storms (from \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "37K plays",
+          "videoId": "hU9bBDoUCbI"
+        },
+        {
+          "title": "Zelda's Lullaby (From \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "22K plays",
+          "videoId": "VCbqkzSwOnY"
+        },
+        {
+          "title": "Song of Healing (From \"The Legend of Zelda: Majora's Mask\")",
+          "plays": "17K plays",
+          "videoId": "ybj45HSXXAU"
+        },
+        {
+          "title": "Palace Of Winds (From \"The Legend of Zelda: Four Swords Adventures\")",
+          "plays": "14K plays",
+          "videoId": "hlQUDXn_JXA"
+        },
+        {
+          "title": "Title Theme (From \"The Legend of Zelda: The Wind Waker\")",
+          "plays": "17K plays",
+          "videoId": "xk7DIc5CBR8"
+        },
+        {
+          "title": "Minish Village (From \"The Legend of Zelda: The Minish Cap\")",
+          "plays": "15K plays",
+          "videoId": "PX0glgGATso"
+        },
+        {
+          "title": "Ilia's Theme (From \"The Legend of Zelda: Twilight Princess\")",
+          "plays": "12K plays",
+          "videoId": "brk4xExQXEk"
+        },
+        {
+          "title": "Linebeck's Theme (From \"The Legend of Zelda: Phantom Hourglass\")",
+          "plays": "14K plays",
+          "videoId": "JL7YNgB7x1o"
+        },
+        {
+          "title": "Realm Overworld (From \"The Legend of Zelda: Spirit Tracks\")",
+          "plays": "12K plays",
+          "videoId": "vnGd0TBxCeA"
+        },
+        {
+          "title": "Skyloft (From \"The Legend of Zelda: Skyward Sword\")",
+          "plays": "12K plays",
+          "videoId": "RCJiz4pTvPs"
+        },
+        {
+          "title": "Lorule Castle (From “The Legend of Zelda: A Link Between Worlds”)",
+          "plays": "11K plays",
+          "videoId": "HJdfxz2zPLk"
+        },
+        {
+          "title": "Woodlands (From “The Legend of Zelda: Tri Force Heroes”)",
+          "plays": "10K plays",
+          "videoId": "QqqhJ30ulk8"
+        },
+        {
+          "title": "Theme (From \"The Legend of Zelda: Breath of the Wild\")",
+          "plays": "15K plays",
+          "videoId": "v3Bs4JL476I"
+        },
+        {
+          "title": "Main Theme (From \"The Legend of Zelda: Tears of the Kingdom\")",
+          "plays": "12K plays",
+          "videoId": "iUmUn21TLmo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
     },
     {
       "id": "valiant-hearts-the-great-war",
@@ -117413,7 +117472,9 @@
       "id": "overwatch-2023",
       "title": "Overwatch Soundtrack",
       "game": "Overwatch",
-      "composers": [],
+      "composers": [
+        "Sebastian Aav"
+      ],
       "date": "2023-08-10",
       "sources": [
         {
@@ -117424,88 +117485,107 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Overwatch+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_AkFpcmkZmNQ",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc99p.jpg",
       "notable": true,
       "company": "Blizzard Entertainment",
       "console": true,
+      "genres": [
+        "Shooter"
+      ],
       "tracks": [
         {
           "title": "Overwatch",
-          "plays": null
+          "plays": "2.4K plays",
+          "videoId": "mjnsOBYxwyQ"
         },
         {
           "title": "Skirmish",
-          "plays": null
+          "plays": "913 plays",
+          "videoId": "GeySwmgSSio"
         },
         {
           "title": "Radioactive",
-          "plays": null
+          "plays": "686 plays",
+          "videoId": "qjYXhmV7xXA"
         },
         {
           "title": "Assault",
-          "plays": null
+          "plays": "543 plays",
+          "videoId": "pPUNA8QZvQ0"
         },
         {
           "title": "Crossroads",
-          "plays": null
+          "plays": "383 plays",
+          "videoId": "TWpn_knZdtA"
         },
         {
           "title": "Citadel",
-          "plays": null
+          "plays": "267 plays",
+          "videoId": "2zb6R3i8qQ4"
         },
         {
           "title": "Fortress",
-          "plays": null
+          "plays": "365 plays",
+          "videoId": "_QvNdCihbAM"
         },
         {
           "title": "Predicament",
-          "plays": null
+          "plays": "225 plays",
+          "videoId": "tczE9mcBNB0"
         },
         {
           "title": "Escape",
-          "plays": null
+          "plays": "297 plays",
+          "videoId": "kxFzS3DPPJo"
         },
         {
           "title": "Strider",
-          "plays": null
+          "plays": "287 plays",
+          "videoId": "oJtogKLapFo"
         },
         {
           "title": "Core",
-          "plays": null
+          "plays": "215 plays",
+          "videoId": "2n5PQN2NViI"
         },
         {
           "title": "Overload",
-          "plays": null
+          "plays": "238 plays",
+          "videoId": "9k2Z9v_aMCM"
         },
         {
           "title": "Chopper",
-          "plays": null
+          "plays": "244 plays",
+          "videoId": "Vucz8pJfNZQ"
         },
         {
           "title": "Breach",
-          "plays": null
+          "plays": "236 plays",
+          "videoId": "geV4hXcwsCM"
         },
         {
           "title": "Echoes",
-          "plays": null
+          "plays": "204 plays",
+          "videoId": "A5H_Hz9Ptb0"
         },
         {
           "title": "Transgression",
-          "plays": null
+          "plays": "309 plays",
+          "videoId": "ukTlcQbSP8A"
         },
         {
           "title": "Odyssey",
-          "plays": null
+          "plays": "784 plays",
+          "videoId": "jJkywSZbDtk"
         },
         {
           "title": "Prometheus",
-          "plays": null
+          "plays": "310 plays",
+          "videoId": "uVChdFcJVns"
         }
       ],
-      "genres": [
-        "Shooter"
-      ]
+      "ytmPlaylistId": "OLAK5uy_leVvKnfxlO-VKaapF_Cjhmq4TTdKHPrbY"
     },
     {
       "id": "dead-by-daylight",
@@ -118610,7 +118690,9 @@
       "id": "xcom-2",
       "title": "XCOM 2 Soundtrack",
       "game": "XCOM 2",
-      "composers": [],
+      "composers": [
+        "Tim Wynn"
+      ],
       "date": "2016-02-04",
       "sources": [
         {
@@ -118621,134 +118703,165 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=XCOM+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_JZqRYPrPyrN",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1mvj.jpg",
       "notable": true,
       "company": "Firaxis Games",
       "console": true,
-      "tracks": [
-        {
-          "title": "Lazarus",
-          "plays": null
-        },
-        {
-          "title": "First Flight",
-          "plays": null
-        },
-        {
-          "title": "Game Over",
-          "plays": null
-        },
-        {
-          "title": "Infiltrator",
-          "plays": null
-        },
-        {
-          "title": "Welcome to the Lab",
-          "plays": null
-        },
-        {
-          "title": "Out of the Ashes",
-          "plays": null
-        },
-        {
-          "title": "Unification Day",
-          "plays": null
-        },
-        {
-          "title": "Squad Loadout",
-          "plays": null
-        },
-        {
-          "title": "Obey",
-          "plays": null
-        },
-        {
-          "title": "Retaliation",
-          "plays": null
-        },
-        {
-          "title": "Avenger Attacked",
-          "plays": null
-        },
-        {
-          "title": "Stage One",
-          "plays": null
-        },
-        {
-          "title": "Implants",
-          "plays": null
-        },
-        {
-          "title": "Weapons of Choice",
-          "plays": null
-        },
-        {
-          "title": "Alien Fortress",
-          "plays": null
-        },
-        {
-          "title": "Stage Three",
-          "plays": null
-        },
-        {
-          "title": "Break the Line",
-          "plays": null
-        },
-        {
-          "title": "Blacksite Horror",
-          "plays": null
-        },
-        {
-          "title": "PSI Network",
-          "plays": null
-        },
-        {
-          "title": "Codex",
-          "plays": null
-        },
-        {
-          "title": "New World Order",
-          "plays": null
-        },
-        {
-          "title": "Advent Coalition",
-          "plays": null
-        },
-        {
-          "title": "Avatar Project",
-          "plays": null
-        },
-        {
-          "title": "Refugee",
-          "plays": null
-        },
-        {
-          "title": "Commander Awakens",
-          "plays": null
-        },
-        {
-          "title": "Last Hope",
-          "plays": null
-        },
-        {
-          "title": "Ambush",
-          "plays": null
-        },
-        {
-          "title": "Victory",
-          "plays": null
-        },
-        {
-          "title": "Outpost",
-          "plays": null
-        }
-      ],
       "genres": [
         "Role-playing (RPG)",
         "Simulator",
         "Strategy"
-      ]
+      ],
+      "albumTitle": "XCOM 2 (Original Soundtrack from the Video Game)",
+      "tracks": [
+        {
+          "title": "Lazarus",
+          "plays": "63K plays",
+          "videoId": "-DQQ9_I3q8M"
+        },
+        {
+          "title": "First Flight",
+          "plays": "20K plays",
+          "videoId": "_rdrVXxliUU"
+        },
+        {
+          "title": "Game Over",
+          "plays": "16K plays",
+          "videoId": "OKcrHiDwXc8"
+        },
+        {
+          "title": "Infiltrator",
+          "plays": "34K plays",
+          "videoId": "N2n5r6LW43g"
+        },
+        {
+          "title": "Welcome to the Lab",
+          "plays": "16K plays",
+          "videoId": "mcvCgj2lhgw"
+        },
+        {
+          "title": "Out of the Ashes",
+          "plays": "47K plays",
+          "videoId": "1yvBXubA85Y"
+        },
+        {
+          "title": "Unification Day",
+          "plays": "15K plays",
+          "videoId": "nx2hhk4r33w"
+        },
+        {
+          "title": "Squad Loadout",
+          "plays": "289K plays",
+          "videoId": "k2r97r1-Tgs"
+        },
+        {
+          "title": "Obey",
+          "plays": "19K plays",
+          "videoId": "wACUsfhcFYA"
+        },
+        {
+          "title": "Retaliation",
+          "plays": "22K plays",
+          "videoId": "LZkrSWNkWZQ"
+        },
+        {
+          "title": "Avenger Attacked",
+          "plays": "13K plays",
+          "videoId": "V3hX64qy3ks"
+        },
+        {
+          "title": "Stage One",
+          "plays": "16K plays",
+          "videoId": "NpndCl01r8w"
+        },
+        {
+          "title": "Implants",
+          "plays": "15K plays",
+          "videoId": "NJNhLiupx5A"
+        },
+        {
+          "title": "Weapons of Choice",
+          "plays": "24K plays",
+          "videoId": "MuTRoaGlvh0"
+        },
+        {
+          "title": "Alien Fortress",
+          "plays": "8.9K plays",
+          "videoId": "AXWwAMbEk1U"
+        },
+        {
+          "title": "Stage Three",
+          "plays": "17K plays",
+          "videoId": "70c3UtNIBbo"
+        },
+        {
+          "title": "Break the Line",
+          "plays": "35K plays",
+          "videoId": "1kPxmcWOEQI"
+        },
+        {
+          "title": "Blacksite Horror",
+          "plays": "7.7K plays",
+          "videoId": "SjpxoNC4qjc"
+        },
+        {
+          "title": "Psi Network",
+          "plays": "7.4K plays",
+          "videoId": "42pmQei9hs0"
+        },
+        {
+          "title": "Codex",
+          "plays": "7.1K plays",
+          "videoId": "u8jCiPKB7cs"
+        },
+        {
+          "title": "New World Order",
+          "plays": "45K plays",
+          "videoId": "3aF43dHV308"
+        },
+        {
+          "title": "Advent Coalition",
+          "plays": "18K plays",
+          "videoId": "BYdxjRK1dYI"
+        },
+        {
+          "title": "Avatar Project",
+          "plays": "10K plays",
+          "videoId": "LQBX0Xs0r5Y"
+        },
+        {
+          "title": "Refugee",
+          "plays": "34K plays",
+          "videoId": "CUyu30j7l2w"
+        },
+        {
+          "title": "Commander Awakens",
+          "plays": "8.6K plays",
+          "videoId": "yw15I0CIKuY"
+        },
+        {
+          "title": "Last Hope",
+          "plays": "13K plays",
+          "videoId": "YneP4ALMf88"
+        },
+        {
+          "title": "Ambush",
+          "plays": "76K plays",
+          "videoId": "pLWLt2Tz_9c"
+        },
+        {
+          "title": "Victory",
+          "plays": "18K plays",
+          "videoId": "VhVhelwnT8k"
+        },
+        {
+          "title": "Outpost",
+          "plays": "12K plays",
+          "videoId": "5fbYDj-dVn0"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_m4QpfvG61S9E9zBY4-OeN1-N0joOff-Cc"
     },
     {
       "id": "tom-clancy-s-splinter-cell",
@@ -118846,7 +118959,9 @@
       "id": "psychonauts",
       "title": "Psychonauts Soundtrack",
       "game": "Psychonauts",
-      "composers": [],
+      "composers": [
+        "Peter McConnell"
+      ],
       "date": "2005-04-19",
       "sources": [
         {
@@ -118857,134 +118972,124 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Psychonauts+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_sxCkie2ejR0",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob7ms.jpg",
       "notable": true,
       "company": "Double Fine Productions",
       "console": true,
-      "tracks": [
-        {
-          "title": "Psychonauts 2 Title and Prologue",
-          "plays": null
-        },
-        {
-          "title": "The Eye Shrine",
-          "plays": null
-        },
-        {
-          "title": "Lady Luctopus",
-          "plays": null
-        },
-        {
-          "title": "Something Fishy at Headquarters",
-          "plays": null
-        },
-        {
-          "title": "Cassie's Library and Shanghai Memories",
-          "plays": null
-        },
-        {
-          "title": "The Quarry",
-          "plays": null
-        },
-        {
-          "title": "The Questionable Area?",
-          "plays": null
-        },
-        {
-          "title": "Aquato Family Caravan",
-          "plays": null
-        },
-        {
-          "title": "Intern Hazing",
-          "plays": null
-        },
-        {
-          "title": "Casino Hallway Sneak",
-          "plays": null
-        },
-        {
-          "title": "Feeling Lucky Tonight",
-          "plays": null
-        },
-        {
-          "title": "Here's How It's Done",
-          "plays": null
-        },
-        {
-          "title": "Casino Monorail",
-          "plays": null
-        },
-        {
-          "title": "Panic Attack",
-          "plays": null
-        },
-        {
-          "title": "The Flea Circus",
-          "plays": null
-        },
-        {
-          "title": "The Grand Hall of the Psychonauts",
-          "plays": null
-        },
-        {
-          "title": "Cassie Goes Berserk",
-          "plays": null
-        },
-        {
-          "title": "Cassie's Library Book",
-          "plays": null
-        },
-        {
-          "title": "Fight in the Library",
-          "plays": null
-        },
-        {
-          "title": "Traversing the Stacks",
-          "plays": null
-        },
-        {
-          "title": "Cassie's Catacombs",
-          "plays": null
-        },
-        {
-          "title": "Ford's Bowling Alley",
-          "plays": null
-        },
-        {
-          "title": "Truman's Ship in a Bottle",
-          "plays": null
-        },
-        {
-          "title": "Introducing Gristol's Mind",
-          "plays": null
-        },
-        {
-          "title": "Nona's Quilt of Memories",
-          "plays": null
-        },
-        {
-          "title": "Maligula Unleashed!",
-          "plays": null
-        },
-        {
-          "title": "Maligula's Dark Town",
-          "plays": null
-        },
-        {
-          "title": "Mal-BIG-ula",
-          "plays": null
-        },
-        {
-          "title": "And Now for This Important Message",
-          "plays": null
-        }
-      ],
       "genres": [
         "Platform",
         "Puzzle",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "The Meat Circus",
+          "plays": "463K plays",
+          "videoId": "yEfcgr9cQWk"
+        },
+        {
+          "title": "Whispering Rock",
+          "plays": "93K plays",
+          "videoId": "FPG_7FGS7NY"
+        },
+        {
+          "title": "Stay out of the Moonlight",
+          "plays": "73K plays",
+          "videoId": "gERmxHbZ-2I"
+        },
+        {
+          "title": "Hagatha's Home",
+          "plays": "32K plays",
+          "videoId": "U8r3PbbcUh0"
+        },
+        {
+          "title": "Happy Flowers",
+          "plays": "43K plays",
+          "videoId": "Ky-EFX2L490"
+        },
+        {
+          "title": "The Lungfish Lair",
+          "plays": "16K plays",
+          "videoId": "vdKLVLerpJ4"
+        },
+        {
+          "title": "The Milkman Conspiracy",
+          "plays": "60K plays",
+          "videoId": "lXLMpDWGeo8"
+        },
+        {
+          "title": "Dr. Loboto's Lab",
+          "plays": "20K plays",
+          "videoId": "tuNuNaTTs2Y"
+        },
+        {
+          "title": "Duel With the Critic",
+          "plays": "12K plays",
+          "videoId": "USzV-HdAuu4"
+        },
+        {
+          "title": "The Catwalk Phantom",
+          "plays": "11K plays",
+          "videoId": "MPlkyz9nxyg"
+        },
+        {
+          "title": "March of the Inmates",
+          "plays": "18K plays",
+          "videoId": "_7A4DsHuGnw"
+        },
+        {
+          "title": "Sasha's Immaculate Mind",
+          "plays": "23K plays",
+          "videoId": "VU1OupT1_Ys"
+        },
+        {
+          "title": "The Censors Unleashed",
+          "plays": "41K plays",
+          "videoId": "1iPVS5NypMo"
+        },
+        {
+          "title": "Black Velvetopia",
+          "plays": "38K plays",
+          "videoId": "rlYn0DQACfo"
+        },
+        {
+          "title": "The Wild Bull Run / El Odio",
+          "plays": "28K plays",
+          "videoId": "2Mpqsc3iejc"
+        },
+        {
+          "title": "The Matador",
+          "plays": "28K plays",
+          "videoId": "yKtHaq-kr4U"
+        },
+        {
+          "title": "Gloria's Secret Garden",
+          "plays": "14K plays",
+          "videoId": "FhxqACg2jMk"
+        },
+        {
+          "title": "Bonita's Tragic Muse",
+          "plays": "11K plays",
+          "videoId": "YeZCLNc8bGk"
+        },
+        {
+          "title": "Bunk Time",
+          "plays": "25K plays",
+          "videoId": "eL-caN6RWqk"
+        },
+        {
+          "title": "Title and End Credits",
+          "plays": "78K plays",
+          "videoId": "kDpHj5SqIFI"
+        },
+        {
+          "title": "Emotional Baggage",
+          "plays": "17K plays",
+          "videoId": "QddDIVL86q4"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_lBD8WGvCFftayPqeK5BdAfpnBvQBHNo8M"
     },
     {
       "id": "tony-hawk-s-pro-skater-2",
