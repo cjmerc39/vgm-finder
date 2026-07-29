@@ -864,3 +864,34 @@ def test_hit_gates_cover_the_publisher_conventions():
            "title": "The Music of Grand Theft Auto V, Vol. 2: The Score",
            "artists": [{"name": "Various Artists"}], "thumbnails": []}
     assert collect._hit_from(gta)
+
+
+def test_video_edition_tracks_take_ids_from_the_audio_playlist():
+    # Minecraft Volume Alpha: the album page links 13 tracks as music videos
+    # (OMV); their audio ids live in the album's OLAK playlist instead
+    album = {"title": "Minecraft - Volume Alpha", "audioPlaylistId": "OLAK5uy_alpha",
+             "tracks": [
+                 {"title": "Key", "views": "1.2M", "videoId": "vidKeyATV",
+                  "videoType": "MUSIC_VIDEO_TYPE_ATV"},
+                 {"title": "Sweden", "views": "90M", "videoId": "vidSweOMV",
+                  "videoType": "MUSIC_VIDEO_TYPE_OMV"}]}
+    playlist = {"tracks": [{"title": "Key", "videoId": "vidKeyATV"},
+                           {"title": "Sweden", "videoId": "vidSweATV"}]}
+    fetched = []
+    r = {"id": "mva", "title": "Minecraft - Volume Alpha", "date": "2011-03-04",
+         "sources": [], "notable": True,
+         "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_alpha"}
+    collect.fill_tracks([r], lambda b: album, no_itunes, cap=5,
+                        playlist_fn=lambda p: (fetched.append(p), playlist)[1])
+    assert fetched == ["OLAK5uy_alpha"]
+    assert [t["videoId"] for t in r["tracks"]] == ["vidKeyATV", "vidSweATV"]
+    assert r["ytmPlaylistId"] == "OLAK5uy_alpha"
+    # an all-audio album never fetches the playlist
+    clean = {"title": "Volume Beta", "audioPlaylistId": "OLAK5uy_beta",
+             "tracks": [{"title": "Flake", "views": "2M", "videoId": "vidFlake",
+                         "videoType": "MUSIC_VIDEO_TYPE_ATV"}]}
+    r2 = dict(r, id="mvb", ytmAlbumUrl="https://music.youtube.com/browse/MPREb_beta")
+    r2.pop("tracks", None)
+    collect.fill_tracks([r2], lambda b: clean, no_itunes, cap=5,
+                        playlist_fn=lambda p: (_ for _ in ()).throw(AssertionError("no fetch")))
+    assert r2["tracks"][0]["videoId"] == "vidFlake"

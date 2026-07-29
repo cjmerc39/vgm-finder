@@ -83,6 +83,14 @@ def ytm_album(browse_id):
     return _YT.get_album(browse_id)
 
 
+def ytm_playlist(playlist_id):
+    global _YT
+    if _YT is None:
+        from ytmusicapi import YTMusic
+        _YT = YTMusic()
+    return _YT.get_playlist(playlist_id, limit=None)
+
+
 TRACKS_CAP = 25
 
 
@@ -210,7 +218,27 @@ def ytm_tracks_from(album):
     return out
 
 
-def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP):
+def _patch_audio_ids(tracks, playlist):
+    """Album pages link video editions (OMV) for some tracks — Volume Alpha
+    carries 13 — and those ids get dropped. The album's audio playlist lists
+    the audio id at every position, so nulls are patched from there."""
+    pl = [t for t in (playlist or {}).get("tracks", []) if t.get("title")]
+    if not pl:
+        return
+    by_title = {}
+    for t in pl:
+        by_title.setdefault(normalize_title(t["title"]), t.get("videoId"))
+    aligned = len(pl) == len(tracks)
+    for i, t in enumerate(tracks):
+        if t["videoId"]:
+            continue
+        vid = (pl[i].get("videoId") if aligned else None) \
+            or by_title.get(normalize_title(t["title"]))
+        if vid:
+            t["videoId"] = vid
+
+
+def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_playlist):
     """Full tracklists, capped per run: YTM albums carry plays + per-track
     videoIds; game-named rows without a YTM album fall back to Apple's
     catalog. [] is a completed check, and legacy topTracks is retired."""
@@ -231,6 +259,11 @@ def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP):
             plid = (album or {}).get("audioPlaylistId")
             if plid:
                 r["ytmPlaylistId"] = plid  # &list= makes track links open the song, not the video
+                if playlist_fn and any(not t["videoId"] for t in r["tracks"]):
+                    try:
+                        _patch_audio_ids(r["tracks"], playlist_fn(plid))
+                    except Exception:
+                        pass  # patch is best-effort: links fall back to search
         elif r.get("game"):
             looked += 1
             try:
