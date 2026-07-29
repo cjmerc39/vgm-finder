@@ -378,7 +378,7 @@ def _query(title):
     return title if "soundtrack" in title.lower() else f"{title} soundtrack"
 
 
-_SOUNDTRACKY = re.compile(r"\b(soundtrack|ost|score|original sound|music from)\b", re.IGNORECASE)
+_SOUNDTRACKY = re.compile(r"\b(soundtrack|ost|score|original sound|music (from|of))\b", re.IGNORECASE)
 
 _ROMAN_TOKENS = {"ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8,
                  "ix": 9, "x": 10, "xi": 11, "xii": 12, "xiii": 13, "xiv": 14,
