@@ -910,7 +910,7 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
 # tribute wording that disqualifies an album from a live-service scan
 _GAAS_BLACKLIST = re.compile(
     r"\b(covers?|tribute|remix(es)?|medley|lullab|lo-?fi|8-?bit|chill"
-    r"|movie|motion picture|film|bonus songs)\b", re.IGNORECASE)
+    r"|movie|motion picture|film|bonus songs|roblox)\b", re.IGNORECASE)
 
 
 def gaas_names(path=None):
