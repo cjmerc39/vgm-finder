@@ -448,6 +448,12 @@ def _hit_from(r):
     artists = [a["name"] for a in r.get("artists", []) if a.get("name")]
     if any(a.lower() in _COVERS_ARTISTS for a in artists):
         return None
+    # movie-tie-in games share names with movie soundtracks (Shrek 2), and
+    # the era guard can't tell them apart — a movie/film album only counts
+    # when the title itself says it's for the game (The LEGO Movie Videogame)
+    if re.search(r"\b(motion picture|movie|film)\b", title, re.IGNORECASE) \
+            and not re.search(r"\b(video ?game|game)\b", title, re.IGNORECASE):
+        return None
     composers = [a for a in artists
                  if a.lower() != "various artists" and normalize_title(a) != n]
     if not composers:

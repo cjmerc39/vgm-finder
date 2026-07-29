@@ -925,3 +925,14 @@ def test_token_matcher_prefers_the_lowest_volume():
     plain = vols + [alb("MPREb_v0", "The Sims 4 (Original Soundtrack)")]
     hit = collect._match_album_tokens(plain, "The Sims 4")
     assert hit and hit["title"] == "The Sims 4 (Original Soundtrack)"  # un-volumed beats all
+
+
+def test_movie_soundtracks_never_attach_to_tie_in_games():
+    movie = {"resultType": "album", "browseId": "MPREb_shrek", "year": "2004",
+             "title": "Shrek 2 (Original Motion Picture Soundtrack)",
+             "artists": [{"name": "Harry Gregson-Williams"}], "thumbnails": []}
+    assert collect._hit_from(movie) is None  # same name, same year: only this guard can tell
+    tie_in = {"resultType": "album", "browseId": "MPREb_lego", "year": "2014",
+              "title": "The LEGO Movie Videogame (Original Soundtrack)",
+              "artists": [{"name": "Rob Westwood"}], "thumbnails": []}
+    assert collect._hit_from(tie_in)  # the game's own album says so in the title
