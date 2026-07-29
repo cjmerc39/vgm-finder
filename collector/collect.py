@@ -784,12 +784,14 @@ def gaas_albums(releases, resolve, seen_at, names=None):
             if r.get("resultType") != "album" or not r.get("browseId"):
                 continue
             title = r.get("title", "")
-            if not _SOUNDTRACKY.search(title) or _GAAS_BLACKLIST.search(title):
+            if _GAAS_BLACKLIST.search(title):
                 continue
             cand = {t for t in _numfold(normalize_title(title)).split()
                     if t not in _TOKENS_OK and t != "i"}
             if not want or not want.issubset(cand):
                 continue  # the album must name the game
+            if not _SOUNDTRACKY.search(title) and cand != want:
+                continue  # soundtrack wording, or a pure-name album (Minecraft - Volume Alpha)
             hit = _hit_from(r)
             if not hit:
                 continue
