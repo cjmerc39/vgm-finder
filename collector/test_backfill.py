@@ -195,17 +195,18 @@ def test_gap_leg_state_and_dispatch(tmp_path):
     p = tmp_path / "state.json"
     p.write_text('{"igdbGapOffset": 300, "checked": [7]}', encoding="utf-8")
     st = backfill.load_state(p)
-    assert st["igdbGapOffset"] == 300 and st["checked"] == [7]
+    assert st["igdbGapOffset"] == 300 and st["checked"] == [7] and st["gapChecked"] == []
     assert backfill.load_state(tmp_path / "missing.json")["igdbGapOffset"] == 0
     # the gap leg re-examines games earlier legs checked and dropped
     game = {"id": 7, "name": "Gap Console Game", "first_release_date": 1760000000,
             "rating_count": 9, "platforms": [167], "cover": {"image_id": "gapart"}}
-    state = {"igdbGapOffset": 0, "checked": [7], "resolveTried": []}
+    state = {"igdbGapOffset": 0, "checked": [7], "gapChecked": [], "resolveTried": []}
     def fetch(url):
         assert url.startswith("igdb-gap:")
         return json.dumps([game] if url == "igdb-gap:0" else [])
     added, done, looked = backfill.igdb_leg(
         [], state, fetch, lambda q: [], "2026-07-29T00:00:00Z",
         prefix="igdb-gap", offset_key="igdbGapOffset",
-        noalbum_bar=backfill.GAP_NOALBUM_BAR, skip_checked=False)
+        noalbum_bar=backfill.GAP_NOALBUM_BAR, checked_key="gapChecked")
     assert (added, done, looked) == (1, True, 1)  # search row despite being checked
+    assert state["gapChecked"] == [7] and state["checked"] == [7]  # own progress set

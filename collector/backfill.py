@@ -131,12 +131,14 @@ def load_state(path):
                     "igdbRecentOffset": int(d.get("igdbRecentOffset", 0)),
                     "igdbFranchiseOffset": int(d.get("igdbFranchiseOffset", 0)),
                     "igdbGapOffset": int(d.get("igdbGapOffset", 0)),
+                    "gapChecked": list(d.get("gapChecked", [])),
                     "checked": list(d.get("checked", [])),
                     "resolveTried": list(d.get("resolveTried", []))}
     except (OSError, ValueError):
         pass
     return {"steamStart": 0, "igdbOffset": 0, "igdbRecentOffset": 0,
-            "igdbFranchiseOffset": 0, "igdbGapOffset": 0, "checked": [], "resolveTried": []}
+            "igdbFranchiseOffset": 0, "igdbGapOffset": 0, "gapChecked": [],
+            "checked": [], "resolveTried": []}
 
 
 def steam_leg(releases, state, fetch_fn, seen_at):
@@ -217,12 +219,13 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
 
 def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
              prefix="igdb-top", offset_key="igdbOffset", cap=None, noalbum_bar=None,
-             skip_checked=True):
-    """skip_checked=False re-examines games earlier legs checked and dropped:
-    the gap leg runs at a lower search-row bar than the legs that came before
-    it, so their rejections aren't final here."""
+             checked_key="checked"):
+    """checked_key names the leg's progress set. The gap leg keeps its own
+    (gapChecked): it runs at a lower search-row bar than the legs before it,
+    so their rejections must not block it — but it still needs a marker of
+    its own, or cap-interrupted pages replay forever."""
     cap = YTM_CAP if cap is None else cap
-    checked = set(state["checked"])
+    checked = set(state.get(checked_key, []))
     claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
     looked = added = 0
     exhausted = False
@@ -240,7 +243,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
             gid = g.get("id")
             name = (g.get("name") or "").strip()
             stamp = g.get("first_release_date")
-            if gid is None or (skip_checked and gid in checked):
+            if gid is None or gid in checked:
                 continue
             if not name or not stamp:
                 checked.add(gid)
@@ -376,7 +379,7 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     _, gap_done, spent4 = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                                    prefix="igdb-gap", offset_key="igdbGapOffset",
                                    cap=max(0, YTM_CAP - spent - spent2 - spent3),
-                                   noalbum_bar=GAP_NOALBUM_BAR, skip_checked=False)
+                                   noalbum_bar=GAP_NOALBUM_BAR, checked_key="gapChecked")
     resolve_done = resolve_leg(releases, state, resolve_fn,
                                cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4))
     igdb_done = top_done and recent_done and fran_done and gap_done and resolve_done
