@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T23:38:13Z",
+  "updatedAt": "2026-07-29T23:38:56Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -287226,6 +287226,96 @@
         "Racing"
       ],
       "tracks": []
+    },
+    {
+      "id": "synapse",
+      "title": "Synapse Soundtrack",
+      "game": "Synapse",
+      "composers": [
+        "J U N O"
+      ],
+      "date": "2023-07-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/synapse--1",
+          "seenAt": "2026-07-29T23:38:53Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Synapse+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fIRiuGnBzu7",
+      "art": "https://yt3.googleusercontent.com/kIjXvhs6s6ZVqAmSKDKxg-KQBLcwcjnJ4NxXPSn0GdWF8lXdE7c_YiIrjw854s6SSMjhlDBdnSDz6BE=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Synapse (Original Theatrical Soundtrack)",
+      "company": "nDreams",
+      "console": true,
+      "genres": [
+        "Shooter"
+      ],
+      "tracks": [
+        {
+          "title": "Perfect Storm",
+          "plays": "29 plays",
+          "videoId": "QIb4QMYWipU"
+        },
+        {
+          "title": "Incognito",
+          "plays": "21 plays",
+          "videoId": "ftU97gflo6w"
+        },
+        {
+          "title": "Locked In",
+          "plays": "19 plays",
+          "videoId": "6bLmAc_zvpE"
+        },
+        {
+          "title": "Jumping the Synapse",
+          "plays": "12 plays",
+          "videoId": "1apRD3j0dOo"
+        },
+        {
+          "title": "The Thunderstorm",
+          "plays": "36 plays",
+          "videoId": "XJ2jswNmbFY"
+        },
+        {
+          "title": "Escape from Water",
+          "plays": "17 plays",
+          "videoId": "TjpgTWCHLqE"
+        },
+        {
+          "title": "Bangs",
+          "plays": "20 plays",
+          "videoId": "bSVbxv2-_7Y"
+        },
+        {
+          "title": "The Wander",
+          "plays": "15 plays",
+          "videoId": "uWZcBqAFxX8"
+        },
+        {
+          "title": "Here We Go",
+          "plays": "14 plays",
+          "videoId": "TCnFwzKDegs"
+        },
+        {
+          "title": "Overarc",
+          "plays": "9 plays",
+          "videoId": "rDZRT5GgIuw"
+        },
+        {
+          "title": "The Bubble",
+          "plays": "14 plays",
+          "videoId": "tkhO2p6Azec"
+        },
+        {
+          "title": "Perfect Storm (Instrumental Version)",
+          "plays": "16 plays",
+          "videoId": "XLHUTHdFCFM"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mzzGDB_EoaS-6wPkQi9hdGzNetKWdgdnM"
     }
   ]
 }
