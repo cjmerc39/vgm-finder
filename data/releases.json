@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T01:46:11Z",
+  "updatedAt": "2026-07-29T02:06:17Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -14775,7 +14775,9 @@
       "id": "divinity-original-sin-2",
       "title": "Divinity: Original Sin 2 - Official Soundtrack",
       "game": "Divinity: Original Sin 2",
-      "composers": [],
+      "composers": [
+        "Borislav Slavov"
+      ],
       "date": "2017-09-14",
       "sources": [
         {
@@ -14792,7 +14794,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Divinity%3A+Original+Sin+2+-+Official+Soundtrack+Divinity%3A+Original+Sin+2+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_akVA3UHvFzI",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1247270/header.jpg",
       "notable": true,
       "company": "Larian Studios",
@@ -76181,7 +76183,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wls.jpg",
       "notable": true,
       "company": "Nintendo EPD Production Group No. 5",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Animal Crossing New Horizons (All Museum Music)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "final-fantasy-vii-remake",
@@ -77007,7 +77015,21 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28bp.jpg",
       "notable": true,
       "company": "Lucasfilm Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Secret of Monkey Island (edit)",
+          "plays": null
+        },
+        {
+          "title": "The Secret of Monkey Island (extended)",
+          "plays": null
+        },
+        {
+          "title": "The Secret of Monkey Island (Timbor & Tebic club mix)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "payday-2",
@@ -77028,7 +77050,69 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaaqu.jpg",
       "notable": true,
       "company": "Overkill Software",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Mayhem Dressed in a Suit",
+          "plays": null
+        },
+        {
+          "title": "Master Plan",
+          "plays": null
+        },
+        {
+          "title": "Time Window",
+          "plays": null
+        },
+        {
+          "title": "Black Yellow Moebius",
+          "plays": null
+        },
+        {
+          "title": "The Mark",
+          "plays": null
+        },
+        {
+          "title": "Full Force Forward",
+          "plays": null
+        },
+        {
+          "title": "Tick Tock",
+          "plays": null
+        },
+        {
+          "title": "Fuse Box",
+          "plays": null
+        },
+        {
+          "title": "Razormind",
+          "plays": null
+        },
+        {
+          "title": "Calling All Units",
+          "plays": null
+        },
+        {
+          "title": "Where's the Van",
+          "plays": null
+        },
+        {
+          "title": "Hard Time",
+          "plays": null
+        },
+        {
+          "title": "Clean Getaway",
+          "plays": null
+        },
+        {
+          "title": "Mayhem Dressed in a Suit (Remix)",
+          "plays": null
+        },
+        {
+          "title": "Let's Go Shopping",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pokémon-go",
@@ -77049,7 +77133,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gmb.jpg",
       "notable": true,
       "company": "Niantic Labs",
-      "console": false
+      "console": false,
+      "tracks": [
+        {
+          "title": "Pokémon Go",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "path-of-exile",
@@ -77070,7 +77160,109 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n6w.jpg",
       "notable": true,
       "company": "Grinding Gear Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Main Menu",
+          "plays": null
+        },
+        {
+          "title": "The Twilight Strand",
+          "plays": null
+        },
+        {
+          "title": "Lioneye's Watch",
+          "plays": null
+        },
+        {
+          "title": "Submerged Passage",
+          "plays": null
+        },
+        {
+          "title": "The Ledge",
+          "plays": null
+        },
+        {
+          "title": "The Prison",
+          "plays": null
+        },
+        {
+          "title": "The Warden's Quarters",
+          "plays": null
+        },
+        {
+          "title": "The Coves",
+          "plays": null
+        },
+        {
+          "title": "Merveil Theme",
+          "plays": null
+        },
+        {
+          "title": "The Forest",
+          "plays": null
+        },
+        {
+          "title": "Forest Encampment",
+          "plays": null
+        },
+        {
+          "title": "The Cave",
+          "plays": null
+        },
+        {
+          "title": "Dark Forest",
+          "plays": null
+        },
+        {
+          "title": "Chamber of Sins",
+          "plays": null
+        },
+        {
+          "title": "Church Dungeon",
+          "plays": null
+        },
+        {
+          "title": "Vaal Ruins",
+          "plays": null
+        },
+        {
+          "title": "Phrecian Forest",
+          "plays": null
+        },
+        {
+          "title": "Vaal Oversoul Theme",
+          "plays": null
+        },
+        {
+          "title": "Sarn Theme",
+          "plays": null
+        },
+        {
+          "title": "City Encampment",
+          "plays": null
+        },
+        {
+          "title": "Sarn Slums",
+          "plays": null
+        },
+        {
+          "title": "Gardens",
+          "plays": null
+        },
+        {
+          "title": "Sewers",
+          "plays": null
+        },
+        {
+          "title": "Solaris Temple",
+          "plays": null
+        },
+        {
+          "title": "Sceptre of God",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "far-cry-primal",
@@ -77281,7 +77473,209 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rco.jpg",
       "notable": true,
       "company": "Bungie",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Path",
+          "plays": null
+        },
+        {
+          "title": "The Union",
+          "plays": null
+        },
+        {
+          "title": "The Ruin",
+          "plays": null
+        },
+        {
+          "title": "The Tribulation",
+          "plays": null
+        },
+        {
+          "title": "The Rose",
+          "plays": null
+        },
+        {
+          "title": "The Ecstasy",
+          "plays": null
+        },
+        {
+          "title": "The Prison",
+          "plays": null
+        },
+        {
+          "title": "The Hope",
+          "plays": null
+        },
+        {
+          "title": "The Traveler",
+          "plays": null
+        },
+        {
+          "title": "The Fallen",
+          "plays": null
+        },
+        {
+          "title": "Excerpt from The Hope",
+          "plays": null
+        },
+        {
+          "title": "Excerpt from The Ecstacy",
+          "plays": null
+        },
+        {
+          "title": "The Warmind",
+          "plays": null
+        },
+        {
+          "title": "Guardian",
+          "plays": null
+        },
+        {
+          "title": "The Tower",
+          "plays": null
+        },
+        {
+          "title": "The Last Array",
+          "plays": null
+        },
+        {
+          "title": "The Collapse",
+          "plays": null
+        },
+        {
+          "title": "The Journey Home",
+          "plays": null
+        },
+        {
+          "title": "First Challenge",
+          "plays": null
+        },
+        {
+          "title": "Prey",
+          "plays": null
+        },
+        {
+          "title": "Tranquility",
+          "plays": null
+        },
+        {
+          "title": "The Great Unknown",
+          "plays": null
+        },
+        {
+          "title": "Excerpt 1 from The Rose",
+          "plays": null
+        },
+        {
+          "title": "Excerpt from The Tribulation",
+          "plays": null
+        },
+        {
+          "title": "Guardians Lost",
+          "plays": null
+        },
+        {
+          "title": "Relic of Hope",
+          "plays": null
+        },
+        {
+          "title": "Departure",
+          "plays": null
+        },
+        {
+          "title": "Lost Horizons",
+          "plays": null
+        },
+        {
+          "title": "Reborn",
+          "plays": null
+        },
+        {
+          "title": "Sepiks Prime",
+          "plays": null
+        },
+        {
+          "title": "Traveler's Promise",
+          "plays": null
+        },
+        {
+          "title": "Deconstruction",
+          "plays": null
+        },
+        {
+          "title": "Excerpt from The Ruin",
+          "plays": null
+        },
+        {
+          "title": "Untold Legends",
+          "plays": null
+        },
+        {
+          "title": "Cabal Stomp",
+          "plays": null
+        },
+        {
+          "title": "Dust Giants",
+          "plays": null
+        },
+        {
+          "title": "Ishtar Sink",
+          "plays": null
+        },
+        {
+          "title": "The World's Grave",
+          "plays": null
+        },
+        {
+          "title": "Exclusion Zone",
+          "plays": null
+        },
+        {
+          "title": "The Stranger",
+          "plays": null
+        },
+        {
+          "title": "Temple of Crota",
+          "plays": null
+        },
+        {
+          "title": "Eye of the Gate Lord",
+          "plays": null
+        },
+        {
+          "title": "The Hive",
+          "plays": null
+        },
+        {
+          "title": "The Collective",
+          "plays": null
+        },
+        {
+          "title": "End of the Line",
+          "plays": null
+        },
+        {
+          "title": "The Vex",
+          "plays": null
+        },
+        {
+          "title": "Siege Dancers",
+          "plays": null
+        },
+        {
+          "title": "Chronologies",
+          "plays": null
+        },
+        {
+          "title": "Passage",
+          "plays": null
+        },
+        {
+          "title": "Excerpt 2 from The Rose",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pokémon-blue-version",
@@ -77302,7 +77696,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pi7.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "mafia-iii",
@@ -77345,7 +77740,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y08.jpg",
       "notable": true,
       "company": "NetherRealm Studios",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "just-cause-2",
@@ -77366,7 +77762,53 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qri.jpg",
       "notable": true,
       "company": "Avalanche Studios",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Just Cause 2 Theme",
+          "plays": null
+        },
+        {
+          "title": "Title Screen",
+          "plays": null
+        },
+        {
+          "title": "Mile High Club",
+          "plays": null
+        },
+        {
+          "title": "Tom Sheldon’s Theme",
+          "plays": null
+        },
+        {
+          "title": "Panau National Anthem",
+          "plays": null
+        },
+        {
+          "title": "Ice Cream Truck Jingle",
+          "plays": null
+        },
+        {
+          "title": "Espionage",
+          "plays": null
+        },
+        {
+          "title": "Stealth",
+          "plays": null
+        },
+        {
+          "title": "Propaganda Theme",
+          "plays": null
+        },
+        {
+          "title": "End Credits",
+          "plays": null
+        },
+        {
+          "title": "Pimped Ice Cream Truck Theme",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "tomb-raider-1996",
@@ -77387,7 +77829,89 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3hfx.jpg",
       "notable": true,
       "company": "Core Design",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Adventure Found Me",
+          "plays": null
+        },
+        {
+          "title": "The Scavenger's Den",
+          "plays": null
+        },
+        {
+          "title": "Exploring the Island",
+          "plays": null
+        },
+        {
+          "title": "First Blood",
+          "plays": null
+        },
+        {
+          "title": "Reaching Roth",
+          "plays": null
+        },
+        {
+          "title": "Infiltrating the Bunker",
+          "plays": null
+        },
+        {
+          "title": "A Call for Help",
+          "plays": null
+        },
+        {
+          "title": "Entering Himiko's Tomb",
+          "plays": null
+        },
+        {
+          "title": "The Descent",
+          "plays": null
+        },
+        {
+          "title": "The One",
+          "plays": null
+        },
+        {
+          "title": "The Scavenger's Camp",
+          "plays": null
+        },
+        {
+          "title": "Paying Respects",
+          "plays": null
+        },
+        {
+          "title": "On the Beach",
+          "plays": null
+        },
+        {
+          "title": "Secret of the Island",
+          "plays": null
+        },
+        {
+          "title": "The Oni",
+          "plays": null
+        },
+        {
+          "title": "Whitman's Test",
+          "plays": null
+        },
+        {
+          "title": "Scaling the Ziggurat",
+          "plays": null
+        },
+        {
+          "title": "The Ritual",
+          "plays": null
+        },
+        {
+          "title": "A Survivor Is Born",
+          "plays": null
+        },
+        {
+          "title": "The Tomb Raider",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "s-t-a-l-k-e-r-shadow-of-chernobyl",
@@ -77408,7 +77932,65 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa4s4.jpg",
       "notable": true,
       "company": "GSC Game World",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Mutation",
+          "plays": null
+        },
+        {
+          "title": "Dead Cities, Part 2",
+          "plays": null
+        },
+        {
+          "title": "Radwind, Part 1",
+          "plays": null
+        },
+        {
+          "title": "Tunnels",
+          "plays": null
+        },
+        {
+          "title": "The Thing",
+          "plays": null
+        },
+        {
+          "title": "S.A.D.",
+          "plays": null
+        },
+        {
+          "title": "Cold/Freezing Out",
+          "plays": null
+        },
+        {
+          "title": "Zone Triggers",
+          "plays": null
+        },
+        {
+          "title": "Radwind, Part 2",
+          "plays": null
+        },
+        {
+          "title": "Sleeping in Ashes (version 2)",
+          "plays": null
+        },
+        {
+          "title": "Rads, Part 1",
+          "plays": null
+        },
+        {
+          "title": "Dirge for the Planet",
+          "plays": null
+        },
+        {
+          "title": "Fighting Unknown",
+          "plays": null
+        },
+        {
+          "title": "Against the Ionized Odds",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "middle-earth-shadow-of-war",
@@ -77429,7 +78011,361 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20pq.jpg",
       "notable": true,
       "company": "Monolith Productions",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Fires of War",
+          "plays": null
+        },
+        {
+          "title": "The New Ring",
+          "plays": null
+        },
+        {
+          "title": "He Waits For You",
+          "plays": null
+        },
+        {
+          "title": "I Deal Only With Truth",
+          "plays": null
+        },
+        {
+          "title": "The Siege of Minas Ithil",
+          "plays": null
+        },
+        {
+          "title": "The Lower City",
+          "plays": null
+        },
+        {
+          "title": "Shield Maiden of Gondor",
+          "plays": null
+        },
+        {
+          "title": "Some Things Were Lost Forever",
+          "plays": null
+        },
+        {
+          "title": "I Must Dfend the Gate",
+          "plays": null
+        },
+        {
+          "title": "The Upper City",
+          "plays": null
+        },
+        {
+          "title": "It's Not Enough for Them to Destroy Us",
+          "plays": null
+        },
+        {
+          "title": "A Show to Remember",
+          "plays": null
+        },
+        {
+          "title": "The Arena",
+          "plays": null
+        },
+        {
+          "title": "I Come For Him!",
+          "plays": null
+        },
+        {
+          "title": "Don't Go Alone",
+          "plays": null
+        },
+        {
+          "title": "The Warchief's Camp",
+          "plays": null
+        },
+        {
+          "title": "Cirith Ungol",
+          "plays": null
+        },
+        {
+          "title": "My Precious",
+          "plays": null
+        },
+        {
+          "title": "With Prophecy... Comes Torment",
+          "plays": null
+        },
+        {
+          "title": "She Is Not Our Ally",
+          "plays": null
+        },
+        {
+          "title": "One More Vision",
+          "plays": null
+        },
+        {
+          "title": "Return to Minas Ithil",
+          "plays": null
+        },
+        {
+          "title": "The Courtyard Battle",
+          "plays": null
+        },
+        {
+          "title": "Flight of the Witch King",
+          "plays": null
+        },
+        {
+          "title": "Castamir's Bargain",
+          "plays": null
+        },
+        {
+          "title": "The Nazgûl",
+          "plays": null
+        },
+        {
+          "title": "The Fall",
+          "plays": null
+        },
+        {
+          "title": "The Blade of Galadriel",
+          "plays": null
+        },
+        {
+          "title": "The Two Lives of Baranor",
+          "plays": null
+        },
+        {
+          "title": "I Will Not Be Protected",
+          "plays": null
+        },
+        {
+          "title": "Kings of Old",
+          "plays": null
+        },
+        {
+          "title": "Sacrifices Must Be Made",
+          "plays": null
+        },
+        {
+          "title": "Rise To Power",
+          "plays": null
+        },
+        {
+          "title": "Worse Than Death",
+          "plays": null
+        },
+        {
+          "title": "Either Way's A Win",
+          "plays": null
+        },
+        {
+          "title": "The Fort Assault",
+          "plays": null
+        },
+        {
+          "title": "I Named Him After You",
+          "plays": null
+        },
+        {
+          "title": "I'll Defend the Fort Like It Was My Own",
+          "plays": null
+        },
+        {
+          "title": "A New Overlord",
+          "plays": null
+        },
+        {
+          "title": "It Was Like You Were Stuck On a Spit...",
+          "plays": null
+        },
+        {
+          "title": "Carnan's Song",
+          "plays": null
+        },
+        {
+          "title": "Beasts of Carnan",
+          "plays": null
+        },
+        {
+          "title": "They Are Summoning Death",
+          "plays": null
+        },
+        {
+          "title": "Gorgoroth",
+          "plays": null
+        },
+        {
+          "title": "Tar-Goroth",
+          "plays": null
+        },
+        {
+          "title": "Seregost",
+          "plays": null
+        },
+        {
+          "title": "The Ice Cave Chase",
+          "plays": null
+        },
+        {
+          "title": "Undeath Will Become Undeath",
+          "plays": null
+        },
+        {
+          "title": "Hammerhand",
+          "plays": null
+        },
+        {
+          "title": "The Beasts Invade Fort Seregost",
+          "plays": null
+        },
+        {
+          "title": "The Drake",
+          "plays": null
+        },
+        {
+          "title": "Drake Riding",
+          "plays": null
+        },
+        {
+          "title": "Why Do You Keep Fighting?",
+          "plays": null
+        },
+        {
+          "title": "A Drake Would Have Been A Great Asset",
+          "plays": null
+        },
+        {
+          "title": "They Are No Longer Men",
+          "plays": null
+        },
+        {
+          "title": "Lord of the Dead",
+          "plays": null
+        },
+        {
+          "title": "No Escape, Even in Death",
+          "plays": null
+        },
+        {
+          "title": "Arise and Serve",
+          "plays": null
+        },
+        {
+          "title": "You Fight For Mordor",
+          "plays": null
+        },
+        {
+          "title": "Barad-Dûr",
+          "plays": null
+        },
+        {
+          "title": "Open Your Eyes",
+          "plays": null
+        },
+        {
+          "title": "Minas Morgul",
+          "plays": null
+        },
+        {
+          "title": "The Witch King",
+          "plays": null
+        },
+        {
+          "title": "They Are One",
+          "plays": null
+        },
+        {
+          "title": "Shadow of War Theme",
+          "plays": null
+        },
+        {
+          "title": "Kharb-durbgû-hai (Masters of Beasts)",
+          "plays": null
+        },
+        {
+          "title": "Kinkû-hai gulshu (Seers of the Shadow World)",
+          "plays": null
+        },
+        {
+          "title": "Karkû-hai kutmushu (Crafters of War)",
+          "plays": null
+        },
+        {
+          "title": "Ran-hai balk-shû (Lords of Pain)",
+          "plays": null
+        },
+        {
+          "title": "Krum-markû-hai (Soldiers of Glory)",
+          "plays": null
+        },
+        {
+          "title": "Sherk-shokkû-hai (Blood-drinkers)",
+          "plays": null
+        },
+        {
+          "title": "Bashzikri-hai (Shadow Knives)",
+          "plays": null
+        },
+        {
+          "title": "Snaga-hai gaishu (Slaves of Fear)",
+          "plays": null
+        },
+        {
+          "title": "Khurkû-hai (Consumers, Devourers)",
+          "plays": null
+        },
+        {
+          "title": "Kharb-durbgû-hai Kutmashku (Overlord)",
+          "plays": null
+        },
+        {
+          "title": "Kinkû-hai gulshu Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "Karkû-hai kutmushu Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "Ran-hai balk-shû Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "Krum-markû-hai Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "Sherk-shokkû-hai Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "Bashzikri-hai Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "Snaga-hai gaishu Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "Khurkû-hai Kutmashku",
+          "plays": null
+        },
+        {
+          "title": "The Eastern Desert",
+          "plays": null
+        },
+        {
+          "title": "The Market",
+          "plays": null
+        },
+        {
+          "title": "The Menus",
+          "plays": null
+        },
+        {
+          "title": "The Army of Minas Ithil",
+          "plays": null
+        },
+        {
+          "title": "Tribe Song Medley",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "resident-evil",
@@ -77450,7 +78386,69 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1taw.jpg",
       "notable": true,
       "company": "Capcom",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Sea of Zeroes",
+          "plays": null
+        },
+        {
+          "title": "Plague from God",
+          "plays": null
+        },
+        {
+          "title": "The Doberman",
+          "plays": null
+        },
+        {
+          "title": "What is Happening",
+          "plays": null
+        },
+        {
+          "title": "Evelyn's Plan",
+          "plays": null
+        },
+        {
+          "title": "Lab Search",
+          "plays": null
+        },
+        {
+          "title": "My Son is Dead",
+          "plays": null
+        },
+        {
+          "title": "Venus Flytrap (Main Theme) [from \"Resident Evil\" Soundtrack]",
+          "plays": null
+        },
+        {
+          "title": "Meet Bert",
+          "plays": null
+        },
+        {
+          "title": "Humvee Chase",
+          "plays": null
+        },
+        {
+          "title": "Don't Eat Cats",
+          "plays": null
+        },
+        {
+          "title": "Home Safe",
+          "plays": null
+        },
+        {
+          "title": "Lickers Attack",
+          "plays": null
+        },
+        {
+          "title": "Final Battle",
+          "plays": null
+        },
+        {
+          "title": "My Heart Has Teeth (feat. Skylar Grey)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "prince-of-persia-the-two-thrones",
@@ -77471,7 +78469,185 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ta0.jpg",
       "notable": true,
       "company": "Ubisoft Casablanca",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Opening",
+          "plays": null
+        },
+        {
+          "title": "Main Menu",
+          "plays": null
+        },
+        {
+          "title": "Palace Battle",
+          "plays": null
+        },
+        {
+          "title": "1st Speedkill 1",
+          "plays": null
+        },
+        {
+          "title": "Chariots Race",
+          "plays": null
+        },
+        {
+          "title": "The Arrival",
+          "plays": null
+        },
+        {
+          "title": "1st Speedkill 2",
+          "plays": null
+        },
+        {
+          "title": "End Of The Vizier",
+          "plays": null
+        },
+        {
+          "title": "I Still Love You",
+          "plays": null
+        },
+        {
+          "title": "1st Free Fight",
+          "plays": null
+        },
+        {
+          "title": "The Streets of Babylon",
+          "plays": null
+        },
+        {
+          "title": "The Sewers Fight 1",
+          "plays": null
+        },
+        {
+          "title": "The Sewers Fight 2",
+          "plays": null
+        },
+        {
+          "title": "The Sewers",
+          "plays": null
+        },
+        {
+          "title": "The Sewers Fight - Dark Prince",
+          "plays": null
+        },
+        {
+          "title": "The Fortress",
+          "plays": null
+        },
+        {
+          "title": "The Fortress - Dark Prince",
+          "plays": null
+        },
+        {
+          "title": "Chariot Race 1",
+          "plays": null
+        },
+        {
+          "title": "Klompa",
+          "plays": null
+        },
+        {
+          "title": "The Balconies Speedkill",
+          "plays": null
+        },
+        {
+          "title": "The Balconies Free Fight",
+          "plays": null
+        },
+        {
+          "title": "The Dark Alley",
+          "plays": null
+        },
+        {
+          "title": "The Temple - Dark Prince",
+          "plays": null
+        },
+        {
+          "title": "The Temple - Prince",
+          "plays": null
+        },
+        {
+          "title": "The Brothel",
+          "plays": null
+        },
+        {
+          "title": "Mahasti",
+          "plays": null
+        },
+        {
+          "title": "The Plaza - Dark Prince",
+          "plays": null
+        },
+        {
+          "title": "The Upper City",
+          "plays": null
+        },
+        {
+          "title": "The Upper City Speedkill",
+          "plays": null
+        },
+        {
+          "title": "The Upper City Free Fight",
+          "plays": null
+        },
+        {
+          "title": "Stone Guardian",
+          "plays": null
+        },
+        {
+          "title": "Chariot Race 2",
+          "plays": null
+        },
+        {
+          "title": "The Twins",
+          "plays": null
+        },
+        {
+          "title": "Palace Battle",
+          "plays": null
+        },
+        {
+          "title": "The Palace Entrance - Dark Prince",
+          "plays": null
+        },
+        {
+          "title": "The Palace Entrance - Prince",
+          "plays": null
+        },
+        {
+          "title": "The Elevator Speedkill",
+          "plays": null
+        },
+        {
+          "title": "The Hanging Gardens",
+          "plays": null
+        },
+        {
+          "title": "The Lower Tower",
+          "plays": null
+        },
+        {
+          "title": "The Middle Tower",
+          "plays": null
+        },
+        {
+          "title": "The Upper Tower",
+          "plays": null
+        },
+        {
+          "title": "Battle the Vizier",
+          "plays": null
+        },
+        {
+          "title": "The Mental Realm",
+          "plays": null
+        },
+        {
+          "title": "Bonus Track",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "super-smash-bros",
@@ -77492,7 +78668,73 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2tso.jpg",
       "notable": true,
       "company": "HAL Laboratory",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Full Steam Ahead (From \"the Legend of Zelda: Spirit Tracks\")",
+          "plays": null
+        },
+        {
+          "title": "Pac-Man (Club Mix)",
+          "plays": null
+        },
+        {
+          "title": "Jogging / Countdown (From \"Punch-Out!!\")",
+          "plays": null
+        },
+        {
+          "title": "Ashley's Song (From \"WarioWare: Touched\")",
+          "plays": null
+        },
+        {
+          "title": "Battlefield Theme (From \"Super Smash Bros.\")",
+          "plays": null
+        },
+        {
+          "title": "You Will Know Our Names (From \"Xenoblade Chronicles\")",
+          "plays": null
+        },
+        {
+          "title": "Gaur Plains (From \"Xenoblade Chronicles\")",
+          "plays": null
+        },
+        {
+          "title": "Zelda Main Theme / Underworld Theme (From \"the Legend of Zelda\")",
+          "plays": null
+        },
+        {
+          "title": "Temple Theme (From \"Zelda 2: The Adventure of Link\")",
+          "plays": null
+        },
+        {
+          "title": "Mute City (From \"F-Zero\")",
+          "plays": null
+        },
+        {
+          "title": "Green Greens (From \"Kirby's Dream Land\")",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Trainer Battle) [From \"Pokemon X & Pokemon Y\"]",
+          "plays": null
+        },
+        {
+          "title": "A Theme (From \"Tetris\")",
+          "plays": null
+        },
+        {
+          "title": "Kongo Jungle (From \"Donkey Kong Country\")",
+          "plays": null
+        },
+        {
+          "title": "Stickerbush Symphony (From \"Donkey Kong Country 2\")",
+          "plays": null
+        },
+        {
+          "title": "Brinstar (From \"Metroid\")",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "abzu",
@@ -77513,7 +78755,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28sy.jpg",
       "notable": true,
       "company": "Giant Squid",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "garry-s-mod",
@@ -77534,7 +78777,17 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8pgw.jpg",
       "notable": true,
       "company": "Facepunch Studios",
-      "console": false
+      "console": false,
+      "tracks": [
+        {
+          "title": "UBHL Official Theme Song",
+          "plays": null
+        },
+        {
+          "title": "WGHL Official Theme Song 2 (QuantumVortex Update)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "age-of-mythology",
@@ -77555,7 +78808,25 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co907c.jpg",
       "notable": true,
       "company": "Ensemble Studios",
-      "console": false
+      "console": false,
+      "tracks": [
+        {
+          "title": "Poseidon",
+          "plays": null
+        },
+        {
+          "title": "Hades",
+          "plays": null
+        },
+        {
+          "title": "Kronos",
+          "plays": null
+        },
+        {
+          "title": "Apollon",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "return-to-castle-wolfenstein",
@@ -77576,7 +78847,113 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xzr.jpg",
       "notable": true,
       "company": "Gray Matter Interactive",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Prologue",
+          "plays": null
+        },
+        {
+          "title": "Main Theme",
+          "plays": null
+        },
+        {
+          "title": "HQ Briefing",
+          "plays": null
+        },
+        {
+          "title": "Military Suspense",
+          "plays": null
+        },
+        {
+          "title": "Mission",
+          "plays": null
+        },
+        {
+          "title": "Escaping Castle Wolfenstein",
+          "plays": null
+        },
+        {
+          "title": "The Silent Town",
+          "plays": null
+        },
+        {
+          "title": "The Secret Base",
+          "plays": null
+        },
+        {
+          "title": "Stealth 2",
+          "plays": null
+        },
+        {
+          "title": "The Ville",
+          "plays": null
+        },
+        {
+          "title": "The Ravaged Town",
+          "plays": null
+        },
+        {
+          "title": "Base Alarm",
+          "plays": null
+        },
+        {
+          "title": "Alarm",
+          "plays": null
+        },
+        {
+          "title": "Assasination",
+          "plays": null
+        },
+        {
+          "title": "SS Elite Guard Assault",
+          "plays": null
+        },
+        {
+          "title": "Intro Movie",
+          "plays": null
+        },
+        {
+          "title": "War",
+          "plays": null
+        },
+        {
+          "title": "Action",
+          "plays": null
+        },
+        {
+          "title": "Arena",
+          "plays": null
+        },
+        {
+          "title": "The Cave",
+          "plays": null
+        },
+        {
+          "title": "The Graveyard",
+          "plays": null
+        },
+        {
+          "title": "Un Natural",
+          "plays": null
+        },
+        {
+          "title": "The Undead",
+          "plays": null
+        },
+        {
+          "title": "Mission Failed",
+          "plays": null
+        },
+        {
+          "title": "Mission Completed",
+          "plays": null
+        },
+        {
+          "title": "Finale",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "day-of-the-tentacle",
@@ -77597,7 +78974,21 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co30yt.jpg",
       "notable": true,
       "company": "LucasArts",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "I Ate Babel Fish",
+          "plays": null
+        },
+        {
+          "title": "Clowns On Parade",
+          "plays": null
+        },
+        {
+          "title": "Silence (I Kill You)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "ratchet-clank",
@@ -77618,7 +79009,77 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co230k.jpg",
       "notable": true,
       "company": "Insomniac Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Bad News Travels Fast",
+          "plays": null
+        },
+        {
+          "title": "Ratchet's Main Title",
+          "plays": null
+        },
+        {
+          "title": "The Deplanetizer",
+          "plays": null
+        },
+        {
+          "title": "Qwark's Address and Canyon Run",
+          "plays": null
+        },
+        {
+          "title": "Warbot Factory and Clank's Birth and Escape",
+          "plays": null
+        },
+        {
+          "title": "Ratchet's Lament and Clank's Crash Landing",
+          "plays": null
+        },
+        {
+          "title": "Battle of Alerro City",
+          "plays": null
+        },
+        {
+          "title": "Weapons Training and Ratchet's Fame",
+          "plays": null
+        },
+        {
+          "title": "Espionage on Quartu",
+          "plays": null
+        },
+        {
+          "title": "Dear Diary and Qwark's Plan",
+          "plays": null
+        },
+        {
+          "title": "Drek and Nefarious Strike Back",
+          "plays": null
+        },
+        {
+          "title": "Grim's Story And The Rangers' Return",
+          "plays": null
+        },
+        {
+          "title": "The Sheepinator",
+          "plays": null
+        },
+        {
+          "title": "Showdown on the Deplanetizer",
+          "plays": null
+        },
+        {
+          "title": "Escape from the Deplanetizer",
+          "plays": null
+        },
+        {
+          "title": "Parting Ways",
+          "plays": null
+        },
+        {
+          "title": "A Mechanical Uprising",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "kingdom-come-deliverance",
@@ -77639,7 +79100,149 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4aqi.jpg",
       "notable": true,
       "company": "Warhorse Studios",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Landscape Atmosphere 20",
+          "plays": null
+        },
+        {
+          "title": "Landscape Nibble 28",
+          "plays": null
+        },
+        {
+          "title": "Landscape Atmosphere 21",
+          "plays": null
+        },
+        {
+          "title": "Landscape Nibble 29",
+          "plays": null
+        },
+        {
+          "title": "Landscape Atmosphere 22",
+          "plays": null
+        },
+        {
+          "title": "Landscape Nibble 30",
+          "plays": null
+        },
+        {
+          "title": "Landscape Atmosphere 23",
+          "plays": null
+        },
+        {
+          "title": "Landscape Nibble 31",
+          "plays": null
+        },
+        {
+          "title": "Landscape Atmosphere 24",
+          "plays": null
+        },
+        {
+          "title": "Landscape Nibble 32",
+          "plays": null
+        },
+        {
+          "title": "Landscape Atmosphere 25",
+          "plays": null
+        },
+        {
+          "title": "Landscape Nibble 33",
+          "plays": null
+        },
+        {
+          "title": "Landscape Atmosphere 26",
+          "plays": null
+        },
+        {
+          "title": "Rain Atmosphere 27",
+          "plays": null
+        },
+        {
+          "title": "Fog Atmosphere 28",
+          "plays": null
+        },
+        {
+          "title": "Dawn Atmosphere 29",
+          "plays": null
+        },
+        {
+          "title": "Camp Nibble 34",
+          "plays": null
+        },
+        {
+          "title": "Camp Atmosphere 30",
+          "plays": null
+        },
+        {
+          "title": "Negative Atmosphere 31",
+          "plays": null
+        },
+        {
+          "title": "Tunnels Atmosphere 32",
+          "plays": null
+        },
+        {
+          "title": "Negative Atmosphere 33",
+          "plays": null
+        },
+        {
+          "title": "Tunnels Atmosphere 34",
+          "plays": null
+        },
+        {
+          "title": "Negative Atmosphere 35",
+          "plays": null
+        },
+        {
+          "title": "Tunnels Nibble 35",
+          "plays": null
+        },
+        {
+          "title": "Night Atmosphere 36",
+          "plays": null
+        },
+        {
+          "title": "Night Nibble 36",
+          "plays": null
+        },
+        {
+          "title": "Night Atmosphere 37",
+          "plays": null
+        },
+        {
+          "title": "Night Nibble 37",
+          "plays": null
+        },
+        {
+          "title": "Night Atmosphere 38",
+          "plays": null
+        },
+        {
+          "title": "Night Nibble 38",
+          "plays": null
+        },
+        {
+          "title": "Night Atmosphere 39",
+          "plays": null
+        },
+        {
+          "title": "Mills Nibble 39",
+          "plays": null
+        },
+        {
+          "title": "Mills Atmosphere 40",
+          "plays": null
+        },
+        {
+          "title": "Pour Feliciter (Bonus Track)",
+          "plays": null
+        },
+        {
+          "title": "Warhorse Logo (Bonus Track)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "super-mario-kart",
@@ -77660,7 +79263,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21w8.jpg",
       "notable": true,
       "company": "Nintendo Entertainment Analysis & Development",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "darksiders",
@@ -77681,7 +79285,153 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29t0.jpg",
       "notable": true,
       "company": "Vigil Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Darksiders Theme",
+          "plays": null
+        },
+        {
+          "title": "Battle With Silitha",
+          "plays": null
+        },
+        {
+          "title": "Strange Moment",
+          "plays": null
+        },
+        {
+          "title": "Battle With Straga",
+          "plays": null
+        },
+        {
+          "title": "Eden",
+          "plays": null
+        },
+        {
+          "title": "Flight Path",
+          "plays": null
+        },
+        {
+          "title": "Battle With the Stygian",
+          "plays": null
+        },
+        {
+          "title": "Demon Scourge",
+          "plays": null
+        },
+        {
+          "title": "Echo Gorge",
+          "plays": null
+        },
+        {
+          "title": "Keeping Pace",
+          "plays": null
+        },
+        {
+          "title": "Shadow Realm",
+          "plays": null
+        },
+        {
+          "title": "Battle With Greaver",
+          "plays": null
+        },
+        {
+          "title": "The Catacombs",
+          "plays": null
+        },
+        {
+          "title": "Epic Moment",
+          "plays": null
+        },
+        {
+          "title": "Empowered",
+          "plays": null
+        },
+        {
+          "title": "Earth Caller",
+          "plays": null
+        },
+        {
+          "title": "Heads Will Roll",
+          "plays": null
+        },
+        {
+          "title": "Next Sacramentum",
+          "plays": null
+        },
+        {
+          "title": "Battle With Tiamat",
+          "plays": null
+        },
+        {
+          "title": "The Cathedral",
+          "plays": null
+        },
+        {
+          "title": "Undead On Arrival",
+          "plays": null
+        },
+        {
+          "title": "Chaos Eater",
+          "plays": null
+        },
+        {
+          "title": "Death to All Enemies",
+          "plays": null
+        },
+        {
+          "title": "The Council",
+          "plays": null
+        },
+        {
+          "title": "Light Combat",
+          "plays": null
+        },
+        {
+          "title": "Flight Over Ruined Eden",
+          "plays": null
+        },
+        {
+          "title": "In Prophecy",
+          "plays": null
+        },
+        {
+          "title": "Mayhem",
+          "plays": null
+        },
+        {
+          "title": "Prison Break",
+          "plays": null
+        },
+        {
+          "title": "Rescue Ruin",
+          "plays": null
+        },
+        {
+          "title": "Vulgrim",
+          "plays": null
+        },
+        {
+          "title": "Battle With Abaddon",
+          "plays": null
+        },
+        {
+          "title": "War's Theme",
+          "plays": null
+        },
+        {
+          "title": "Well of Souls",
+          "plays": null
+        },
+        {
+          "title": "Uriel",
+          "plays": null
+        },
+        {
+          "title": "End Credits",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "assassin-s-creed-valhalla",
@@ -77964,7 +79714,121 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wf6.jpg",
       "notable": true,
       "company": "Dennaton Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Untitled",
+          "plays": null
+        },
+        {
+          "title": "Divide",
+          "plays": null
+        },
+        {
+          "title": "The Rumble",
+          "plays": null
+        },
+        {
+          "title": "Le Perv",
+          "plays": null
+        },
+        {
+          "title": "Blizzard",
+          "plays": null
+        },
+        {
+          "title": "Voyager",
+          "plays": null
+        },
+        {
+          "title": "Bloodline",
+          "plays": null
+        },
+        {
+          "title": "She Swallowed Burning Coals",
+          "plays": null
+        },
+        {
+          "title": "Slum Lord",
+          "plays": null
+        },
+        {
+          "title": "Future Club",
+          "plays": null
+        },
+        {
+          "title": "New Wave Hookers",
+          "plays": null
+        },
+        {
+          "title": "Technoir",
+          "plays": null
+        },
+        {
+          "title": "Hotline Miami Theme",
+          "plays": null
+        },
+        {
+          "title": "Rust",
+          "plays": null
+        },
+        {
+          "title": "Roller Mobster",
+          "plays": null
+        },
+        {
+          "title": "Run",
+          "plays": null
+        },
+        {
+          "title": "Decade Dance",
+          "plays": null
+        },
+        {
+          "title": "Sexualizer",
+          "plays": null
+        },
+        {
+          "title": "Untitled",
+          "plays": null
+        },
+        {
+          "title": "Interlude",
+          "plays": null
+        },
+        {
+          "title": "Acid Spit",
+          "plays": null
+        },
+        {
+          "title": "Quixotic",
+          "plays": null
+        },
+        {
+          "title": "The Way Home",
+          "plays": null
+        },
+        {
+          "title": "Fankeet",
+          "plays": null
+        },
+        {
+          "title": "In the Face of Evil",
+          "plays": null
+        },
+        {
+          "title": "Remorse",
+          "plays": null
+        },
+        {
+          "title": "NARC",
+          "plays": null
+        },
+        {
+          "title": "Dust",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "age-of-empires-iii",
@@ -77985,7 +79849,117 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xy6.jpg",
       "notable": true,
       "company": "Ensemble Studios",
-      "console": false
+      "console": false,
+      "tracks": [
+        {
+          "title": "Noddinagushpa (Main Title)",
+          "plays": null
+        },
+        {
+          "title": "Across the Ocean Sea",
+          "plays": null
+        },
+        {
+          "title": "Get Off My Band",
+          "plays": null
+        },
+        {
+          "title": "Felonious Junk",
+          "plays": null
+        },
+        {
+          "title": "Ruinion",
+          "plays": null
+        },
+        {
+          "title": "A Pirate’s Temper",
+          "plays": null
+        },
+        {
+          "title": "I, Menevero",
+          "plays": null
+        },
+        {
+          "title": "Scruffy and Underfed",
+          "plays": null
+        },
+        {
+          "title": "Leisurely Brows",
+          "plays": null
+        },
+        {
+          "title": "A Hot Meal",
+          "plays": null
+        },
+        {
+          "title": "Bubble Chum",
+          "plays": null
+        },
+        {
+          "title": "Of Licious",
+          "plays": null
+        },
+        {
+          "title": "Rest With Us",
+          "plays": null
+        },
+        {
+          "title": "Get Ye Sum",
+          "plays": null
+        },
+        {
+          "title": "Where’s My Uncle?",
+          "plays": null
+        },
+        {
+          "title": "Muptop",
+          "plays": null
+        },
+        {
+          "title": "Meet These French",
+          "plays": null
+        },
+        {
+          "title": "Old Timer",
+          "plays": null
+        },
+        {
+          "title": "Major Rewrite / General Chunks",
+          "plays": null
+        },
+        {
+          "title": "Take His Toes",
+          "plays": null
+        },
+        {
+          "title": "Happy to You",
+          "plays": null
+        },
+        {
+          "title": "Camels, Straws, and Backs",
+          "plays": null
+        },
+        {
+          "title": "Years in the Making",
+          "plays": null
+        },
+        {
+          "title": "Last Name Crane, Ichabod",
+          "plays": null
+        },
+        {
+          "title": "Ludus Perditus (The End of Happy Times)",
+          "plays": null
+        },
+        {
+          "title": "Niceterium (The Sound of One Hand Clapping)",
+          "plays": null
+        },
+        {
+          "title": "There Is Weather / Decisions Are Made (End Credits)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "resident-evil-3-nemesis",
@@ -78006,7 +79980,353 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vvb.jpg",
       "notable": true,
       "company": "Capcom Planning Room 2",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Last Escape",
+          "plays": null
+        },
+        {
+          "title": "Option Screen",
+          "plays": null
+        },
+        {
+          "title": "Title Calling",
+          "plays": null
+        },
+        {
+          "title": "Her Determination",
+          "plays": null
+        },
+        {
+          "title": "The Opening",
+          "plays": null
+        },
+        {
+          "title": "The Beginning of Nightmare",
+          "plays": null
+        },
+        {
+          "title": "Is There a Way Out?",
+          "plays": null
+        },
+        {
+          "title": "The Great Novelist",
+          "plays": null
+        },
+        {
+          "title": "Free From Fear",
+          "plays": null
+        },
+        {
+          "title": "Meeting Brad",
+          "plays": null
+        },
+        {
+          "title": "Cold Sweat",
+          "plays": null
+        },
+        {
+          "title": "The City of Ruin",
+          "plays": null
+        },
+        {
+          "title": "Imminent Slaughter",
+          "plays": null
+        },
+        {
+          "title": "Nemesis' Theme",
+          "plays": null
+        },
+        {
+          "title": "Feel the Tense…",
+          "plays": null
+        },
+        {
+          "title": "The Front Hall",
+          "plays": null
+        },
+        {
+          "title": "The First Floor",
+          "plays": null
+        },
+        {
+          "title": "Well Dressed Up",
+          "plays": null
+        },
+        {
+          "title": "The City Without Hope",
+          "plays": null
+        },
+        {
+          "title": "Watch Out For Your Back",
+          "plays": null
+        },
+        {
+          "title": "Carlos' Theme",
+          "plays": null
+        },
+        {
+          "title": "Never Give Up the Escape",
+          "plays": null
+        },
+        {
+          "title": "Nicholai's Theme",
+          "plays": null
+        },
+        {
+          "title": "Together For the Escape",
+          "plays": null
+        },
+        {
+          "title": "Valediction",
+          "plays": null
+        },
+        {
+          "title": "Coldhearted Soldier",
+          "plays": null
+        },
+        {
+          "title": "Quick & Fast Relief",
+          "plays": null
+        },
+        {
+          "title": "The Common Cure",
+          "plays": null
+        },
+        {
+          "title": "Escape To Ecstacy",
+          "plays": null
+        },
+        {
+          "title": "Zombies Trespassing",
+          "plays": null
+        },
+        {
+          "title": "Free Falling",
+          "plays": null
+        },
+        {
+          "title": "Abrupt Gunfire",
+          "plays": null
+        },
+        {
+          "title": "Don't Come Any Closer!",
+          "plays": null
+        },
+        {
+          "title": "Complete Rest",
+          "plays": null
+        },
+        {
+          "title": "Hero Time",
+          "plays": null
+        },
+        {
+          "title": "S.G.G.S. Explosion",
+          "plays": null
+        },
+        {
+          "title": "Pride and Valor",
+          "plays": null
+        },
+        {
+          "title": "An Impending Danger",
+          "plays": null
+        },
+        {
+          "title": "Cable Car Crash",
+          "plays": null
+        },
+        {
+          "title": "Ominous Presentiment",
+          "plays": null
+        },
+        {
+          "title": "The Clock Tower",
+          "plays": null
+        },
+        {
+          "title": "Don't Lose Courage",
+          "plays": null
+        },
+        {
+          "title": "No Rest For the Wicked",
+          "plays": null
+        },
+        {
+          "title": "Mysterious Orgel (Correct)",
+          "plays": null
+        },
+        {
+          "title": "Mysterious Orgel (Wrong)",
+          "plays": null
+        },
+        {
+          "title": "From Relief To Terror",
+          "plays": null
+        },
+        {
+          "title": "Menacing Nemesis",
+          "plays": null
+        },
+        {
+          "title": "Unstoppable Nemesis",
+          "plays": null
+        },
+        {
+          "title": "Bring Back Her Consciousness",
+          "plays": null
+        },
+        {
+          "title": "The Hospital",
+          "plays": null
+        },
+        {
+          "title": "Traitor",
+          "plays": null
+        },
+        {
+          "title": "Almost There...",
+          "plays": null
+        },
+        {
+          "title": "Nemesis Again",
+          "plays": null
+        },
+        {
+          "title": "Nothing But a Pawn",
+          "plays": null
+        },
+        {
+          "title": "Earthquake?",
+          "plays": null
+        },
+        {
+          "title": "The Grave Digger",
+          "plays": null
+        },
+        {
+          "title": "The Park",
+          "plays": null
+        },
+        {
+          "title": "The Disused Plant",
+          "plays": null
+        },
+        {
+          "title": "All Of A Sudden",
+          "plays": null
+        },
+        {
+          "title": "The Worst Scenario",
+          "plays": null
+        },
+        {
+          "title": "Defiant Behavior",
+          "plays": null
+        },
+        {
+          "title": "The Last Argument",
+          "plays": null
+        },
+        {
+          "title": "Deservedly Death",
+          "plays": null
+        },
+        {
+          "title": "Four Minutes Before the Treatment",
+          "plays": null
+        },
+        {
+          "title": "Nemesis Doesn't Give Up",
+          "plays": null
+        },
+        {
+          "title": "Treated To Resurrect",
+          "plays": null
+        },
+        {
+          "title": "Missile Approaching",
+          "plays": null
+        },
+        {
+          "title": "Against The Chopper",
+          "plays": null
+        },
+        {
+          "title": "Emergency Level D",
+          "plays": null
+        },
+        {
+          "title": "Nemesis Final Metamorphosis",
+          "plays": null
+        },
+        {
+          "title": "The Last Decision",
+          "plays": null
+        },
+        {
+          "title": "The Second Chopper (Ver.1) (Ver. 1)",
+          "plays": null
+        },
+        {
+          "title": "The Second Chopper (Ver.2) (Ver. 2)",
+          "plays": null
+        },
+        {
+          "title": "The Second Chopper (Ver.3) (Ver. 3)",
+          "plays": null
+        },
+        {
+          "title": "Euthanasia Of Raccoon City",
+          "plays": null
+        },
+        {
+          "title": "Unfortunate Event",
+          "plays": null
+        },
+        {
+          "title": "Staffs & Credits",
+          "plays": null
+        },
+        {
+          "title": "Ever After",
+          "plays": null
+        },
+        {
+          "title": "Title Calling (Arranged Ver.)",
+          "plays": null
+        },
+        {
+          "title": "Choose the Best One",
+          "plays": null
+        },
+        {
+          "title": "The Doomed City",
+          "plays": null
+        },
+        {
+          "title": "Hellish Agony",
+          "plays": null
+        },
+        {
+          "title": "Freedom Obtained",
+          "plays": null
+        },
+        {
+          "title": "Reward And Result",
+          "plays": null
+        },
+        {
+          "title": "CM-1 (Short Ver.)",
+          "plays": null
+        },
+        {
+          "title": "CM-2 (Long Ver.)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "call-of-duty-modern-warfare-2019",
@@ -78197,7 +80517,77 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5wgs.jpg",
       "notable": true,
       "company": "Tango Gameworks",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Clair De Lune",
+          "plays": null
+        },
+        {
+          "title": "Code 3: En Route",
+          "plays": null
+        },
+        {
+          "title": "One Eight Four: On-Scene",
+          "plays": null
+        },
+        {
+          "title": "Crude Contraption",
+          "plays": null
+        },
+        {
+          "title": "Them",
+          "plays": null
+        },
+        {
+          "title": "Turning",
+          "plays": null
+        },
+        {
+          "title": "Fire Seems to Work",
+          "plays": null
+        },
+        {
+          "title": "Don't Be a Hero",
+          "plays": null
+        },
+        {
+          "title": "Descent to Doom",
+          "plays": null
+        },
+        {
+          "title": "Lurking in the Dark",
+          "plays": null
+        },
+        {
+          "title": "Towering Terror",
+          "plays": null
+        },
+        {
+          "title": "Inside the Psyche",
+          "plays": null
+        },
+        {
+          "title": "Hide and Seek",
+          "plays": null
+        },
+        {
+          "title": "Retrieval",
+          "plays": null
+        },
+        {
+          "title": "Cold Corridors",
+          "plays": null
+        },
+        {
+          "title": "Déjà Vu",
+          "plays": null
+        },
+        {
+          "title": "Grey Matter",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "mortal-kombat",
@@ -78218,7 +80608,37 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20mc.jpg",
       "notable": true,
       "company": "NetherRealm Studios",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "In the Beginning (2021 Remaster)",
+          "plays": null
+        },
+        {
+          "title": "The Courtyard (2021 Remaster)",
+          "plays": null
+        },
+        {
+          "title": "The Temple Gate (2021 Remaster)",
+          "plays": null
+        },
+        {
+          "title": "The Cavern (2021 Remaster)",
+          "plays": null
+        },
+        {
+          "title": "The Bridge (2021 Remaster)",
+          "plays": null
+        },
+        {
+          "title": "Goro and the Emperor (2021 Remaster)",
+          "plays": null
+        },
+        {
+          "title": "Victory / SCRLAHTS (2021 Remaster)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "devil-may-cry-4",
@@ -78261,7 +80681,53 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25xx.jpg",
       "notable": true,
       "company": "LucasArts",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Force Unleashed",
+          "plays": null
+        },
+        {
+          "title": "General Kota and the Control Room Duel",
+          "plays": null
+        },
+        {
+          "title": "Infiltrating the Junk Temple",
+          "plays": null
+        },
+        {
+          "title": "Drexl's Raiders",
+          "plays": null
+        },
+        {
+          "title": "Approaching Felucia",
+          "plays": null
+        },
+        {
+          "title": "The Sarlacc Unleashed",
+          "plays": null
+        },
+        {
+          "title": "Maris and the Bull Rancor",
+          "plays": null
+        },
+        {
+          "title": "PROXY and the Skyhook",
+          "plays": null
+        },
+        {
+          "title": "Redemption",
+          "plays": null
+        },
+        {
+          "title": "Juno Eclipse / Finale",
+          "plays": null
+        },
+        {
+          "title": "Ton'yy Rho's Uglehop",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "duke-nukem-3d",
@@ -78282,7 +80748,177 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y7x.jpg",
       "notable": true,
       "company": "3D Realms",
-      "console": false
+      "console": false,
+      "tracks": [
+        {
+          "title": "Grabbag",
+          "plays": null
+        },
+        {
+          "title": "Stalker",
+          "plays": null
+        },
+        {
+          "title": "Taking the Death Toll",
+          "plays": null
+        },
+        {
+          "title": "The City Streets",
+          "plays": null
+        },
+        {
+          "title": "Water World",
+          "plays": null
+        },
+        {
+          "title": "Sneaky Snake",
+          "plays": null
+        },
+        {
+          "title": "The Call of Death",
+          "plays": null
+        },
+        {
+          "title": "Ah, Geez!",
+          "plays": null
+        },
+        {
+          "title": "Future Military Conquests",
+          "plays": null
+        },
+        {
+          "title": "Space Storm",
+          "plays": null
+        },
+        {
+          "title": "Gut Wrencher",
+          "plays": null
+        },
+        {
+          "title": "RoboCreeping",
+          "plays": null
+        },
+        {
+          "title": "Stalag 3-D",
+          "plays": null
+        },
+        {
+          "title": "Pissed!",
+          "plays": null
+        },
+        {
+          "title": "Aliens, Say Your Prayers!",
+          "plays": null
+        },
+        {
+          "title": "Plasma",
+          "plays": null
+        },
+        {
+          "title": "Alfred H.",
+          "plays": null
+        },
+        {
+          "title": "Gloomy",
+          "plays": null
+        },
+        {
+          "title": "In Tents",
+          "plays": null
+        },
+        {
+          "title": "In Hiding",
+          "plays": null
+        },
+        {
+          "title": "Going After the Fat Commander",
+          "plays": null
+        },
+        {
+          "title": "Taking Names",
+          "plays": null
+        },
+        {
+          "title": "Subway",
+          "plays": null
+        },
+        {
+          "title": "Invader",
+          "plays": null
+        },
+        {
+          "title": "Gotham",
+          "plays": null
+        },
+        {
+          "title": "233.778 Celsius",
+          "plays": null
+        },
+        {
+          "title": "Lord of L.A.",
+          "plays": null
+        },
+        {
+          "title": "Urban Jungle",
+          "plays": null
+        },
+        {
+          "title": "Spook",
+          "plays": null
+        },
+        {
+          "title": "Whomp",
+          "plays": null
+        },
+        {
+          "title": "Briefing Room",
+          "plays": null
+        },
+        {
+          "title": "Missing Impossible!",
+          "plays": null
+        },
+        {
+          "title": "Warehaus",
+          "plays": null
+        },
+        {
+          "title": "Baked Goods",
+          "plays": null
+        },
+        {
+          "title": "Preparation D",
+          "plays": null
+        },
+        {
+          "title": "Calypso Factor",
+          "plays": null
+        },
+        {
+          "title": "Lemon Chil",
+          "plays": null
+        },
+        {
+          "title": "Layers of Dust",
+          "plays": null
+        },
+        {
+          "title": "Floghorn",
+          "plays": null
+        },
+        {
+          "title": "Pissed Office Box",
+          "plays": null
+        },
+        {
+          "title": "Departure",
+          "plays": null
+        },
+        {
+          "title": "Restricted Area",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "gothic-ii",
@@ -78325,7 +80961,65 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a5.jpg",
       "notable": true,
       "company": "Criterion Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Kick It Up A Notch",
+          "plays": null
+        },
+        {
+          "title": "Feels Good Donit",
+          "plays": null
+        },
+        {
+          "title": "My, My, Missy",
+          "plays": null
+        },
+        {
+          "title": "Don't Like It Do Ya",
+          "plays": null
+        },
+        {
+          "title": "Ya Think",
+          "plays": null
+        },
+        {
+          "title": "Not Sure 'bout This T",
+          "plays": null
+        },
+        {
+          "title": "This Doesn't Look Good",
+          "plays": null
+        },
+        {
+          "title": "Layin' Low",
+          "plays": null
+        },
+        {
+          "title": "Bet'r Ride",
+          "plays": null
+        },
+        {
+          "title": "Kiss Yer _ss Goodbye",
+          "plays": null
+        },
+        {
+          "title": "Take That Dawg",
+          "plays": null
+        },
+        {
+          "title": "Busted",
+          "plays": null
+        },
+        {
+          "title": "Stakes Are Higher",
+          "plays": null
+        },
+        {
+          "title": "Lucky Break",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "star-wars-battlefront",
@@ -78346,7 +81040,61 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2res.jpg",
       "notable": true,
       "company": "EA Digital Illusions CE",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Walker Assault",
+          "plays": null
+        },
+        {
+          "title": "Pale Blue Orb",
+          "plays": null
+        },
+        {
+          "title": "Survivors of Endor",
+          "plays": null
+        },
+        {
+          "title": "SoroSuub Skirmish",
+          "plays": null
+        },
+        {
+          "title": "The Imperial Advance",
+          "plays": null
+        },
+        {
+          "title": "The Battle in the Clouds",
+          "plays": null
+        },
+        {
+          "title": "Jundland Wastes",
+          "plays": null
+        },
+        {
+          "title": "Approach to Landing Pad 13",
+          "plays": null
+        },
+        {
+          "title": "Rebel Resistance",
+          "plays": null
+        },
+        {
+          "title": "Fully Armed and Operational",
+          "plays": null
+        },
+        {
+          "title": "The Graveyard of Giants",
+          "plays": null
+        },
+        {
+          "title": "Jedi on the Battlefront",
+          "plays": null
+        },
+        {
+          "title": "Attack!",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "wolfenstein-the-old-blood",
@@ -78367,7 +81115,69 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21et.jpg",
       "notable": true,
       "company": "MachineGames",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Partisan",
+          "plays": null
+        },
+        {
+          "title": "The Old Blood",
+          "plays": null
+        },
+        {
+          "title": "Count to Four",
+          "plays": null
+        },
+        {
+          "title": "Infiltration",
+          "plays": null
+        },
+        {
+          "title": "Lucy's Present",
+          "plays": null
+        },
+        {
+          "title": "Castle Wolfenstein",
+          "plays": null
+        },
+        {
+          "title": "The Den of Wolves",
+          "plays": null
+        },
+        {
+          "title": "Combat Suite",
+          "plays": null
+        },
+        {
+          "title": "Rudi Jager",
+          "plays": null
+        },
+        {
+          "title": "Escape",
+          "plays": null
+        },
+        {
+          "title": "Annette & Kessler",
+          "plays": null
+        },
+        {
+          "title": "Helga Von Schabbs",
+          "plays": null
+        },
+        {
+          "title": "The Dark Secret",
+          "plays": null
+        },
+        {
+          "title": "Leiche",
+          "plays": null
+        },
+        {
+          "title": "The Crypt",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "gothic",
@@ -78388,7 +81198,37 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25r2.jpg",
       "notable": true,
       "company": "Piranha Bytes",
-      "console": false
+      "console": false,
+      "tracks": [
+        {
+          "title": "“There’s a Monster in our House”",
+          "plays": null
+        },
+        {
+          "title": "The House",
+          "plays": null
+        },
+        {
+          "title": "House Fight",
+          "plays": null
+        },
+        {
+          "title": "This House is Dangerous",
+          "plays": null
+        },
+        {
+          "title": "Two Small Skeletons",
+          "plays": null
+        },
+        {
+          "title": "The Ritual Chamber",
+          "plays": null
+        },
+        {
+          "title": "The Decayer",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "crash-team-racing",
@@ -78409,7 +81249,189 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7r52.jpg",
       "notable": true,
       "company": "Naughty Dog",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Title",
+          "plays": null
+        },
+        {
+          "title": "Title 2",
+          "plays": null
+        },
+        {
+          "title": "Intro",
+          "plays": null
+        },
+        {
+          "title": "Menu",
+          "plays": null
+        },
+        {
+          "title": "N. Sanity Beach Map",
+          "plays": null
+        },
+        {
+          "title": "Begin Race",
+          "plays": null
+        },
+        {
+          "title": "Crash Cove",
+          "plays": null
+        },
+        {
+          "title": "Final Lap",
+          "plays": null
+        },
+        {
+          "title": "Roo’s Tubes",
+          "plays": null
+        },
+        {
+          "title": "Mystery Caves",
+          "plays": null
+        },
+        {
+          "title": "Sewer Speedway",
+          "plays": null
+        },
+        {
+          "title": "Boss Race",
+          "plays": null
+        },
+        {
+          "title": "Lose Race",
+          "plays": null
+        },
+        {
+          "title": "Win Race",
+          "plays": null
+        },
+        {
+          "title": "Crash & Coco Trophy Presentation",
+          "plays": null
+        },
+        {
+          "title": "Cortex Trophy Presentation",
+          "plays": null
+        },
+        {
+          "title": "N. Gin Trophy Presentation",
+          "plays": null
+        },
+        {
+          "title": "Dingodile & Tiny Trophy Presentation",
+          "plays": null
+        },
+        {
+          "title": "Pura & Polar Trophy Presentation",
+          "plays": null
+        },
+        {
+          "title": "Skull Rock",
+          "plays": null
+        },
+        {
+          "title": "Lost Ruins Map",
+          "plays": null
+        },
+        {
+          "title": "Coco Park",
+          "plays": null
+        },
+        {
+          "title": "Tiger Temple",
+          "plays": null
+        },
+        {
+          "title": "Papu’s Pyramid",
+          "plays": null
+        },
+        {
+          "title": "Dingo Canyon",
+          "plays": null
+        },
+        {
+          "title": "Rampage Ruins",
+          "plays": null
+        },
+        {
+          "title": "Glacier Park Map",
+          "plays": null
+        },
+        {
+          "title": "Blizzard Bluff",
+          "plays": null
+        },
+        {
+          "title": "Dragon Mines",
+          "plays": null
+        },
+        {
+          "title": "Polar Pass",
+          "plays": null
+        },
+        {
+          "title": "Tiny Arena",
+          "plays": null
+        },
+        {
+          "title": "Rocky Road",
+          "plays": null
+        },
+        {
+          "title": "Citadel City Map",
+          "plays": null
+        },
+        {
+          "title": "N. Gin Labs",
+          "plays": null
+        },
+        {
+          "title": "Cortex Castle",
+          "plays": null
+        },
+        {
+          "title": "Hot Air Skyway",
+          "plays": null
+        },
+        {
+          "title": "Nitro Court",
+          "plays": null
+        },
+        {
+          "title": "Spaceship Map",
+          "plays": null
+        },
+        {
+          "title": "Oxide Station",
+          "plays": null
+        },
+        {
+          "title": "Aku Aku Invincibility",
+          "plays": null
+        },
+        {
+          "title": "Uka Uka Invincibility",
+          "plays": null
+        },
+        {
+          "title": "Best Ending",
+          "plays": null
+        },
+        {
+          "title": "Scrapbook",
+          "plays": null
+        },
+        {
+          "title": "Maps Conglomerate",
+          "plays": null
+        },
+        {
+          "title": "Demo Track Intro On Spyro 2 Game",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "gears-of-war-2",
@@ -78430,7 +81452,117 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28gg.jpg",
       "notable": true,
       "company": "Epic Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Return of the Omen",
+          "plays": null
+        },
+        {
+          "title": "Hope Runs Deep",
+          "plays": null
+        },
+        {
+          "title": "Green as Grass",
+          "plays": null
+        },
+        {
+          "title": "Expectations",
+          "plays": null
+        },
+        {
+          "title": "Finally, A Lead",
+          "plays": null
+        },
+        {
+          "title": "Armored Prayer",
+          "plays": null
+        },
+        {
+          "title": "Hold Them Off",
+          "plays": null
+        },
+        {
+          "title": "Derrick Chase",
+          "plays": null
+        },
+        {
+          "title": "Building Thunder",
+          "plays": null
+        },
+        {
+          "title": "Hell Breaks Loose",
+          "plays": null
+        },
+        {
+          "title": "Bedlam",
+          "plays": null
+        },
+        {
+          "title": "Breakneck",
+          "plays": null
+        },
+        {
+          "title": "Landown",
+          "plays": null
+        },
+        {
+          "title": "Racing to Extinction",
+          "plays": null
+        },
+        {
+          "title": "If They Can Ride'em",
+          "plays": null
+        },
+        {
+          "title": "Hollow",
+          "plays": null
+        },
+        {
+          "title": "Unexpected Changes",
+          "plays": null
+        },
+        {
+          "title": "March of the Horde",
+          "plays": null
+        },
+        {
+          "title": "Highway",
+          "plays": null
+        },
+        {
+          "title": "Denizens of the Deep",
+          "plays": null
+        },
+        {
+          "title": "With Sympathy",
+          "plays": null
+        },
+        {
+          "title": "Insurmountable Odds",
+          "plays": null
+        },
+        {
+          "title": "Bump in the Night",
+          "plays": null
+        },
+        {
+          "title": "Frenzy",
+          "plays": null
+        },
+        {
+          "title": "Outpost",
+          "plays": null
+        },
+        {
+          "title": "Finale",
+          "plays": null
+        },
+        {
+          "title": "Autumn of Mankind",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "resident-evil-1996",
@@ -78451,7 +81583,69 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20bp.jpg",
       "notable": true,
       "company": "Capcom Planning Room 2",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Sea of Zeroes",
+          "plays": null
+        },
+        {
+          "title": "Plague from God",
+          "plays": null
+        },
+        {
+          "title": "The Doberman",
+          "plays": null
+        },
+        {
+          "title": "What is Happening",
+          "plays": null
+        },
+        {
+          "title": "Evelyn's Plan",
+          "plays": null
+        },
+        {
+          "title": "Lab Search",
+          "plays": null
+        },
+        {
+          "title": "My Son is Dead",
+          "plays": null
+        },
+        {
+          "title": "Venus Flytrap (Main Theme) [from \"Resident Evil\" Soundtrack]",
+          "plays": null
+        },
+        {
+          "title": "Meet Bert",
+          "plays": null
+        },
+        {
+          "title": "Humvee Chase",
+          "plays": null
+        },
+        {
+          "title": "Don't Eat Cats",
+          "plays": null
+        },
+        {
+          "title": "Home Safe",
+          "plays": null
+        },
+        {
+          "title": "Lickers Attack",
+          "plays": null
+        },
+        {
+          "title": "Final Battle",
+          "plays": null
+        },
+        {
+          "title": "My Heart Has Teeth (feat. Skylar Grey)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "wii-sports",
@@ -78472,7 +81666,209 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3vge.jpg",
       "notable": true,
       "company": "Nintendo EAD Software Development Group No.2",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Disc Channel",
+          "plays": null
+        },
+        {
+          "title": "Title Screen",
+          "plays": null
+        },
+        {
+          "title": "Wii Sports Menu",
+          "plays": null
+        },
+        {
+          "title": "How to Play",
+          "plays": null
+        },
+        {
+          "title": "Versus",
+          "plays": null
+        },
+        {
+          "title": "You Win",
+          "plays": null
+        },
+        {
+          "title": "You Lose",
+          "plays": null
+        },
+        {
+          "title": "Tie",
+          "plays": null
+        },
+        {
+          "title": "Tennis (Select Position)",
+          "plays": null
+        },
+        {
+          "title": "Tennis (Replay)",
+          "plays": null
+        },
+        {
+          "title": "Tennis (Results)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Match Start)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Single)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Double)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Triple)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Homerun)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (It's Out of the Park)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Results)",
+          "plays": null
+        },
+        {
+          "title": "Bowling (Intro)",
+          "plays": null
+        },
+        {
+          "title": "Bowling",
+          "plays": null
+        },
+        {
+          "title": "Bowling (Spare)",
+          "plays": null
+        },
+        {
+          "title": "Bowling (Strike)",
+          "plays": null
+        },
+        {
+          "title": "Bowling (Close Jingle)",
+          "plays": null
+        },
+        {
+          "title": "Bowling (Results Screen)",
+          "plays": null
+        },
+        {
+          "title": "Golf (Course Select)",
+          "plays": null
+        },
+        {
+          "title": "Golf (Presentation)",
+          "plays": null
+        },
+        {
+          "title": "Golf (Nice Shot)",
+          "plays": null
+        },
+        {
+          "title": "Golf (In Hole)",
+          "plays": null
+        },
+        {
+          "title": "Golf (Game Results)",
+          "plays": null
+        },
+        {
+          "title": "Boxing (Round 1)",
+          "plays": null
+        },
+        {
+          "title": "Boxing (Last Round)",
+          "plays": null
+        },
+        {
+          "title": "Boxing (Replay)",
+          "plays": null
+        },
+        {
+          "title": "Boxing (Results)",
+          "plays": null
+        },
+        {
+          "title": "Training (Select)",
+          "plays": null
+        },
+        {
+          "title": "Tennis (Set)",
+          "plays": null
+        },
+        {
+          "title": "Tennis (Training)",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Training)",
+          "plays": null
+        },
+        {
+          "title": "Bowling (Training Start)",
+          "plays": null
+        },
+        {
+          "title": "Bowling (Training)",
+          "plays": null
+        },
+        {
+          "title": "Golf (Training)",
+          "plays": null
+        },
+        {
+          "title": "Boxing (Training)",
+          "plays": null
+        },
+        {
+          "title": "Training Results",
+          "plays": null
+        },
+        {
+          "title": "Get Medal",
+          "plays": null
+        },
+        {
+          "title": "Platinum Medal",
+          "plays": null
+        },
+        {
+          "title": "Baseball (Results) (E3 2006)",
+          "plays": null
+        },
+        {
+          "title": "Wii Fitness (Test Menu)",
+          "plays": null
+        },
+        {
+          "title": "Wii Fitness (Results Processing)",
+          "plays": null
+        },
+        {
+          "title": "Wii Fitness (Results Shown 1)",
+          "plays": null
+        },
+        {
+          "title": "Wii Fitness (Results Shown 2)",
+          "plays": null
+        },
+        {
+          "title": "Wii Fitness (Results)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "roblox",
@@ -78493,7 +81889,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cociyw.jpg",
       "notable": true,
       "company": "Roblox Corporation",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Dam Ready II Rumble (Roblox Doors Unofficial Soundtrack) (Seek Extended Version)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "super-mario-3d-world",
@@ -78514,7 +81916,317 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8wi.jpg",
       "notable": true,
       "company": "Nintendo Entertainment Analysis & Development",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "タイトル",
+          "plays": null
+        },
+        {
+          "title": "WORLD 1",
+          "plays": null
+        },
+        {
+          "title": "スーパーベルの丘",
+          "plays": null
+        },
+        {
+          "title": "地下洞窟",
+          "plays": null
+        },
+        {
+          "title": "スイッチサーカス",
+          "plays": null
+        },
+        {
+          "title": "コースクリア",
+          "plays": null
+        },
+        {
+          "title": "WORLD 2",
+          "plays": null
+        },
+        {
+          "title": "ミステリーハウス入口",
+          "plays": null
+        },
+        {
+          "title": "全力! ミステリーハウス",
+          "plays": null
+        },
+        {
+          "title": "オバケ屋敷のうごく床",
+          "plays": null
+        },
+        {
+          "title": "キノピオ隊長のさいしょの冒険",
+          "plays": null
+        },
+        {
+          "title": "とおせんぼ!",
+          "plays": null
+        },
+        {
+          "title": "WORLD 3",
+          "plays": null
+        },
+        {
+          "title": "アスレチック",
+          "plays": null
+        },
+        {
+          "title": "ぬりつぶせ! カラーパネル",
+          "plays": null
+        },
+        {
+          "title": "カラーパネル de マリオ",
+          "plays": null
+        },
+        {
+          "title": "対決前",
+          "plays": null
+        },
+        {
+          "title": "ヘビースネーク",
+          "plays": null
+        },
+        {
+          "title": "ワールドクリア",
+          "plays": null
+        },
+        {
+          "title": "WORLD 4",
+          "plays": null
+        },
+        {
+          "title": "ワイルドサバンナ",
+          "plays": null
+        },
+        {
+          "title": "チカチカブロック",
+          "plays": null
+        },
+        {
+          "title": "チョロボン炭鉱",
+          "plays": null
+        },
+        {
+          "title": "ようせい姫のテーマ",
+          "plays": null
+        },
+        {
+          "title": "ファイアブロスの砦",
+          "plays": null
+        },
+        {
+          "title": "ハイウェイ・バトル",
+          "plays": null
+        },
+        {
+          "title": "WORLD 5",
+          "plays": null
+        },
+        {
+          "title": "ダブルチェリー岬",
+          "plays": null
+        },
+        {
+          "title": "人から人へ! スーパースター",
+          "plays": null
+        },
+        {
+          "title": "イルミネーションロード",
+          "plays": null
+        },
+        {
+          "title": "キラーエクスプレス",
+          "plays": null
+        },
+        {
+          "title": "スーパータワーへの道",
+          "plays": null
+        },
+        {
+          "title": "ネコクッパ",
+          "plays": null
+        },
+        {
+          "title": "スーパータワーの決戦1",
+          "plays": null
+        },
+        {
+          "title": "スーパータワーの決戦2",
+          "plays": null
+        },
+        {
+          "title": "ネコクッパの最期",
+          "plays": null
+        },
+        {
+          "title": "大団円",
+          "plays": null
+        },
+        {
+          "title": "スタッフロール",
+          "plays": null
+        },
+        {
+          "title": "ジュンビチュウ⋯",
+          "plays": null
+        },
+        {
+          "title": "ようせいの国へ",
+          "plays": null
+        },
+        {
+          "title": "ツッコンドル遺跡",
+          "plays": null
+        },
+        {
+          "title": "ダッシュレーシング",
+          "plays": null
+        },
+        {
+          "title": "次のワールドへ",
+          "plays": null
+        },
+        {
+          "title": "WORLD 6",
+          "plays": null
+        },
+        {
+          "title": "スノーボールパーク",
+          "plays": null
+        },
+        {
+          "title": "キノピオの家",
+          "plays": null
+        },
+        {
+          "title": "謎のからくり城",
+          "plays": null
+        },
+        {
+          "title": "キノピオ隊長とオバケ屋敷",
+          "plays": null
+        },
+        {
+          "title": "集めたよ!",
+          "plays": null
+        },
+        {
+          "title": "サンサンビーチ～水中",
+          "plays": null
+        },
+        {
+          "title": "クッパランドのテーマ",
+          "plays": null
+        },
+        {
+          "title": "WORLD 7",
+          "plays": null
+        },
+        {
+          "title": "キラー戦車",
+          "plays": null
+        },
+        {
+          "title": "プンプン",
+          "plays": null
+        },
+        {
+          "title": "のびのびパックンの沼",
+          "plays": null
+        },
+        {
+          "title": "巨大マリオ",
+          "plays": null
+        },
+        {
+          "title": "ルーレットハウス",
+          "plays": null
+        },
+        {
+          "title": "溶岩湖",
+          "plays": null
+        },
+        {
+          "title": "クッパを追いかけろ!",
+          "plays": null
+        },
+        {
+          "title": "WORLD 8",
+          "plays": null
+        },
+        {
+          "title": "クッパの溶岩城",
+          "plays": null
+        },
+        {
+          "title": "ブンブン",
+          "plays": null
+        },
+        {
+          "title": "プレッシー",
+          "plays": null
+        },
+        {
+          "title": "ザブンリバー",
+          "plays": null
+        },
+        {
+          "title": "ミス",
+          "plays": null
+        },
+        {
+          "title": "ボスブンレツ",
+          "plays": null
+        },
+        {
+          "title": "勝利のマーチ",
+          "plays": null
+        },
+        {
+          "title": "コースクリア（short Ver.）",
+          "plays": null
+        },
+        {
+          "title": "いざ! 空の彼方へ",
+          "plays": null
+        },
+        {
+          "title": "WORLD スター",
+          "plays": null
+        },
+        {
+          "title": "レインボーパーク",
+          "plays": null
+        },
+        {
+          "title": "カラーパネル de リンク",
+          "plays": null
+        },
+        {
+          "title": "ブロックランド",
+          "plays": null
+        },
+        {
+          "title": "WORLD キノコ～フラワー",
+          "plays": null
+        },
+        {
+          "title": "キノピオ隊長のさいごの冒険",
+          "plays": null
+        },
+        {
+          "title": "チャンピオンシップロード",
+          "plays": null
+        },
+        {
+          "title": "スーパーマリオ 3Dワールドのテーマ",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "the-legend-of-zelda-the-minish-cap",
@@ -78535,7 +82247,45 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nsk.jpg",
       "notable": true,
       "company": "Capcom Production Studio 1",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Legend of Zelda : The Minish Cap (Main Theme)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (Royal Crypt)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (The Great Fairy)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (Zelda Lullaby)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (Vatti & Ezlo)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (Legend Of Minish)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (Dark Hyrule Castle)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (Zelda's Despair)",
+          "plays": null
+        },
+        {
+          "title": "The Legend of Zelda : The Minish Cap (End Theme)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "valiant-hearts-the-great-war",
@@ -78703,7 +82453,105 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v3n.jpg",
       "notable": true,
       "company": "id Software",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Background Setup",
+          "plays": null
+        },
+        {
+          "title": "Doom 3 Theme",
+          "plays": null
+        },
+        {
+          "title": "Haunted Admin Office",
+          "plays": null
+        },
+        {
+          "title": "Alpha1 Mag",
+          "plays": null
+        },
+        {
+          "title": "Coolantrod",
+          "plays": null
+        },
+        {
+          "title": "CPU",
+          "plays": null
+        },
+        {
+          "title": "Cyberdemon",
+          "plays": null
+        },
+        {
+          "title": "Guardian Intro",
+          "plays": null
+        },
+        {
+          "title": "Guardian Death",
+          "plays": null
+        },
+        {
+          "title": "Guilt",
+          "plays": null
+        },
+        {
+          "title": "GUI",
+          "plays": null
+        },
+        {
+          "title": "Hellknight",
+          "plays": null
+        },
+        {
+          "title": "Mars City Underground",
+          "plays": null
+        },
+        {
+          "title": "Monorail",
+          "plays": null
+        },
+        {
+          "title": "Bertrugerhead",
+          "plays": null
+        },
+        {
+          "title": "Cyberdeath",
+          "plays": null
+        },
+        {
+          "title": "Intro",
+          "plays": null
+        },
+        {
+          "title": "Start Rescue",
+          "plays": null
+        },
+        {
+          "title": "Scape 1",
+          "plays": null
+        },
+        {
+          "title": "Turkey",
+          "plays": null
+        },
+        {
+          "title": "Vagary Intro",
+          "plays": null
+        },
+        {
+          "title": "Vagary Fight",
+          "plays": null
+        },
+        {
+          "title": "Wounded",
+          "plays": null
+        },
+        {
+          "title": "Credits",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "machinarium",
@@ -78724,7 +82572,65 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27lo.jpg",
       "notable": true,
       "company": "Amanita Design",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Bottom",
+          "plays": null
+        },
+        {
+          "title": "The Sea",
+          "plays": null
+        },
+        {
+          "title": "Clockwise Operetta",
+          "plays": null
+        },
+        {
+          "title": "Nanorobot Tune",
+          "plays": null
+        },
+        {
+          "title": "The Mezzanine",
+          "plays": null
+        },
+        {
+          "title": "By the Wall",
+          "plays": null
+        },
+        {
+          "title": "Mr. Handagote",
+          "plays": null
+        },
+        {
+          "title": "Gameboy Tune",
+          "plays": null
+        },
+        {
+          "title": "The Furnace",
+          "plays": null
+        },
+        {
+          "title": "The Black Cap Brotherhood Theme",
+          "plays": null
+        },
+        {
+          "title": "The Prison",
+          "plays": null
+        },
+        {
+          "title": "The Glasshouse With Butterfly",
+          "plays": null
+        },
+        {
+          "title": "The Castle",
+          "plays": null
+        },
+        {
+          "title": "The Elevator",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "the-binding-of-isaac",
@@ -78928,7 +82834,177 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ys2.jpg",
       "notable": true,
       "company": "LucasArts",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Theme and Opening Credits",
+          "plays": null
+        },
+        {
+          "title": "Kerner Steals the Statue / Love in Iceland",
+          "plays": null
+        },
+        {
+          "title": "Map",
+          "plays": null
+        },
+        {
+          "title": "New York / Biff the Doorman",
+          "plays": null
+        },
+        {
+          "title": "Fighting Theme (original version)",
+          "plays": null
+        },
+        {
+          "title": "Fighting Theme (complete and almost uncut)",
+          "plays": null
+        },
+        {
+          "title": "Madame Sophia's Atlantis Presentation",
+          "plays": null
+        },
+        {
+          "title": "Ghost Prop",
+          "plays": null
+        },
+        {
+          "title": "Sophia's Office Is Ransacked / The Appearance of Nur-Ab-Sal",
+          "plays": null
+        },
+        {
+          "title": "Iceland",
+          "plays": null
+        },
+        {
+          "title": "Tikal and Meeting Sternhart",
+          "plays": null
+        },
+        {
+          "title": "Tikal Temple",
+          "plays": null
+        },
+        {
+          "title": "Sternhart Steals the Worldstone",
+          "plays": null
+        },
+        {
+          "title": "The Azores and Mr. Costa",
+          "plays": null
+        },
+        {
+          "title": "A Research Lab Somewhere in Germany",
+          "plays": null
+        },
+        {
+          "title": "Caswell Hall",
+          "plays": null
+        },
+        {
+          "title": "The Hermocrates Manuscript",
+          "plays": null
+        },
+        {
+          "title": "Monte Carlo and Monsieur Trottier",
+          "plays": null
+        },
+        {
+          "title": "Monte Carlo Car Chase",
+          "plays": null
+        },
+        {
+          "title": "Monte Carlo Hotel Room",
+          "plays": null
+        },
+        {
+          "title": "The Séance",
+          "plays": null
+        },
+        {
+          "title": "The Balloon Ride",
+          "plays": null
+        },
+        {
+          "title": "Crossing the Desert",
+          "plays": null
+        },
+        {
+          "title": "Outside the Dig",
+          "plays": null
+        },
+        {
+          "title": "Crete",
+          "plays": null
+        },
+        {
+          "title": "Crete Ruins",
+          "plays": null
+        },
+        {
+          "title": "The Transit",
+          "plays": null
+        },
+        {
+          "title": "The Ruins of Knossos",
+          "plays": null
+        },
+        {
+          "title": "Creat (Dream mix by Bart Klepka)",
+          "plays": null
+        },
+        {
+          "title": "The Death of Dr. Jones",
+          "plays": null
+        },
+        {
+          "title": "The Singing Nazi",
+          "plays": null
+        },
+        {
+          "title": "The Nazi Submarine",
+          "plays": null
+        },
+        {
+          "title": "Diving for Atlantis",
+          "plays": null
+        },
+        {
+          "title": "Darkness at the Atlantis Entrance",
+          "plays": null
+        },
+        {
+          "title": "Atlantis 1",
+          "plays": null
+        },
+        {
+          "title": "Atlantis 2",
+          "plays": null
+        },
+        {
+          "title": "Atlantis 3",
+          "plays": null
+        },
+        {
+          "title": "Crab-Like Raft",
+          "plays": null
+        },
+        {
+          "title": "Crab Central",
+          "plays": null
+        },
+        {
+          "title": "Indy and Sophia's Kiss",
+          "plays": null
+        },
+        {
+          "title": "Room of the God Machine",
+          "plays": null
+        },
+        {
+          "title": "The God Machine and Finale",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "forza-horizon-4",
@@ -78949,7 +83025,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2e1a.jpg",
       "notable": true,
       "company": "Playground Games",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "dead-space-3",
@@ -78970,7 +83047,93 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2int.jpg",
       "notable": true,
       "company": "Visceral Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "200 Years Ago, On an Icy Planet...",
+          "plays": null
+        },
+        {
+          "title": "The Quick and the Dead",
+          "plays": null
+        },
+        {
+          "title": "A Broken Past",
+          "plays": null
+        },
+        {
+          "title": "The Lunar Express",
+          "plays": null
+        },
+        {
+          "title": "60 Seconds Over Tau Volantis",
+          "plays": null
+        },
+        {
+          "title": "The Fiery Room",
+          "plays": null
+        },
+        {
+          "title": "Spaced Out and Frantic",
+          "plays": null
+        },
+        {
+          "title": "Vomit Comet",
+          "plays": null
+        },
+        {
+          "title": "Graffiti Speaks",
+          "plays": null
+        },
+        {
+          "title": "Knee Deep",
+          "plays": null
+        },
+        {
+          "title": "Buckell Down",
+          "plays": null
+        },
+        {
+          "title": "Apoplexia",
+          "plays": null
+        },
+        {
+          "title": "In Tents",
+          "plays": null
+        },
+        {
+          "title": "Into the Stomach",
+          "plays": null
+        },
+        {
+          "title": "The Nexus",
+          "plays": null
+        },
+        {
+          "title": "Mountains of Madness",
+          "plays": null
+        },
+        {
+          "title": "The Ascent",
+          "plays": null
+        },
+        {
+          "title": "Rosetta Suite",
+          "plays": null
+        },
+        {
+          "title": "Cry of the Ancients",
+          "plays": null
+        },
+        {
+          "title": "Convergence",
+          "plays": null
+        },
+        {
+          "title": "Moon Crash",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "command-conquer-red-alert-2",
@@ -78991,7 +83154,73 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coar4c.jpg",
       "notable": true,
       "company": "Westwood Pacific",
-      "console": false
+      "console": false,
+      "tracks": [
+        {
+          "title": "HM2",
+          "plays": null
+        },
+        {
+          "title": "Industrofunk",
+          "plays": null
+        },
+        {
+          "title": "Ready The Army",
+          "plays": null
+        },
+        {
+          "title": "Grinder",
+          "plays": null
+        },
+        {
+          "title": "In Deep",
+          "plays": null
+        },
+        {
+          "title": "Motorized",
+          "plays": null
+        },
+        {
+          "title": "Power",
+          "plays": null
+        },
+        {
+          "title": "200 Meters",
+          "plays": null
+        },
+        {
+          "title": "Destroy",
+          "plays": null
+        },
+        {
+          "title": "Burn",
+          "plays": null
+        },
+        {
+          "title": "Probing",
+          "plays": null
+        },
+        {
+          "title": "Blow It Up",
+          "plays": null
+        },
+        {
+          "title": "Eagle Hunter",
+          "plays": null
+        },
+        {
+          "title": "Fortification",
+          "plays": null
+        },
+        {
+          "title": "Jank",
+          "plays": null
+        },
+        {
+          "title": "C&C In The House",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pokémon-silver-version",
@@ -79034,7 +83263,81 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc99p.jpg",
       "notable": true,
       "company": "Blizzard Entertainment",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Overwatch",
+          "plays": null
+        },
+        {
+          "title": "Skirmish",
+          "plays": null
+        },
+        {
+          "title": "Radioactive",
+          "plays": null
+        },
+        {
+          "title": "Assault",
+          "plays": null
+        },
+        {
+          "title": "Crossroads",
+          "plays": null
+        },
+        {
+          "title": "Citadel",
+          "plays": null
+        },
+        {
+          "title": "Fortress",
+          "plays": null
+        },
+        {
+          "title": "Predicament",
+          "plays": null
+        },
+        {
+          "title": "Escape",
+          "plays": null
+        },
+        {
+          "title": "Strider",
+          "plays": null
+        },
+        {
+          "title": "Core",
+          "plays": null
+        },
+        {
+          "title": "Overload",
+          "plays": null
+        },
+        {
+          "title": "Chopper",
+          "plays": null
+        },
+        {
+          "title": "Breach",
+          "plays": null
+        },
+        {
+          "title": "Echoes",
+          "plays": null
+        },
+        {
+          "title": "Transgression",
+          "plays": null
+        },
+        {
+          "title": "Odyssey",
+          "plays": null
+        },
+        {
+          "title": "Prometheus",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "dead-by-daylight",
@@ -79055,7 +83358,169 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5zky.jpg",
       "notable": true,
       "company": "Behaviour Interactive",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Dead by Daylight (Theme)",
+          "plays": null
+        },
+        {
+          "title": "Being Watched",
+          "plays": null
+        },
+        {
+          "title": "Closing In",
+          "plays": null
+        },
+        {
+          "title": "No Place to Hide",
+          "plays": null
+        },
+        {
+          "title": "Petrified",
+          "plays": null
+        },
+        {
+          "title": "Disoriented",
+          "plays": null
+        },
+        {
+          "title": "Darkness Rising",
+          "plays": null
+        },
+        {
+          "title": "Liberation",
+          "plays": null
+        },
+        {
+          "title": "Suffering",
+          "plays": null
+        },
+        {
+          "title": "Entity Brain",
+          "plays": null
+        },
+        {
+          "title": "One Track Mind",
+          "plays": null
+        },
+        {
+          "title": "Punished",
+          "plays": null
+        },
+        {
+          "title": "Enduring Torment",
+          "plays": null
+        },
+        {
+          "title": "The Hook",
+          "plays": null
+        },
+        {
+          "title": "Dark Infinity",
+          "plays": null
+        },
+        {
+          "title": "Death is Not an Escape",
+          "plays": null
+        },
+        {
+          "title": "Bleeding",
+          "plays": null
+        },
+        {
+          "title": "Unstable",
+          "plays": null
+        },
+        {
+          "title": "Kill Hunt",
+          "plays": null
+        },
+        {
+          "title": "Blood Trail",
+          "plays": null
+        },
+        {
+          "title": "Ritual",
+          "plays": null
+        },
+        {
+          "title": "Tracking the Prey",
+          "plays": null
+        },
+        {
+          "title": "Threatening Gloom",
+          "plays": null
+        },
+        {
+          "title": "In the Mouth of Darkness",
+          "plays": null
+        },
+        {
+          "title": "Forever Lost",
+          "plays": null
+        },
+        {
+          "title": "No Will",
+          "plays": null
+        },
+        {
+          "title": "Hiding",
+          "plays": null
+        },
+        {
+          "title": "Cruelty",
+          "plays": null
+        },
+        {
+          "title": "Stranded",
+          "plays": null
+        },
+        {
+          "title": "Black Blood",
+          "plays": null
+        },
+        {
+          "title": "Flesh and Bone (Bonus Track)",
+          "plays": null
+        },
+        {
+          "title": "Hallob",
+          "plays": null
+        },
+        {
+          "title": "Christless",
+          "plays": null
+        },
+        {
+          "title": "Death Dark",
+          "plays": null
+        },
+        {
+          "title": "Shadoween",
+          "plays": null
+        },
+        {
+          "title": "Lunar",
+          "plays": null
+        },
+        {
+          "title": "The Clown",
+          "plays": null
+        },
+        {
+          "title": "Bloodline",
+          "plays": null
+        },
+        {
+          "title": "Darkness Among Us",
+          "plays": null
+        },
+        {
+          "title": "The Plague",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "just-cause-3",
@@ -79098,7 +83563,101 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocckw.jpg",
       "notable": true,
       "company": "Rare",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Title Screen",
+          "plays": null
+        },
+        {
+          "title": "Menu Screen",
+          "plays": null
+        },
+        {
+          "title": "Dam",
+          "plays": null
+        },
+        {
+          "title": "Facility",
+          "plays": null
+        },
+        {
+          "title": "Runway",
+          "plays": null
+        },
+        {
+          "title": "Surface (Morning)",
+          "plays": null
+        },
+        {
+          "title": "Bunker",
+          "plays": null
+        },
+        {
+          "title": "Silo",
+          "plays": null
+        },
+        {
+          "title": "Frigate",
+          "plays": null
+        },
+        {
+          "title": "Surface (Night)",
+          "plays": null
+        },
+        {
+          "title": "Bunker 2",
+          "plays": null
+        },
+        {
+          "title": "Pause Menu",
+          "plays": null
+        },
+        {
+          "title": "Statue",
+          "plays": null
+        },
+        {
+          "title": "Archives",
+          "plays": null
+        },
+        {
+          "title": "Streets",
+          "plays": null
+        },
+        {
+          "title": "Depot",
+          "plays": null
+        },
+        {
+          "title": "Train",
+          "plays": null
+        },
+        {
+          "title": "Control",
+          "plays": null
+        },
+        {
+          "title": "Caverns",
+          "plays": null
+        },
+        {
+          "title": "Cradle",
+          "plays": null
+        },
+        {
+          "title": "Aztec",
+          "plays": null
+        },
+        {
+          "title": "Egyptian",
+          "plays": null
+        },
+        {
+          "title": "End Credits",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "the-elder-scrolls-v-skyrim-special-edition",
@@ -79931,7 +84490,49 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co95ri.jpg",
       "notable": true,
       "company": "Ubisoft Montreal",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "The Lighthouse",
+          "plays": null
+        },
+        {
+          "title": "Ruthless",
+          "plays": null
+        },
+        {
+          "title": "Theme From Battery",
+          "plays": null
+        },
+        {
+          "title": "Kokubo Sosho Stealth",
+          "plays": null
+        },
+        {
+          "title": "El Cargo",
+          "plays": null
+        },
+        {
+          "title": "Displaced",
+          "plays": null
+        },
+        {
+          "title": "Ruthless (reprise)",
+          "plays": null
+        },
+        {
+          "title": "Kokubo Sosho Battle",
+          "plays": null
+        },
+        {
+          "title": "Hokkaido",
+          "plays": null
+        },
+        {
+          "title": "The Clean Up",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "quake-iii-arena",
@@ -80113,7 +84714,69 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1y77.jpg",
       "notable": true,
       "company": "Neversoft Entertainment",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Out With the Old",
+          "plays": null
+        },
+        {
+          "title": "Bring the Noise",
+          "plays": null
+        },
+        {
+          "title": "You",
+          "plays": null
+        },
+        {
+          "title": "Heavy Metal Winner",
+          "plays": null
+        },
+        {
+          "title": "Cyclone",
+          "plays": null
+        },
+        {
+          "title": "Evil Eye",
+          "plays": null
+        },
+        {
+          "title": "May 16",
+          "plays": null
+        },
+        {
+          "title": "No Cigar",
+          "plays": null
+        },
+        {
+          "title": "Pin the Tail on the Donkey",
+          "plays": null
+        },
+        {
+          "title": "Blood Brothers",
+          "plays": null
+        },
+        {
+          "title": "When Worlds Collide",
+          "plays": null
+        },
+        {
+          "title": "Guerrilla Radio",
+          "plays": null
+        },
+        {
+          "title": "Subculture",
+          "plays": null
+        },
+        {
+          "title": "Five Lessons Learned",
+          "plays": null
+        },
+        {
+          "title": "B-Boy Document '99",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "battlefield-v",
@@ -80241,7 +84904,69 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7et5.jpg",
       "notable": true,
       "company": "SCS Software",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "cutscene",
+          "plays": null
+        },
+        {
+          "title": "delivery_finished1",
+          "plays": null
+        },
+        {
+          "title": "delivery_finished2",
+          "plays": null
+        },
+        {
+          "title": "desktop_1",
+          "plays": null
+        },
+        {
+          "title": "desktop_2",
+          "plays": null
+        },
+        {
+          "title": "desktop_3",
+          "plays": null
+        },
+        {
+          "title": "desktop_4",
+          "plays": null
+        },
+        {
+          "title": "garage",
+          "plays": null
+        },
+        {
+          "title": "garage_new_reverbed",
+          "plays": null
+        },
+        {
+          "title": "garage_retro_style",
+          "plays": null
+        },
+        {
+          "title": "hurry_up1",
+          "plays": null
+        },
+        {
+          "title": "hurry_up2",
+          "plays": null
+        },
+        {
+          "title": "hurry_up3",
+          "plays": null
+        },
+        {
+          "title": "truck_service",
+          "plays": null
+        },
+        {
+          "title": "truck_upgrade",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "lego-star-wars-the-complete-saga",
@@ -80262,7 +84987,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrr.jpg",
       "notable": true,
       "company": "Robosoft Technologies",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "mario-kart-ds",
@@ -80305,7 +85031,73 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20tq.jpg",
       "notable": true,
       "company": "2K Australia",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Spacestation",
+          "plays": null
+        },
+        {
+          "title": "Into the Void",
+          "plays": null
+        },
+        {
+          "title": "Habitat",
+          "plays": null
+        },
+        {
+          "title": "Persistent Impulse",
+          "plays": null
+        },
+        {
+          "title": "Beyond the Biodome",
+          "plays": null
+        },
+        {
+          "title": "Lunar Surface",
+          "plays": null
+        },
+        {
+          "title": "Celestial Spaceport",
+          "plays": null
+        },
+        {
+          "title": "Helio",
+          "plays": null
+        },
+        {
+          "title": "System Interference",
+          "plays": null
+        },
+        {
+          "title": "Arrival",
+          "plays": null
+        },
+        {
+          "title": "Orbiter",
+          "plays": null
+        },
+        {
+          "title": "Full State Feedback",
+          "plays": null
+        },
+        {
+          "title": "Mooncore",
+          "plays": null
+        },
+        {
+          "title": "Eridian Traps",
+          "plays": null
+        },
+        {
+          "title": "Beyond the Biodome (Pleasure Dome Mix)",
+          "plays": null
+        },
+        {
+          "title": "Lunar Surface (Extended Mix)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "new-super-mario-bros",
@@ -80326,7 +85118,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21rm.jpg",
       "notable": true,
       "company": "Nintendo Entertainment Analysis & Development",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "New Super Mario Bros. Wii Ghost House Theme (Original Video Game Soundtrack)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "spore",
@@ -80369,7 +85167,81 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1yvf.jpg",
       "notable": true,
       "company": "Massive Entertainment",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Prologue",
+          "plays": null
+        },
+        {
+          "title": "We Are the Division",
+          "plays": null
+        },
+        {
+          "title": "Precinct Siege",
+          "plays": null
+        },
+        {
+          "title": "The Garden",
+          "plays": null
+        },
+        {
+          "title": "Dyer",
+          "plays": null
+        },
+        {
+          "title": "Safehouse",
+          "plays": null
+        },
+        {
+          "title": "Mortuary",
+          "plays": null
+        },
+        {
+          "title": "Times Square",
+          "plays": null
+        },
+        {
+          "title": "Grand Central",
+          "plays": null
+        },
+        {
+          "title": "Lexington",
+          "plays": null
+        },
+        {
+          "title": "Mall Rats",
+          "plays": null
+        },
+        {
+          "title": "Skyline",
+          "plays": null
+        },
+        {
+          "title": "Amherst",
+          "plays": null
+        },
+        {
+          "title": "Ferro",
+          "plays": null
+        },
+        {
+          "title": "Power Plant",
+          "plays": null
+        },
+        {
+          "title": "The Academy",
+          "plays": null
+        },
+        {
+          "title": "Bliss",
+          "plays": null
+        },
+        {
+          "title": "Dark Zone",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "prototype",
@@ -80390,7 +85262,45 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ql2.jpg",
       "notable": true,
       "company": "Radical Entertainment",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Title Screen (Extended)",
+          "plays": null
+        },
+        {
+          "title": "Abyss - Calm",
+          "plays": null
+        },
+        {
+          "title": "Abyss - Battle",
+          "plays": null
+        },
+        {
+          "title": "Prologue - Calm (Scrapped)",
+          "plays": null
+        },
+        {
+          "title": "Prologue - Battle (Scrapped)",
+          "plays": null
+        },
+        {
+          "title": "Prologue - Boss (Scrapped)",
+          "plays": null
+        },
+        {
+          "title": "Safe Rooms (Scrapped)",
+          "plays": null
+        },
+        {
+          "title": "Game Over",
+          "plays": null
+        },
+        {
+          "title": "Victory",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "indigo-prophecy",
@@ -80411,7 +85321,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3rhh.jpg",
       "notable": true,
       "company": "Quantic Dream",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "call-of-duty-infinite-warfare",
@@ -117679,7 +122590,57 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pia.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Route 30",
+          "plays": null
+        },
+        {
+          "title": "Professor Oak's Theme",
+          "plays": null
+        },
+        {
+          "title": "Battle vs Trainer - Johto",
+          "plays": null
+        },
+        {
+          "title": "Cherrygrove City",
+          "plays": null
+        },
+        {
+          "title": "Dark Cave / Ice Path",
+          "plays": null
+        },
+        {
+          "title": "Battle (Rival)",
+          "plays": null
+        },
+        {
+          "title": "Violet City",
+          "plays": null
+        },
+        {
+          "title": "New Bark Town",
+          "plays": null
+        },
+        {
+          "title": "Sprout Tower",
+          "plays": null
+        },
+        {
+          "title": "Elm's Research Lab",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Gym",
+          "plays": null
+        },
+        {
+          "title": "Battle vs Wild Pokemon - Johto",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pokémon-soulsilver-version",
@@ -118190,7 +123151,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zht.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pokémon-y",
@@ -118233,7 +123195,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zk2.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pokémon-x",
@@ -118254,7 +123217,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1z8y.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pokémon-sapphire-version",
@@ -118275,7 +123239,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zhp.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pokémon-stadium",
@@ -118607,7 +123572,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocjdd.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Zinnia's Sorrow (Original Game Soundtrack From \"Pokémon Omega Ruby and Alpha Sapphire\")",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pokémon-sun",
@@ -118628,7 +123599,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3co7.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pokémon-shield",
@@ -118916,7 +123888,73 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3d03.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Title Screen",
+          "plays": null
+        },
+        {
+          "title": "Jubilife Village (Beginning) Home / Outdoors",
+          "plays": null
+        },
+        {
+          "title": "The Heartwood",
+          "plays": null
+        },
+        {
+          "title": "Irida’s Theme (Emotion)",
+          "plays": null
+        },
+        {
+          "title": "Clan Settlement",
+          "plays": null
+        },
+        {
+          "title": "Coronet Highlands - Base",
+          "plays": null
+        },
+        {
+          "title": "Alabaster Icelands 1",
+          "plays": null
+        },
+        {
+          "title": "Field (Late Night)",
+          "plays": null
+        },
+        {
+          "title": "Cobalt Coastlands 1",
+          "plays": null
+        },
+        {
+          "title": "Crimson Mirelands 2",
+          "plays": null
+        },
+        {
+          "title": "Survey Results (Night)",
+          "plays": null
+        },
+        {
+          "title": "Obsidian Fieldlands 2",
+          "plays": null
+        },
+        {
+          "title": "Palina’s Theme (Alternate Intro)",
+          "plays": null
+        },
+        {
+          "title": "Mystery Gift",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Pokémon Wielder Volo)",
+          "plays": null
+        },
+        {
+          "title": "Staff Credits",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "donkey-kong-country-returns",
@@ -118937,7 +123975,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wf4.jpg",
       "notable": true,
       "company": "Retro Studios",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Donkey Kong Country Returns",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "donkey-kong-country-tropical-freeze",
@@ -118980,7 +124024,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5sfa.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pokémon-scarlet",
@@ -119001,7 +124046,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5sfi.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Area Zero (Pokémon Scarlet and Violet OST)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "kirby-and-the-forgotten-land",
@@ -119022,7 +124073,29 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3vlw.jpg",
       "notable": true,
       "company": "HAL Laboratory",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Downtown Grassland",
+          "plays": null
+        },
+        {
+          "title": "Stage Cleared",
+          "plays": null
+        },
+        {
+          "title": "Boss Battle",
+          "plays": null
+        },
+        {
+          "title": "Downtown Grassland (Extended Version)",
+          "plays": null
+        },
+        {
+          "title": "Stage Cleared (Extended Version)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "donkey-kong-bananza",
@@ -119087,7 +124160,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobcm6.jpg",
       "notable": true,
       "company": "HAL Laboratory",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pokémon-let-s-go-eevee",
@@ -119108,7 +124182,209 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zjz.jpg",
       "notable": true,
       "company": "Game Freak",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Into the Game: Let's Go!",
+          "plays": null
+        },
+        {
+          "title": "Choose Your Language",
+          "plays": null
+        },
+        {
+          "title": "Title Screen",
+          "plays": null
+        },
+        {
+          "title": "Pallet Town Theme",
+          "plays": null
+        },
+        {
+          "title": "Professor Oak",
+          "plays": null
+        },
+        {
+          "title": "Guide",
+          "plays": null
+        },
+        {
+          "title": "Professor Oak's Laboratory",
+          "plays": null
+        },
+        {
+          "title": "Caught a Pokémon!",
+          "plays": null
+        },
+        {
+          "title": "Road to Viridian City: Leaving Pallet Town",
+          "plays": null
+        },
+        {
+          "title": "Picked Up an Item!",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Center",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Healed",
+          "plays": null
+        },
+        {
+          "title": "A Trainer Appears (Boy Version)",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Trainer Battle)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Trainer Battle)",
+          "plays": null
+        },
+        {
+          "title": "Pokédex Evaluation... You're on Your Way!",
+          "plays": null
+        },
+        {
+          "title": "Viridian Forest",
+          "plays": null
+        },
+        {
+          "title": "Catch! (Wild Pokémon)",
+          "plays": null
+        },
+        {
+          "title": "Successful Catch! (Wild Pokémon)",
+          "plays": null
+        },
+        {
+          "title": "Level Up!",
+          "plays": null
+        },
+        {
+          "title": "A Trainer Appears (Girl Version)",
+          "plays": null
+        },
+        {
+          "title": "Pewter City Theme",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Gym",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Gym Leader Battle)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Gym Leader Battle)",
+          "plays": null
+        },
+        {
+          "title": "Obtained a Gym Badge!",
+          "plays": null
+        },
+        {
+          "title": "Blue’s Theme",
+          "plays": null
+        },
+        {
+          "title": "Road to Cerulean City: Leaving Mt. Moon",
+          "plays": null
+        },
+        {
+          "title": "Jigglypuff's Song",
+          "plays": null
+        },
+        {
+          "title": "Caves of Mt. Moon",
+          "plays": null
+        },
+        {
+          "title": "A Trainer Appears (Bad Guy Version)",
+          "plays": null
+        },
+        {
+          "title": "Theme of Jessie and James",
+          "plays": null
+        },
+        {
+          "title": "Evolution",
+          "plays": null
+        },
+        {
+          "title": "Congratulations! Your Pokémon Evolved!",
+          "plays": null
+        },
+        {
+          "title": "Cerulean City Theme",
+          "plays": null
+        },
+        {
+          "title": "To Bill: Leaving Cerulean City",
+          "plays": null
+        },
+        {
+          "title": "Vermilion City Theme",
+          "plays": null
+        },
+        {
+          "title": "The S.S. Anne",
+          "plays": null
+        },
+        {
+          "title": "Road to Lavender Town: Leaving Vermilion City",
+          "plays": null
+        },
+        {
+          "title": "Lavender Town Theme",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Tower",
+          "plays": null
+        },
+        {
+          "title": "Celadon City Theme",
+          "plays": null
+        },
+        {
+          "title": "Game Corner",
+          "plays": null
+        },
+        {
+          "title": "Rocket Hideout",
+          "plays": null
+        },
+        {
+          "title": "Obtained a Key Item!",
+          "plays": null
+        },
+        {
+          "title": "Cubone's Mother",
+          "plays": null
+        },
+        {
+          "title": "The Poké Flute",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Wild Pokémon)",
+          "plays": null
+        },
+        {
+          "title": "Caught a Pokémon! (Short Version)",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Road",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pokémon-let-s-go-pikachu",
@@ -119352,7 +124628,693 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3b9t.jpg",
       "notable": true,
       "company": "ILCA",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Opening Movie",
+          "plays": null
+        },
+        {
+          "title": "Introduction",
+          "plays": null
+        },
+        {
+          "title": "Special Report: ''Search for the Red Gyarados!''",
+          "plays": null
+        },
+        {
+          "title": "Twinleaf Town (Day)",
+          "plays": null
+        },
+        {
+          "title": "Rival",
+          "plays": null
+        },
+        {
+          "title": "Route 201 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Lake",
+          "plays": null
+        },
+        {
+          "title": "A Surprise at the Lake!",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Wild Pokémon)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Wild Pokémon)",
+          "plays": null
+        },
+        {
+          "title": "Dawn",
+          "plays": null
+        },
+        {
+          "title": "Obtained an Item!",
+          "plays": null
+        },
+        {
+          "title": "Sandgem Town (Day)",
+          "plays": null
+        },
+        {
+          "title": "The Pokémon Lab",
+          "plays": null
+        },
+        {
+          "title": "Hurry Along",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Center (Day)",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Healed",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Youngster)",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Lass)",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Trainer Battle)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Trainer Battle)",
+          "plays": null
+        },
+        {
+          "title": "Jubilife City (Day)",
+          "plays": null
+        },
+        {
+          "title": "Obtained a Key Item!",
+          "plays": null
+        },
+        {
+          "title": "Poké Mart",
+          "plays": null
+        },
+        {
+          "title": "Route 203 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Rival)",
+          "plays": null
+        },
+        {
+          "title": "Oreburgh Gate",
+          "plays": null
+        },
+        {
+          "title": "Obtained a TM!",
+          "plays": null
+        },
+        {
+          "title": "Oreburgh City (Day)",
+          "plays": null
+        },
+        {
+          "title": "Oreburgh Mine",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Gym",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Gym Leader)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Gym Leader)",
+          "plays": null
+        },
+        {
+          "title": "Obtained a Badge!",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Twins)",
+          "plays": null
+        },
+        {
+          "title": "Level Up!",
+          "plays": null
+        },
+        {
+          "title": "Floaroma Town (Day)",
+          "plays": null
+        },
+        {
+          "title": "Obtained a Berry!",
+          "plays": null
+        },
+        {
+          "title": "Route 205 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Team Galactic Appears!",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Team Galactic)",
+          "plays": null
+        },
+        {
+          "title": "Eterna Forest",
+          "plays": null
+        },
+        {
+          "title": "Let's Go Together!",
+          "plays": null
+        },
+        {
+          "title": "Eterna City (Day)",
+          "plays": null
+        },
+        {
+          "title": "Galactic Eterna Building",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Team Galactic Commander)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Team Galactic)",
+          "plays": null
+        },
+        {
+          "title": "Evolution",
+          "plays": null
+        },
+        {
+          "title": "Congratulations! Your Pokémon Evolved!",
+          "plays": null
+        },
+        {
+          "title": "Bicycle",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Cyclist)",
+          "plays": null
+        },
+        {
+          "title": "Route 206 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Hearthome City (Day)",
+          "plays": null
+        },
+        {
+          "title": "Route 209 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Hiker)",
+          "plays": null
+        },
+        {
+          "title": "Solaceon Town (Day)",
+          "plays": null
+        },
+        {
+          "title": "Obtained a Pokétch App!",
+          "plays": null
+        },
+        {
+          "title": "Route 210",
+          "plays": null
+        },
+        {
+          "title": "Veilstone City (Day)",
+          "plays": null
+        },
+        {
+          "title": "Valor Lakefront (Day)",
+          "plays": null
+        },
+        {
+          "title": "Canalave City",
+          "plays": null
+        },
+        {
+          "title": "Route 216 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Snowpoint City (Day)",
+          "plays": null
+        },
+        {
+          "title": "Team Galactic HQ",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Team Galactic Boss)",
+          "plays": null
+        },
+        {
+          "title": "Deep Within Team Galactic HQ",
+          "plays": null
+        },
+        {
+          "title": "Mt. Coronet",
+          "plays": null
+        },
+        {
+          "title": "Spear Pillar",
+          "plays": null
+        },
+        {
+          "title": "The Legendary Pokémon Appears!",
+          "plays": null
+        },
+        {
+          "title": "Catastrophe!",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Dialga/Palkia)",
+          "plays": null
+        },
+        {
+          "title": "Sunyshore City (Day)",
+          "plays": null
+        },
+        {
+          "title": "Victory Road",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Ace Trainer)",
+          "plays": null
+        },
+        {
+          "title": "Pokémon League (Day)",
+          "plays": null
+        },
+        {
+          "title": "Fight Area (Day)",
+          "plays": null
+        },
+        {
+          "title": "Route 225 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Route 228 (Day)",
+          "plays": null
+        },
+        {
+          "title": "Twinleaf Town (Night)",
+          "plays": null
+        },
+        {
+          "title": "Route 201 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Pokémon Center (Night)",
+          "plays": null
+        },
+        {
+          "title": "Sandgem Town (Night)",
+          "plays": null
+        },
+        {
+          "title": "Lucas",
+          "plays": null
+        },
+        {
+          "title": "Jubilife City",
+          "plays": null
+        },
+        {
+          "title": "TV Station",
+          "plays": null
+        },
+        {
+          "title": "Gts",
+          "plays": null
+        },
+        {
+          "title": "Surf",
+          "plays": null
+        },
+        {
+          "title": "Canalave City (Night)",
+          "plays": null
+        },
+        {
+          "title": "Move Deleted",
+          "plays": null
+        },
+        {
+          "title": "Route 203 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Black Belt)",
+          "plays": null
+        },
+        {
+          "title": "Oreburgh City (Night)",
+          "plays": null
+        },
+        {
+          "title": "Route 205 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Sailor)",
+          "plays": null
+        },
+        {
+          "title": "Eterna City (Night)",
+          "plays": null
+        },
+        {
+          "title": "The Underground",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Aroma Lady)",
+          "plays": null
+        },
+        {
+          "title": "Floaroma Town (Night)",
+          "plays": null
+        },
+        {
+          "title": "Old Chateau",
+          "plays": null
+        },
+        {
+          "title": "Solaceon Town (Night)",
+          "plays": null
+        },
+        {
+          "title": "Great Marsh",
+          "plays": null
+        },
+        {
+          "title": "Route 206 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Collector)",
+          "plays": null
+        },
+        {
+          "title": "Veilstone City (Night)",
+          "plays": null
+        },
+        {
+          "title": "Game Corner",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (PI)",
+          "plays": null
+        },
+        {
+          "title": "Route 209 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Snowpoint City (Night)",
+          "plays": null
+        },
+        {
+          "title": "Route 216 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Lake Caverns",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Azelf/Mesprit/Uxie)",
+          "plays": null
+        },
+        {
+          "title": "Route 210 (Night)",
+          "plays": null
+        },
+        {
+          "title": "A Poké Radar Hit!",
+          "plays": null
+        },
+        {
+          "title": "Sunyshore City (Night)",
+          "plays": null
+        },
+        {
+          "title": "Trainers' Eyes Meet (Artist)",
+          "plays": null
+        },
+        {
+          "title": "Amity Square",
+          "plays": null
+        },
+        {
+          "title": "Got an Accessory",
+          "plays": null
+        },
+        {
+          "title": "Hearthome City (Night)",
+          "plays": null
+        },
+        {
+          "title": "Contest Hall",
+          "plays": null
+        },
+        {
+          "title": "Poffins",
+          "plays": null
+        },
+        {
+          "title": "Contest: Title",
+          "plays": null
+        },
+        {
+          "title": "Contest: Dress",
+          "plays": null
+        },
+        {
+          "title": "Dance: Easy",
+          "plays": null
+        },
+        {
+          "title": "Dance: Difficult",
+          "plays": null
+        },
+        {
+          "title": "Contest 1",
+          "plays": null
+        },
+        {
+          "title": "Contest 2",
+          "plays": null
+        },
+        {
+          "title": "Contest 3",
+          "plays": null
+        },
+        {
+          "title": "Contest 4",
+          "plays": null
+        },
+        {
+          "title": "Contest 5",
+          "plays": null
+        },
+        {
+          "title": "Contest: Results Announcement",
+          "plays": null
+        },
+        {
+          "title": "Contest: Winner",
+          "plays": null
+        },
+        {
+          "title": "Route 228 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Valor Lakefront (Night)",
+          "plays": null
+        },
+        {
+          "title": "Fight Area (Night)",
+          "plays": null
+        },
+        {
+          "title": "Battle Tower",
+          "plays": null
+        },
+        {
+          "title": "Route 225 (Night)",
+          "plays": null
+        },
+        {
+          "title": "Stark Mountain",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Legendary Pokémon)",
+          "plays": null
+        },
+        {
+          "title": "Mystery Gift",
+          "plays": null
+        },
+        {
+          "title": "Pokémon League (Night)",
+          "plays": null
+        },
+        {
+          "title": "Decisive Battle! (Pokémon League)",
+          "plays": null
+        },
+        {
+          "title": "The Elite Four Appear!",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Elite Four)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Elite Four)",
+          "plays": null
+        },
+        {
+          "title": "Champion Cynthia",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Champion)",
+          "plays": null
+        },
+        {
+          "title": "Victory! (Champion)",
+          "plays": null
+        },
+        {
+          "title": "Hall of Fame",
+          "plays": null
+        },
+        {
+          "title": "Congratulations on Entering the Hall of Fame!",
+          "plays": null
+        },
+        {
+          "title": "Ending Theme",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Giratina)",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Arceus)",
+          "plays": null
+        },
+        {
+          "title": "Ramanas Park?",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Raikou/Entei/Suicune)",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Articuno/Zapdos/Moltres)",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Wild Pokémon) (alt.)",
+          "plays": null
+        },
+        {
+          "title": "Unknown Track",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Trainer Battle) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Rival) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Gym Leader) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Team Galactic) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Team Galactic Commander) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Team Galactic Boss) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Dialga/Palkia) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Azelf/Mesprit/Uxie) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Legendary Pokémon) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Elite Four) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Champion) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Ending Theme [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Giratina) [Ver 1.0]",
+          "plays": null
+        },
+        {
+          "title": "Battle! (Arceus) [Ver 1.0]",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pokémon-legends-z-a",
@@ -119417,7 +125379,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ui5.jpg",
       "notable": true,
       "company": "Konami Computer Entertainment Japan",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "yu-gi-oh-duel-links",
@@ -119482,7 +125445,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co86z6.jpg",
       "notable": true,
       "company": "Other Ocean Interactive",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "yu-gi-oh-gx-tag-force",
@@ -119591,7 +125555,185 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ndu.jpg",
       "notable": true,
       "company": "Nintendo Entertainment Analysis & Development",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Game Demo",
+          "plays": null
+        },
+        {
+          "title": "Opening Title",
+          "plays": null
+        },
+        {
+          "title": "Game Select",
+          "plays": null
+        },
+        {
+          "title": "Circuit",
+          "plays": null
+        },
+        {
+          "title": "Circuit (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Peach Beach & Daisy Cruiser",
+          "plays": null
+        },
+        {
+          "title": "Peach Beach & Daisy Cruiser (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Baby Park",
+          "plays": null
+        },
+        {
+          "title": "Baby Park (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Dry Desert",
+          "plays": null
+        },
+        {
+          "title": "Dry Desert (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Mushroom Bridge & Mushroom City",
+          "plays": null
+        },
+        {
+          "title": "Mushroom Bridge & Mushroom City (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Waluigi Stadium & Wario Colosseum",
+          "plays": null
+        },
+        {
+          "title": "Waluigi Stadium & Wario Colosseum (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Sherbet Land",
+          "plays": null
+        },
+        {
+          "title": "Sherbet Land (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "DK Mountain & Dino Dino Jungle",
+          "plays": null
+        },
+        {
+          "title": "DK Mountain & Dino Dino Jungle (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Koopa Castle",
+          "plays": null
+        },
+        {
+          "title": "Koopa Castle (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Rainbow Road",
+          "plays": null
+        },
+        {
+          "title": "Rainbow Road (Final Lap)",
+          "plays": null
+        },
+        {
+          "title": "Battle Stage",
+          "plays": null
+        },
+        {
+          "title": "Battle Stage (Shine Crown)",
+          "plays": null
+        },
+        {
+          "title": "Battle Stage (Tilting Mario)",
+          "plays": null
+        },
+        {
+          "title": "Result (1st Place ~ 3rd Place)",
+          "plays": null
+        },
+        {
+          "title": "Result (4th Place ~ 8th Place)",
+          "plays": null
+        },
+        {
+          "title": "Result (Battle)",
+          "plays": null
+        },
+        {
+          "title": "Star Invincibility",
+          "plays": null
+        },
+        {
+          "title": "Wanwan",
+          "plays": null
+        },
+        {
+          "title": "Commendation Ceremony",
+          "plays": null
+        },
+        {
+          "title": "Secret Element",
+          "plays": null
+        },
+        {
+          "title": "Staff Credits",
+          "plays": null
+        },
+        {
+          "title": "Course Fanfare (GP)",
+          "plays": null
+        },
+        {
+          "title": "Course Fanfare (Battle)",
+          "plays": null
+        },
+        {
+          "title": "Start Grid Fanfare (GP)",
+          "plays": null
+        },
+        {
+          "title": "Start Grid Fanfare (TA & VS)",
+          "plays": null
+        },
+        {
+          "title": "Start Grid Fanfare (Battle)",
+          "plays": null
+        },
+        {
+          "title": "Final Lap Fanfare",
+          "plays": null
+        },
+        {
+          "title": "Goal in Fanfare (1st Place)",
+          "plays": null
+        },
+        {
+          "title": "Goal in Fanfare (2nd Place ~ 3rd Place)",
+          "plays": null
+        },
+        {
+          "title": "Goal in Fanfare (4th Place ~ 8th Place)",
+          "plays": null
+        },
+        {
+          "title": "Staff Credits (NTSC Version)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "spyro-the-dragon",
@@ -119612,7 +125754,69 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kmh.jpg",
       "notable": true,
       "company": "Insomniac Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Spyro the Dragon Theme",
+          "plays": null
+        },
+        {
+          "title": "Artisans Homeworld (From \"Spyro the Dragon\")",
+          "plays": null
+        },
+        {
+          "title": "Sunrise Spring (From \"Spyro 3\")",
+          "plays": null
+        },
+        {
+          "title": "Fireworks Factory (From \"Spyro 3\")",
+          "plays": null
+        },
+        {
+          "title": "Ice Cavern (From \"Spyro the Dragon\")",
+          "plays": null
+        },
+        {
+          "title": "Buzz's Dungeon (From \"Spyro 3\")",
+          "plays": null
+        },
+        {
+          "title": "Glimmer (From \"Spyro 2\")",
+          "plays": null
+        },
+        {
+          "title": "Sunny Villa (From \"Spyro 3\")",
+          "plays": null
+        },
+        {
+          "title": "Dark Hollow (From \"Spyro the Dragon\")",
+          "plays": null
+        },
+        {
+          "title": "Autumn Plains (From \"Spyro 2\")",
+          "plays": null
+        },
+        {
+          "title": "Gnasty Gnorc (From \"Spyro the Dragon\")",
+          "plays": null
+        },
+        {
+          "title": "Stone Hill (From \"Spyro the Dragon\")",
+          "plays": null
+        },
+        {
+          "title": "Honey Speedway (From \"Spyro 3\")",
+          "plays": null
+        },
+        {
+          "title": "Magma Cone (From \"Spyro 2\")",
+          "plays": null
+        },
+        {
+          "title": "Town Square (From \"Spyro the Dragon\")",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pac-man",
@@ -119633,7 +125837,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4ulc.jpg",
       "notable": true,
       "company": "Namco",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "spyro-year-of-the-dragon",
@@ -119654,7 +125859,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7t4m.jpg",
       "notable": true,
       "company": "Insomniac Games",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "donkey-kong-64",
@@ -119675,7 +125881,113 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co289i.jpg",
       "notable": true,
       "company": "Rare",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Donkey Kong 64 - Dk Rap",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Menu Screen",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Dk Isle",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Dk Lobby",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Dk's Treehouse",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Dk Barrel",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Candy's Theme",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Cranky's Theme",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Funky's Theme",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - K. Lumsy",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Rambi's Theme",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Wrinkly's Theme",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Bonus Stage",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Lanky Barrel",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Crocodile Isle",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Banana Fairy Island",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Jungle Japes",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Monkey Smash",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Battle Arena",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Creepy Castle",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Snide's Hq",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Pause Menu Status",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Slot Car Race",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Mad Maze Maul",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Troff 'N' Scoff's Room",
+          "plays": null
+        },
+        {
+          "title": "Donkey Kong 64 - Ending Credits",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "pikmin",
@@ -119696,7 +126008,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6nqg.jpg",
       "notable": true,
       "company": "Nintendo Entertainment Analysis & Development",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "sly-cooper-and-the-thievius-raccoonus",
@@ -119717,7 +126030,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p0r.jpg",
       "notable": true,
       "company": "Sucker Punch Productions",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "sly-2-band-of-thieves",
@@ -119738,7 +126052,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobcx5.jpg",
       "notable": true,
       "company": "Sucker Punch Productions",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "007-first-light",
@@ -119759,7 +126074,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.jpg",
       "notable": true,
       "company": "IO Interactive",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "007, First Light (Unofficial Soundtrack)",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "star-fox-adventures",
@@ -119780,7 +126101,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1pek.jpg",
       "notable": true,
       "company": "Rare",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "pikmin-2",
@@ -119801,7 +126123,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5y6q.jpg",
       "notable": true,
       "company": "Nintendo Entertainment Analysis & Development",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "sly-3-honor-among-thieves",
@@ -119822,7 +126145,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p0q.jpg",
       "notable": true,
       "company": "Sucker Punch Productions",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "eternal-darkness-sanity-s-requiem",
@@ -119843,7 +126167,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sa8.jpg",
       "notable": true,
       "company": "Silicon Knights",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "sly-cooper-thieves-in-time",
@@ -119864,7 +126189,209 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2rbv.jpg",
       "notable": true,
       "company": "Sanzaru Games",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Thieves in Time",
+          "plays": null
+        },
+        {
+          "title": "Against the Clock",
+          "plays": null
+        },
+        {
+          "title": "Paris by Rooftop",
+          "plays": null
+        },
+        {
+          "title": "I Smell a Rat",
+          "plays": null
+        },
+        {
+          "title": "Whoa Camel, Whoa!",
+          "plays": null
+        },
+        {
+          "title": "Special Delivery",
+          "plays": null
+        },
+        {
+          "title": "Howitzer Hippo",
+          "plays": null
+        },
+        {
+          "title": "Lost and Found",
+          "plays": null
+        },
+        {
+          "title": "Hold On to Your Fez",
+          "plays": null
+        },
+        {
+          "title": "Clan of the Cave Raccoon",
+          "plays": null
+        },
+        {
+          "title": "Penguin Roundup",
+          "plays": null
+        },
+        {
+          "title": "Getting Stronger",
+          "plays": null
+        },
+        {
+          "title": "Here Come the Grizz",
+          "plays": null
+        },
+        {
+          "title": "Hippos on Ice",
+          "plays": null
+        },
+        {
+          "title": "Eye in the Sky",
+          "plays": null
+        },
+        {
+          "title": "Tavern Tomfoolery",
+          "plays": null
+        },
+        {
+          "title": "Hard Target",
+          "plays": null
+        },
+        {
+          "title": "Lair of the Moat Monster",
+          "plays": null
+        },
+        {
+          "title": "Juggling Act",
+          "plays": null
+        },
+        {
+          "title": "New Sheriff in Town",
+          "plays": null
+        },
+        {
+          "title": "Go West Young Raccoon",
+          "plays": null
+        },
+        {
+          "title": "Blind Date",
+          "plays": null
+        },
+        {
+          "title": "Follow That Armadillo",
+          "plays": null
+        },
+        {
+          "title": "Riding the Range",
+          "plays": null
+        },
+        {
+          "title": "From East to West",
+          "plays": null
+        },
+        {
+          "title": "Turning Japanese",
+          "plays": null
+        },
+        {
+          "title": "Towering Inferno",
+          "plays": null
+        },
+        {
+          "title": "Sly Samurai",
+          "plays": null
+        },
+        {
+          "title": "There's Something about Murray",
+          "plays": null
+        },
+        {
+          "title": "Bridge Battle",
+          "plays": null
+        },
+        {
+          "title": "Rescue Rioichi",
+          "plays": null
+        },
+        {
+          "title": "Ms. D's Musical Offerings",
+          "plays": null
+        },
+        {
+          "title": "Lovely Night for a Sword Fight",
+          "plays": null
+        },
+        {
+          "title": "Enter El Jefe",
+          "plays": null
+        },
+        {
+          "title": "Samurai Swing",
+          "plays": null
+        },
+        {
+          "title": "Into the West",
+          "plays": null
+        },
+        {
+          "title": "Armadillo Hunting",
+          "plays": null
+        },
+        {
+          "title": "Timenapped",
+          "plays": null
+        },
+        {
+          "title": "Breakout",
+          "plays": null
+        },
+        {
+          "title": "Forty Thieves",
+          "plays": null
+        },
+        {
+          "title": "Fox Trot",
+          "plays": null
+        },
+        {
+          "title": "Ms. Decibel",
+          "plays": null
+        },
+        {
+          "title": "Taxi Shop",
+          "plays": null
+        },
+        {
+          "title": "Stop That Blimp",
+          "plays": null
+        },
+        {
+          "title": "Ms. Decibel Comes to Town",
+          "plays": null
+        },
+        {
+          "title": "Ms. D's Last Stand",
+          "plays": null
+        },
+        {
+          "title": "Meet Sir Galeth",
+          "plays": null
+        },
+        {
+          "title": "Merry Olde England",
+          "plays": null
+        },
+        {
+          "title": "Of Mice and Mechs",
+          "plays": null
+        },
+        {
+          "title": "Paradox Defeated",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "f-zero-gx",
@@ -119885,7 +126412,113 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co525x.jpg",
       "notable": true,
       "company": "Amusement Vision",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "course_view_ac",
+          "plays": null
+        },
+        {
+          "title": "forest",
+          "plays": null
+        },
+        {
+          "title": "forest_b",
+          "plays": null
+        },
+        {
+          "title": "hyosho_ac",
+          "plays": null
+        },
+        {
+          "title": "interview",
+          "plays": null
+        },
+        {
+          "title": "lightning",
+          "plays": null
+        },
+        {
+          "title": "lightning_b",
+          "plays": null
+        },
+        {
+          "title": "meteor",
+          "plays": null
+        },
+        {
+          "title": "meteor_b",
+          "plays": null
+        },
+        {
+          "title": "mutecity",
+          "plays": null
+        },
+        {
+          "title": "mutecity_b",
+          "plays": null
+        },
+        {
+          "title": "openflag",
+          "plays": null
+        },
+        {
+          "title": "ptown",
+          "plays": null
+        },
+        {
+          "title": "ptown_b",
+          "plays": null
+        },
+        {
+          "title": "retire",
+          "plays": null
+        },
+        {
+          "title": "selector",
+          "plays": null
+        },
+        {
+          "title": "tower",
+          "plays": null
+        },
+        {
+          "title": "tower_b",
+          "plays": null
+        },
+        {
+          "title": "tutorial",
+          "plays": null
+        },
+        {
+          "title": "adv_ac",
+          "plays": null
+        },
+        {
+          "title": "cardcheck",
+          "plays": null
+        },
+        {
+          "title": "point",
+          "plays": null
+        },
+        {
+          "title": "garage",
+          "plays": null
+        },
+        {
+          "title": "bblue",
+          "plays": null
+        },
+        {
+          "title": "secret_mc",
+          "plays": null
+        },
+        {
+          "title": "goal",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "luigi-s-mansion",
@@ -119906,7 +126539,13 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8pr.jpg",
       "notable": true,
       "company": "Grezzo",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Luigi's Mansion",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "nintendogs-labrador-friends",
@@ -119927,7 +126566,8 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2xw2.jpg",
       "notable": true,
       "company": "Nintendo",
-      "console": true
+      "console": true,
+      "tracks": []
     },
     {
       "id": "spyro-2-ripto-s-rage",
@@ -119948,7 +126588,161 @@
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob92k.jpg",
       "notable": true,
       "company": "Toys for Bob",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Title Screen / Glimmer",
+          "plays": null
+        },
+        {
+          "title": "Summer Forest",
+          "plays": null
+        },
+        {
+          "title": "Idol Springs / Fracture Hills",
+          "plays": null
+        },
+        {
+          "title": "Idol Springs: Rain Dance",
+          "plays": null
+        },
+        {
+          "title": "Colossus",
+          "plays": null
+        },
+        {
+          "title": "Colossus: Hockey Match",
+          "plays": null
+        },
+        {
+          "title": "Hurricos",
+          "plays": null
+        },
+        {
+          "title": "Sunny Beach",
+          "plays": null
+        },
+        {
+          "title": "Aquaria Towers",
+          "plays": null
+        },
+        {
+          "title": "Ocean Speedway",
+          "plays": null
+        },
+        {
+          "title": "Crush's Dungeon",
+          "plays": null
+        },
+        {
+          "title": "Autumn Plains",
+          "plays": null
+        },
+        {
+          "title": "Skelos Badlands",
+          "plays": null
+        },
+        {
+          "title": "Skelos Badlands: Lava Lizards I",
+          "plays": null
+        },
+        {
+          "title": "Skelos Badlands: Lava Lizards II",
+          "plays": null
+        },
+        {
+          "title": "Skelos Badlands: The Bone Dance",
+          "plays": null
+        },
+        {
+          "title": "Crystal Glacier: Intro & Outro Cutscene",
+          "plays": null
+        },
+        {
+          "title": "Crystal Glacier",
+          "plays": null
+        },
+        {
+          "title": "Breeze Harbour",
+          "plays": null
+        },
+        {
+          "title": "Breeze Harbour: Trolley",
+          "plays": null
+        },
+        {
+          "title": "Zephyr",
+          "plays": null
+        },
+        {
+          "title": "Scorch",
+          "plays": null
+        },
+        {
+          "title": "Fracture Hills: The Satyr's Tune",
+          "plays": null
+        },
+        {
+          "title": "Magma Cone",
+          "plays": null
+        },
+        {
+          "title": "Magma Cone: Crystal Popcorn",
+          "plays": null
+        },
+        {
+          "title": "Shady Oasis",
+          "plays": null
+        },
+        {
+          "title": "Metro Speedway",
+          "plays": null
+        },
+        {
+          "title": "Icy Speedway",
+          "plays": null
+        },
+        {
+          "title": "Gulp's Overlook",
+          "plays": null
+        },
+        {
+          "title": "Winter Tundra",
+          "plays": null
+        },
+        {
+          "title": "Mystic Marsh",
+          "plays": null
+        },
+        {
+          "title": "Cloud Temples",
+          "plays": null
+        },
+        {
+          "title": "Cloud Temples: Agent Zero",
+          "plays": null
+        },
+        {
+          "title": "Robotica Farms",
+          "plays": null
+        },
+        {
+          "title": "Metropolis",
+          "plays": null
+        },
+        {
+          "title": "Canyon Speedway",
+          "plays": null
+        },
+        {
+          "title": "Ripto's Arena",
+          "plays": null
+        },
+        {
+          "title": "Dragon Shores",
+          "plays": null
+        }
+      ]
     },
     {
       "id": "assassin-s-creed-2",
@@ -119971,7 +126765,184 @@
       "art": "https://yt3.googleusercontent.com/Y8up3ZftDmJP6GLZpGROev5hivf6sUx-VVUViC_FcxyYwEWIQClgBIO0vMWv4Riov7DWu6hySa9oPN1J=w544-h544-l90-rj",
       "notable": true,
       "company": "Ubisoft Montreal",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Earth",
+          "plays": "7.3M plays",
+          "videoId": "dXmaNjuwdd8"
+        },
+        {
+          "title": "Venice Rooftops",
+          "plays": "10M plays",
+          "videoId": "X9geXVAOFDg"
+        },
+        {
+          "title": "Ezio's Family",
+          "plays": "76M plays",
+          "videoId": "FSVHx23ByhM"
+        },
+        {
+          "title": "Florence Tarantella",
+          "plays": "1.5M plays",
+          "videoId": "VeS7PxGeJJI"
+        },
+        {
+          "title": "Home In Florence",
+          "plays": "3.6M plays",
+          "videoId": "ztTjQB89v6U"
+        },
+        {
+          "title": "Approaching Target 1",
+          "plays": "934K plays",
+          "videoId": "vJuzv8aMzBU"
+        },
+        {
+          "title": "Approaching Target 2",
+          "plays": "936K plays",
+          "videoId": "r4E4dbhyn08"
+        },
+        {
+          "title": "Venice Fight",
+          "plays": "1M plays",
+          "videoId": "zQHAe3jt36I"
+        },
+        {
+          "title": "Florence Escape",
+          "plays": "633K plays",
+          "videoId": "q7F9ZAN0W-U"
+        },
+        {
+          "title": "Tour of Venice",
+          "plays": "2.2M plays",
+          "videoId": "uPY5uu4SntI"
+        },
+        {
+          "title": "Flight Over Venice 1",
+          "plays": "1.8M plays",
+          "videoId": "A0L4gvq-8f0"
+        },
+        {
+          "title": "Back In Venice",
+          "plays": "646K plays",
+          "videoId": "pOIBF-eIUEQ"
+        },
+        {
+          "title": "Dreams of Venice",
+          "plays": "3.8M plays",
+          "videoId": "2UVi5Pzjjs0"
+        },
+        {
+          "title": "Home of the Brotherhood",
+          "plays": "1M plays",
+          "videoId": "Hk3LniOvkU0"
+        },
+        {
+          "title": "Leonardo's Inventions, Pt. 1",
+          "plays": "1.1M plays",
+          "videoId": "CSYp33F_0Ss"
+        },
+        {
+          "title": "Venice Combat Low",
+          "plays": "828K plays",
+          "videoId": "qwHHX1Du8U8"
+        },
+        {
+          "title": "Venice Escape",
+          "plays": "1.5M plays",
+          "videoId": "X2QjMpTdkQE"
+        },
+        {
+          "title": "Darkness Falls In Florence",
+          "plays": "586K plays",
+          "videoId": "T9DX00yKnP0"
+        },
+        {
+          "title": "Sanctuary",
+          "plays": "1.4M plays",
+          "videoId": "dBYK2IvSNSM"
+        },
+        {
+          "title": "The Madam",
+          "plays": "636K plays",
+          "videoId": "bwjh4UQ2Wwc"
+        },
+        {
+          "title": "Approaching Target 3",
+          "plays": "466K plays",
+          "videoId": "NipZFlauZ8E"
+        },
+        {
+          "title": "Flight Over Venice 2",
+          "plays": "1M plays",
+          "videoId": "zhjyS_tgB7A"
+        },
+        {
+          "title": "Ezio In Florence",
+          "plays": "757K plays",
+          "videoId": "uC-KitQ9gpI"
+        },
+        {
+          "title": "Venice Industry",
+          "plays": "401K plays",
+          "videoId": "C-_G0gysPwA"
+        },
+        {
+          "title": "Stealth",
+          "plays": "317K plays",
+          "videoId": "fXXopuGFOXY"
+        },
+        {
+          "title": "Venice Combat",
+          "plays": "719K plays",
+          "videoId": "-51_oLom9xE"
+        },
+        {
+          "title": "Notorious",
+          "plays": "482K plays",
+          "videoId": "dg6RjgjS-qQ"
+        },
+        {
+          "title": "Night Mission In Venice",
+          "plays": "565K plays",
+          "videoId": "YuyAdaMCmYk"
+        },
+        {
+          "title": "Chariot Chase",
+          "plays": "593K plays",
+          "videoId": "ut6zu53-d3U"
+        },
+        {
+          "title": "The Plague",
+          "plays": "669K plays",
+          "videoId": "SBkblz-0XKE"
+        },
+        {
+          "title": "Wetlands Combat",
+          "plays": "470K plays",
+          "videoId": "JU2xgyZdC2Q"
+        },
+        {
+          "title": "Wetlands Escape",
+          "plays": "683K plays",
+          "videoId": "BKttd9ztJjI"
+        },
+        {
+          "title": "Leonardo's Inventions, Pt. 2",
+          "plays": "722K plays",
+          "videoId": "3xvMKl_IvN4"
+        },
+        {
+          "title": "Hideout",
+          "plays": "495K plays",
+          "videoId": "HoY1cYJ9-0A"
+        },
+        {
+          "title": "The Animus 2.0",
+          "plays": "441K plays",
+          "videoId": "DBT-3TMtdRQ"
+        }
+      ]
     },
     {
       "id": "baldur-s-gate-3",
@@ -119994,7 +126965,224 @@
       "art": "https://yt3.googleusercontent.com/iUWDTMOHd2otGEJ8bnuykgWO61nbcZ8aXvcV-SFnQhbafCRlG1BGNzjsVnLeZcAPxsG87_DCJg_8k40=w544-h544-l90-rj",
       "notable": true,
       "company": "Larian Studios",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Main Theme, Pt. 1",
+          "plays": "3.9M plays",
+          "videoId": "Vofkw9-O18c"
+        },
+        {
+          "title": "Main Theme, Pt. 2",
+          "plays": "2.2M plays",
+          "videoId": "oO-beVzki9E"
+        },
+        {
+          "title": "Mind Flayer Theme",
+          "plays": "1.5M plays",
+          "videoId": "ErSwDczBYD0"
+        },
+        {
+          "title": "Who Are You",
+          "plays": "1.8M plays",
+          "videoId": "tzjrm0lWsqE"
+        },
+        {
+          "title": "Nine Blades",
+          "plays": "2.8M plays",
+          "videoId": "OMeK3A1Fo6U"
+        },
+        {
+          "title": "Quest for a Cure",
+          "plays": "1.2M plays",
+          "videoId": "Yr06dRFfMr4"
+        },
+        {
+          "title": "Lead Your Fights",
+          "plays": "1.1M plays",
+          "videoId": "4-jpQe__e5s"
+        },
+        {
+          "title": "Harpy Song",
+          "plays": "530K plays",
+          "videoId": "V1OINK2Lzdc"
+        },
+        {
+          "title": "Weeping Dawn",
+          "plays": "4.4M plays",
+          "videoId": "WEt3pbOP3M4"
+        },
+        {
+          "title": "Cunning Cruel Crits",
+          "plays": "1.2M plays",
+          "videoId": "0hD5tVkikXs"
+        },
+        {
+          "title": "The Cult of the Absolute",
+          "plays": "797K plays",
+          "videoId": "ajl7q4WkYAw"
+        },
+        {
+          "title": "Sixteen Strikes",
+          "plays": "1.9M plays",
+          "videoId": "5kJkAoaW634"
+        },
+        {
+          "title": "The Colors of Underdark",
+          "plays": "824K plays",
+          "videoId": "crC7sEnV1J4"
+        },
+        {
+          "title": "Twisted Force",
+          "plays": "3.8M plays",
+          "videoId": "MW1bBywTExU"
+        },
+        {
+          "title": "Shadows, Curse and Death",
+          "plays": "1M plays",
+          "videoId": "dWTJO5vIpyE"
+        },
+        {
+          "title": "Last Light",
+          "plays": "1.5M plays",
+          "videoId": "eJQJPwQDF-k"
+        },
+        {
+          "title": "Old Time Battles, Pt. 1",
+          "plays": "1M plays",
+          "videoId": "6GSMhFofV_A"
+        },
+        {
+          "title": "I Want to Live (Instrumental Version)",
+          "plays": "2.4M plays",
+          "videoId": "bNWyj6nCs8Q"
+        },
+        {
+          "title": "Nightsong",
+          "plays": "1.3M plays",
+          "videoId": "P8itmPH2jUc"
+        },
+        {
+          "title": "The Power (Choral Version)",
+          "plays": "1.5M plays",
+          "videoId": "0U-wHyT1zbM"
+        },
+        {
+          "title": "Old Time Battles (Bard Version)",
+          "plays": "803K plays",
+          "videoId": "Zj8cCfnP_hQ"
+        },
+        {
+          "title": "The Power (Orchestral Version)",
+          "plays": "2.7M plays",
+          "videoId": "f_5aHf3saoY"
+        },
+        {
+          "title": "A Threat from Nether Years",
+          "plays": "1M plays",
+          "videoId": "a-La2eMUozo"
+        },
+        {
+          "title": "Surgery of a Hope",
+          "plays": "712K plays",
+          "videoId": "5TCOtEJD6zk"
+        },
+        {
+          "title": "Last Shelter",
+          "plays": "807K plays",
+          "videoId": "PIfT-FPSfNo"
+        },
+        {
+          "title": "The Odds Are Cast Anew",
+          "plays": "1M plays",
+          "videoId": "1SVK7_nFz_I"
+        },
+        {
+          "title": "Gather Your Allies!",
+          "plays": "903K plays",
+          "videoId": "wvrhhK-ZoyA"
+        },
+        {
+          "title": "Dream Walk (Instrumental Version)",
+          "plays": "1.4M plays",
+          "videoId": "az_Gdq7qEw0"
+        },
+        {
+          "title": "Bard Dance",
+          "plays": "1.4M plays",
+          "videoId": "wk7xOKXw5wA"
+        },
+        {
+          "title": "Wash My Dreams Away",
+          "plays": "214K plays",
+          "videoId": "fcQhITiWo0Q"
+        },
+        {
+          "title": "Song of Balduran",
+          "plays": "2.8M plays",
+          "videoId": "Iog3XDY1krA"
+        },
+        {
+          "title": "The Legacy of Bhaal",
+          "plays": "2.2M plays",
+          "videoId": "7fE6V4dhGrM"
+        },
+        {
+          "title": "Elder Brain",
+          "plays": "734K plays",
+          "videoId": "HWVRKe1cMCk"
+        },
+        {
+          "title": "Forging the Fate",
+          "plays": "533K plays",
+          "videoId": "jDHBMNP5XFU"
+        },
+        {
+          "title": "The Road to Baldur's Gate",
+          "plays": "164K plays",
+          "videoId": "R6R5AJtjOeU"
+        },
+        {
+          "title": "Raphael's Final Act",
+          "plays": "2M plays",
+          "videoId": "zCDr8-YXhMc"
+        },
+        {
+          "title": "The Grand Design (Requiem)",
+          "plays": "637K plays",
+          "videoId": "qqKscHtqdfw"
+        },
+        {
+          "title": "Old Time Battles, Pt. 2",
+          "plays": "650K plays",
+          "videoId": "GR0XFRvpCKs"
+        },
+        {
+          "title": "Down by the River",
+          "plays": "8.8M plays",
+          "videoId": "H_ETzap9c9g"
+        },
+        {
+          "title": "I Want to Live (Classical Version)",
+          "plays": "1.4M plays",
+          "videoId": "3rrTWbpd8eY"
+        },
+        {
+          "title": "Main Theme, Pt. 3",
+          "plays": "928K plays",
+          "videoId": "KMmpEAop5I0"
+        },
+        {
+          "title": "I Want to Live",
+          "plays": "4.5M plays",
+          "videoId": "-5oVZjtm4YY"
+        },
+        {
+          "title": "The Power (Credits Song)",
+          "plays": "4.1M plays",
+          "videoId": "aWmvVEm5SC8"
+        }
+      ]
     },
     {
       "id": "assassin-s-creed-3",
@@ -120017,7 +127205,134 @@
       "art": "https://yt3.googleusercontent.com/lw1_s-qoFlFDcrPlyxr8jvhwfCaF0QeTNmU_HCWI_ogtjVIHAJj5m-dxSS4s6TwfnLsSa8yZ3LerJheh=w544-h544-l90-rj",
       "notable": true,
       "company": "Ubisoft Montreal",
-      "console": true
+      "console": true,
+      "tracks": [
+        {
+          "title": "Assassin's Creed III Main Theme",
+          "plays": "8.2M plays",
+          "videoId": "ut3sL6NI1BE"
+        },
+        {
+          "title": "An Uncertain Present",
+          "plays": "840K plays",
+          "videoId": "nwYPJPRLk9w"
+        },
+        {
+          "title": "Escape in Style",
+          "plays": "545K plays",
+          "videoId": "Lp0gkNLDoYc"
+        },
+        {
+          "title": "Welcome to Boston",
+          "plays": "683K plays",
+          "videoId": "7o67CTanzdk"
+        },
+        {
+          "title": "Freedom Fighter",
+          "plays": "925K plays",
+          "videoId": "ZjOUoG-n2Uo"
+        },
+        {
+          "title": "A Bitter Truth",
+          "plays": "602K plays",
+          "videoId": "6XzC-k6jh60"
+        },
+        {
+          "title": "Through the Frontier",
+          "plays": "766K plays",
+          "videoId": "t1Zy-ebO0cc"
+        },
+        {
+          "title": "Connor's Life",
+          "plays": "1.3M plays",
+          "videoId": "XhN09MNVr9o"
+        },
+        {
+          "title": "Trouble in Town",
+          "plays": "4.1M plays",
+          "videoId": "sJuPhc4WCHg"
+        },
+        {
+          "title": "Farewell",
+          "plays": "386K plays",
+          "videoId": "xWm83lfAypY"
+        },
+        {
+          "title": "HomeStead",
+          "plays": "588K plays",
+          "videoId": "4Ji4eKEgmnk"
+        },
+        {
+          "title": "The Battle of Breed's Hill",
+          "plays": "366K plays",
+          "videoId": "UJPN6sHXt6E"
+        },
+        {
+          "title": "Speck of Dust",
+          "plays": "252K plays",
+          "videoId": "iznQwMgAgPk"
+        },
+        {
+          "title": "Modern Assassin",
+          "plays": "1.1M plays",
+          "videoId": "ge2q63_avms"
+        },
+        {
+          "title": "Desmond's Destiny",
+          "plays": "413K plays",
+          "videoId": "WlLh8PvXKU8"
+        },
+        {
+          "title": "The Aquila",
+          "plays": "307K plays",
+          "videoId": "IQBN0c-anUQ"
+        },
+        {
+          "title": "Fight Club",
+          "plays": "4.1M plays",
+          "videoId": "FK7CvSk9KTs"
+        },
+        {
+          "title": "Eye of the Storm",
+          "plays": "367K plays",
+          "videoId": "tFsTPB5Os_Y"
+        },
+        {
+          "title": "Temple Secrets",
+          "plays": "417K plays",
+          "videoId": "bDKTzyJWf6w"
+        },
+        {
+          "title": "Beer and Friends",
+          "plays": "424K plays",
+          "videoId": "qMA5uFgELAM"
+        },
+        {
+          "title": "Battle at Sea",
+          "plays": "266K plays",
+          "videoId": "uUARM8XUoKI"
+        },
+        {
+          "title": "Breaching the Walls",
+          "plays": "231K plays",
+          "videoId": "F5VtzYfJehI"
+        },
+        {
+          "title": "Wild Instincts",
+          "plays": "377K plays",
+          "videoId": "8jlGJZoS8iU"
+        },
+        {
+          "title": "What Came Before",
+          "plays": "510K plays",
+          "videoId": "kmPGxyvKJoY"
+        },
+        {
+          "title": "Assassin's Creed III Main Theme Variation",
+          "plays": "988K plays",
+          "videoId": "LRfolG9PA9w"
+        }
+      ]
     }
   ]
 }
