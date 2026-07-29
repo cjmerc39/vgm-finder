@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T05:56:18Z",
+  "updatedAt": "2026-07-29T11:58:44Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -2203,7 +2203,9 @@
           "videoId": "iBTvq7OZUNQ"
         }
       ],
-      "ytmPlaylistId": "OLAK5uy_lLlFeL11IeYL4inTlIy1co9V8ASbFiM5I"
+      "ytmPlaylistId": "OLAK5uy_lLlFeL11IeYL4inTlIy1co9V8ASbFiM5I",
+      "albumTitle": "Fading Echo (Original Soundtrack)",
+      "company": "New Tales"
     },
     {
       "id": "scarlet-deer-inn",
@@ -2315,7 +2317,9 @@
           "videoId": "YyS2NP9vkns"
         }
       ],
-      "ytmPlaylistId": "OLAK5uy_mq5CVwEg1REr2_0O2lpw4AP0tNyODFIr4"
+      "ytmPlaylistId": "OLAK5uy_mq5CVwEg1REr2_0O2lpw4AP0tNyODFIr4",
+      "albumTitle": "Scarlet Deer Inn (Original Game Soundtrack)",
+      "company": "Attu Games"
     },
     {
       "id": "clair-obscur-expedition-33-nos-vies-en-lumière-bonus-edition",
@@ -246264,6 +246268,296 @@
         }
       ],
       "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
+    },
+    {
+      "id": "归拾-philodeka",
+      "title": "归拾 (PhiloDeka) Soundtrack",
+      "game": "归拾 (PhiloDeka)",
+      "composers": [],
+      "date": "2026-07-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4698460/_PhiloDeka_Soundtrack/",
+          "seenAt": "2026-07-29T11:58:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E5%BD%92%E6%8B%BE+%28PhiloDeka%29+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4698460/088b484449959f84ebe36959073441dca6a528d5/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "sunrise",
+      "title": "Sunrise Soundtrack",
+      "game": "Sunrise",
+      "composers": [],
+      "date": "2026-07-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4463410/Sunrise_Soundtrack/",
+          "seenAt": "2026-07-29T11:58:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sunrise+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4463410/3ae5416f74aa471a1f002a5247493afb456f8e06/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "A Quiet Space",
+          "plays": null
+        },
+        {
+          "title": "Light and Bright",
+          "plays": null
+        },
+        {
+          "title": "Behind the Clouds",
+          "plays": null
+        },
+        {
+          "title": "Sunrise Soundtrack",
+          "plays": null
+        },
+        {
+          "title": "Ethereal Morning",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "lunarium",
+      "title": "Lunarium Official Soundtrack",
+      "game": "Lunarium",
+      "composers": [],
+      "date": "2026-07-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4890220/Lunarium_Official_Soundtrack/",
+          "seenAt": "2026-07-29T11:58:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lunarium+Official+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4890220/b585ca8c7c408208636965d97cf6392f6cdc5d88/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Prologue - Lunarium",
+          "plays": null
+        },
+        {
+          "title": "Stella Breeze",
+          "plays": null
+        },
+        {
+          "title": "Monster",
+          "plays": null
+        },
+        {
+          "title": "Ripple Effect",
+          "plays": null
+        },
+        {
+          "title": "Utsukushiki Sentiment",
+          "plays": null
+        },
+        {
+          "title": "Naked Heart",
+          "plays": null
+        },
+        {
+          "title": "Purple Love (Solo Version)",
+          "plays": null
+        },
+        {
+          "title": "Sweet Fantasy",
+          "plays": null
+        },
+        {
+          "title": "Fly Me to the Moon",
+          "plays": null
+        },
+        {
+          "title": "Junshin Crisis",
+          "plays": null
+        },
+        {
+          "title": "SXW - Soul World",
+          "plays": null
+        },
+        {
+          "title": "Reason",
+          "plays": null
+        },
+        {
+          "title": "Windia (Lunarium Version)",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "rubinite",
+      "title": "Rubinite Soundtrack",
+      "game": "Rubinite",
+      "composers": [
+        "Album"
+      ],
+      "date": "2026-07-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/rubinite",
+          "seenAt": "2026-07-29T11:58:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rubinite+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KMZUqELTCxY",
+      "art": "https://yt3.googleusercontent.com/qexp5FRrbUGwv0G45lrYMpuXJTR21ccTdY00_-PEAGfN4WnUbcLOSja1hEdvcdluYZ_CFz8OiH41S6R5Cg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Rubinite (Original Video Game Soundtrack)",
+      "company": "Cup Dog Games",
+      "console": false,
+      "genres": [
+        "Role-playing (RPG)",
+        "Indie"
+      ],
+      "tracks": [
+        {
+          "title": "Rubinite (Main Theme)",
+          "plays": "843 plays",
+          "videoId": "vPlSIiVzDhg"
+        },
+        {
+          "title": "The Beast",
+          "plays": "80 plays",
+          "videoId": "9PIyJbHEiT0"
+        },
+        {
+          "title": "The Guardian",
+          "plays": "249 plays",
+          "videoId": "OQoSfULxAHE"
+        },
+        {
+          "title": "Gravekeeper",
+          "plays": "96 plays",
+          "videoId": "xd4gfoAQcvQ"
+        },
+        {
+          "title": "Plaguebearer",
+          "plays": "91 plays",
+          "videoId": "oBaXEQs3MOc"
+        },
+        {
+          "title": "Dual Cultists",
+          "plays": "123 plays",
+          "videoId": "osmcDH76OTE"
+        },
+        {
+          "title": "Martyred Angel",
+          "plays": "79 plays",
+          "videoId": "yC4MnlDtYLY"
+        },
+        {
+          "title": "Ghost",
+          "plays": "109 plays",
+          "videoId": "_D7ITszDY1c"
+        },
+        {
+          "title": "The Red-Eyed Tree",
+          "plays": "125 plays",
+          "videoId": "6j4SSnHoEWo"
+        },
+        {
+          "title": "The Elegant Hunt",
+          "plays": "214 plays",
+          "videoId": "Yfd-2aGZlL0"
+        },
+        {
+          "title": "The Witch",
+          "plays": "162 plays",
+          "videoId": "MJcf8YhBa64"
+        },
+        {
+          "title": "Campfire",
+          "plays": "135 plays",
+          "videoId": "Hhf65PYBEBY"
+        },
+        {
+          "title": "Campfire (Wichiwi)",
+          "plays": "56 plays",
+          "videoId": "SkQ4q92VlPk"
+        },
+        {
+          "title": "Chasing Sunbeams",
+          "plays": "77 plays",
+          "videoId": "qK290PhzL2Q"
+        },
+        {
+          "title": "Left Behind",
+          "plays": "60 plays",
+          "videoId": "cSyfBWiCz6U"
+        },
+        {
+          "title": "Mirror Maze",
+          "plays": "56 plays",
+          "videoId": "tIgsQPoFJ0s"
+        },
+        {
+          "title": "Cathedral of Cinders",
+          "plays": "69 plays",
+          "videoId": "Ns0LMG4Took"
+        },
+        {
+          "title": "Ashen Reverie",
+          "plays": "68 plays",
+          "videoId": "2qbVGBdTXBE"
+        },
+        {
+          "title": "Rubinite II",
+          "plays": "98 plays",
+          "videoId": "T2OXyzdw9xo"
+        },
+        {
+          "title": "Rubinite III",
+          "plays": "180 plays",
+          "videoId": "mzT7f16XhMc"
+        },
+        {
+          "title": "The Last Lesson (feat. Carnival)",
+          "plays": "714 plays",
+          "videoId": "qQAq9BmwVmM"
+        },
+        {
+          "title": "Reflection",
+          "plays": "60 plays",
+          "videoId": "e90l8y5S8Y0"
+        },
+        {
+          "title": "Scarlet",
+          "plays": "96 plays",
+          "videoId": "ivmuafCX5AI"
+        },
+        {
+          "title": "Etinibur (Trailer Theme)",
+          "plays": "167 plays",
+          "videoId": "X3hb4xjENPM"
+        },
+        {
+          "title": "Ruby (Ending Theme)",
+          "plays": "581 plays",
+          "videoId": "nvnHsreHvVA"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_l7cIZxHl6Pe-q6GBjr2KE5Q8WzytpfdZs"
     }
   ]
 }
