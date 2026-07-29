@@ -23,8 +23,9 @@
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{height:100%;background:var(--bg);touch-action:manipulation}
-body{background:var(--bg);color:var(--ink);font:15px/1.45 var(--sans);height:100%;display:flex;flex-direction:column;overflow:hidden}
+/* locked horizontally; touch-action kills double-tap zoom while pinch still works */
+html{height:100%;background:var(--bg);touch-action:manipulation;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 var(--sans);height:100%;display:flex;flex-direction:column;overflow:hidden;touch-action:manipulation}
 @supports (height:100dvh){body{height:100dvh}}
 @media (display-mode: standalone){
   @supports (height:100lvh){body{height:100lvh}}
@@ -39,7 +40,7 @@ input{font:inherit;font-size:16px;color:var(--ink);background:var(--bg3);border:
 input:focus{outline:1px solid var(--amberdim)}
 ::placeholder{color:var(--dim)}
 
-#topbar{flex:none;width:100%;max-width:560px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 16px 4px;display:flex;align-items:baseline;gap:10px}
+#topbar{flex:none;width:100%;max-width:560px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 16px 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 #topbar h1{font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:1px;color:var(--amber2);
   text-shadow:0 0 14px rgba(245,168,60,.35)}
 #topbar .sub{color:var(--dim);font-size:10.5px;letter-spacing:3px;text-transform:uppercase}
@@ -52,7 +53,7 @@ input:focus{outline:1px solid var(--amberdim)}
   border:1px solid var(--line);border-radius:99px;padding:6px 13px}
 #subctl button.on{color:var(--amber2);border-color:var(--amberdim)}
 
-main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 8px 20px}
+main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:0 8px 20px}
 
 .row{display:flex;align-items:stretch;gap:10px;border-bottom:1px solid var(--line);padding:10px 4px 10px 8px;cursor:pointer}
 .row:active{background:var(--bg2)}
@@ -66,7 +67,7 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 .new{font-size:8.5px;font-weight:700;letter-spacing:1.5px;color:var(--bg);background:var(--amber);border-radius:3px;padding:1.5px 5px 1px}
 .rtop time{margin-left:auto;color:var(--dim);font-size:10.5px;letter-spacing:1px;white-space:nowrap}
 .rtitle{margin-top:3px;font-size:15px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
-.rsub{margin-top:2px;color:var(--mut);font-size:12.5px}
+.rsub{margin-top:2px;color:var(--mut);font-size:12.5px;overflow-wrap:anywhere}
 .rnote{margin-top:4px;color:var(--mut);font-size:12.5px;font-style:italic;overflow-wrap:anywhere}
 .rmeta{margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .chip{font-size:10px;letter-spacing:.8px;text-transform:lowercase;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:2px 8px}
@@ -123,7 +124,7 @@ a.xsrc{text-decoration:none}
 
 /* the album page */
 #albumwrap:empty{display:none}
-#album{position:fixed;inset:0;z-index:7;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
+#album{position:fixed;inset:0;z-index:7;background:var(--bg);overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 #album .ahead{position:sticky;top:0;background:rgba(9,11,17,.96);display:flex;align-items:center;
   padding:calc(10px + env(safe-area-inset-top)) 12px 10px;border-bottom:1px solid var(--line);z-index:1}
 #album .aclose{width:44px;height:40px;font-size:18px;color:var(--mut)}
@@ -134,7 +135,7 @@ a.xsrc{text-decoration:none}
 #album .aart img{width:100%;height:100%;object-fit:cover;display:block}
 #album .aart.noart::after{content:'▷';position:absolute;inset:0;display:grid;place-items:center;color:var(--dim);font-size:44px}
 #album .atitle{margin-top:18px;text-align:center;font-size:17px;font-weight:600;overflow-wrap:anywhere}
-#album .asub{margin-top:5px;text-align:center;color:var(--mut);font-size:13px}
+#album .asub{margin-top:5px;text-align:center;color:var(--mut);font-size:13px;overflow-wrap:anywhere}
 #album .ameta{margin-top:3px;text-align:center;color:var(--dim);font-size:11.5px;letter-spacing:.5px}
 #album .alist{margin-top:22px}
 .atrack{display:flex;align-items:baseline;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line);cursor:pointer}
