@@ -235,6 +235,12 @@ def test_gaas_scan_collects_every_qualifying_album():
         {"resultType": "album", "browseId": "MPREb_bad2", "year": "2021",
          "title": "Anime Piano Soundtrack Collection",
          "artists": [{"name": "X"}], "thumbnails": []},
+        {"resultType": "album", "browseId": "MPREb_bad3", "year": "2025",
+         "title": "A Genshin Impact Movie (Original Motion Picture Soundtrack)",
+         "artists": [{"name": "Various Artists"}], "thumbnails": []},
+        {"resultType": "album", "browseId": "MPREb_bad4", "year": "2024",
+         "title": "Our Cool Tales in Genshin Impact Soundtrack",
+         "artists": [{"name": "Various Artists"}], "thumbnails": []},
     ]
     releases = []
     added, merged = collect.gaas_albums(releases, lambda q, limit=5: results, SEEN,

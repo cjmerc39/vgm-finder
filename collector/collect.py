@@ -753,7 +753,9 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
 
 
 # tribute wording that disqualifies an album from a live-service scan
-_GAAS_BLACKLIST = re.compile(r"\b(covers?|tribute|remix(es)?|medley|lullab|lo-?fi|8-?bit|chill)\b", re.IGNORECASE)
+_GAAS_BLACKLIST = re.compile(
+    r"\b(covers?|tribute|remix(es)?|medley|lullab|lo-?fi|8-?bit|chill"
+    r"|movie|motion picture|film|bonus songs)\b", re.IGNORECASE)
 
 
 def gaas_names(path=None):
@@ -795,6 +797,8 @@ def gaas_albums(releases, resolve, seen_at, names=None):
             hit = _hit_from(r)
             if not hit:
                 continue
+            if not hit["composers"] and not re.search(r"original .*soundtrack", title, re.IGNORECASE):
+                continue  # VA with vague naming: fan-compilation territory
             year = str(r.get("year") or "")
             items.append({"title": hit["title"], "game": name, "composers": hit["composers"],
                           "url": hit["url"], "date": f"{year}-01-01" if year.isdigit() else None,
