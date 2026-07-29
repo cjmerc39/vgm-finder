@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T04:39:52Z",
+  "updatedAt": "2026-07-29T04:41:42Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -29909,7 +29909,8 @@
         "Simulator",
         "Strategy",
         "Adventure"
-      ]
+      ],
+      "company": "11 bit studios"
     },
     {
       "id": "sex-on-the-beach-kawaii-cute-girl-vocal",
@@ -65742,7 +65743,9 @@
       "id": "rocket-league",
       "title": "Rocket League Soundtrack",
       "game": "Rocket League",
-      "composers": [],
+      "composers": [
+        "The League Esports & JP PROD"
+      ],
       "date": "2015-07-06",
       "sources": [
         {
@@ -65753,58 +65756,50 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Rocket+League+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_anXYJhhNSaT",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocdio.jpg",
       "notable": true,
       "company": "Psyonix",
       "console": true,
-      "tracks": [
-        {
-          "title": "Dreams",
-          "plays": null
-        },
-        {
-          "title": "Water Resistant (feat. 8485)",
-          "plays": null
-        },
-        {
-          "title": "Control Me",
-          "plays": null
-        },
-        {
-          "title": "Fading Wind",
-          "plays": null
-        },
-        {
-          "title": "That Look",
-          "plays": null
-        },
-        {
-          "title": "Light Up",
-          "plays": null
-        },
-        {
-          "title": "Mermaid",
-          "plays": null
-        },
-        {
-          "title": "There and Back",
-          "plays": null
-        },
-        {
-          "title": "Have Fun",
-          "plays": null
-        },
-        {
-          "title": "Made 4 This",
-          "plays": null
-        }
-      ],
       "genres": [
         "Racing",
         "Sport",
         "Indie"
-      ]
+      ],
+      "albumTitle": "Rocket League, Vol. 1 (Original Game Soundtrack)",
+      "tracks": [
+        {
+          "title": "Blastoff",
+          "plays": "1.3K plays",
+          "videoId": "9ZqaskihWj8"
+        },
+        {
+          "title": "Cosmos",
+          "plays": "699 plays",
+          "videoId": "ManpzaUi4pw"
+        },
+        {
+          "title": "Jupiter",
+          "plays": "579 plays",
+          "videoId": "M0gwZ9n1Oco"
+        },
+        {
+          "title": "Nebula",
+          "plays": "930 plays",
+          "videoId": "hlbCjWjqMfc"
+        },
+        {
+          "title": "Galactic Love",
+          "plays": "930 plays",
+          "videoId": "ZYVTm-_RKtg"
+        },
+        {
+          "title": "A New World",
+          "plays": "460 plays",
+          "videoId": "zkVy_2dIxgk"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kFM-6PW5K3CX7LVDtIaxFoMk2FqSv0CB8"
     },
     {
       "id": "the-wolf-among-us",
@@ -85575,181 +85570,223 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Wolfenstein+II%3A+The+New+Colossus+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_J7gmXvanSoZ",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co21c5.jpg",
       "notable": true,
       "company": "MachineGames",
       "console": true,
-      "tracks": [
-        {
-          "title": "Blitzmensch!",
-          "plays": null
-        },
-        {
-          "title": "The Executioner",
-          "plays": null
-        },
-        {
-          "title": "The New Colossus",
-          "plays": null
-        },
-        {
-          "title": "Commander of the Ausmerzer",
-          "plays": null
-        },
-        {
-          "title": "Reich Between the Eyes",
-          "plays": null
-        },
-        {
-          "title": "Oh, Caroline",
-          "plays": null
-        },
-        {
-          "title": "Nuked Manhattan",
-          "plays": null
-        },
-        {
-          "title": "Der Zitadelle",
-          "plays": null
-        },
-        {
-          "title": "Amazing Grace",
-          "plays": null
-        },
-        {
-          "title": "Right Trigger Warning",
-          "plays": null
-        },
-        {
-          "title": "Hatching the Plan",
-          "plays": null
-        },
-        {
-          "title": "Strawberry Milkshake",
-          "plays": null
-        },
-        {
-          "title": "Space Aliens",
-          "plays": null
-        },
-        {
-          "title": "Rocket Trains and Lizard Faces",
-          "plays": null
-        },
-        {
-          "title": "Blazko Kill the Nazis",
-          "plays": null
-        },
-        {
-          "title": "On Fire",
-          "plays": null
-        },
-        {
-          "title": "Die Glocke",
-          "plays": null
-        },
-        {
-          "title": "Area 52",
-          "plays": null
-        },
-        {
-          "title": "Mesquite, Texas",
-          "plays": null
-        },
-        {
-          "title": "Frau Engel",
-          "plays": null
-        },
-        {
-          "title": "Deteriation",
-          "plays": null
-        },
-        {
-          "title": "Zofia",
-          "plays": null
-        },
-        {
-          "title": "Twins",
-          "plays": null
-        },
-        {
-          "title": "The Kreisau Circle",
-          "plays": null
-        },
-        {
-          "title": "New Orleans Burning",
-          "plays": null
-        },
-        {
-          "title": "Muddy Waters",
-          "plays": null
-        },
-        {
-          "title": "Terror-Billy's Gonna Getcha",
-          "plays": null
-        },
-        {
-          "title": "Horton Hears a Revolution",
-          "plays": null
-        },
-        {
-          "title": "Nazi Punks, Gtfo",
-          "plays": null
-        },
-        {
-          "title": "Anya",
-          "plays": null
-        },
-        {
-          "title": "Gettin' Ready",
-          "plays": null
-        },
-        {
-          "title": "...And Other Things",
-          "plays": null
-        },
-        {
-          "title": "Lontano",
-          "plays": null
-        },
-        {
-          "title": "Like a Walrus",
-          "plays": null
-        },
-        {
-          "title": "Venus",
-          "plays": null
-        },
-        {
-          "title": "Sehnsucht",
-          "plays": null
-        },
-        {
-          "title": "V-A-L-H-A-L-L-A",
-          "plays": null
-        },
-        {
-          "title": "Surprise! (Get Them Before They Get You)",
-          "plays": null
-        },
-        {
-          "title": "Sunset for Humanity",
-          "plays": null
-        },
-        {
-          "title": "Der Zerstörer",
-          "plays": null
-        },
-        {
-          "title": "Change over Day",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Blitzmensch!",
+          "plays": "99K plays",
+          "videoId": "t7V7NP1eSt8"
+        },
+        {
+          "title": "The Executioner",
+          "plays": "36K plays",
+          "videoId": "uHKVSpHra1A"
+        },
+        {
+          "title": "The New Colossus",
+          "plays": "687K plays",
+          "videoId": "Y3FjUMZLHoE"
+        },
+        {
+          "title": "Commander of the Ausmerzer",
+          "plays": "36K plays",
+          "videoId": "6A2GLe21jkI"
+        },
+        {
+          "title": "Reich Between the Eyes",
+          "plays": "721K plays",
+          "videoId": "sj5LYhwvHqw"
+        },
+        {
+          "title": "Oh, Caroline",
+          "plays": "38K plays",
+          "videoId": "2ZtZX6sFyRk"
+        },
+        {
+          "title": "Nuked Manhattan",
+          "plays": "29K plays",
+          "videoId": "Vh-DEUCL8GQ"
+        },
+        {
+          "title": "Der Zitadelle",
+          "plays": "318K plays",
+          "videoId": "u_aGv5rR_CQ"
+        },
+        {
+          "title": "Amazing Grace",
+          "plays": "81K plays",
+          "videoId": "nfjjh6MvWzo"
+        },
+        {
+          "title": "Right Trigger Warning",
+          "plays": "1.6M plays",
+          "videoId": "eckQndnC_dg"
+        },
+        {
+          "title": "Hatching the Plan",
+          "plays": "64K plays",
+          "videoId": "iLvv120SMZo"
+        },
+        {
+          "title": "Strawberry Milkshake",
+          "plays": "15K plays",
+          "videoId": "gCg56_t1IJI"
+        },
+        {
+          "title": "Space Aliens",
+          "plays": "16K plays",
+          "videoId": "Pd03aVkm6kE"
+        },
+        {
+          "title": "Rocket Trains and Lizard Faces",
+          "plays": "26K plays",
+          "videoId": "CL5C1Si9uZ4"
+        },
+        {
+          "title": "Blazko Kill the Nazis",
+          "plays": "474K plays",
+          "videoId": "CCctz4jzQS4"
+        },
+        {
+          "title": "On Fire",
+          "plays": "22K plays",
+          "videoId": "dWgZro5q4jg"
+        },
+        {
+          "title": "Die Glocke",
+          "plays": "27K plays",
+          "videoId": "WgPjQIMddW4"
+        },
+        {
+          "title": "Area 52",
+          "plays": "47K plays",
+          "videoId": "E_-3s1xGswI"
+        },
+        {
+          "title": "Mesquite, Texas",
+          "plays": "20K plays",
+          "videoId": "Oq6q5aQ3iNc"
+        },
+        {
+          "title": "Frau Engel",
+          "plays": "17K plays",
+          "videoId": "9ihrKPyMlVI"
+        },
+        {
+          "title": "Deteriation",
+          "plays": "14K plays",
+          "videoId": "iys6Fiww9V8"
+        },
+        {
+          "title": "Zofia",
+          "plays": "16K plays",
+          "videoId": "FAELkvPLj18"
+        },
+        {
+          "title": "Twins",
+          "plays": "16K plays",
+          "videoId": "OI_QHWs3OR4"
+        },
+        {
+          "title": "The Kreisau Circle",
+          "plays": "89K plays",
+          "videoId": "apJ5wGZW6jI"
+        },
+        {
+          "title": "New Orleans Burning",
+          "plays": "13K plays",
+          "videoId": "06TcD_Nq43o"
+        },
+        {
+          "title": "Muddy Waters",
+          "plays": "69K plays",
+          "videoId": "LQlOexzZYj0"
+        },
+        {
+          "title": "Terror-Billy's Gonna Getcha",
+          "plays": "46K plays",
+          "videoId": "LAiid3aR4KI"
+        },
+        {
+          "title": "Horton Hears a Revolution",
+          "plays": "73K plays",
+          "videoId": "eAP7485NxcU"
+        },
+        {
+          "title": "Nazi Punks, Gtfo",
+          "plays": "1.3M plays",
+          "videoId": "9pUnLnfpcsw"
+        },
+        {
+          "title": "Anya",
+          "plays": "22K plays",
+          "videoId": "32icZkdVNt0"
+        },
+        {
+          "title": "Gettin' ready",
+          "plays": "45K plays",
+          "videoId": "lt7ydTvQsag"
+        },
+        {
+          "title": "...and Other Things",
+          "plays": "16K plays",
+          "videoId": "aj_ogfR6G1c"
+        },
+        {
+          "title": "Lontano",
+          "plays": "26K plays",
+          "videoId": "7siHnCCwo60"
+        },
+        {
+          "title": "Like a Walrus",
+          "plays": "14K plays",
+          "videoId": "JNuJAhPamew"
+        },
+        {
+          "title": "Venus",
+          "plays": "21K plays",
+          "videoId": "ZL4Lgi8LGy8"
+        },
+        {
+          "title": "Sehnsucht",
+          "plays": "10K plays",
+          "videoId": "UOjBlbJmOJM"
+        },
+        {
+          "title": "V-a-L-H-a-L-L-A",
+          "plays": "46K plays",
+          "videoId": "LOYriO5rR2A"
+        },
+        {
+          "title": "Surprise! (Get Them Before They Get You)",
+          "plays": "31K plays",
+          "videoId": "KHOQkcqiulY"
+        },
+        {
+          "title": "Sunset for Humanity",
+          "plays": "61K plays",
+          "videoId": "69nRZq3O-Q8"
+        },
+        {
+          "title": "Der Zerstörer",
+          "plays": "519K plays",
+          "videoId": "BqtM_XkIq38"
+        },
+        {
+          "title": "Change over Day",
+          "plays": "236K plays",
+          "videoId": "BGWHjNA_caY"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mO6aSDFkUI29S3hAOneZoQpIheKhfq1uM"
     },
     {
       "id": "destiny-2",
@@ -85766,194 +85803,239 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Destiny+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xlMngSaTAQB",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc89g.jpg",
       "notable": true,
       "company": "Bungie",
       "console": true,
-      "tracks": [
-        {
-          "title": "Inner Light",
-          "plays": null
-        },
-        {
-          "title": "Last Rite",
-          "plays": null
-        },
-        {
-          "title": "Rise",
-          "plays": null
-        },
-        {
-          "title": "EDZ",
-          "plays": null
-        },
-        {
-          "title": "Towerfall",
-          "plays": null
-        },
-        {
-          "title": "Lost Light (feat. Kronos Quartet)",
-          "plays": null
-        },
-        {
-          "title": "Forge Ahead",
-          "plays": null
-        },
-        {
-          "title": "Battle Stations",
-          "plays": null
-        },
-        {
-          "title": "Utopia Fallen",
-          "plays": null
-        },
-        {
-          "title": "Lost Sector",
-          "plays": null
-        },
-        {
-          "title": "Journey (feat. Kronos Quartet)",
-          "plays": null
-        },
-        {
-          "title": "View from Orbit",
-          "plays": null
-        },
-        {
-          "title": "Red Legion",
-          "plays": null
-        },
-        {
-          "title": "New Dawn",
-          "plays": null
-        },
-        {
-          "title": "What We Fight For",
-          "plays": null
-        },
-        {
-          "title": "Leviathan",
-          "plays": null
-        },
-        {
-          "title": "The Wilds",
-          "plays": null
-        },
-        {
-          "title": "Holliday",
-          "plays": null
-        },
-        {
-          "title": "The Farm",
-          "plays": null
-        },
-        {
-          "title": "Be Brave",
-          "plays": null
-        },
-        {
-          "title": "Payback",
-          "plays": null
-        },
-        {
-          "title": "Homecoming",
-          "plays": null
-        },
-        {
-          "title": "Traveler's Dream",
-          "plays": null
-        },
-        {
-          "title": "Ikora",
-          "plays": null
-        },
-        {
-          "title": "Nessus",
-          "plays": null
-        },
-        {
-          "title": "The Hunted",
-          "plays": null
-        },
-        {
-          "title": "Pathfinder",
-          "plays": null
-        },
-        {
-          "title": "Spark",
-          "plays": null
-        },
-        {
-          "title": "Scavenger's Den",
-          "plays": null
-        },
-        {
-          "title": "Dominus Ghaul",
-          "plays": null
-        },
-        {
-          "title": "Riptide",
-          "plays": null
-        },
-        {
-          "title": "Titan",
-          "plays": null
-        },
-        {
-          "title": "Legion's March",
-          "plays": null
-        },
-        {
-          "title": "Home of the Brave",
-          "plays": null
-        },
-        {
-          "title": "A New Frontier",
-          "plays": null
-        },
-        {
-          "title": "Into the Light",
-          "plays": null
-        },
-        {
-          "title": "Voyage",
-          "plays": null
-        },
-        {
-          "title": "Arcadia",
-          "plays": null
-        },
-        {
-          "title": "No Mercy",
-          "plays": null
-        },
-        {
-          "title": "The Blight",
-          "plays": null
-        },
-        {
-          "title": "Guardian's Sacrifice",
-          "plays": null
-        },
-        {
-          "title": "Resist the Legion",
-          "plays": null
-        },
-        {
-          "title": "Sanctuary",
-          "plays": null
-        },
-        {
-          "title": "The Last City",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Role-playing (RPG)",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Inner Light",
+          "plays": "138K plays",
+          "videoId": "W5fyUOgV9rg"
+        },
+        {
+          "title": "Last Rite",
+          "plays": "36K plays",
+          "videoId": "CKhCuCjcaiw"
+        },
+        {
+          "title": "Rise",
+          "plays": "30K plays",
+          "videoId": "wq3Ool2R504"
+        },
+        {
+          "title": "EDZ",
+          "plays": "19K plays",
+          "videoId": "FXwjNh2lJOM"
+        },
+        {
+          "title": "Towerfall",
+          "plays": "27K plays",
+          "videoId": "h4wVz7CwoCg"
+        },
+        {
+          "title": "Lost Light (feat. Kronos Quartet)",
+          "plays": "38K plays",
+          "videoId": "35br_Xynn5U"
+        },
+        {
+          "title": "Forge Ahead",
+          "plays": "56K plays",
+          "videoId": "LzhaH6Mwbxg"
+        },
+        {
+          "title": "Battle Stations",
+          "plays": "32K plays",
+          "videoId": "VX-4VLrEd5E"
+        },
+        {
+          "title": "Utopia Fallen",
+          "plays": "11K plays",
+          "videoId": "jxl91ijCWl4"
+        },
+        {
+          "title": "Lost Sector",
+          "plays": "12K plays",
+          "videoId": "r7T4XSJWUuY"
+        },
+        {
+          "title": "Journey (feat. Kronos Quartet)",
+          "plays": "532K plays",
+          "videoId": "hRALxZIxmwI"
+        },
+        {
+          "title": "View from Orbit",
+          "plays": "56K plays",
+          "videoId": "gPBSEqbkEIE"
+        },
+        {
+          "title": "Red Legion",
+          "plays": "13K plays",
+          "videoId": "ICTsHaTukl4"
+        },
+        {
+          "title": "New Dawn",
+          "plays": "11K plays",
+          "videoId": "hpVldLqs-eQ"
+        },
+        {
+          "title": "What We Fight For",
+          "plays": "54K plays",
+          "videoId": "DamQDBwJecY"
+        },
+        {
+          "title": "Leviathan",
+          "plays": "15K plays",
+          "videoId": "maAIiGf32U4"
+        },
+        {
+          "title": "The Wilds",
+          "plays": "17K plays",
+          "videoId": "X3zW90BGKc4"
+        },
+        {
+          "title": "Holliday",
+          "plays": "17K plays",
+          "videoId": "ETI3z58T8U0"
+        },
+        {
+          "title": "The Farm",
+          "plays": "78K plays",
+          "videoId": "Ze97KWKqZnY"
+        },
+        {
+          "title": "Be Brave",
+          "plays": "23K plays",
+          "videoId": "acxlKtrsJkY"
+        },
+        {
+          "title": "Payback",
+          "plays": "12K plays",
+          "videoId": "8fJm3RY2lAY"
+        },
+        {
+          "title": "Homecoming",
+          "plays": "6.6K plays",
+          "videoId": "nb_F_84rlHo"
+        },
+        {
+          "title": "Traveler's Dream",
+          "plays": "20K plays",
+          "videoId": "gpK4-FQC-gA"
+        },
+        {
+          "title": "Ikora",
+          "plays": "12K plays",
+          "videoId": "FSndtAT8-mc"
+        },
+        {
+          "title": "Nessus",
+          "plays": "11K plays",
+          "videoId": "5xhdeD5XtB0"
+        },
+        {
+          "title": "The Hunted",
+          "plays": "29K plays",
+          "videoId": "D75Q-9wCzGM"
+        },
+        {
+          "title": "Pathfinder",
+          "plays": "10K plays",
+          "videoId": "A999rUV3CYU"
+        },
+        {
+          "title": "Spark",
+          "plays": "7.8K plays",
+          "videoId": "kjMwOpDWnZQ"
+        },
+        {
+          "title": "Scavenger's Den",
+          "plays": "5.3K plays",
+          "videoId": "Lb967keVvjg"
+        },
+        {
+          "title": "Dominus Ghaul",
+          "plays": "39K plays",
+          "videoId": "jOjyJSo1HmI"
+        },
+        {
+          "title": "Riptide",
+          "plays": "8.3K plays",
+          "videoId": "hYOQMfms-7U"
+        },
+        {
+          "title": "Titan",
+          "plays": "6.9K plays",
+          "videoId": "L8Dfb_C3L9s"
+        },
+        {
+          "title": "Legion's March",
+          "plays": "6.3K plays",
+          "videoId": "lfonRZ9XQNw"
+        },
+        {
+          "title": "Home of the Brave",
+          "plays": "6.1K plays",
+          "videoId": "PaFT2OBLY8k"
+        },
+        {
+          "title": "A New Frontier",
+          "plays": "6.6K plays",
+          "videoId": "A-aBXrk2Ifg"
+        },
+        {
+          "title": "Into the Light",
+          "plays": "10K plays",
+          "videoId": "rNTt5e418ok"
+        },
+        {
+          "title": "Voyage",
+          "plays": "7.7K plays",
+          "videoId": "DQBOxotb21s"
+        },
+        {
+          "title": "Arcadia",
+          "plays": "4.9K plays",
+          "videoId": "qN2pYvX22JE"
+        },
+        {
+          "title": "No Mercy",
+          "plays": "10K plays",
+          "videoId": "We0PoxI6pfY"
+        },
+        {
+          "title": "The Blight",
+          "plays": "5.3K plays",
+          "videoId": "iY-5uKXBMc4"
+        },
+        {
+          "title": "Guardian's Sacrifice",
+          "plays": "17K plays",
+          "videoId": "fXd3969_JEw"
+        },
+        {
+          "title": "Resist the Legion",
+          "plays": "13K plays",
+          "videoId": "ScdeG9c7JZM"
+        },
+        {
+          "title": "Sanctuary",
+          "plays": "12K plays",
+          "videoId": "FChoXbstmmE"
+        },
+        {
+          "title": "The Last City",
+          "plays": "33K plays",
+          "videoId": "b7Mu0bFv3M4"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mKT94SmG-Wrf0E3wRcSt11pyvv_zYKDX8"
     },
     {
       "id": "sid-meier-s-civilization-vi",
@@ -87487,7 +87569,9 @@
       "id": "vampire-the-masquerade-bloodlines",
       "title": "Vampire: The Masquerade - Bloodlines Soundtrack",
       "game": "Vampire: The Masquerade - Bloodlines",
-      "composers": [],
+      "composers": [
+        "Rik Schaffer"
+      ],
       "date": "2004-11-16",
       "sources": [
         {
@@ -87498,100 +87582,132 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Vampire%3A+The+Masquerade+-+Bloodlines+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_CJ0TTTuRw4z",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n14.jpg",
       "notable": true,
       "company": "Troika Games",
       "console": false,
-      "tracks": [
-        {
-          "title": "Extremities (From \"Vampire: The Masquerade - Bloodlines (More Music From the Vault)\")",
-          "plays": null
-        },
-        {
-          "title": "The Bite is Eternal (From \"Vampire: The Masquerade - Bloodlines (More Music From the Vault)\")",
-          "plays": null
-        },
-        {
-          "title": "Festival",
-          "plays": null
-        },
-        {
-          "title": "Dangerous Places Combat",
-          "plays": null
-        },
-        {
-          "title": "Downtown Theme (Alternative Version)",
-          "plays": null
-        },
-        {
-          "title": "Mission Impossible (Alternative Version)",
-          "plays": null
-        },
-        {
-          "title": "Out From Under",
-          "plays": null
-        },
-        {
-          "title": "Fat Larry",
-          "plays": null
-        },
-        {
-          "title": "Come Around",
-          "plays": null
-        },
-        {
-          "title": "The Death of a Woman",
-          "plays": null
-        },
-        {
-          "title": "Club Afterglow",
-          "plays": null
-        },
-        {
-          "title": "To Live Forever",
-          "plays": null
-        },
-        {
-          "title": "Disturbed and Twisted (Original Version)",
-          "plays": null
-        },
-        {
-          "title": "Club Vesuvius",
-          "plays": null
-        },
-        {
-          "title": "Dangerous Places",
-          "plays": null
-        },
-        {
-          "title": "World of Darkness",
-          "plays": null
-        },
-        {
-          "title": "This World Then The Next",
-          "plays": null
-        },
-        {
-          "title": "Selfless Doubt",
-          "plays": null
-        },
-        {
-          "title": "Is It All Worth It?",
-          "plays": null
-        },
-        {
-          "title": "Open Season",
-          "plays": null
-        },
-        {
-          "title": "Poinsettia",
-          "plays": null
-        }
-      ],
       "genres": [
         "Role-playing (RPG)"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Bloodlines Main Theme",
+          "plays": "977K plays",
+          "videoId": "o6qo4msRqxU"
+        },
+        {
+          "title": "Hollywood Main Theme",
+          "plays": "718K plays",
+          "videoId": "fP_3oo3RCGo"
+        },
+        {
+          "title": "World Spirit Map",
+          "plays": "541K plays",
+          "videoId": "DQqrs5pHohY"
+        },
+        {
+          "title": "Disturbed Combat",
+          "plays": "153K plays",
+          "videoId": "gVp_bkJyVDg"
+        },
+        {
+          "title": "Santa Monica Theme",
+          "plays": "916K plays",
+          "videoId": "VuXD3jTDqqU"
+        },
+        {
+          "title": "Chinatown Theme",
+          "plays": "1M plays",
+          "videoId": "lQIBT-a6jog"
+        },
+        {
+          "title": "China Boss Battle",
+          "plays": "122K plays",
+          "videoId": "DnOz-hKMK0Y"
+        },
+        {
+          "title": "Nosferatu Warens",
+          "plays": "105K plays",
+          "videoId": "DwhhRb40Lxc"
+        },
+        {
+          "title": "Downtown Theme",
+          "plays": "487K plays",
+          "videoId": "yHET7usWDho"
+        },
+        {
+          "title": "Disturbed and Twisted",
+          "plays": "163K plays",
+          "videoId": "rPmqnn9LidI"
+        },
+        {
+          "title": "Disturbed and Twisted Combat",
+          "plays": "97K plays",
+          "videoId": "S22q3cogGPk"
+        },
+        {
+          "title": "Edward's Theme",
+          "plays": "265K plays",
+          "videoId": "HwKvAkBUBGE"
+        },
+        {
+          "title": "Crypts Combat",
+          "plays": "125K plays",
+          "videoId": "o-CiKnm0M9o"
+        },
+        {
+          "title": "Moldy Old World",
+          "plays": "115K plays",
+          "videoId": "9LQOgn1Kux0"
+        },
+        {
+          "title": "Dark Asia",
+          "plays": "99K plays",
+          "videoId": "7ERa3iMD7X4"
+        },
+        {
+          "title": "The Prince's Dream",
+          "plays": "116K plays",
+          "videoId": "XDmc3E5GL5k"
+        },
+        {
+          "title": "All That Could Ever Be",
+          "plays": "412K plays",
+          "videoId": "HQC9sToSdmM"
+        },
+        {
+          "title": "Main Theme Aggro Mix",
+          "plays": "135K plays",
+          "videoId": "2_eJoOzYb4Q"
+        },
+        {
+          "title": "Mission Impossible",
+          "plays": "101K plays",
+          "videoId": "VAGlIvymGHU"
+        },
+        {
+          "title": "Creepy Ambiance 2",
+          "plays": "75K plays",
+          "videoId": "3Zubws3usK8"
+        },
+        {
+          "title": "Mission Impossible Combat",
+          "plays": "151K plays",
+          "videoId": "dmaEgu1zLcc"
+        },
+        {
+          "title": "Crypts",
+          "plays": "55K plays",
+          "videoId": "0nuR9Tyi70c"
+        },
+        {
+          "title": "Sewer Enter Lair",
+          "plays": "51K plays",
+          "videoId": "yRmFAcJqbO4"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nyty_MHdTXetLsn15mZ5tfulD-oDUgDVs"
     },
     {
       "id": "pubg-battlegrounds",
@@ -90615,7 +90731,9 @@
       "id": "among-us",
       "title": "Among Us Soundtrack",
       "game": "Among Us",
-      "composers": [],
+      "composers": [
+        "ALEXIS_GAMING_CAM"
+      ],
       "date": "2018-06-15",
       "sources": [
         {
@@ -90626,21 +90744,33 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Among+Us+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_H1OzQ3oJBf2",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6kqt.jpg",
       "notable": true,
       "company": "Innersloth",
       "console": true,
-      "tracks": [
-        {
-          "title": "Among Us Space Theme (Original Game Soundtrack)",
-          "plays": null
-        }
-      ],
       "genres": [
         "Strategy",
         "Indie"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Among Us Theme",
+          "plays": "7.2K plays",
+          "videoId": "WlBJwII0KqY"
+        },
+        {
+          "title": "Maiden Voyage",
+          "plays": "278K plays",
+          "videoId": "XUzMA5NGnak"
+        },
+        {
+          "title": "Hide Seek Impostor",
+          "plays": "98K plays",
+          "videoId": "fRpYr4ML3-c"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_l5-DtE4IEXX9DI5-9cdMveZBsxfLLqOd8"
     },
     {
       "id": "kingdom-hearts",
@@ -91434,218 +91564,449 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Borderlands+3+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WGfC9Adqpkz",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20r3.jpg",
       "notable": true,
       "company": "Gearbox Software",
       "console": true,
-      "tracks": [
-        {
-          "title": "Sanctuary 3",
-          "plays": null
-        },
-        {
-          "title": "Landing on Athenas",
-          "plays": null
-        },
-        {
-          "title": "Liberating Athenas",
-          "plays": null
-        },
-        {
-          "title": "Atlas Hq - State of the Art",
-          "plays": null
-        },
-        {
-          "title": "Atlas Hq - Attacked",
-          "plays": null
-        },
-        {
-          "title": "Neon Arterial - Upper City",
-          "plays": null
-        },
-        {
-          "title": "Lectra City",
-          "plays": null
-        },
-        {
-          "title": "Lectra City - The Games Begin",
-          "plays": null
-        },
-        {
-          "title": "Skywell 27 - Katagawa's Sphere",
-          "plays": null
-        },
-        {
-          "title": "Skywell 27 - Beneath the Pleasure Barge",
-          "plays": null
-        },
-        {
-          "title": "Skywell 27 - To Rhys's Rescue",
-          "plays": null
-        },
-        {
-          "title": "Skywell 27 - Katagawa's Minions",
-          "plays": null
-        },
-        {
-          "title": "Skywell 27 - Maliwan Pushes Hard",
-          "plays": null
-        },
-        {
-          "title": "Metroplex - Survival Questionable",
-          "plays": null
-        },
-        {
-          "title": "Metroplex - Meet the Resistance",
-          "plays": null
-        },
-        {
-          "title": "Metroplex - Beyond the Ratches",
-          "plays": null
-        },
-        {
-          "title": "The Rampager - Pt. 1",
-          "plays": null
-        },
-        {
-          "title": "The Rampager - Pt. 2",
-          "plays": null
-        },
-        {
-          "title": "Neon Arterial - Ending the Family Presence",
-          "plays": null
-        },
-        {
-          "title": "Neon Arterial - Lower Depths",
-          "plays": null
-        },
-        {
-          "title": "Captain Traunt Falls",
-          "plays": null
-        },
-        {
-          "title": "Metroplex - Fighting Maliwan",
-          "plays": null
-        },
-        {
-          "title": "Metroplex - Gigamind",
-          "plays": null
-        },
-        {
-          "title": "Lectra City After Glow",
-          "plays": null
-        },
-        {
-          "title": "Atlas Hq - Katagawa Gets Served",
-          "plays": null
-        },
-        {
-          "title": "Killavolt Wins His Prize",
-          "plays": null
-        },
-        {
-          "title": "Sanctuary 3 - Moxxi's Interlude 1",
-          "plays": null
-        },
-        {
-          "title": "Mainmenu (Day)",
-          "plays": null
-        },
-        {
-          "title": "Exploring the Dormant Ship",
-          "plays": null
-        },
-        {
-          "title": "The Bandits at Jakob's Estate",
-          "plays": null
-        },
-        {
-          "title": "The Creatures of Floodmoor Basin",
-          "plays": null
-        },
-        {
-          "title": "The Warden of the Anvil",
-          "plays": null
-        },
-        {
-          "title": "Enter Floodmoor Basin",
-          "plays": null
-        },
-        {
-          "title": "Tension in the Embermire",
-          "plays": null
-        },
-        {
-          "title": "Geniviv Goes Down",
-          "plays": null
-        },
-        {
-          "title": "Arrival at the Anvil",
-          "plays": null
-        },
-        {
-          "title": "Riot at the Anvil",
-          "plays": null
-        },
-        {
-          "title": "Spaceships in the Swamp",
-          "plays": null
-        },
-        {
-          "title": "The Dormant Ship Attacks",
-          "plays": null
-        },
-        {
-          "title": "The Puzzle at Jakob's Estate",
-          "plays": null
-        },
-        {
-          "title": "Enter the Embermire",
-          "plays": null
-        },
-        {
-          "title": "The Ambush at Jakob's Estate",
-          "plays": null
-        },
-        {
-          "title": "A Self Guided Tour at Jakob's Estate",
-          "plays": null
-        },
-        {
-          "title": "Creatures of the Embermire",
-          "plays": null
-        },
-        {
-          "title": "Saurians Attack in Floodmoor Basin",
-          "plays": null
-        },
-        {
-          "title": "Raging out in Jakob's Manner",
-          "plays": null
-        },
-        {
-          "title": "Exploring the Powder Cellars",
-          "plays": null
-        },
-        {
-          "title": "Treasures of the Jakob's Vault",
-          "plays": null
-        },
-        {
-          "title": "Aurelia's Last Breath",
-          "plays": null
-        },
-        {
-          "title": "The Floating Tomb Fights Back",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Role-playing (RPG)",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Sanctuary 3",
+          "plays": "121K plays",
+          "videoId": "XmgjzQ1SKnM"
+        },
+        {
+          "title": "Landing on Athenas",
+          "plays": "33K plays",
+          "videoId": "rMmvCD6RjNY"
+        },
+        {
+          "title": "Liberating Athenas",
+          "plays": "19K plays",
+          "videoId": "oG0vAc22qzk"
+        },
+        {
+          "title": "Atlas HQ - State of The Art",
+          "plays": "56K plays",
+          "videoId": "UnpPb2Ccy_Y"
+        },
+        {
+          "title": "Atlas HQ - Attacked",
+          "plays": "34K plays",
+          "videoId": "P2Nf3T-FciI"
+        },
+        {
+          "title": "Neon Arterial - Upper City",
+          "plays": "28K plays",
+          "videoId": "r2yTyjoiVZs"
+        },
+        {
+          "title": "Lectra City",
+          "plays": "19K plays",
+          "videoId": "l1H70u5uGoM"
+        },
+        {
+          "title": "Lectra City - The Games Begin",
+          "plays": "12K plays",
+          "videoId": "udHjG4R34jM"
+        },
+        {
+          "title": "Skywell 27 - Katagawa's Sphere",
+          "plays": "27K plays",
+          "videoId": "_j6JlD1PPoE"
+        },
+        {
+          "title": "Skywell 27 - Beneath The Pleasure Barge",
+          "plays": "9.1K plays",
+          "videoId": "M9Gt-8vv4-M"
+        },
+        {
+          "title": "Skywell 27 - To Rhys's Rescue",
+          "plays": "18K plays",
+          "videoId": "vOmdHTysOls"
+        },
+        {
+          "title": "Skywell 27 - Katagawa's Minions",
+          "plays": "19K plays",
+          "videoId": "YEm5BWVlC_g"
+        },
+        {
+          "title": "Skywell 27 - Maliwan Pushes Hard",
+          "plays": "12K plays",
+          "videoId": "jS8ZV3gzyqA"
+        },
+        {
+          "title": "Metroplex - Survival Questionable",
+          "plays": "16K plays",
+          "videoId": "5BwvKtJludU"
+        },
+        {
+          "title": "Metroplex - Meet The Resistance",
+          "plays": "14K plays",
+          "videoId": "qVvVD8A-vSc"
+        },
+        {
+          "title": "Metroplex - Beyond the Ratches",
+          "plays": "8.8K plays",
+          "videoId": "cLvyB3vb2_Q"
+        },
+        {
+          "title": "The Rampager - Pt. 1",
+          "plays": "12K plays",
+          "videoId": "enBNlGCqDis"
+        },
+        {
+          "title": "The Rampager - Pt. 2",
+          "plays": "33K plays",
+          "videoId": "-64UtNrUoP8"
+        },
+        {
+          "title": "Neon Arterial - Ending the Family Presence",
+          "plays": "14K plays",
+          "videoId": "4oaXoMXoJJw"
+        },
+        {
+          "title": "Neon Arterial - Lower Depths",
+          "plays": "8K plays",
+          "videoId": "3vOb6u6mVyY"
+        },
+        {
+          "title": "Captain Traunt Falls",
+          "plays": "22K plays",
+          "videoId": "DlIDqjpmWvE"
+        },
+        {
+          "title": "Metroplex - Fighting Maliwan",
+          "plays": "6.3K plays",
+          "videoId": "l59ZEkU1MTI"
+        },
+        {
+          "title": "Metroplex - Gigamind",
+          "plays": "9.3K plays",
+          "videoId": "v-hQpnBF4OI"
+        },
+        {
+          "title": "Lectra City After Glow",
+          "plays": "6.6K plays",
+          "videoId": "UNap6CYd9U8"
+        },
+        {
+          "title": "Atlas HQ - Katagawa Gets Served",
+          "plays": "33K plays",
+          "videoId": "hYZM_Ji-xag"
+        },
+        {
+          "title": "Killavolt Wins His Prize",
+          "plays": "11K plays",
+          "videoId": "P8mY2wLPIrU"
+        },
+        {
+          "title": "Sanctuary 3 - Moxxi's Interlude 1",
+          "plays": "4.6K plays",
+          "videoId": "RLBrDXY6B8E"
+        },
+        {
+          "title": "MainMenu (Day)",
+          "plays": "227K plays",
+          "videoId": "58FruyFCGpM"
+        },
+        {
+          "title": "Exploring The Dormant Ship",
+          "plays": "11K plays",
+          "videoId": "EQJ33jE-wd4"
+        },
+        {
+          "title": "The Bandits at Jakob's Estate",
+          "plays": "33K plays",
+          "videoId": "kxatnWBUsdQ"
+        },
+        {
+          "title": "The Creatures of Floodmoor Basin",
+          "plays": "5.6K plays",
+          "videoId": "---Pt0ueu7o"
+        },
+        {
+          "title": "The Warden of The Anvil",
+          "plays": "6.9K plays",
+          "videoId": "6CmJv3-3AOc"
+        },
+        {
+          "title": "Enter Floodmoor Basin",
+          "plays": "14K plays",
+          "videoId": "T-1zNuphTg8"
+        },
+        {
+          "title": "Tension in the Embermire",
+          "plays": "4K plays",
+          "videoId": "NKrlTfYDF_8"
+        },
+        {
+          "title": "GenIVIV Goes Down",
+          "plays": "6.4K plays",
+          "videoId": "yi3SUywzczg"
+        },
+        {
+          "title": "Arrival At The Anvil",
+          "plays": "10K plays",
+          "videoId": "Q-GPta0oNt0"
+        },
+        {
+          "title": "Riot at The Anvil",
+          "plays": "19K plays",
+          "videoId": "3slMhomAtM8"
+        },
+        {
+          "title": "Spaceships in the Swamp",
+          "plays": "5.2K plays",
+          "videoId": "7N-FftE6zuI"
+        },
+        {
+          "title": "The Dormant Ship Attacks",
+          "plays": "5.8K plays",
+          "videoId": "AOm2S3N5h6w"
+        },
+        {
+          "title": "The Puzzle at Jakob's Estate",
+          "plays": "3.1K plays",
+          "videoId": "3Ubzf8wo0jw"
+        },
+        {
+          "title": "Enter The Embermire",
+          "plays": "4.4K plays",
+          "videoId": "z2-L2_1QNus"
+        },
+        {
+          "title": "The Ambush at Jakob's Estate",
+          "plays": "13K plays",
+          "videoId": "gvf_yfZJ-Cw"
+        },
+        {
+          "title": "A Self Guided Tour at Jakob's Estate",
+          "plays": "3.3K plays",
+          "videoId": "BPqkfF17_cg"
+        },
+        {
+          "title": "Creatures of the Embermire",
+          "plays": "2.6K plays",
+          "videoId": "a33anuNZJIk"
+        },
+        {
+          "title": "Saurians Attack in Floodmoor Basin",
+          "plays": "3.7K plays",
+          "videoId": "E9_IHDlUmnw"
+        },
+        {
+          "title": "Raging Out in Jakob's Manner",
+          "plays": "2.7K plays",
+          "videoId": "2dXXnJ7kjrY"
+        },
+        {
+          "title": "Exploring the Powder Cellars",
+          "plays": "3.2K plays",
+          "videoId": "nkDyETp7iMw"
+        },
+        {
+          "title": "Treasures of the Jakob's Vault",
+          "plays": "6.5K plays",
+          "videoId": "Z5dqmCmqll4"
+        },
+        {
+          "title": "Aurelia's Last Breath",
+          "plays": "3.9K plays",
+          "videoId": "gxAnqNWFNI4"
+        },
+        {
+          "title": "The Floating Tomb Fights Back",
+          "plays": "4.9K plays",
+          "videoId": "NSXSoSaU950"
+        },
+        {
+          "title": "The Floating Tomb - Tranquility Achieved",
+          "plays": "10K plays",
+          "videoId": "PhECDtfCyx0"
+        },
+        {
+          "title": "MainMenu (Night)",
+          "plays": "50K plays",
+          "videoId": "AVv1zcStvQk"
+        },
+        {
+          "title": "The Drunk Violinist Entertains (Bonus Track)",
+          "plays": "2.3K plays",
+          "videoId": "Fe5jBQEej6c"
+        },
+        {
+          "title": "Sanctuary 3 - Moxxi's Interlude 2",
+          "plays": "4.9K plays",
+          "videoId": "KLTtUtHnvLA"
+        },
+        {
+          "title": "Konrad's Hold - Arrival",
+          "plays": "14K plays",
+          "videoId": "4cU1r8tDRZA"
+        },
+        {
+          "title": "The Devil's Razor Fights Back",
+          "plays": "14K plays",
+          "videoId": "Vbptg4lqqD8"
+        },
+        {
+          "title": "Welcome to the Devil's Razor",
+          "plays": "4.9K plays",
+          "videoId": "EwGH65j-UEM"
+        },
+        {
+          "title": "Devil's Razor - Close Shave",
+          "plays": "5.4K plays",
+          "videoId": "NQfcw9Kd5Mw"
+        },
+        {
+          "title": "Carnivora RIDES!",
+          "plays": "20K plays",
+          "videoId": "N_R_C1Z65Qo"
+        },
+        {
+          "title": "Cathedral Of The Twin Gods",
+          "plays": "3.9K plays",
+          "videoId": "LRxJGYCpchw"
+        },
+        {
+          "title": "The Cathedral Calls To The Family",
+          "plays": "3.5K plays",
+          "videoId": "NfKmtxiJORY"
+        },
+        {
+          "title": "The Cathedral's Best Arrive",
+          "plays": "3.2K plays",
+          "videoId": "FgADEunnQRM"
+        },
+        {
+          "title": "The Proving Grounds Mystery",
+          "plays": "6.2K plays",
+          "videoId": "goCTZvp8BHw"
+        },
+        {
+          "title": "The Proving Grounds Exam",
+          "plays": "5K plays",
+          "videoId": "Bh-_10AG_DM"
+        },
+        {
+          "title": "The Proving Grounds Final Exam",
+          "plays": "5K plays",
+          "videoId": "HK7H-W32IMA"
+        },
+        {
+          "title": "Marcus Tells a Story",
+          "plays": "3.4K plays",
+          "videoId": "XRltnKuceSE"
+        },
+        {
+          "title": "Into The Guts of Carnivora",
+          "plays": "3.8K plays",
+          "videoId": "RSAVuSKLbaA"
+        },
+        {
+          "title": "Carnivora's Digestion Intensifies",
+          "plays": "4.8K plays",
+          "videoId": "kKlvz9W8KJQ"
+        },
+        {
+          "title": "Carnivora Put On Its Big Pants",
+          "plays": "5.1K plays",
+          "videoId": "pMGs4uT6JIE"
+        },
+        {
+          "title": "The Carnivora Show LIVE",
+          "plays": "19K plays",
+          "videoId": "QiBzLA2ivNc"
+        },
+        {
+          "title": "The End Of Troy",
+          "plays": "102K plays",
+          "videoId": "b5kzvALt5NQ"
+        },
+        {
+          "title": "The End of Tyreen",
+          "plays": "19K plays",
+          "videoId": "bkQL5dlkGy0"
+        },
+        {
+          "title": "Konrad's Hold - The Depths",
+          "plays": "6.8K plays",
+          "videoId": "stQb7M9leUs"
+        },
+        {
+          "title": "The Firehawk Rises",
+          "plays": "15K plays",
+          "videoId": "aZGCclgFCkI"
+        },
+        {
+          "title": "The End of Troy (Remix)",
+          "plays": "11K plays",
+          "videoId": "NbXiKJbMkp0"
+        },
+        {
+          "title": "The End of Tyreen (Remix)",
+          "plays": "9.1K plays",
+          "videoId": "oNDWtFF_1L4"
+        },
+        {
+          "title": "Sanctuary 3 - Moxxi's Interlude 3",
+          "plays": "2.5K plays",
+          "videoId": "MuidcSMSNNI"
+        },
+        {
+          "title": "The Arrival",
+          "plays": "3.9K plays",
+          "videoId": "nBx6NzV5Iv4"
+        },
+        {
+          "title": "The Arrival... Intensifies",
+          "plays": "6.2K plays",
+          "videoId": "ch8pnOW-bZE"
+        },
+        {
+          "title": "A Forgotten Space",
+          "plays": "4.6K plays",
+          "videoId": "y0P-qE1c7V8"
+        },
+        {
+          "title": "Maliwan Is Here",
+          "plays": "14K plays",
+          "videoId": "HZO1z6Ksq0s"
+        },
+        {
+          "title": "In Case It Wasn't Clear... TRAUNT!",
+          "plays": "16K plays",
+          "videoId": "X-qaQnheqrM"
+        },
+        {
+          "title": "The Machine Crypt",
+          "plays": "3.6K plays",
+          "videoId": "z9tvF2vlpKI"
+        },
+        {
+          "title": "Action At The Machine",
+          "plays": "7.5K plays",
+          "videoId": "9KnPQHuOMnE"
+        },
+        {
+          "title": "The Family Wants The Machine",
+          "plays": "6.9K plays",
+          "videoId": "wshj2pTul1o"
+        },
+        {
+          "title": "Digby Vermouth - Supernova Dreamsicle",
+          "plays": "86K plays",
+          "videoId": "3tik0QDJywg"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_lIvkbrQQM0peM7Fu-abfhQyLb9QsoLf_4"
     },
     {
       "id": "assassin-s-creed-rogue",
@@ -93033,7 +93394,9 @@
       "id": "star-wars-battlefront-ii-2017",
       "title": "Star Wars Battlefront II Soundtrack",
       "game": "Star Wars Battlefront II",
-      "composers": [],
+      "composers": [
+        "Gordy Haab"
+      ],
       "date": "2017-11-17",
       "sources": [
         {
@@ -93044,81 +93407,98 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars+Battlefront+II+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MevizFNC91w",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wi7.jpg",
       "notable": true,
       "company": "EA Digital Illusions CE",
       "console": true,
-      "tracks": [
-        {
-          "title": "Encounters on the Battlefront",
-          "plays": null
-        },
-        {
-          "title": "Iden Versio's Theme",
-          "plays": null
-        },
-        {
-          "title": "Prologue and the Escape",
-          "plays": null
-        },
-        {
-          "title": "Smugglers Run",
-          "plays": null
-        },
-        {
-          "title": "Betrayal",
-          "plays": null
-        },
-        {
-          "title": "The Battle Unfolds",
-          "plays": null
-        },
-        {
-          "title": "Across the Galaxy, Pt. 1",
-          "plays": null
-        },
-        {
-          "title": "Hard Decisions and the Rescue Attempt",
-          "plays": null
-        },
-        {
-          "title": "Pillio Wasteland and Skirmish",
-          "plays": null
-        },
-        {
-          "title": "Go. Survive. Live!",
-          "plays": null
-        },
-        {
-          "title": "Return to Vardos",
-          "plays": null
-        },
-        {
-          "title": "Iden and Dell",
-          "plays": null
-        },
-        {
-          "title": "Across the Galaxy, Pt. 2",
-          "plays": null
-        },
-        {
-          "title": "Iden Reborn",
-          "plays": null
-        },
-        {
-          "title": "The Dreadnought",
-          "plays": null
-        },
-        {
-          "title": "Ma Kapar (Bonus Track)",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Encounters on the Battlefront",
+          "plays": "34K plays",
+          "videoId": "EwjPl4vpUwQ"
+        },
+        {
+          "title": "Iden Versio's Theme",
+          "plays": "32K plays",
+          "videoId": "yHt_nmmm81A"
+        },
+        {
+          "title": "Prologue and the Escape",
+          "plays": "12K plays",
+          "videoId": "hDofdW0mLEY"
+        },
+        {
+          "title": "Smugglers Run",
+          "plays": "11K plays",
+          "videoId": "CxhMEK3IGts"
+        },
+        {
+          "title": "Betrayal",
+          "plays": "8.5K plays",
+          "videoId": "8PveLGWpMvw"
+        },
+        {
+          "title": "The Battle Unfolds",
+          "plays": "19K plays",
+          "videoId": "hA_Rkn1IjmE"
+        },
+        {
+          "title": "Across the Galaxy (Pt. 1)",
+          "plays": "21K plays",
+          "videoId": "rWAezlD8OuE"
+        },
+        {
+          "title": "Hard Decisions and the Rescue Attempt",
+          "plays": "6.1K plays",
+          "videoId": "0MLV9FhqgjE"
+        },
+        {
+          "title": "Pillio Wasteland and Skirmish",
+          "plays": "5.2K plays",
+          "videoId": "vAGa9i2HigM"
+        },
+        {
+          "title": "Go. Survive. Live!",
+          "plays": "10K plays",
+          "videoId": "NgsFtc74xdE"
+        },
+        {
+          "title": "Return to Vardos",
+          "plays": "7.2K plays",
+          "videoId": "phrcNe8Hkfw"
+        },
+        {
+          "title": "Iden and Dell",
+          "plays": "4.9K plays",
+          "videoId": "9AlVx-6ZtuM"
+        },
+        {
+          "title": "Across the Galaxy (Pt. 2)",
+          "plays": "6.4K plays",
+          "videoId": "-QObThzLTWc"
+        },
+        {
+          "title": "Iden Reborn",
+          "plays": "8.2K plays",
+          "videoId": "B-PguHP3lJI"
+        },
+        {
+          "title": "The Dreadnought",
+          "plays": "5.7K plays",
+          "videoId": "qQzbiR18Bm0"
+        },
+        {
+          "title": "Ma Kapar (Bonus Track)",
+          "plays": "13K plays",
+          "videoId": "LajXdTS2pCk"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_l7NZlNpnnMMGSB7nKwlaeWe4ItXaa_hog"
     },
     {
       "id": "paper-mario-the-thousand-year-door",
@@ -93818,7 +94198,10 @@
       "id": "tekken-3",
       "title": "Tekken 3 Soundtrack",
       "game": "Tekken 3",
-      "composers": [],
+      "composers": [
+        "TEKKEN Project",
+        "Bandai Namco Game Music"
+      ],
       "date": "1997-03-20",
       "sources": [
         {
@@ -93829,197 +94212,243 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Tekken+3+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_tB8wZU4FCi2",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8d7q.jpg",
       "notable": true,
       "company": "Namco",
       "console": true,
-      "tracks": [
-        {
-          "title": "Opening Movie (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Character Select (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Jin Kazama (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Lei Wulong (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "King Jnr (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Paul Phoenix (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Eddy Gordo (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Hwoarang (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Forest Law (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Nina Williams (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Yoshimitsu (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Ling Xiaoyu (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Heihachi Mishima (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Julia Chang (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Kuma / Panda (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Gun Jack (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Bryan Fury (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Mokujin (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Dr. Boskonovitch (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Anna Williams (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Tiger Jackson (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Gon (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Ogre / True Ogre (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Result (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Game Over (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Staff Roll (Playstation2 Version)",
-          "plays": null
-        },
-        {
-          "title": "Attract Movie (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Attract -Embu- (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Character Select (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Paul Phoenix (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Forest Law (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Lei Wulong (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "King (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Yoshimitsu (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Nina Williams (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Hwoarang (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Ling Xiaoyu (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Eddy Gordo (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Jin Kazama (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "For Hidden Characters (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Heihachi Mishima (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Ogre (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Continue (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Game Over (Arcade Version)",
-          "plays": null
-        },
-        {
-          "title": "Staff Roll (Arcade Version)",
-          "plays": null
-        }
-      ],
       "genres": [
         "Fighting",
         "Arcade"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Opening Movie (PlayStation2 version)",
+          "plays": "206K plays",
+          "videoId": "rWm3icbxBIo"
+        },
+        {
+          "title": "Character Select (PlayStation2 version)",
+          "plays": "91K plays",
+          "videoId": "quGaYOyhwkk"
+        },
+        {
+          "title": "Jin Kazama (PlayStation2 version)",
+          "plays": "525K plays",
+          "videoId": "QcCevoVlqnE"
+        },
+        {
+          "title": "Lei Wulong (PlayStation2 version)",
+          "plays": "130K plays",
+          "videoId": "E9ZhzzIfc18"
+        },
+        {
+          "title": "King Jnr (PlayStation2 version)",
+          "plays": "162K plays",
+          "videoId": "AsGDGZLZ8Gk"
+        },
+        {
+          "title": "Paul Phoenix (PlayStation2 version)",
+          "plays": "167K plays",
+          "videoId": "_AwEOY9_5LM"
+        },
+        {
+          "title": "Eddy Gordo (PlayStation2 version)",
+          "plays": "122K plays",
+          "videoId": "BB2i0wh02m0"
+        },
+        {
+          "title": "Hwoarang (PlayStation2 version)",
+          "plays": "112K plays",
+          "videoId": "I9UXq16Htjo"
+        },
+        {
+          "title": "Forest Law (PlayStation2 version)",
+          "plays": "264K plays",
+          "videoId": "MQvATN8Aylc"
+        },
+        {
+          "title": "Nina Williams (PlayStation2 version)",
+          "plays": "225K plays",
+          "videoId": "hfWnDHWqu_s"
+        },
+        {
+          "title": "Yoshimitsu (PlayStation2 version)",
+          "plays": "88K plays",
+          "videoId": "3Cwm216hASY"
+        },
+        {
+          "title": "Ling Xiaoyu (PlayStation2 version)",
+          "plays": "125K plays",
+          "videoId": "zDOXQNov5ek"
+        },
+        {
+          "title": "Heihachi Mishima (PlayStation2 version)",
+          "plays": "133K plays",
+          "videoId": "-ItywKau1jU"
+        },
+        {
+          "title": "Julia Chang (PlayStation2 version)",
+          "plays": "106K plays",
+          "videoId": "rmueQv3DsD0"
+        },
+        {
+          "title": "Kuma / Panda (PlayStation2 version)",
+          "plays": "43K plays",
+          "videoId": "Tp6DjYD44is"
+        },
+        {
+          "title": "Gun Jack (PlayStation2 version)",
+          "plays": "39K plays",
+          "videoId": "_fuWayRUTGw"
+        },
+        {
+          "title": "Bryan Fury (PlayStation2 version)",
+          "plays": "96K plays",
+          "videoId": "CGYSfyTyXuk"
+        },
+        {
+          "title": "Mokujin (PlayStation2 version)",
+          "plays": "35K plays",
+          "videoId": "nAJHOaVIphE"
+        },
+        {
+          "title": "Dr. Boskonovitch (PlayStation2 version)",
+          "plays": "39K plays",
+          "videoId": "fFi2zsD1EiI"
+        },
+        {
+          "title": "Anna Williams (PlayStation2 version)",
+          "plays": "29K plays",
+          "videoId": "M_vbcs4AeJk"
+        },
+        {
+          "title": "Tiger Jackson (PlayStation2 version)",
+          "plays": "33K plays",
+          "videoId": "npr3hfEFWgU"
+        },
+        {
+          "title": "Gon (PlayStation2 version)",
+          "plays": "34K plays",
+          "videoId": "LFOA4DxZGPE"
+        },
+        {
+          "title": "Ogre / True Ogre (PlayStation2 version)",
+          "plays": "58K plays",
+          "videoId": "YossmsYz9Ic"
+        },
+        {
+          "title": "Result (PlayStation2 version)",
+          "plays": "15K plays",
+          "videoId": "jx2s53GMhr8"
+        },
+        {
+          "title": "Game Over (PlayStation2 version)",
+          "plays": "11K plays",
+          "videoId": "p1sANWWNgp8"
+        },
+        {
+          "title": "Staff Roll (PlayStation2 version)",
+          "plays": "22K plays",
+          "videoId": "YXR1kWg9EQ8"
+        },
+        {
+          "title": "Attract Movie (Arcade version)",
+          "plays": "18K plays",
+          "videoId": "RBJa_sbCnMk"
+        },
+        {
+          "title": "Attract -Embu- (Arcade version)",
+          "plays": "42K plays",
+          "videoId": "G333g7NNARw"
+        },
+        {
+          "title": "Character Select (Arcade version)",
+          "plays": "40K plays",
+          "videoId": "fOgf_hHY_vM"
+        },
+        {
+          "title": "Paul Phoenix (Arcade version)",
+          "plays": "46K plays",
+          "videoId": "v4i7GimtsKg"
+        },
+        {
+          "title": "Forest Law (Arcade version)",
+          "plays": "56K plays",
+          "videoId": "dphnZynNxkg"
+        },
+        {
+          "title": "Lei Wulong (Arcade version)",
+          "plays": "59K plays",
+          "videoId": "GtziMpIQqnM"
+        },
+        {
+          "title": "King (Arcade version)",
+          "plays": "87K plays",
+          "videoId": "OJBhrrIB_qY"
+        },
+        {
+          "title": "Yoshimitsu (Arcade version)",
+          "plays": "37K plays",
+          "videoId": "5XNDXpMDjGw"
+        },
+        {
+          "title": "Nina Williams (Arcade version)",
+          "plays": "37K plays",
+          "videoId": "TiAv7mEWmBk"
+        },
+        {
+          "title": "Hwoarang (Arcade version)",
+          "plays": "44K plays",
+          "videoId": "iCgse-LAUaY"
+        },
+        {
+          "title": "Ling Xiaoyu (Arcade version)",
+          "plays": "28K plays",
+          "videoId": "-UiKzcMgtkU"
+        },
+        {
+          "title": "Eddy Gordo (Arcade version)",
+          "plays": "34K plays",
+          "videoId": "5puwxqe9PQ0"
+        },
+        {
+          "title": "Jin Kazama (Arcade version)",
+          "plays": "214K plays",
+          "videoId": "fee1uS_gn0A"
+        },
+        {
+          "title": "For Hidden Characters (Arcade version)",
+          "plays": "174K plays",
+          "videoId": "5-2niSC92Tc"
+        },
+        {
+          "title": "Heihachi Mishima (Arcade version)",
+          "plays": "34K plays",
+          "videoId": "jj9c064vxAA"
+        },
+        {
+          "title": "Ogre (Arcade version)",
+          "plays": "44K plays",
+          "videoId": "h_FLZY_7k00"
+        },
+        {
+          "title": "Continue (Arcade version)",
+          "plays": "9.5K plays",
+          "videoId": "FWJeRjS87yw"
+        },
+        {
+          "title": "Game Over (Arcade version)",
+          "plays": "6.3K plays",
+          "videoId": "ST2NU8BLoV4"
+        },
+        {
+          "title": "Staff Roll (Arcade version)",
+          "plays": "16K plays",
+          "videoId": "4OC0hCznQbI"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_lN15kgsT_4v3C_RwIsVkvtXGIZXHnjzXc"
     },
     {
       "id": "dark-souls-remastered",
@@ -94547,7 +94976,9 @@
       "id": "gears-of-war",
       "title": "Gears of War Soundtrack",
       "game": "Gears of War",
-      "composers": [],
+      "composers": [
+        "Kevin Riepl"
+      ],
       "date": "2006-11-07",
       "sources": [
         {
@@ -94558,142 +94989,175 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Gears+of+War+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2EvXv7RdzqK",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8rkr.jpg",
       "notable": true,
       "company": "Epic Games",
       "console": true,
+      "genres": [
+        "Shooter"
+      ],
       "tracks": [
         {
           "title": "Gears of War",
-          "plays": null
+          "plays": "71K plays",
+          "videoId": "j_Pouu3EjMs"
         },
         {
           "title": "14 Years After E-Day",
-          "plays": null
+          "plays": "28K plays",
+          "videoId": "alRTzklBcTo"
         },
         {
           "title": "Jacinto Prison",
-          "plays": null
+          "plays": "8.4K plays",
+          "videoId": "OXhxNNfBDIA"
         },
         {
           "title": "Attack of the Drones",
-          "plays": null
+          "plays": "15K plays",
+          "videoId": "H_HloIeCpE0"
         },
         {
           "title": "Embry Square",
-          "plays": null
+          "plays": "12K plays",
+          "videoId": "d2gLfrJuyvQ"
         },
         {
           "title": "Fish in a Barrel",
-          "plays": null
+          "plays": "10K plays",
+          "videoId": "0s9rcGMWKxk"
         },
         {
           "title": "House of Sovereigns",
-          "plays": null
+          "plays": "11K plays",
+          "videoId": "2nIZ6vcq-yM"
         },
         {
           "title": "Minh's Death",
-          "plays": null
+          "plays": "11K plays",
+          "videoId": "18L3VOvvDhs"
         },
         {
           "title": "Entering The Tombs",
-          "plays": null
+          "plays": "4.1K plays",
+          "videoId": "TBIsexrUTkU"
         },
         {
           "title": "Tomb of the Unknowns",
-          "plays": null
+          "plays": "4.2K plays",
+          "videoId": "17gpG9QcVUM"
         },
         {
           "title": "Ephyra Streets I",
-          "plays": null
+          "plays": "4.6K plays",
+          "videoId": "aabdv-raJ-o"
         },
         {
           "title": "Ephyra Streets II",
-          "plays": null
+          "plays": "11K plays",
+          "videoId": "Tq1fiovPRyc"
         },
         {
           "title": "Miserable Wretches",
-          "plays": null
+          "plays": "7K plays",
+          "videoId": "m49Oeg48FoA"
         },
         {
           "title": "Stay in the Light",
-          "plays": null
+          "plays": "3K plays",
+          "videoId": "zy43b2vLzZc"
         },
         {
           "title": "Chap's Gas Station",
-          "plays": null
+          "plays": "2.8K plays",
+          "videoId": "JBEdFr7mbKQ"
         },
         {
           "title": "Fill'er Up at Chap's",
-          "plays": null
+          "plays": "3.3K plays",
+          "videoId": "w4TjuuTTABQ"
         },
         {
           "title": "I Will Kryll You",
-          "plays": null
+          "plays": "6.2K plays",
+          "videoId": "XkZH22if55o"
         },
         {
           "title": "Imulsion Mines",
-          "plays": null
+          "plays": "1.9K plays",
+          "videoId": "oXEcqiSYPVI"
         },
         {
           "title": "Locusts, Wretches, and Kryll, Oh My",
-          "plays": null
+          "plays": "2.9K plays",
+          "videoId": "TwqOTef2_FI"
         },
         {
           "title": "5 Cent Cave Tour",
-          "plays": null
+          "plays": "2.2K plays",
+          "videoId": "vN-0uFPNLfo"
         },
         {
           "title": "East Barricade Academy",
-          "plays": null
+          "plays": "10K plays",
+          "videoId": "yer0hZ504Ak"
         },
         {
           "title": "The Fenix Estate",
-          "plays": null
+          "plays": "2.4K plays",
+          "videoId": "TWG2VoG1dNY"
         },
         {
           "title": "Hidden Lab",
-          "plays": null
+          "plays": "2.7K plays",
+          "videoId": "jemYvGXw3qw"
         },
         {
           "title": "Locusts Over for Dinner",
-          "plays": null
+          "plays": "3.6K plays",
+          "videoId": "6hg6N4dzjlg"
         },
         {
           "title": "Running With Boomers",
-          "plays": null
+          "plays": "5.9K plays",
+          "videoId": "dEOl_6ci9QM"
         },
         {
           "title": "Oh the Horror",
-          "plays": null
+          "plays": "2.3K plays",
+          "videoId": "eNDLcnZrsgQ"
         },
         {
           "title": "Train Wreck (Locust Theme)",
-          "plays": null
+          "plays": "33K plays",
+          "videoId": "Lzc8I7x_Mok"
         },
         {
           "title": "Train Ride To Hell",
-          "plays": null
+          "plays": "13K plays",
+          "videoId": "9fCLdlHaweg"
         },
         {
           "title": "Gears of War Reprise",
-          "plays": null
+          "plays": "5.2K plays",
+          "videoId": "9hroXCWxn_E"
         },
         {
           "title": "Gears of War (Piano)",
-          "plays": null
+          "plays": "4.7K plays",
+          "videoId": "2dFbIiVPmoc"
         }
       ],
-      "genres": [
-        "Shooter"
-      ]
+      "ytmPlaylistId": "OLAK5uy_lSRvWQco34veSZbYRzLzTqeSdKTmDMKU4"
     },
     {
       "id": "black-mesa",
       "title": "Black Mesa Soundtrack",
       "game": "Black Mesa",
-      "composers": [],
+      "composers": [
+        "Joel Nielsen"
+      ],
       "date": "2020-03-06",
       "sources": [
         {
@@ -94704,138 +95168,169 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Black+Mesa+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_VaGFiRXrlua",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20n4.jpg",
       "notable": true,
       "company": "Crowbar Collective",
       "console": false,
-      "tracks": [
-        {
-          "title": "Anomalous Materials",
-          "plays": null
-        },
-        {
-          "title": "Apprehension (Mesa Remix)",
-          "plays": null
-        },
-        {
-          "title": "Apprehension",
-          "plays": null
-        },
-        {
-          "title": "Blast Pit 1",
-          "plays": null
-        },
-        {
-          "title": "Blast Pit 2 (Mesa Remix)",
-          "plays": null
-        },
-        {
-          "title": "Blast Pit 2",
-          "plays": null
-        },
-        {
-          "title": "Blast Pit 3",
-          "plays": null
-        },
-        {
-          "title": "End Credits, Pt. 1",
-          "plays": null
-        },
-        {
-          "title": "End Credits, Pt. 2",
-          "plays": null
-        },
-        {
-          "title": "Forget About Freeman",
-          "plays": null
-        },
-        {
-          "title": "Inbound, Pt. 1",
-          "plays": null
-        },
-        {
-          "title": "Inbound, Pt. 2",
-          "plays": null
-        },
-        {
-          "title": "Inbound, Pt. 3",
-          "plays": null
-        },
-        {
-          "title": "Lambda Core",
-          "plays": null
-        },
-        {
-          "title": "Office Complex (Mesa Remix)",
-          "plays": null
-        },
-        {
-          "title": "Office Complex",
-          "plays": null
-        },
-        {
-          "title": "On a Rail 1",
-          "plays": null
-        },
-        {
-          "title": "On a Rail 2",
-          "plays": null
-        },
-        {
-          "title": "Power Up",
-          "plays": null
-        },
-        {
-          "title": "Questionable Ethics 1",
-          "plays": null
-        },
-        {
-          "title": "Questionable Ethics 2",
-          "plays": null
-        },
-        {
-          "title": "Residue Processing",
-          "plays": null
-        },
-        {
-          "title": "Surface Tension 1",
-          "plays": null
-        },
-        {
-          "title": "Surface Tension 2",
-          "plays": null
-        },
-        {
-          "title": "Surface Tension 3",
-          "plays": null
-        },
-        {
-          "title": "Surface Tension 4",
-          "plays": null
-        },
-        {
-          "title": "Unforeseen Consequences",
-          "plays": null
-        },
-        {
-          "title": "We've Got Hostiles",
-          "plays": null
-        },
-        {
-          "title": "Black Mesa Theme (Mesa Remix)",
-          "plays": null
-        },
-        {
-          "title": "Black Mesa Theme",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Platform",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Anomalous Materials",
+          "plays": "298K plays",
+          "videoId": "l2kZMCeUH3g"
+        },
+        {
+          "title": "Apprehension (Mesa Remix)",
+          "plays": "114K plays",
+          "videoId": "in3Ud9aU8ig"
+        },
+        {
+          "title": "Apprehension",
+          "plays": "122K plays",
+          "videoId": "n3LMpgKdL5g"
+        },
+        {
+          "title": "Blast Pit 1",
+          "plays": "140K plays",
+          "videoId": "N18AMowMBrA"
+        },
+        {
+          "title": "Blast Pit 2 (Mesa Remix)",
+          "plays": "515K plays",
+          "videoId": "5raTOTZcVfI"
+        },
+        {
+          "title": "Blast Pit 2",
+          "plays": "100K plays",
+          "videoId": "A8C1--DLHcA"
+        },
+        {
+          "title": "Blast Pit 3",
+          "plays": "264K plays",
+          "videoId": "YESjcYJOkjg"
+        },
+        {
+          "title": "End Credits Part 1",
+          "plays": "152K plays",
+          "videoId": "eN1l5rOkduY"
+        },
+        {
+          "title": "End Credits Part 2",
+          "plays": "217K plays",
+          "videoId": "3MQ6ewE8his"
+        },
+        {
+          "title": "Forget About Freeman",
+          "plays": "4.7M plays",
+          "videoId": "9OacXUzTNXo"
+        },
+        {
+          "title": "Inbound Part 1",
+          "plays": "116K plays",
+          "videoId": "oqqhHGIngmg"
+        },
+        {
+          "title": "Inbound Part 2",
+          "plays": "706K plays",
+          "videoId": "JgXret8NA-4"
+        },
+        {
+          "title": "Inbound Part 3",
+          "plays": "607K plays",
+          "videoId": "gCI43CkUrnQ"
+        },
+        {
+          "title": "Lambda Core",
+          "plays": "227K plays",
+          "videoId": "uTvYl4IgEcM"
+        },
+        {
+          "title": "Office Complex (Mesa Remix)",
+          "plays": "77K plays",
+          "videoId": "H3ZAm7FV3zw"
+        },
+        {
+          "title": "Office Complex",
+          "plays": "115K plays",
+          "videoId": "nlPNh7OD-cE"
+        },
+        {
+          "title": "On a Rail 1",
+          "plays": "938K plays",
+          "videoId": "n83E5o_3Mlo"
+        },
+        {
+          "title": "On a Rail 2",
+          "plays": "174K plays",
+          "videoId": "dWa9672xTTU"
+        },
+        {
+          "title": "Power Up",
+          "plays": "77K plays",
+          "videoId": "vQfdoJnyeHw"
+        },
+        {
+          "title": "Questionable Ethics 1",
+          "plays": "926K plays",
+          "videoId": "jUplVeq5RDw"
+        },
+        {
+          "title": "Questionable Ethics 2",
+          "plays": "134K plays",
+          "videoId": "Kb2eKVQ8I4c"
+        },
+        {
+          "title": "Residue Processing",
+          "plays": "90K plays",
+          "videoId": "ffGP5rUDUMg"
+        },
+        {
+          "title": "Surface Tension 1",
+          "plays": "2.1M plays",
+          "videoId": "AKXa7FEDLu0"
+        },
+        {
+          "title": "Surface Tension 2",
+          "plays": "1.7M plays",
+          "videoId": "30AM8K06FJU"
+        },
+        {
+          "title": "Surface Tension 3",
+          "plays": "323K plays",
+          "videoId": "dv_MQJf8lXk"
+        },
+        {
+          "title": "Surface Tension 4",
+          "plays": "257K plays",
+          "videoId": "M4u9IifFiXI"
+        },
+        {
+          "title": "Unforeseen Consequences",
+          "plays": "128K plays",
+          "videoId": "ZOHMU8ZKO2E"
+        },
+        {
+          "title": "We've Got Hostiles",
+          "plays": "1.8M plays",
+          "videoId": "ooFhz4bs_yE"
+        },
+        {
+          "title": "Black Mesa Theme (Mesa Remix)",
+          "plays": "98K plays",
+          "videoId": "zFTqQ2r2c3Q"
+        },
+        {
+          "title": "Black Mesa Theme",
+          "plays": "195K plays",
+          "videoId": "u7p9t9J-2pE"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_m3reYxH2yporf0gIeXBQ7H6TQwun9gmyE"
     },
     {
       "id": "devil-may-cry-5-2019",
@@ -97237,7 +97732,9 @@
       "id": "the-sims",
       "title": "The Sims Soundtrack",
       "game": "The Sims",
-      "composers": [],
+      "composers": [
+        "EA Games Soundtrack"
+      ],
       "date": "2000-02-04",
       "sources": [
         {
@@ -97248,76 +97745,92 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_L0NPU2CEeiP",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8j9a.jpg",
       "notable": true,
       "company": "Maxis",
       "console": false,
+      "genres": [
+        "Simulator"
+      ],
       "tracks": [
         {
           "title": "Now Entering",
-          "plays": null
+          "plays": "475K plays",
+          "videoId": "EoNcrYO-aqc"
         },
         {
           "title": "Neighborhood",
-          "plays": null
+          "plays": "437K plays",
+          "videoId": "zn3ZuoMma0M"
         },
         {
           "title": "Under Construction",
-          "plays": null
+          "plays": "553K plays",
+          "videoId": "XTr5iYRS3d8"
         },
         {
           "title": "Buying Lumber",
-          "plays": null
+          "plays": "406K plays",
+          "videoId": "hiLkYrLuhmo"
         },
         {
           "title": "Mall Rat",
-          "plays": null
+          "plays": "984K plays",
+          "videoId": "4rFmI0hK4d4"
         },
         {
           "title": "Groceries",
-          "plays": null
+          "plays": "330K plays",
+          "videoId": "1JbSBLXGlgg"
         },
         {
           "title": "SIMnata #4",
-          "plays": null
+          "plays": "125K plays",
+          "videoId": "ORrz35x5kpA"
         },
         {
           "title": "SIMnata #15",
-          "plays": null
+          "plays": "118K plays",
+          "videoId": "3IDJHuXLS4w"
         },
         {
           "title": "BoSIM Nova",
-          "plays": null
+          "plays": "431K plays",
+          "videoId": "8PIWcE-knU4"
         },
         {
           "title": "Samba SIM",
-          "plays": null
+          "plays": "97K plays",
+          "videoId": "STtQeRaoCbE"
         },
         {
           "title": "SIM Nights",
-          "plays": null
+          "plays": "321K plays",
+          "videoId": "cO5r3fRu4VM"
         },
         {
           "title": "Fishin'",
-          "plays": null
+          "plays": "69K plays",
+          "videoId": "h4wU0ddRSvM"
         },
         {
           "title": "SIM Hoe Down",
-          "plays": null
+          "plays": "57K plays",
+          "videoId": "_FUrP6Ofzns"
         },
         {
           "title": "SIm Yonder",
-          "plays": null
+          "plays": "52K plays",
+          "videoId": "N4L5G2_iqgM"
         },
         {
           "title": "SIM Hagar",
-          "plays": null
+          "plays": "55K plays",
+          "videoId": "kZf2ohV77MI"
         }
       ],
-      "genres": [
-        "Simulator"
-      ]
+      "ytmPlaylistId": "OLAK5uy_mscafT7oc07jQ84vILLJWn4sYB2Y17sjQ"
     },
     {
       "id": "final-fantasy-viii",
@@ -101595,7 +102108,9 @@
       "id": "tomb-raider-1996",
       "title": "Tomb Raider Soundtrack",
       "game": "Tomb Raider",
-      "composers": [],
+      "composers": [
+        "Jason Graves"
+      ],
       "date": "1996-10-24",
       "sources": [
         {
@@ -101606,98 +102121,119 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Tomb+Raider+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Q9uCEaIfl2I",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3hfx.jpg",
       "notable": true,
       "company": "Core Design",
       "console": true,
-      "tracks": [
-        {
-          "title": "Adventure Found Me",
-          "plays": null
-        },
-        {
-          "title": "The Scavenger's Den",
-          "plays": null
-        },
-        {
-          "title": "Exploring the Island",
-          "plays": null
-        },
-        {
-          "title": "First Blood",
-          "plays": null
-        },
-        {
-          "title": "Reaching Roth",
-          "plays": null
-        },
-        {
-          "title": "Infiltrating the Bunker",
-          "plays": null
-        },
-        {
-          "title": "A Call for Help",
-          "plays": null
-        },
-        {
-          "title": "Entering Himiko's Tomb",
-          "plays": null
-        },
-        {
-          "title": "The Descent",
-          "plays": null
-        },
-        {
-          "title": "The One",
-          "plays": null
-        },
-        {
-          "title": "The Scavenger's Camp",
-          "plays": null
-        },
-        {
-          "title": "Paying Respects",
-          "plays": null
-        },
-        {
-          "title": "On the Beach",
-          "plays": null
-        },
-        {
-          "title": "Secret of the Island",
-          "plays": null
-        },
-        {
-          "title": "The Oni",
-          "plays": null
-        },
-        {
-          "title": "Whitman's Test",
-          "plays": null
-        },
-        {
-          "title": "Scaling the Ziggurat",
-          "plays": null
-        },
-        {
-          "title": "The Ritual",
-          "plays": null
-        },
-        {
-          "title": "A Survivor Is Born",
-          "plays": null
-        },
-        {
-          "title": "The Tomb Raider",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Platform",
         "Puzzle"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Adventure Found Me",
+          "plays": "44K plays",
+          "videoId": "cX_NOs6somw"
+        },
+        {
+          "title": "The Scavenger's Den",
+          "plays": "16K plays",
+          "videoId": "gxV8LPMeMNA"
+        },
+        {
+          "title": "Exploring the Island",
+          "plays": "12K plays",
+          "videoId": "Kh9n2jsmsDQ"
+        },
+        {
+          "title": "First Blood",
+          "plays": "9.2K plays",
+          "videoId": "u_6NYVHCj9Y"
+        },
+        {
+          "title": "Reaching Roth",
+          "plays": "8K plays",
+          "videoId": "9xriXCw2nrk"
+        },
+        {
+          "title": "Infiltrating the Bunker",
+          "plays": "9K plays",
+          "videoId": "s5p-B6UilgA"
+        },
+        {
+          "title": "A Call for Help",
+          "plays": "11K plays",
+          "videoId": "6xNQsKDxG_k"
+        },
+        {
+          "title": "Entering Himiko's Tomb",
+          "plays": "9.3K plays",
+          "videoId": "YlYbLQ6Whds"
+        },
+        {
+          "title": "The Descent",
+          "plays": "5.7K plays",
+          "videoId": "UXiBVcPAXEw"
+        },
+        {
+          "title": "The One",
+          "plays": "5.5K plays",
+          "videoId": "B2_jC8uOIp4"
+        },
+        {
+          "title": "The Scavenger's Camp",
+          "plays": "5.2K plays",
+          "videoId": "XQh6D6Vwv-Q"
+        },
+        {
+          "title": "Paying Respects",
+          "plays": "5.8K plays",
+          "videoId": "6KHSJGkRTBM"
+        },
+        {
+          "title": "On the Beach",
+          "plays": "5.5K plays",
+          "videoId": "9C5oetEmutw"
+        },
+        {
+          "title": "Secret of the Island",
+          "plays": "4.9K plays",
+          "videoId": "nXMuJoDZfCE"
+        },
+        {
+          "title": "The Oni",
+          "plays": "5.7K plays",
+          "videoId": "fhMf_CNzhlk"
+        },
+        {
+          "title": "Whitman's Test",
+          "plays": "3.9K plays",
+          "videoId": "kaCH75xVdkI"
+        },
+        {
+          "title": "Scaling the Ziggurat",
+          "plays": "10K plays",
+          "videoId": "DzgwJ7g4YT8"
+        },
+        {
+          "title": "The Ritual",
+          "plays": "5.9K plays",
+          "videoId": "1b8h7oMO0yg"
+        },
+        {
+          "title": "A Survivor Is Born",
+          "plays": "165K plays",
+          "videoId": "EZelAOAPaBs"
+        },
+        {
+          "title": "The Tomb Raider",
+          "plays": "26K plays",
+          "videoId": "iiVUXL6_REM"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nBdzvvCPDDR7GEK3B4jW-owOoIVEOAR3s"
     },
     {
       "id": "s-t-a-l-k-e-r-shadow-of-chernobyl",
@@ -104380,86 +104916,104 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Evil+Within+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xwXtd7A3GRh",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5wgs.jpg",
       "notable": true,
       "company": "Tango Gameworks",
       "console": true,
-      "tracks": [
-        {
-          "title": "Clair De Lune",
-          "plays": null
-        },
-        {
-          "title": "Code 3: En Route",
-          "plays": null
-        },
-        {
-          "title": "One Eight Four: On-Scene",
-          "plays": null
-        },
-        {
-          "title": "Crude Contraption",
-          "plays": null
-        },
-        {
-          "title": "Them",
-          "plays": null
-        },
-        {
-          "title": "Turning",
-          "plays": null
-        },
-        {
-          "title": "Fire Seems to Work",
-          "plays": null
-        },
-        {
-          "title": "Don't Be a Hero",
-          "plays": null
-        },
-        {
-          "title": "Descent to Doom",
-          "plays": null
-        },
-        {
-          "title": "Lurking in the Dark",
-          "plays": null
-        },
-        {
-          "title": "Towering Terror",
-          "plays": null
-        },
-        {
-          "title": "Inside the Psyche",
-          "plays": null
-        },
-        {
-          "title": "Hide and Seek",
-          "plays": null
-        },
-        {
-          "title": "Retrieval",
-          "plays": null
-        },
-        {
-          "title": "Cold Corridors",
-          "plays": null
-        },
-        {
-          "title": "Déjà Vu",
-          "plays": null
-        },
-        {
-          "title": "Grey Matter",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Puzzle",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Clair De Lune",
+          "plays": "2.1M plays",
+          "videoId": "cVrSNOuWY3c"
+        },
+        {
+          "title": "Code 3: En Route",
+          "plays": "10K plays",
+          "videoId": "5kU6JNksC6g"
+        },
+        {
+          "title": "One Eight Four: On-Scene",
+          "plays": "9K plays",
+          "videoId": "xL1nRKb5sDA"
+        },
+        {
+          "title": "Crude Contraption",
+          "plays": "7.6K plays",
+          "videoId": "Nsj-7c3OUIw"
+        },
+        {
+          "title": "Them",
+          "plays": "6.9K plays",
+          "videoId": "JFvhFVmCg8w"
+        },
+        {
+          "title": "Turning",
+          "plays": "4.8K plays",
+          "videoId": "ymAI3NayF2k"
+        },
+        {
+          "title": "Fire Seems to Work",
+          "plays": "13K plays",
+          "videoId": "UgJ6N3U3u7w"
+        },
+        {
+          "title": "Don't Be a Hero",
+          "plays": "6.4K plays",
+          "videoId": "4-B-vdB5ADo"
+        },
+        {
+          "title": "Descent to Doom",
+          "plays": "5K plays",
+          "videoId": "FL_mVHiIdbE"
+        },
+        {
+          "title": "Lurking in the Dark",
+          "plays": "5.5K plays",
+          "videoId": "811ePfBZ0IQ"
+        },
+        {
+          "title": "Towering Terror",
+          "plays": "5.5K plays",
+          "videoId": "kEk1xmAlVe8"
+        },
+        {
+          "title": "Inside the Psyche",
+          "plays": "3.4K plays",
+          "videoId": "XxVwt3Pkn28"
+        },
+        {
+          "title": "Hide and Seek",
+          "plays": "8.1K plays",
+          "videoId": "OfyZf-_Q2Zo"
+        },
+        {
+          "title": "Retrieval",
+          "plays": "3.4K plays",
+          "videoId": "YEn5JbQcWD0"
+        },
+        {
+          "title": "Cold Corridors",
+          "plays": "3.9K plays",
+          "videoId": "4AiO6q7dWYw"
+        },
+        {
+          "title": "Déjà Vu",
+          "plays": "3.5K plays",
+          "videoId": "p3Khu_xuc6A"
+        },
+        {
+          "title": "Grey Matter",
+          "plays": "5.3K plays",
+          "videoId": "5EV2-SH6D5M"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_n6vrxj4eA3xvzi4lW3uPZ4ayK-sEkVbFE"
     },
     {
       "id": "mortal-kombat",
@@ -105240,7 +105794,10 @@
       "id": "need-for-speed-most-wanted-2012",
       "title": "Need for Speed: Most Wanted Soundtrack",
       "game": "Need for Speed: Most Wanted",
-      "composers": [],
+      "composers": [
+        "EA Games Soundtrack",
+        "Paul Linford"
+      ],
       "date": "2012-10-30",
       "sources": [
         {
@@ -105251,79 +105808,96 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Need+for+Speed%3A+Most+Wanted+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QgKgV6TpCj3",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a5.jpg",
       "notable": true,
       "company": "Criterion Games",
       "console": true,
-      "tracks": [
-        {
-          "title": "Kick It Up A Notch",
-          "plays": null
-        },
-        {
-          "title": "Feels Good Donit",
-          "plays": null
-        },
-        {
-          "title": "My, My, Missy",
-          "plays": null
-        },
-        {
-          "title": "Don't Like It Do Ya",
-          "plays": null
-        },
-        {
-          "title": "Ya Think",
-          "plays": null
-        },
-        {
-          "title": "Not Sure 'bout This T",
-          "plays": null
-        },
-        {
-          "title": "This Doesn't Look Good",
-          "plays": null
-        },
-        {
-          "title": "Layin' Low",
-          "plays": null
-        },
-        {
-          "title": "Bet'r Ride",
-          "plays": null
-        },
-        {
-          "title": "Kiss Yer _ss Goodbye",
-          "plays": null
-        },
-        {
-          "title": "Take That Dawg",
-          "plays": null
-        },
-        {
-          "title": "Busted",
-          "plays": null
-        },
-        {
-          "title": "Stakes Are Higher",
-          "plays": null
-        },
-        {
-          "title": "Lucky Break",
-          "plays": null
-        }
-      ],
       "genres": [
         "Racing",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Kick It Up A Notch",
+          "plays": "859K plays",
+          "videoId": "B5OGxym3lXU"
+        },
+        {
+          "title": "Feels Good Donit",
+          "plays": "558K plays",
+          "videoId": "BKqIpIEGzLQ"
+        },
+        {
+          "title": "My, My, Missy",
+          "plays": "418K plays",
+          "videoId": "ciU02dFM5sY"
+        },
+        {
+          "title": "Don't Like It Do Ya",
+          "plays": "517K plays",
+          "videoId": "sl41X3t5-To"
+        },
+        {
+          "title": "Ya Think",
+          "plays": "297K plays",
+          "videoId": "dLG0QMpWj60"
+        },
+        {
+          "title": "Not Sure 'bout This T",
+          "plays": "281K plays",
+          "videoId": "Bhy13WY_uqU"
+        },
+        {
+          "title": "This Doesn't Look Good",
+          "plays": "244K plays",
+          "videoId": "7n6DACiWUoc"
+        },
+        {
+          "title": "Layin' Low",
+          "plays": "190K plays",
+          "videoId": "9B-ZrT96NQA"
+        },
+        {
+          "title": "Bet'r Ride",
+          "plays": "188K plays",
+          "videoId": "ereeQj8064Q"
+        },
+        {
+          "title": "Kiss Yer _ss Goodbye",
+          "plays": "174K plays",
+          "videoId": "VV065hnUOm8"
+        },
+        {
+          "title": "Take That Dawg",
+          "plays": "169K plays",
+          "videoId": "h1lfRqMSL4M"
+        },
+        {
+          "title": "Busted",
+          "plays": "168K plays",
+          "videoId": "7n6VUVUBr-s"
+        },
+        {
+          "title": "Stakes Are Higher",
+          "plays": "151K plays",
+          "videoId": "rWD5Pe6Bxuk"
+        },
+        {
+          "title": "Lucky Break",
+          "plays": "187K plays",
+          "videoId": "jJBYrtrVJpo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kHbTra8wD_pmfGE3NOnIp6StPRlroKoyA"
     },
     {
       "id": "star-wars-battlefront",
       "title": "Star Wars Battlefront Soundtrack",
       "game": "Star Wars Battlefront",
-      "composers": [],
+      "composers": [
+        "Gordy Haab"
+      ],
       "date": "2015-11-17",
       "sources": [
         {
@@ -105334,68 +105908,82 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars+Battlefront+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_6zfNUuaYVwx",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2res.jpg",
       "notable": true,
       "company": "EA Digital Illusions CE",
       "console": true,
+      "genres": [
+        "Shooter"
+      ],
       "tracks": [
         {
           "title": "Walker Assault",
-          "plays": null
+          "plays": "23K plays",
+          "videoId": "E-naDgBMbAo"
         },
         {
           "title": "Pale Blue Orb",
-          "plays": null
+          "plays": "7.5K plays",
+          "videoId": "38NrK4hsL9c"
         },
         {
           "title": "Survivors of Endor",
-          "plays": null
+          "plays": "6.9K plays",
+          "videoId": "UPX8AOz3K64"
         },
         {
           "title": "SoroSuub Skirmish",
-          "plays": null
+          "plays": "5.8K plays",
+          "videoId": "ek041CI-aZ8"
         },
         {
           "title": "The Imperial Advance",
-          "plays": null
+          "plays": "24K plays",
+          "videoId": "UywM1wJQ4dk"
         },
         {
           "title": "The Battle in the Clouds",
-          "plays": null
+          "plays": "12K plays",
+          "videoId": "OjwIjHZIBZ8"
         },
         {
           "title": "Jundland Wastes",
-          "plays": null
+          "plays": "5.9K plays",
+          "videoId": "wE8shOsvpE4"
         },
         {
           "title": "Approach to Landing Pad 13",
-          "plays": null
+          "plays": "4K plays",
+          "videoId": "V-LWZwL4_Hk"
         },
         {
           "title": "Rebel Resistance",
-          "plays": null
+          "plays": "8.7K plays",
+          "videoId": "zqjddlNmvUk"
         },
         {
           "title": "Fully Armed and Operational",
-          "plays": null
+          "plays": "15K plays",
+          "videoId": "TrK82PS2ebc"
         },
         {
           "title": "The Graveyard of Giants",
-          "plays": null
+          "plays": "3.2K plays",
+          "videoId": "hxdZ6U-cB_Q"
         },
         {
           "title": "Jedi on the Battlefront",
-          "plays": null
+          "plays": "8.1K plays",
+          "videoId": "LSY1REH_uso"
         },
         {
           "title": "Attack!",
-          "plays": null
+          "plays": "5.2K plays",
+          "videoId": "LHDE99B-mpk"
         }
       ],
-      "genres": [
-        "Shooter"
-      ]
+      "ytmPlaylistId": "OLAK5uy_mnOTJV4r0k8lbVx3ypHYgnpbkL21BVPXU"
     },
     {
       "id": "wolfenstein-the-old-blood",
@@ -105749,7 +106337,10 @@
       "id": "gears-of-war-2",
       "title": "Gears of War 2 Soundtrack",
       "game": "Gears of War 2",
-      "composers": [],
+      "composers": [
+        "Steve Jablonsky",
+        "Gears of War"
+      ],
       "date": "2008-11-07",
       "sources": [
         {
@@ -105760,124 +106351,152 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Gears+of+War+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_3GeuBnLQ93Q",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28gg.jpg",
       "notable": true,
       "company": "Epic Games",
       "console": true,
+      "genres": [
+        "Shooter"
+      ],
       "tracks": [
         {
           "title": "Return of the Omen",
-          "plays": null
+          "plays": "53K plays",
+          "videoId": "xvyjgOQqJTo"
         },
         {
           "title": "Hope Runs Deep",
-          "plays": null
+          "plays": "2.4M plays",
+          "videoId": "zbH4YGK58UI"
         },
         {
           "title": "Green as Grass",
-          "plays": null
+          "plays": "79K plays",
+          "videoId": "z2TA1MA2tVE"
         },
         {
           "title": "Expectations",
-          "plays": null
+          "plays": "77K plays",
+          "videoId": "OJPZx-EZBm8"
         },
         {
           "title": "Finally, A Lead",
-          "plays": null
+          "plays": "103K plays",
+          "videoId": "Lfe0fJl1CCY"
         },
         {
           "title": "Armored Prayer",
-          "plays": null
+          "plays": "673K plays",
+          "videoId": "KEe0AdQkyNY"
         },
         {
           "title": "Hold Them Off",
-          "plays": null
+          "plays": "145K plays",
+          "videoId": "xD7-YBrjIdU"
         },
         {
           "title": "Derrick Chase",
-          "plays": null
+          "plays": "8.7K plays",
+          "videoId": "rNP1D7pNgLQ"
         },
         {
           "title": "Building Thunder",
-          "plays": null
+          "plays": "57K plays",
+          "videoId": "GQOqPhV0kCs"
         },
         {
           "title": "Hell Breaks Loose",
-          "plays": null
+          "plays": "117K plays",
+          "videoId": "fC6PLEbCmro"
         },
         {
           "title": "Bedlam",
-          "plays": null
+          "plays": "94K plays",
+          "videoId": "YnMH6blUo8U"
         },
         {
           "title": "Breakneck",
-          "plays": null
+          "plays": "115K plays",
+          "videoId": "3gMclGvYm_c"
         },
         {
           "title": "Landown",
-          "plays": null
+          "plays": "72K plays",
+          "videoId": "vHfJyVVZd7k"
         },
         {
           "title": "Racing to Extinction",
-          "plays": null
+          "plays": "122K plays",
+          "videoId": "2Y2NpIHg3eU"
         },
         {
           "title": "If They Can Ride'em",
-          "plays": null
+          "plays": "66K plays",
+          "videoId": "O7Qa4TO8AnQ"
         },
         {
           "title": "Hollow",
-          "plays": null
+          "plays": "53K plays",
+          "videoId": "-TSmhmOskEs"
         },
         {
           "title": "Unexpected Changes",
-          "plays": null
+          "plays": "6.1K plays",
+          "videoId": "R8DtmJWSwAg"
         },
         {
           "title": "March of the Horde",
-          "plays": null
+          "plays": "163K plays",
+          "videoId": "RTUaYfpZB-w"
         },
         {
           "title": "Highway",
-          "plays": null
+          "plays": "53K plays",
+          "videoId": "M2qE0Qczjsk"
         },
         {
           "title": "Denizens of the Deep",
-          "plays": null
+          "plays": "62K plays",
+          "videoId": "VO9wA-BkUMY"
         },
         {
           "title": "With Sympathy",
-          "plays": null
+          "plays": "205K plays",
+          "videoId": "oy4nrHX07-Q"
         },
         {
           "title": "Insurmountable Odds",
-          "plays": null
+          "plays": "118K plays",
+          "videoId": "liTpzdtP9LQ"
         },
         {
           "title": "Bump in the Night",
-          "plays": null
+          "plays": "64K plays",
+          "videoId": "VdxAX8e7aQ0"
         },
         {
           "title": "Frenzy",
-          "plays": null
+          "plays": "156K plays",
+          "videoId": "homgc28rlXw"
         },
         {
           "title": "Outpost",
-          "plays": null
+          "plays": "88K plays",
+          "videoId": "Xz6mt9x3Qz4"
         },
         {
           "title": "Finale",
-          "plays": null
+          "plays": "2.4M plays",
+          "videoId": "vdsB3KfsKnM"
         },
         {
           "title": "Autumn of Mankind",
-          "plays": null
+          "plays": "241K plays",
+          "videoId": "ZfrcMmkFb3s"
         }
       ],
-      "genres": [
-        "Shooter"
-      ]
+      "ytmPlaylistId": "OLAK5uy_mwlvIpw7Xglc9qmFXj5XFMUm5zr_lDBII"
     },
     {
       "id": "resident-evil-1996",
@@ -107593,7 +108212,10 @@
       "id": "command-conquer-red-alert-2",
       "title": "Command & Conquer: Red Alert 2 Soundtrack",
       "game": "Command & Conquer: Red Alert 2",
-      "composers": [],
+      "composers": [
+        "Frank Klepacki",
+        "EA Games Soundtrack"
+      ],
       "date": "2000-10-25",
       "sources": [
         {
@@ -107604,81 +108226,98 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Command+%26+Conquer%3A+Red+Alert+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_I3tvvYElnOm",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coar4c.jpg",
       "notable": true,
       "company": "Westwood Pacific",
       "console": false,
-      "tracks": [
-        {
-          "title": "HM2",
-          "plays": null
-        },
-        {
-          "title": "Industrofunk",
-          "plays": null
-        },
-        {
-          "title": "Ready The Army",
-          "plays": null
-        },
-        {
-          "title": "Grinder",
-          "plays": null
-        },
-        {
-          "title": "In Deep",
-          "plays": null
-        },
-        {
-          "title": "Motorized",
-          "plays": null
-        },
-        {
-          "title": "Power",
-          "plays": null
-        },
-        {
-          "title": "200 Meters",
-          "plays": null
-        },
-        {
-          "title": "Destroy",
-          "plays": null
-        },
-        {
-          "title": "Burn",
-          "plays": null
-        },
-        {
-          "title": "Probing",
-          "plays": null
-        },
-        {
-          "title": "Blow It Up",
-          "plays": null
-        },
-        {
-          "title": "Eagle Hunter",
-          "plays": null
-        },
-        {
-          "title": "Fortification",
-          "plays": null
-        },
-        {
-          "title": "Jank",
-          "plays": null
-        },
-        {
-          "title": "C&C In The House",
-          "plays": null
-        }
-      ],
       "genres": [
         "Real Time Strategy (RTS)",
         "Strategy"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "HM2",
+          "plays": "3.3M plays",
+          "videoId": "cyDwuwwlXcQ"
+        },
+        {
+          "title": "Industrofunk",
+          "plays": "339K plays",
+          "videoId": "nZxqvXfooLs"
+        },
+        {
+          "title": "Ready The Army",
+          "plays": "200K plays",
+          "videoId": "eW85ZMEIr94"
+        },
+        {
+          "title": "Grinder",
+          "plays": "2.3M plays",
+          "videoId": "372obTG80y0"
+        },
+        {
+          "title": "In Deep",
+          "plays": "654K plays",
+          "videoId": "qzSZHfezZ00"
+        },
+        {
+          "title": "Motorized",
+          "plays": "286K plays",
+          "videoId": "Kneyl8cke2A"
+        },
+        {
+          "title": "Power",
+          "plays": "437K plays",
+          "videoId": "OmlHpGTMHI0"
+        },
+        {
+          "title": "200 Meters",
+          "plays": "178K plays",
+          "videoId": "wc5VqFPyTmU"
+        },
+        {
+          "title": "Destroy",
+          "plays": "1M plays",
+          "videoId": "Cr7JBuI3-3I"
+        },
+        {
+          "title": "Burn",
+          "plays": "248K plays",
+          "videoId": "Suu1-bXQGng"
+        },
+        {
+          "title": "Probing",
+          "plays": "71K plays",
+          "videoId": "UMbVg96-BH4"
+        },
+        {
+          "title": "Blow It Up",
+          "plays": "543K plays",
+          "videoId": "rEiTpZbouAQ"
+        },
+        {
+          "title": "Eagle Hunter",
+          "plays": "94K plays",
+          "videoId": "3oBLzy_j91g"
+        },
+        {
+          "title": "Fortification",
+          "plays": "245K plays",
+          "videoId": "2nkJAoaEiTc"
+        },
+        {
+          "title": "Jank",
+          "plays": "189K plays",
+          "videoId": "Dp2PCdIBsWQ"
+        },
+        {
+          "title": "C&C In The House",
+          "plays": "94K plays",
+          "videoId": "S4rFhHY5ZFE"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_k69Lo19jSWJCi_mT_04fjiKOpFI1stqMI"
     },
     {
       "id": "pokémon-silver-version",
@@ -107809,7 +108448,9 @@
       "id": "dead-by-daylight",
       "title": "Dead by Daylight Soundtrack",
       "game": "Dead by Daylight",
-      "composers": [],
+      "composers": [
+        "Michel F. April"
+      ],
       "date": "2016-06-14",
       "sources": [
         {
@@ -107820,176 +108461,217 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Dead+by+Daylight+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_XM4fQx0P8my",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5zky.jpg",
       "notable": true,
       "company": "Behaviour Interactive",
       "console": true,
+      "genres": [
+        "Strategy"
+      ],
       "tracks": [
         {
           "title": "Dead by Daylight (Theme)",
-          "plays": null
+          "plays": "3M plays",
+          "videoId": "nc2yOLMCOhs"
         },
         {
           "title": "Being Watched",
-          "plays": null
+          "plays": "97K plays",
+          "videoId": "YTebAWPVJKo"
         },
         {
           "title": "Closing In",
-          "plays": null
+          "plays": "313K plays",
+          "videoId": "SD_zcJuw1S0"
         },
         {
           "title": "No Place to Hide",
-          "plays": null
+          "plays": "233K plays",
+          "videoId": "rUakzJtf6S8"
         },
         {
           "title": "Petrified",
-          "plays": null
+          "plays": "38K plays",
+          "videoId": "HEEgy-ZTbCE"
         },
         {
           "title": "Disoriented",
-          "plays": null
+          "plays": "41K plays",
+          "videoId": "x7XFEJkSQWs"
         },
         {
           "title": "Darkness Rising",
-          "plays": null
+          "plays": "37K plays",
+          "videoId": "eujbhyLT3pE"
         },
         {
           "title": "Liberation",
-          "plays": null
+          "plays": "39K plays",
+          "videoId": "toAsx9uSVgk"
         },
         {
           "title": "Suffering",
-          "plays": null
+          "plays": "32K plays",
+          "videoId": "s2UPoc8KxzM"
         },
         {
           "title": "Entity Brain",
-          "plays": null
+          "plays": "269K plays",
+          "videoId": "TTUxmz_x4yE"
         },
         {
           "title": "One Track Mind",
-          "plays": null
+          "plays": "63K plays",
+          "videoId": "R67y-tDwb0k"
         },
         {
           "title": "Punished",
-          "plays": null
+          "plays": "52K plays",
+          "videoId": "mX4ANAU2YtU"
         },
         {
           "title": "Enduring Torment",
-          "plays": null
+          "plays": "52K plays",
+          "videoId": "DQ9z4zOHG34"
         },
         {
           "title": "The Hook",
-          "plays": null
+          "plays": "83K plays",
+          "videoId": "zs-dpttOqpU"
         },
         {
           "title": "Dark Infinity",
-          "plays": null
+          "plays": "48K plays",
+          "videoId": "XHd4aGG5k_A"
         },
         {
           "title": "Death is Not an Escape",
-          "plays": null
+          "plays": "45K plays",
+          "videoId": "PrashIaSWIE"
         },
         {
           "title": "Bleeding",
-          "plays": null
+          "plays": "44K plays",
+          "videoId": "N1cY9grfc_I"
         },
         {
           "title": "Unstable",
-          "plays": null
+          "plays": "126K plays",
+          "videoId": "hcT4-rAaBtA"
         },
         {
           "title": "Kill Hunt",
-          "plays": null
+          "plays": "59K plays",
+          "videoId": "2oOEKMjovXg"
         },
         {
           "title": "Blood Trail",
-          "plays": null
+          "plays": "601K plays",
+          "videoId": "HF46p6dx2z4"
         },
         {
           "title": "Ritual",
-          "plays": null
+          "plays": "27K plays",
+          "videoId": "Z5PdK-I9MtI"
         },
         {
           "title": "Tracking the Prey",
-          "plays": null
+          "plays": "48K plays",
+          "videoId": "T1Q11VttQds"
         },
         {
           "title": "Threatening Gloom",
-          "plays": null
+          "plays": "35K plays",
+          "videoId": "vy0x0Kv-VgY"
         },
         {
           "title": "In the Mouth of Darkness",
-          "plays": null
+          "plays": "36K plays",
+          "videoId": "fegCQWV_Ds4"
         },
         {
           "title": "Forever Lost",
-          "plays": null
+          "plays": "19K plays",
+          "videoId": "Vv9jbQ3waMM"
         },
         {
           "title": "No Will",
-          "plays": null
+          "plays": "20K plays",
+          "videoId": "beKm4kHYSho"
         },
         {
           "title": "Hiding",
-          "plays": null
+          "plays": "33K plays",
+          "videoId": "J2KRilLMwWg"
         },
         {
           "title": "Cruelty",
-          "plays": null
+          "plays": "35K plays",
+          "videoId": "vtWuphTWCvE"
         },
         {
           "title": "Stranded",
-          "plays": null
+          "plays": "19K plays",
+          "videoId": "FJ-RYIV1RLU"
         },
         {
           "title": "Black Blood",
-          "plays": null
+          "plays": "22K plays",
+          "videoId": "-3oJZjaQeWQ"
         },
         {
           "title": "Flesh and Bone (Bonus Track)",
-          "plays": null
+          "plays": "25K plays",
+          "videoId": "-93tzTcPwWg"
         },
         {
           "title": "Hallob",
-          "plays": null
+          "plays": "39K plays",
+          "videoId": "09m7XqXRhOs"
         },
         {
           "title": "Christless",
-          "plays": null
+          "plays": "35K plays",
+          "videoId": "rZPDC8nQmng"
         },
         {
           "title": "Death Dark",
-          "plays": null
+          "plays": "26K plays",
+          "videoId": "QubdTKVlL24"
         },
         {
           "title": "Shadoween",
-          "plays": null
+          "plays": "25K plays",
+          "videoId": "EY-kJst4ZGQ"
         },
         {
           "title": "Lunar",
-          "plays": null
+          "plays": "79K plays",
+          "videoId": "NBy7HovZGnw"
         },
         {
           "title": "The Clown",
-          "plays": null
+          "plays": "247K plays",
+          "videoId": "e4OdMs3s-fY"
         },
         {
           "title": "Bloodline",
-          "plays": null
+          "plays": "37K plays",
+          "videoId": "7nahHIYP3_U"
         },
         {
           "title": "Darkness Among Us",
-          "plays": null
+          "plays": "305K plays",
+          "videoId": "Q8GYLxRqTvU"
         },
         {
           "title": "The Plague",
-          "plays": null
+          "plays": "68K plays",
+          "videoId": "0YW8D3qYJG8"
         }
       ],
-      "genres": [
-        "Strategy"
-      ]
+      "ytmPlaylistId": "OLAK5uy_kNRJ4cIWXMR42-1wmqoI8IhKTTxFUXrDQ"
     },
     {
       "id": "just-cause-3",
@@ -108705,7 +109387,9 @@
       "id": "silent-hill-3",
       "title": "Silent Hill 3 Soundtrack",
       "game": "Silent Hill 3",
-      "composers": [],
+      "composers": [
+        "AKIRA YAMAOKA"
+      ],
       "date": "2003-05-23",
       "sources": [
         {
@@ -108716,117 +109400,148 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Silent+Hill+3+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7cmByV44Zjf",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kol.jpg",
       "notable": true,
       "company": "Team Silent",
       "console": true,
-      "tracks": [
-        {
-          "title": "Lost Carol",
-          "plays": null
-        },
-        {
-          "title": "You're Not Here",
-          "plays": null
-        },
-        {
-          "title": "Float Up from Dream",
-          "plays": null
-        },
-        {
-          "title": "End of Small Sanctuary",
-          "plays": null
-        },
-        {
-          "title": "Breeze - In Monochrome Night",
-          "plays": null
-        },
-        {
-          "title": "Sickness Unto Foolish Death",
-          "plays": null
-        },
-        {
-          "title": "Clockwork Little Happiness",
-          "plays": null
-        },
-        {
-          "title": "Please Love Me… Once More",
-          "plays": null
-        },
-        {
-          "title": "A Stray Child",
-          "plays": null
-        },
-        {
-          "title": "Innocent Moon",
-          "plays": null
-        },
-        {
-          "title": "Maternal Heart",
-          "plays": null
-        },
-        {
-          "title": "Letter - from the Lost Days",
-          "plays": null
-        },
-        {
-          "title": "Dance With Night Wind",
-          "plays": null
-        },
-        {
-          "title": "Never Forgive Me, Never Forget Me",
-          "plays": null
-        },
-        {
-          "title": "Prayer",
-          "plays": null
-        },
-        {
-          "title": "Walk on Vanity Ruins",
-          "plays": null
-        },
-        {
-          "title": "I Want Love",
-          "plays": null
-        },
-        {
-          "title": "Heads No.2",
-          "plays": null
-        },
-        {
-          "title": "Memory of the Waters",
-          "plays": null
-        },
-        {
-          "title": "Rain of Brass Petals",
-          "plays": null
-        },
-        {
-          "title": "Flower Crown of Poppy",
-          "plays": null
-        },
-        {
-          "title": "Sun",
-          "plays": null
-        },
-        {
-          "title": "Uneternal Sleep",
-          "plays": null
-        },
-        {
-          "title": "Hometown",
-          "plays": null
-        },
-        {
-          "title": "I Want Love (Studio Mix)",
-          "plays": null
-        }
-      ],
       "genres": [
         "Puzzle",
         "Adventure"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "Lost Carol",
+          "plays": "612K plays",
+          "videoId": "5fO1e2MT2pk"
+        },
+        {
+          "title": "You're Not Here",
+          "plays": "7.6M plays",
+          "videoId": "UkumV_dHbkg"
+        },
+        {
+          "title": "Float Up from Dream",
+          "plays": "539K plays",
+          "videoId": "7Jr7xw3NLx0"
+        },
+        {
+          "title": "End of Small Sanctuary",
+          "plays": "3M plays",
+          "videoId": "cADH06lKVNA"
+        },
+        {
+          "title": "Breeze - in Monochrome Night",
+          "plays": "1.3M plays",
+          "videoId": "MF4LnJZTyOQ"
+        },
+        {
+          "title": "Sickness Unto Foolish Death",
+          "plays": "1M plays",
+          "videoId": "Mvle7cjUQzM"
+        },
+        {
+          "title": "Clockwork Little Happiness",
+          "plays": "390K plays",
+          "videoId": "yd-D6x-LZ3U"
+        },
+        {
+          "title": "Please Love Me… Once More",
+          "plays": "786K plays",
+          "videoId": "Hs-xYYw43i8"
+        },
+        {
+          "title": "A Stray Child",
+          "plays": "1.1M plays",
+          "videoId": "9TzIS71hM50"
+        },
+        {
+          "title": "Innocent Moon",
+          "plays": "453K plays",
+          "videoId": "56IZMGxG8r8"
+        },
+        {
+          "title": "Maternal Heart",
+          "plays": "748K plays",
+          "videoId": "HglXDxMdSfM"
+        },
+        {
+          "title": "Letter - from The Lost Days",
+          "plays": "1.8M plays",
+          "videoId": "4Df5V40-VYI"
+        },
+        {
+          "title": "Dance With Night Wind",
+          "plays": "1.2M plays",
+          "videoId": "MiFeu9m9Mvo"
+        },
+        {
+          "title": "Never Forgive Me, Never Forget Me",
+          "plays": "3.4M plays",
+          "videoId": "f717iNkYNLk"
+        },
+        {
+          "title": "Prayer",
+          "plays": "218K plays",
+          "videoId": "xFfOBTTrs_c"
+        },
+        {
+          "title": "Walk on Vanity Ruins",
+          "plays": "288K plays",
+          "videoId": "4fR3ZrGPANg"
+        },
+        {
+          "title": "I Want Love",
+          "plays": "707K plays",
+          "videoId": "WFTW49WYf-Y"
+        },
+        {
+          "title": "Heads No.2",
+          "plays": "183K plays",
+          "videoId": "OUiNbzPbIOQ"
+        },
+        {
+          "title": "Memory of The Waters",
+          "plays": "280K plays",
+          "videoId": "28puMNP_i2E"
+        },
+        {
+          "title": "Rain of Brass Petals",
+          "plays": "445K plays",
+          "videoId": "mT2snoYSp6U"
+        },
+        {
+          "title": "Flower Crown of Poppy",
+          "plays": "422K plays",
+          "videoId": "RFkCDt0Guq8"
+        },
+        {
+          "title": "Sun",
+          "plays": "187K plays",
+          "videoId": "u031BN7BmYk"
+        },
+        {
+          "title": "Uneternal Sleep",
+          "plays": "178K plays",
+          "videoId": "uGvnfQhLEwg"
+        },
+        {
+          "title": "Hometown",
+          "plays": "859K plays",
+          "videoId": "Qs57T8jMTzc"
+        },
+        {
+          "title": "I Want Love (Studio Mix)",
+          "plays": "3.7M plays",
+          "videoId": "enHmnTPsp9w"
+        },
+        {
+          "title": "Rain of Brass Petals-Three Voices Edit(Bonus Track)",
+          "plays": "1.1M plays",
+          "videoId": "VcC2DYXYaek"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nAygMZefw6Ya92uIXfPa8QofhlQr5ArZU"
     },
     {
       "id": "xcom-2",
@@ -109547,7 +110262,10 @@
       "id": "borderlands-the-pre-sequel",
       "title": "Borderlands: The Pre-Sequel Soundtrack",
       "game": "Borderlands: The Pre-Sequel",
-      "composers": [],
+      "composers": [
+        "Jesper Kyd",
+        "Borderlands Music"
+      ],
       "date": "2014-10-14",
       "sources": [
         {
@@ -109558,81 +110276,98 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Borderlands%3A+The+Pre-Sequel+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uAWU1elpi5l",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20tq.jpg",
       "notable": true,
       "company": "2K Australia",
       "console": true,
-      "tracks": [
-        {
-          "title": "Spacestation",
-          "plays": null
-        },
-        {
-          "title": "Into the Void",
-          "plays": null
-        },
-        {
-          "title": "Habitat",
-          "plays": null
-        },
-        {
-          "title": "Persistent Impulse",
-          "plays": null
-        },
-        {
-          "title": "Beyond the Biodome",
-          "plays": null
-        },
-        {
-          "title": "Lunar Surface",
-          "plays": null
-        },
-        {
-          "title": "Celestial Spaceport",
-          "plays": null
-        },
-        {
-          "title": "Helio",
-          "plays": null
-        },
-        {
-          "title": "System Interference",
-          "plays": null
-        },
-        {
-          "title": "Arrival",
-          "plays": null
-        },
-        {
-          "title": "Orbiter",
-          "plays": null
-        },
-        {
-          "title": "Full State Feedback",
-          "plays": null
-        },
-        {
-          "title": "Mooncore",
-          "plays": null
-        },
-        {
-          "title": "Eridian Traps",
-          "plays": null
-        },
-        {
-          "title": "Beyond the Biodome (Pleasure Dome Mix)",
-          "plays": null
-        },
-        {
-          "title": "Lunar Surface (Extended Mix)",
-          "plays": null
-        }
-      ],
       "genres": [
         "Shooter",
         "Role-playing (RPG)"
-      ]
+      ],
+      "tracks": [
+        {
+          "title": "SpaceStation",
+          "plays": "9.8K plays",
+          "videoId": "FmusTtyynlY"
+        },
+        {
+          "title": "Into the Void",
+          "plays": "4.7K plays",
+          "videoId": "SLN4ttVLSjY"
+        },
+        {
+          "title": "Habitat",
+          "plays": "4.5K plays",
+          "videoId": "1z0tgJ8YMUQ"
+        },
+        {
+          "title": "Persistent Impulse",
+          "plays": "4K plays",
+          "videoId": "-zB30B8vrJ8"
+        },
+        {
+          "title": "Beyond the Biodome",
+          "plays": "4.5K plays",
+          "videoId": "jjCCplzONlQ"
+        },
+        {
+          "title": "Lunar Surface",
+          "plays": "4.1K plays",
+          "videoId": "4f-TXXAD-OU"
+        },
+        {
+          "title": "Celestial Spaceport",
+          "plays": "3.2K plays",
+          "videoId": "DuDmd9xzufI"
+        },
+        {
+          "title": "Helio",
+          "plays": "5.2K plays",
+          "videoId": "SLmCMmiyL8Q"
+        },
+        {
+          "title": "System Interference",
+          "plays": "2.2K plays",
+          "videoId": "TcyxGSOO5ww"
+        },
+        {
+          "title": "Arrival",
+          "plays": "9.3K plays",
+          "videoId": "AM78lApptxY"
+        },
+        {
+          "title": "Orbiter",
+          "plays": "2.4K plays",
+          "videoId": "HX8SA5g_cbQ"
+        },
+        {
+          "title": "Full State Feedback",
+          "plays": "8.9K plays",
+          "videoId": "TaxYMwbS6As"
+        },
+        {
+          "title": "Mooncore",
+          "plays": "2.3K plays",
+          "videoId": "UXrAAQ6v6DI"
+        },
+        {
+          "title": "Eridian Traps",
+          "plays": "1.8K plays",
+          "videoId": "n3dbYWubutc"
+        },
+        {
+          "title": "Beyond the Biodome (Pleasure Dome Mix)",
+          "plays": "1.9K plays",
+          "videoId": "f8QSnqLwLaU"
+        },
+        {
+          "title": "Lunar Surface (Extended Mix)",
+          "plays": "4.1K plays",
+          "videoId": "-YV6Urhzf-U"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kJ4JEaQZW-s6Q4Zdb1EEHP78419ZmhYdE"
     },
     {
       "id": "new-super-mario-bros",
@@ -177560,6 +178295,12 @@
           "type": "catalog",
           "url": "https://music.youtube.com/browse/MPREb_LVGauvytOPj",
           "seenAt": "2026-07-29T04:37:23Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/marvel-snap",
+          "seenAt": "2026-07-29T04:41:42Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=MARVEL+SNAP+%28Original+Video+Game+Soundtrack%29",
@@ -177623,7 +178364,14 @@
           "videoId": "I28sfTpArYg"
         }
       ],
-      "ytmPlaylistId": "OLAK5uy_nkqvFS-bJ-ShcGbdCN9Jc4P8SP3Ek6cHQ"
+      "ytmPlaylistId": "OLAK5uy_nkqvFS-bJ-ShcGbdCN9Jc4P8SP3Ek6cHQ",
+      "albumTitle": "MARVEL SNAP (Original Video Game Soundtrack)",
+      "company": "Second Dinner",
+      "console": false,
+      "genres": [
+        "Strategy",
+        "Card & Board Game"
+      ]
     },
     {
       "id": "marvel-snap-vol-3",
@@ -190034,6 +190782,2280 @@
         }
       ],
       "ytmPlaylistId": "OLAK5uy_nNbhyLOfGqBlG7YytdTeDRsxDP95GEZ7g"
+    },
+    {
+      "id": "saints-row-iv-the",
+      "title": "Saints Row IV - The Soundtrack",
+      "game": "Saints Row IV",
+      "composers": [
+        "Malcolm Kirby Jr."
+      ],
+      "date": "2013-08-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/saints-row-iv",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Saints+Row+IV+-+The+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_sYhwVSEUYLH",
+      "art": "https://yt3.googleusercontent.com/Ho4awVYKssG541Ycpx-BDcTTqXrY2iIZPPbANqiN4CJdxmISXE5FOXBPDhq-B-S_flucQjRaF4tJFag2=w544-h544-l90-rj",
+      "notable": true,
+      "company": "High Voltage Software",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Saints Row IV",
+          "plays": "3.6M plays",
+          "videoId": "ayfAf5UftRc"
+        },
+        {
+          "title": "The Destroyer",
+          "plays": "73K plays",
+          "videoId": "LcG32VrJn5Q"
+        },
+        {
+          "title": "Northwest City",
+          "plays": "90K plays",
+          "videoId": "du85LOthbAQ"
+        },
+        {
+          "title": "Zero Saints Thirty",
+          "plays": "64K plays",
+          "videoId": "_-somFoHFGI"
+        },
+        {
+          "title": "Emperor Zinyak",
+          "plays": "288K plays",
+          "videoId": "UVE5up4fNqk"
+        },
+        {
+          "title": "The Briefing",
+          "plays": "41K plays",
+          "videoId": "73l3aaiRVCQ"
+        },
+        {
+          "title": "Northeast City",
+          "plays": "67K plays",
+          "videoId": "kGAhnGK71mc"
+        },
+        {
+          "title": "Hunting Mr. X",
+          "plays": "39K plays",
+          "videoId": "5pRuu7CR7vM"
+        },
+        {
+          "title": "The Case of Mr. X",
+          "plays": "41K plays",
+          "videoId": "dMqk2JA1Ao4"
+        },
+        {
+          "title": "Northwest City II",
+          "plays": "47K plays",
+          "videoId": "BrN-dIzC8IY"
+        },
+        {
+          "title": "Not in Steelport Anymore",
+          "plays": "304 plays",
+          "videoId": "TwXTEMkLLzM"
+        },
+        {
+          "title": "Zin Battle",
+          "plays": "87K plays",
+          "videoId": "IN1OlmtAdZg"
+        },
+        {
+          "title": "The Warden Arrival",
+          "plays": "213K plays",
+          "videoId": "YQWFUyp5bHM"
+        },
+        {
+          "title": "Saints of Rage - Stage 1",
+          "plays": "62K plays",
+          "videoId": "xPtdXxmKnDs"
+        },
+        {
+          "title": "Saints of Rage - Stage 2",
+          "plays": "94K plays",
+          "videoId": "WM5cjRfAX20"
+        },
+        {
+          "title": "Saints of Rage - Stage 3",
+          "plays": "56K plays",
+          "videoId": "lvylmNsBhJg"
+        },
+        {
+          "title": "Southwest Drone",
+          "plays": "31K plays",
+          "videoId": "xQNjPxRUTf0"
+        },
+        {
+          "title": "Southwest City",
+          "plays": "107K plays",
+          "videoId": "4ktt6gGc0sY"
+        },
+        {
+          "title": "Power Up C.I.D.",
+          "plays": "104K plays",
+          "videoId": "nEPsPqm-R0c"
+        },
+        {
+          "title": "Going Home Again",
+          "plays": "71K plays",
+          "videoId": "TjCA0qG6JuI"
+        },
+        {
+          "title": "King Me",
+          "plays": "818K plays",
+          "videoId": "ypE4w30ME-k"
+        },
+        {
+          "title": "The Power of Armor",
+          "plays": "91K plays",
+          "videoId": "QueRC82RHeI"
+        },
+        {
+          "title": "Southwest Drone II",
+          "plays": "28K plays",
+          "videoId": "ZwPcNRZHYxE"
+        },
+        {
+          "title": "Let's Get This Shit Started",
+          "plays": "62K plays",
+          "videoId": "RHSbJHls0IM"
+        },
+        {
+          "title": "The Ultimate Badass",
+          "plays": "132K plays",
+          "videoId": "L7MN-olxfEY"
+        },
+        {
+          "title": "Saints Row (Remix)",
+          "plays": "143K plays",
+          "videoId": "Gi8Fn4TTPHA"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nXV0-BAAbtWv7YjjYGhPHuBZ95LGGOSH0"
+    },
+    {
+      "id": "dark-souls-2018",
+      "title": "Dark Souls (Original Game Soundtrack)",
+      "game": "Dark Souls: Remastered",
+      "composers": [
+        "FROMSOFTWARE SOUND TEAM"
+      ],
+      "date": "2018-05-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dark-souls-remastered",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dark+Souls+%28Original+Game+Soundtrack%29+Dark+Souls%3A+Remastered",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HGJ1c42LrMp",
+      "art": "https://yt3.googleusercontent.com/E1O3B-LTdPhG11gIjEKyCyK55fdu7nPoeTPdP32KkTRsnheh6C5O-kzh9BXjuZIA-VedT942JQb3-is=w544-h544-l90-rj",
+      "notable": true,
+      "company": "QLOC",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Prologue",
+          "plays": "138K plays",
+          "videoId": "PAHZiRFwlKs"
+        },
+        {
+          "title": "Firelink Shrine",
+          "plays": "616K plays",
+          "videoId": "Gjht7acg9d4"
+        },
+        {
+          "title": "Taurus Demon",
+          "plays": "219K plays",
+          "videoId": "FbKoy15fwZw"
+        },
+        {
+          "title": "Bell Gargoyle",
+          "plays": "176K plays",
+          "videoId": "tIoqLD-e1ME"
+        },
+        {
+          "title": "Pinwheel",
+          "plays": "72K plays",
+          "videoId": "3cYmf8dsOTg"
+        },
+        {
+          "title": "Gaping Dragon",
+          "plays": "169K plays",
+          "videoId": "UQ3nqf7Ndeo"
+        },
+        {
+          "title": "Chaos Witch Quelaag",
+          "plays": "79K plays",
+          "videoId": "79Pm9_TeiXE"
+        },
+        {
+          "title": "Daughters of Chaos",
+          "plays": "107K plays",
+          "videoId": "J8m9bBOdY7w"
+        },
+        {
+          "title": "Iron Golem",
+          "plays": "132K plays",
+          "videoId": "AbLrslmcH8s"
+        },
+        {
+          "title": "Ornstein & Smough",
+          "plays": "710K plays",
+          "videoId": "hOxLVIPkHTs"
+        },
+        {
+          "title": "Gwynevere, Princess of Sunlight",
+          "plays": "127K plays",
+          "videoId": "rligUk71Hb4"
+        },
+        {
+          "title": "Great Grey Wolf Sif",
+          "plays": "1M plays",
+          "videoId": "Fg_AkYeZcNM"
+        },
+        {
+          "title": "Ceaseless Discharge",
+          "plays": "43K plays",
+          "videoId": "20l-it3Snbw"
+        },
+        {
+          "title": "Centipede Demon",
+          "plays": "55K plays",
+          "videoId": "cTklxS0kdm4"
+        },
+        {
+          "title": "Four Kings",
+          "plays": "102K plays",
+          "videoId": "_tnu_zOB8-g"
+        },
+        {
+          "title": "Seath the Scaleless",
+          "plays": "70K plays",
+          "videoId": "2OAbeM4XQC8"
+        },
+        {
+          "title": "Gravelord Nito",
+          "plays": "67K plays",
+          "videoId": "6Jb_pC5sk3s"
+        },
+        {
+          "title": "Bed of Chaos",
+          "plays": "37K plays",
+          "videoId": "84C6vd2_t-k"
+        },
+        {
+          "title": "The Ancient Dragon",
+          "plays": "132K plays",
+          "videoId": "3bWizcifhRI"
+        },
+        {
+          "title": "Crossbreed Priscilla",
+          "plays": "48K plays",
+          "videoId": "a0YMz7f4SZ0"
+        },
+        {
+          "title": "Dark Sun Gwyndolin",
+          "plays": "188K plays",
+          "videoId": "7akAeZR5Ubw"
+        },
+        {
+          "title": "Gwyn, Lord of Cinder",
+          "plays": "3.1M plays",
+          "videoId": "3bqLGebDRIY"
+        },
+        {
+          "title": "Nameless Song",
+          "plays": "560K plays",
+          "videoId": "90a5OuC9Fr8"
+        },
+        {
+          "title": "Sanctuary Guardian",
+          "plays": "39K plays",
+          "videoId": "fnciEKtYqiU"
+        },
+        {
+          "title": "Knight Artorias",
+          "plays": "475K plays",
+          "videoId": "Eg4mvKnbYTs"
+        },
+        {
+          "title": "Battle of Stoicism",
+          "plays": "35K plays",
+          "videoId": "RNNIkM4Cg-U"
+        },
+        {
+          "title": "Manus, Father of the Abyss",
+          "plays": "74K plays",
+          "videoId": "jxt9K3xZdA4"
+        },
+        {
+          "title": "Kalameet",
+          "plays": "119K plays",
+          "videoId": "6898iSxLjhI"
+        },
+        {
+          "title": "DARK SOULS",
+          "plays": "94K plays",
+          "videoId": "0XZD7sWSH3Q"
+        },
+        {
+          "title": "Overture",
+          "plays": "39K plays",
+          "videoId": "HWlXQOi9vQU"
+        },
+        {
+          "title": "A Moment's Peace",
+          "plays": "896K plays",
+          "videoId": "tCZFx6cx7w8"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_n419B9xdUNCUMyGs89d63YfIZWdMTjfvY"
+    },
+    {
+      "id": "music-from-the-legend-of-zelda-2011",
+      "title": "Music from the Legend of Zelda",
+      "game": "The Legend of Zelda: Ocarina of Time 3D",
+      "composers": [
+        "London Music Works",
+        "Scott Buckley"
+      ],
+      "date": "2011-06-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-ocarina-of-time-3d",
+          "seenAt": "2026-07-29T04:41:42Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-skyward-sword",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Music+from+the+Legend+of+Zelda+The+Legend+of+Zelda%3A+Ocarina+of+Time+3D",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wFxajY5HNbE",
+      "art": "https://yt3.googleusercontent.com/_AmeNd1U5wNpK5vMCzq-AW2U3OQ4YdU5g5-cpruNM0l87WcJOhpy6oNvvuDM1ZjGRMShUmhAuLq45YV8WA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Grezzo",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Main Theme (From \"The Legend of Zelda\")",
+          "plays": "61K plays",
+          "videoId": "6hNLbZceSBU"
+        },
+        {
+          "title": "Zelda II: The Adventure of Link (Palace Theme) [From \"The Legend of Zelda 2\"]",
+          "plays": "29K plays",
+          "videoId": "kCQbsaNwszc"
+        },
+        {
+          "title": "Dark World (From \"The Legend of Zelda: A Link to the Past\")",
+          "plays": "26K plays",
+          "videoId": "fvwi_NVGEmc"
+        },
+        {
+          "title": "Ballad of the Windfish (From \"The Legend of Zelda: Link's Awakening\")",
+          "plays": "24K plays",
+          "videoId": "mLM2BaGdSbY"
+        },
+        {
+          "title": "Song of Storms (from \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "37K plays",
+          "videoId": "hU9bBDoUCbI"
+        },
+        {
+          "title": "Zelda's Lullaby (From \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "22K plays",
+          "videoId": "VCbqkzSwOnY"
+        },
+        {
+          "title": "Song of Healing (From \"The Legend of Zelda: Majora's Mask\")",
+          "plays": "17K plays",
+          "videoId": "ybj45HSXXAU"
+        },
+        {
+          "title": "Palace Of Winds (From \"The Legend of Zelda: Four Swords Adventures\")",
+          "plays": "14K plays",
+          "videoId": "hlQUDXn_JXA"
+        },
+        {
+          "title": "Title Theme (From \"The Legend of Zelda: The Wind Waker\")",
+          "plays": "17K plays",
+          "videoId": "xk7DIc5CBR8"
+        },
+        {
+          "title": "Minish Village (From \"The Legend of Zelda: The Minish Cap\")",
+          "plays": "15K plays",
+          "videoId": "PX0glgGATso"
+        },
+        {
+          "title": "Ilia's Theme (From \"The Legend of Zelda: Twilight Princess\")",
+          "plays": "12K plays",
+          "videoId": "brk4xExQXEk"
+        },
+        {
+          "title": "Linebeck's Theme (From \"The Legend of Zelda: Phantom Hourglass\")",
+          "plays": "14K plays",
+          "videoId": "JL7YNgB7x1o"
+        },
+        {
+          "title": "Realm Overworld (From \"The Legend of Zelda: Spirit Tracks\")",
+          "plays": "12K plays",
+          "videoId": "vnGd0TBxCeA"
+        },
+        {
+          "title": "Skyloft (From \"The Legend of Zelda: Skyward Sword\")",
+          "plays": "12K plays",
+          "videoId": "RCJiz4pTvPs"
+        },
+        {
+          "title": "Lorule Castle (From “The Legend of Zelda: A Link Between Worlds”)",
+          "plays": "11K plays",
+          "videoId": "HJdfxz2zPLk"
+        },
+        {
+          "title": "Woodlands (From “The Legend of Zelda: Tri Force Heroes”)",
+          "plays": "10K plays",
+          "videoId": "QqqhJ30ulk8"
+        },
+        {
+          "title": "Theme (From \"The Legend of Zelda: Breath of the Wild\")",
+          "plays": "15K plays",
+          "videoId": "v3Bs4JL476I"
+        },
+        {
+          "title": "Main Theme (From \"The Legend of Zelda: Tears of the Kingdom\")",
+          "plays": "12K plays",
+          "videoId": "iUmUn21TLmo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
+    },
+    {
+      "id": "witness",
+      "title": "Witness Soundtrack",
+      "game": "The Witness",
+      "composers": [
+        "Marc van der Meulen",
+        "Ghost Stories Incorporated"
+      ],
+      "date": "2016-01-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-witness",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Witness+Soundtrack+The+Witness",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_JtoGdlV9iPV",
+      "art": "https://yt3.googleusercontent.com/G-6kU6z5yl1nrX_xngfpczYnylim3G7pjDCsNLD_tWZnTF7p3pJQcNSv2Uj-v-FIe-Y_qxFFoSQ1xg=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Thekla, Inc",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "tracks": [
+        {
+          "title": "Broken Soul",
+          "plays": "3.1K plays",
+          "videoId": "x5JJMwAM4XE"
+        },
+        {
+          "title": "Broken Soul (Extended)",
+          "plays": "3.1K plays",
+          "videoId": "fnbV6b_Tkxc"
+        },
+        {
+          "title": "Broken Soul (Alternate Extended)",
+          "plays": "3.1K plays",
+          "videoId": "93bN9Nav-OQ"
+        },
+        {
+          "title": "Dark Memories",
+          "plays": "271 plays",
+          "videoId": "xLXWmOtJhGQ"
+        },
+        {
+          "title": "Dark Memories (Alternate)",
+          "plays": "271 plays",
+          "videoId": "oagCiHTP1Rk"
+        },
+        {
+          "title": "Dark Memories (Dramatic)",
+          "plays": "271 plays",
+          "videoId": "6sgv5CMJH8A"
+        },
+        {
+          "title": "Bad Omen",
+          "plays": "350 plays",
+          "videoId": "sEmmmrl6-zk"
+        },
+        {
+          "title": "Hope Turns To Sorrow",
+          "plays": "202 plays",
+          "videoId": "TngAq7p-zFw"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kjhBbyrmX7QhYn9iB0Rovs5PXGrJtoWhw"
+    },
+    {
+      "id": "payday-2-remastered-official-soundtrack-vol-1",
+      "title": "Payday 2 Remastered (Official Soundtrack), Vol. 1",
+      "game": "Payday 2",
+      "composers": [
+        "Simon Viklund"
+      ],
+      "date": "2013-08-13",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/payday-2",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Payday+2+Remastered+%28Official+Soundtrack%29%2C+Vol.+1",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZmLrP8SXIVA",
+      "art": "https://yt3.googleusercontent.com/dVIbpd5qvzJn-VMUIfyzKD-U8Yn0y5bIWqL7sKNBHJkmzYMjNtIcdhnW_X0969yNq1mDBgyGkct7v8s=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Overkill Software",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Role-playing (RPG)",
+        "Tactical"
+      ],
+      "tracks": [
+        {
+          "title": "Mayhem Dressed in a Suit",
+          "plays": "494K plays",
+          "videoId": "qQ3LGeliJR4"
+        },
+        {
+          "title": "Master Plan",
+          "plays": "1.2M plays",
+          "videoId": "MHlPKp0lLoY"
+        },
+        {
+          "title": "Time Window",
+          "plays": "1.2M plays",
+          "videoId": "9vmM7tuHPcI"
+        },
+        {
+          "title": "Black Yellow Moebius",
+          "plays": "847K plays",
+          "videoId": "UK-SLj1bBFc"
+        },
+        {
+          "title": "The Mark",
+          "plays": "1.7M plays",
+          "videoId": "r5Mvytc5EwQ"
+        },
+        {
+          "title": "Full Force Forward",
+          "plays": "893K plays",
+          "videoId": "wwT3mF-k7dQ"
+        },
+        {
+          "title": "Tick Tock",
+          "plays": "789K plays",
+          "videoId": "BJKOJUjVc9o"
+        },
+        {
+          "title": "Fuse Box",
+          "plays": "1M plays",
+          "videoId": "3VIcThpSBDo"
+        },
+        {
+          "title": "Razormind",
+          "plays": "23M plays",
+          "videoId": "_Fl_LJBixfg"
+        },
+        {
+          "title": "Calling All Units",
+          "plays": "3M plays",
+          "videoId": "Sq8pu9i-fhY"
+        },
+        {
+          "title": "Where's the Van",
+          "plays": "878K plays",
+          "videoId": "z8Z1FugAews"
+        },
+        {
+          "title": "Hard Time",
+          "plays": "355K plays",
+          "videoId": "Lwu5WIsYASE"
+        },
+        {
+          "title": "Clean Getaway",
+          "plays": "681K plays",
+          "videoId": "ynVn2n_BJLw"
+        },
+        {
+          "title": "Mayhem Dressed in a Suit (Remix)",
+          "plays": "347K plays",
+          "videoId": "qo1rhs78ZOM"
+        },
+        {
+          "title": "Let's Go Shopping",
+          "plays": "163K plays",
+          "videoId": "WdbAyDUYah4"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kHlshZPlDHPa23_SCQA1v0LekIf4sT7_4"
+    },
+    {
+      "id": "darkest-dungeon-original-video-game-soundtrack-deluxe-edition",
+      "title": "Darkest Dungeon (Original Video Game Soundtrack) [Deluxe Edition]",
+      "game": "Darkest Dungeon",
+      "composers": [
+        "Stuart Chatwood"
+      ],
+      "date": "2016-01-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/darkest-dungeon",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Darkest+Dungeon+%28Original+Video+Game+Soundtrack%29+%5BDeluxe+Edition%5D",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_yjRmK09D7oV",
+      "art": "https://yt3.googleusercontent.com/cK9UATAhvDkQ5Fh3AP7fdmF4hGszA8vW8rgKh46GNUIHQKQukUkljgMwylSjWDu1wNlEQS4l32sj_V7n=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Red Hook Studios",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Turn-based strategy (TBS)"
+      ],
+      "tracks": [
+        {
+          "title": "Darkest Dungeon (Theme)",
+          "plays": "496K plays",
+          "videoId": "UpIBKNxSeZU"
+        },
+        {
+          "title": "The Hamlet",
+          "plays": "338K plays",
+          "videoId": "09u0rZJ0WEs"
+        },
+        {
+          "title": "Explore the Ruins",
+          "plays": "308K plays",
+          "videoId": "1gryP9yJm7U"
+        },
+        {
+          "title": "Combat in the Ruins",
+          "plays": "1.6M plays",
+          "videoId": "Lxhvesbwz3E"
+        },
+        {
+          "title": "A Brief Respite (Camp Theme)",
+          "plays": "616K plays",
+          "videoId": "rkL4_VKpyFQ"
+        },
+        {
+          "title": "Battle in the Warrens",
+          "plays": "340K plays",
+          "videoId": "SVHwaYU1W5Q"
+        },
+        {
+          "title": "Return to the Warrens",
+          "plays": "233K plays",
+          "videoId": "uGIK6dAe2Ko"
+        },
+        {
+          "title": "Mournweald Encounter",
+          "plays": "394K plays",
+          "videoId": "iv_m90xRzaM"
+        },
+        {
+          "title": "Terror and Madness (Trailer)",
+          "plays": "164K plays",
+          "videoId": "0tpSUB4Q79c"
+        },
+        {
+          "title": "House of Ruin (Trailer)",
+          "plays": "164K plays",
+          "videoId": "BvKI-UxJTCQ"
+        },
+        {
+          "title": "The Cove Battle",
+          "plays": "1.5M plays",
+          "videoId": "KRQYHh8xlEw"
+        },
+        {
+          "title": "The Final Combat",
+          "plays": "3.2M plays",
+          "videoId": "aXGVMaBY3UA"
+        },
+        {
+          "title": "The End",
+          "plays": "75K plays",
+          "videoId": "CLfkw61bAyc"
+        },
+        {
+          "title": "Town in Chaos",
+          "plays": "2.8M plays",
+          "videoId": "Ma-WJUidpRU"
+        },
+        {
+          "title": "The Cove Battle Siren (feat. Jennifer Chao)",
+          "plays": "1.5M plays",
+          "videoId": "FaZI8C_4OSA"
+        },
+        {
+          "title": "Bloodletting of the Crimson Court",
+          "plays": "1.4M plays",
+          "videoId": "o_YXZxBfIyM"
+        },
+        {
+          "title": "A Mocking Thirst",
+          "plays": "71K plays",
+          "videoId": "0niyqEOA9EM"
+        },
+        {
+          "title": "Forbidden Tannin",
+          "plays": "55K plays",
+          "videoId": "2K__hZt3xoU"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_ncQksVc5QMWUsY8LVIp_Al2WutssesyWg"
+    },
+    {
+      "id": "music-from-the-legend-of-zelda-2004",
+      "title": "Music from the Legend of Zelda",
+      "game": "The Legend of Zelda: The Minish Cap",
+      "composers": [
+        "London Music Works",
+        "Scott Buckley"
+      ],
+      "date": "2004-11-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-the-minish-cap",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Music+from+the+Legend+of+Zelda+The+Legend+of+Zelda%3A+The+Minish+Cap",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wFxajY5HNbE",
+      "art": "https://yt3.googleusercontent.com/_AmeNd1U5wNpK5vMCzq-AW2U3OQ4YdU5g5-cpruNM0l87WcJOhpy6oNvvuDM1ZjGRMShUmhAuLq45YV8WA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Capcom Production Studio 1",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Main Theme (From \"The Legend of Zelda\")",
+          "plays": "61K plays",
+          "videoId": "6hNLbZceSBU"
+        },
+        {
+          "title": "Zelda II: The Adventure of Link (Palace Theme) [From \"The Legend of Zelda 2\"]",
+          "plays": "29K plays",
+          "videoId": "kCQbsaNwszc"
+        },
+        {
+          "title": "Dark World (From \"The Legend of Zelda: A Link to the Past\")",
+          "plays": "26K plays",
+          "videoId": "fvwi_NVGEmc"
+        },
+        {
+          "title": "Ballad of the Windfish (From \"The Legend of Zelda: Link's Awakening\")",
+          "plays": "24K plays",
+          "videoId": "mLM2BaGdSbY"
+        },
+        {
+          "title": "Song of Storms (from \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "37K plays",
+          "videoId": "hU9bBDoUCbI"
+        },
+        {
+          "title": "Zelda's Lullaby (From \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "22K plays",
+          "videoId": "VCbqkzSwOnY"
+        },
+        {
+          "title": "Song of Healing (From \"The Legend of Zelda: Majora's Mask\")",
+          "plays": "17K plays",
+          "videoId": "ybj45HSXXAU"
+        },
+        {
+          "title": "Palace Of Winds (From \"The Legend of Zelda: Four Swords Adventures\")",
+          "plays": "14K plays",
+          "videoId": "hlQUDXn_JXA"
+        },
+        {
+          "title": "Title Theme (From \"The Legend of Zelda: The Wind Waker\")",
+          "plays": "17K plays",
+          "videoId": "xk7DIc5CBR8"
+        },
+        {
+          "title": "Minish Village (From \"The Legend of Zelda: The Minish Cap\")",
+          "plays": "15K plays",
+          "videoId": "PX0glgGATso"
+        },
+        {
+          "title": "Ilia's Theme (From \"The Legend of Zelda: Twilight Princess\")",
+          "plays": "12K plays",
+          "videoId": "brk4xExQXEk"
+        },
+        {
+          "title": "Linebeck's Theme (From \"The Legend of Zelda: Phantom Hourglass\")",
+          "plays": "14K plays",
+          "videoId": "JL7YNgB7x1o"
+        },
+        {
+          "title": "Realm Overworld (From \"The Legend of Zelda: Spirit Tracks\")",
+          "plays": "12K plays",
+          "videoId": "vnGd0TBxCeA"
+        },
+        {
+          "title": "Skyloft (From \"The Legend of Zelda: Skyward Sword\")",
+          "plays": "12K plays",
+          "videoId": "RCJiz4pTvPs"
+        },
+        {
+          "title": "Lorule Castle (From “The Legend of Zelda: A Link Between Worlds”)",
+          "plays": "11K plays",
+          "videoId": "HJdfxz2zPLk"
+        },
+        {
+          "title": "Woodlands (From “The Legend of Zelda: Tri Force Heroes”)",
+          "plays": "10K plays",
+          "videoId": "QqqhJ30ulk8"
+        },
+        {
+          "title": "Theme (From \"The Legend of Zelda: Breath of the Wild\")",
+          "plays": "15K plays",
+          "videoId": "v3Bs4JL476I"
+        },
+        {
+          "title": "Main Theme (From \"The Legend of Zelda: Tears of the Kingdom\")",
+          "plays": "12K plays",
+          "videoId": "iUmUn21TLmo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
+    },
+    {
+      "id": "xcom-2-original-soundtrack-from-the-video-game",
+      "title": "XCOM 2 (Original Soundtrack from the Video Game)",
+      "game": "XCOM 2",
+      "composers": [
+        "Tim Wynn"
+      ],
+      "date": "2016-02-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/xcom-2",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=XCOM+2+%28Original+Soundtrack+from+the+Video+Game%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_JZqRYPrPyrN",
+      "art": "https://yt3.googleusercontent.com/TcON-GHA3vUSE7UplgVsjoQ1UtN6HM-V-s6UXTaoCBf8nAF2BCo_wRdgfuti_Q8J41QUGamFPN0VxEs=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Firaxis Games",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Strategy"
+      ],
+      "tracks": [
+        {
+          "title": "Lazarus",
+          "plays": "63K plays",
+          "videoId": "-DQQ9_I3q8M"
+        },
+        {
+          "title": "First Flight",
+          "plays": "20K plays",
+          "videoId": "_rdrVXxliUU"
+        },
+        {
+          "title": "Game Over",
+          "plays": "16K plays",
+          "videoId": "OKcrHiDwXc8"
+        },
+        {
+          "title": "Infiltrator",
+          "plays": "34K plays",
+          "videoId": "N2n5r6LW43g"
+        },
+        {
+          "title": "Welcome to the Lab",
+          "plays": "16K plays",
+          "videoId": "mcvCgj2lhgw"
+        },
+        {
+          "title": "Out of the Ashes",
+          "plays": "47K plays",
+          "videoId": "1yvBXubA85Y"
+        },
+        {
+          "title": "Unification Day",
+          "plays": "15K plays",
+          "videoId": "nx2hhk4r33w"
+        },
+        {
+          "title": "Squad Loadout",
+          "plays": "289K plays",
+          "videoId": "k2r97r1-Tgs"
+        },
+        {
+          "title": "Obey",
+          "plays": "19K plays",
+          "videoId": "wACUsfhcFYA"
+        },
+        {
+          "title": "Retaliation",
+          "plays": "22K plays",
+          "videoId": "LZkrSWNkWZQ"
+        },
+        {
+          "title": "Avenger Attacked",
+          "plays": "13K plays",
+          "videoId": "V3hX64qy3ks"
+        },
+        {
+          "title": "Stage One",
+          "plays": "16K plays",
+          "videoId": "NpndCl01r8w"
+        },
+        {
+          "title": "Implants",
+          "plays": "15K plays",
+          "videoId": "NJNhLiupx5A"
+        },
+        {
+          "title": "Weapons of Choice",
+          "plays": "24K plays",
+          "videoId": "MuTRoaGlvh0"
+        },
+        {
+          "title": "Alien Fortress",
+          "plays": "8.9K plays",
+          "videoId": "AXWwAMbEk1U"
+        },
+        {
+          "title": "Stage Three",
+          "plays": "17K plays",
+          "videoId": "70c3UtNIBbo"
+        },
+        {
+          "title": "Break the Line",
+          "plays": "35K plays",
+          "videoId": "1kPxmcWOEQI"
+        },
+        {
+          "title": "Blacksite Horror",
+          "plays": "7.7K plays",
+          "videoId": "SjpxoNC4qjc"
+        },
+        {
+          "title": "Psi Network",
+          "plays": "7.4K plays",
+          "videoId": "42pmQei9hs0"
+        },
+        {
+          "title": "Codex",
+          "plays": "7.1K plays",
+          "videoId": "u8jCiPKB7cs"
+        },
+        {
+          "title": "New World Order",
+          "plays": "45K plays",
+          "videoId": "3aF43dHV308"
+        },
+        {
+          "title": "Advent Coalition",
+          "plays": "18K plays",
+          "videoId": "BYdxjRK1dYI"
+        },
+        {
+          "title": "Avatar Project",
+          "plays": "10K plays",
+          "videoId": "LQBX0Xs0r5Y"
+        },
+        {
+          "title": "Refugee",
+          "plays": "34K plays",
+          "videoId": "CUyu30j7l2w"
+        },
+        {
+          "title": "Commander Awakens",
+          "plays": "8.6K plays",
+          "videoId": "yw15I0CIKuY"
+        },
+        {
+          "title": "Last Hope",
+          "plays": "13K plays",
+          "videoId": "YneP4ALMf88"
+        },
+        {
+          "title": "Ambush",
+          "plays": "76K plays",
+          "videoId": "pLWLt2Tz_9c"
+        },
+        {
+          "title": "Victory",
+          "plays": "18K plays",
+          "videoId": "VhVhelwnT8k"
+        },
+        {
+          "title": "Outpost",
+          "plays": "12K plays",
+          "videoId": "5fbYDj-dVn0"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_m4QpfvG61S9E9zBY4-OeN1-N0joOff-Cc"
+    },
+    {
+      "id": "demon-s-souls-2009",
+      "title": "Demon's Souls Original Soundtrack",
+      "game": "Demon's Souls",
+      "composers": [
+        "SIE Sound Team"
+      ],
+      "date": "2009-02-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/demon-s-souls",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Demon%27s+Souls+Original+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YCTDUcJpWop",
+      "art": "https://yt3.googleusercontent.com/gIoaKvWnkDD4y1vRLrL620UU6wQbndr2HPX6-KHfewz3wH3ZcMPu6UAlZvy8p6msvG5NqAHu7hjaRQ9G=w544-h544-l90-rj",
+      "notable": true,
+      "company": "FromSoftware",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Demon's Souls",
+          "plays": "64K plays",
+          "videoId": "oYi3re2eQQc"
+        },
+        {
+          "title": "The Beginning",
+          "plays": "37K plays",
+          "videoId": "wyncbF061oA"
+        },
+        {
+          "title": "Maiden Astraea",
+          "plays": "171K plays",
+          "videoId": "Qg8vR7p7al0"
+        },
+        {
+          "title": "Storm King",
+          "plays": "64K plays",
+          "videoId": "0j9DInzkkJI"
+        },
+        {
+          "title": "Flamelurker",
+          "plays": "99K plays",
+          "videoId": "hlrKL7m8gi0"
+        },
+        {
+          "title": "Tales of Old",
+          "plays": "17K plays",
+          "videoId": "c7vjdPQO20w"
+        },
+        {
+          "title": "Penetrator",
+          "plays": "51K plays",
+          "videoId": "etuD98_xVDo"
+        },
+        {
+          "title": "Maneater",
+          "plays": "25K plays",
+          "videoId": "WXo8j2ueiEk"
+        },
+        {
+          "title": "Maiden in Black",
+          "plays": "40K plays",
+          "videoId": "vkVtI7-Mc68"
+        },
+        {
+          "title": "Fool's Idol",
+          "plays": "14K plays",
+          "videoId": "bI3NBlAwLZ4"
+        },
+        {
+          "title": "Leechmonger",
+          "plays": "12K plays",
+          "videoId": "MwUfyOZU8QQ"
+        },
+        {
+          "title": "Tower Knight",
+          "plays": "93K plays",
+          "videoId": "Ab3QFiE71Mk"
+        },
+        {
+          "title": "Old Monk",
+          "plays": "28K plays",
+          "videoId": "FDyzgELBVx4"
+        },
+        {
+          "title": "Phalanx",
+          "plays": "17K plays",
+          "videoId": "F2kjEYuwvRU"
+        },
+        {
+          "title": "Armor Spider",
+          "plays": "20K plays",
+          "videoId": "uPejNeByck8"
+        },
+        {
+          "title": "Dirty Colossus",
+          "plays": "18K plays",
+          "videoId": "fLf59ijp2Cc"
+        },
+        {
+          "title": "Dragon God",
+          "plays": "18K plays",
+          "videoId": "LTl8KhGFDfE"
+        },
+        {
+          "title": "Old King Allant",
+          "plays": "86K plays",
+          "videoId": "yT0V4UJfqRg"
+        },
+        {
+          "title": "The Old One",
+          "plays": "20K plays",
+          "videoId": "X-6QgnJE1qU"
+        },
+        {
+          "title": "One Who Craves Souls",
+          "plays": "66K plays",
+          "videoId": "tZWeCxs6c_s"
+        },
+        {
+          "title": "Return to Slumber",
+          "plays": "52K plays",
+          "videoId": "AaOMkGK0WlQ"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nT7nUCEd8w3fktCFQGttWqupwQIq0SVeo"
+    },
+    {
+      "id": "half-life-official-game",
+      "title": "Half-Life (Official Game Soundtrack)",
+      "game": "Half-Life: Opposing Force",
+      "composers": [
+        "Valve"
+      ],
+      "date": "1999-11-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/half-life-opposing-force",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Half-Life+%28Official+Game+Soundtrack%29+Half-Life%3A+Opposing+Force",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_u1q4plGV0Ja",
+      "art": "https://yt3.googleusercontent.com/FYTVHLri31B6JNIF8kIbZ-biw0KtkPx2auivXiDCsOOHlzRwA-AZocgDTy_0hJrM_hqXfaWDSJkaSG83=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Gearbox Software",
+      "console": false,
+      "genres": [
+        "Shooter",
+        "Platform",
+        "Puzzle"
+      ],
+      "tracks": [
+        {
+          "title": "Adrenaline Horror",
+          "plays": "47K plays",
+          "videoId": "83OnuoaSbs4"
+        },
+        {
+          "title": "Vague Voices",
+          "plays": "39K plays",
+          "videoId": "8lUD6t1YYhE"
+        },
+        {
+          "title": "Klaxon Beat",
+          "plays": "44K plays",
+          "videoId": "--ZtPjR0NjM"
+        },
+        {
+          "title": "Space Ocean",
+          "plays": "26K plays",
+          "videoId": "WihpjuAHcqE"
+        },
+        {
+          "title": "Cavern Ambience",
+          "plays": "30K plays",
+          "videoId": "vs-WJ5JMHa8"
+        },
+        {
+          "title": "Apprehensive",
+          "plays": "9.3K plays",
+          "videoId": "sk7dY1LKNSA"
+        },
+        {
+          "title": "Bass String",
+          "plays": "8K plays",
+          "videoId": "3mRUbT9WcSE"
+        },
+        {
+          "title": "Hurricane Strings",
+          "plays": "16K plays",
+          "videoId": "luhJJNCEfaA"
+        },
+        {
+          "title": "Diabolical Adrenaline Guitar",
+          "plays": "102K plays",
+          "videoId": "ps6UfOBAJN0"
+        },
+        {
+          "title": "Valve Theme (Extended)",
+          "plays": "162K plays",
+          "videoId": "4xzCroUOj2U"
+        },
+        {
+          "title": "Nepal Monastery",
+          "plays": "10K plays",
+          "videoId": "ksbK9Zi0LbY"
+        },
+        {
+          "title": "Alien Shock",
+          "plays": "7.7K plays",
+          "videoId": "a7Z01zk1f8k"
+        },
+        {
+          "title": "Sirens In The Distance",
+          "plays": "10K plays",
+          "videoId": "sUptdTQiY3o"
+        },
+        {
+          "title": "Nuclear Mission Jam",
+          "plays": "90K plays",
+          "videoId": "dfZ-InbGuFQ"
+        },
+        {
+          "title": "Scared Confused Short",
+          "plays": "6.2K plays",
+          "videoId": "C3m-x1A4MRA"
+        },
+        {
+          "title": "Drums & Riffs",
+          "plays": "39K plays",
+          "videoId": "AN5HMOigTvg"
+        },
+        {
+          "title": "Hard Technology Rock",
+          "plays": "33K plays",
+          "videoId": "6ut_z3N_oj4"
+        },
+        {
+          "title": "Steam In The Pipes",
+          "plays": "45K plays",
+          "videoId": "bHNDp3-_QJ0"
+        },
+        {
+          "title": "Electric Guitar Ambience",
+          "plays": "21K plays",
+          "videoId": "nK4qK9htZig"
+        },
+        {
+          "title": "Dimensionless Deepness",
+          "plays": "13K plays",
+          "videoId": "txm2LHhraBE"
+        },
+        {
+          "title": "Military Precision",
+          "plays": "31K plays",
+          "videoId": "EcYztcU5YQ8"
+        },
+        {
+          "title": "Jungle Drums",
+          "plays": "11K plays",
+          "videoId": "HjpCAVEO2R0"
+        },
+        {
+          "title": "Traveling Through Limbo",
+          "plays": "12K plays",
+          "videoId": "8VKyDVqp7QM"
+        },
+        {
+          "title": "Credits Closing Theme",
+          "plays": "166K plays",
+          "videoId": "AdRyMSANpIQ"
+        },
+        {
+          "title": "Threatening Short",
+          "plays": "12K plays",
+          "videoId": "CP9-rR53W8I"
+        },
+        {
+          "title": "Dark Piano Short",
+          "plays": "4.4K plays",
+          "videoId": "8Z92nLR0eRQ"
+        },
+        {
+          "title": "Sharp Fear Short",
+          "plays": "4.2K plays",
+          "videoId": "vf_hiBD4mRY"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_krsQEO0Snx7jGf8vvbCxFDoUUN9_SyFF8"
+    },
+    {
+      "id": "forest",
+      "title": "Forest (Original Soundtrack)",
+      "game": "The Forest",
+      "composers": [
+        "The Music Company"
+      ],
+      "date": "2018-04-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-forest",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Forest+%28Original+Soundtrack%29+The+Forest",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QuCQVetj4Bx",
+      "art": "https://yt3.googleusercontent.com/bvD_OzIx6aSgh_RZcnSLkT8uGLQAwXzMrq-N09NXsWWMtRMRPsFp98wv17PHg83ynGnlDJX4LUlma4qHYw=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Endnight Games Ltd",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Simulator",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Gemma",
+          "plays": "16 plays",
+          "videoId": "-tgBzHf1CVw"
+        },
+        {
+          "title": "Crisi",
+          "plays": "8 plays",
+          "videoId": "Tmd62Ycc68A"
+        },
+        {
+          "title": "La Dark Room del profitto",
+          "plays": "7 plays",
+          "videoId": "RLO3QLaLrnk"
+        },
+        {
+          "title": "Money! Clock!",
+          "plays": "13 plays",
+          "videoId": "22HBmB1ZdVE"
+        },
+        {
+          "title": "Onde",
+          "plays": "8 plays",
+          "videoId": "RYq4MNNpJQY"
+        },
+        {
+          "title": "Tempesta",
+          "plays": "32 plays",
+          "videoId": "_mZNYLkc1-w"
+        },
+        {
+          "title": "Cadere di schianto",
+          "plays": "14 plays",
+          "videoId": "nYv4RwzvRvs"
+        },
+        {
+          "title": "Voglio davvero?",
+          "plays": "8 plays",
+          "videoId": "_PIFPO5x65U"
+        },
+        {
+          "title": "Catarsi",
+          "plays": "6 plays",
+          "videoId": "EmEOFDdFUg4"
+        },
+        {
+          "title": "Ascoltare",
+          "plays": "15 plays",
+          "videoId": "hFTS8JloHG0"
+        },
+        {
+          "title": "Ora sono polvere",
+          "plays": "27 plays",
+          "videoId": "vYQzA8N05ho"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_lODOVMKqdMdMBIpvlx1vRA_Z9jK8idHII"
+    },
+    {
+      "id": "devil-may-cry",
+      "title": "Devil May Cry (Original Game Soundtrack)",
+      "game": "Devil May Cry",
+      "composers": [
+        "Noisia"
+      ],
+      "date": "2001-08-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/devil-may-cry",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Devil+May+Cry+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GFo9SY0bTCv",
+      "art": "https://yt3.googleusercontent.com/6H_-9bQIL8z_q3_0vKbjVBzLdsg2OwFmI6BUcqJgFyz_ArP5qvQwnyB1gY_9IR-5URnsrxBfifsSUFA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Capcom Production Studio 4",
+      "console": true,
+      "genres": [
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Crush Him",
+          "plays": "167K plays",
+          "videoId": "6BRbnL_Wg14"
+        },
+        {
+          "title": "Found",
+          "plays": "168K plays",
+          "videoId": "uWoARlBSADY"
+        },
+        {
+          "title": "Hunter Theme",
+          "plays": "883K plays",
+          "videoId": "LHlCEzIpwhM"
+        },
+        {
+          "title": "Home Truths",
+          "plays": "150K plays",
+          "videoId": "uwqFdk8jqSo"
+        },
+        {
+          "title": "Poison Theme",
+          "plays": "630K plays",
+          "videoId": "hhJdu1v4tfU"
+        },
+        {
+          "title": "Remember Us",
+          "plays": "142K plays",
+          "videoId": "WYe7rQCBXP4"
+        },
+        {
+          "title": "The Flood",
+          "plays": "82K plays",
+          "videoId": "i2NywXNCYNY"
+        },
+        {
+          "title": "Disoriented",
+          "plays": "70K plays",
+          "videoId": "Xyn43DvkaJs"
+        },
+        {
+          "title": "Barbas Theme",
+          "plays": "1.3M plays",
+          "videoId": "dqey8RWSPXQ"
+        },
+        {
+          "title": "Secret World",
+          "plays": "82K plays",
+          "videoId": "xoN4QZG0BW0"
+        },
+        {
+          "title": "Swallowed",
+          "plays": "17K plays",
+          "videoId": "F3yKDHURGVQ"
+        },
+        {
+          "title": "Lilith's Club",
+          "plays": "2.4M plays",
+          "videoId": "Tx3alHfGlRA"
+        },
+        {
+          "title": "Distrust Theme",
+          "plays": "31K plays",
+          "videoId": "fiaO624samM"
+        },
+        {
+          "title": "The Trade",
+          "plays": "109K plays",
+          "videoId": "XXGtElDFyjs"
+        },
+        {
+          "title": "Grave Calling",
+          "plays": "61K plays",
+          "videoId": "S_CxKH4zMWw"
+        },
+        {
+          "title": "The Tower",
+          "plays": "149K plays",
+          "videoId": "R8alx2-qwEk"
+        },
+        {
+          "title": "Mundus Theme",
+          "plays": "1.1M plays",
+          "videoId": "FP4ldBkQvw4"
+        },
+        {
+          "title": "Epitaph",
+          "plays": "14K plays",
+          "videoId": "t04O_-_NtrU"
+        },
+        {
+          "title": "Bad Vibes",
+          "plays": "49K plays",
+          "videoId": "FxevUU5YFpU"
+        },
+        {
+          "title": "Under Watch",
+          "plays": "72K plays",
+          "videoId": "b8qqI77gYDQ"
+        },
+        {
+          "title": "Arcade Machine (Diegetic)",
+          "plays": "54K plays",
+          "videoId": "bev1wJgRElA"
+        },
+        {
+          "title": "Merry Go Round (Diegetic)",
+          "plays": "10K plays",
+          "videoId": "PAriWTLR14E"
+        },
+        {
+          "title": "Road Collapse",
+          "plays": "9.9K plays",
+          "videoId": "TV1tP-vSb3Y"
+        },
+        {
+          "title": "Eyeless",
+          "plays": "91K plays",
+          "videoId": "l3p3wFFGAJw"
+        },
+        {
+          "title": "Virility Advert (Diegetic)",
+          "plays": "7.8K plays",
+          "videoId": "MuedY8lXLmA"
+        },
+        {
+          "title": "Factory Front",
+          "plays": "6.9K plays",
+          "videoId": "nMxCH7pLXnQ"
+        },
+        {
+          "title": "Mass Recall",
+          "plays": "47K plays",
+          "videoId": "rGQjJa8m27U"
+        },
+        {
+          "title": "Kat's Theme",
+          "plays": "212K plays",
+          "videoId": "sZHc3zpncMk"
+        },
+        {
+          "title": "Trace Elements",
+          "plays": "6.3K plays",
+          "videoId": "3bgIvOnPpII"
+        },
+        {
+          "title": "Mixing Room",
+          "plays": "56K plays",
+          "videoId": "opFYOiSI0TY"
+        },
+        {
+          "title": "The Order",
+          "plays": "109K plays",
+          "videoId": "2T_8oy8MJCU"
+        },
+        {
+          "title": "Mean Dick",
+          "plays": "9.5K plays",
+          "videoId": "kkFw0PZoOQc"
+        },
+        {
+          "title": "Threatened",
+          "plays": "5.8K plays",
+          "videoId": "xiPbfkwUq-4"
+        },
+        {
+          "title": "Better Half (The End)",
+          "plays": "84K plays",
+          "videoId": "DzhRtUsOlac"
+        },
+        {
+          "title": "Crystal Core",
+          "plays": "138K plays",
+          "videoId": "XEaMFL3IeIo"
+        },
+        {
+          "title": "Home Truths Reprise",
+          "plays": "160K plays",
+          "videoId": "u9Apr-Ev0uw"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_m-Do43QSjVnbmS-i1R2IugngYH1A2SNWE"
+    },
+    {
+      "id": "vampire-survivors-volume-1",
+      "title": "Vampire Survivors: Volume 1 (Original Soundtrack)",
+      "game": "Vampire Survivors",
+      "composers": [
+        "Daniele Zandara & Will Davies"
+      ],
+      "date": "2022-02-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/vampire-survivors",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Vampire+Survivors%3A+Volume+1+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QpZ6ShHBPS4",
+      "art": "https://yt3.googleusercontent.com/O_45OAVjiplaIYHUKdlVo8-A9WnXL0KjfHetooNd7v0laDtxpxyF3VxU7Wn4hYrkp4_U7EbOeXIbpJs=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Poncle",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "tracks": [
+        {
+          "title": "Side A",
+          "plays": "7K plays",
+          "videoId": "LS99IzaEFu8"
+        },
+        {
+          "title": "Reincarnated Echoes",
+          "plays": "84K plays",
+          "videoId": "6fSCiYZ-ZVU"
+        },
+        {
+          "title": "Copper Green Intent",
+          "plays": "44K plays",
+          "videoId": "r-_W2V3ndHU"
+        },
+        {
+          "title": "Gaze Up at the Stars",
+          "plays": "39K plays",
+          "videoId": "nAEFiIhdJV8"
+        },
+        {
+          "title": "Before Concession",
+          "plays": "36K plays",
+          "videoId": "Y1NuMBGAjJA"
+        },
+        {
+          "title": "Vempair Survaivors",
+          "plays": "39K plays",
+          "videoId": "JXIzJgg_01Q"
+        },
+        {
+          "title": "When the Clouds Drown",
+          "plays": "18K plays",
+          "videoId": "9aANRhArzsM"
+        },
+        {
+          "title": "No Mortals Allowed",
+          "plays": "14K plays",
+          "videoId": "hgB3aFEbT5I"
+        },
+        {
+          "title": "Unholy Invocation",
+          "plays": "18K plays",
+          "videoId": "-WCLiW7pNqI"
+        },
+        {
+          "title": "Needs More Fighting",
+          "plays": "16K plays",
+          "videoId": "T4Omn4sRCK4"
+        },
+        {
+          "title": "The Beginning",
+          "plays": "16K plays",
+          "videoId": "xee2dNllFyI"
+        },
+        {
+          "title": "Red & Blue",
+          "plays": "28K plays",
+          "videoId": "agLiw6mk-kE"
+        },
+        {
+          "title": "Gatti Amari",
+          "plays": "23K plays",
+          "videoId": "-wFMXUrhPu4"
+        },
+        {
+          "title": "Song of Mana",
+          "plays": "32K plays",
+          "videoId": "QNrPkAS3utA"
+        },
+        {
+          "title": "Peji 18",
+          "plays": "16K plays",
+          "videoId": "n5cuF7Q3ls0"
+        },
+        {
+          "title": "Moms are Tough",
+          "plays": "26K plays",
+          "videoId": "1z-iC37jTlQ"
+        },
+        {
+          "title": "Sole Solution",
+          "plays": "18K plays",
+          "videoId": "fPlFLHi5l6M"
+        },
+        {
+          "title": "Dust Elementals",
+          "plays": "11K plays",
+          "videoId": "L5oFFKM1-UE"
+        },
+        {
+          "title": "Temptation of the Occult",
+          "plays": "7.7K plays",
+          "videoId": "PtBApL5cGug"
+        },
+        {
+          "title": "The Eudaimonia Machine",
+          "plays": "8.5K plays",
+          "videoId": "KNwNO6v8Zq0"
+        },
+        {
+          "title": "Cosmic Delight",
+          "plays": "23K plays",
+          "videoId": "hdvlX96G5Q8"
+        },
+        {
+          "title": "It Stares Back",
+          "plays": "7K plays",
+          "videoId": "dqKJes1pvW0"
+        },
+        {
+          "title": "Extinguished Flame",
+          "plays": "9.3K plays",
+          "videoId": "OPLyPk4gRBI"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_k_Jx1qDYO3PxToREZ8LF-K4CdamCpU7Xc"
+    },
+    {
+      "id": "command-conquer-red-alert",
+      "title": "Command & Conquer: Red Alert (Original Soundtrack)",
+      "game": "Command & Conquer: Red Alert",
+      "composers": [
+        "Frank Klepacki",
+        "EA Games Soundtrack"
+      ],
+      "date": "1996-11-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/command-conquer-red-alert",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Command+%26+Conquer%3A+Red+Alert+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_0vvBToSiE3C",
+      "art": "https://yt3.googleusercontent.com/IhJl-fAeFCoEBbrW-33qwxkBv0pqsXjYZ8WjOIGMRw1zC8xvMHS_pEZRrGi-_L6fexG9Yjmi2Crj8AA=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Westwood Studios",
+      "console": true,
+      "genres": [
+        "Real Time Strategy (RTS)",
+        "Strategy"
+      ],
+      "tracks": [
+        {
+          "title": "Hell March",
+          "plays": "14M plays",
+          "videoId": "e3YzmjmAGoI"
+        },
+        {
+          "title": "Radio",
+          "plays": "196K plays",
+          "videoId": "m-VXhuEIs2Q"
+        },
+        {
+          "title": "Crush",
+          "plays": "378K plays",
+          "videoId": "kcEaff1eRL0"
+        },
+        {
+          "title": "Roll Out",
+          "plays": "140K plays",
+          "videoId": "uKV1MeJb8A4"
+        },
+        {
+          "title": "Mud",
+          "plays": "143K plays",
+          "videoId": "ysw9r1mxR-w"
+        },
+        {
+          "title": "Twin Cannon",
+          "plays": "129K plays",
+          "videoId": "2Hm2pECk0ec"
+        },
+        {
+          "title": "Face The Enemy",
+          "plays": "104K plays",
+          "videoId": "OW0Xi31etTM"
+        },
+        {
+          "title": "Run",
+          "plays": "131K plays",
+          "videoId": "b2qjr_Nw8QE"
+        },
+        {
+          "title": "Terminate",
+          "plays": "75K plays",
+          "videoId": "uB5h8fcD5PM"
+        },
+        {
+          "title": "Bigfoot",
+          "plays": "280K plays",
+          "videoId": "hfMw0NKqFek"
+        },
+        {
+          "title": "Workmen",
+          "plays": "148K plays",
+          "videoId": "Y323XsqgVjk"
+        },
+        {
+          "title": "Militant Force",
+          "plays": "82K plays",
+          "videoId": "jYBYz2U7IEI"
+        },
+        {
+          "title": "Dense",
+          "plays": "52K plays",
+          "videoId": "TWJtUj76QYI"
+        },
+        {
+          "title": "Vector",
+          "plays": "96K plays",
+          "videoId": "e9AkE-2kUNc"
+        },
+        {
+          "title": "Smash",
+          "plays": "101K plays",
+          "videoId": "LAmt5oethLw"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mOdXziOjEKpiS6w4HlgkqUZ7ju_1XdBuI"
+    },
+    {
+      "id": "the-elder-scrolls-online",
+      "title": "The Elder Scrolls Online Original Game Soundtrack",
+      "game": "The Elder Scrolls Online",
+      "composers": [],
+      "date": "2014-04-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-elder-scrolls-online",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Elder+Scrolls+Online+Original+Game+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2wSifyGFHFg",
+      "art": "https://yt3.googleusercontent.com/8M54AzNFcUi-GWhcwY4NuEvIDTgEAYsBdrXGv6Zsd3iI9iacVNrrJpknvABUM3Im_eBh0xcEqbemsqt00Q=w544-h544-l90-rj",
+      "notable": true,
+      "company": "ZeniMax Online Studios",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "For Blood, for Glory, for Honor",
+          "plays": "455K plays",
+          "videoId": "wDum-HT5pGU"
+        },
+        {
+          "title": "Moons of Evening Star",
+          "plays": "229K plays",
+          "videoId": "kD3-tOmqrUA"
+        },
+        {
+          "title": "The Three Banners: Fanfare",
+          "plays": "59K plays",
+          "videoId": "P-kovS9jIN0"
+        },
+        {
+          "title": "Omens in the Clouds",
+          "plays": "87K plays",
+          "videoId": "vsY52Ndwdno"
+        },
+        {
+          "title": "Echoes of Aldmeris",
+          "plays": "40K plays",
+          "videoId": "8wlRtIH9TFs"
+        },
+        {
+          "title": "Weapons Drawn",
+          "plays": "92K plays",
+          "videoId": "pzzFFWgdfxM"
+        },
+        {
+          "title": "Yearning for Moonshadow",
+          "plays": "127K plays",
+          "videoId": "7UGrm9Rh-QE"
+        },
+        {
+          "title": "Lowering the Banners (Sundown)",
+          "plays": "34K plays",
+          "videoId": "H1R10tHsNtQ"
+        },
+        {
+          "title": "Dawn Gleams on Cyrodiil",
+          "plays": "170K plays",
+          "videoId": "uSYU_EGSC-c"
+        },
+        {
+          "title": "Rubble and Smoke",
+          "plays": "36K plays",
+          "videoId": "2AI1ru_bUD4"
+        },
+        {
+          "title": "Comrades in Arms",
+          "plays": "31K plays",
+          "videoId": "Ka470rO5vcY"
+        },
+        {
+          "title": "Y’ffre in Every Leaf",
+          "plays": "138K plays",
+          "videoId": "wJDoAmfztD4"
+        },
+        {
+          "title": "North from Riften",
+          "plays": "34K plays",
+          "videoId": "E2hOWBrj6Sw"
+        },
+        {
+          "title": "Moth, Butterfly, and Torchbug",
+          "plays": "295K plays",
+          "videoId": "JnRk2x-KI68"
+        },
+        {
+          "title": "Elegy for the Remans",
+          "plays": "26K plays",
+          "videoId": "UM0N-5T532o"
+        },
+        {
+          "title": "Oath of Malacath",
+          "plays": "48K plays",
+          "videoId": "TtOLoS61roc"
+        },
+        {
+          "title": "Whispers of the Ancestors",
+          "plays": "72K plays",
+          "videoId": "_avnl5egXcU"
+        },
+        {
+          "title": "Vestige of Hope",
+          "plays": "33K plays",
+          "videoId": "haWdRaEqbUw"
+        },
+        {
+          "title": "Sands of the Alik'r",
+          "plays": "74K plays",
+          "videoId": "j4YkcBOguu4"
+        },
+        {
+          "title": "Winged Twilight",
+          "plays": "22K plays",
+          "videoId": "8tmKQndAUVY"
+        },
+        {
+          "title": "Imperial Legion",
+          "plays": "34K plays",
+          "videoId": "iVMx--NlAd0"
+        },
+        {
+          "title": "Auridon Sunrise",
+          "plays": "131K plays",
+          "videoId": "LPu1nGOCUd4"
+        },
+        {
+          "title": "They Did Not Die in Vain",
+          "plays": "29K plays",
+          "videoId": "do6MIoZnE2o"
+        },
+        {
+          "title": "Greenheart",
+          "plays": "146K plays",
+          "videoId": "iZ6LsPVTpPM"
+        },
+        {
+          "title": "Tamriel Beleagured",
+          "plays": "24K plays",
+          "videoId": "l__iDnDfclk"
+        },
+        {
+          "title": "To Dance with Daedra",
+          "plays": "26K plays",
+          "videoId": "tARTo5jT8Fw"
+        },
+        {
+          "title": "The Towers Cast Long Shadows",
+          "plays": "55K plays",
+          "videoId": "PdOvmJHfkcI"
+        },
+        {
+          "title": "Horizons of Cyrodiil",
+          "plays": "27K plays",
+          "videoId": "Hy363VFz438"
+        },
+        {
+          "title": "The Legacy of Lorkhan",
+          "plays": "91K plays",
+          "videoId": "xVVMJQ_lUQw"
+        },
+        {
+          "title": "Arkay Watches",
+          "plays": "19K plays",
+          "videoId": "ytudMTWVtDU"
+        },
+        {
+          "title": "Courage of Ordinary Mortals",
+          "plays": "16K plays",
+          "videoId": "SdThfVskUVY"
+        },
+        {
+          "title": "The Heart of Nirn",
+          "plays": "163K plays",
+          "videoId": "pGc3LV-xUHE"
+        },
+        {
+          "title": "Soaring on Eagle’s Wings",
+          "plays": "31K plays",
+          "videoId": "RYNeZqqF3cM"
+        },
+        {
+          "title": "Stendarr’s Mercy",
+          "plays": "78K plays",
+          "videoId": "-14uzYe6WcQ"
+        },
+        {
+          "title": "Order of the Ancestor Moth",
+          "plays": "15K plays",
+          "videoId": "cJE8BaLsJ7Q"
+        },
+        {
+          "title": "Onslaught at the Gates",
+          "plays": "37K plays",
+          "videoId": "dEE641LeH5A"
+        },
+        {
+          "title": "Alas, the Dragon Shall Break",
+          "plays": "97K plays",
+          "videoId": "kqizC80F_js"
+        },
+        {
+          "title": "The Keep Has Fallen",
+          "plays": "21K plays",
+          "videoId": "hBiyE1Dx8hk"
+        },
+        {
+          "title": "Bruma Against the Jeralls",
+          "plays": "107K plays",
+          "videoId": "d2YwrIjT7F8"
+        },
+        {
+          "title": "We Honor the Slain",
+          "plays": "12K plays",
+          "videoId": "uWPyTx5UFzE"
+        },
+        {
+          "title": "Ruins of the Ayleids",
+          "plays": "14K plays",
+          "videoId": "XfA3Kd7pr78"
+        },
+        {
+          "title": "Anequina Beckons",
+          "plays": "66K plays",
+          "videoId": "iv5_nklS-Xk"
+        },
+        {
+          "title": "Northpoint Nocturne",
+          "plays": "287K plays",
+          "videoId": "_3y6bnYinVc"
+        },
+        {
+          "title": "Memories of Yokuda Lost",
+          "plays": "37K plays",
+          "videoId": "IWoM5aQ4Pfk"
+        },
+        {
+          "title": "Peril Upon the Sands",
+          "plays": "13K plays",
+          "videoId": "CRRU5U59Nok"
+        },
+        {
+          "title": "Tides of the Abecean Sea",
+          "plays": "72K plays",
+          "videoId": "LEhRtgF5Ut8"
+        },
+        {
+          "title": "Beauty of Dawn",
+          "plays": "5.7M plays",
+          "videoId": "zwp8UxIY_iM"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nSsJov-HDcPpPD8a2-hH1uKkcWxMCWfQ8"
+    },
+    {
+      "id": "star-wars-battlefront-2004",
+      "title": "Star Wars: Battlefront (Original Video Game Soundtrack)",
+      "game": "Star Wars: Battlefront",
+      "composers": [
+        "Gordy Haab"
+      ],
+      "date": "2004-09-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-battlefront",
+          "seenAt": "2026-07-29T04:41:42Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+Battlefront+%28Original+Video+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_6zfNUuaYVwx",
+      "art": "https://yt3.googleusercontent.com/xHXDbem3f121UpN1UEysaAfukOZNJHS1CgF7Ep49dthn8QsijH8cwvmya2Nm0lMT03hZcMwqU7eCl2M=w544-h544-l90-rj",
+      "notable": true,
+      "company": "Pandemic Studios",
+      "console": true,
+      "genres": [
+        "Shooter"
+      ],
+      "tracks": [
+        {
+          "title": "Walker Assault",
+          "plays": "23K plays",
+          "videoId": "E-naDgBMbAo"
+        },
+        {
+          "title": "Pale Blue Orb",
+          "plays": "7.5K plays",
+          "videoId": "38NrK4hsL9c"
+        },
+        {
+          "title": "Survivors of Endor",
+          "plays": "6.9K plays",
+          "videoId": "UPX8AOz3K64"
+        },
+        {
+          "title": "SoroSuub Skirmish",
+          "plays": "5.8K plays",
+          "videoId": "ek041CI-aZ8"
+        },
+        {
+          "title": "The Imperial Advance",
+          "plays": "24K plays",
+          "videoId": "UywM1wJQ4dk"
+        },
+        {
+          "title": "The Battle in the Clouds",
+          "plays": "12K plays",
+          "videoId": "OjwIjHZIBZ8"
+        },
+        {
+          "title": "Jundland Wastes",
+          "plays": "5.9K plays",
+          "videoId": "wE8shOsvpE4"
+        },
+        {
+          "title": "Approach to Landing Pad 13",
+          "plays": "4K plays",
+          "videoId": "V-LWZwL4_Hk"
+        },
+        {
+          "title": "Rebel Resistance",
+          "plays": "8.7K plays",
+          "videoId": "zqjddlNmvUk"
+        },
+        {
+          "title": "Fully Armed and Operational",
+          "plays": "15K plays",
+          "videoId": "TrK82PS2ebc"
+        },
+        {
+          "title": "The Graveyard of Giants",
+          "plays": "3.2K plays",
+          "videoId": "hxdZ6U-cB_Q"
+        },
+        {
+          "title": "Jedi on the Battlefront",
+          "plays": "8.1K plays",
+          "videoId": "LSY1REH_uso"
+        },
+        {
+          "title": "Attack!",
+          "plays": "5.2K plays",
+          "videoId": "LHDE99B-mpk"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mnOTJV4r0k8lbVx3ypHYgnpbkL21BVPXU"
     }
   ]
 }
