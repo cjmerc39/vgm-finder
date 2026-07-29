@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T21:08:21Z",
+  "updatedAt": "2026-07-29T21:09:07Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -256084,28 +256084,6 @@
       ]
     },
     {
-      "id": "dynasty-warriors-8-empires-free-alliances-version",
-      "title": "Dynasty Warriors 8: Empires - Free Alliances Version Soundtrack",
-      "game": "Dynasty Warriors 8: Empires - Free Alliances Version",
-      "composers": [],
-      "date": "2015-03-17",
-      "sources": [
-        {
-          "name": "igdb",
-          "type": "catalog",
-          "url": "https://www.igdb.com/games/dynasty-warriors-8-empires-free-alliances-version",
-          "seenAt": "2026-07-29T21:08:07Z"
-        }
-      ],
-      "ytmSearchUrl": "https://music.youtube.com/search?q=Dynasty+Warriors+8%3A+Empires+-+Free+Alliances+Version+Soundtrack",
-      "ytmAlbumUrl": null,
-      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5gau.jpg",
-      "notable": true,
-      "company": "Omega Force",
-      "console": true,
-      "tracks": []
-    },
-    {
       "id": "dynasty-warriors-9-empires-2021",
       "title": "Dynasty Warriors 9: Empires Soundtrack",
       "game": "Dynasty Warriors 9: Empires",
@@ -256131,6 +256109,31 @@
         "Hack and slash/Beat 'em up"
       ],
       "tracks": []
+    },
+    {
+      "id": "dynasty-warriors-8-empires-2014",
+      "title": "Dynasty Warriors 8: Empires Soundtrack",
+      "game": "Dynasty Warriors 8: Empires",
+      "composers": [],
+      "date": "2014-11-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dynasty-warriors-8-empires",
+          "seenAt": "2026-07-29T21:09:06Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dynasty+Warriors+8%3A+Empires+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co492n.jpg",
+      "notable": true,
+      "company": "Omega Force",
+      "console": true,
+      "genres": [
+        "Strategy",
+        "Hack and slash/Beat 'em up"
+      ]
     }
   ]
 }
