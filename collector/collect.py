@@ -386,17 +386,22 @@ _ROMAN_TOKENS = {"ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 
 
 
 def _numfold(norm):
-    """Assassin's Creed II and Assassin's Creed 2 are the same name."""
+    """Assassin's Creed II and Assassin's Creed 2 are the same name, and so
+    are PERSONA5 and Persona 5: letter-digit boundaries split, romans fold."""
+    norm = re.sub(r"(?<=[a-z])(?=[0-9])", " ", norm)
+    norm = re.sub(r"(?<=[0-9])(?=[a-z])", " ", norm)
     return " ".join(str(_ROMAN_TOKENS[t]) if t in _ROMAN_TOKENS else t for t in norm.split())
 
 
 def _hit_from(r):
     n = normalize_title(r.get("title", ""))
-    composers = [a["name"] for a in r.get("artists", [])
-                 if a.get("name") and a["name"].lower() != "various artists"
-                 and normalize_title(a["name"]) != n]
-    if not composers:
+    artists = [a["name"] for a in r.get("artists", []) if a.get("name")]
+    composers = [a for a in artists
+                 if a.lower() != "various artists" and normalize_title(a) != n]
+    if not composers and not any(a.lower() == "various artists" for a in artists):
         return None  # only credit is the album's own name: too ambiguous
+    # "Various Artists" is licensed-compilation convention (Hi-Fi Rush, sports
+    # titles) — a legitimate credit that just names no composer
     thumbs = sorted((t for t in r.get("thumbnails", []) if t.get("url")),
                     key=lambda t: t.get("width") or 0)
     return {"title": r["title"], "composers": composers,

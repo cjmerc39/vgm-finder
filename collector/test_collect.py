@@ -453,6 +453,16 @@ def test_numeral_folding_matches_roman_against_arabic():
     assert collect._numfold("assassin s creed ii") == "assassin s creed 2"
     assert collect._numfold("final fantasy ix") == "final fantasy 9"
     assert collect._numfold("i am the chowder man") == "i am the chowder man"  # "i" stays a word
+    assert collect._numfold("persona5") == "persona 5"  # letter-digit boundary splits
+    p5 = [{"resultType": "album", "browseId": "MPREb_p5", "year": "2018",
+           "title": "PERSONA5 ORIGINAL SOUNDTRACK",
+           "artists": [{"name": "ATLUS Sound Team"}], "thumbnails": []}]
+    assert collect._match_album(p5, n("Persona 5")) is not None
+    hifi = [{"resultType": "album", "browseId": "MPREb_hfr", "year": "2023",
+             "title": "Hi-Fi RUSH: Original Game Soundtrack",
+             "artists": [{"name": "Various Artists"}], "thumbnails": []}]
+    hit = collect._match_album(hifi, n("Hi-Fi Rush"))
+    assert hit is not None and hit["composers"] == []  # VA compilations are legitimate
     ac2 = [{"resultType": "album", "browseId": "MPREb_ac2", "year": "2009",
             "title": "Assassin's Creed 2 (Original Game Soundtrack)",
             "artists": [{"name": "Jesper Kyd"}],

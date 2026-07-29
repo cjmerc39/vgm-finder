@@ -44,7 +44,7 @@ def steam_page_url(start):
             "&sort_by=Reviews_DESC&infinite=1&l=english&cc=US")
 
 
-def _igdb_query(where, offset):
+def _igdb_query(where, offset, typed=True):
     cid = os.environ.get("TWITCH_CLIENT_ID")
     secret = os.environ.get("TWITCH_CLIENT_SECRET")
     if not cid or not secret:
@@ -52,9 +52,10 @@ def _igdb_query(where, offset):
     tok = requests.post("https://id.twitch.tv/oauth2/token", timeout=30, params={
         "client_id": cid, "client_secret": secret,
         "grant_type": "client_credentials"}).json()["access_token"]
+    type_clause = " & game_type = (0,4,8,9)" if typed else ""
     query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, platforms, "
              f"genres.name, involved_companies.company.name, involved_companies.developer; "
-             f"where {where} & game_type = (0,4,8,9); "
+             f"where {where}{type_clause}; "
              f"sort rating_count desc; limit {IGDB_PAGE}; offset {offset};")
     resp = requests.post("https://api.igdb.com/v4/games", data=query.encode(), timeout=30,
                          headers={"Client-ID": cid, "Authorization": f"Bearer {tok}"})
@@ -76,7 +77,7 @@ def default_fetch(url):
         if not slugs:
             return b"[]"
         quoted = ",".join(f'"{s}"' for s in slugs)
-        return _igdb_query(f"slug = ({quoted})", 0)
+        return _igdb_query(f"slug = ({quoted})", 0, typed=False)  # seeds are hand-picked: ports welcome
     if url.startswith("igdb-top:"):
         return _igdb_query(f"rating_count >= {IGDB_BAR}", int(url.split(":", 1)[1]))
     if url.startswith("igdb-recent:"):
