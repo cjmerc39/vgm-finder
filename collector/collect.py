@@ -527,6 +527,7 @@ def _match_album_tokens(results, game_name, year=None):
     if not wants[0]:
         return None
     bare_name = _numeral_tail(normalize_title(game_name)) is None
+    best = best_key = None
     for r in results or []:
         if r.get("resultType") != "album" or not r.get("browseId"):
             continue
@@ -545,9 +546,16 @@ def _match_album_tokens(results, game_name, year=None):
             except (TypeError, ValueError):
                 pass
         hit = _hit_from(r)
-        if hit:
-            return hit
-    return None
+        if not hit:
+            continue
+        # volume numbers are bookkeeping for matching, but not for choosing:
+        # prefer the un-volumed album, then the lowest volume, over whatever
+        # search happened to rank first (Sims 4 once drew Vol. 2)
+        m = re.search(r"\b(?:vol|volume)\.?\s*(\d+)", r.get("title", ""), re.IGNORECASE)
+        key = (1, int(m.group(1))) if m else (0, 0)
+        if best is None or key < best_key:
+            best, best_key = hit, key
+    return best
 
 
 def _match_album_contains(results, game_name, year=None):

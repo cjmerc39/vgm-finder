@@ -912,3 +912,16 @@ def test_purename_album_needs_composer_and_matching_era():
     undated = [dict(kyd[0], year=None)]
     assert collect._match_album_purename(undated, n, 2006) is None
     assert collect._match_album_purename(kyd, n, None) is None
+
+
+def test_token_matcher_prefers_the_lowest_volume():
+    def alb(bid, title):
+        return {"resultType": "album", "browseId": bid, "year": "2014", "title": title,
+                "artists": [{"name": "Ilan Eshkeri"}], "thumbnails": []}
+    vols = [alb("MPREb_v2", "The Sims 4, Vol. 2 (Original Soundtrack)"),
+            alb("MPREb_v1", "The Sims 4, Vol. 1 (Original Soundtrack)")]
+    hit = collect._match_album_tokens(vols, "The Sims 4")
+    assert hit and "Vol. 1" in hit["title"]  # lowest volume beats search order
+    plain = vols + [alb("MPREb_v0", "The Sims 4 (Original Soundtrack)")]
+    hit = collect._match_album_tokens(plain, "The Sims 4")
+    assert hit and hit["title"] == "The Sims 4 (Original Soundtrack)"  # un-volumed beats all

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T13:56:46Z",
+  "updatedAt": "2026-07-29T13:58:26Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -92387,20 +92387,22 @@
       "id": "the-sims-4",
       "title": "The Sims 4 Soundtrack",
       "game": "The Sims 4",
-      "composers": [
-        "Ilan Eshkeri"
-      ],
-      "date": "2014-09-02",
+      "date": "2014-01-01",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/the-sims-4",
           "seenAt": "2026-07-28T22:50:09Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_r1qsuAJIMWd",
+          "seenAt": "2026-07-29T13:58:22Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+4+Soundtrack",
-      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_slJgU2knmAW",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3h3l.jpg",
       "notable": true,
       "company": "The Sims Studio",
@@ -92409,125 +92411,104 @@
         "Role-playing (RPG)",
         "Simulator"
       ],
-      "albumTitle": "The Sims 4, Vol. 2 (Original Game Soundtrack)",
+      "composers": [
+        "EA Games Soundtrack",
+        "Ilan Eshkeri"
+      ],
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_r1qsuAJIMWd",
       "tracks": [
         {
-          "title": "It’s the Sims – The Sims 4 Seasons – Seasons Theme",
-          "plays": "22K plays",
-          "videoId": "GW8lnBKZ2VU"
+          "title": "It's the Sims",
+          "plays": "290K plays",
+          "videoId": "PRVmKCAiRGE"
         },
         {
-          "title": "Aqua",
-          "plays": "11K plays",
-          "videoId": "aUiFzc_oDrM"
+          "title": "Sul Sul",
+          "plays": "91K plays",
+          "videoId": "VwqZ5XVsTrg"
         },
         {
-          "title": "Balham",
-          "plays": "15K plays",
-          "videoId": "uLd0m3BaELM"
+          "title": "Test Card 44",
+          "plays": "93K plays",
+          "videoId": "omHTb28uXh4"
         },
         {
-          "title": "Confetti",
-          "plays": "8.2K plays",
-          "videoId": "ju9t5UJNFME"
+          "title": "Breakfast",
+          "plays": "56K plays",
+          "videoId": "NrMHxyOQUoo"
         },
         {
-          "title": "Crystal Palace",
-          "plays": "10K plays",
-          "videoId": "_wAiSI-TOPI"
+          "title": "Circle",
+          "plays": "44K plays",
+          "videoId": "TIFlPe2JKSU"
         },
         {
-          "title": "Dalston",
-          "plays": "11K plays",
-          "videoId": "iOHUTSqPikU"
+          "title": "Milan",
+          "plays": "80K plays",
+          "videoId": "sK0tsMhw1lM"
         },
         {
-          "title": "Middle of the Lane",
-          "plays": "8.8K plays",
-          "videoId": "xG2_54EBj0A"
+          "title": "Take This",
+          "plays": "67K plays",
+          "videoId": "574Vx_yxfLs"
         },
         {
-          "title": "It’s the Sims – The Sims 4 Snowy Escape - Snowy Escape Theme",
-          "plays": "9K plays",
-          "videoId": "wi8xTq6F9HA"
+          "title": "Josine",
+          "plays": "52K plays",
+          "videoId": "kmllZJShDfE"
         },
         {
-          "title": "Akamachi",
-          "plays": "8.8K plays",
-          "videoId": "oLNJWQg-cjw"
+          "title": "August",
+          "plays": "57K plays",
+          "videoId": "55a1pPWJH90"
         },
         {
-          "title": "Caracas",
-          "plays": "5K plays",
-          "videoId": "N8VAZ-nj_TM"
+          "title": "Test Card 68",
+          "plays": "50K plays",
+          "videoId": "YPyijx1Vw1Y"
         },
         {
-          "title": "Evening Breeze",
-          "plays": "7.5K plays",
-          "videoId": "YaAQgYM895c"
+          "title": "Topography",
+          "plays": "36K plays",
+          "videoId": "ATxDmJPOXEs"
         },
         {
-          "title": "Gold",
-          "plays": "10K plays",
-          "videoId": "ZgMFh1Tg0ZY"
+          "title": "Here Come the Autumn",
+          "plays": "55K plays",
+          "videoId": "1rLrL5wgu5Y"
         },
         {
-          "title": "It’s the Sims – The Sims 4 Islands Living - Islands Living Theme",
-          "plays": "6.5K plays",
-          "videoId": "HRrTXyGzloo"
+          "title": "Beatrix",
+          "plays": "50K plays",
+          "videoId": "i-PafWIQtI4"
         },
         {
-          "title": "Montevideo",
-          "plays": "8.5K plays",
-          "videoId": "nkQMSlXrz5w"
+          "title": "Me Too",
+          "plays": "29K plays",
+          "videoId": "GYwBvaiQ6U0"
         },
         {
-          "title": "Pukapuka",
-          "plays": "6.9K plays",
-          "videoId": "S0HfCTptRrI"
+          "title": "In the Air",
+          "plays": "45K plays",
+          "videoId": "v2vsWMRR67U"
         },
         {
-          "title": "Red Snapper",
-          "plays": "9.2K plays",
-          "videoId": "shfPMDFDWKI"
+          "title": "December",
+          "plays": "48K plays",
+          "videoId": "O_z9ER4tgbM"
         },
         {
-          "title": "It’s the Sims - The Sims 4 Cottage Living - Cottage Living Theme",
-          "plays": "7.1K plays",
-          "videoId": "Ca1vVck2wXg"
+          "title": "Goodbye MBK",
+          "plays": "23K plays",
+          "videoId": "XM5eBvBu92Q"
         },
         {
-          "title": "Baba Yaga",
-          "plays": "10K plays",
-          "videoId": "5My76mAjVsI"
-        },
-        {
-          "title": "Crepescule",
-          "plays": "9.6K plays",
-          "videoId": "W_wMC0GUh0E"
-        },
-        {
-          "title": "International Space Station",
-          "plays": "8.7K plays",
-          "videoId": "D1y22T4YmCg"
-        },
-        {
-          "title": "Mad Moonlight",
-          "plays": "10K plays",
-          "videoId": "angMxa7e7iw"
-        },
-        {
-          "title": "Soyuz",
-          "plays": "9.4K plays",
-          "videoId": "bi9xdOrifYw"
-        },
-        {
-          "title": "Wolfie",
-          "plays": "12K plays",
-          "videoId": "XcK1334kgCg"
+          "title": "Hello Tomorrow",
+          "plays": "25K plays",
+          "videoId": "NrslS60LkpU"
         }
       ],
-      "ytmPlaylistId": "OLAK5uy_kEg6kQnGZcL07SFDPV2s16P1_6AzgVrJ0"
+      "ytmPlaylistId": "OLAK5uy_mWNoNgs1OlDUgrpJXLUvDB6RvuSc3YqsQ"
     },
     {
       "id": "battlefield-bad-company-2",
@@ -94587,9 +94568,6 @@
       "id": "sonic-the-hedgehog",
       "title": "Sonic the Hedgehog Soundtrack",
       "game": "Sonic the Hedgehog",
-      "composers": [
-        "SEGA"
-      ],
       "date": "1991-06-23",
       "sources": [
         {
@@ -94600,7 +94578,6 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+the+Hedgehog+Soundtrack",
-      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_dDO1LDq1Wdt",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coanlj.jpg",
       "notable": true,
       "company": "Sonic Team",
@@ -94608,190 +94585,124 @@
       "genres": [
         "Platform"
       ],
-      "albumTitle": "SONIC THE HEDGEHOG ORIGINAL SOUND TRACK Vol. 2",
       "tracks": [
         {
-          "title": "All Hail Shadow -Theme of Shadow The Hedgehog-",
-          "plays": "1.4M plays",
-          "videoId": "H1ICoVNMSZE"
+          "title": "His World - Theme of Sonic the Hedgehog",
+          "plays": null
         },
         {
-          "title": "Event: Shadow's Infiltration",
-          "plays": "36K plays",
-          "videoId": "xDhTFyNebdA"
+          "title": "Event: The Soleanna Festival",
+          "plays": null
         },
         {
-          "title": "White Acropolis -Snowy Peak-",
-          "plays": "309K plays",
-          "videoId": "cJx3YbQjyWc"
+          "title": "Event: Dr. Eggman Appears",
+          "plays": null
         },
         {
-          "title": "White Acropolis -The Base-",
-          "plays": "120K plays",
-          "videoId": "1TbIjxiNDAg"
+          "title": "Event: Sonic Appears",
+          "plays": null
         },
         {
-          "title": "Event: To The Ancient Soleanna Castle",
-          "plays": "21K plays",
-          "videoId": "clsESbdvEmw"
+          "title": "Wave Ocean - the Water's Edge",
+          "plays": null
         },
         {
-          "title": "Soleanna Forest",
-          "plays": "36K plays",
-          "videoId": "KeO422Hqs-A"
+          "title": "Wave Ocean - The Inlet",
+          "plays": null
         },
         {
-          "title": "Event: Tension… The Scepter of Darkness",
-          "plays": "16K plays",
-          "videoId": "5QE2-dsiDyc"
+          "title": "Event: Memory of Youth",
+          "plays": null
         },
         {
-          "title": "Event: The Resurrection of Mephiles",
-          "plays": "214K plays",
-          "videoId": "NxBdbG6dOdI"
+          "title": "Boss: Egg-Cerberus & Egg-Genesis",
+          "plays": null
         },
         {
-          "title": "Event: Confirming The Future",
-          "plays": "30K plays",
-          "videoId": "WPSqyEq5CK4"
+          "title": "Soleanna Castle Town",
+          "plays": null
         },
         {
-          "title": "Flame Core -Volcano-",
-          "plays": "219K plays",
-          "videoId": "AZgi09vyn0o"
+          "title": "Dusty Desert - Quicksand",
+          "plays": null
         },
         {
-          "title": "Flame Core -The Cavern-",
-          "plays": "288K plays",
-          "videoId": "yKw6CAW4CMk"
+          "title": "Event: Running Through the Plains",
+          "plays": null
         },
         {
-          "title": "Event: The Black Shadow",
-          "plays": "16K plays",
-          "videoId": "sD_FnxVAL-M"
+          "title": "Event: Tension…Silver Appears",
+          "plays": null
         },
         {
-          "title": "Tropical Jungle -The Ruins-",
-          "plays": "32K plays",
-          "videoId": "RmR-JhX1SOw"
+          "title": "Boss: vs. Character",
+          "plays": null
         },
         {
-          "title": "Event: Mephiles's Whisper",
-          "plays": "214K plays",
-          "videoId": "5wc3MOYQiQc"
+          "title": "Event: Eggman Sends Sonic to the Future",
+          "plays": null
         },
         {
-          "title": "Boss: Mephiles",
-          "plays": "280K plays",
-          "videoId": "aVR6s-5PzIU"
+          "title": "Event: The Future World?",
+          "plays": null
         },
         {
-          "title": "Soleanna New City",
-          "plays": "62K plays",
-          "videoId": "aoruJ4qA5L0"
+          "title": "Event: Can It Be True?",
+          "plays": null
         },
         {
-          "title": "Radical Train -The Abandoned Mine-",
-          "plays": "90K plays",
-          "videoId": "6JazbztoZ_w"
+          "title": "Event: Tension… Silver vs. Shadow",
+          "plays": null
         },
         {
-          "title": "Radical Train -The Chase-",
-          "plays": "122K plays",
-          "videoId": "mvq_l1TiJwU"
+          "title": "Event: Elise Jumps",
+          "plays": null
         },
         {
-          "title": "Event: The Accident 10 Years Ago",
-          "plays": "10K plays",
-          "videoId": "sDmKWenHBoU"
+          "title": "Tropical Jungle - The Jungle the Swamp",
+          "plays": null
         },
         {
-          "title": "Aquatic Base -Level 1-",
-          "plays": "389K plays",
-          "videoId": "Ck6ZRgn1DAQ"
+          "title": "Event: In the Forest",
+          "plays": null
         },
         {
-          "title": "Aquatic Base -Level 2-",
-          "plays": "173K plays",
-          "videoId": "k_D5LsMdq6M"
+          "title": "Event: Elise Goes Alone",
+          "plays": null
         },
         {
-          "title": "Event: Leaving The Scepter of Darkness",
-          "plays": "7.7K plays",
-          "videoId": "ZKUOTxoscOA"
+          "title": "Event: Eggman's Plot",
+          "plays": null
         },
         {
-          "title": "Event: The Sealing Revealed",
-          "plays": "6.1K plays",
-          "videoId": "UljgX55nWT4"
+          "title": "Kingdom Vally - Wind-the Castle-Lakeside-Water",
+          "plays": null
         },
         {
-          "title": "Event: Determination… Omega's Confession",
-          "plays": "6.4K plays",
-          "videoId": "TR7iuBVDMSE"
+          "title": "Event: Out of Control",
+          "plays": null
         },
         {
-          "title": "Event: Mephiles' Tenptation",
-          "plays": "17K plays",
-          "videoId": "yN9ffzaO0vs"
+          "title": "Event: I Will Change My Destiny",
+          "plays": null
         },
         {
-          "title": "Boss: Mephiles Phase 2",
-          "plays": "146K plays",
-          "videoId": "cw9ilEzQH5o"
+          "title": "Boss: Egg-Wyvern",
+          "plays": null
         },
         {
-          "title": "Event: Showdown with Mephiles",
-          "plays": "66K plays",
-          "videoId": "lwdoy7-JDp4"
+          "title": "Theme of Dr.Eggman (Full Version)",
+          "plays": null
         },
         {
-          "title": "Result",
-          "plays": "141K plays",
-          "videoId": "IKz4ClSAmtk"
+          "title": "Theme of Sonic the Hedgehog (2006 E3 Version)",
+          "plays": null
         },
         {
-          "title": "Town Mission 1",
-          "plays": "15K plays",
-          "videoId": "5hSJJ5pRiOo"
-        },
-        {
-          "title": "Town Mission 2",
-          "plays": "9.1K plays",
-          "videoId": "9kapNQF-IJM"
-        },
-        {
-          "title": "Town Mission 3",
-          "plays": "8.6K plays",
-          "videoId": "-X1gEbIu4sM"
-        },
-        {
-          "title": "Town Mission 4",
-          "plays": "10K plays",
-          "videoId": "1zaANVsJ2Ow"
-        },
-        {
-          "title": "Jingle: Invincible",
-          "plays": "36K plays",
-          "videoId": "5qvXmjoNJ3E"
-        },
-        {
-          "title": "Jingle: Mission Clear",
-          "plays": "11K plays",
-          "videoId": "gxvWwaPDJlg"
-        },
-        {
-          "title": "Jingle: Town Mission Clear",
-          "plays": "7.6K plays",
-          "videoId": "RizokIEdLrI"
-        },
-        {
-          "title": "Extras",
-          "plays": "32K plays",
-          "videoId": "sx_CH5gQKag"
+          "title": "Accordion Song",
+          "plays": null
         }
-      ],
-      "ytmPlaylistId": "OLAK5uy_l09NsDNqWWaY1yUtnNHeQ_DFHJX8P2-vU"
+      ]
     },
     {
       "id": "no-man-s-sky",
@@ -251747,6 +251658,551 @@
         "Strategy"
       ],
       "tracks": []
+    },
+    {
+      "id": "the-sims-4-vol-2",
+      "title": "The Sims 4, Vol. 2 (Original Game Soundtrack)",
+      "game": "The Sims 4",
+      "composers": [
+        "Ilan Eshkeri"
+      ],
+      "date": "2023-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_slJgU2knmAW",
+          "seenAt": "2026-07-29T13:58:22Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+4%2C+Vol.+2+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_slJgU2knmAW",
+      "art": "https://yt3.googleusercontent.com/H6rype472Utgu1u_0SjPYTeGZrEfsw44rXbDAFJVcCKNzhIQndpSG3sMIkiJ8OmLtXD-DFg4ZSL8M_tf=w544-h544-l90-rj",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "It’s the Sims – The Sims 4 Seasons – Seasons Theme",
+          "plays": "22K plays",
+          "videoId": "GW8lnBKZ2VU"
+        },
+        {
+          "title": "Aqua",
+          "plays": "11K plays",
+          "videoId": "aUiFzc_oDrM"
+        },
+        {
+          "title": "Balham",
+          "plays": "15K plays",
+          "videoId": "uLd0m3BaELM"
+        },
+        {
+          "title": "Confetti",
+          "plays": "8.2K plays",
+          "videoId": "ju9t5UJNFME"
+        },
+        {
+          "title": "Crystal Palace",
+          "plays": "10K plays",
+          "videoId": "_wAiSI-TOPI"
+        },
+        {
+          "title": "Dalston",
+          "plays": "11K plays",
+          "videoId": "iOHUTSqPikU"
+        },
+        {
+          "title": "Middle of the Lane",
+          "plays": "8.8K plays",
+          "videoId": "xG2_54EBj0A"
+        },
+        {
+          "title": "It’s the Sims – The Sims 4 Snowy Escape - Snowy Escape Theme",
+          "plays": "9K plays",
+          "videoId": "wi8xTq6F9HA"
+        },
+        {
+          "title": "Akamachi",
+          "plays": "8.8K plays",
+          "videoId": "oLNJWQg-cjw"
+        },
+        {
+          "title": "Caracas",
+          "plays": "5K plays",
+          "videoId": "N8VAZ-nj_TM"
+        },
+        {
+          "title": "Evening Breeze",
+          "plays": "7.5K plays",
+          "videoId": "YaAQgYM895c"
+        },
+        {
+          "title": "Gold",
+          "plays": "10K plays",
+          "videoId": "ZgMFh1Tg0ZY"
+        },
+        {
+          "title": "It’s the Sims – The Sims 4 Islands Living - Islands Living Theme",
+          "plays": "6.5K plays",
+          "videoId": "HRrTXyGzloo"
+        },
+        {
+          "title": "Montevideo",
+          "plays": "8.5K plays",
+          "videoId": "nkQMSlXrz5w"
+        },
+        {
+          "title": "Pukapuka",
+          "plays": "6.9K plays",
+          "videoId": "S0HfCTptRrI"
+        },
+        {
+          "title": "Red Snapper",
+          "plays": "9.2K plays",
+          "videoId": "shfPMDFDWKI"
+        },
+        {
+          "title": "It’s the Sims - The Sims 4 Cottage Living - Cottage Living Theme",
+          "plays": "7.1K plays",
+          "videoId": "Ca1vVck2wXg"
+        },
+        {
+          "title": "Baba Yaga",
+          "plays": "10K plays",
+          "videoId": "5My76mAjVsI"
+        },
+        {
+          "title": "Crepescule",
+          "plays": "9.6K plays",
+          "videoId": "W_wMC0GUh0E"
+        },
+        {
+          "title": "International Space Station",
+          "plays": "8.7K plays",
+          "videoId": "D1y22T4YmCg"
+        },
+        {
+          "title": "Mad Moonlight",
+          "plays": "10K plays",
+          "videoId": "angMxa7e7iw"
+        },
+        {
+          "title": "Soyuz",
+          "plays": "9.4K plays",
+          "videoId": "bi9xdOrifYw"
+        },
+        {
+          "title": "Wolfie",
+          "plays": "12K plays",
+          "videoId": "XcK1334kgCg"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEg6kQnGZcL07SFDPV2s16P1_6AzgVrJ0"
+    },
+    {
+      "id": "the-sims-4-take-the-reins-sounds-of-the-season",
+      "title": "The Sims 4: Take the Reins - Sounds of the Season (Original Soundtrack)",
+      "game": "The Sims 4",
+      "composers": [],
+      "date": "2023-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_GKropQIVfdM",
+          "seenAt": "2026-07-29T13:58:22Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+4%3A+Take+the+Reins+-+Sounds+of+the+Season+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GKropQIVfdM",
+      "art": "https://yt3.googleusercontent.com/di57WGz8iazoZR7xU7JJSh5UQKMraT6XstlU_VINBG3VmTItk_iFB5jb-A5Z0OaqKypYkjJpB-MeTs4mTg=w544-h544-l90-rj",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "It’s The Sims - Ranch Life",
+          "plays": "3.1K plays",
+          "videoId": "g_NW4-0jpmo"
+        },
+        {
+          "title": "Froben Glabe",
+          "plays": "936 plays",
+          "videoId": "3qwb154ZHm0"
+        },
+        {
+          "title": "Notting Dale Barn",
+          "plays": "2.3K plays",
+          "videoId": "QQBh0pLewAA"
+        },
+        {
+          "title": "Love In Your Eyes",
+          "plays": "5.1K plays",
+          "videoId": "Dl8HPmfOJR4"
+        },
+        {
+          "title": "My Name Is Jimmy",
+          "plays": "1.2K plays",
+          "videoId": "v6nEL8evEWE"
+        },
+        {
+          "title": "High Headed Woman",
+          "plays": "675 plays",
+          "videoId": "zHByD_SiQPk"
+        },
+        {
+          "title": "Kensington Holler",
+          "plays": "936 plays",
+          "videoId": "OcDP6NXdjb8"
+        },
+        {
+          "title": "Corlafonoo",
+          "plays": "532 plays",
+          "videoId": "l5DxKJvRReY"
+        },
+        {
+          "title": "Rodeo Time Again",
+          "plays": "5.9K plays",
+          "videoId": "PAd6F-GoLQQ"
+        },
+        {
+          "title": "Mura Lurve",
+          "plays": "1.3K plays",
+          "videoId": "B47QmrkyOjg"
+        },
+        {
+          "title": "Kammablow",
+          "plays": "264 plays",
+          "videoId": "jV1Dj1qQpnc"
+        },
+        {
+          "title": "Autumn Leaves",
+          "plays": "3.2K plays",
+          "videoId": "ue29SNCAyO8"
+        },
+        {
+          "title": "Never Be Lonely",
+          "plays": "3.5K plays",
+          "videoId": "XwXro5H0V5U"
+        },
+        {
+          "title": "Zumbray",
+          "plays": "15K plays",
+          "videoId": "6hi0EM_nyJ0"
+        },
+        {
+          "title": "Duck Ascending",
+          "plays": "1.7K plays",
+          "videoId": "LjNI1POk9K4"
+        },
+        {
+          "title": "Iffen Dona Bin Gau",
+          "plays": "4.7K plays",
+          "videoId": "jV8idVLJzcc"
+        },
+        {
+          "title": "Highbury",
+          "plays": "3.4K plays",
+          "videoId": "if-ITp8Stes"
+        },
+        {
+          "title": "Gee Manray",
+          "plays": "739 plays",
+          "videoId": "yqHJ8QnOgmE"
+        },
+        {
+          "title": "I'm Gone",
+          "plays": "1.2K plays",
+          "videoId": "yOl8sTHND3Q"
+        },
+        {
+          "title": "Gell Haffa No Hast",
+          "plays": "1.6K plays",
+          "videoId": "7WFI1UiYiSA"
+        },
+        {
+          "title": "Nooboo Neeb",
+          "plays": "1.3K plays",
+          "videoId": "0EGZrqoENlc"
+        },
+        {
+          "title": "Simzahoo",
+          "plays": "467 plays",
+          "videoId": "cWE1g8JNUsg"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kIKfHps0H4KNquNH-toCK1C1nQo7Lh1R4"
+    },
+    {
+      "id": "the-sims-4-take-me-home-sounds-of-the-season",
+      "title": "The Sims 4: Take Me Home - Sounds of The Season (Original Soundtrack)",
+      "game": "The Sims 4",
+      "composers": [],
+      "date": "2023-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_SFkguYRRk58",
+          "seenAt": "2026-07-29T13:58:22Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+4%3A+Take+Me+Home+-+Sounds+of+The+Season+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_SFkguYRRk58",
+      "art": "https://yt3.googleusercontent.com/xP7M_PXn6oL9cWV5K5Hogo_8mrljrZfvlELOCned8DJnivDb6Sk9AUMhSFJoaQYA2Nh9EsAmtRTKZw2P=w544-h544-l90-rj",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Way I'm Feeling",
+          "plays": "6.2K plays",
+          "videoId": "RUXKTg6f5zc"
+        },
+        {
+          "title": "It's The Sims - The Sims 4 Growing Together Theme",
+          "plays": "4.8K plays",
+          "videoId": "g9EA5NPFbds"
+        },
+        {
+          "title": "Gouda",
+          "plays": "1.5K plays",
+          "videoId": "yuZsZp0uh5g"
+        },
+        {
+          "title": "oo Maroo",
+          "plays": "1.3K plays",
+          "videoId": "BgFMC02gnDE"
+        },
+        {
+          "title": "Napuka",
+          "plays": "2.9K plays",
+          "videoId": "cRl6Amd-5UY"
+        },
+        {
+          "title": "Fwaybo",
+          "plays": "4.8K plays",
+          "videoId": "XY9OEHJPt-8"
+        },
+        {
+          "title": "Boboz Mokorez",
+          "plays": "960 plays",
+          "videoId": "R_7j462VIgo"
+        },
+        {
+          "title": "Red Candle",
+          "plays": "1.3K plays",
+          "videoId": "dr2UXxe3LEw"
+        },
+        {
+          "title": "Dahisar",
+          "plays": "532 plays",
+          "videoId": "8IghWu1ijko"
+        },
+        {
+          "title": "Angel",
+          "plays": "2.6K plays",
+          "videoId": "PZ2wF1Pik28"
+        },
+        {
+          "title": "Ealing",
+          "plays": "3.2K plays",
+          "videoId": "A3v-UPQN6pc"
+        },
+        {
+          "title": "Take The L",
+          "plays": "2.6K plays",
+          "videoId": "WujA4FUQr14"
+        },
+        {
+          "title": "Island",
+          "plays": "2.2K plays",
+          "videoId": "EM18guEMcDk"
+        },
+        {
+          "title": "It's The Sims - The Sims 4 Eco Lifestyle Theme",
+          "plays": "2.2K plays",
+          "videoId": "aJimSJE9d_w"
+        },
+        {
+          "title": "The Old Mill",
+          "plays": "1.9K plays",
+          "videoId": "LdmXsMLDtm8"
+        },
+        {
+          "title": "Heather",
+          "plays": "2.4K plays",
+          "videoId": "wKTMDXihIHU"
+        },
+        {
+          "title": "Primrose Hill",
+          "plays": "3.1K plays",
+          "videoId": "E8DE4QI4zXI"
+        },
+        {
+          "title": "Zoe Bwoozip",
+          "plays": "1.6K plays",
+          "videoId": "WFoYiOdRRXo"
+        },
+        {
+          "title": "Zolombray",
+          "plays": "955 plays",
+          "videoId": "_PTfpVUUFvA"
+        },
+        {
+          "title": "Chur Nayavuya",
+          "plays": "1.7K plays",
+          "videoId": "JehslYP5mbU"
+        },
+        {
+          "title": "Zooboe Gryyboe",
+          "plays": "1.2K plays",
+          "videoId": "2K4JapNlvrk"
+        },
+        {
+          "title": "Freebird",
+          "plays": "2.8K plays",
+          "videoId": "epKouHHyJEM"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mE7wmmXgOPKo2JnK-kxocVCOWfg_JU5E4"
+    },
+    {
+      "id": "the-sims-4-hustle-and-bustle-sounds-of-the-season",
+      "title": "The Sims 4: Hustle and Bustle – Sounds of the Season (Original Soundtrack)",
+      "game": "The Sims 4",
+      "composers": [],
+      "date": "2023-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_if2tqessb6C",
+          "seenAt": "2026-07-29T13:58:22Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+4%3A+Hustle+and+Bustle+%E2%80%93+Sounds+of+the+Season+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_if2tqessb6C",
+      "art": "https://yt3.googleusercontent.com/dxn1bWWZkWe3eqpnsl55c8IOQcMW_RKGKHsqOIg1XGz_4y0dG9g6I4DCH76DWQ0IyLcRKLe1Q60f2ms=w544-h544-l90-rj",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Take Take Take",
+          "plays": "1K plays",
+          "videoId": "QzQhZKj_2tY"
+        },
+        {
+          "title": "Gom Zibe",
+          "plays": "421 plays",
+          "videoId": "lSAA5h4D5_g"
+        },
+        {
+          "title": "Zomberribe",
+          "plays": "689 plays",
+          "videoId": "fjRjlg8KCYo"
+        },
+        {
+          "title": "Runaway",
+          "plays": "696 plays",
+          "videoId": "k91c_Xabsf8"
+        },
+        {
+          "title": "Jade",
+          "plays": "2.2K plays",
+          "videoId": "GB5bKtslLVg"
+        },
+        {
+          "title": "House Hunting",
+          "plays": "1.7K plays",
+          "videoId": "YcvfFvl7ULA"
+        },
+        {
+          "title": "Swablee Fwa",
+          "plays": "484 plays",
+          "videoId": "_J5ONHZ_8xI"
+        },
+        {
+          "title": "Letting You Go",
+          "plays": "14K plays",
+          "videoId": "eHbn8mft_O8"
+        },
+        {
+          "title": "Fleeb Fwo",
+          "plays": "937 plays",
+          "videoId": "wXywM5le_u4"
+        },
+        {
+          "title": "Danger!",
+          "plays": "1.9K plays",
+          "videoId": "as5QCerJRX0"
+        },
+        {
+          "title": "Kurashama",
+          "plays": "2.2K plays",
+          "videoId": "rnth-lyUiZs"
+        },
+        {
+          "title": "Living Like We're Young",
+          "plays": "1.4K plays",
+          "videoId": "QqKSwUj9i9o"
+        },
+        {
+          "title": "Kyogo",
+          "plays": "756 plays",
+          "videoId": "ioLW-OdvzBE"
+        },
+        {
+          "title": "Wild",
+          "plays": "1.4K plays",
+          "videoId": "AKMAgGvet00"
+        },
+        {
+          "title": "Chombay Yub",
+          "plays": "1.2K plays",
+          "videoId": "1hsRK3rLens"
+        },
+        {
+          "title": "Vahlharen",
+          "plays": "411 plays",
+          "videoId": "vi1UrcPNcDU"
+        },
+        {
+          "title": "Queen of Shoop Shoop",
+          "plays": "599 plays",
+          "videoId": "q4VeoIHl6lk"
+        },
+        {
+          "title": "Dandylion",
+          "plays": "1.2K plays",
+          "videoId": "OwdW3fyV55g"
+        },
+        {
+          "title": "Emerald",
+          "plays": "1.7K plays",
+          "videoId": "atdE1jTn-3o"
+        },
+        {
+          "title": "Leaving",
+          "plays": "681 plays",
+          "videoId": "lGi-pESodQA"
+        },
+        {
+          "title": "Monday Morning",
+          "plays": "2.1K plays",
+          "videoId": "2cQ0z5nxrjU"
+        },
+        {
+          "title": "Retrograde",
+          "plays": "1.9K plays",
+          "videoId": "UUV6YnBKT8E"
+        },
+        {
+          "title": "Mjallby",
+          "plays": "803 plays",
+          "videoId": "y69AknRReYs"
+        },
+        {
+          "title": "It's The Sims - The Sims 4 For Rent Theme",
+          "plays": "3.2K plays",
+          "videoId": "wLSkjWGJyjo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_lmY5qjt_gJ-URM6bH2yDlVP_tRooMpewE"
     }
   ]
 }
