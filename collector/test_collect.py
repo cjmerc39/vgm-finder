@@ -221,6 +221,36 @@ def test_headline_parsers_attach_display_labels():
     assert owl["albumTitle"] == "Atomic Owl"
 
 
+def test_gaas_scan_collects_every_qualifying_album():
+    results = [
+        {"resultType": "album", "browseId": "MPREb_g1", "year": "2020",
+         "title": "Genshin Impact - City of Winds and Idylls (Original Game Soundtrack)",
+         "artists": [{"name": "Yu-Peng Chen"}], "thumbnails": []},
+        {"resultType": "album", "browseId": "MPREb_g2", "year": "2023",
+         "title": "Genshin Impact - Fountain of Belleau (Original Game Soundtrack)",
+         "artists": [{"name": "HOYO-MiX"}], "thumbnails": []},
+        {"resultType": "album", "browseId": "MPREb_bad1", "year": "2022",
+         "title": "Genshin Impact Lofi Chill Soundtrack Remixes",
+         "artists": [{"name": "Some Channel"}], "thumbnails": []},
+        {"resultType": "album", "browseId": "MPREb_bad2", "year": "2021",
+         "title": "Anime Piano Soundtrack Collection",
+         "artists": [{"name": "X"}], "thumbnails": []},
+    ]
+    releases = []
+    added, merged = collect.gaas_albums(releases, lambda q, limit=5: results, SEEN,
+                                        names=["Genshin Impact"])
+    assert added == 2  # two real volumes; the remix and the unrelated album stay out
+    assert {r["title"] for r in releases} == {
+        "Genshin Impact - City of Winds and Idylls (Original Game Soundtrack)",
+        "Genshin Impact - Fountain of Belleau (Original Game Soundtrack)"}
+    assert all(r["game"] == "Genshin Impact" and r["ytmAlbumUrl"] for r in releases)
+    assert releases[0]["date"] == "2020-01-01"  # dated by album year, not the game
+    # rerun: idempotent, new seasons would append
+    added2, _ = collect.gaas_albums(releases, lambda q, limit=5: results, SEEN,
+                                    names=["Genshin Impact"])
+    assert added2 == 0 and len(releases) == 2
+
+
 def test_arriving_album_invalidates_stale_tracklists():
     releases = []
     collect.merge(releases, [{"title": "Hi-Fi Rush Soundtrack",

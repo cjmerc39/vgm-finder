@@ -67,12 +67,12 @@ def fetch_any(url):
 _YT = None
 
 
-def ytm_resolve(query):
+def ytm_resolve(query, limit=5):
     global _YT
     if _YT is None:
         from ytmusicapi import YTMusic  # lazy: only the resolver path needs it
         _YT = YTMusic()
-    return _YT.search(query, filter="albums", limit=5)
+    return _YT.search(query, filter="albums", limit=limit)
 
 
 def ytm_album(browse_id):
@@ -752,6 +752,57 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
     return looked, filled
 
 
+# tribute wording that disqualifies an album from a live-service scan
+_GAAS_BLACKLIST = re.compile(r"\b(covers?|tribute|remix(es)?|medley|lullab|lo-?fi|8-?bit|chill)\b", re.IGNORECASE)
+
+
+def gaas_names(path=None):
+    try:
+        d = json.loads(Path(path or ROOT / "collector" / "seeds.json").read_text(encoding="utf-8"))
+        return [s for s in d.get("multiAlbum", []) if isinstance(s, str) and s]
+    except (OSError, ValueError):
+        return []
+
+
+def gaas_albums(releases, resolve, seen_at, names=None):
+    """Live-service games release album after album: one row per qualifying
+    album, so each season's soundtrack stands alone and reruns pick up new
+    ones automatically."""
+    names = gaas_names() if names is None else names
+    added = merged = 0
+    for name in names:
+        try:
+            results = resolve(_query(name), limit=25)
+        except TypeError:
+            results = resolve(_query(name))
+        except Exception:
+            continue
+        want = {t for t in _numfold(normalize_title(name)).split()
+                if t not in _TOKENS_OK and t != "i"}
+        items = []
+        for r in results or []:
+            if r.get("resultType") != "album" or not r.get("browseId"):
+                continue
+            title = r.get("title", "")
+            if not _SOUNDTRACKY.search(title) or _GAAS_BLACKLIST.search(title):
+                continue
+            cand = {t for t in _numfold(normalize_title(title)).split()
+                    if t not in _TOKENS_OK and t != "i"}
+            if not want or not want.issubset(cand):
+                continue  # the album must name the game
+            hit = _hit_from(r)
+            if not hit:
+                continue
+            year = str(r.get("year") or "")
+            items.append({"title": hit["title"], "game": name, "composers": hit["composers"],
+                          "url": hit["url"], "date": f"{year}-01-01" if year.isdigit() else None,
+                          "ytmAlbumUrl": hit["url"], "art": hit["art"]})
+        a, m = merge(releases, items, {"name": "ytm", "type": "catalog"}, seen_at)
+        added += a
+        merged += m
+    return added, merged
+
+
 def load_data(path):
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -785,6 +836,8 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
 
     looked, filled = resolve_albums(releases, resolve_fn, now)
     print(f"album resolver: {looked} lookups, {filled} filled")
+    ga, gm = gaas_albums(releases, resolve_fn, seen_at)
+    print(f"live-service albums: {ga} new, {gm} merged")
     fetched = fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP)
     print(f"tracklists: {fetched} looked up")
 

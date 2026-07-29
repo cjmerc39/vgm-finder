@@ -493,7 +493,7 @@ function renderControls(){
     `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>`;
 }
 
-const SRC_LABEL = { igdb: 'catalog' };  // site names read fine; api names get friendly labels
+const SRC_LABEL = { igdb: 'catalog', ytm: 'catalog' };  // site names read fine; api names get friendly labels
 
 function genreSelectHtml(){
   const counts = {};
