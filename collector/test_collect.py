@@ -351,9 +351,17 @@ def test_ytm_tracks_capture_plays_and_video_ids():
                       {"title": "Quiet", "plays": None, "videoId": None}]
 
 
+def test_genres_of_takes_top_three_names():
+    g = {"genres": [{"name": "Role-playing (RPG)"}, {"name": "Adventure"},
+                    {"name": "Indie"}, {"name": "Strategy"}]}
+    assert collect.genres_of(g) == ["Role-playing (RPG)", "Adventure", "Indie"]
+    assert collect.genres_of({}) is None
+
+
 def test_fill_tracks_uses_ytm_then_itunes_and_never_refetches():
     def album(bid):
-        return {"tracks": [{"title": f"T-{bid}", "views": "5 plays", "videoId": "v"}]}
+        return {"tracks": [{"title": f"T-{bid}", "views": "5 plays", "videoId": "v"}],
+                "audioPlaylistId": f"OLAK_{bid}"}
     def itunes(query):
         return [{"title": "Apple Track", "plays": None}] if "Gold" in query else None
     rows = [
@@ -365,6 +373,7 @@ def test_fill_tracks_uses_ytm_then_itunes_and_never_refetches():
     ]
     assert collect.fill_tracks(rows, album, itunes, cap=1) == 1
     assert rows[0]["tracks"][0] == {"title": "T-MPREb_a", "plays": "5 plays", "videoId": "v"}
+    assert rows[0]["ytmPlaylistId"] == "OLAK_MPREb_a"  # album context for song-not-video links
     assert "topTracks" not in rows[0]  # legacy field retired on refetch
     assert collect.fill_tracks(rows, album, itunes, cap=10) == 2
     assert rows[1]["tracks"] == [{"title": "Apple Track", "plays": None}]  # Apple fallback

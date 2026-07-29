@@ -50,7 +50,7 @@ def igdb_fetch():
     start = now - IGDB_WINDOW_DAYS * 86400
     # game_type replaced the old (now dead) category field; 0/4/8/9 = main/expansion/remake/remaster
     query = (f"fields name, slug, first_release_date, hypes, game_type, cover.image_id, platforms, "
-             f"involved_companies.company.name, involved_companies.developer; "
+             f"genres.name, involved_companies.company.name, involved_companies.developer; "
              f"where first_release_date >= {start} & first_release_date <= {now} "
              f"& game_type = (0,4,8,9) & hypes >= {IGDB_HYPES_MIN}; "
              f"sort hypes desc; limit {IGDB_LIMIT};")
@@ -220,9 +220,13 @@ def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP):
         if "/browse/" in url:
             looked += 1
             try:
-                r["tracks"] = ytm_tracks_from(album_fn(url.rsplit("/", 1)[1]))
+                album = album_fn(url.rsplit("/", 1)[1])
             except Exception:
                 continue  # transient: retry on a later run
+            r["tracks"] = ytm_tracks_from(album)
+            plid = (album or {}).get("audioPlaylistId")
+            if plid:
+                r["ytmPlaylistId"] = plid  # &list= makes track links open the song, not the video
         elif r.get("game"):
             looked += 1
             try:
@@ -497,6 +501,11 @@ def is_console(game):
     return any(p not in _NONCONSOLE_PLATFORMS for p in platforms)
 
 
+def genres_of(game):
+    names = [(g.get("name") or "").strip() for g in game.get("genres") or []]
+    return [n for n in names if n][:3] or None
+
+
 def parse_igdb(raw, resolve):
     games = json.loads(raw)
     if not isinstance(games, list):
@@ -518,7 +527,7 @@ def parse_igdb(raw, resolve):
         cover = (g.get("cover") or {}).get("image_id")
         items.append({
             "title": hit["title"], "game": name, "composers": hit["composers"],
-            "company": company_of(g), "console": is_console(g),
+            "company": company_of(g), "console": is_console(g), "genres": genres_of(g),
             "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
             "date": when.strftime("%Y-%m-%d"),
             "ytmAlbumUrl": hit["url"],
@@ -657,6 +666,8 @@ def merge(releases, items, source, seen_at):
                 target["company"] = it["company"]
             if target.get("console") is None and it.get("console") is not None:
                 target["console"] = it["console"]
+            if not target.get("genres") and it.get("genres"):
+                target["genres"] = list(it["genres"])
             if not target.get("game") and it.get("game"):
                 target["game"] = it["game"]
             if not target.get("composers") and it.get("composers"):
@@ -677,6 +688,8 @@ def merge(releases, items, source, seen_at):
                 entry["company"] = it["company"]
             if it.get("console") is not None:
                 entry["console"] = it["console"]
+            if it.get("genres"):
+                entry["genres"] = list(it["genres"])
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])

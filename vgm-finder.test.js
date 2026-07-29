@@ -17,7 +17,7 @@ const FIXTURE = {
       ytmSearchUrl: 'https://music.youtube.com/search?q=Chrono+Cross%3A+The+Radical+Dreamers+Edition+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'hades-ii', title: 'Hades II Original Soundtrack', game: 'Hades II', composers: ['Darren Korb'], date: '2026-07-20',
-      company: 'Supergiant Games', console: true,
+      company: 'Supergiant Games', console: true, ytmPlaylistId: 'OLAK5uy_plHades', genres: ['Role-playing (RPG)'],
       tracks: [{ title: 'No Escape', plays: '1.2M plays', videoId: 'vidNE' },
                { title: 'Quiet Interlude', plays: '10 plays', videoId: 'vidQI' },
                { title: 'The Painted World', plays: '900K plays', videoId: 'vidPW' },
@@ -43,7 +43,7 @@ const FIXTURE = {
       ytmSearchUrl: 'https://music.youtube.com/search?q=Evil+OST+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
     { id: 'fresh-drop', title: 'Fresh Drop: A Brand New Soundtrack', game: 'Fresh Drop', composers: ['New Person'], date: '2026-07-28',
-      company: 'Nintendo', console: true,
+      company: 'Nintendo', console: true, genres: ['Platform'],
       sources: [{ name: 'nowplaying', type: 'editorial', url: 'https://nowplaying.cool/f', seenAt: '2026-07-27T09:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Fresh+Drop%3A+A+Brand+New+Soundtrack+soundtrack',
       ytmAlbumUrl: null, art: null, notable: true },
@@ -160,11 +160,29 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   d.querySelector('#fconsole').click(); await sleep(20);
   assert(rows().length === 5, 'console filter toggles back off');
 
+  // ---------- genre facet + random listen ----------
+  assert(d.querySelector('#fgenre') !== null, 'genre select renders when genre data exists');
+  d.querySelector('#fgenre').value = 'Platform';
+  d.querySelector('#fgenre').dispatchEvent(new w.Event('change', { bubbles: true }));
+  await sleep(20);
+  assert(rows().length === 1 && rows()[0].dataset.id === 'fresh-drop', 'genre facet filters the feed');
+  assert(stored().feedGenre === 'Platform', 'genre choice persists');
+  d.querySelector('#fgenre').value = 'all';
+  d.querySelector('#fgenre').dispatchEvent(new w.Event('change', { bubbles: true }));
+  await sleep(20);
+  assert(rows().length === 5, 'genre back to all');
+  w.__opened = null;
+  w.eval('Math.random = () => 0');
+  d.querySelector('#frandom').click();
+  assert(w.__opened === 'https://music.youtube.com/search?q=Fresh+Drop%3A+A+Brand+New+Soundtrack+soundtrack',
+    'random listen opens a random visible row on YT Music');
+
   // ---------- expand, then listen ----------
+  w.__opened = null;
   rowById('ratchet-clank-rift-apart').click();
   assert(rowById('ratchet-clank-rift-apart').getAttribute('aria-expanded') === 'true'
     && rowById('ratchet-clank-rift-apart').querySelector('.rx') !== null, 'row tap expands the detail panel');
-  assert(w.__opened === undefined, 'expanding does not open YTM');
+  assert(w.__opened === null, 'expanding does not open YTM');
   rowById('ratchet-clank-rift-apart').querySelector('[data-act="listen"]').click();
   assert(w.__opened === 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
     'listen opens the encoded YTM search URL untouched');
@@ -207,7 +225,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(d.querySelector('#album .atrack[data-i="2"] .medal').textContent === '2', 'second-most-played wears the 2');
   assert(d.querySelector('#album .atrack[data-i="1"] .medal') === null, 'low-play tracks get no medal');
   d.querySelector('#album .atrack[data-i="0"]').click();
-  assert(w.__opened === 'https://music.youtube.com/watch?v=vidNE', 'tracks with videoIds link straight to the song');
+  assert(w.__opened === 'https://music.youtube.com/watch?v=vidNE&list=OLAK5uy_plHades', 'tracks link to the song in album context, not the video');
   d.querySelector('#album .atrack[data-i="4"]').click();
   assert(w.__opened.startsWith('https://music.youtube.com/search?q=') && w.__opened.includes('Bonus%20Reel')
     && w.__opened.includes('Hades%20II'), 'unlinked tracks fall back to game + song search');
@@ -336,6 +354,10 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rows().length === 1, 'original headline text stays searchable behind the album label');
   type('slaps');
   assert(rows().length === 1 && rows()[0].dataset.id === 'ratchet-clank-rift-apart', 'search matches your notes');
+  assert(d.getElementById('qwrap').classList.contains('has'), 'clear button appears while text is present');
+  d.getElementById('qclear').click(); await sleep(20);
+  assert(d.getElementById('q').value === '' && !d.getElementById('qwrap').classList.contains('has')
+    && rows().length === 5, 'clear button empties the search and restores the list');
   type('');
 
   // ---------- export / import round-trip ----------

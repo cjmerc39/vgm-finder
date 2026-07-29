@@ -47,7 +47,13 @@ input:focus{outline:1px solid var(--amberdim)}
 #sync{margin-left:auto;color:var(--dim);font-size:11px;white-space:nowrap}
 
 #controls{flex:none;width:100%;max-width:560px;margin:0 auto;padding:8px 16px 10px;border-bottom:1px solid var(--line)}
+#qwrap{position:relative}
+#qwrap input{padding-right:42px}
+#qclear{display:none;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:36px;height:36px;color:var(--dim);font-size:14px}
+#qwrap.has #qclear{display:block}
 #subctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+#subctl select{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--mut);
+  background:var(--bg3);border:1px solid var(--line);border-radius:99px;padding:6px 10px;-webkit-appearance:none;appearance:none}
 #subctl:not(:empty){margin-top:8px}
 #subctl button{flex:0 0 auto;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim);
   border:1px solid var(--line);border-radius:99px;padding:6px 13px}
@@ -182,7 +188,10 @@ a.xsrc{text-decoration:none}
   <span id="sync"></span>
 </header>
 <div id="controls">
-  <input id="q" type="search" placeholder="Search title, game, composer" autocomplete="off" aria-label="Search">
+  <div id="qwrap">
+    <input id="q" type="search" placeholder="Search title, game, composer" autocomplete="off" aria-label="Search">
+    <button id="qclear" aria-label="Clear search">✕</button>
+  </div>
   <div id="subctl"></div>
 </div>
 <main><div id="list" aria-live="polite"></div><div id="colophon"></div></main>
@@ -222,7 +231,7 @@ function blank(){ return { status:'unsorted', rating:null, liked:false, note:'',
 function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, libSort:'listenedOn', libLiked:false, showHidden:false }; }
+function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', libSort:'listenedOn', libLiked:false, showHidden:false }; }
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -247,6 +256,7 @@ function validateState(d){
   s.feedSort = FEED_SORTS.includes(d.feedSort) ? d.feedSort : 'date';
   s.feedCo = ['all', 'big', 'indie'].includes(d.feedCo) ? d.feedCo : 'all';
   s.feedConsole = d.feedConsole === true;
+  s.feedGenre = typeof d.feedGenre === 'string' && d.feedGenre ? d.feedGenre : 'all';
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
   s.showHidden = d.showHidden === true;
@@ -294,6 +304,11 @@ function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); render
 function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
 function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(); }
+function setFeedGenre(g){ S.feedGenre = g || 'all'; save(); renderAll(); }
+function randomListen(){
+  const rows = searched(feedRows());
+  if(rows.length) openTrack(rows[Math.floor(Math.random() * rows.length)]);
+}
 function toggleExpand(id){ EXPANDED = EXPANDED === id ? null : id; renderList(); }
 function openAlbum(id){ ALBUM = id; renderAlbum(); }
 function closeAlbum(){ ALBUM = null; renderAlbum(); }
@@ -370,6 +385,7 @@ function feedRows(){
   let rows = sorted().filter(r => E(r.id).status !== 'hidden');
   if(S.feedCo !== 'all') rows = rows.filter(r => coTier(r) === S.feedCo);
   if(S.feedConsole) rows = rows.filter(r => r.console === true);
+  if(S.feedGenre !== 'all') rows = rows.filter(r => (r.genres || []).includes(S.feedGenre));
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
   else if(S.feedSort === 'az')
@@ -426,7 +442,8 @@ function top3Of(r){
   return { idx: new Set(top.map(x => x.i)), ranked: top.map(x => tt[x.i]), byPlays: true };
 }
 function trackUrl(r, t){
-  if(t.videoId) return 'https://music.youtube.com/watch?v=' + t.videoId;
+  if(t.videoId) return 'https://music.youtube.com/watch?v=' + t.videoId +
+    (r.ytmPlaylistId ? '&list=' + r.ytmPlaylistId : '');  // album context: the song plays, not the video
   return 'https://music.youtube.com/search?q=' + encodeURIComponent((r.game || label(r)) + ' ' + t.title);
 }
 
@@ -459,7 +476,9 @@ function renderControls(){
       `<button data-fs="${k}" class="${S.feedSort === k ? 'on' : ''}">${name}</button>`).join('') +
       cos.map(([k, name]) =>
       `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('') +
-      `<button id="fconsole" class="${S.feedConsole ? 'on' : ''}" aria-pressed="${S.feedConsole}">console</button>`;
+      `<button id="fconsole" class="${S.feedConsole ? 'on' : ''}" aria-pressed="${S.feedConsole}">console</button>` +
+      genreSelectHtml() +
+      `<button id="frandom" aria-label="Listen to a random soundtrack">random ▸</button>`;
     return;
   }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
@@ -470,6 +489,18 @@ function renderControls(){
 }
 
 const SRC_LABEL = { igdb: 'catalog' };  // site names read fine; api names get friendly labels
+
+function genreSelectHtml(){
+  const counts = {};
+  for(const r of R.releases) for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
+  const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 24);
+  if(!names.length) return '';
+  if(S.feedGenre !== 'all' && !names.includes(S.feedGenre)) names.push(S.feedGenre);
+  return `<select id="fgenre" aria-label="Genre">` +
+    `<option value="all"${S.feedGenre === 'all' ? ' selected' : ''}>genre: all</option>` +
+    names.map(n => `<option value="${esc(n)}"${S.feedGenre === n ? ' selected' : ''}>${esc(n.toLowerCase())}</option>`).join('') +
+    `</select>`;
+}
 
 function rowHtml(r, view, ghost){
   const e = E(r.id);
@@ -715,6 +746,7 @@ document.getElementById('subctl').addEventListener('click', e => {
   const c = e.target.closest('button[data-fc]');
   if(c){ setFeedCo(c.dataset.fc); return; }
   if(e.target.closest('#fconsole')){ toggleFeedConsole(); return; }
+  if(e.target.closest('#frandom')){ randomListen(); return; }
   const s = e.target.closest('button[data-ls]');
   if(s){ setLibSort(s.dataset.ls); return; }
   if(e.target.closest('#libliked')) toggleLibLiked();
@@ -730,7 +762,20 @@ document.getElementById('colophon').addEventListener('change', e => {
     renderAll();
   });
 });
-document.getElementById('q').addEventListener('input', e => setQuery(e.target.value));
+document.getElementById('subctl').addEventListener('change', e => {
+  if(e.target.id === 'fgenre') setFeedGenre(e.target.value);
+});
+document.getElementById('q').addEventListener('input', e => {
+  document.getElementById('qwrap').classList.toggle('has', !!e.target.value);
+  setQuery(e.target.value);
+});
+document.getElementById('qclear').addEventListener('click', () => {
+  const q = document.getElementById('q');
+  q.value = '';
+  document.getElementById('qwrap').classList.remove('has');
+  setQuery('');
+  q.focus();
+});
 
 const sheetwrap = document.getElementById('sheetwrap');
 sheetwrap.addEventListener('click', e => {
