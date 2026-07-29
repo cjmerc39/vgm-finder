@@ -91,10 +91,10 @@ def _itunes_album_matches(collection_name, want_norm):
     album must be this game's music: exact name, or the game's name inside a
     music-flavored title ("Pokémon Diamond & Pokémon Pearl: Super Music
     Collection" for the game "Pokémon Diamond Version")."""
-    cand = normalize_title(collection_name or "")
-    wants = {want_norm}
+    cand = _numfold(normalize_title(collection_name or ""))
+    wants = {_numfold(want_norm)}
     if want_norm.endswith(" version"):
-        wants.add(want_norm[: -len(" version")].strip())
+        wants.add(_numfold(want_norm[: -len(" version")].strip()))
     for w in wants:
         if not w or len(w) < 6:
             continue
@@ -103,6 +103,64 @@ def _itunes_album_matches(collection_name, want_norm):
         if w in cand and ("music" in cand or "soundtrack" in cand or "ost" in cand):
             return True
     return False
+
+
+def deezer_tracks(query):
+    resp = requests.get("https://api.deezer.com/search/album", timeout=30,
+                        params={"q": query}, headers={"User-Agent": USER_AGENT})
+    resp.raise_for_status()
+    want = normalize_title(query)
+    for album in resp.json().get("data", [])[:5]:
+        if not _itunes_album_matches(album.get("title"), want):
+            continue
+        tr = requests.get(f"https://api.deezer.com/album/{album['id']}/tracks", timeout=30,
+                          params={"limit": 100}, headers={"User-Agent": USER_AGENT})
+        tr.raise_for_status()
+        tracks = [{"title": t["title"], "plays": None}
+                  for t in tr.json().get("data", []) if t.get("title")]
+        if tracks:
+            return tracks
+    return None
+
+
+def musicbrainz_tracks(query):
+    """MusicBrainz catalogs the Japanese CD releases of console-era albums
+    that no streaming service carries. Polite: ~1 request/second."""
+    def mb(path, **params):
+        time.sleep(1.1)
+        resp = requests.get(f"https://musicbrainz.org/ws/2/{path}", timeout=30,
+                            params={**params, "fmt": "json"},
+                            headers={"User-Agent": USER_AGENT})
+        resp.raise_for_status()
+        return resp.json()
+
+    want = normalize_title(query)
+    groups = mb("release-group", query=query, limit=5).get("release-groups", [])
+    for rg in groups:
+        if not _itunes_album_matches(rg.get("title"), want):
+            continue
+        releases = mb("release", **{"release-group": rg["id"], "limit": 1}).get("releases", [])
+        if not releases:
+            continue
+        detail = mb(f"release/{releases[0]['id']}", inc="recordings")
+        tracks = [{"title": t["title"], "plays": None}
+                  for m in detail.get("media", []) for t in m.get("tracks", [])
+                  if t.get("title")]
+        if tracks:
+            return tracks
+    return None
+
+
+def catalog_tracks(query):
+    """Tracklist fallbacks in coverage order: Apple, Deezer, MusicBrainz."""
+    for fn in (itunes_tracks, deezer_tracks, musicbrainz_tracks):
+        try:
+            got = fn(query)
+        except Exception:
+            continue
+        if got:
+            return got
+    return None
 
 
 def itunes_tracks(query):
@@ -318,6 +376,15 @@ def _query(title):
 
 _SOUNDTRACKY = re.compile(r"\b(soundtrack|ost|score|original sound|music from)\b", re.IGNORECASE)
 
+_ROMAN_TOKENS = {"ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8,
+                 "ix": 9, "x": 10, "xi": 11, "xii": 12, "xiii": 13, "xiv": 14,
+                 "xv": 15, "xvi": 16}  # not "i": too often the English word
+
+
+def _numfold(norm):
+    """Assassin's Creed II and Assassin's Creed 2 are the same name."""
+    return " ".join(str(_ROMAN_TOKENS[t]) if t in _ROMAN_TOKENS else t for t in norm.split())
+
 
 def _hit_from(r):
     n = normalize_title(r.get("title", ""))
@@ -342,7 +409,7 @@ def _match_album(results, want_norm, year=None):
     for r in results or []:
         if r.get("resultType") != "album" or not r.get("browseId"):
             continue
-        if normalize_title(r.get("title", "")) != want_norm:
+        if _numfold(normalize_title(r.get("title", ""))) != _numfold(want_norm):
             continue
         if not _SOUNDTRACKY.search(r.get("title", "")):
             continue
@@ -368,7 +435,7 @@ def _match_album_within(results, hay_norm):
         if not _SOUNDTRACKY.search(r.get("title", "")):
             continue
         n = normalize_title(r.get("title", ""))
-        if len(n) < 6 or " " not in n or n not in hay_norm:
+        if len(n) < 6 or " " not in n or _numfold(n) not in _numfold(hay_norm):
             continue
         hit = _hit_from(r)
         if hit:
@@ -619,7 +686,7 @@ def load_data(path):
 
 
 def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
-        itunes_fn=itunes_tracks, data_path=DATA_PATH, now=None):
+        itunes_fn=catalog_tracks, data_path=DATA_PATH, now=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_data(data_path)

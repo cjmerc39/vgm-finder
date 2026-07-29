@@ -229,7 +229,7 @@ TRACKS_CAP_BACKFILL = 250
 
 
 def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect.ytm_album,
-        itunes_fn=collect.itunes_tracks, data_path=collect.DATA_PATH,
+        itunes_fn=collect.catalog_tracks, data_path=collect.DATA_PATH,
         state_path=STATE_PATH, now=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")

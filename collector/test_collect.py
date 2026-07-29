@@ -439,6 +439,20 @@ def test_matcher_accepts_console_exclusive_album_namings():
     assert collect._match_album(bare, n("The Last of Us")) is None
 
 
+def test_numeral_folding_matches_roman_against_arabic():
+    n = collect.normalize_title
+    assert collect._numfold("assassin s creed ii") == "assassin s creed 2"
+    assert collect._numfold("final fantasy ix") == "final fantasy 9"
+    assert collect._numfold("i am the chowder man") == "i am the chowder man"  # "i" stays a word
+    ac2 = [{"resultType": "album", "browseId": "MPREb_ac2", "year": "2009",
+            "title": "Assassin's Creed 2 (Original Game Soundtrack)",
+            "artists": [{"name": "Jesper Kyd"}],
+            "thumbnails": [{"url": "https://img.example/ac2.jpg", "width": 544}]}]
+    hit = collect._match_album(ac2, n("Assassin's Creed II"), year=2009)
+    assert hit and hit["composers"] == ["Jesper Kyd"]
+    assert collect._itunes_album_matches("Final Fantasy 9 Original Soundtrack", n("Final Fantasy IX"))
+
+
 def test_year_anchor_blocks_franchise_crossmatches():
     n = collect.normalize_title
     reboot_ost = [{"resultType": "album", "browseId": "MPREb_tr", "year": "2013",
