@@ -53,7 +53,7 @@ def _igdb_query(where, offset, typed=True):
         "client_id": cid, "client_secret": secret,
         "grant_type": "client_credentials"}).json()["access_token"]
     type_clause = " & game_type = (0,4,8,9)" if typed else ""
-    query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, platforms, "
+    query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, platforms, collections, "
              f"genres.name, involved_companies.company.name, involved_companies.developer; "
              f"where {where}{type_clause}; "
              f"sort rating_count desc; limit {IGDB_PAGE}; offset {offset};")
@@ -71,7 +71,26 @@ def load_seeds(path=None):
         return []
 
 
+_FRANCHISE_IDS = None
+
+
 def default_fetch(url):
+    global _FRANCHISE_IDS
+    if url.startswith("igdb-franchise:"):
+        # seed one game, sweep its whole IGDB collection
+        if _FRANCHISE_IDS is None:
+            slugs = load_seeds()
+            if not slugs:
+                return b"[]"
+            quoted = ",".join(f'"{s}"' for s in slugs)
+            seeds_games = json.loads(_igdb_query(f"slug = ({quoted})", 0, typed=False))
+            ids = sorted({c for g in seeds_games for c in (g.get("collections") or [])})
+            _FRANCHISE_IDS = ids
+        if not _FRANCHISE_IDS:
+            return b"[]"
+        members = ",".join(str(i) for i in _FRANCHISE_IDS)
+        return _igdb_query(f"collections = ({members}) & rating_count >= 10",
+                           int(url.split(":", 1)[1]), typed=False)
     if url.startswith("igdb-seeds:"):
         slugs = load_seeds()
         if not slugs:
@@ -95,10 +114,12 @@ def load_state(path):
             return {"steamStart": int(d.get("steamStart", 0)),
                     "igdbOffset": int(d.get("igdbOffset", 0)),
                     "igdbRecentOffset": int(d.get("igdbRecentOffset", 0)),
+                    "igdbFranchiseOffset": int(d.get("igdbFranchiseOffset", 0)),
                     "checked": list(d.get("checked", []))}
     except (OSError, ValueError):
         pass
-    return {"steamStart": 0, "igdbOffset": 0, "igdbRecentOffset": 0, "checked": []}
+    return {"steamStart": 0, "igdbOffset": 0, "igdbRecentOffset": 0,
+            "igdbFranchiseOffset": 0, "checked": []}
 
 
 def steam_leg(releases, state, fetch_fn, seen_at):
@@ -167,7 +188,7 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
 
 
 def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
-             prefix="igdb-top", offset_key="igdbOffset", cap=None):
+             prefix="igdb-top", offset_key="igdbOffset", cap=None, noalbum_bar=None):
     cap = YTM_CAP if cap is None else cap
     checked = set(state["checked"])
     looked = added = 0
@@ -218,7 +239,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"),
                         "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url}
-            elif (g.get("rating_count") or 0) >= NOALBUM_BAR:
+            elif (g.get("rating_count") or 0) >= (NOALBUM_BAR if noalbum_bar is None else noalbum_bar):
                 # canon-tier game with no verifiable album (Nintendo, licensed
                 # compilations): a search row beats absence, and it upgrades
                 # itself by slug collision if a real album ever appears
@@ -257,10 +278,13 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     seeds_leg(releases, fetch_fn, resolve_fn, seen_at)
     steam_leg(releases, state, fetch_fn, seen_at)
     _, top_done, spent = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at)
-    _, recent_done, _ = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
-                                 prefix="igdb-recent", offset_key="igdbRecentOffset",
-                                 cap=YTM_CAP - spent)
-    igdb_done = top_done and recent_done
+    _, recent_done, spent2 = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
+                                      prefix="igdb-recent", offset_key="igdbRecentOffset",
+                                      cap=YTM_CAP - spent)
+    _, fran_done, _ = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
+                               prefix="igdb-franchise", offset_key="igdbFranchiseOffset",
+                               cap=YTM_CAP - spent - spent2, noalbum_bar=40)
+    igdb_done = top_done and recent_done and fran_done
     fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL)
     print(f"tracklists: {fetched} looked up")
 

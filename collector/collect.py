@@ -200,9 +200,13 @@ def _plays_num(text):
 def ytm_tracks_from(album):
     out = []
     for t in (album or {}).get("tracks", []):
-        if t.get("title"):
-            out.append({"title": t["title"], "plays": t.get("views") or None,
-                        "videoId": t.get("videoId") or None})
+        if not t.get("title"):
+            continue
+        vid = t.get("videoId") or None
+        vtype = t.get("videoType") or ""
+        if vid and vtype and not vtype.endswith("ATV"):
+            vid = None  # video edition: linking it opens Video mode, not the song
+        out.append({"title": t["title"], "plays": t.get("views") or None, "videoId": vid})
     return out
 
 

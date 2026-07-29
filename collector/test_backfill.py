@@ -18,7 +18,7 @@ def make_fetch(counter=None):
             counter.append(url)
         if url.startswith("igdb-top:"):
             return raw("igdb-games.json")  # 25 games < page size -> leg exhausts
-        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:"):
+        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:") or url.startswith("igdb-franchise:"):
             return b"[]"  # these legs are exercised by their own tests
         if "store.steampowered.com" in url:
             return raw("steam-top-soundtracks.json")
@@ -95,7 +95,7 @@ def test_backfill_gives_canon_games_search_rows_when_no_album_exists(tmp_path, m
     def fetch(url):
         if url.startswith("igdb-top:"):
             return page
-        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:"):
+        if url.startswith("igdb-recent:") or url.startswith("igdb-seeds:") or url.startswith("igdb-franchise:"):
             return b"[]"
         raise AssertionError(url)
     monkeypatch.setattr(backfill, "STEAM_TARGET", 0)
@@ -117,7 +117,7 @@ def test_recent_leg_walks_its_own_cursor_and_shares_checked(tmp_path, monkeypatc
                           "first_release_date": 1745452800, "rating_count": 890,
                           "involved_companies": [{"developer": True, "company": {"name": "Sandfall Interactive"}}]}]).encode()
     def fetch(url):
-        if url.startswith("igdb-top:") or url.startswith("igdb-seeds:"):
+        if url.startswith("igdb-top:") or url.startswith("igdb-seeds:") or url.startswith("igdb-franchise:"):
             return b"[]"
         if url.startswith("igdb-recent:"):
             return recent
