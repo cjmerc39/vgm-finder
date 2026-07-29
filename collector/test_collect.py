@@ -936,3 +936,10 @@ def test_movie_soundtracks_never_attach_to_tie_in_games():
               "title": "The LEGO Movie Videogame (Original Soundtrack)",
               "artists": [{"name": "Rob Westwood"}], "thumbnails": []}
     assert collect._hit_from(tie_in)  # the game's own album says so in the title
+
+
+def test_stage_productions_never_attach_to_games():
+    stage = {"resultType": "album", "browseId": "MPREb_syn", "year": "2023",
+             "title": "Synapse (Original Theatrical Soundtrack)",
+             "artists": [{"name": "Some Composer"}], "thumbnails": []}
+    assert collect._hit_from(stage) is None
