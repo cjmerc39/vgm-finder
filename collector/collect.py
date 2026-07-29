@@ -588,12 +588,17 @@ def merge(releases, items, source, seen_at):
     id and title never change."""
     by_id = {r["id"]: r for r in releases}
     norms = {id(r): normalize_title(r["title"]) for r in releases}
+    by_numfold = {}
+    for r in releases:
+        by_numfold.setdefault(_numfold(norms[id(r)]), r)
     added = merged = 0
     for it in items:
         if not it["title"] or not it["url"]:
             continue
         slug = slugify(it["title"])
-        target = by_id.get(slug) or _fuzzy_find(normalize_title(it["title"]), releases, norms)
+        norm = normalize_title(it["title"])
+        # numeral variants (II vs 2) are the same name exactly — never left to fuzzy odds
+        target = by_id.get(slug) or by_numfold.get(_numfold(norm)) or _fuzzy_find(norm, releases, norms)
         if target is not None and it["date"] and target.get("date") and _far_apart(it["date"], target["date"]):
             # same name, different era: Tomb Raider 1996 is not Tomb Raider 2013.
             # The newcomer gets a year-suffixed id; reruns find it there again.
@@ -638,6 +643,7 @@ def merge(releases, items, source, seen_at):
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
+            by_numfold.setdefault(_numfold(norms[id(entry)]), entry)
             added += 1
     return added, merged
 

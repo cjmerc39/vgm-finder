@@ -545,6 +545,18 @@ def test_same_name_different_era_stays_separate():
     assert (added, merged) == (0, 0) and len(releases) == 2
 
 
+def test_numeral_variants_merge_exactly_not_by_fuzzy_odds():
+    releases = []
+    collect.merge(releases, [{"title": "Assassin's Creed II Soundtrack",
+                              "url": "https://a.example/ac2-search", "date": "2009-11-17"}], src("a"), SEEN)
+    collect.merge(releases, [{"title": "Assassin's Creed 2 (Original Game Soundtrack)",
+                              "url": "https://b.example/ac2-album", "date": "2009-11-17",
+                              "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ac2"}], src("b"), SEEN)
+    assert len(releases) == 1  # II and 2 are the same name: enrich, don't duplicate
+    assert releases[0]["id"] == "assassin-s-creed-ii"
+    assert releases[0]["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_ac2"
+
+
 def test_numbered_sequels_never_fuzzy_merge():
     releases = []
     collect.merge(releases, [{"title": "Mass Effect 2 Original Soundtrack",
