@@ -116,9 +116,12 @@ def default_fetch(url):
         # fresh releases haven't had time to accumulate ratings, so the
         # recent leg's bar misses them wholesale — hype stands in for the
         # crowd that hasn't voted yet
+        # sort by id: unique and stable, so pagination across separate
+        # queries never shuffles rows through page boundaries (date sorts
+        # tie constantly and IGDB reorders ties per query)
         return _igdb_query(f"first_release_date >= {GAP_START} & first_release_date <= {GAP_END}"
                            f" & (rating_count >= {GAP_RATINGS} | hypes >= {GAP_HYPES})",
-                           int(url.split(":", 1)[1]), sort="first_release_date desc")
+                           int(url.split(":", 1)[1]), sort="id asc")
     return collect.fetch_feed(url)
 
 
