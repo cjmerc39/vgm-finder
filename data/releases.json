@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T13:36:53Z",
+  "updatedAt": "2026-07-29T13:56:46Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -251721,6 +251721,32 @@
           "plays": null
         }
       ]
+    },
+    {
+      "id": "jurassic-world-evolution-3",
+      "title": "Jurassic World Evolution 3 Soundtrack",
+      "game": "Jurassic World Evolution 3",
+      "composers": [],
+      "date": "2025-10-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/jurassic-world-evolution-3",
+          "seenAt": "2026-07-29T13:56:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Jurassic+World+Evolution+3+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xgz.jpg",
+      "notable": true,
+      "company": "Frontier Developments",
+      "console": true,
+      "genres": [
+        "Simulator",
+        "Strategy"
+      ],
+      "tracks": []
     }
   ]
 }
