@@ -115,11 +115,12 @@ def load_state(path):
                     "igdbOffset": int(d.get("igdbOffset", 0)),
                     "igdbRecentOffset": int(d.get("igdbRecentOffset", 0)),
                     "igdbFranchiseOffset": int(d.get("igdbFranchiseOffset", 0)),
-                    "checked": list(d.get("checked", []))}
+                    "checked": list(d.get("checked", [])),
+                    "resolveTried": list(d.get("resolveTried", []))}
     except (OSError, ValueError):
         pass
     return {"steamStart": 0, "igdbOffset": 0, "igdbRecentOffset": 0,
-            "igdbFranchiseOffset": 0, "checked": []}
+            "igdbFranchiseOffset": 0, "checked": [], "resolveTried": []}
 
 
 def steam_leg(releases, state, fetch_fn, seen_at):
@@ -161,11 +162,13 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
             # token-vocabulary relaxation, and no year anchor (classic albums
             # often reach streaming decades late)
             hit = (collect._match_album(results, collect.normalize_title(name))
-                   or collect._match_album_tokens(results, name))
+                   or collect._match_album_tokens(results, name)
+                   or collect._match_album_contains(results, name))
             if not hit and ":" in name:
                 # subtitled names pollute the search; retry on the head
                 results = resolve_fn(collect._query(name.split(":", 1)[0].strip()))
-                hit = collect._match_album_tokens(results, name)
+                hit = (collect._match_album_tokens(results, name)
+                       or collect._match_album_contains(results, name))
         except Exception:
             continue
         cover = (g.get("cover") or {}).get("image_id")
@@ -265,6 +268,48 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
 TRACKS_CAP_BACKFILL = 250
 
 
+def resolve_leg(releases, state, resolve_fn, cap):
+    """One shot per album-less row: strict + token matching against YTM, with
+    a tried-marker so misses never burn future caps."""
+    tried = set(state.get("resolveTried", []))
+    looked = filled = 0
+    untried_left = False
+    for r in releases:
+        if r.get("ytmAlbumUrl") or r["id"] in tried:
+            continue
+        name = r.get("game") or r["title"]
+        if not name:
+            continue
+        if looked >= cap:
+            untried_left = True
+            break
+        looked += 1
+        try:
+            results = resolve_fn(collect._query(name))
+            hit = (collect._match_album(results, collect.normalize_title(name))
+                   or (len(name.split()) >= 2 and collect._match_album_tokens(results, name))
+                   or None)
+        except Exception:
+            continue  # transient: not marked, retried later
+        tried.add(r["id"])
+        if not hit:
+            continue
+        r["ytmAlbumUrl"] = hit["url"]
+        r.pop("tracks", None)
+        r.pop("ytmPlaylistId", None)
+        if collect.normalize_title(hit["title"]) != collect.normalize_title(r["title"]):
+            r["albumTitle"] = hit["title"]
+        if not r.get("art") and hit["art"]:
+            r["art"] = hit["art"]
+        if not r.get("composers") and hit["composers"]:
+            r["composers"] = hit["composers"]
+        filled += 1
+    state["resolveTried"] = sorted(tried)
+    print(f"resolve leg: {looked} lookups, {filled} albums attached"
+          + ("" if untried_left else ", exhausted"))
+    return not untried_left
+
+
 def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect.ytm_album,
         itunes_fn=collect.catalog_tracks, data_path=collect.DATA_PATH,
         state_path=STATE_PATH, now=None):
@@ -281,10 +326,12 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     _, recent_done, spent2 = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                                       prefix="igdb-recent", offset_key="igdbRecentOffset",
                                       cap=YTM_CAP - spent)
-    _, fran_done, _ = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
-                               prefix="igdb-franchise", offset_key="igdbFranchiseOffset",
-                               cap=YTM_CAP - spent - spent2, noalbum_bar=40)
-    igdb_done = top_done and recent_done and fran_done
+    _, fran_done, spent3 = igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
+                                    prefix="igdb-franchise", offset_key="igdbFranchiseOffset",
+                                    cap=YTM_CAP - spent - spent2, noalbum_bar=40)
+    resolve_done = resolve_leg(releases, state, resolve_fn,
+                               cap=max(0, YTM_CAP - spent - spent2 - spent3))
+    igdb_done = top_done and recent_done and fran_done and resolve_done
     fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL)
     print(f"tracklists: {fetched} looked up")
 

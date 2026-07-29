@@ -480,6 +480,30 @@ def _match_album_tokens(results, game_name):
     return None
 
 
+def _match_album_contains(results, game_name):
+    """Seed-vouched containment: the album title carries the full game name
+    plus soundtrack wording ("Portal 2: Songs to Test By (Original Game
+    Soundtrack)"), with the live-service blacklist applied."""
+    want = {t for t in _numfold(normalize_title(game_name)).split()
+            if t not in _TOKENS_OK and t != "i"}
+    if not want:
+        return None
+    for r in results or []:
+        if r.get("resultType") != "album" or not r.get("browseId"):
+            continue
+        title = r.get("title", "")
+        if _GAAS_BLACKLIST.search(title) or not _SOUNDTRACKY.search(title):
+            continue
+        cand = {t for t in _numfold(normalize_title(title)).split()
+                if t not in _TOKENS_OK and t != "i"}
+        if not want.issubset(cand):
+            continue
+        hit = _hit_from(r)
+        if hit:
+            return hit
+    return None
+
+
 def _match_album_within(results, hay_norm):
     """Containment: an editorial headline carries the album's name inside it
     ("Atomic Owl vinyl reissue is now available…" ⊇ "Atomic Owl (OST)").

@@ -551,6 +551,24 @@ def test_token_matcher_accepts_reworded_albums_but_not_tributes():
     assert collect._match_album_tokens(alpha, "Minecraft") is not None
 
 
+def test_containment_tier_takes_creatively_titled_albums():
+    p2 = [{"resultType": "album", "browseId": "MPREb_p2",
+           "title": "Portal 2: Songs to Test By (Original Game Soundtrack)",
+           "artists": [{"name": "Aperture Science Psychoacoustic Laboratories"}], "thumbnails": []}]
+    hit = collect._match_album_contains(p2, "Portal 2")
+    assert hit and hit["url"].endswith("MPREb_p2")
+    # still not a free-for-all: blacklisted wording and missing keywords stay out
+    remix = [{"resultType": "album", "browseId": "MPREb_r",
+              "title": "Portal 2 Soundtrack Lofi Remixes", "artists": [{"name": "X"}], "thumbnails": []}]
+    assert collect._match_album_contains(remix, "Portal 2") is None
+    plain = [{"resultType": "album", "browseId": "MPREb_pl",
+              "title": "Portal 2 Fan Anthems", "artists": [{"name": "X"}], "thumbnails": []}]
+    assert collect._match_album_contains(plain, "Portal 2") is None  # no soundtrack wording
+    other = [{"resultType": "album", "browseId": "MPREb_o",
+              "title": "Portal Original Soundtrack", "artists": [{"name": "X"}], "thumbnails": []}]
+    assert collect._match_album_contains(other, "Portal 2") is None  # the 2 must be present
+
+
 def test_year_anchor_blocks_franchise_crossmatches():
     n = collect.normalize_title
     reboot_ost = [{"resultType": "album", "browseId": "MPREb_tr", "year": "2013",
