@@ -49,7 +49,7 @@ def steam_page_url(start):
             "&sort_by=Reviews_DESC&infinite=1&l=english&cc=US")
 
 
-def _igdb_query(where, offset, typed=True):
+def _igdb_query(where, offset, typed=True, sort="rating_count desc"):
     cid = os.environ.get("TWITCH_CLIENT_ID")
     secret = os.environ.get("TWITCH_CLIENT_SECRET")
     if not cid or not secret:
@@ -58,10 +58,13 @@ def _igdb_query(where, offset, typed=True):
         "client_id": cid, "client_secret": secret,
         "grant_type": "client_credentials"}).json()["access_token"]
     type_clause = " & game_type = (0,4,8,9)" if typed else ""
+    # IGDB silently drops rows whose sort field is null — sort the gap query
+    # by release date (its where guarantees one); hype-only games have no
+    # rating_count and would vanish under the default sort
     query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, platforms, collections, "
              f"genres.name, involved_companies.company.name, involved_companies.developer; "
              f"where {where}{type_clause}; "
-             f"sort rating_count desc; limit {IGDB_PAGE}; offset {offset};")
+             f"sort {sort}; limit {IGDB_PAGE}; offset {offset};")
     resp = requests.post("https://api.igdb.com/v4/games", data=query.encode(), timeout=30,
                          headers={"Client-ID": cid, "Authorization": f"Bearer {tok}"})
     resp.raise_for_status()
@@ -115,7 +118,7 @@ def default_fetch(url):
         # crowd that hasn't voted yet
         return _igdb_query(f"first_release_date >= {GAP_START} & first_release_date <= {GAP_END}"
                            f" & (rating_count >= {GAP_RATINGS} | hypes >= {GAP_HYPES})",
-                           int(url.split(":", 1)[1]))
+                           int(url.split(":", 1)[1]), sort="first_release_date desc")
     return collect.fetch_feed(url)
 
 
