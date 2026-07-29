@@ -141,6 +141,10 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
             # often reach streaming decades late)
             hit = (collect._match_album(results, collect.normalize_title(name))
                    or collect._match_album_tokens(results, name))
+            if not hit and ":" in name:
+                # subtitled names pollute the search; retry on the head
+                results = resolve_fn(collect._query(name.split(":", 1)[0].strip()))
+                hit = collect._match_album_tokens(results, name)
         except Exception:
             continue
         cover = (g.get("cover") or {}).get("image_id")
@@ -193,8 +197,13 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
             looked += 1
             when = datetime.fromtimestamp(stamp, tz=timezone.utc)
             try:
-                hit = collect._match_album(resolve_fn(collect._query(name)),
-                                           collect.normalize_title(name), year=when.year)
+                results = resolve_fn(collect._query(name))
+                hit = collect._match_album(results, collect.normalize_title(name), year=when.year)
+                if not hit and len(name.split()) >= 2:
+                    # famous games hide behind loose album naming ("The Music
+                    # of Red Dead Redemption 2, Vol. 1"); multi-word names are
+                    # specific enough for the token matcher
+                    hit = collect._match_album_tokens(results, name)
             except Exception:
                 continue  # transient lookup failure: leave unchecked, retry next run
             checked.add(gid)

@@ -500,6 +500,19 @@ def test_token_matcher_accepts_reworded_albums_but_not_tributes():
     symphony = [{"resultType": "album", "browseId": "MPREb_s", "title": "Donkey Kong 64 Symphony (Original Score)",
                  "artists": [{"name": "Orchestra"}], "thumbnails": []}]
     assert collect._match_album_tokens(symphony, "Donkey Kong 64") is None  # 'symphony' is foreign
+    # volume numbers are bookkeeping; game numerals are identity
+    gtav = [{"resultType": "album", "browseId": "MPREb_gta", "title": "The Music of Grand Theft Auto V, Vol. 1: Original Music",
+             "artists": [{"name": "Various Artists"}], "thumbnails": []}]
+    assert collect._match_album_tokens(gtav, "Grand Theft Auto V") is not None
+    hm1cover = [{"resultType": "album", "browseId": "MPREb_hm1", "title": "Hotline Miami (Soundtrack)",
+                 "artists": [{"name": "Wolves Den"}], "thumbnails": []}]
+    assert collect._match_album_tokens(hm1cover, "Hotline Miami 2: Wrong Number") is None  # missing the 2
+    hm2 = [{"resultType": "album", "browseId": "MPREb_hm2", "title": "Hotline Miami 2 (Official Soundtrack)",
+            "artists": [{"name": "Various Artists"}], "thumbnails": []}]
+    assert collect._match_album_tokens(hm2, "Hotline Miami 2: Wrong Number") is not None  # subtitle may drop
+    alpha = [{"resultType": "album", "browseId": "MPREb_mc", "title": "Minecraft - Volume Alpha (Soundtrack)",
+              "artists": [{"name": "C418"}], "thumbnails": []}]
+    assert collect._match_album_tokens(alpha, "Minecraft") is not None
 
 
 def test_year_anchor_blocks_franchise_crossmatches():
@@ -530,14 +543,18 @@ def test_slug_is_stable_across_source_phrasings():
 
 # ---------------- YT Music search URLs ----------------
 
-def test_ytm_url_basic():
+def test_ytm_url_never_duplicates_the_game_name():
+    url = collect.ytm_search_url("Madden NFL 26 Soundtrack", "Madden NFL 26")
+    assert url == "https://music.youtube.com/search?q=Madden+NFL+26+Soundtrack"
     url = collect.ytm_search_url("Celeste", "Celeste")
-    assert url == "https://music.youtube.com/search?q=Celeste+Celeste+soundtrack"
+    assert url == "https://music.youtube.com/search?q=Celeste+soundtrack"
+    url = collect.ytm_search_url("Nos Vies En Lumière", "Clair Obscur: Expedition 33")
+    assert url == "https://music.youtube.com/search?q=Nos+Vies+En+Lumi%C3%A8re+Clair+Obscur%3A+Expedition+33+soundtrack"
 
 
 def test_ytm_url_drops_null_game_and_encodes_punctuation():
-    url = collect.ytm_search_url("Ratchet & Clank: Rift Apart", None)
-    assert url == "https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+soundtrack"
+    url = collect.ytm_search_url("Ratchet & Clank: Rift Apart OST", None)
+    assert url == "https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST"
 
 
 def test_ytm_url_encodes_japanese():

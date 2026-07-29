@@ -442,7 +442,7 @@ def _match_album(results, want_norm, year=None):
 _TOKENS_OK = {"the", "a", "an", "and", "of", "vol", "volume", "original", "official",
               "video", "videogame", "game", "soundtrack", "ost", "score", "music",
               "from", "complete", "deluxe", "edition", "remastered", "remaster",
-              "inspired", "by"}  # seed-vouched: "inspired by" rips are often the only album there is
+              "inspired", "by", "alpha", "beta"}  # seed-vouched; alpha/beta are volume names (Minecraft)
 
 
 def _match_album_tokens(results, game_name):
@@ -452,17 +452,23 @@ def _match_album_tokens(results, game_name):
     Raccoonus, while "Spyro Remixed" or "Pac-Man Fever" introduce foreign
     words and stay rejected."""
     def content(norm):
-        return {t for t in _numfold(norm).split()
-                if t not in _TOKENS_OK and t != "i" and not t.isdigit()}
-    want = content(normalize_title(game_name))
-    if not want:
+        folded = re.sub(r"\b(vol|volume)\s+\d+\b", " ", _numfold(norm))  # volume numbers aren't identity
+        return {t for t in folded.split()
+                if t not in _TOKENS_OK and t != "i"}  # game numerals stay: HM 2 is not HM
+    wants = [content(normalize_title(game_name))]
+    if ":" in game_name:  # subtitles drop off album titles constantly
+        head = content(normalize_title(game_name.split(":", 1)[0]))
+        if head and head not in wants:
+            wants.append(head)
+    if not wants[0]:
         return None
     for r in results or []:
         if r.get("resultType") != "album" or not r.get("browseId"):
             continue
         if not _SOUNDTRACKY.search(r.get("title", "")):
             continue
-        if content(normalize_title(r.get("title", ""))) != want:
+        cand = content(normalize_title(r.get("title", "")))
+        if cand not in wants:
             continue
         hit = _hit_from(r)
         if hit:
@@ -595,7 +601,12 @@ def slugify(title):
 
 
 def ytm_search_url(title, game):
-    q = " ".join(p for p in (title, game, "soundtrack") if p)
+    parts = [title]
+    if game and _numfold(normalize_title(game)) not in _numfold(normalize_title(title)):
+        parts.append(game)  # only when the title doesn't already name the game
+    if not any(_SOUNDTRACKY.search(p) for p in parts):
+        parts.append("soundtrack")
+    q = " ".join(p for p in parts if p)
     return "https://music.youtube.com/search?q=" + quote_plus(re.sub(r"\s+", " ", q).strip())
 
 
