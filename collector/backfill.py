@@ -298,7 +298,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                 exhausted = True
             else:
                 state[offset_key] += IGDB_PAGE
-    state["checked"] = sorted(checked)
+    state[checked_key] = sorted(checked)
     print(f"{prefix} leg: {looked} lookups, {len(checked)} games checked, {added} albums added"
           + (", exhausted" if exhausted else ""))
     return added, exhausted, looked
