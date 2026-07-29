@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T05:09:40Z",
+  "updatedAt": "2026-07-29T05:25:37Z",
   "releases": [
     {
       "id": "make-yourself-at-home-the-world-of-warcraft-housing-soundtrack-has-arrived",
@@ -440,7 +440,9 @@
       "id": "final-symphony-ii-music-from-final-fantasy-v-viii-ix-and-xiii",
       "title": "Final Symphony II – music from Final Fantasy V, VIII, IX and XIII",
       "game": null,
-      "composers": [],
+      "composers": [
+        "Royal Stockholm Philharmonic Orchestra"
+      ],
       "date": "2023-08-04",
       "sources": [
         {
@@ -451,9 +453,52 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Final+Symphony+II+%E2%80%93+music+from+Final+Fantasy+V%2C+VIII%2C+IX+and+XIII",
-      "ytmAlbumUrl": null,
-      "art": null,
-      "notable": true
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hePxh4ipap6",
+      "art": "https://yt3.googleusercontent.com/F4TZZjOhonUUSXDNUChoSbejwAndeX2CUEu3zfbRmxqxBK2-ReximqRJn5or4a4JzLEQGa7ZcsYTPx9K=w544-h544-l90-rj",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Fanfare (In a Roundabout Way)",
+          "plays": "7.7K plays",
+          "videoId": "GMvnXB6PGNY"
+        },
+        {
+          "title": "Final Fantasy XIII (Utopia in the Sky)",
+          "plays": "10K plays",
+          "videoId": "yc2zPYYuC_I"
+        },
+        {
+          "title": "Final Fantasy IX (For the People of Gaia)",
+          "plays": "11K plays",
+          "videoId": "CWkr-cFBtPQ"
+        },
+        {
+          "title": "Encore: Final Fantasy IX (Not Alone)",
+          "plays": "5.5K plays",
+          "videoId": "2Z5iYmAGfMY"
+        },
+        {
+          "title": "Final Fantasy VIII (Mono No Aware)",
+          "plays": "11K plays",
+          "videoId": "831VWrCODnw"
+        },
+        {
+          "title": "Final Fantasy V (Library of Ancients)",
+          "plays": "7.6K plays",
+          "videoId": "b73-Od88-_8"
+        },
+        {
+          "title": "Encore: Final Fantasy V (Battle at the Big Bridge)",
+          "plays": "7.8K plays",
+          "videoId": "4GsAUwlcKH8"
+        },
+        {
+          "title": "Encore: Final Fantasy (Main Theme)",
+          "plays": "5.4K plays",
+          "videoId": "70XaCwHa_RY"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_m_lkIbIlDgJJmPL9sYhssZAfY26kGPbn0"
     },
     {
       "id": "the-primals-zepp-tour-2018-trial-by-shadow",
@@ -191353,6 +191398,12 @@
           "type": "catalog",
           "url": "https://music.youtube.com/browse/MPREb_n9uEUAkG0ZW",
           "seenAt": "2026-07-29T04:39:44Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/minecraft-legends",
+          "seenAt": "2026-07-29T05:25:37Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Legends+%28Original+Game+Soundtrack%29",
@@ -191581,7 +191632,14 @@
           "videoId": "3-X-sFRbkCM"
         }
       ],
-      "ytmPlaylistId": "OLAK5uy_nJFlMXoPhUxjboZcJaznamfw6LjG3kcIY"
+      "ytmPlaylistId": "OLAK5uy_nJFlMXoPhUxjboZcJaznamfw6LjG3kcIY",
+      "albumTitle": "Minecraft Legends (Original Game Soundtrack)",
+      "company": "Blackbird Interactive",
+      "console": true,
+      "genres": [
+        "Strategy",
+        "Arcade"
+      ]
     },
     {
       "id": "minecraft-movie-unofficial-motion-picture",
@@ -240810,13 +240868,19 @@
       "composers": [
         "The Hollywood Symphony Orchestra"
       ],
-      "date": "2001-09-11",
+      "date": "2000-10-17",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/james-bond-007-the-world-is-not-enough",
           "seenAt": "2026-07-29T05:09:40Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/james-bond-007-the-world-is-not-enough--1",
+          "seenAt": "2026-07-29T05:25:37Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=James+Bond+007%3A+The+World+Is+Not+Enough+Soundtrack",
@@ -241354,6 +241418,2295 @@
         }
       ],
       "ytmPlaylistId": "OLAK5uy_lvBEthGPBtZ28u7vdEg796_JOU_hpGSQ4"
+    },
+    {
+      "id": "the-legend-of-zelda-four-swords",
+      "title": "The Legend of Zelda: Four Swords Soundtrack",
+      "game": "The Legend of Zelda: Four Swords",
+      "composers": [
+        "London Music Works",
+        "Scott Buckley"
+      ],
+      "date": "2002-12-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-four-swords",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+Zelda%3A+Four+Swords+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wFxajY5HNbE",
+      "art": "https://yt3.googleusercontent.com/_AmeNd1U5wNpK5vMCzq-AW2U3OQ4YdU5g5-cpruNM0l87WcJOhpy6oNvvuDM1ZjGRMShUmhAuLq45YV8WA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Music from the Legend of Zelda",
+      "company": "Capcom Production Studio 1",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Main Theme (From \"The Legend of Zelda\")",
+          "plays": "61K plays",
+          "videoId": "6hNLbZceSBU"
+        },
+        {
+          "title": "Zelda II: The Adventure of Link (Palace Theme) [From \"The Legend of Zelda 2\"]",
+          "plays": "29K plays",
+          "videoId": "kCQbsaNwszc"
+        },
+        {
+          "title": "Dark World (From \"The Legend of Zelda: A Link to the Past\")",
+          "plays": "26K plays",
+          "videoId": "fvwi_NVGEmc"
+        },
+        {
+          "title": "Ballad of the Windfish (From \"The Legend of Zelda: Link's Awakening\")",
+          "plays": "24K plays",
+          "videoId": "mLM2BaGdSbY"
+        },
+        {
+          "title": "Song of Storms (from \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "37K plays",
+          "videoId": "hU9bBDoUCbI"
+        },
+        {
+          "title": "Zelda's Lullaby (From \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "22K plays",
+          "videoId": "VCbqkzSwOnY"
+        },
+        {
+          "title": "Song of Healing (From \"The Legend of Zelda: Majora's Mask\")",
+          "plays": "17K plays",
+          "videoId": "ybj45HSXXAU"
+        },
+        {
+          "title": "Palace Of Winds (From \"The Legend of Zelda: Four Swords Adventures\")",
+          "plays": "14K plays",
+          "videoId": "hlQUDXn_JXA"
+        },
+        {
+          "title": "Title Theme (From \"The Legend of Zelda: The Wind Waker\")",
+          "plays": "17K plays",
+          "videoId": "xk7DIc5CBR8"
+        },
+        {
+          "title": "Minish Village (From \"The Legend of Zelda: The Minish Cap\")",
+          "plays": "15K plays",
+          "videoId": "PX0glgGATso"
+        },
+        {
+          "title": "Ilia's Theme (From \"The Legend of Zelda: Twilight Princess\")",
+          "plays": "12K plays",
+          "videoId": "brk4xExQXEk"
+        },
+        {
+          "title": "Linebeck's Theme (From \"The Legend of Zelda: Phantom Hourglass\")",
+          "plays": "14K plays",
+          "videoId": "JL7YNgB7x1o"
+        },
+        {
+          "title": "Realm Overworld (From \"The Legend of Zelda: Spirit Tracks\")",
+          "plays": "12K plays",
+          "videoId": "vnGd0TBxCeA"
+        },
+        {
+          "title": "Skyloft (From \"The Legend of Zelda: Skyward Sword\")",
+          "plays": "12K plays",
+          "videoId": "RCJiz4pTvPs"
+        },
+        {
+          "title": "Lorule Castle (From “The Legend of Zelda: A Link Between Worlds”)",
+          "plays": "11K plays",
+          "videoId": "HJdfxz2zPLk"
+        },
+        {
+          "title": "Woodlands (From “The Legend of Zelda: Tri Force Heroes”)",
+          "plays": "10K plays",
+          "videoId": "QqqhJ30ulk8"
+        },
+        {
+          "title": "Theme (From \"The Legend of Zelda: Breath of the Wild\")",
+          "plays": "15K plays",
+          "videoId": "v3Bs4JL476I"
+        },
+        {
+          "title": "Main Theme (From \"The Legend of Zelda: Tears of the Kingdom\")",
+          "plays": "12K plays",
+          "videoId": "iUmUn21TLmo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
+    },
+    {
+      "id": "mass-effect-3-extended-cut",
+      "title": "Mass Effect 3: Extended Cut Soundtrack",
+      "game": "Mass Effect 3: Extended Cut",
+      "composers": [
+        "EA Games Soundtrack"
+      ],
+      "date": "2012-07-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mass-effect-3-extended-cut",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mass+Effect+3%3A+Extended+Cut+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NrHGsEBKYsw",
+      "art": "https://yt3.googleusercontent.com/aCWTPPmKH3sy18m6tuhnKjhl7Rf5prkm2ZF76-IAX2mbnXCwwitkQ1bzYNasWpiwWOFCZcxKK9twJ8pjgg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Mass Effect 3: Extended Cut (Original Soundtrack)",
+      "company": "BioWare",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Wake Up",
+          "plays": "76K plays",
+          "videoId": "iZ5nT8zBBkk"
+        },
+        {
+          "title": "An End Once and For All (Extended Cut)",
+          "plays": "1.4M plays",
+          "videoId": "fcuzMLMZNYc"
+        },
+        {
+          "title": "A Future That Many Will Never See",
+          "plays": "37K plays",
+          "videoId": "n2TV_h1TFnQ"
+        },
+        {
+          "title": "I Will Watch Over the Ones Who Live On",
+          "plays": "32K plays",
+          "videoId": "NeN9mpoUJy4"
+        },
+        {
+          "title": "I Am Alive and I Am Not Alone",
+          "plays": "73K plays",
+          "videoId": "fx6z6Bu8P90"
+        },
+        {
+          "title": "We Fought As a United Galaxy",
+          "plays": "66K plays",
+          "videoId": "M8GEV2IlMT4"
+        },
+        {
+          "title": "Resolution",
+          "plays": "36K plays",
+          "videoId": "HTy4uHBjGwk"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_niWiXBp6cZiXt7I9kibgcfA3Yw24pwhcY"
+    },
+    {
+      "id": "bayonetta-2-2018",
+      "title": "Bayonetta 2 Soundtrack",
+      "game": "Bayonetta 2",
+      "composers": [
+        "SEGA"
+      ],
+      "date": "2018-02-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/bayonetta-2--1",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bayonetta+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_6UgPhByiOVi",
+      "art": "https://yt3.googleusercontent.com/d0VMtbxYQDEZY5lSAe-o6BgfyE-HfmhUVgo84aGShssaByyCWIp3z5NeOITq04CH-BAEkDHrPwybMwpRTA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "BAYONETTA 2 Original Soundtrack Vol. 2",
+      "company": "PlatinumGames",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "EV10-1 Loki, The Mysterious Youth Appears",
+          "plays": "8.7K plays",
+          "videoId": "Duhji7lh_HA"
+        },
+        {
+          "title": "EV10-2 Talking With Loki (A)",
+          "plays": "6.1K plays",
+          "videoId": "TGSvUSHR-Dw"
+        },
+        {
+          "title": "EV10-3 Talking With Loki (B)",
+          "plays": "4K plays",
+          "videoId": "Gm8AtxehK_8"
+        },
+        {
+          "title": "EV11 Valiance Appears",
+          "plays": "3.4K plays",
+          "videoId": "eTMBu_g-WfQ"
+        },
+        {
+          "title": "ST04 Noatun: The Church",
+          "plays": "5.2K plays",
+          "videoId": "yjHqkjCyqiw"
+        },
+        {
+          "title": "EV12 Reunited With Loki",
+          "plays": "3.4K plays",
+          "videoId": "HP_6o-7swY4"
+        },
+        {
+          "title": "Warning!",
+          "plays": "5.9K plays",
+          "videoId": "nU1GLSeemEY"
+        },
+        {
+          "title": "EV13 Danger Finds Loki",
+          "plays": "2.4K plays",
+          "videoId": "aExmnicidYY"
+        },
+        {
+          "title": "EV14-1 Moonstruck Lovers",
+          "plays": "2.7K plays",
+          "videoId": "Sckt0KH1LbQ"
+        },
+        {
+          "title": "EV14-2 Fleur De La Reine",
+          "plays": "2.9K plays",
+          "videoId": "fJNWgbh5x1k"
+        },
+        {
+          "title": "EV14-3 Here's Luka",
+          "plays": "12K plays",
+          "videoId": "2E4a3pga0nA"
+        },
+        {
+          "title": "EV14-4 The Eyes Of The World",
+          "plays": "8.2K plays",
+          "videoId": "sal1g8Uywjc"
+        },
+        {
+          "title": "EV14-5 Our Little Guide",
+          "plays": "2.3K plays",
+          "videoId": "EU75mP-1vcA"
+        },
+        {
+          "title": "EV15 Tsunami: The Remembrance Of Time's Power",
+          "plays": "1.8K plays",
+          "videoId": "V0IKv-pew4A"
+        },
+        {
+          "title": "Big Wave",
+          "plays": "2.8K plays",
+          "videoId": "7hxbH92_Stk"
+        },
+        {
+          "title": "EV16 At The Cathedral: The Remembrance Of Time's Power",
+          "plays": "1.6K plays",
+          "videoId": "xVRMfslcaCc"
+        },
+        {
+          "title": "Remembrance Of Time (B)",
+          "plays": "7.7K plays",
+          "videoId": "oYo2ToDZGQM"
+        },
+        {
+          "title": "EV17 Talking With Loki (C)",
+          "plays": "2K plays",
+          "videoId": "lC8lmWPr6g0"
+        },
+        {
+          "title": "Glamor's Return",
+          "plays": "3.2K plays",
+          "videoId": "vs_qUUVwBuE"
+        },
+        {
+          "title": "Glamor - In Charm And Allure",
+          "plays": "33K plays",
+          "videoId": "OOtNI8Vd7o4"
+        },
+        {
+          "title": "EV18 Loki's Fall",
+          "plays": "1.6K plays",
+          "videoId": "K1G6vxepSi8"
+        },
+        {
+          "title": "EV19 Something Unsettling…",
+          "plays": "1.4K plays",
+          "videoId": "t3i9fatoNfg"
+        },
+        {
+          "title": "ST05 Noatun At Dusk",
+          "plays": "3K plays",
+          "videoId": "Fv-3U7DFY7w"
+        },
+        {
+          "title": "EV20-1 The Two Meet (A)",
+          "plays": "1.5K plays",
+          "videoId": "GeS5qymzuiY"
+        },
+        {
+          "title": "EV20-2 The Two Meet (B)",
+          "plays": "1.3K plays",
+          "videoId": "3LUiHgUAOwo"
+        },
+        {
+          "title": "Trouble For Loki",
+          "plays": "2K plays",
+          "videoId": "jXDa4YUZWKc"
+        },
+        {
+          "title": "EV21 The Masked Lumen",
+          "plays": "2.6K plays",
+          "videoId": "A_fsi7BMEqA"
+        },
+        {
+          "title": "The Lumen Sage",
+          "plays": "36K plays",
+          "videoId": "fb1vokahoaY"
+        },
+        {
+          "title": "The Lumen Sage & Fortitudo",
+          "plays": "9.2K plays",
+          "videoId": "0yoFxtpZbg8"
+        },
+        {
+          "title": "The Lumen Sage & Temperantia",
+          "plays": "61K plays",
+          "videoId": "MNwQ-vtoSfY"
+        },
+        {
+          "title": "PUNCH-OUT!!",
+          "plays": "6.1K plays",
+          "videoId": "nBdOG7TeMhQ"
+        },
+        {
+          "title": "The Lumen Sage - Climax",
+          "plays": "8K plays",
+          "videoId": "NLRbUTJZxng"
+        },
+        {
+          "title": "EV22 Loki's... End?",
+          "plays": "1.5K plays",
+          "videoId": "lC-32IMRF7I"
+        },
+        {
+          "title": "To The Cathedral Of Cascades",
+          "plays": "2.9K plays",
+          "videoId": "auXagPr3sso"
+        },
+        {
+          "title": "Demons Descend",
+          "plays": "15K plays",
+          "videoId": "lB-wLKN4Hr0"
+        },
+        {
+          "title": "ST06 The Cathedral Of Cascades",
+          "plays": "2K plays",
+          "videoId": "EMZw3eHCUtg"
+        },
+        {
+          "title": "EV23-1 Hovering Sphere",
+          "plays": "1.2K plays",
+          "videoId": "yJoNjNfU2d8"
+        },
+        {
+          "title": "EV23-2 Sensing Something From Behind",
+          "plays": "1.1K plays",
+          "videoId": "-dFEbzlztYs"
+        },
+        {
+          "title": "EV24 The World's Beginning",
+          "plays": "1.6K plays",
+          "videoId": "a8lqKIjWm-I"
+        },
+        {
+          "title": "EV25 Talking With Luka",
+          "plays": "1.6K plays",
+          "videoId": "X50iAlba1Gg"
+        },
+        {
+          "title": "To The Top",
+          "plays": "4.1K plays",
+          "videoId": "LTHKjTu_LtI"
+        },
+        {
+          "title": "EV26 A Remembrance Of Time: Bridge To The Heavens",
+          "plays": "1.5K plays",
+          "videoId": "Q0nXjwMk1rU"
+        },
+        {
+          "title": "Crossing The Bridge To The Heavens",
+          "plays": "2.6K plays",
+          "videoId": "sRAXBo9EVHw"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kcVw3f82JN0Ma6rvPolhaevAyrZWyH3Js"
+    },
+    {
+      "id": "rocket-league-sideswipe",
+      "title": "Rocket League Sideswipe Soundtrack",
+      "game": "Rocket League Sideswipe",
+      "composers": [
+        "Monstercat"
+      ],
+      "date": "2021-11-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/rocket-league-sideswipe",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rocket+League+Sideswipe+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_93XU9E1dKPQ",
+      "art": "https://yt3.googleusercontent.com/WcRKfFSacJHRCZktWSev6IB93EQF5fNis-0GyKhiZttRanjMO3HmO9mnkVKaQSJ2FrUnRwsUhlOl9UM=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Rocket League: Sideswipe (Original Soundtrack), Vol. 1",
+      "company": "Psyonix",
+      "console": false,
+      "genres": [
+        "Sport",
+        "Strategy"
+      ],
+      "tracks": [
+        {
+          "title": "Dreams",
+          "plays": "1.1M plays",
+          "videoId": "awtMp9YIjDI"
+        },
+        {
+          "title": "Water Resistant (feat. 8485)",
+          "plays": "2M plays",
+          "videoId": "SfQHXne6la0"
+        },
+        {
+          "title": "Control Me",
+          "plays": "929K plays",
+          "videoId": "BH6nLEv1gBA"
+        },
+        {
+          "title": "Fading Wind",
+          "plays": "5.2M plays",
+          "videoId": null
+        },
+        {
+          "title": "That Look",
+          "plays": "990K plays",
+          "videoId": null
+        },
+        {
+          "title": "Light Up",
+          "plays": "2.5M plays",
+          "videoId": null
+        },
+        {
+          "title": "Mermaid",
+          "plays": "1M plays",
+          "videoId": null
+        },
+        {
+          "title": "There and Back",
+          "plays": "1.2M plays",
+          "videoId": null
+        },
+        {
+          "title": "Have Fun",
+          "plays": "701K plays",
+          "videoId": null
+        },
+        {
+          "title": "MADE 4 THIS",
+          "plays": "488K plays",
+          "videoId": null
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mWtX7mX-Armwr2k5aJaEdZD9Km2qBD148"
+    },
+    {
+      "id": "valkyria-chronicles-2",
+      "title": "Valkyria Chronicles 2 Soundtrack",
+      "game": "Valkyria Chronicles 2",
+      "composers": [
+        "Hitoshi Sakimoto(Basiscape)"
+      ],
+      "date": "2010-01-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/valkyria-chronicles-2",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Valkyria+Chronicles+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_FA7U1nBC9IH",
+      "art": "https://yt3.googleusercontent.com/WAyGCGeN3Bad1TcigVR6BS35I3DCT7gZRcfoEhaz0p-uILX3f0FjMvxrg7KrtkLZjwef_xhdducDu3CL=w544-h544-s-l90-rj",
+      "notable": true,
+      "albumTitle": "Valkyria Chronicles 2 Original Soundtrack",
+      "company": "Sega CS3",
+      "console": true,
+      "genres": [
+        "Real Time Strategy (RTS)",
+        "Role-playing (RPG)",
+        "Strategy"
+      ],
+      "tracks": [
+        {
+          "title": "Valkyria Chronicles 2 Main Theme",
+          "plays": "2.1K plays",
+          "videoId": "5cPxlkMVeWc"
+        },
+        {
+          "title": "Exciting Battle",
+          "plays": "2.3K plays",
+          "videoId": "GB80Ij70nMQ"
+        },
+        {
+          "title": "Winter in Lanseal",
+          "plays": "473 plays",
+          "videoId": "sDPrmbcyLd4"
+        },
+        {
+          "title": "Everyday Life of The Class",
+          "plays": "308 plays",
+          "videoId": "-hbtn-UJZ9Q"
+        },
+        {
+          "title": "Practice Battle",
+          "plays": "613 plays",
+          "videoId": "EXU3cRwJjlA"
+        },
+        {
+          "title": "Royal Military Academy",
+          "plays": "424 plays",
+          "videoId": "GFcFA8t8VDQ"
+        },
+        {
+          "title": "The Rebels' Assault",
+          "plays": "406 plays",
+          "videoId": "iNxlog4RMZg"
+        },
+        {
+          "title": "Briefing",
+          "plays": "451 plays",
+          "videoId": "HfKXRwP4D8k"
+        },
+        {
+          "title": "Liberation Battle",
+          "plays": "511 plays",
+          "videoId": "sjUo_jsMUOw"
+        },
+        {
+          "title": "応戦 - Counter Battle",
+          "plays": "574 plays",
+          "videoId": "_NakEI3VWOM"
+        },
+        {
+          "title": "Reward",
+          "plays": "249 plays",
+          "videoId": "RXP_Gez3OIk"
+        },
+        {
+          "title": "Time Has Passed",
+          "plays": "156 plays",
+          "videoId": "ySNbVkN8YLg"
+        },
+        {
+          "title": "Spring in Lanseal",
+          "plays": "257 plays",
+          "videoId": "RW0rsnEexxg"
+        },
+        {
+          "title": "Are We A Spoiled Class?",
+          "plays": "358 plays",
+          "videoId": "KwKQCApi7Ws"
+        },
+        {
+          "title": "Outside Battle",
+          "plays": "2K plays",
+          "videoId": "bqb0hxqNncY"
+        },
+        {
+          "title": "War Preparedness",
+          "plays": "247 plays",
+          "videoId": "7Tlle-81Q4I"
+        },
+        {
+          "title": "Snowfield Battle",
+          "plays": "597 plays",
+          "videoId": "h7bt7ntQ2H0"
+        },
+        {
+          "title": "Theme of The Rebles",
+          "plays": "329 plays",
+          "videoId": "iLbSoeWSXjk"
+        },
+        {
+          "title": "Summer in Lanseal",
+          "plays": "191 plays",
+          "videoId": "uF59IE2BmcI"
+        },
+        {
+          "title": "Street Battle",
+          "plays": "3.3K plays",
+          "videoId": "dL91AdkNA7s"
+        },
+        {
+          "title": "Defense Battle",
+          "plays": "1.1K plays",
+          "videoId": "hvGOhA19g5w"
+        },
+        {
+          "title": "Conflict",
+          "plays": "168 plays",
+          "videoId": "05ayz3foLKA"
+        },
+        {
+          "title": "Desert Battle",
+          "plays": "476 plays",
+          "videoId": "SiZdYYfccdY"
+        },
+        {
+          "title": "Decisive Battle",
+          "plays": "726 plays",
+          "videoId": "r6WcA9N-kPk"
+        },
+        {
+          "title": "Defeat",
+          "plays": "114 plays",
+          "videoId": "Q98Y4fYVXeo"
+        },
+        {
+          "title": "Valkyria Chronicles Series Main Theme",
+          "plays": "14K plays",
+          "videoId": "yY8EHLgbd5s"
+        },
+        {
+          "title": "級友たちとの日々 - Days With Classmates",
+          "plays": "264 plays",
+          "videoId": "LwVYDBgW9Os"
+        },
+        {
+          "title": "Championship",
+          "plays": "1.7K plays",
+          "videoId": "o4nIU-1beAM"
+        },
+        {
+          "title": "Theme of Class G",
+          "plays": "699 plays",
+          "videoId": "aB_uFJQnz_4"
+        },
+        {
+          "title": "Night in The Dormitory",
+          "plays": "107 plays",
+          "videoId": "GtXWh-ro_YQ"
+        },
+        {
+          "title": "ランシールの秋 - Autumn in Lanseal",
+          "plays": "179 plays",
+          "videoId": "Uwa4HOVbA5w"
+        },
+        {
+          "title": "Close Battle",
+          "plays": "1.9K plays",
+          "videoId": "f2OqPpZFoDw"
+        },
+        {
+          "title": "Tear of Wars",
+          "plays": "201 plays",
+          "videoId": "4HblJgzd_1M"
+        },
+        {
+          "title": "Mine Battle",
+          "plays": "271 plays",
+          "videoId": "7E2nh4wq4lI"
+        },
+        {
+          "title": "Faint Youth",
+          "plays": "220 plays",
+          "videoId": "jZ1Ga9x6KMo"
+        },
+        {
+          "title": "Offensive and Defensive Battle",
+          "plays": "3.4K plays",
+          "videoId": "Dum52s8K62o"
+        },
+        {
+          "title": "Theme of Valkyria",
+          "plays": "5.3K plays",
+          "videoId": "f4mz9k0GE3s"
+        },
+        {
+          "title": "The Succeeded, The Lost",
+          "plays": "158 plays",
+          "videoId": "5y02Lq4nTGI"
+        },
+        {
+          "title": "Ship Battle",
+          "plays": "9.6K plays",
+          "videoId": "EqJHQkhSLEg"
+        },
+        {
+          "title": "Gassenarl's Ambition",
+          "plays": "127 plays",
+          "videoId": "u1y5Fkb7X8A"
+        },
+        {
+          "title": "Final Decisive Battle",
+          "plays": "1.5K plays",
+          "videoId": "YFQw0kthH2A"
+        },
+        {
+          "title": "Graduation",
+          "plays": "167 plays",
+          "videoId": "ERNbCBuSOmg"
+        },
+        {
+          "title": "Farewell, My Academy",
+          "plays": "177 plays",
+          "videoId": "N88WgXS-ksg"
+        },
+        {
+          "title": "Valkyria Chronicles 2 Main Theme (Arrange Version)",
+          "plays": "216 plays",
+          "videoId": "QKI1ABh3m8Y"
+        },
+        {
+          "title": "Exciting Battle (Arrange Version)",
+          "plays": "132 plays",
+          "videoId": "86Ls22OXKhM"
+        },
+        {
+          "title": "練習戦 ～Arrange ver.～ - Practice Battle (Arrange Version)",
+          "plays": "124 plays",
+          "videoId": "PukG-msxjHs"
+        },
+        {
+          "title": "Theme of Class G (Arrange Version)",
+          "plays": "301 plays",
+          "videoId": "CFFLx1A7bds"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_n2FH02r48m016bogb4FEV6PpqotB262C0"
+    },
+    {
+      "id": "x-men-mutant-academy",
+      "title": "X-Men: Mutant Academy Soundtrack",
+      "game": "X-Men: Mutant Academy",
+      "composers": [
+        "David A. Logan"
+      ],
+      "date": "2000-07-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/x-men-mutant-academy",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=X-Men%3A+Mutant+Academy+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_CMKd44Aw6OA",
+      "art": "https://yt3.googleusercontent.com/cg4OBWOlRPhSfZmryWoeTO4Zwgz6z9_AFFWHo7FJm0C3eg5v1n_glz3h_wPEyRR-bd84p9MWLUuMlNq1Ww=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "X-Men Mutant Academy (Original Video Game Soundtrack)",
+      "company": "Midway Studios Los Angeles",
+      "console": true,
+      "genres": [
+        "Fighting",
+        "Platform",
+        "Hack and slash/Beat 'em up"
+      ],
+      "tracks": [
+        {
+          "title": "X-Men Intro FMV",
+          "plays": "225 plays",
+          "videoId": "ep2Fa38hptM"
+        },
+        {
+          "title": "X-Doomsday",
+          "plays": "206 plays",
+          "videoId": "cX0BcccLm64"
+        },
+        {
+          "title": "X-Auratix",
+          "plays": "140 plays",
+          "videoId": "K46l9NeZqxw"
+        },
+        {
+          "title": "X-Firebomber",
+          "plays": "260 plays",
+          "videoId": "7J8y4XuJD9k"
+        },
+        {
+          "title": "X-Labomaniac",
+          "plays": "171 plays",
+          "videoId": "uq_9j1EIH3o"
+        },
+        {
+          "title": "X-Diablo Storm",
+          "plays": "94 plays",
+          "videoId": "cEcN3Cjr8_o"
+        },
+        {
+          "title": "X-GG on Rage",
+          "plays": "311 plays",
+          "videoId": "QUhoNxyuY9M"
+        },
+        {
+          "title": "X-Rebmosher",
+          "plays": "193 plays",
+          "videoId": "RM6oFps6pck"
+        },
+        {
+          "title": "X-Caliber",
+          "plays": "62 plays",
+          "videoId": "Lb9hnNJxmLo"
+        },
+        {
+          "title": "X-Force Bashers",
+          "plays": "121 plays",
+          "videoId": "9txDh7c27z8"
+        },
+        {
+          "title": "X-Battle Crashers",
+          "plays": "150 plays",
+          "videoId": "1UxmMWOPPvI"
+        },
+        {
+          "title": "X-MTV Trailer",
+          "plays": "95 plays",
+          "videoId": "pLRpL-MPDaA"
+        },
+        {
+          "title": "X-Magneto outro FMV",
+          "plays": "33 plays",
+          "videoId": "nKRvJ9foj5Y"
+        },
+        {
+          "title": "X-Gambit outro FMV",
+          "plays": "28 plays",
+          "videoId": "PdFOj7L12Bs"
+        },
+        {
+          "title": "X-Wolverine outro FMV",
+          "plays": "35 plays",
+          "videoId": "femanMcWfAc"
+        },
+        {
+          "title": "X-Beast outro FMV",
+          "plays": "24 plays",
+          "videoId": "4Qmnshkstkk"
+        },
+        {
+          "title": "X-Cyclops outro FMV Hip hop",
+          "plays": "22 plays",
+          "videoId": "4dzSA0fUehg"
+        },
+        {
+          "title": "X-Cyclops outro FMV Orchestral",
+          "plays": "29 plays",
+          "videoId": "OSnmR1toHyQ"
+        },
+        {
+          "title": "X-Storm Outro FMV",
+          "plays": "18 plays",
+          "videoId": "rFYbxd_Jr0M"
+        },
+        {
+          "title": "X-Phoenix outro FMV",
+          "plays": "14 plays",
+          "videoId": "tQDogP96DVw"
+        },
+        {
+          "title": "X-Alt outro FMV",
+          "plays": "22 plays",
+          "videoId": "dSGMmNqq8ro"
+        },
+        {
+          "title": "X-Men Theme Song (feat. Yasi)",
+          "plays": "221 plays",
+          "videoId": "I9oHhbFwuMY"
+        },
+        {
+          "title": "X-Men Theme Song (extended mix) (feat. Yasi)",
+          "plays": "221 plays",
+          "videoId": "3Fzuip1B6-c"
+        },
+        {
+          "title": "E3 Promo Ingame 1",
+          "plays": "20 plays",
+          "videoId": "Nm8WsVx6WuU"
+        },
+        {
+          "title": "E3 Promo Ingame 2",
+          "plays": "24 plays",
+          "videoId": "LbzOpSf_SHc"
+        },
+        {
+          "title": "E3 Promo Title Card",
+          "plays": "29 plays",
+          "videoId": "N6jlRKVFsDQ"
+        },
+        {
+          "title": "Egyptian (Cancelled Level)",
+          "plays": "20 plays",
+          "videoId": "xwosEJaJ89c"
+        },
+        {
+          "title": "New York Rooftop (Cancelled Level)",
+          "plays": "19 plays",
+          "videoId": "hjlG9km7U0I"
+        },
+        {
+          "title": "X-Men (1st Demo Track)",
+          "plays": "32 plays",
+          "videoId": "t2dLkVuOaLw"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_lAEOLKA9SNrOlE6TEYNi6Bi07DalcOhG8"
+    },
+    {
+      "id": "grand-theft-auto-v-story-mode",
+      "title": "Grand Theft Auto V: Story Mode Soundtrack",
+      "game": "Grand Theft Auto V: Story Mode",
+      "composers": [],
+      "date": "2022-03-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/grand-theft-auto-v-story-mode",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Grand+Theft+Auto+V%3A+Story+Mode+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5VTaxX2ISU3",
+      "art": "https://yt3.googleusercontent.com/dIa-w1GKc6vhMhv-KLYhAA0tCO8TVc8F291Ldicu9q6GnfAs9ayNt6J6FHI2d2a0JjP42X1JQ-2y9Ig=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Music of Grand Theft Auto V, Vol. 2: The Score",
+      "company": "Rockstar Games",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Arcade"
+      ],
+      "tracks": [
+        {
+          "title": "We Were Set Up",
+          "plays": "2.2M plays",
+          "videoId": "aok_pGacAGw"
+        },
+        {
+          "title": "A Legitimate Business Man",
+          "plays": "309K plays",
+          "videoId": "SC3LYJQvp0s"
+        },
+        {
+          "title": "A Haze Of Patriotic Fervor",
+          "plays": "337K plays",
+          "videoId": "RK3mtuDcgUM"
+        },
+        {
+          "title": "Los Santos At Night",
+          "plays": "134K plays",
+          "videoId": "bhMrNF6aVH4"
+        },
+        {
+          "title": "North Yankton Memories",
+          "plays": "1M plays",
+          "videoId": "OQZExOsfYbc"
+        },
+        {
+          "title": "The Grip",
+          "plays": "228K plays",
+          "videoId": "op0jDoSzz7E"
+        },
+        {
+          "title": "Mr. Trevor Philips",
+          "plays": "145K plays",
+          "videoId": "s6F4eL4NyxQ"
+        },
+        {
+          "title": "A Bit Of An Awkward Situation",
+          "plays": "158K plays",
+          "videoId": "5Zm8umkIfUY"
+        },
+        {
+          "title": "No Happy Endings",
+          "plays": "1.6M plays",
+          "videoId": "EcfPedfJNDQ"
+        },
+        {
+          "title": "His Mentor",
+          "plays": "97K plays",
+          "videoId": "iQ14lke2VWY"
+        },
+        {
+          "title": "(Sounds Kind Of) Fruity",
+          "plays": "161K plays",
+          "videoId": "nVw0RbZQ-tM"
+        },
+        {
+          "title": "Minor Turbulence",
+          "plays": "1.1M plays",
+          "videoId": "sKSOhjLvf-s"
+        },
+        {
+          "title": "Chop The Dog",
+          "plays": "167K plays",
+          "videoId": "g3cCK-_7VnI"
+        },
+        {
+          "title": "A Lonely Man",
+          "plays": "112K plays",
+          "videoId": "XwlTaNlGLCA"
+        },
+        {
+          "title": "You Forget A Thousand Things",
+          "plays": "115K plays",
+          "videoId": "2ZICzOMECLU"
+        },
+        {
+          "title": "Impotent Rage/Am I Being Clear Now?",
+          "plays": "170K plays",
+          "videoId": "D-svBfG5YXk"
+        },
+        {
+          "title": "Fresh Meat",
+          "plays": "272K plays",
+          "videoId": "2t2RWDdXm5U"
+        },
+        {
+          "title": "Therapy And Other Hobbies",
+          "plays": "39K plays",
+          "videoId": "lqWrPg1Yvu8"
+        },
+        {
+          "title": "Rich Man's Plaything",
+          "plays": "117K plays",
+          "videoId": "zjkmnIFdRKI"
+        },
+        {
+          "title": "The Agency Heist",
+          "plays": "403K plays",
+          "videoId": "ciylYI51cj0"
+        },
+        {
+          "title": "Hillbilly Crank Dealers' Blues",
+          "plays": "128K plays",
+          "videoId": "o2fF4f_LEJI"
+        },
+        {
+          "title": "Welcome To Los Santos (Outro)",
+          "plays": "329K plays",
+          "videoId": "OB3tIDXzefQ"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_m6gx3SgHYvXKob79JDBlvu_AVgzAx2IKg"
+    },
+    {
+      "id": "red-dead-redemption-undead-nightmare-2023",
+      "title": "Red Dead Redemption: Undead Nightmare Soundtrack",
+      "game": "Red Dead Redemption: Undead Nightmare",
+      "composers": [],
+      "date": "2023-08-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/red-dead-redemption-undead-nightmare--1",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Red+Dead+Redemption%3A+Undead+Nightmare+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_peqJEn7Dc7a",
+      "art": "https://yt3.googleusercontent.com/dIvcf1B2hEEn04Di_L0U8eoNag2NbbGeOoPpFN4WTdJNHxaXWIpquX4oS1anaBjprSuiRwowLyG_F-k=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Red Dead Redemption: Undead Nightmare Original Soundtrack",
+      "company": "Rockstar Games",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Undead Nightmare",
+          "plays": "26K plays",
+          "videoId": "sbDkIQtnHgM"
+        },
+        {
+          "title": "Zombie Corpseplay",
+          "plays": "42K plays",
+          "videoId": "gJSBk9gyeEk"
+        },
+        {
+          "title": "Get Back In That Hole, Partner",
+          "plays": "156K plays",
+          "videoId": "WMxyJ9jFhio"
+        },
+        {
+          "title": "Army Of Undead",
+          "plays": "20K plays",
+          "videoId": "THxUs8G98Oo"
+        },
+        {
+          "title": "Chupacabra",
+          "plays": "16K plays",
+          "videoId": "kNQHUtvxq90"
+        },
+        {
+          "title": "Zombie Peyote",
+          "plays": "12K plays",
+          "videoId": "j95oq7nIbkg"
+        },
+        {
+          "title": "Ojo Muerto",
+          "plays": "31K plays",
+          "videoId": "9a9v0Z3npyY"
+        },
+        {
+          "title": "Blunderbuss Blues",
+          "plays": "12K plays",
+          "videoId": "na4K31h_1QQ"
+        },
+        {
+          "title": "Four Horses Of The Apocalypse",
+          "plays": "63K plays",
+          "videoId": "QR5lb9tACdc"
+        },
+        {
+          "title": "Blackwater, U.S.A.",
+          "plays": "21K plays",
+          "videoId": "dQ6SqJB5HY0"
+        },
+        {
+          "title": "Undead Redemption",
+          "plays": "25K plays",
+          "videoId": "flpDcZCtMSk"
+        },
+        {
+          "title": "Missing Souls",
+          "plays": "11K plays",
+          "videoId": "Wco9lMGsIUQ"
+        },
+        {
+          "title": "A Man Ready For Anything",
+          "plays": "13K plays",
+          "videoId": "VAJQe4n469Q"
+        },
+        {
+          "title": "Showdown at Escalera",
+          "plays": "157K plays",
+          "videoId": "K36PVaVjGmQ"
+        },
+        {
+          "title": "Bad Voodoo",
+          "plays": "2.8M plays",
+          "videoId": null
+        },
+        {
+          "title": "Dead Man Walking",
+          "plays": "489K plays",
+          "videoId": "nG_ppzhPQqA"
+        },
+        {
+          "title": "Dead Sled",
+          "plays": "475K plays",
+          "videoId": null
+        },
+        {
+          "title": "Stinkin' Zombies",
+          "plays": "343K plays",
+          "videoId": "8WSkrpsVh9Y"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nhQ4zOKQdG1_YwsriyGfJvWLvso5ftgSA"
+    },
+    {
+      "id": "sly-cooper-and-the-thievius-raccoonus-2010",
+      "title": "Sly Cooper and the Thievius Raccoonus Soundtrack",
+      "game": "Sly Cooper and the Thievius Raccoonus",
+      "composers": [
+        "Saliscore"
+      ],
+      "date": "2010-11-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sly-cooper-and-the-thievius-raccoonus--1",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sly+Cooper+and+the+Thievius+Raccoonus+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_B2yx3iyJS5N",
+      "art": "https://yt3.googleusercontent.com/XewiFpe3RSilhlXeIaLL_-gsl6-DJpQRMoytsMdqmRLYr_Mw_8qZNOFiPZv-nm4zNrWZ6Ka4NFXZbVBlkg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Sly Cooper Vol. I: The Thievius Raccoonus (Original Videogame Inspired Soundtrack)",
+      "company": "Sucker Punch Productions",
+      "console": true,
+      "genres": [
+        "Platform",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Raccoonus Main Titles",
+          "plays": "3.2K plays",
+          "videoId": null
+        },
+        {
+          "title": "Paris Rooftops",
+          "plays": "770 plays",
+          "videoId": null
+        },
+        {
+          "title": "Secret Interpol Dossier",
+          "plays": "453 plays",
+          "videoId": null
+        },
+        {
+          "title": "Childood Memories",
+          "plays": "426 plays",
+          "videoId": null
+        },
+        {
+          "title": "Clockwerk Attack",
+          "plays": "454 plays",
+          "videoId": null
+        },
+        {
+          "title": "Happy Camper Orphanage",
+          "plays": "315 plays",
+          "videoId": null
+        },
+        {
+          "title": "Friendship",
+          "plays": "19 plays",
+          "videoId": "WrAWE8E2rCQ"
+        },
+        {
+          "title": "Tide Of Terror",
+          "plays": "23 plays",
+          "videoId": "I_AXeFjThdA"
+        },
+        {
+          "title": "Sir Raleigh",
+          "plays": "24 plays",
+          "videoId": "ml9GztoWyus"
+        },
+        {
+          "title": "Eye Of The Storm",
+          "plays": "476 plays",
+          "videoId": null
+        },
+        {
+          "title": "Sly And Carmelita",
+          "plays": "29 plays",
+          "videoId": "n6GJtST1P5c"
+        },
+        {
+          "title": "City Stinger",
+          "plays": "17 plays",
+          "videoId": "YpCsycjXWMs"
+        },
+        {
+          "title": "Scherzo For Ensemble Of Jackals",
+          "plays": "697 plays",
+          "videoId": null
+        },
+        {
+          "title": "Deathly Dance",
+          "plays": "376 plays",
+          "videoId": null
+        },
+        {
+          "title": "The Dream",
+          "plays": "22 plays",
+          "videoId": "s7_PDGi1Swc"
+        },
+        {
+          "title": "Kunlun Mountains",
+          "plays": "253 plays",
+          "videoId": null
+        },
+        {
+          "title": "Flame-Fu",
+          "plays": "798 plays",
+          "videoId": null
+        },
+        {
+          "title": "Bygone",
+          "plays": "17 plays",
+          "videoId": "5doVALvpHuc"
+        },
+        {
+          "title": "Anatomy Of Hate",
+          "plays": "301 plays",
+          "videoId": null
+        },
+        {
+          "title": "The Final Confrontation",
+          "plays": "462 plays",
+          "videoId": null
+        },
+        {
+          "title": "The Last Page",
+          "plays": "15 plays",
+          "videoId": "yNEAuU9EsTM"
+        },
+        {
+          "title": "Five Seconds",
+          "plays": "308 plays",
+          "videoId": null
+        },
+        {
+          "title": "Tango in Paris (feat. Peter McConnell)",
+          "plays": "93 plays",
+          "videoId": "BWWstNRDFjo"
+        },
+        {
+          "title": "Smooth Swing Raccoon",
+          "plays": "577 plays",
+          "videoId": null
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_lMz7oTMr9LZocTqjx6inq2AfJpFoNqhrY"
+    },
+    {
+      "id": "the-legend-of-zelda-a-link-to-the-past-2002",
+      "title": "The Legend of Zelda: A Link to the Past Soundtrack",
+      "game": "The Legend of Zelda: A Link to the Past",
+      "composers": [
+        "London Music Works",
+        "Scott Buckley"
+      ],
+      "date": "2002-12-02",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-a-link-to-the-past--1",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+Zelda%3A+A+Link+to+the+Past+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wFxajY5HNbE",
+      "art": "https://yt3.googleusercontent.com/_AmeNd1U5wNpK5vMCzq-AW2U3OQ4YdU5g5-cpruNM0l87WcJOhpy6oNvvuDM1ZjGRMShUmhAuLq45YV8WA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Music from the Legend of Zelda",
+      "company": "Nintendo Entertainment Analysis & Development",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Main Theme (From \"The Legend of Zelda\")",
+          "plays": "61K plays",
+          "videoId": "6hNLbZceSBU"
+        },
+        {
+          "title": "Zelda II: The Adventure of Link (Palace Theme) [From \"The Legend of Zelda 2\"]",
+          "plays": "29K plays",
+          "videoId": "kCQbsaNwszc"
+        },
+        {
+          "title": "Dark World (From \"The Legend of Zelda: A Link to the Past\")",
+          "plays": "26K plays",
+          "videoId": "fvwi_NVGEmc"
+        },
+        {
+          "title": "Ballad of the Windfish (From \"The Legend of Zelda: Link's Awakening\")",
+          "plays": "24K plays",
+          "videoId": "mLM2BaGdSbY"
+        },
+        {
+          "title": "Song of Storms (from \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "37K plays",
+          "videoId": "hU9bBDoUCbI"
+        },
+        {
+          "title": "Zelda's Lullaby (From \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "22K plays",
+          "videoId": "VCbqkzSwOnY"
+        },
+        {
+          "title": "Song of Healing (From \"The Legend of Zelda: Majora's Mask\")",
+          "plays": "17K plays",
+          "videoId": "ybj45HSXXAU"
+        },
+        {
+          "title": "Palace Of Winds (From \"The Legend of Zelda: Four Swords Adventures\")",
+          "plays": "14K plays",
+          "videoId": "hlQUDXn_JXA"
+        },
+        {
+          "title": "Title Theme (From \"The Legend of Zelda: The Wind Waker\")",
+          "plays": "17K plays",
+          "videoId": "xk7DIc5CBR8"
+        },
+        {
+          "title": "Minish Village (From \"The Legend of Zelda: The Minish Cap\")",
+          "plays": "15K plays",
+          "videoId": "PX0glgGATso"
+        },
+        {
+          "title": "Ilia's Theme (From \"The Legend of Zelda: Twilight Princess\")",
+          "plays": "12K plays",
+          "videoId": "brk4xExQXEk"
+        },
+        {
+          "title": "Linebeck's Theme (From \"The Legend of Zelda: Phantom Hourglass\")",
+          "plays": "14K plays",
+          "videoId": "JL7YNgB7x1o"
+        },
+        {
+          "title": "Realm Overworld (From \"The Legend of Zelda: Spirit Tracks\")",
+          "plays": "12K plays",
+          "videoId": "vnGd0TBxCeA"
+        },
+        {
+          "title": "Skyloft (From \"The Legend of Zelda: Skyward Sword\")",
+          "plays": "12K plays",
+          "videoId": "RCJiz4pTvPs"
+        },
+        {
+          "title": "Lorule Castle (From “The Legend of Zelda: A Link Between Worlds”)",
+          "plays": "11K plays",
+          "videoId": "HJdfxz2zPLk"
+        },
+        {
+          "title": "Woodlands (From “The Legend of Zelda: Tri Force Heroes”)",
+          "plays": "10K plays",
+          "videoId": "QqqhJ30ulk8"
+        },
+        {
+          "title": "Theme (From \"The Legend of Zelda: Breath of the Wild\")",
+          "plays": "15K plays",
+          "videoId": "v3Bs4JL476I"
+        },
+        {
+          "title": "Main Theme (From \"The Legend of Zelda: Tears of the Kingdom\")",
+          "plays": "12K plays",
+          "videoId": "iUmUn21TLmo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
+    },
+    {
+      "id": "minecraft-earth",
+      "title": "Minecraft Earth Soundtrack",
+      "game": "Minecraft Earth",
+      "composers": [
+        "Shauny Jang & Minecraft"
+      ],
+      "date": "2019-12-11",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/minecraft-earth",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Earth+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_v2rkubEDkez",
+      "art": "https://yt3.googleusercontent.com/e4QS2LeM9uqAr7OpqUfkmyCv_fx8J2XU13WLZ-4jJnku1UDRNiMgJsG48x9FCwqbmeorP3Sw0CqQFxAh=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Minecraft Earth (Original Game Soundtrack)",
+      "company": "Mojang Studios",
+      "console": false,
+      "genres": [
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Earth",
+          "plays": "25K plays",
+          "videoId": "n9ic7EcnaBY"
+        },
+        {
+          "title": "Sprouting",
+          "plays": "11K plays",
+          "videoId": "3AiAb66mtCc"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_m2U5wHm4Q0v3U6pe1Agb7LwilfWlMoquY"
+    },
+    {
+      "id": "star-fox",
+      "title": "Star Fox Soundtrack",
+      "game": "Star Fox",
+      "composers": [
+        "Vincent Oremo"
+      ],
+      "date": "2026-06-25",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-fox--5",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Fox+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OTLFEZC1fYP",
+      "art": "https://yt3.googleusercontent.com/Vy3l8IEO0NOuerl518iT2gsio7Out7nM23joAdvRvYXXSl9oL2DMGUGLt9elRmN0Lcv_Pbhm430jSonE=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "FOX STAR (Game Soundtrack)",
+      "company": "Velan Studios",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Main Theme",
+          "plays": "33 plays",
+          "videoId": "E9ScUnKeTv4"
+        },
+        {
+          "title": "HACKER",
+          "plays": "15 plays",
+          "videoId": "VXDKmFB3_AU"
+        },
+        {
+          "title": "THE UPPER",
+          "plays": "18 plays",
+          "videoId": "ItRRGZx99W0"
+        },
+        {
+          "title": "MILITARY",
+          "plays": "12 plays",
+          "videoId": "dJROSz4E0T8"
+        },
+        {
+          "title": "THE ORDER",
+          "plays": "10 plays",
+          "videoId": "GTQpdnHJuy0"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_n7LO-RKDwUoiZfhZZbk9eCa4cuMWre7_Q"
+    },
+    {
+      "id": "world-of-warcraft-the-war-within",
+      "title": "World of Warcraft: The War Within Soundtrack",
+      "game": "World of Warcraft: The War Within",
+      "composers": [
+        "World of Warcraft",
+        "Blizzard Entertainment"
+      ],
+      "date": "2024-08-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/world-of-warcraft-the-war-within",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=World+of+Warcraft%3A+The+War+Within+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_jnMStzKj6Ds",
+      "art": "https://yt3.googleusercontent.com/jjyRYOnwPG-MKkWmO4lLK9149XiN9NPWPxfIWLAfOTG7DbYH5MeJVUUSXFTyuHO1huwMAPfDjoHebwLJhw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "World of Warcraft: The War Within Original Soundtrack",
+      "company": "Blizzard Entertainment",
+      "console": false,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "The War Within",
+          "plays": "12K plays",
+          "videoId": "kZ1wcvQ11EQ"
+        },
+        {
+          "title": "Echoes of the World Soul",
+          "plays": "27K plays",
+          "videoId": "TDvzdBuvS4s"
+        },
+        {
+          "title": "Heed Her Call",
+          "plays": "4.7K plays",
+          "videoId": "m-9MuC8RTZI"
+        },
+        {
+          "title": "Harbinger of the Void",
+          "plays": "7.3K plays",
+          "videoId": "erKURW6sIts"
+        },
+        {
+          "title": "To Face the Dark",
+          "plays": "5.4K plays",
+          "videoId": "GENwAR8CKPw"
+        },
+        {
+          "title": "Dornogal",
+          "plays": "3.8K plays",
+          "videoId": "yx7EyvTJ54U"
+        },
+        {
+          "title": "Stone's Throw",
+          "plays": "3.8K plays",
+          "videoId": "0SiG0jQWif8"
+        },
+        {
+          "title": "Unbound",
+          "plays": "3.3K plays",
+          "videoId": "MtBLhPn24Bo"
+        },
+        {
+          "title": "The Wilds",
+          "plays": "5.3K plays",
+          "videoId": "RRMJTJIT9MU"
+        },
+        {
+          "title": "Gundargaz",
+          "plays": "2.8K plays",
+          "videoId": "dayawyOI_v4"
+        },
+        {
+          "title": "Earthenworks",
+          "plays": "2.2K plays",
+          "videoId": "xZhAX1Goihk"
+        },
+        {
+          "title": "Nerub'ar",
+          "plays": "2.7K plays",
+          "videoId": "fJyVnpIWt7U"
+        },
+        {
+          "title": "Taelloch",
+          "plays": "1.4K plays",
+          "videoId": "bF3fA1RMz30"
+        },
+        {
+          "title": "Bloom in the Deeps",
+          "plays": "1.8K plays",
+          "videoId": "6EFJ9qxdyQE"
+        },
+        {
+          "title": "The Silken Path",
+          "plays": "1.3K plays",
+          "videoId": "gXmupKmjWTY"
+        },
+        {
+          "title": "Legacy of Arathor",
+          "plays": "3.2K plays",
+          "videoId": "IqhlZ7ulKwM"
+        },
+        {
+          "title": "The Darkening of Beledar",
+          "plays": "1.5K plays",
+          "videoId": "270XY55TDYE"
+        },
+        {
+          "title": "Sacred Flame",
+          "plays": "7.7K plays",
+          "videoId": "wTe06BBpJmE"
+        },
+        {
+          "title": "Galleons of the Sky",
+          "plays": "3.7K plays",
+          "videoId": "Gwgx8mjB38E"
+        },
+        {
+          "title": "Holders of Hope",
+          "plays": "2.9K plays",
+          "videoId": "xLptjCVEDVk"
+        },
+        {
+          "title": "City of Threads",
+          "plays": "1.5K plays",
+          "videoId": "RcNnWvBS7iU"
+        },
+        {
+          "title": "Long Live Ansurek",
+          "plays": "1.8K plays",
+          "videoId": "_3IuV7eECeg"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_ltT5YwTcNxtkVpAJW0YZ5ycBRUvAcH1XU"
+    },
+    {
+      "id": "persona-3-portable-2023",
+      "title": "Persona 3 Portable Soundtrack",
+      "game": "Persona 3 Portable",
+      "composers": [
+        "Shuhei Kita, Mayumi Fujita, & Lotus Juice"
+      ],
+      "date": "2023-01-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/persona-3-portable--2",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Persona+3+Portable+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Tg3YkHyUgsq",
+      "art": "https://yt3.googleusercontent.com/IlDYvtzjNLn8J8VDImcP3P_6H16UpYwenPy7e_VsI7UbxaT291Q0dXGW87o6FN4tJOoObhfzeffv-Rr9=w544-h544-s-l90-rj",
+      "notable": true,
+      "albumTitle": "Persona 3 Portable: Original Soundtrack",
+      "company": "Atlus",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Soul Phrase",
+          "plays": "474K plays",
+          "videoId": "4iEsjG2iO5s"
+        },
+        {
+          "title": "A Way of Life",
+          "plays": "9.2M plays",
+          "videoId": "GCpo61azoYE"
+        },
+        {
+          "title": "放課後 - After School",
+          "plays": "810K plays",
+          "videoId": null
+        },
+        {
+          "title": "Time",
+          "plays": "4.1M plays",
+          "videoId": "P1-yeTNVZ1s"
+        },
+        {
+          "title": "Wiping All Out",
+          "plays": "12M plays",
+          "videoId": "cUiqPvPnRII"
+        },
+        {
+          "title": "Sun",
+          "plays": "2M plays",
+          "videoId": null
+        },
+        {
+          "title": "Warm Feeling",
+          "plays": "581K plays",
+          "videoId": null
+        },
+        {
+          "title": "Danger Zone",
+          "plays": "1.6M plays",
+          "videoId": null
+        },
+        {
+          "title": "Soul Phrase -long ver.-",
+          "plays": "2.7M plays",
+          "videoId": null
+        },
+        {
+          "title": "A way of Life -Deep inside my mind Remix-",
+          "plays": "2.9M plays",
+          "videoId": null
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kxbUPQG5Qb5og7KdS_s6Qb_QsSsmaQXoA"
+    },
+    {
+      "id": "the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition",
+      "title": "The Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition Soundtrack",
+      "game": "The Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition",
+      "composers": [
+        "London Music Works",
+        "Scott Buckley"
+      ],
+      "date": "2025-06-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+Zelda%3A+Breath+of+the+Wild+-+Nintendo+Switch+2+Edition+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wFxajY5HNbE",
+      "art": "https://yt3.googleusercontent.com/_AmeNd1U5wNpK5vMCzq-AW2U3OQ4YdU5g5-cpruNM0l87WcJOhpy6oNvvuDM1ZjGRMShUmhAuLq45YV8WA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Music from the Legend of Zelda",
+      "company": "Nintendo EPD Production Group No. 3",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Main Theme (From \"The Legend of Zelda\")",
+          "plays": "61K plays",
+          "videoId": "6hNLbZceSBU"
+        },
+        {
+          "title": "Zelda II: The Adventure of Link (Palace Theme) [From \"The Legend of Zelda 2\"]",
+          "plays": "29K plays",
+          "videoId": "kCQbsaNwszc"
+        },
+        {
+          "title": "Dark World (From \"The Legend of Zelda: A Link to the Past\")",
+          "plays": "26K plays",
+          "videoId": "fvwi_NVGEmc"
+        },
+        {
+          "title": "Ballad of the Windfish (From \"The Legend of Zelda: Link's Awakening\")",
+          "plays": "24K plays",
+          "videoId": "mLM2BaGdSbY"
+        },
+        {
+          "title": "Song of Storms (from \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "37K plays",
+          "videoId": "hU9bBDoUCbI"
+        },
+        {
+          "title": "Zelda's Lullaby (From \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "22K plays",
+          "videoId": "VCbqkzSwOnY"
+        },
+        {
+          "title": "Song of Healing (From \"The Legend of Zelda: Majora's Mask\")",
+          "plays": "17K plays",
+          "videoId": "ybj45HSXXAU"
+        },
+        {
+          "title": "Palace Of Winds (From \"The Legend of Zelda: Four Swords Adventures\")",
+          "plays": "14K plays",
+          "videoId": "hlQUDXn_JXA"
+        },
+        {
+          "title": "Title Theme (From \"The Legend of Zelda: The Wind Waker\")",
+          "plays": "17K plays",
+          "videoId": "xk7DIc5CBR8"
+        },
+        {
+          "title": "Minish Village (From \"The Legend of Zelda: The Minish Cap\")",
+          "plays": "15K plays",
+          "videoId": "PX0glgGATso"
+        },
+        {
+          "title": "Ilia's Theme (From \"The Legend of Zelda: Twilight Princess\")",
+          "plays": "12K plays",
+          "videoId": "brk4xExQXEk"
+        },
+        {
+          "title": "Linebeck's Theme (From \"The Legend of Zelda: Phantom Hourglass\")",
+          "plays": "14K plays",
+          "videoId": "JL7YNgB7x1o"
+        },
+        {
+          "title": "Realm Overworld (From \"The Legend of Zelda: Spirit Tracks\")",
+          "plays": "12K plays",
+          "videoId": "vnGd0TBxCeA"
+        },
+        {
+          "title": "Skyloft (From \"The Legend of Zelda: Skyward Sword\")",
+          "plays": "12K plays",
+          "videoId": "RCJiz4pTvPs"
+        },
+        {
+          "title": "Lorule Castle (From “The Legend of Zelda: A Link Between Worlds”)",
+          "plays": "11K plays",
+          "videoId": "HJdfxz2zPLk"
+        },
+        {
+          "title": "Woodlands (From “The Legend of Zelda: Tri Force Heroes”)",
+          "plays": "10K plays",
+          "videoId": "QqqhJ30ulk8"
+        },
+        {
+          "title": "Theme (From \"The Legend of Zelda: Breath of the Wild\")",
+          "plays": "15K plays",
+          "videoId": "v3Bs4JL476I"
+        },
+        {
+          "title": "Main Theme (From \"The Legend of Zelda: Tears of the Kingdom\")",
+          "plays": "12K plays",
+          "videoId": "iUmUn21TLmo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
+    },
+    {
+      "id": "horizon-call-of-the-mountain",
+      "title": "Horizon Call of the Mountain Soundtrack",
+      "game": "Horizon Call of the Mountain",
+      "composers": [
+        "Boxed Ape"
+      ],
+      "date": "2023-02-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/horizon-call-of-the-mountain",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Horizon+Call+of+the+Mountain+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_tlgB6P86QW6",
+      "art": "https://yt3.googleusercontent.com/l3bmHBqL_zEzabome2AzbXHegSEYaP_W-guD7A9P5jwb_mYkxEA6hObR1dSmB2ine0NpkG57MekkidYr=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Horizon Call of the Mountain (Official Soundtrack)",
+      "company": "Firesprite Ltd",
+      "console": true,
+      "genres": [
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Ryas' Theme",
+          "plays": "29K plays",
+          "videoId": "sIVMx1GOZlM"
+        },
+        {
+          "title": "Return to the River",
+          "plays": "4.6K plays",
+          "videoId": "PUJXVpAnL2A"
+        },
+        {
+          "title": "Redemption's Wake",
+          "plays": "2.7K plays",
+          "videoId": "-jUKRZRo844"
+        },
+        {
+          "title": "The Summit's Answer",
+          "plays": "3.6K plays",
+          "videoId": "Rj8nEWLu5dE"
+        },
+        {
+          "title": "Step Into the Light",
+          "plays": "3.3K plays",
+          "videoId": "Y9sMwZExvl8"
+        },
+        {
+          "title": "Ring of Fire",
+          "plays": "4.6K plays",
+          "videoId": "Op_tNojMPVI"
+        },
+        {
+          "title": "My Death is My Own",
+          "plays": "1.7K plays",
+          "videoId": "cr9CnbDB9oY"
+        },
+        {
+          "title": "Freedom's Call",
+          "plays": "1.9K plays",
+          "videoId": "75KW-bYa5lA"
+        },
+        {
+          "title": "Prologue",
+          "plays": "2K plays",
+          "videoId": "rWr2nd4G--Q"
+        },
+        {
+          "title": "The Path to Wisdom",
+          "plays": "1.9K plays",
+          "videoId": "daeSGD6C9ME"
+        },
+        {
+          "title": "Red Eyes",
+          "plays": "1.8K plays",
+          "videoId": "swj6BRsmaDs"
+        },
+        {
+          "title": "She Shows the Way",
+          "plays": "1.5K plays",
+          "videoId": "1vtDY2oWf4s"
+        },
+        {
+          "title": "Pilgrim's Promise",
+          "plays": "1.5K plays",
+          "videoId": "sXaXe4fCYbw"
+        },
+        {
+          "title": "Outnumbered",
+          "plays": "1.6K plays",
+          "videoId": "w0hiu3WmPJw"
+        },
+        {
+          "title": "Follow the Shadow",
+          "plays": "1K plays",
+          "videoId": "tF9_NdPqw8A"
+        },
+        {
+          "title": "Dawning of the Sundom",
+          "plays": "1.4K plays",
+          "videoId": "HuJ51lIYsIg"
+        },
+        {
+          "title": "Menacing Remains",
+          "plays": "1.1K plays",
+          "videoId": "xXvwd61_Hws"
+        },
+        {
+          "title": "The Abandoned",
+          "plays": "1K plays",
+          "videoId": "XGvOmBL9sK0"
+        },
+        {
+          "title": "Metal Graveyard",
+          "plays": "1K plays",
+          "videoId": "j8-p2wC3UWw"
+        },
+        {
+          "title": "The Beast Awaits",
+          "plays": "1.9K plays",
+          "videoId": "pq4AeQFrSNE"
+        },
+        {
+          "title": "On the Ropes",
+          "plays": "1.2K plays",
+          "videoId": "8nyG7vqvRaQ"
+        },
+        {
+          "title": "Traces of Steel",
+          "plays": "1.3K plays",
+          "videoId": "sKPsE_sEbFY"
+        },
+        {
+          "title": "Thunder Falls",
+          "plays": "2.5K plays",
+          "videoId": "noRQIAqwsDg"
+        },
+        {
+          "title": "Vow Fulfilled",
+          "plays": "1.2K plays",
+          "videoId": "7QHDayLVz4I"
+        },
+        {
+          "title": "The Watcher Above",
+          "plays": "1.9K plays",
+          "videoId": "UAYTNOSuv_Y"
+        },
+        {
+          "title": "For Me to Finish",
+          "plays": "826 plays",
+          "videoId": "yL7yf115AgM"
+        },
+        {
+          "title": "Transmission",
+          "plays": "1.1K plays",
+          "videoId": "Tmrpq8goaHg"
+        },
+        {
+          "title": "The Elders",
+          "plays": "1.9K plays",
+          "videoId": "aAULn0ZNEOs"
+        },
+        {
+          "title": "Ancient Calling",
+          "plays": "1.2K plays",
+          "videoId": "lJHjw86jUFM"
+        },
+        {
+          "title": "Mother's Tears",
+          "plays": "1K plays",
+          "videoId": "5B1CDfGnzMU"
+        },
+        {
+          "title": "In the Eye",
+          "plays": "2.1K plays",
+          "videoId": "QPV1BdbzqPc"
+        },
+        {
+          "title": "Devil's Ascent",
+          "plays": "791 plays",
+          "videoId": "oPuLNdkRars"
+        },
+        {
+          "title": "Set the Sun",
+          "plays": "876 plays",
+          "videoId": "omkc-IdVV9g"
+        },
+        {
+          "title": "Brother's Gambit",
+          "plays": "992 plays",
+          "videoId": "MRdi3sw8apc"
+        },
+        {
+          "title": "Stormbird's Riposte",
+          "plays": "934 plays",
+          "videoId": "0vD5U90AYJc"
+        },
+        {
+          "title": "Death's Bellow",
+          "plays": "1.3K plays",
+          "videoId": "bq_bft9mOiU"
+        },
+        {
+          "title": "Wings of Battle",
+          "plays": "1.1K plays",
+          "videoId": "ji4k85QpMbc"
+        },
+        {
+          "title": "Brothers in Blood",
+          "plays": "1.1K plays",
+          "videoId": "31vyhetU2X4"
+        },
+        {
+          "title": "Intercept",
+          "plays": "1.1K plays",
+          "videoId": "kUGFEz9N820"
+        },
+        {
+          "title": "The Lure of Revenge",
+          "plays": "1.8K plays",
+          "videoId": "ku3I8nNozSc"
+        },
+        {
+          "title": "On to Eagle's Fall",
+          "plays": "1K plays",
+          "videoId": "tSf6B8qDEiQ"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_nADgSVXDZjTI3gPjwKwpX9bAzevhXyz9k"
+    },
+    {
+      "id": "the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition",
+      "title": "The Legend of Zelda: Tears of the Kingdom - Nintendo Switch 2 Edition Soundtrack",
+      "game": "The Legend of Zelda: Tears of the Kingdom - Nintendo Switch 2 Edition",
+      "composers": [
+        "London Music Works",
+        "Scott Buckley"
+      ],
+      "date": "2025-06-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition",
+          "seenAt": "2026-07-29T05:25:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+Zelda%3A+Tears+of+the+Kingdom+-+Nintendo+Switch+2+Edition+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wFxajY5HNbE",
+      "art": "https://yt3.googleusercontent.com/_AmeNd1U5wNpK5vMCzq-AW2U3OQ4YdU5g5-cpruNM0l87WcJOhpy6oNvvuDM1ZjGRMShUmhAuLq45YV8WA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Music from the Legend of Zelda",
+      "company": "Nintendo EPD Production Group No. 3",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "tracks": [
+        {
+          "title": "Main Theme (From \"The Legend of Zelda\")",
+          "plays": "61K plays",
+          "videoId": "6hNLbZceSBU"
+        },
+        {
+          "title": "Zelda II: The Adventure of Link (Palace Theme) [From \"The Legend of Zelda 2\"]",
+          "plays": "29K plays",
+          "videoId": "kCQbsaNwszc"
+        },
+        {
+          "title": "Dark World (From \"The Legend of Zelda: A Link to the Past\")",
+          "plays": "26K plays",
+          "videoId": "fvwi_NVGEmc"
+        },
+        {
+          "title": "Ballad of the Windfish (From \"The Legend of Zelda: Link's Awakening\")",
+          "plays": "24K plays",
+          "videoId": "mLM2BaGdSbY"
+        },
+        {
+          "title": "Song of Storms (from \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "37K plays",
+          "videoId": "hU9bBDoUCbI"
+        },
+        {
+          "title": "Zelda's Lullaby (From \"The Legend of Zelda: Ocarina of Time\")",
+          "plays": "22K plays",
+          "videoId": "VCbqkzSwOnY"
+        },
+        {
+          "title": "Song of Healing (From \"The Legend of Zelda: Majora's Mask\")",
+          "plays": "17K plays",
+          "videoId": "ybj45HSXXAU"
+        },
+        {
+          "title": "Palace Of Winds (From \"The Legend of Zelda: Four Swords Adventures\")",
+          "plays": "14K plays",
+          "videoId": "hlQUDXn_JXA"
+        },
+        {
+          "title": "Title Theme (From \"The Legend of Zelda: The Wind Waker\")",
+          "plays": "17K plays",
+          "videoId": "xk7DIc5CBR8"
+        },
+        {
+          "title": "Minish Village (From \"The Legend of Zelda: The Minish Cap\")",
+          "plays": "15K plays",
+          "videoId": "PX0glgGATso"
+        },
+        {
+          "title": "Ilia's Theme (From \"The Legend of Zelda: Twilight Princess\")",
+          "plays": "12K plays",
+          "videoId": "brk4xExQXEk"
+        },
+        {
+          "title": "Linebeck's Theme (From \"The Legend of Zelda: Phantom Hourglass\")",
+          "plays": "14K plays",
+          "videoId": "JL7YNgB7x1o"
+        },
+        {
+          "title": "Realm Overworld (From \"The Legend of Zelda: Spirit Tracks\")",
+          "plays": "12K plays",
+          "videoId": "vnGd0TBxCeA"
+        },
+        {
+          "title": "Skyloft (From \"The Legend of Zelda: Skyward Sword\")",
+          "plays": "12K plays",
+          "videoId": "RCJiz4pTvPs"
+        },
+        {
+          "title": "Lorule Castle (From “The Legend of Zelda: A Link Between Worlds”)",
+          "plays": "11K plays",
+          "videoId": "HJdfxz2zPLk"
+        },
+        {
+          "title": "Woodlands (From “The Legend of Zelda: Tri Force Heroes”)",
+          "plays": "10K plays",
+          "videoId": "QqqhJ30ulk8"
+        },
+        {
+          "title": "Theme (From \"The Legend of Zelda: Breath of the Wild\")",
+          "plays": "15K plays",
+          "videoId": "v3Bs4JL476I"
+        },
+        {
+          "title": "Main Theme (From \"The Legend of Zelda: Tears of the Kingdom\")",
+          "plays": "12K plays",
+          "videoId": "iUmUn21TLmo"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEU5nBnoMm1DtdMdXZ6aXPoVTZ-D1yTfk"
     }
   ]
 }
