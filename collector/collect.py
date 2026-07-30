@@ -67,28 +67,38 @@ def fetch_any(url):
 _YT = None
 
 
-def ytm_resolve(query, limit=5):
+def _ytm():
     global _YT
     if _YT is None:
         from ytmusicapi import YTMusic  # lazy: only the resolver path needs it
         _YT = YTMusic()
-    return _YT.search(query, filter="albums", limit=limit)
+    return _YT
+
+
+def _ytm_call(fn):
+    """YTM rate-limits bursts by serving non-JSON, which ytmusicapi raises as
+    JSONDecodeError; one bounded backoff usually clears it. Anything that
+    survives the retries propagates — callers already treat errors as
+    transient and try again next run."""
+    import json as _json
+    for wait in (15, 45):
+        try:
+            return fn()
+        except _json.JSONDecodeError:
+            time.sleep(wait)
+    return fn()
+
+
+def ytm_resolve(query, limit=5):
+    return _ytm_call(lambda: _ytm().search(query, filter="albums", limit=limit))
 
 
 def ytm_album(browse_id):
-    global _YT
-    if _YT is None:
-        from ytmusicapi import YTMusic
-        _YT = YTMusic()
-    return _YT.get_album(browse_id)
+    return _ytm_call(lambda: _ytm().get_album(browse_id))
 
 
 def ytm_playlist(playlist_id):
-    global _YT
-    if _YT is None:
-        from ytmusicapi import YTMusic
-        _YT = YTMusic()
-    return _YT.get_playlist(playlist_id, limit=None)
+    return _ytm_call(lambda: _ytm().get_playlist(playlist_id, limit=None))
 
 
 TRACKS_CAP = 25
