@@ -8,8 +8,8 @@ VGM. Sibling of snap-workbench and home-bar.
 Two halves, strictly separated: a Python collector runs on a daily GitHub
 Actions cron and folds releases append-only into `data/releases.json`;
 `index.html` (no framework, no build step) just renders that JSON. Stars,
-listened marks, and hides are yours alone — they live in `localStorage`
-(`vgm-v1`) and never touch the shared JSON.
+listened marks, hides, and per-track ♥s are yours alone — they live in
+`localStorage` (`vgm-v1`) and never touch the shared JSON.
 
 | source | what it is | filter |
 | --- | --- | --- |
@@ -37,12 +37,34 @@ IGDB's top-rated games (200+ ratings) checked against YTM. Capped per run
 with a committed cursor (`collector/backfill-state.json`) — dispatch until
 it logs "backfill complete".
 
+## Playlists → your real YT Music account
+
+Track likes (the ♥ on any track row) and the Library's Playlists cards
+compose playlists from your own state — liked songs, queued albums'
+tracklists, a 4★ mix, each with year/genre variants. The app exports each
+one as `playlist-<name>.json`; a local companion publishes it, because
+playlist creation needs an authenticated YTM session and credentials never
+belong in a static page:
+
+```
+pip install ytmusicapi
+ytmusicapi browser                # one-time: paste headers -> browser.json
+mv browser.json companion/        # gitignored, never committed
+python companion/make_playlists.py playlist-*.json
+```
+
+Idempotent: playlists it created carry a `# vgm-finder` marker in their
+description and get topped up, never duplicated; a same-named playlist
+without the marker is reported and left alone. Tracks without a videoId
+are search-resolved with the collector's strict matcher — anything it
+can't confidently place is listed instead of guessed.
+
 ## Run the collector locally
 
 ```
 pip install -r collector/requirements.txt
 python collector/collect.py       # writes data/releases.json
-python -m pytest collector        # fixture-based tests
+python -m pytest collector companion   # collector + playlist-companion tests
 ```
 
 ## Run the front-end tests

@@ -335,6 +335,132 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(stored().entries['fresh-drop'].rating === 5, 'rating survives a cleared listen');
   assert(tab('library').textContent.includes('2'), 'library count follows the cleared listen');
 
+  // ---------- per-track likes: hearts on every track row ----------
+  tab('feed').click(); await sleep(20);
+  rowById('hades-ii').click();
+  assert(rowById('hades-ii').querySelectorAll('.rx .tlike').length === 3, 'expanded top-3 rows each wear a heart');
+  w.__opened = null;
+  rowById('hades-ii').querySelector('.rx .tlike[data-t="No Escape"]').click(); await sleep(20);
+  assert(JSON.stringify(stored().entries['hades-ii'].likedTracks) === JSON.stringify(['No Escape']),
+    'one tap likes the track by title');
+  assert(w.__opened === null, 'liking a track never leaves the app');
+  assert(rowById('hades-ii').querySelector('.rx .tlike[data-t="No Escape"]').classList.contains('on'),
+    'panel heart fills in place');
+  rowById('hades-ii').querySelector('[data-act="album"]').click();
+  assert(d.querySelector('#album .atrack[data-i="0"] .tlike').classList.contains('on'),
+    'album page shows the same like');
+  d.querySelector('#album .atrack[data-i="4"] .tlike').click(); await sleep(20);
+  assert(stored().entries['hades-ii'].likedTracks.length === 2 && w.__opened === null,
+    'album-page heart likes without playing the track');
+  d.querySelector('#album .atrack[data-i="4"] .tlike').click(); await sleep(20);
+  assert(JSON.stringify(stored().entries['hades-ii'].likedTracks) === JSON.stringify(['No Escape']),
+    'second tap unlikes');
+  d.querySelector('#album .aclose').click();
+  rowById('hades-ii').click();
+  rowById('ゼルダの伝説').click();
+  rowById('ゼルダの伝説').querySelector('.rx .tlike').click(); await sleep(20);
+  assert(stored().entries['ゼルダの伝説'].likedTracks.length === 1, 'legacy topTracks rows are likeable too');
+  rowById('ゼルダの伝説').querySelector('.rx .tlike').click(); await sleep(20);
+  assert(stored().entries['ゼルダの伝説'] === undefined, 'unliking the only fact prunes the entry');
+  rowById('ゼルダの伝説').click();
+
+  // ---------- liked songs view ----------
+  tab('library').click(); await sleep(20);
+  d.querySelector('#libsongs').click(); await sleep(20);
+  assert(stored().libView === 'songs', 'songs view persists');
+  assert(d.querySelector('#subctl button[data-ls]') === null, 'sort chips step aside in songs view');
+  assert(rows().length === 1 && rows()[0].classList.contains('song'), 'liked songs list the hearted tracks');
+  assert(rows()[0].querySelector('.rtitle').textContent === 'No Escape'
+    && rows()[0].querySelector('.rsub').textContent === 'Hades II'
+    && rows()[0].querySelector('.rart img') !== null, 'song rows carry art, game, and track title');
+  w.__opened = null;
+  rows()[0].click();
+  assert(w.__opened === 'https://music.youtube.com/watch?v=vidNE&list=OLAK5uy_plHades',
+    'song row plays the track in album context');
+  S(`toggleTrackLike('hades-ii', 'Bonus Reel')`); await sleep(20);
+  w.__opened = null;
+  d.querySelector('#list .row.song[data-t="Bonus Reel"]').click();
+  assert(w.__opened.startsWith('https://music.youtube.com/search?q=') && w.__opened.includes('Bonus%20Reel')
+    && w.__opened.includes('Hades%20II'), 'videoId-less songs fall back to game + title search');
+  const qEl = d.getElementById('q');
+  const qtype = (s) => { qEl.value = s; qEl.dispatchEvent(new w.Event('input', { bubbles: true })); };
+  qtype('escape');
+  assert(rows().length === 1 && rows()[0].dataset.t === 'No Escape', 'search sifts liked songs by title');
+  qtype('');
+  d.querySelector('#list .row.song[data-t="Bonus Reel"] .tlike').click(); await sleep(20);
+  assert(rows().length === 1, 'row heart unlikes in place');
+  S(`toggleTrackLike('hades-ii', 'No Escape')`); await sleep(20);
+  assert(d.querySelector('#list .state').textContent.includes('NO LIKED SONGS'), 'empty songs view explains the ♡');
+  S(`toggleTrackLike('hades-ii', 'No Escape')`); await sleep(20);
+
+  // ---------- refetched tracklists reorder and repatch; likes follow the title ----------
+  const REORDERED = JSON.parse(JSON.stringify(FIXTURE));
+  const rh = REORDERED.releases.find(r => r.id === 'hades-ii');
+  rh.tracks.reverse();
+  rh.tracks.find(t => t.title === 'No Escape').videoId = 'vidNE2';
+  const re2 = makeDom(okFetch(REORDERED), JSON.stringify(stored()));
+  await sleep(120);
+  const songRow2 = re2.d.querySelector('#list .row.song[data-t="No Escape"]');
+  assert(songRow2 !== null, 'reordered refetch keeps the like matched by title');
+  songRow2.click();
+  assert(re2.w.__opened === 'https://music.youtube.com/watch?v=vidNE2&list=OLAK5uy_plHades',
+    'the like rides the repatched videoId, not a stale index');
+
+  // ---------- likedTracks ride the lifeboat ----------
+  const dumpLT = S('JSON.stringify(buildExport())');
+  S(`toggleTrackLike('hades-ii', 'No Escape')`);
+  assert(stored().entries['hades-ii'].likedTracks.length === 0, 'stage: like removed before import');
+  assert(S(`applyImport(${JSON.stringify(dumpLT)})`) === true
+    && JSON.stringify(stored().entries['hades-ii'].likedTracks) === JSON.stringify(['No Escape']),
+    'export→wipe→import round-trips likedTracks');
+  assert(S(`applyImport('{"v":2,"entries":{"hades-ii":{"likedTracks":["No Escape","NO ESCAPE",7,"",null]}}}')`) === true
+    && JSON.stringify(stored().entries['hades-ii'].likedTracks) === JSON.stringify(['No Escape']),
+    'import sanitizes likedTracks: strings only, folded dupes collapse');
+  assert(S(`applyImport(${JSON.stringify(dumpLT)})`) === true, 'state restored after sanitize check');
+
+  // ---------- playlists: recipes, facets, export ----------
+  d.querySelector('#libpl').click(); await sleep(20);
+  assert(stored().libView === 'playlists', 'playlists view persists');
+  assert(d.querySelectorAll('#list .plcard').length === 3, 'three recipe cards render');
+  S(`editEntry('hades-ii', e => { e.status = 'queued'; e.rating = 4.5; })`);
+  S(`editEntry('ゼルダの伝説', e => { e.status = 'queued'; })`); await sleep(20);
+  const cardMeta = k => d.querySelector(`#list .plcard[data-plc="${k}"] .plmeta`).textContent;
+  assert(cardMeta('liked').startsWith('1 track '), 'liked recipe counts the hearted track');
+  assert(cardMeta('queue').startsWith('7 tracks'), 'queue recipe: full tracklists plus legacy top tracks');
+  assert(cardMeta('rated').startsWith('3 tracks'), 'rated recipe takes the 4.5-star top-3');
+  d.querySelector('#list .plcard[data-plc="liked"]').click(); await sleep(20);
+  const plCard = () => d.querySelector('#list .plcard[data-plc="liked"]');
+  assert(plCard().querySelector('.pltrack .t').textContent === 'No Escape'
+    && plCard().querySelector('.pltrack .g').textContent === 'Hades II', 'card preview lists game + title');
+  assert(plCard().querySelector('.plx').disabled === false, 'export offered when tracks exist');
+  const exp1 = JSON.parse(S(`JSON.stringify(plExportObj('liked'))`));
+  assert(exp1.app === 'vgm-finder-playlist' && exp1.name === 'vgm-finder · Liked Songs', 'export carries the playlist name');
+  assert(JSON.stringify(exp1.tracks[0]) === JSON.stringify({ game: 'Hades II', title: 'No Escape',
+    videoId: 'vidNE', ytmPlaylistId: 'OLAK5uy_plHades', searchQuery: 'Hades II No Escape' }),
+    'liked export track: videoId, album context, search fallback');
+  const expQ = JSON.parse(S(`JSON.stringify(plExportObj('queue'))`));
+  assert(expQ.tracks.length === 7 && expQ.tracks.filter(t => !t.videoId).every(t => t.searchQuery),
+    'queue export: unlinked tracks still carry a search query');
+  S(`setPlYear('2025')`); await sleep(20);
+  assert(cardMeta('liked').startsWith('0 tracks') && cardMeta('queue').startsWith('0 tracks'),
+    'year facet empties recipes with no matching releases');
+  assert(plCard().querySelector('.plx').disabled === true, 'nothing to export at zero tracks');
+  S(`setPlYear('all')`); await sleep(20);
+  d.querySelector('#plgenre').value = 'Role-playing (RPG)';
+  d.querySelector('#plgenre').dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(20);
+  assert(cardMeta('queue').startsWith('5 tracks'), 'genre facet keeps only tagged releases');
+  assert(plCard().querySelector('.plname').textContent.includes('— Role-playing (RPG)'),
+    'facet variants get their own playlist name');
+  assert(stored().plGenre === 'Role-playing (RPG)', 'facet choice persists');
+  d.querySelector('#plgenre').value = 'all';
+  d.querySelector('#plgenre').dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(20);
+  plCard().querySelector('.plx').click();
+  assert(errors.length === 0, 'export click stays clean');
+  S(`editEntry('hades-ii', e => { e.status = 'unsorted'; e.queuedOn = null; })`);
+  S(`editEntry('ゼルダの伝説', e => { e.status = 'unsorted'; e.queuedOn = null; })`);
+  d.querySelector('#libpl').click(); await sleep(20);
+  assert(stored().libView === 'albums', 'tapping the active chip returns to albums');
+
   // ---------- hidden: reachable, reversible ----------
   tab('feed').click(); await sleep(20);
   rowById('ゼルダの伝説').querySelector('[data-act="hide"]').click(); await sleep(20);

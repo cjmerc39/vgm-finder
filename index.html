@@ -103,8 +103,15 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 .xk{color:var(--dim);text-transform:uppercase;letter-spacing:1.2px;font-size:9.5px;padding-top:3px}
 .xv{color:var(--mut);overflow-wrap:anywhere}
 .xh{font-family:var(--disp);font-size:10px;color:var(--amber);letter-spacing:1px;margin:13px 0 5px}
-.xtrack{display:flex;gap:9px;align-items:baseline;font-size:13px;padding:3px 0}
-.xplays{margin-left:auto;color:var(--dim);font-size:11px;white-space:nowrap}
+.xtrack{display:flex;gap:9px;align-items:center;font-size:13px;padding:1px 0}
+.xplays{color:var(--dim);font-size:11px;white-space:nowrap}
+.xend{margin-left:auto;display:flex;align-items:center;gap:4px}
+.tlike{flex:none;width:38px;height:36px;font-size:15px;color:var(--dim);display:grid;place-items:center;border-radius:8px}
+.tlike.on{color:var(--amber2)}
+@media (prefers-reduced-motion: no-preference){
+  .tlike{transition:color .15s,transform .12s}
+  .tlike:active{transform:scale(1.25)}
+}
 .xlinks{display:flex;gap:6px;flex-wrap:wrap}
 a.xsrc{text-decoration:none}
 .state{padding:48px 16px;text-align:center;color:var(--mut)}
@@ -144,7 +151,7 @@ a.xsrc{text-decoration:none}
 #album .asub{margin-top:5px;text-align:center;color:var(--mut);font-size:13px;overflow-wrap:anywhere}
 #album .ameta{margin-top:3px;text-align:center;color:var(--dim);font-size:11.5px;letter-spacing:.5px}
 #album .alist{margin-top:22px}
-.atrack{display:flex;align-items:baseline;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.atrack{display:flex;align-items:center;gap:10px;padding:6px 4px;border-bottom:1px solid var(--line);cursor:pointer}
 .atrack:active{background:var(--bg2)}
 .atrack .tix{font-family:var(--disp);font-size:10px;color:var(--dim);min-width:22px}
 .atrack .ttl{flex:1;min-width:0;font-size:14px;overflow-wrap:anywhere}
@@ -152,6 +159,26 @@ a.xsrc{text-decoration:none}
 .atrack .tplays{color:var(--dim);font-size:11px;white-space:nowrap}
 .xall{margin-top:12px;display:block;width:100%;text-align:center;color:var(--amber);font-size:11.5px;
   letter-spacing:1.6px;text-transform:uppercase;border:1px solid var(--amberdim);border-radius:10px;padding:11px}
+
+/* liked-song rows: tighter than release rows, tap = play */
+.row.song .rart{width:44px;height:44px}
+.row.song .rtitle{margin-top:0;font-size:14px}
+.row.song .racts{align-items:center}
+.row.song .racts button{width:40px;height:36px;font-size:15px}
+
+/* playlist builder cards */
+.plcard{border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin:10px 0;cursor:pointer}
+.plcard .plname{font-weight:600;font-size:14.5px;overflow-wrap:anywhere}
+.plcard .plmeta{color:var(--dim);font-size:11px;letter-spacing:.8px;text-transform:uppercase;margin-top:3px}
+.plx{margin-top:10px;color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
+  border:1px solid var(--amberdim);border-radius:9px;padding:9px 15px}
+.plx[disabled]{color:var(--dim);border-color:var(--line);cursor:default}
+.pltracks{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}
+.pltrack{display:flex;gap:8px;align-items:baseline;font-size:12.5px;padding:2px 0;color:var(--mut)}
+.pltrack .g{flex:none;max-width:38%;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pltrack .t{overflow-wrap:anywhere}
+.plhint{padding:14px 8px 4px;color:var(--dim);font-size:11.5px;line-height:1.7}
+.plhint code{color:var(--mut);font-size:11px}
 
 /* the logging ritual sheet */
 #scrim{position:fixed;inset:0;background:rgba(4,5,9,.6);z-index:8}
@@ -204,6 +231,7 @@ const KEY = 'vgm-v1';
 const VIEWS = ['feed', 'queue', 'library'];
 const STATUSES = ['unsorted', 'queued', 'listened', 'hidden'];
 const LIB_SORTS = ['listenedOn', 'rating', 'date'];
+const LIB_VIEWS = ['albums', 'songs', 'playlists'];
 const FEED_SORTS = ['date', 'oldest', 'az', 'added'];
 let R = { updatedAt: null, releases: [] };   // shared data from the collector; never written here
 let LOADSTATE = 'loading';                    // loading | ok | empty | error
@@ -214,6 +242,7 @@ let SHEET = null;                             // {id, draft} while the logging s
 let IMPMSG = '';                              // one-shot import feedback line
 let EXPANDED = null;                          // id of the row opened into its detail panel
 let ALBUM = null;                             // id of the row opened into the full album page
+let PLOPEN = null;                            // key of the playlist card opened into its preview
 const STANDALONE = (window.matchMedia && matchMedia('(display-mode: standalone)').matches)
   || window.navigator.standalone === true;
 const BIG_STUDIOS = ['nintendo','sony','playstation','capcom','square enix','squaresoft','sega',
@@ -227,11 +256,11 @@ function coTier(r){
   return BIG_STUDIOS.some(b => c.includes(b)) ? 'big' : 'indie';
 }
 
-function blank(){ return { status:'unsorted', rating:null, liked:false, note:'', listenedOn:null, queuedOn:null }; }
-function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn; }
+function blank(){ return { status:'unsorted', rating:null, liked:false, note:'', listenedOn:null, queuedOn:null, likedTracks:[] }; }
+function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn && !(e.likedTracks || []).length; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', libSort:'listenedOn', libLiked:false, showHidden:false }; }
+function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', libSort:'listenedOn', libLiked:false, libView:'albums', plYear:'all', plGenre:'all', showHidden:false }; }
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -259,6 +288,9 @@ function validateState(d){
   s.feedGenre = typeof d.feedGenre === 'string' && d.feedGenre ? d.feedGenre : 'all';
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
+  s.libView = LIB_VIEWS.includes(d.libView) ? d.libView : 'albums';
+  s.plYear = typeof d.plYear === 'string' && /^\d{4}$/.test(d.plYear) ? d.plYear : 'all';
+  s.plGenre = typeof d.plGenre === 'string' && d.plGenre ? d.plGenre : 'all';
   s.showHidden = d.showHidden === true;
   const src = (d.entries && typeof d.entries === 'object' && !Array.isArray(d.entries)) ? d.entries : {};
   for(const id in src){
@@ -269,6 +301,16 @@ function validateState(d){
     e.note = typeof x.note === 'string' ? x.note.slice(0, 200) : '';
     e.listenedOn = isDateStr(x.listenedOn) ? x.listenedOn : null;
     e.queuedOn = isDateStr(x.queuedOn) ? x.queuedOn : null;
+    if(Array.isArray(x.likedTracks)){
+      const seen = new Set();
+      for(const t of x.likedTracks){
+        if(typeof t !== 'string' || !t) continue;
+        const f = fold(t);
+        if(seen.has(f)) continue;
+        seen.add(f);
+        e.likedTracks.push(t.slice(0, 300));
+      }
+    }
     if(!isBlank(e)) s.entries[id] = e;
   }
   return s;
@@ -311,7 +353,7 @@ function randomListen(){
   const pick = rows[Math.floor(Math.random() * rows.length)];
   EXPANDED = pick.id;  // open it here first; LISTEN is one tap away
   renderList();
-  const el = document.querySelector(`.row[data-id="${CSS.escape(pick.id)}"]`);
+  const el = [...document.querySelectorAll('.row')].find(x => x.dataset.id === pick.id);
   if(el && el.scrollIntoView) el.scrollIntoView({ block: 'center' });
 }
 function toggleExpand(id){ EXPANDED = EXPANDED === id ? null : id; renderList(); }
@@ -326,6 +368,19 @@ function toggleQueued(id){ editEntry(id, e => {
 function hideTrack(id){ editEntry(id, e => { e.status = 'hidden'; e.queuedOn = null; }); }
 function unhideTrack(id){ editEntry(id, e => { e.status = 'unsorted'; }); }
 function toggleLiked(id){ editEntry(id, e => { e.liked = !e.liked; }); }
+function isTrackLiked(id, title){
+  const f = fold(title);
+  return (E(id).likedTracks || []).some(t => fold(t) === f);
+}
+function toggleTrackLike(id, title){ editEntry(id, e => {
+  const f = fold(title);
+  e.likedTracks = e.likedTracks.some(t => fold(t) === f)
+    ? e.likedTracks.filter(t => fold(t) !== f)
+    : e.likedTracks.concat([title]);  // store the display title; compare folded
+}); }
+function setLibView(v){ if(LIB_VIEWS.includes(v)){ S.libView = v; save(); renderAll(); } }
+function setPlYear(y){ S.plYear = /^\d{4}$/.test(y) ? y : 'all'; save(); renderAll(); }
+function setPlGenre(g){ S.plGenre = g || 'all'; save(); renderAll(); }
 function toggleShowHidden(){ S.showHidden = !S.showHidden; save(); renderAll(); }
 function markVisit(){ S.lastSeen = Date.now(); save(); }
 function setQuery(q){ Q = q; renderAll(); }
@@ -413,6 +468,82 @@ function libraryRows(){
   return rows;  // 'date' keeps release order from sorted()
 }
 function hiddenRows(){ return sorted().filter(r => E(r.id).status === 'hidden'); }
+function likedSongRows(){
+  const out = [];
+  for(const r of sorted()){
+    const list = (S.entries[r.id] || {}).likedTracks || [];
+    for(const title of list){
+      // rematch by folded title so refetched tracklists keep their videoIds
+      const t = (r.tracks || []).find(x => fold(x.title) === fold(title)) || { title };
+      out.push({ r, t });
+    }
+  }
+  return out;
+}
+function songMatches(s, q){ return !q || fold(s.t.title).includes(fold(q)) || matches(s.r, q); }
+
+/* ------------------------- playlist recipes -------------------------- */
+/* composed from personal state; exported as JSON for the local companion */
+function plFacetRows(rows){
+  let out = rows;
+  if(S.plYear !== 'all') out = out.filter(r => (r.date || '').slice(0, 4) === S.plYear);
+  if(S.plGenre !== 'all') out = out.filter(r => (r.genres || []).includes(S.plGenre));
+  return out;
+}
+function plTrack(r, t){
+  const o = { game: r.game || label(r), title: t.title };
+  if(t.videoId) o.videoId = t.videoId;
+  if(r.ytmPlaylistId) o.ytmPlaylistId = r.ytmPlaylistId;
+  o.searchQuery = (r.game || label(r)) + ' ' + t.title;  // the companion resolves this when there is no videoId
+  return o;
+}
+function plLiked(){
+  const ok = new Set(plFacetRows(sorted()).map(r => r.id));
+  return likedSongRows().filter(s => ok.has(s.r.id)).map(s => plTrack(s.r, s.t));
+}
+function plQueue(){
+  const out = [];
+  for(const r of plFacetRows(queueRows())){
+    for(const t of (r.tracks || []).length ? r.tracks : (r.topTracks || [])) out.push(plTrack(r, t));
+  }
+  return out;
+}
+function plRated(){
+  const out = [];
+  for(const r of plFacetRows(sorted())){
+    const e = S.entries[r.id];
+    if(!e || !(e.rating >= 4)) continue;
+    const tt = (r.tracks || []).length ? top3Of(r).ranked : (r.topTracks || []).slice(0, 3);
+    for(const t of tt) out.push(plTrack(r, t));
+  }
+  return out;
+}
+function playlistDefs(){
+  const facet = [S.plYear !== 'all' ? S.plYear : '', S.plGenre !== 'all' ? S.plGenre : ''].filter(Boolean).join(' ');
+  const suff = facet ? ' — ' + facet : '';
+  return [
+    { key: 'liked', name: 'vgm-finder · Liked Songs' + suff, blurb: 'every ♥ track', tracks: plLiked() },
+    { key: 'queue', name: 'vgm-finder · Queue' + suff, blurb: 'tracklists of queued albums', tracks: plQueue() },
+    { key: 'rated', name: 'vgm-finder · 4★ Mix' + suff, blurb: 'top tracks of releases rated 4+', tracks: plRated() },
+  ];
+}
+function plExportObj(key){
+  const p = playlistDefs().find(x => x.key === key);
+  return p ? { app: 'vgm-finder-playlist', name: p.name, tracks: p.tracks } : null;
+}
+function plSlug(name){ return fold(name).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'playlist'; }
+function exportPlaylist(key){
+  const data = plExportObj(key);
+  if(!data || !data.tracks.length) return;
+  try{
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'playlist-' + plSlug(data.name) + '.json';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  }catch(e){}
+}
 function newCount(){ return feedRows().filter(isNew).length; }
 
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
@@ -482,29 +613,67 @@ function renderControls(){
       cos.map(([k, name]) =>
       `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('') +
       `<button id="fconsole" class="${S.feedConsole ? 'on' : ''}" aria-pressed="${S.feedConsole}">console</button>` +
-      genreSelectHtml() +
+      genreSelectHtml('fgenre', S.feedGenre) +
       `<button id="frandom" aria-label="Listen to a random soundtrack">random ▸</button>`;
     return;
   }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
+  const modeChips =
+    `<button id="libsongs" class="${S.libView === 'songs' ? 'on' : ''}" aria-pressed="${S.libView === 'songs'}">♥ songs</button>` +
+    `<button id="libpl" class="${S.libView === 'playlists' ? 'on' : ''}" aria-pressed="${S.libView === 'playlists'}">playlists</button>`;
+  if(S.libView === 'songs'){ el.innerHTML = modeChips; return; }
+  if(S.libView === 'playlists'){ el.innerHTML = modeChips + plYearSelectHtml() + genreSelectHtml('plgenre', S.plGenre); return; }
   const sorts = [['listenedOn', 'heard on'], ['rating', 'rating'], ['date', 'released']];
   el.innerHTML = sorts.map(([k, name]) =>
     `<button data-ls="${k}" class="${S.libSort === k ? 'on' : ''}">${name}</button>`).join('') +
-    `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>`;
+    `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>` +
+    modeChips;
 }
 
 const SRC_LABEL = { igdb: 'catalog', ytm: 'catalog' };  // site names read fine; api names get friendly labels
 
-function genreSelectHtml(){
+function genreSelectHtml(id, sel){
   const counts = {};
   for(const r of R.releases) for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
   const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 24);
   if(!names.length) return '';
-  if(S.feedGenre !== 'all' && !names.includes(S.feedGenre)) names.push(S.feedGenre);
-  return `<select id="fgenre" aria-label="Genre">` +
-    `<option value="all"${S.feedGenre === 'all' ? ' selected' : ''}>genre: all</option>` +
-    names.map(n => `<option value="${esc(n)}"${S.feedGenre === n ? ' selected' : ''}>${esc(n.toLowerCase())}</option>`).join('') +
+  if(sel !== 'all' && !names.includes(sel)) names.push(sel);
+  return `<select id="${id}" aria-label="Genre">` +
+    `<option value="all"${sel === 'all' ? ' selected' : ''}>genre: all</option>` +
+    names.map(n => `<option value="${esc(n)}"${sel === n ? ' selected' : ''}>${esc(n.toLowerCase())}</option>`).join('') +
     `</select>`;
+}
+
+function plYearSelectHtml(){
+  const years = new Set();
+  for(const r of R.releases){ const y = (r.date || '').slice(0, 4); if(/^\d{4}$/.test(y)) years.add(y); }
+  const list = [...years].sort().reverse();
+  if(S.plYear !== 'all' && !list.includes(S.plYear)) list.push(S.plYear);
+  if(!list.length) return '';
+  return `<select id="plyear" aria-label="Year">` +
+    `<option value="all"${S.plYear === 'all' ? ' selected' : ''}>year: all</option>` +
+    list.map(y => `<option value="${esc(y)}"${S.plYear === y ? ' selected' : ''}>${esc(y)}</option>`).join('') +
+    `</select>`;
+}
+
+function playlistsHtml(){
+  const cards = playlistDefs().map(p => {
+    const open = PLOPEN === p.key;
+    const n = p.tracks.length;
+    const preview = !open ? '' : `<div class="pltracks">` + (n
+      ? p.tracks.map(t => `<div class="pltrack"><span class="g">${esc(t.game)}</span><span class="t">${esc(t.title)}</span></div>`).join('')
+      : `<div class="pltrack"><span class="t">nothing here yet</span></div>`) + `</div>`;
+    return `<div class="plcard" data-plc="${p.key}" role="button" tabindex="0" aria-expanded="${open}">
+      <div class="plname">${esc(p.name)}</div>
+      <div class="plmeta">${n} track${n === 1 ? '' : 's'} · ${esc(p.blurb)}</div>
+      ${open ? `<button class="plx" data-plx="${p.key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button>` : ''}
+      ${preview}
+    </div>`;
+  }).join('');
+  return cards + `<div class="plhint">Playlists live in your real YT Music account, but a web page can’t sign in for you.
+    Export the JSON, put it next to the repo on the PC, then
+    <code>python companion/make_playlists.py playlist-*.json</code> creates or updates the private playlist.
+    One-time setup there: <code>ytmusicapi browser</code> → <code>companion/browser.json</code> (never leaves the PC).</div>`;
 }
 
 function rowHtml(r, view, ghost){
@@ -554,6 +723,16 @@ function rowHtml(r, view, ghost){
   </div>`;
 }
 
+function tlikeHtml(r, t){
+  const on = isTrackLiked(r.id, t.title);
+  return `<button class="tlike${on ? ' on' : ''}" data-act="tlike" data-t="${esc(t.title)}"` +
+    ` aria-pressed="${on}" aria-label="Like ${esc(t.title)}">${on ? '♥' : '♡'}</button>`;
+}
+function xtrackHtml(r, t, i){
+  return `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>` +
+    `<span class="xend">${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}${tlikeHtml(r, t)}</span></div>`;
+}
+
 function expandedHtml(r, e){
   const info = [];
   if(r.game) info.push(['game', r.game]);
@@ -565,13 +744,12 @@ function expandedHtml(r, e){
   if((r.tracks || []).length){
     const t3 = top3Of(r);
     tracks = `<div class="xh">${t3.byPlays ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` +
-      t3.ranked.map((t, i) =>
-        `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}</div>`).join('') +
+      t3.ranked.map((t, i) => xtrackHtml(r, t, i)).join('') +
       `<button class="xall" data-act="album">All ${r.tracks.length} tracks ›</button>`;
   } else if((r.topTracks || []).length){  // legacy shape until the collector refetches
     const tt = r.topTracks;
-    tracks = `<div class="xh">${tt.some(t => t && t.plays) ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` + tt.map((t, i) =>
-      `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}</div>`).join('');
+    tracks = `<div class="xh">${tt.some(t => t && t.plays) ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` +
+      tt.map((t, i) => xtrackHtml(r, t, i)).join('');
   }
   const links = (r.sources || []).map(s =>
     `<a class="chip xsrc" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(SRC_LABEL[s.name] || s.name)} ↗</a>`).join('');
@@ -583,10 +761,27 @@ function expandedHtml(r, e){
   </div>`;
 }
 
+function songRowHtml(s){
+  const { r, t } = s;
+  const art = r.art
+    ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noart');this.remove()"></div>`
+    : `<div class="rart noart"></div>`;
+  return `<div class="row song" data-id="${esc(r.id)}" data-t="${esc(t.title)}" tabindex="0" role="link" aria-label="Play ${esc(t.title)}">
+    ${art}
+    <div class="rmain">
+      <div class="rtitle">${esc(t.title)}</div>
+      <div class="rsub">${esc(r.game || label(r))}</div>
+    </div>
+    <div class="racts">${tlikeHtml(r, t)}</div>
+  </div>`;
+}
+
 function renderAlbum(){
   const wrap = document.getElementById('albumwrap');
   const r = ALBUM && byId(ALBUM);
   if(!r){ wrap.innerHTML = ''; return; }
+  const prev = wrap.querySelector('#album');
+  const scroll = prev ? prev.scrollTop : 0;  // hearting a track mid-list must not jump to the top
   const e = E(r.id);
   const t3 = top3Of(r);
   const medal = { };
@@ -598,6 +793,7 @@ function renderAlbum(){
       <span class="ttl">${esc(t.title)}</span>
       ${t3.byPlays && medal[i] ? `<span class="medal">${medal[i]}</span>` : ''}
       ${t.plays ? `<span class="tplays">${esc(t.plays)}</span>` : ''}
+      ${tlikeHtml(r, t)}
     </div>`).join('');
   wrap.innerHTML = `<div id="album">
     <div class="ahead"><button class="aclose" aria-label="Back">✕</button><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span></div>
@@ -610,6 +806,8 @@ function renderAlbum(){
       <div class="alist">${rows}</div>
     </div>
   </div>`;
+  const now = wrap.querySelector('#album');
+  if(now && scroll) now.scrollTop = scroll;
 }
 
 function stateHtml(big, body){ return `<div class="state"><div class="big">${big}</div><p>${body}</p></div>`; }
@@ -618,9 +816,13 @@ function emptyHtml(){
   const q = Q.trim();
   if(q) return stateHtml('NO MATCHES', `Nothing matches “${esc(q)}” here.`);
   if(S.view === 'queue') return stateHtml('QUEUE EMPTY', 'Tap + on anything in the feed worth hearing and it lands here.');
-  if(S.view === 'library') return S.libLiked
-    ? stateHtml('NO LIKED TRACKS', 'The ♥ lives in the logging sheet and on library rows.')
-    : stateHtml('NOTHING LOGGED YET', 'The ▷ on any row opens the logging sheet and starts your diary.');
+  if(S.view === 'library'){
+    if(S.libView === 'songs')
+      return stateHtml('NO LIKED SONGS', 'Tap the ♡ next to any track — in a row’s track list or on its album page — and it lands here.');
+    return S.libLiked
+      ? stateHtml('NO LIKED TRACKS', 'The ♥ lives in the logging sheet and on library rows.')
+      : stateHtml('NOTHING LOGGED YET', 'The ▷ on any row opens the logging sheet and starts your diary.');
+  }
   return stateHtml('ALL TRACKS HIDDEN', 'Everything is hidden. Use “show” below to bring tracks back.');
 }
 
@@ -636,6 +838,12 @@ function renderList(){
     el.innerHTML = stateHtml('NO TRACKS YET', 'The collector runs every morning at 6 ET. The first batch lands after its next run.');
     return;
   }
+  if(S.view === 'library' && S.libView === 'songs'){
+    const songs = likedSongRows().filter(s => songMatches(s, Q.trim()));
+    el.innerHTML = songs.length ? songs.map(songRowHtml).join('') : emptyHtml();
+    return;
+  }
+  if(S.view === 'library' && S.libView === 'playlists'){ el.innerHTML = playlistsHtml(); return; }
   const rows = searched(S.view === 'queue' ? queueRows() : S.view === 'library' ? libraryRows() : feedRows());
   let html;
   if(!rows.length){
@@ -720,6 +928,10 @@ document.addEventListener('visibilitychange', () => {
 
 document.getElementById('list').addEventListener('click', e => {
   if(e.target.closest('a')) return;  // article links navigate normally
+  const px = e.target.closest('[data-plx]');
+  if(px){ exportPlaylist(px.dataset.plx); return; }
+  const pc = e.target.closest('[data-plc]');
+  if(pc){ PLOPEN = PLOPEN === pc.dataset.plc ? null : pc.dataset.plc; renderList(); return; }
   const btn = e.target.closest('[data-act]');
   const row = e.target.closest('.row');
   if(!row) return;
@@ -728,18 +940,33 @@ document.getElementById('list').addEventListener('click', e => {
     if(btn.dataset.act === 'queue') toggleQueued(id);
     else if(btn.dataset.act === 'log') openLog(id);
     else if(btn.dataset.act === 'like') toggleLiked(id);
+    else if(btn.dataset.act === 'tlike') toggleTrackLike(id, btn.dataset.t);
     else if(btn.dataset.act === 'hide') hideTrack(id);
     else if(btn.dataset.act === 'restore') unhideTrack(id);
     else if(btn.dataset.act === 'listen') openTrack(byId(id));
     else if(btn.dataset.act === 'album') openAlbum(id);
     return;
   }
+  if(row.classList.contains('song')){
+    const r = byId(id);
+    if(r){
+      const f = fold(row.dataset.t);
+      const tr = (r.tracks || []).find(x => fold(x.title) === f) || { title: row.dataset.t };
+      openUrl(trackUrl(r, tr));
+    }
+    return;
+  }
   if(!row.classList.contains('ghost')) toggleExpand(id);
 });
 document.getElementById('list').addEventListener('keydown', e => {
   if(e.key !== 'Enter' && e.key !== ' ') return;
+  const pc = e.target.closest('[data-plc]');
+  if(pc && e.target === pc){ e.preventDefault(); pc.click(); return; }
   const row = e.target.closest('.row');
-  if(row && e.target === row){ e.preventDefault(); toggleExpand(row.dataset.id); }
+  if(!row || e.target !== row) return;
+  e.preventDefault();
+  if(row.classList.contains('song')) row.click();
+  else toggleExpand(row.dataset.id);
 });
 document.querySelector('#tabbar .trow').addEventListener('click', e => {
   const b = e.target.closest('button[data-v]');
@@ -754,7 +981,9 @@ document.getElementById('subctl').addEventListener('click', e => {
   if(e.target.closest('#frandom')){ randomListen(); return; }
   const s = e.target.closest('button[data-ls]');
   if(s){ setLibSort(s.dataset.ls); return; }
-  if(e.target.closest('#libliked')) toggleLibLiked();
+  if(e.target.closest('#libliked')){ toggleLibLiked(); return; }
+  if(e.target.closest('#libsongs')){ setLibView(S.libView === 'songs' ? 'albums' : 'songs'); return; }
+  if(e.target.closest('#libpl')) setLibView(S.libView === 'playlists' ? 'albums' : 'playlists');
 });
 document.getElementById('colophon').addEventListener('click', e => {
   if(e.target.closest('#hidtoggle')){ toggleShowHidden(); return; }
@@ -769,6 +998,8 @@ document.getElementById('colophon').addEventListener('change', e => {
 });
 document.getElementById('subctl').addEventListener('change', e => {
   if(e.target.id === 'fgenre') setFeedGenre(e.target.value);
+  else if(e.target.id === 'plyear') setPlYear(e.target.value);
+  else if(e.target.id === 'plgenre') setPlGenre(e.target.value);
 });
 document.getElementById('q').addEventListener('input', e => {
   document.getElementById('qwrap').classList.toggle('has', !!e.target.value);
@@ -799,8 +1030,10 @@ sheetwrap.addEventListener('input', e => {
 });
 document.getElementById('albumwrap').addEventListener('click', e => {
   if(e.target.closest('.aclose')){ closeAlbum(); return; }
-  const t = e.target.closest('.atrack');
   const r = ALBUM && byId(ALBUM);
+  const lk = e.target.closest('[data-act="tlike"]');
+  if(lk && r){ toggleTrackLike(r.id, lk.dataset.t); return; }  // heart, not play
+  const t = e.target.closest('.atrack');
   if(t && r){ const tr = (r.tracks || [])[+t.dataset.i]; if(tr) openUrl(trackUrl(r, tr)); }
 });
 window.addEventListener('keydown', e => {
