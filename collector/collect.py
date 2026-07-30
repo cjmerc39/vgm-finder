@@ -715,8 +715,9 @@ def parse_igdb(raw, resolve):
 
 
 SOURCES = [
-    {"name": "nowplaying", "type": "editorial",
-     "url": "https://nowplaying.cool/rss/", "parse": parse_nowplaying},
+    # nowplaying.cool dropped 2026-07-30 at CJ's request: headline rows with
+    # no art or game anchor read as noise next to catalog rows (the parser
+    # stays for the tests and in case the verdict ever reverses)
     {"name": "blipblop", "type": "editorial",
      "url": "https://blipblop.net/feed/", "parse": parse_blipblop},
     {"name": "vgmo", "type": "editorial",

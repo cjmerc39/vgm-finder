@@ -745,7 +745,7 @@ def test_run_collects_all_sources_and_is_stable(tmp_path, monkeypatch):
                        data_path=data_path, now=NOW) == 0
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert data["updatedAt"] == SEEN
-    assert len(data["releases"]) == 52  # 10 + 9 + 5 + 25 + 3 igdb, no cross-source collisions
+    assert len(data["releases"]) == 42  # 9 + 5 + 25 + 3 igdb, no cross-source collisions (nowplaying dropped)
     igdb_rows = [r for r in data["releases"] if r["sources"][0]["name"] == "igdb"]
     assert len(igdb_rows) == 3
     assert all(r["ytmAlbumUrl"] and r["game"] and r["composers"] and r["art"] for r in igdb_rows)
@@ -770,7 +770,7 @@ def test_run_survives_one_source_failing(tmp_path, capsys):
                        data_path=data_path, now=NOW) == 0
     out = capsys.readouterr().out
     assert "::warning::blipblop failed" in out
-    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 43
+    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 33
 
 
 def test_run_fails_red_when_every_source_fails(tmp_path, capsys):
