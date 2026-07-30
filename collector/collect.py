@@ -539,9 +539,15 @@ def _match_album_tokens(results, game_name, year=None):
         return {t for t in folded.split()
                 if t not in _TOKENS_OK and t != "i"}  # game numerals stay: HM 2 is not HM
     wants = [content(normalize_title(game_name))]
-    if ":" in game_name:  # subtitles drop off album titles constantly
-        head = content(normalize_title(game_name.split(":", 1)[0]))
-        if head and head not in wants:
+    if ":" in game_name:
+        # subtitles drop off album titles ("Hotline Miami 2 (Official
+        # Soundtrack)" for Wrong Number) — but only a NUMBERED head names one
+        # game. A bare franchise head is media-brand territory: "Naruto
+        # Shippuden: Ultimate Ninja 4" must not wear the anime's TV score,
+        # which is the same era and has no owner row to claim it first.
+        head_norm = normalize_title(game_name.split(":", 1)[0])
+        head = content(head_norm)
+        if head and head not in wants and _numeral_tail(head_norm) is not None:
             wants.append(head)
     if not wants[0]:
         return None

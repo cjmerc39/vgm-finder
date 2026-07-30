@@ -943,3 +943,10 @@ def test_stage_productions_never_attach_to_games():
              "title": "Synapse (Original Theatrical Soundtrack)",
              "artists": [{"name": "Some Composer"}], "thumbnails": []}
     assert collect._hit_from(stage) is None
+
+
+def test_bare_franchise_heads_never_match_media_albums():
+    anime = [{"resultType": "album", "browseId": "MPREb_nso", "year": "2007",
+              "title": "NARUTO SHIPPUDEN ORIGINAL SOUNDTRACK",
+              "artists": [{"name": "Yasuharu Takanashi"}], "thumbnails": []}]
+    assert collect._match_album_tokens(anime, "Naruto Shippuden: Ultimate Ninja 4", year=2007) is None
