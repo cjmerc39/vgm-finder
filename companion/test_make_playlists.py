@@ -164,6 +164,35 @@ def test_sync_resolves_and_reports_unresolved():
     assert rep["unresolved"] == ["Sifu — Club Fight"]
 
 
+def test_sync_retries_the_fresh_playlist_409(monkeypatch):
+    naps = []
+    monkeypatch.setattr(mp.time, "sleep", naps.append)
+    yt = FakeYT()
+    real_add = yt.add_playlist_items
+    fails = ["Server returned HTTP 409: Conflict."] * 2
+    def flaky(pid, video_ids, duplicates=False):
+        if fails:
+            raise RuntimeError(fails.pop(0))
+        return real_add(pid, video_ids, duplicates=duplicates)
+    yt.add_playlist_items = flaky
+    rep = mp.sync_playlist(yt, "Mix", TRACKS)
+    assert rep["created"] is True and rep["added"] == 2
+    assert yt.added == [("PL1", ["v1", "v2"])]
+    assert naps == [2, 5]  # backed off twice, then the settle landed
+
+
+def test_sync_does_not_retry_non_409_errors(monkeypatch):
+    naps = []
+    monkeypatch.setattr(mp.time, "sleep", naps.append)
+    yt = FakeYT()
+    def dead(pid, video_ids, duplicates=False):
+        raise RuntimeError("Server returned HTTP 500: oops.")
+    yt.add_playlist_items = dead
+    with pytest.raises(RuntimeError):
+        mp.sync_playlist(yt, "Mix", TRACKS)
+    assert naps == []  # a real failure surfaces immediately
+
+
 # ---------------------------------------------------------------------- glob
 
 def test_expand_args_globs_for_windows_shells(tmp_path, monkeypatch):

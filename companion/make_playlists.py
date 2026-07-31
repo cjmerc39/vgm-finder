@@ -20,6 +20,7 @@ import argparse
 import glob
 import json
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "collector"))
@@ -91,6 +92,19 @@ def find_marked_playlist(yt, name):
     return None, [], unmarked
 
 
+def _add_items(yt, pid, video_ids):
+    """add_playlist_items, absorbing YTM's fresh-playlist race: a playlist
+    just made by create_playlist can 409 inserts for a few seconds."""
+    for wait in (2, 5):
+        try:
+            return yt.add_playlist_items(pid, video_ids, duplicates=False)
+        except Exception as e:
+            if "409" not in str(e):
+                raise
+            time.sleep(wait)
+    return yt.add_playlist_items(pid, video_ids, duplicates=False)
+
+
 def sync_playlist(yt, name, tracks):
     """Create or top up the marked playlist for one export. Returns a report."""
     rep = {"name": name, "created": False, "skipped": False,
@@ -117,7 +131,7 @@ def sync_playlist(yt, name, tracks):
     to_add = [v for v in ids if v not in have]
     rep["already"] = len(ids) - len(to_add)
     if to_add:
-        yt.add_playlist_items(pid, to_add, duplicates=False)
+        _add_items(yt, pid, to_add)
         rep["added"] = len(to_add)
     return rep
 
