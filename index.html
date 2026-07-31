@@ -179,6 +179,9 @@ a.xsrc{text-decoration:none}
 .pltrack .t{overflow-wrap:anywhere}
 .plhint{padding:14px 8px 4px;color:var(--dim);font-size:11.5px;line-height:1.7}
 .plhint code{color:var(--mut);font-size:11px}
+.pubrow{display:flex;gap:8px;margin:9px 0 3px}
+.pubrow input{flex:1;min-width:0;background:none;border:1px solid var(--line);border-radius:9px;color:var(--mut);padding:8px 11px;font:inherit;font-size:12px}
+.pubrow button,#pubclear{color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;border:1px solid var(--amberdim);border-radius:9px;padding:9px 15px}
 
 /* the logging ritual sheet */
 #scrim{position:fixed;inset:0;background:rgba(4,5,9,.6);z-index:8}
@@ -544,6 +547,53 @@ function exportPlaylist(key){
     setTimeout(() => URL.revokeObjectURL(a.href), 5000);
   }catch(e){}
 }
+
+/* ==================== one-tap phone publish ==================== */
+const PUB_REPO = 'cjmerc39/vgm-publisher';
+const PUB_KEY = 'vgm-pub-token';   // own storage key: state backups must never carry the token
+let PUBSTATE = {};                 // playlist key -> 'sending' | 'watching' | 'sent' | 'ok' | error text
+let PUB_POLL_MS = 8000;
+function pubToken(){ try{ return localStorage.getItem(PUB_KEY) || ''; }catch(e){ return ''; } }
+function setPubToken(t){ try{ t ? localStorage.setItem(PUB_KEY, t) : localStorage.removeItem(PUB_KEY); }catch(e){} PUBSTATE = {}; }
+async function publishPlaylist(key){
+  const tok = pubToken(), data = plExportObj(key);
+  const busy = PUBSTATE[key] === 'sending' || PUBSTATE[key] === 'watching';
+  if(!tok || !data || !data.tracks.length || busy) return;
+  const body = JSON.stringify({ event_type: 'publish', client_payload: { playlist: data } });
+  if(body.length > 60000){ PUBSTATE[key] = 'too big — export instead'; renderList(); return; }  // dispatch caps payloads at 64KB
+  PUBSTATE[key] = 'sending'; renderList();
+  let sent = false;
+  try{
+    const res = await fetch('https://api.github.com/repos/' + PUB_REPO + '/dispatches', {
+      method: 'POST', body,
+      headers: { 'Authorization': 'Bearer ' + tok, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    });
+    sent = res.status === 204;
+    if(!sent) PUBSTATE[key] = res.status === 401 ? 'token rejected' : 'send failed (' + res.status + ')';
+  }catch(e){ PUBSTATE[key] = 'offline?'; }
+  if(sent){
+    PUBSTATE[key] = 'watching'; renderList();
+    PUBSTATE[key] = await watchPublish(tok, Date.now());
+  }
+  renderList();
+}
+async function watchPublish(tok, t0){
+  // the run takes about a minute; report its verdict when the token may read Actions, else settle for "sent"
+  for(let i = 0; i < 24; i++){
+    await new Promise(r => setTimeout(r, PUB_POLL_MS));
+    let run = null;
+    try{
+      const res = await fetch('https://api.github.com/repos/' + PUB_REPO + '/actions/runs?event=repository_dispatch&per_page=1', {
+        headers: { 'Authorization': 'Bearer ' + tok, 'Accept': 'application/vnd.github+json' } });
+      if(!res.ok) return 'sent';
+      run = ((await res.json()).workflow_runs || [])[0];
+    }catch(e){ return 'sent'; }
+    if(!run || Date.parse(run.created_at) < t0 - 90000) continue;  // our run hasn't surfaced yet
+    if(run.status === 'completed') return run.conclusion === 'success' ? 'ok' : 'run failed — see Actions';
+  }
+  return 'sent';
+}
+
 function newCount(){ return feedRows().filter(isNew).length; }
 
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
@@ -657,23 +707,35 @@ function plYearSelectHtml(){
 }
 
 function playlistsHtml(){
+  const tok = pubToken();
   const cards = playlistDefs().map(p => {
     const open = PLOPEN === p.key;
     const n = p.tracks.length;
     const preview = !open ? '' : `<div class="pltracks">` + (n
       ? p.tracks.map(t => `<div class="pltrack"><span class="g">${esc(t.game)}</span><span class="t">${esc(t.title)}</span></div>`).join('')
       : `<div class="pltrack"><span class="t">nothing here yet</span></div>`) + `</div>`;
+    const st = PUBSTATE[p.key];
+    const busy = st === 'sending' || st === 'watching';
+    const plabel = st === 'sending' ? 'SENDING…' : st === 'watching' ? 'PUBLISHING…'
+      : st === 'ok' ? '✓ PUBLISHED' : st === 'sent' ? '✓ SENT' : st ? '✗ ' + st : '⇪ PUBLISH';
     return `<div class="plcard" data-plc="${p.key}" role="button" tabindex="0" aria-expanded="${open}">
       <div class="plname">${esc(p.name)}</div>
       <div class="plmeta">${n} track${n === 1 ? '' : 's'} · ${esc(p.blurb)}</div>
+      ${open && tok ? `<button class="plx plp" data-plp="${p.key}"${n && !busy ? '' : ' disabled'}>${esc(plabel)}</button> ` : ''}
       ${open ? `<button class="plx" data-plx="${p.key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button>` : ''}
       ${preview}
     </div>`;
   }).join('');
-  return cards + `<div class="plhint">Playlists live in your real YT Music account, but a web page can’t sign in for you.
-    Export the JSON, put it next to the repo on the PC, then
-    <code>python companion/make_playlists.py playlist-*.json</code> creates or updates the private playlist.
-    One-time setup there: <code>ytmusicapi browser</code> → <code>companion/browser.json</code> (never leaves the PC).</div>`;
+  const setup = tok
+    ? `One-tap publish is on: ⇪ PUBLISH sends a playlist straight to your YT Music through the private
+       publisher repo. <button id="pubclear">disconnect</button>`
+    : `Playlists live in your real YT Music account, but a web page can’t sign in for you.
+       One-tap publish sends them through your private publisher repo — paste its GitHub token once
+       (the README’s “phone publish” section has the 2-minute setup):
+       <span class="pubrow"><input id="pubtok" type="password" placeholder="github_pat_…" autocomplete="off">
+       <button id="pubsave">connect</button></span>`;
+  return cards + `<div class="plhint">${setup}
+    <br>PC fallback: ⇩ export the JSON, then <code>python companion/make_playlists.py playlist-*.json</code>.</div>`;
 }
 
 function rowHtml(r, view, ghost){
@@ -928,8 +990,17 @@ document.addEventListener('visibilitychange', () => {
 
 document.getElementById('list').addEventListener('click', e => {
   if(e.target.closest('a')) return;  // article links navigate normally
+  const pp = e.target.closest('[data-plp]');
+  if(pp){ publishPlaylist(pp.dataset.plp); return; }
   const px = e.target.closest('[data-plx]');
   if(px){ exportPlaylist(px.dataset.plx); return; }
+  if(e.target.closest('#pubsave')){
+    const inp = document.getElementById('pubtok');
+    if(inp && inp.value.trim()){ setPubToken(inp.value.trim()); renderList(); }
+    return;
+  }
+  if(e.target.closest('#pubclear')){ setPubToken(''); renderList(); return; }
+  if(e.target.closest('#pubtok')) return;  // typing the token must not toggle anything
   const pc = e.target.closest('[data-plc]');
   if(pc){ PLOPEN = PLOPEN === pc.dataset.plc ? null : pc.dataset.plc; renderList(); return; }
   const btn = e.target.closest('[data-act]');

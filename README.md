@@ -59,6 +59,27 @@ without the marker is reported and left alone. Tracks without a videoId
 are search-resolved with the collector's strict matcher — anything it
 can't confidently place is listed instead of guessed.
 
+### Phone publish (one tap, no PC)
+
+The Playlists view can send an export straight from the phone: a private
+repo ([vgm-publisher](https://github.com/cjmerc39/vgm-publisher)) holds
+`browser.json` as an Actions secret and runs the same companion script on
+`repository_dispatch`. The app POSTs the export to that repo's dispatch
+endpoint, so all it needs is a fine-grained GitHub token:
+
+1. github.com → Settings → Developer settings → Personal access tokens →
+   Fine-grained tokens → Generate new token.
+2. Repository access: **only vgm-publisher**. Permissions: **Contents:
+   read and write** (lets it dispatch) and **Actions: read** (lets the
+   app report ✓/✗; skip it and publishes are fire-and-forget). Expiry:
+   your call — a year is a fine trade against re-pasting.
+3. Paste the token into the Playlists view's connect box.
+
+The token lives in its own localStorage key, never rides along in state
+backups, and "disconnect" forgets it. Kill switches: revoke the token
+(GitHub → token settings) and sign out of the YTM session (Google
+security → your devices) — either instantly disables publishing.
+
 ## Run the collector locally
 
 ```

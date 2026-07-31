@@ -456,6 +456,46 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   d.querySelector('#plgenre').dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(20);
   plCard().querySelector('.plx').click();
   assert(errors.length === 0, 'export click stays clean');
+
+  // ---------- one-tap publish ----------
+  assert(plCard().querySelector('[data-plp]') === null && d.querySelector('#pubtok') !== null,
+    'publish hidden until a token is connected');
+  const realFetch = w.fetch;
+  d.querySelector('#pubtok').value = '  github_pat_TEST  ';
+  d.querySelector('#pubsave').click(); await sleep(20);
+  assert(w.localStorage.getItem('vgm-pub-token') === 'github_pat_TEST' && d.querySelector('#pubclear') !== null,
+    'connect trims and stores the token outside app state');
+  assert(S(`JSON.stringify(buildExport())`).indexOf('github_pat_TEST') === -1,
+    'backups never carry the token');
+  S(`PUB_POLL_MS = 1`);
+  const calls = [];
+  w.fetch = async (url, opts) => {
+    calls.push({ url: String(url), opts });
+    if (String(url).endsWith('/dispatches')) return { ok: false, status: 204, json: async () => ({}) };
+    return { ok: true, status: 200, json: async () => ({ workflow_runs: [
+      { status: 'completed', conclusion: 'success', created_at: new Date().toISOString() }] }) };
+  };
+  plCard().querySelector('[data-plp]').click(); await sleep(150);
+  const dis = calls.find(c => c.url.endsWith('/dispatches'));
+  assert(dis && dis.url.includes('/repos/cjmerc39/vgm-publisher/')
+    && dis.opts.method === 'POST' && dis.opts.headers['Authorization'] === 'Bearer github_pat_TEST',
+    'publish dispatches to the publisher repo with the token');
+  const sent = JSON.parse(dis.opts.body);
+  assert(sent.event_type === 'publish' && sent.client_payload.playlist.app === 'vgm-finder-playlist'
+    && sent.client_payload.playlist.name === 'vgm-finder · Liked Songs'
+    && sent.client_payload.playlist.tracks.length === 1, 'dispatch carries the playlist export');
+  assert(plCard().querySelector('[data-plp]').textContent.includes('PUBLISHED'),
+    'button reports the green run');
+  d.querySelector('#list .plcard[data-plc="queue"]').click(); await sleep(20);
+  w.fetch = async () => ({ ok: false, status: 401, json: async () => ({}) });
+  d.querySelector('#list .plcard[data-plc="queue"] [data-plp]').click(); await sleep(50);
+  assert(d.querySelector('#list .plcard[data-plc="queue"] [data-plp]').textContent.includes('token rejected'),
+    'a 401 reads as token rejected');
+  d.querySelector('#pubclear').click(); await sleep(20);
+  assert(w.localStorage.getItem('vgm-pub-token') === null && d.querySelector('#list [data-plp]') === null,
+    'disconnect wipes the token and the buttons');
+  w.fetch = realFetch;
+  assert(errors.length === 0, 'publish flows stay clean');
   S(`editEntry('hades-ii', e => { e.status = 'unsorted'; e.queuedOn = null; })`);
   S(`editEntry('ゼルダの伝説', e => { e.status = 'unsorted'; e.queuedOn = null; })`);
   d.querySelector('#libpl').click(); await sleep(20);
