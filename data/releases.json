@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T11:14:04Z",
+  "updatedAt": "2026-08-02T11:14:01Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -190786,7 +190786,7 @@
       "composers": [
         "Fenvalur"
       ],
-      "date": "2023-01-01",
+      "date": "2022-01-01",
       "sources": [
         {
           "name": "ytm",
@@ -190799,6 +190799,12 @@
           "type": "catalog",
           "url": "https://music.youtube.com/browse/MPREb_pisr8HrCgkX",
           "seenAt": "2026-07-29T04:37:23Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_3Sd4R3R6KVt",
+          "seenAt": "2026-08-02T11:14:01Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Version+4.0+Soundtrack+%28From+Genshin+Impact%29",
@@ -292631,6 +292637,201 @@
         }
       ],
       "ytmPlaylistId": "OLAK5uy_lRglldQLy7O2no84JkNn_Cib-3zrONkXM"
+    },
+    {
+      "id": "ore-odds",
+      "title": "Ore & Odds Original Soundtrack",
+      "game": "Ore & Odds",
+      "composers": [],
+      "date": "2026-08-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4964130/Ore__Odds_Original_Soundtrack/",
+          "seenAt": "2026-08-02T11:14:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ore+%26+Odds+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4964130/a23342f7e298a645089505cf89b8e6cccb1cb6c0/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "100-undersea-cats",
+      "title": "100 Undersea Cats Soundtrack",
+      "game": "100 Undersea Cats",
+      "composers": [],
+      "date": "2026-08-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4543160/100_Undersea_Cats_Soundtrack/",
+          "seenAt": "2026-08-02T11:14:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=100+Undersea+Cats+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4543160/d04c6ff5545ec8faf4c46fcf8003d29e5d062dcd/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "minecraft-dungeons-echoing-void",
+      "title": "Minecraft Dungeons: Echoing Void (Original Game Soundtrack)",
+      "game": "Minecraft",
+      "composers": [
+        "Peter Hont",
+        "Minecraft"
+      ],
+      "date": "2021-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_vtS4sysIT4o",
+          "seenAt": "2026-08-02T11:14:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Dungeons%3A+Echoing+Void+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_vtS4sysIT4o",
+      "art": "https://yt3.googleusercontent.com/m-RHUAhntgsul31qJvOozxBCB5WHi8kjYbp0qdw9ljMQ7SjxS-_gr9Cl543GsvP2gFJmZ6_UxsznSdCD=w544-h544-l90-rj",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "To.",
+          "plays": "102K plays",
+          "videoId": "LulV1jmoBUY"
+        },
+        {
+          "title": "The Stronghold",
+          "plays": "108K plays",
+          "videoId": "BRQC0dGNURU"
+        },
+        {
+          "title": "Drawn",
+          "plays": "80K plays",
+          "videoId": "eNUjHaTmf-s"
+        },
+        {
+          "title": "Vault",
+          "plays": "51K plays",
+          "videoId": "OnCZlATo3DA"
+        },
+        {
+          "title": "Closer",
+          "plays": "118K plays",
+          "videoId": "03sEjkA8gPM"
+        },
+        {
+          "title": "The.",
+          "plays": "67K plays",
+          "videoId": "w-uQXYIoYP4"
+        },
+        {
+          "title": "End Wilds",
+          "plays": "58K plays",
+          "videoId": "yK1n6_3gplk"
+        },
+        {
+          "title": "Void",
+          "plays": "120K plays",
+          "videoId": "kG717elleqI"
+        },
+        {
+          "title": "City",
+          "plays": "44K plays",
+          "videoId": "gU3rly_6SF4"
+        },
+        {
+          "title": "Ethereal Blocks",
+          "plays": "49K plays",
+          "videoId": "cRBLEO4n7K8"
+        },
+        {
+          "title": "Tower",
+          "plays": "37K plays",
+          "videoId": "5NQLQDKzLWk"
+        },
+        {
+          "title": "Ship",
+          "plays": "33K plays",
+          "videoId": "dotW9V7nrLQ"
+        },
+        {
+          "title": "Nothingness",
+          "plays": "90K plays",
+          "videoId": "NMoL1MkSHm8"
+        },
+        {
+          "title": "Obsidian Cavern",
+          "plays": "38K plays",
+          "videoId": "yioL2A_KP00"
+        },
+        {
+          "title": "End.",
+          "plays": "50K plays",
+          "videoId": "H2F-pXfyQKY"
+        },
+        {
+          "title": "Broken Citadel",
+          "plays": "57K plays",
+          "videoId": "yrMpItk5DXI"
+        },
+        {
+          "title": "Apart",
+          "plays": "66K plays",
+          "videoId": "onT6PBd1dG0"
+        },
+        {
+          "title": "Astray Archipelago",
+          "plays": "63K plays",
+          "videoId": "vo--r1I_01A"
+        },
+        {
+          "title": "Obsidian Gate Tower",
+          "plays": "30K plays",
+          "videoId": "MThl2F4muiA"
+        },
+        {
+          "title": "Mountainside Cavern",
+          "plays": "27K plays",
+          "videoId": "KpiEzF4AV6Q"
+        },
+        {
+          "title": "Shattered",
+          "plays": "68K plays",
+          "videoId": "uQWbicbDFYg"
+        },
+        {
+          "title": "Tent",
+          "plays": "39K plays",
+          "videoId": "qJjh8xh6K_M"
+        },
+        {
+          "title": "End Shrine",
+          "plays": "47K plays",
+          "videoId": "Z1jhL6KRljo"
+        },
+        {
+          "title": "Broken Heart of Ender",
+          "plays": "1.3M plays",
+          "videoId": "dZ57Q5Y1_os"
+        },
+        {
+          "title": "To The Beginning",
+          "plays": "111K plays",
+          "videoId": "KzBC0ts6hUE"
+        },
+        {
+          "title": "Mojam",
+          "plays": "129K plays",
+          "videoId": "_SIdpvbuzMw"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mGjCjyK-EM6t4wvs6hqaqSaHJQhzv3RLY"
     }
   ]
 }
