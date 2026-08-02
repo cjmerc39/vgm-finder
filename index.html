@@ -183,6 +183,23 @@ a.xsrc{text-decoration:none}
 .pubrow input{flex:1;min-width:0;background:none;border:1px solid var(--line);border-radius:9px;color:var(--mut);padding:8px 11px;font:inherit;font-size:12px}
 .pubrow button,#pubclear{color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;border:1px solid var(--amberdim);border-radius:9px;padding:9px 15px}
 
+/* custom playlists: save-to picker, snackbar, library section */
+.tadd{flex:none;width:34px;height:36px;font-size:17px;color:var(--dim);display:grid;place-items:center;border-radius:8px}
+.tadd:active{color:var(--amber)}
+#cplhead,#cplhead2{font-family:var(--disp);font-size:10px;letter-spacing:2px;color:var(--dim);padding:14px 4px 2px}
+#cplnew{display:block;width:100%;text-align:center;color:var(--amber);font-size:11px;letter-spacing:1.6px;
+  text-transform:uppercase;border:1px dashed var(--amberdim);border-radius:12px;padding:12px;margin:10px 0}
+.pltrack .cprm{flex:none;margin-left:auto;width:32px;height:30px;color:var(--dim);font-size:12px}
+.cprow{display:flex;width:100%;align-items:center;gap:10px;padding:13px 4px;border-bottom:1px solid var(--line);
+  color:var(--mut);font-size:14px}
+.cprow .cpname{flex:1;min-width:0;text-align:left;overflow-wrap:anywhere}
+.cprow .cpn{font-family:var(--disp);font-size:10px;color:var(--dim)}
+#toastwrap{position:fixed;left:0;right:0;bottom:calc(74px + env(safe-area-inset-bottom));display:flex;
+  justify-content:center;z-index:9;pointer-events:none}
+#toast{display:flex;align-items:center;gap:12px;max-width:86vw;background:var(--bg2);border:1px solid var(--line);
+  border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--mut);box-shadow:0 6px 24px rgba(0,0,0,.5);pointer-events:auto}
+#toast button{color:var(--amber);font-size:11px;letter-spacing:1.2px;text-transform:uppercase}
+
 /* the logging ritual sheet */
 #scrim{position:fixed;inset:0;background:rgba(4,5,9,.6);z-index:8}
 #sheet{position:fixed;left:0;right:0;bottom:0;z-index:9;max-width:560px;margin:0 auto;
@@ -228,6 +245,7 @@ a.xsrc{text-decoration:none}
 <nav id="tabbar" aria-label="Views"><div class="trow"></div></nav>
 <div id="albumwrap"></div>
 <div id="sheetwrap"></div>
+<div id="toastwrap"></div>
 <script>
 /* ============================ state ============================ */
 const KEY = 'vgm-v1';
@@ -242,6 +260,10 @@ let LOADERR = '';
 let TRACKNO = {};                             // id -> position in the append-only history
 let Q = '';                                   // search text, deliberately not persisted
 let SHEET = null;                             // {id, draft} while the logging sheet is open
+let CPICK = null;                             // {rid, t, from?} save-to-playlist picker, or {create:true} from the library
+let TOAST = null;                             // {msg, song?} transient snackbar
+let TOAST_TIMER = 0;
+let CPLDEL = null;                            // playlist id armed for delete (two-tap, no native confirm)
 let IMPMSG = '';                              // one-shot import feedback line
 let EXPANDED = null;                          // id of the row opened into its detail panel
 let ALBUM = null;                             // id of the row opened into the full album page
@@ -263,7 +285,7 @@ function blank(){ return { status:'unsorted', rating:null, liked:false, note:'',
 function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn && !(e.likedTracks || []).length; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', libSort:'listenedOn', libLiked:false, libView:'albums', plYear:'all', plGenre:'all', showHidden:false }; }
+function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', libSort:'listenedOn', libLiked:false, libView:'albums', plYear:'all', plGenre:'all', showHidden:false, cpls:[], cplLast:null }; }
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -316,6 +338,28 @@ function validateState(d){
     }
     if(!isBlank(e)) s.entries[id] = e;
   }
+  if(Array.isArray(d.cpls)){
+    const ids = new Set();
+    for(const x of d.cpls){
+      if(!x || typeof x !== 'object' || typeof x.id !== 'string' || !x.id || ids.has(x.id)) continue;
+      const name = typeof x.name === 'string' ? x.name.trim().slice(0, 80) : '';
+      if(!name) continue;
+      ids.add(x.id);
+      const p = { id: x.id, name, at: typeof x.at === 'number' ? x.at : 0, tracks: [] };
+      const seen = new Set();
+      if(Array.isArray(x.tracks)) for(const t of x.tracks){
+        if(!t || typeof t.id !== 'string' || !t.id || typeof t.t !== 'string' || !t.t) continue;
+        const k = t.id + '\n' + fold(t.t);
+        if(seen.has(k)) continue;
+        seen.add(k);
+        p.tracks.push({ id: t.id, t: t.t.slice(0, 300) });
+      }
+      s.cpls.push(p);
+    }
+  }
+  if(d.cplLast && typeof d.cplLast === 'object' && typeof d.cplLast.id === 'string'
+     && typeof d.cplLast.at === 'number' && s.cpls.some(p => p.id === d.cplLast.id))
+    s.cplLast = { id: d.cplLast.id, at: d.cplLast.at };
   return s;
 }
 
@@ -531,6 +575,10 @@ function playlistDefs(){
   ];
 }
 function plExportObj(key){
+  if(key.slice(0, 2) === 'c:'){
+    const p = cplById(key.slice(2));
+    return p ? { app: 'vgm-finder-playlist', name: p.name, tracks: cplResolved(p) } : null;
+  }
   const p = playlistDefs().find(x => x.key === key);
   return p ? { app: 'vgm-finder-playlist', name: p.name, tracks: p.tracks } : null;
 }
@@ -546,6 +594,76 @@ function exportPlaylist(key){
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 5000);
   }catch(e){}
+}
+
+/* ======================= custom playlists ====================== */
+/* YT Music's grammar: first save opens the picker, then the chosen
+   playlist stays the target — "Saved to X · change" — for a while.
+   YTM scopes that to the app session; a phone PWA session is fuzzier,
+   so ten minutes from the last add stands in for it. */
+const CPL_STICKY_MS = 10 * 60000;
+function cplById(id){ return S.cpls.find(p => p.id === id) || null; }
+function cplNew(name){
+  const nm = String(name || '').trim().slice(0, 80);
+  if(!nm) return null;
+  const p = { id: 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), name: nm, at: Date.now(), tracks: [] };
+  S.cpls.push(p); save();
+  return p;
+}
+function stickyCpl(){
+  const l = S.cplLast;
+  if(!l || Date.now() - l.at > CPL_STICKY_MS) return null;
+  return cplById(l.id);
+}
+function cplAdd(plId, rid, title){
+  const p = cplById(plId); if(!p) return;
+  const f = fold(title);
+  const dupe = p.tracks.some(x => x.id === rid && fold(x.t) === f);
+  if(!dupe) p.tracks.push({ id: rid, t: title });
+  p.at = Date.now();
+  S.cplLast = { id: plId, at: Date.now() };
+  save();
+  CPICK = null;
+  toast((dupe ? 'already in ' : 'saved to ') + p.name, { rid, t: title, from: plId });
+  renderAll();
+}
+function cplPull(plId, rid, title){
+  const p = cplById(plId); if(!p) return;
+  const f = fold(title);
+  p.tracks = p.tracks.filter(x => !(x.id === rid && fold(x.t) === f));
+}
+function addFlow(rid, title){
+  const tgt = stickyCpl();
+  if(tgt){ cplAdd(tgt.id, rid, title); return; }
+  CPICK = { rid, t: title };
+  renderSheet();
+}
+function cplRemove(plId, i){ const p = cplById(plId); if(!p) return; p.tracks.splice(i, 1); save(); renderList(); }
+function cplDelete(plId){
+  S.cpls = S.cpls.filter(p => p.id !== plId);
+  if(S.cplLast && S.cplLast.id === plId) S.cplLast = null;
+  save(); renderList();
+}
+function cplResolved(p){
+  const out = [];
+  for(const x of p.tracks){
+    const r = byId(x.id); if(!r) continue;
+    // rematch by folded title so refetched tracklists keep their videoIds
+    const t = (r.tracks || []).find(k => fold(k.title) === fold(x.t)) || { title: x.t };
+    out.push(plTrack(r, t));
+  }
+  return out;
+}
+function toast(msg, song){
+  TOAST = { msg, song };
+  clearTimeout(TOAST_TIMER);
+  TOAST_TIMER = setTimeout(() => { TOAST = null; renderToast(); }, 4000);
+  renderToast();
+}
+function renderToast(){
+  const el = document.getElementById('toastwrap');
+  el.innerHTML = !TOAST ? '' : `<div id="toast">${esc(TOAST.msg)}` +
+    (TOAST.song ? `<button id="toast-change">change</button>` : '') + `</div>`;
 }
 
 /* ==================== one-tap phone publish ==================== */
@@ -706,26 +824,53 @@ function plYearSelectHtml(){
     `</select>`;
 }
 
+function pubBtnHtml(key, n, tok){
+  if(!tok) return '';
+  const st = PUBSTATE[key];
+  const busy = st === 'sending' || st === 'watching';
+  const plabel = st === 'sending' ? 'SENDING…' : st === 'watching' ? 'PUBLISHING…'
+    : st === 'ok' ? '✓ PUBLISHED' : st === 'sent' ? '✓ SENT' : st ? '✗ ' + st : '⇪ PUBLISH';
+  return `<button class="plx plp" data-plp="${key}"${n && !busy ? '' : ' disabled'}>${esc(plabel)}</button> `;
+}
 function playlistsHtml(){
   const tok = pubToken();
+  const custom = S.cpls.map(p => {
+    const key = 'c:' + p.id, open = PLOPEN === key;
+    const n = p.tracks.length;
+    const preview = !open ? '' : `<div class="pltracks">` + (n
+      ? p.tracks.map((x, i) => {
+          const r = byId(x.id);
+          return `<div class="pltrack"><span class="g">${esc(r ? (r.game || label(r)) : '?')}</span>` +
+            `<span class="t">${esc(x.t)}</span>` +
+            `<button class="cprm" data-cprm="${esc(p.id)}" data-i="${i}" aria-label="Remove ${esc(x.t)}">✕</button></div>`;
+        }).join('')
+      : `<div class="pltrack"><span class="t">nothing here yet — tap + on any track</span></div>`) + `</div>`;
+    return `<div class="plcard" data-plc="${key}" role="button" tabindex="0" aria-expanded="${open}">
+      <div class="plname">${esc(p.name)}</div>
+      <div class="plmeta">${n} track${n === 1 ? '' : 's'} · custom</div>
+      ${open ? pubBtnHtml(key, n, tok) : ''}
+      ${open ? `<button class="plx" data-plx="${key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button> ` : ''}
+      ${open ? `<button class="plx" data-cpldel="${esc(p.id)}">${CPLDEL === p.id ? 'SURE? TAP AGAIN' : '✕ DELETE'}</button>` : ''}
+      ${preview}
+    </div>`;
+  }).join('');
+  const newBtn = `<button id="cplnew" class="plx">+ NEW PLAYLIST</button>`;
   const cards = playlistDefs().map(p => {
     const open = PLOPEN === p.key;
     const n = p.tracks.length;
     const preview = !open ? '' : `<div class="pltracks">` + (n
       ? p.tracks.map(t => `<div class="pltrack"><span class="g">${esc(t.game)}</span><span class="t">${esc(t.title)}</span></div>`).join('')
       : `<div class="pltrack"><span class="t">nothing here yet</span></div>`) + `</div>`;
-    const st = PUBSTATE[p.key];
-    const busy = st === 'sending' || st === 'watching';
-    const plabel = st === 'sending' ? 'SENDING…' : st === 'watching' ? 'PUBLISHING…'
-      : st === 'ok' ? '✓ PUBLISHED' : st === 'sent' ? '✓ SENT' : st ? '✗ ' + st : '⇪ PUBLISH';
     return `<div class="plcard" data-plc="${p.key}" role="button" tabindex="0" aria-expanded="${open}">
       <div class="plname">${esc(p.name)}</div>
       <div class="plmeta">${n} track${n === 1 ? '' : 's'} · ${esc(p.blurb)}</div>
-      ${open && tok ? `<button class="plx plp" data-plp="${p.key}"${n && !busy ? '' : ' disabled'}>${esc(plabel)}</button> ` : ''}
+      ${open ? pubBtnHtml(p.key, n, tok) : ''}
       ${open ? `<button class="plx" data-plx="${p.key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button>` : ''}
       ${preview}
     </div>`;
   }).join('');
+  const yours = `<div id="cplhead">YOUR PLAYLISTS</div>` + custom + newBtn +
+    `<div id="cplhead2">RECIPES</div>`;
   const setup = tok
     ? `One-tap publish is on: ⇪ PUBLISH sends a playlist straight to your YT Music through the private
        publisher repo. <button id="pubclear">disconnect</button>`
@@ -734,7 +879,7 @@ function playlistsHtml(){
        (the README’s “phone publish” section has the 2-minute setup):
        <span class="pubrow"><input id="pubtok" type="password" placeholder="github_pat_…" autocomplete="off">
        <button id="pubsave">connect</button></span>`;
-  return cards + `<div class="plhint">${setup}
+  return yours + cards + `<div class="plhint">${setup}
     <br>PC fallback: ⇩ export the JSON, then <code>python companion/make_playlists.py playlist-*.json</code>.</div>`;
 }
 
@@ -790,9 +935,13 @@ function tlikeHtml(r, t){
   return `<button class="tlike${on ? ' on' : ''}" data-act="tlike" data-t="${esc(t.title)}"` +
     ` aria-pressed="${on}" aria-label="Like ${esc(t.title)}">${on ? '♥' : '♡'}</button>`;
 }
+function taddHtml(r, t){
+  return `<button class="tadd" data-act="tadd" data-t="${esc(t.title)}"` +
+    ` aria-label="Save ${esc(t.title)} to a playlist">+</button>`;
+}
 function xtrackHtml(r, t, i){
   return `<div class="xtrack"><span class="tno">${i + 1}</span><span>${esc(t.title)}</span>` +
-    `<span class="xend">${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}${tlikeHtml(r, t)}</span></div>`;
+    `<span class="xend">${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}${taddHtml(r, t)}${tlikeHtml(r, t)}</span></div>`;
 }
 
 function expandedHtml(r, e){
@@ -834,7 +983,7 @@ function songRowHtml(s){
       <div class="rtitle">${esc(t.title)}</div>
       <div class="rsub">${esc(r.game || label(r))}</div>
     </div>
-    <div class="racts">${tlikeHtml(r, t)}</div>
+    <div class="racts">${taddHtml(r, t)}${tlikeHtml(r, t)}</div>
   </div>`;
 }
 
@@ -855,6 +1004,7 @@ function renderAlbum(){
       <span class="ttl">${esc(t.title)}</span>
       ${t3.byPlays && medal[i] ? `<span class="medal">${medal[i]}</span>` : ''}
       ${t.plays ? `<span class="tplays">${esc(t.plays)}</span>` : ''}
+      ${taddHtml(r, t)}
       ${tlikeHtml(r, t)}
     </div>`).join('');
   wrap.innerHTML = `<div id="album">
@@ -940,8 +1090,22 @@ function renderColophon(){
     (IMPMSG ? ` · <span class="impmsg">${esc(IMPMSG)}</span>` : '');
 }
 
+function pickerHtml(){
+  // recently-used first, like YTM's Recent carousel
+  const ps = S.cpls.slice().sort((a, b) => (b.at || 0) - (a.at || 0));
+  const rows = ps.map(p => `<button class="cprow" data-cpick="${esc(p.id)}">
+    <span class="cpname">${esc(p.name)}</span><span class="cpn">${p.tracks.length}</span></button>`).join('');
+  return `<div id="scrim"></div>
+  <div id="sheet" role="dialog" aria-modal="true" aria-label="Save to playlist">
+    <div class="slab">${CPICK.rid ? `Save “${esc(CPICK.t)}” to` : 'New playlist'}</div>
+    ${CPICK.rid ? rows : ''}
+    <div class="pubrow"><input id="cp-name" placeholder="new playlist name" autocomplete="off">
+    <button id="cp-create">create</button></div>
+  </div>`;
+}
 function renderSheet(){
   const wrap = document.getElementById('sheetwrap');
+  if(CPICK){ wrap.innerHTML = pickerHtml(); return; }
   if(!SHEET){ wrap.innerHTML = ''; return; }
   const r = byId(SHEET.id) || { title: SHEET.id };
   const d = SHEET.draft;
@@ -1001,6 +1165,16 @@ document.getElementById('list').addEventListener('click', e => {
   }
   if(e.target.closest('#pubclear')){ setPubToken(''); renderList(); return; }
   if(e.target.closest('#pubtok')) return;  // typing the token must not toggle anything
+  const rm = e.target.closest('[data-cprm]');
+  if(rm){ cplRemove(rm.dataset.cprm, +rm.dataset.i); return; }
+  const del = e.target.closest('[data-cpldel]');
+  if(del){
+    const id = del.dataset.cpldel;
+    if(CPLDEL === id){ CPLDEL = null; cplDelete(id); }
+    else { CPLDEL = id; renderList(); }
+    return;
+  }
+  if(e.target.closest('#cplnew')){ CPICK = { create: true }; renderSheet(); return; }
   const pc = e.target.closest('[data-plc]');
   if(pc){ PLOPEN = PLOPEN === pc.dataset.plc ? null : pc.dataset.plc; renderList(); return; }
   const btn = e.target.closest('[data-act]');
@@ -1012,6 +1186,7 @@ document.getElementById('list').addEventListener('click', e => {
     else if(btn.dataset.act === 'log') openLog(id);
     else if(btn.dataset.act === 'like') toggleLiked(id);
     else if(btn.dataset.act === 'tlike') toggleTrackLike(id, btn.dataset.t);
+    else if(btn.dataset.act === 'tadd') addFlow(id, btn.dataset.t);
     else if(btn.dataset.act === 'hide') hideTrack(id);
     else if(btn.dataset.act === 'restore') unhideTrack(id);
     else if(btn.dataset.act === 'listen') openTrack(byId(id));
@@ -1086,6 +1261,33 @@ document.getElementById('qclear').addEventListener('click', () => {
 
 const sheetwrap = document.getElementById('sheetwrap');
 sheetwrap.addEventListener('click', e => {
+  if(CPICK){
+    if(e.target.id === 'scrim'){ CPICK = null; renderSheet(); return; }
+    const row = e.target.closest('[data-cpick]');
+    if(row){
+      const id = row.dataset.cpick;
+      if(CPICK.from && CPICK.from !== id) cplPull(CPICK.from, CPICK.rid, CPICK.t);  // "change" moves the save
+      cplAdd(id, CPICK.rid, CPICK.t);
+      return;
+    }
+    if(e.target.id === 'cp-create'){
+      const inp = document.getElementById('cp-name');
+      const p = cplNew(inp ? inp.value : '');
+      if(!p) return;
+      if(CPICK.rid){
+        if(CPICK.from) cplPull(CPICK.from, CPICK.rid, CPICK.t);
+        cplAdd(p.id, CPICK.rid, CPICK.t);  // the pending song lands in the new playlist
+      } else {
+        // born in the library: arm the sticky target and go pick songs
+        S.cplLast = { id: p.id, at: Date.now() };
+        S.view = 'feed'; save();
+        CPICK = null;
+        toast('adding to ' + p.name + ' — tap + on any track');
+        renderAll();
+      }
+    }
+    return;
+  }
   if(e.target.id === 'scrim'){ closeLog(); return; }
   if(e.target.id === 'sh-save'){ saveLog(); return; }
   if(e.target.id === 'sh-unlog'){ clearListen(); return; }
@@ -1104,13 +1306,22 @@ document.getElementById('albumwrap').addEventListener('click', e => {
   const r = ALBUM && byId(ALBUM);
   const lk = e.target.closest('[data-act="tlike"]');
   if(lk && r){ toggleTrackLike(r.id, lk.dataset.t); return; }  // heart, not play
+  const ad = e.target.closest('[data-act="tadd"]');
+  if(ad && r){ addFlow(r.id, ad.dataset.t); return; }          // plus, not play
   const t = e.target.closest('.atrack');
   if(t && r){ const tr = (r.tracks || [])[+t.dataset.i]; if(tr) openUrl(trackUrl(r, tr)); }
 });
 window.addEventListener('keydown', e => {
   if(e.key !== 'Escape') return;
-  if(SHEET) closeLog();
+  if(CPICK){ CPICK = null; renderSheet(); }
+  else if(SHEET) closeLog();
   else if(ALBUM) closeAlbum();
+});
+document.getElementById('toastwrap').addEventListener('click', e => {
+  if(e.target.id !== 'toast-change' || !TOAST || !TOAST.song) return;
+  CPICK = { rid: TOAST.song.rid, t: TOAST.song.t, from: TOAST.song.from };
+  TOAST = null; clearTimeout(TOAST_TIMER);
+  renderToast(); renderSheet();
 });
 
 /* ======================= backup lifeboat ======================= */

@@ -41,7 +41,12 @@ it logs "backfill complete".
 
 Track likes (the ♥ on any track row) and the Library's Playlists cards
 compose playlists from your own state — liked songs, queued albums'
-tracklists, a 4★ mix, each with year/genre variants. The app exports each
+tracklists, a 4★ mix, each with year/genre variants. Custom playlists sit
+above the recipes: **+ new playlist** names one and drops you on the feed,
+and the **+** on any track row saves to it YT Music-style — the first save
+opens a picker, then that playlist stays the target for ten minutes of
+adds ("saved to X · change" to override). Custom lists ride in backups and
+publish/export exactly like the recipes. The app exports each
 one as `playlist-<name>.json`; a local companion publishes it, because
 playlist creation needs an authenticated YTM session and credentials never
 belong in a static page:

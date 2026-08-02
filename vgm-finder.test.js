@@ -496,6 +496,68 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'disconnect wipes the token and the buttons');
   w.fetch = realFetch;
   assert(errors.length === 0, 'publish flows stay clean');
+
+  // ---------- custom playlists: create, sticky add, change, manage ----------
+  assert(d.querySelector('#cplhead') !== null && d.querySelector('#cplnew') !== null
+    && d.querySelectorAll('#list .plcard').length === 3, 'library shows the custom section, empty at first');
+  d.querySelector('#cplnew').click(); await sleep(20);
+  d.querySelector('#cp-name').value = 'Boss Rush';
+  d.querySelector('#cp-create').click(); await sleep(20);
+  assert(stored().view === 'feed' && stored().cpls.length === 1 && stored().cpls[0].name === 'Boss Rush',
+    'create from library: named playlist exists and the app moves to the feed');
+  assert(stored().cplLast && stored().cplLast.id === stored().cpls[0].id,
+    'the new playlist is armed as the sticky target');
+  assert(d.querySelector('#toast').textContent.includes('Boss Rush'), 'a toast points at the new playlist');
+  rowById('hades-ii').click(); await sleep(20);
+  const tadds = () => [...rowById('hades-ii').querySelectorAll('[data-act="tadd"]')];
+  assert(tadds().length === 3, 'expanded feed row offers + on its top tracks');
+  tadds()[0].click(); await sleep(20);
+  assert(d.querySelector('#sheet') === null && stored().cpls[0].tracks.length === 1,
+    'sticky target takes the first save with no picker');
+  assert(d.querySelector('#toast').textContent.includes('saved to Boss Rush'), 'snackbar names the playlist');
+  tadds()[1].click(); await sleep(20);
+  assert(stored().cpls[0].tracks.length === 2, 'the next save also skips the picker');
+  tadds()[0].click(); await sleep(20);
+  assert(stored().cpls[0].tracks.length === 2 && d.querySelector('#toast').textContent.includes('already in'),
+    'a duplicate save is skipped and says so');
+  S(`S.cplLast.at -= ${11 * 60000}; save()`);
+  tadds()[2].click(); await sleep(20);
+  assert(d.querySelector('#sheet [data-cpick]') !== null, 'an expired sticky window reopens the picker');
+  d.querySelector('#sheet [data-cpick]').click(); await sleep(20);
+  assert(d.querySelector('#sheet') === null && stored().cpls[0].tracks.length === 3,
+    'picking from the sheet adds and closes it');
+  d.querySelector('#toast-change').click(); await sleep(20);
+  assert(d.querySelector('#sheet') !== null, 'the snackbar CHANGE reopens the picker');
+  d.querySelector('#cp-name').value = 'Chill VGM';
+  d.querySelector('#cp-create').click(); await sleep(20);
+  assert(stored().cpls.length === 2 && stored().cpls[0].tracks.length === 2
+    && stored().cpls[1].tracks.length === 1, 'change + new playlist MOVES the save');
+  const bossId = stored().cpls[0].id, chillId = stored().cpls[1].id;
+  tab('library').click(); await sleep(20);
+  assert(d.querySelectorAll('#list .plcard').length === 5, 'custom cards join the recipe cards');
+  d.querySelector(`#list .plcard[data-plc="c:${chillId}"]`).click(); await sleep(20);
+  const chillCard = () => d.querySelector(`#list .plcard[data-plc="c:${chillId}"]`);
+  assert(chillCard().querySelector('.plmeta').textContent.startsWith('1 track ')
+    && chillCard().querySelector('[data-plx]').disabled === false, 'custom card previews and can export');
+  const cexp = JSON.parse(S(`JSON.stringify(plExportObj('c:${chillId}'))`));
+  assert(cexp.name === 'Chill VGM' && cexp.tracks.length === 1 && cexp.tracks[0].videoId === 'vidCC'
+    && cexp.tracks[0].game === 'Hades II', 'custom export resolves videoIds through the catalog');
+  d.querySelector(`#list .plcard[data-plc="c:${bossId}"]`).click(); await sleep(20);
+  d.querySelector(`#list .plcard[data-plc="c:${bossId}"] .cprm`).click(); await sleep(20);
+  assert(stored().cpls[0].tracks.length === 1, 'the ✕ removes one track');
+  d.querySelector(`[data-cpldel="${bossId}"]`).click(); await sleep(20);
+  assert(stored().cpls.length === 2 && d.querySelector(`[data-cpldel="${bossId}"]`).textContent.includes('SURE'),
+    'delete arms first instead of firing');
+  d.querySelector(`[data-cpldel="${bossId}"]`).click(); await sleep(20);
+  assert(stored().cpls.length === 1 && stored().cpls[0].id === chillId, 'the second tap deletes');
+  const vs = JSON.parse(S(`JSON.stringify(validateState({v:2, entries:{},
+    cpls:[{id:'a', name:'  X  ', at:'bad', tracks:[{id:'r', t:'T'}, {id:'r', t:'t'}, 'junk', {id:'', t:'y'}]},
+          {id:'a', name:'dupe'}, {name:'noid'}, null],
+    cplLast:{id:'a', at:5}}))`));
+  assert(vs.cpls.length === 1 && vs.cpls[0].name === 'X' && vs.cpls[0].at === 0
+    && vs.cpls[0].tracks.length === 1 && vs.cplLast && vs.cplLast.at === 5,
+    'import sanitizes custom playlists: folded dupes, junk, and orphan cplLast handled');
+  assert(errors.length === 0, 'custom playlist flows stay clean');
   S(`editEntry('hades-ii', e => { e.status = 'unsorted'; e.queuedOn = null; })`);
   S(`editEntry('ゼルダの伝説', e => { e.status = 'unsorted'; e.queuedOn = null; })`);
   d.querySelector('#libpl').click(); await sleep(20);
