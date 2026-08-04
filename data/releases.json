@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "updatedAt": "2026-08-03T12:53:38Z",
+=======
+  "updatedAt": "2026-08-04T05:02:30Z",
+>>>>>>> Stashed changes
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -109673,7 +109677,10 @@
       "id": "mafia-iii",
       "title": "Mafia III Soundtrack",
       "game": "Mafia III",
-      "composers": [],
+      "composers": [
+        "Jesper Kyd",
+        "Jim Bonney"
+      ],
       "date": "2016-10-07",
       "sources": [
         {
@@ -109684,8 +109691,8 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Mafia+III+Soundtrack",
-      "ytmAlbumUrl": null,
-      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mll.jpg",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_iP9nR6OiqOz",
+      "art": "https://yt3.googleusercontent.com/nwuN1qJfPOjEr_YuNiK7Luwz8tfC2kPEPEiy71DUJtZxFPGl0oUHUsw4ZK2iSA8X8erZ_nhTC-hQuXI=w544-h544-l90-rj",
       "notable": true,
       "company": "Hangar 13",
       "console": true,
@@ -109696,406 +109703,137 @@
       ],
       "tracks": [
         {
-          "title": "Ninety‐Six Tears",
-          "plays": null
+          "title": "New Bordeaux",
+          "plays": "362K plays",
+          "videoId": "8ZfivOWa3nc"
         },
         {
-          "title": "We Gotta Get Out of This Place",
-          "plays": null
+          "title": "11th Hour Blues",
+          "plays": "67K plays",
+          "videoId": "sq0zstfEpnc"
         },
         {
-          "title": "Chain of Fools",
-          "plays": null
+          "title": "From The Darkness, A Voice",
+          "plays": "61K plays",
+          "videoId": "illD0cAi3hk"
         },
         {
-          "title": "Respect",
-          "plays": null
+          "title": "Going Down Slow",
+          "plays": "70K plays",
+          "videoId": "y1aQhtDy7_g"
         },
         {
-          "title": "Eve of Destruction",
-          "plays": null
+          "title": "No One Is Untouchable",
+          "plays": "69K plays",
+          "videoId": "ADi2oK1OK_s"
         },
         {
-          "title": "Help Me, Rhonda",
-          "plays": null
+          "title": "Boy Becomes A Man",
+          "plays": "88K plays",
+          "videoId": "49q6Ccxi3ow"
         },
         {
-          "title": "Heroes and Villains",
-          "plays": null
+          "title": "That's The Plan, Padre",
+          "plays": "29K plays",
+          "videoId": "mk1mrseUP0c"
         },
         {
-          "title": "Wouldn’t It Be Nice",
-          "plays": null
+          "title": "Crush N Shuffle",
+          "plays": "92K plays",
+          "videoId": "0KBHkLEyq-8"
         },
         {
-          "title": "Dance of the Hours",
-          "plays": null
+          "title": "Splintered Past",
+          "plays": "46K plays",
+          "videoId": "fNgeWW3-CzQ"
         },
         {
-          "title": "Piece of My Heart",
-          "plays": null
+          "title": "The Paddle Grinds",
+          "plays": "37K plays",
+          "videoId": "nPfysglBOT0"
         },
         {
-          "title": "Good Times Are So Hard to Find",
-          "plays": null
+          "title": "I Got Numb",
+          "plays": "38K plays",
+          "videoId": "Rbv7C8TV_tY"
         },
         {
-          "title": "I Fought the Law",
-          "plays": null
+          "title": "For Old Times' Sake",
+          "plays": "43K plays",
+          "videoId": "_-zcmFs0a04"
         },
         {
-          "title": "The Letter",
-          "plays": null
+          "title": "Swamp War Stomp",
+          "plays": "67K plays",
+          "videoId": "1POU9IhsglI"
         },
         {
-          "title": "On the Road Again",
-          "plays": null
+          "title": "Howl",
+          "plays": "38K plays",
+          "videoId": "yK2mlWi0tjE"
         },
         {
-          "title": "I Can’t Turn You Loose",
-          "plays": null
+          "title": "Freezers And Paper Trails",
+          "plays": "104K plays",
+          "videoId": "2FyoM-3f_Ac"
         },
         {
-          "title": "Slip Away",
-          "plays": null
+          "title": "Shudder N Moan",
+          "plays": "34K plays",
+          "videoId": "v1RoGMlBWk8"
         },
         {
-          "title": "Ay‐Tete‐Fee",
-          "plays": null
+          "title": "Chance Of A Goddamn Lifetime",
+          "plays": "32K plays",
+          "videoId": "WWuRoSP6eyw"
         },
         {
-          "title": "Psychotic Reaction",
-          "plays": null
+          "title": "J Bar Blues",
+          "plays": "41K plays",
+          "videoId": "R4XNzGXvvXQ"
         },
         {
-          "title": "White Room",
-          "plays": null
+          "title": "Devil In The Woodpile",
+          "plays": "47K plays",
+          "videoId": "ZJmgYN0uyj4"
         },
         {
-          "title": "Proud Mary",
-          "plays": null
+          "title": "A Kind Of Peace",
+          "plays": "284K plays",
+          "videoId": "MpFAPIGQwlU"
         },
         {
-          "title": "Fortunate Son",
-          "plays": null
+          "title": "5 Years, 3 Months, 18 Days",
+          "plays": "87K plays",
+          "videoId": "AYCZmMkgo7M"
         },
         {
-          "title": "Bad Moon Rising",
-          "plays": null
+          "title": "Straight Razor Blues",
+          "plays": "45K plays",
+          "videoId": "2ScKImYt06o"
         },
         {
-          "title": "Born on the Bayou",
-          "plays": null
+          "title": "Shut Up And Climb",
+          "plays": "34K plays",
+          "videoId": "JMqb_n_y5g8"
         },
         {
-          "title": "Runaway",
-          "plays": null
+          "title": "First Man Down",
+          "plays": "41K plays",
+          "videoId": "aegLxzY7gkw"
         },
         {
-          "title": "Keep Searchin’ (We’ll Follow the Sun)",
-          "plays": null
+          "title": "Hard Fought, Hard Won",
+          "plays": "28K plays",
+          "videoId": "JBcE98m37UQ"
         },
         {
-          "title": "Bottom of the River",
-          "plays": null
-        },
-        {
-          "title": "I Let a Good Thing Go By",
-          "plays": null
-        },
-        {
-          "title": "Love Child",
-          "plays": null
-        },
-        {
-          "title": "Son of a Preacher Man",
-          "plays": null
-        },
-        {
-          "title": "Knock on Wood",
-          "plays": null
-        },
-        {
-          "title": "A Little Less Conversation",
-          "plays": null
-        },
-        {
-          "title": "Don’t Go to Strangers",
-          "plays": null
-        },
-        {
-          "title": "Reach Out, I’ll Be There",
-          "plays": null
-        },
-        {
-          "title": "Palisades Park",
-          "plays": null
-        },
-        {
-          "title": "In a Gadda da Vida",
-          "plays": null
-        },
-        {
-          "title": "I Got You (I Feel Good)",
-          "plays": null
-        },
-        {
-          "title": "Somebody to Love",
-          "plays": null
-        },
-        {
-          "title": "White Rabbit",
-          "plays": null
-        },
-        {
-          "title": "One Bourbon, One Scotch, One Beer",
-          "plays": null
-        },
-        {
-          "title": "Folsom Prison Blues (live)",
-          "plays": null
-        },
-        {
-          "title": "Ring of Fire",
-          "plays": null
-        },
-        {
-          "title": "Shotgun",
-          "plays": null
-        },
-        {
-          "title": "Take Me for What I Am",
-          "plays": null
-        },
-        {
-          "title": "Black Ghost Blues",
-          "plays": null
-        },
-        {
-          "title": "Sinner’s Prayer",
-          "plays": null
-        },
-        {
-          "title": "The Howling Wolf",
-          "plays": null
-        },
-        {
-          "title": "G.I. Blues",
-          "plays": null
-        },
-        {
-          "title": "Long Tall Sally",
-          "plays": null
-        },
-        {
-          "title": "Go Go Shoes",
-          "plays": null
-        },
-        {
-          "title": "Nowhere to Run",
-          "plays": null
-        },
-        {
-          "title": "You",
-          "plays": null
-        },
-        {
-          "title": "Five Card Hand",
-          "plays": null
-        },
-        {
-          "title": "You Belong to Me",
-          "plays": null
-        },
-        {
-          "title": "Bad Moon Rising",
-          "plays": null
-        },
-        {
-          "title": "Sitting on the Dock of the Bay",
-          "plays": null
-        },
-        {
-          "title": "Hard to Handle",
-          "plays": null
-        },
-        {
-          "title": "Tramp",
-          "plays": null
-        },
-        {
-          "title": "Must Have Been the Devil",
-          "plays": null
-        },
-        {
-          "title": "Crazy",
-          "plays": null
-        },
-        {
-          "title": "Kicks",
-          "plays": null
-        },
-        {
-          "title": "Palisades Park",
-          "plays": null
-        },
-        {
-          "title": "King of the Road",
-          "plays": null
-        },
-        {
-          "title": "Hey Big Momma",
-          "plays": null
-        },
-        {
-          "title": "Running Scared",
-          "plays": null
-        },
-        {
-          "title": "Walking the Dog",
-          "plays": null
-        },
-        {
-          "title": "Hold On, I’m Comin’",
-          "plays": null
-        },
-        {
-          "title": "Soul Man",
-          "plays": null
-        },
-        {
-          "title": "Chain Gang",
-          "plays": null
-        },
-        {
-          "title": "Wonderful World",
-          "plays": null
-        },
-        {
-          "title": "Bring It On Home to Me",
-          "plays": null
-        },
-        {
-          "title": "Another Saturday Night",
-          "plays": null
-        },
-        {
-          "title": "I’m Gonna Forget About You",
-          "plays": null
-        },
-        {
-          "title": "Lil’ Red Riding Hood",
-          "plays": null
-        },
-        {
-          "title": "You Better Stop",
-          "plays": null
-        },
-        {
-          "title": "Pictures of Matchstick Men",
-          "plays": null
-        },
-        {
-          "title": "Desperation",
-          "plays": null
-        },
-        {
-          "title": "Born to Be Wild",
-          "plays": null
-        },
-        {
-          "title": "You Keep Me Hangin’ On",
-          "plays": null
-        },
-        {
-          "title": "I Wish It Would Rain",
-          "plays": null
-        },
-        {
-          "title": "House of the Rising Sun",
-          "plays": null
-        },
-        {
-          "title": "Paint It Black",
-          "plays": null
-        },
-        {
-          "title": "The Weight",
-          "plays": null
-        },
-        {
-          "title": "Time Has Come Today",
-          "plays": null
-        },
-        {
-          "title": "Get Up and Get Down",
-          "plays": null
-        },
-        {
-          "title": "You Belong to Me",
-          "plays": null
-        },
-        {
-          "title": "Hang Ten",
-          "plays": null
-        },
-        {
-          "title": "You’ve Really Got a Hold on Me",
-          "plays": null
-        },
-        {
-          "title": "Mother’s Little Helper",
-          "plays": null
-        },
-        {
-          "title": "Paint It Black",
-          "plays": null
-        },
-        {
-          "title": "Sympathy for the Devil",
-          "plays": null
-        },
-        {
-          "title": "Street Fighting Man",
-          "plays": null
-        },
-        {
-          "title": "Take Me for What I’m Worth",
-          "plays": null
-        },
-        {
-          "title": "Needles & Pins",
-          "plays": null
-        },
-        {
-          "title": "I Got My Mojo Working",
-          "plays": null
-        },
-        {
-          "title": "Baby Love",
-          "plays": null
-        },
-        {
-          "title": "What Kind of Fool (Do You Think I Am)",
-          "plays": null
-        },
-        {
-          "title": "Ain’t Too Proud to Beg",
-          "plays": null
-        },
-        {
-          "title": "Wild Thing",
-          "plays": null
-        },
-        {
-          "title": "One",
-          "plays": null
-        },
-        {
-          "title": "You Keep Me Hangin’ On",
-          "plays": null
+          "title": "Only One Thing We're Good At",
+          "plays": "133K plays",
+          "videoId": "SgWlvSILO5I"
         }
-      ]
+      ],
+      "ytmPlaylistId": "OLAK5uy_k9aCeHH8PoXn5dKHaBXLkQ9hg0-1fXWkI"
     },
     {
       "id": "mortal-kombat-x",
