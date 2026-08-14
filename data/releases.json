@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T10:58:03Z",
+  "updatedAt": "2026-08-14T10:55:12Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -296065,6 +296065,479 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=MOLE+Soundtrack",
       "ytmAlbumUrl": null,
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4944170/9e6aa5482d1e2f0ece06b402d8a3d4f8e1c997e7/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "dream-about-you",
+      "title": "Dream about yoU Soundtrack",
+      "game": "Dream about yoU",
+      "composers": [],
+      "date": "2026-08-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4714120/Dream_about_yoU_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dream+about+yoU+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4714120/c5233caf72e9ac1b3264fa3b3768d21927c0cea9/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Dream About You (Maurice's Classic 7\" Mix)",
+          "plays": null
+        },
+        {
+          "title": "Dream About You (Hurley's Urban Mix)",
+          "plays": null
+        },
+        {
+          "title": "Dream About You (Hurley's Extended Mix)",
+          "plays": null
+        },
+        {
+          "title": "Dream About You (E-Smoove Dream Mix)",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "pain-pain-go-away",
+      "title": "Pain Pain Go Away! Soundtrack",
+      "game": "Pain Pain Go Away!",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4839510/Pain_Pain_Go_Away_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pain+Pain+Go+Away%21+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4839510/3609f1727f91b0681e3a02f30f65e34d8fb39521/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Pain Pain Go Away",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "phosphor",
+      "title": "Phosphor Soundtrack",
+      "game": "Phosphor",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4964180/Phosphor_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Phosphor+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4964180/b90e923d9ea3f2c789d21b40f23e5e3357ab0e6c/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "P1",
+          "plays": null
+        },
+        {
+          "title": "P2",
+          "plays": null
+        },
+        {
+          "title": "P3",
+          "plays": null
+        },
+        {
+          "title": "P4",
+          "plays": null
+        },
+        {
+          "title": "P5",
+          "plays": null
+        },
+        {
+          "title": "P6",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "everglen",
+      "title": "Everglen Soundtrack",
+      "game": "Everglen",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5038930/Everglen_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Everglen+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5038930/ebd0f8e6f9d66881cbcb65d44c49f6485f71e3ec/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "puzzles-cold-weapons",
+      "title": "Puzzles Cold Weapons Soundtrack",
+      "game": "Puzzles Cold Weapons",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5075040/Puzzles_Cold_Weapons_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Cold+Weapons+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5075040/de136cedd72dfafeece3fd17cab65f1f44163037/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "puzzles-ceramic",
+      "title": "Puzzles Ceramic Soundtrack",
+      "game": "Puzzles Ceramic",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5072850/Puzzles_Ceramic_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Ceramic+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5072850/823f98401b2e3b6feffc15c27662b232e131a790/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "puzzles-boars",
+      "title": "Puzzles Boars Soundtrack",
+      "game": "Puzzles Boars",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5073190/Puzzles_Boars_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Boars+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5073190/d4b15b110aaeea5f74e7f8af926ebff0f2583bf6/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "synergy-strike",
+      "title": "Synergy Strike Soundtrack",
+      "game": "Synergy Strike",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4983520/Synergy_Strike_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Synergy+Strike+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4983520/c0d8589cb5ed98742e3109782c3371fe4c913abc/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Title Theme Synergy Strike",
+          "plays": null
+        },
+        {
+          "title": "Chambers Of Chaos",
+          "plays": null
+        },
+        {
+          "title": "Classic Golden Ratio Glide",
+          "plays": null
+        },
+        {
+          "title": "Convergence Kindling",
+          "plays": null
+        },
+        {
+          "title": "Delta Surge Burnout",
+          "plays": null
+        },
+        {
+          "title": "Final Wave Frequencies",
+          "plays": null
+        },
+        {
+          "title": "Glitchwave Frenzy",
+          "plays": null
+        },
+        {
+          "title": "Grind For Glory",
+          "plays": null
+        },
+        {
+          "title": "High Score Meltdown",
+          "plays": null
+        },
+        {
+          "title": "Insert Coin To Shatter",
+          "plays": null
+        },
+        {
+          "title": "Intense Ivory Impact",
+          "plays": null
+        },
+        {
+          "title": "Joystick Venom",
+          "plays": null
+        },
+        {
+          "title": "Linked Lives Boosted Bonds",
+          "plays": null
+        },
+        {
+          "title": "Mindful Mojo Mastery",
+          "plays": null
+        },
+        {
+          "title": "Pixel Dust Overdrive",
+          "plays": null
+        },
+        {
+          "title": "Polygonal Apex",
+          "plays": null
+        },
+        {
+          "title": "Purple Primordial Prisms",
+          "plays": null
+        },
+        {
+          "title": "Quantum Freeplay",
+          "plays": null
+        },
+        {
+          "title": "Ripstop Jumptape",
+          "plays": null
+        },
+        {
+          "title": "Strands Of Time",
+          "plays": null
+        },
+        {
+          "title": "Supernova Swim",
+          "plays": null
+        },
+        {
+          "title": "Triangular Take Off",
+          "plays": null
+        },
+        {
+          "title": "Ultimate Umbra Universe",
+          "plays": null
+        },
+        {
+          "title": "Up Every Energy",
+          "plays": null
+        },
+        {
+          "title": "Voidwub Jabber",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "dewdrop-dynasty",
+      "title": "Dewdrop Dynasty - Soundtrack",
+      "game": "Dewdrop Dynasty",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5023280/Dewdrop_Dynasty__Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dewdrop+Dynasty+-+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5023280/ffdadd928657efd9d8682a90efc31dc038c68e59/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Dewdrop Dynasty",
+          "plays": null
+        },
+        {
+          "title": "And so It Begins",
+          "plays": null
+        },
+        {
+          "title": "Clash with a Minor Foe",
+          "plays": null
+        },
+        {
+          "title": "Tasty Ticket Company",
+          "plays": null
+        },
+        {
+          "title": "Home",
+          "plays": null
+        },
+        {
+          "title": "Country Living",
+          "plays": null
+        },
+        {
+          "title": "Reverie of Time's Gears",
+          "plays": null
+        },
+        {
+          "title": "Welcome to Pipeworld",
+          "plays": null
+        },
+        {
+          "title": "Where the Giants Sleep",
+          "plays": null
+        },
+        {
+          "title": "A Toad's Town",
+          "plays": null
+        },
+        {
+          "title": "In Time of Peace",
+          "plays": null
+        },
+        {
+          "title": "Blight",
+          "plays": null
+        },
+        {
+          "title": "Clash with a Mysterious Foe",
+          "plays": null
+        },
+        {
+          "title": "Lights in the Tundra",
+          "plays": null
+        },
+        {
+          "title": "The Taste of Fresh Snowfall",
+          "plays": null
+        },
+        {
+          "title": "Warm Is an Understatement",
+          "plays": null
+        },
+        {
+          "title": "Ye Olde Dough",
+          "plays": null
+        },
+        {
+          "title": "Clash with a Major Foe",
+          "plays": null
+        },
+        {
+          "title": "Final Boss ~ Poe's Un - Dewing",
+          "plays": null
+        },
+        {
+          "title": "That's a Rap (feat. XenoKeyz)",
+          "plays": null
+        },
+        {
+          "title": "Item Get!",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "low-budget-repairs",
+      "title": "Low-Budget Repairs Soundtrack",
+      "game": "Low-Budget Repairs",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5021470/LowBudget_Repairs_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Low-Budget+Repairs+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5021470/632c28014cbab3c865c7221fe7228d9de2b79700/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "choice-of-life-floors",
+      "title": "Choice of Life: Floors Soundtrack",
+      "game": "Choice of Life: Floors",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4688940/Choice_of_Life_Floors_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Choice+of+Life%3A+Floors+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4688940/9f366f5b845032ca29a03f2da2f019418f51f352/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "duskfade",
+      "title": "Duskfade Soundtrack",
+      "game": "Duskfade",
+      "composers": [],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4934950/Duskfade_Soundtrack/",
+          "seenAt": "2026-08-14T10:55:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Duskfade+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4934950/44a0b6e9f89e6ce7d60207a49222c24befa75357/header.jpg",
       "notable": true,
       "tracks": []
     }
