@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T10:55:12Z",
+  "updatedAt": "2026-08-15T10:18:35Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -296540,6 +296540,65 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4934950/44a0b6e9f89e6ce7d60207a49222c24befa75357/header.jpg",
       "notable": true,
       "tracks": []
+    },
+    {
+      "id": "cosmic-survivor",
+      "title": "Cosmic Survivor Soundtrack",
+      "game": "Cosmic Survivor",
+      "composers": [],
+      "date": "2026-08-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4875290/Cosmic_Survivor_Soundtrack/",
+          "seenAt": "2026-08-15T10:18:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cosmic+Survivor+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4875290/a911117c29db9a959dcb6be665bb0671d6c81468/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "static-dread-the-submarine",
+      "title": "Static Dread: The Submarine - Original Soundtrack",
+      "game": "Static Dread: The Submarine",
+      "composers": [],
+      "date": "2026-08-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4860810/Static_Dread_The_Submarine__Original_Soundtrack/",
+          "seenAt": "2026-08-15T10:18:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Static+Dread%3A+The+Submarine+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4860810/8eb14714e078aa0ee89026b4291781b74cff3e71/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "tcstrikers-early-works-collection",
+      "title": "TCSTRIKERS: Early Works Collection",
+      "game": null,
+      "composers": [],
+      "date": "2026-08-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4989830/TCSTRIKERS_Early_Works_Collection/",
+          "seenAt": "2026-08-15T10:18:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=TCSTRIKERS%3A+Early+Works+Collection+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4989830/4502c2fb09c4d95335f03752b726a64b4273c22a/header.jpg",
+      "notable": true
     }
   ]
 }
