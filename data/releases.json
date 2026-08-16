@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T10:18:35Z",
+  "updatedAt": "2026-08-16T10:19:08Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -296599,6 +296599,26 @@
       "ytmAlbumUrl": null,
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4989830/4502c2fb09c4d95335f03752b726a64b4273c22a/header.jpg",
       "notable": true
+    },
+    {
+      "id": "puzzles-frogs",
+      "title": "Puzzles Frogs Soundtrack",
+      "game": "Puzzles Frogs",
+      "composers": [],
+      "date": "2026-08-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5075820/Puzzles_Frogs_Soundtrack/",
+          "seenAt": "2026-08-16T10:19:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Frogs+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5075820/5c713a440735a34a14b64d5c0d0eb5e19de82aad/header.jpg",
+      "notable": true,
+      "tracks": []
     }
   ]
 }
