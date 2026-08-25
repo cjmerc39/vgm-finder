@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T10:33:50Z",
+  "updatedAt": "2026-08-25T10:27:51Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -299333,6 +299333,104 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=Tales+of%3A+Sena+%28Legacy%29+-+Original+Soundtrack",
       "ytmAlbumUrl": null,
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2403980/7a0e702c0531d0eaad80d9555560bfab5c961fee/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "vholume",
+      "title": "VHOLUME Soundtrack",
+      "game": "VHOLUME",
+      "composers": [],
+      "date": "2026-08-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5133400/VHOLUME_Soundtrack/",
+          "seenAt": "2026-08-25T10:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=VHOLUME+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5133400/239459ed72eb97b5e4f73000aba9c614bf4a4d67/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "crosstalk-the-fundamentals",
+      "title": "Crosstalk: The Fundamentals",
+      "game": null,
+      "composers": [],
+      "date": "2026-08-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4912620/Crosstalk_The_Fundamentals/",
+          "seenAt": "2026-08-25T10:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Crosstalk%3A+The+Fundamentals+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4912620/b9940f9a223a93696323e8280f68f0a42f73f594/header.jpg",
+      "notable": true
+    },
+    {
+      "id": "elementalist",
+      "title": "Elementalist Soundtrack",
+      "game": "Elementalist",
+      "composers": [],
+      "date": "2026-08-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4851750/Elementalist_Soundtrack/",
+          "seenAt": "2026-08-25T10:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Elementalist+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4851750/4dbe2a877346f9b5b91f2211d811dd4a2999cc63/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "microsoft-flight-simulator-suite-themes-reimagined",
+      "title": "Microsoft Flight Simulator Suite: Themes Reimagined",
+      "game": null,
+      "composers": [],
+      "date": "2026-08-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5004030/Microsoft_Flight_Simulator_Suite_Themes_Reimagined/",
+          "seenAt": "2026-08-25T10:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Microsoft+Flight+Simulator+Suite%3A+Themes+Reimagined+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5004030/457eed1260f340af16443c5df1bfb564881d539d/header.jpg",
+      "notable": true
+    },
+    {
+      "id": "smashing-bottles",
+      "title": "Smashing Bottles Soundtrack",
+      "game": "Smashing Bottles",
+      "composers": [],
+      "date": "2026-08-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4995180/Smashing_Bottles_Soundtrack/",
+          "seenAt": "2026-08-25T10:27:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Smashing+Bottles+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4995180/f7f7c2a17dc23797e7e14c837aba329bf3e9ede1/header.jpg",
       "notable": true,
       "tracks": []
     }
