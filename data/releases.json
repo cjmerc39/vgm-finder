@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T20:07:32Z",
+  "updatedAt": "2026-08-28T21:04:00Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -190570,6 +190570,24 @@
           "type": "catalog",
           "url": "https://music.youtube.com/browse/MPREb_3Sd4R3R6KVt",
           "seenAt": "2026-08-02T11:14:01Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_6fGqJAuFTJE",
+          "seenAt": "2026-08-28T21:04:00Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_HbuRNIuBGYT",
+          "seenAt": "2026-08-28T21:04:00Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_WInSC5lsq9m",
+          "seenAt": "2026-08-28T21:04:00Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Version+4.0+Soundtrack+%28From+Genshin+Impact%29",
@@ -297732,7 +297750,9 @@
       "id": "brigador-killers",
       "title": "Brigador Killers Soundtrack",
       "game": "Brigador Killers",
-      "composers": [],
+      "composers": [
+        "Makeup and Vanity Set"
+      ],
       "date": "2026-08-20",
       "sources": [
         {
@@ -297740,186 +297760,243 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/4997530/Brigador_Killers_Soundtrack/",
           "seenAt": "2026-08-21T10:25:54Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/brigador-killers",
+          "seenAt": "2026-08-28T21:04:00Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Brigador+Killers+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_z3K3tcPbSya",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4997530/86c215472f97f3b61cd215eafc77262f1d915c3e/header.jpg",
       "notable": true,
+      "albumTitle": "Brigador Killers (Original Game Soundtrack)",
+      "company": "Stellar Jockeys",
+      "console": false,
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
       "tracks": [
         {
           "title": "Approach",
-          "plays": null
+          "plays": "22 plays",
+          "videoId": "rHVqW3_9jXs"
         },
         {
           "title": "Annihilation",
-          "plays": null
+          "plays": "36 plays",
+          "videoId": "hMAI-skk2Vc"
         },
         {
           "title": "Cut, Print",
-          "plays": null
+          "plays": "22 plays",
+          "videoId": "i5zGcWafrwo"
         },
         {
           "title": "ACAB",
-          "plays": null
+          "plays": "76 plays",
+          "videoId": "DkJ00UtBQc8"
         },
         {
           "title": "The Narrows",
-          "plays": null
+          "plays": "20 plays",
+          "videoId": "DZblWc5I2P0"
         },
         {
           "title": "You're Coming With Me",
-          "plays": null
+          "plays": "41 plays",
+          "videoId": "QrjkEOTtB00"
         },
         {
           "title": "Posadochny",
-          "plays": null
+          "plays": "26 plays",
+          "videoId": "1yxtyepjx0o"
         },
         {
           "title": "The Bull",
-          "plays": null
+          "plays": "27 plays",
+          "videoId": "mnfThnlleYA"
         },
         {
           "title": "Strange Bedfellows",
-          "plays": null
+          "plays": "16 plays",
+          "videoId": "aOJ-qrxIfWw"
         },
         {
           "title": "Incite the Riot",
-          "plays": null
+          "plays": "20 plays",
+          "videoId": "ia3xTzwfk7Y"
         },
         {
           "title": "The Body",
-          "plays": null
+          "plays": "15 plays",
+          "videoId": "kRPF41ILJI8"
         },
         {
           "title": "Synchnet Intel",
-          "plays": null
+          "plays": "25 plays",
+          "videoId": "RJvtFk0Bqqw"
         },
         {
           "title": "Who Do We Kill?",
-          "plays": null
+          "plays": "16 plays",
+          "videoId": "ZiRGsQZOFqc"
         },
         {
           "title": "We're Hunting Jackals",
-          "plays": null
+          "plays": "12 plays",
+          "videoId": "xTw6hUfr3gg"
         },
         {
           "title": "Another Bad Dream",
-          "plays": null
+          "plays": "14 plays",
+          "videoId": "qwsThGFgW5Y"
         },
         {
           "title": "Never Trust a Death Cult",
-          "plays": null
+          "plays": "20 plays",
+          "videoId": "2xXiePN-lpA"
         },
         {
           "title": "Disconnect Me",
-          "plays": null
+          "plays": "13 plays",
+          "videoId": "ENyDxBJX5uE"
         },
         {
           "title": "To The Ground",
-          "plays": null
+          "plays": "11 plays",
+          "videoId": "iuw6h-e1xmw"
         },
         {
           "title": "The Mar Nosso Madam",
-          "plays": null
+          "plays": "16 plays",
+          "videoId": "2JDHbBMcsZ0"
         },
         {
           "title": "Chop Shop",
-          "plays": null
+          "plays": "27 plays",
+          "videoId": "hkhyaD4Um9c"
         },
         {
           "title": "Believe What You Want",
-          "plays": null
+          "plays": "16 plays",
+          "videoId": "rPtL3sfQloo"
         },
         {
           "title": "Betty Says",
-          "plays": null
+          "plays": "36 plays",
+          "videoId": "R5btjqutSq8"
         },
         {
           "title": "Slink",
-          "plays": null
+          "plays": "10 plays",
+          "videoId": "y_rJB07bdGA"
         },
         {
           "title": "Where's the Beef?",
-          "plays": null
+          "plays": "24 plays",
+          "videoId": "k31DWKlAydE"
         },
         {
           "title": "The Fog of War",
-          "plays": null
+          "plays": "17 plays",
+          "videoId": "azbYTcANzys"
         },
         {
           "title": "Forced Entry",
-          "plays": null
+          "plays": "17 plays",
+          "videoId": "J-0UC7C2juA"
         },
         {
           "title": "Terms of Endearment",
-          "plays": null
+          "plays": "17 plays",
+          "videoId": "8re4tLFmp1E"
         },
         {
           "title": "True Believer",
-          "plays": null
+          "plays": "88 plays",
+          "videoId": "6BS5_t_azbc"
         },
         {
           "title": "Too Far",
-          "plays": null
+          "plays": "14 plays",
+          "videoId": "KyB0gDxbBDQ"
         },
         {
           "title": "Brutalism",
-          "plays": null
+          "plays": "24 plays",
+          "videoId": "ub2YyNwOrlQ"
         },
         {
           "title": "Extreme Cost",
-          "plays": null
+          "plays": "10 plays",
+          "videoId": "rMr_9MsCtOs"
         },
         {
           "title": "Kill Norman Osberger",
-          "plays": null
+          "plays": "23 plays",
+          "videoId": "UAXxQLvJ0wA"
         },
         {
           "title": "Inside Source",
-          "plays": null
+          "plays": "8 plays",
+          "videoId": "0fJedfF2rhM"
         },
         {
           "title": "Authentication",
-          "plays": null
+          "plays": "11 plays",
+          "videoId": "6lCCKitaTbc"
         },
         {
           "title": "A Guarantee",
-          "plays": null
+          "plays": "9 plays",
+          "videoId": "4t6IZ8dRHak"
         },
         {
           "title": "Fluids",
-          "plays": null
+          "plays": "11 plays",
+          "videoId": "SxbAzJdLjFQ"
         },
         {
-          "title": "Storm the Gates",
-          "plays": null
+          "title": "Storm the Gate",
+          "plays": "11 plays",
+          "videoId": "XeI3LIGmpsI"
         },
         {
           "title": "Let's Mingle",
-          "plays": null
+          "plays": "11 plays",
+          "videoId": "dyvyrSqz9rQ"
         },
         {
           "title": "Great Leader Love Theme",
-          "plays": null
+          "plays": "16 plays",
+          "videoId": "XhXxwEO6Q9c"
         },
         {
           "title": "Burned",
-          "plays": null
+          "plays": "32 plays",
+          "videoId": "MXCVNNCq2TE"
         },
         {
           "title": "Intercept",
-          "plays": null
+          "plays": "17 plays",
+          "videoId": "18agqvoffM4"
         },
         {
           "title": "Smile for the Camera",
-          "plays": null
+          "plays": "24 plays",
+          "videoId": "oSso0flEBhs"
         },
         {
           "title": "Out to Sea",
-          "plays": null
+          "plays": "7 plays",
+          "videoId": "APAbVehJiJc"
         }
-      ]
+      ],
+      "ytmPlaylistId": "OLAK5uy_mC29MwKEatZsNEyHRHas5Lkhm3kkxlaOE"
     },
     {
       "id": "parallel-experiment",
@@ -300527,6 +300604,351 @@
         }
       ],
       "ytmPlaylistId": "OLAK5uy_nXaF7CdnKpCnBAiuAOb7Nc0IC_0LPz9AY"
+    },
+    {
+      "id": "puzzles-snow",
+      "title": "Puzzles Snow Soundtrack",
+      "game": "Puzzles Snow",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5158020/Puzzles_Snow_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Snow+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5158020/b239ce0f839c1fa696031d7ef6acb5c0182bf90c/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "puzzles-magic",
+      "title": "Puzzles Magic Soundtrack",
+      "game": "Puzzles Magic",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5132140/Puzzles_Magic_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Magic+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5132140/cecc1b5d004c23e77db7a62db8b961d97a1bc2f9/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "puzzles-fruit",
+      "title": "Puzzles Fruit Soundtrack",
+      "game": "Puzzles Fruit",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5121570/Puzzles_Fruit_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Fruit+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5121570/636817d74895b84bc210b74850ef8c2b19cdd08b/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "questing-a-tick-s-tale",
+      "title": "Questing: A Tick's Tale Soundtrack",
+      "game": "Questing: A Tick's Tale",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5050160/Questing_A_Ticks_Tale_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Questing%3A+A+Tick%27s+Tale+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5050160/5ad4869337bf2ece316abe95096942e89be54fb5/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "hasbro-s-battleship",
+      "title": "Hasbro's BATTLESHIP Soundtrack",
+      "game": "Hasbro's BATTLESHIP",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4913060/Hasbros_BATTLESHIP_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hasbro%27s+BATTLESHIP+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4913060/f941738c5035ea200e8128c26ab320f84215f660/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "the-game-of-life",
+      "title": "THE GAME OF LIFE Soundtrack",
+      "game": "THE GAME OF LIFE",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4913050/THE_GAME_OF_LIFE__Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=THE+GAME+OF+LIFE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4913050/4404e8b6f1562ebe8c7ce42ef9b3fbdfe5d09fc5/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Infected",
+          "plays": null
+        },
+        {
+          "title": "Life",
+          "plays": null
+        },
+        {
+          "title": "Moonlight",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "the-game-of-life-2",
+      "title": "THE GAME OF LIFE 2 Soundtrack",
+      "game": "THE GAME OF LIFE 2",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4911750/THE_GAME_OF_LIFE_2_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=THE+GAME+OF+LIFE+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4911750/f4898c49a0938cfb4413d17e6ff7c4ea072c8a53/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "clue-cluedo-classic-edition",
+      "title": "Clue/Cluedo: Classic Edition Soundtrack",
+      "game": "Clue/Cluedo: Classic Edition",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4911760/ClueCluedo_Classic_Edition_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Clue%2FCluedo%3A+Classic+Edition+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4911760/835f69a9cb2aa501ed3d5828179a6d71d0a195ef/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "clue-cluedo",
+      "title": "Clue/Cluedo Soundtrack",
+      "game": "Clue/Cluedo",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4913040/ClueCluedo_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Clue%2FCluedo+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4913040/ce71c51260c10e7189376d4ea979b0fe2cde8bdc/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "ticket-to-ride",
+      "title": "Ticket to Ride® Soundtrack",
+      "game": "Ticket to Ride®",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4907640/Ticket_to_Ride_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ticket+to+Ride%C2%AE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4907640/e65821e0203f3f4b5addcf7b1b9f2c19fb18330a/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Invocation",
+          "plays": null
+        },
+        {
+          "title": "Your Wonderful Parade",
+          "plays": null
+        },
+        {
+          "title": "Someday",
+          "plays": null
+        },
+        {
+          "title": "Get Together",
+          "plays": null
+        },
+        {
+          "title": "All Of My Life",
+          "plays": null
+        },
+        {
+          "title": "Turn Away",
+          "plays": null
+        },
+        {
+          "title": "Ticket To Ride",
+          "plays": null
+        },
+        {
+          "title": "Don't Be Afraid",
+          "plays": null
+        },
+        {
+          "title": "What's The Use",
+          "plays": null
+        },
+        {
+          "title": "All I Can Do",
+          "plays": null
+        },
+        {
+          "title": "Eve",
+          "plays": null
+        },
+        {
+          "title": "Nowadays Clancy Can't Even Sing",
+          "plays": null
+        },
+        {
+          "title": "Benediction",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "music-from-reality-break",
+      "title": "Music from Reality Break",
+      "game": null,
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4896060/Music_from_Reality_Break/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Music+from+Reality+Break",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4896060/7aef595f31e8541c8419fce13ba878a21e0855b0/header.jpg",
+      "notable": true
+    },
+    {
+      "id": "exploding-kittens-2",
+      "title": "Exploding Kittens® 2 Soundtrack",
+      "game": "Exploding Kittens® 2",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4911740/Exploding_Kittens_2_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Exploding+Kittens%C2%AE+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4911740/398d3273afbd151ee10a5b84e5cd5c3f44806cae/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "100-mushroom-cats",
+      "title": "100 Mushroom Cats Soundtrack",
+      "game": "100 Mushroom Cats",
+      "composers": [],
+      "date": "2026-08-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4543120/100_Mushroom_Cats_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=100+Mushroom+Cats+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4543120/72255cc100ef30c9c8ffa113f133c1cd36eface4/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "palianytsia",
+      "title": "Palianytsia Soundtrack",
+      "game": "Palianytsia",
+      "composers": [],
+      "date": "2026-08-27",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5124710/Palianytsia_Soundtrack/",
+          "seenAt": "2026-08-28T21:04:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Palianytsia+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5124710/31f3cbbd66add0fafff76da396a4c512a051dde2/header.jpg",
+      "notable": true,
+      "tracks": []
     }
   ]
 }
