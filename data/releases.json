@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T15:28:47Z",
+  "updatedAt": "2026-09-08T14:05:43Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -303916,6 +303916,46 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=Nexus+Wars+Soundtrack",
       "ytmAlbumUrl": null,
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3569090/de183d1608c5064f17f7d184e80dc1c5aaf11099/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "holy-warriors-the-rift",
+      "title": "Holy Warriors : The Rift Soundtrack",
+      "game": "Holy Warriors : The Rift",
+      "composers": [],
+      "date": "2026-09-08",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5116520/Holy_Warriors__The_Rift_Soundtrack/",
+          "seenAt": "2026-09-08T14:05:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Holy+Warriors+%3A+The+Rift+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5116520/1b573ad556b0e0fdfcc05e11c9515ec538587a8e/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "commander-clash",
+      "title": "Commander Clash Soundtrack",
+      "game": "Commander Clash",
+      "composers": [],
+      "date": "2026-09-07",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5114400/Commander_Clash_Soundtrack/",
+          "seenAt": "2026-09-08T14:05:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Commander+Clash+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5114400/ca90b47fad1b0f12532626887e35d6dd1a4240af/header.jpg",
       "notable": true,
       "tracks": []
     }
