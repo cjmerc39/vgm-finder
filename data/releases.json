@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T14:07:59Z",
+  "updatedAt": "2026-09-10T14:02:05Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -304122,7 +304122,10 @@
       "id": "sprawl-zero",
       "title": "SPRAWL zero Soundtrack",
       "game": "SPRAWL zero",
-      "composers": [],
+      "composers": [
+        "REVEL",
+        "SPRAWL"
+      ],
       "date": "2026-09-08",
       "sources": [
         {
@@ -304130,82 +304133,580 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/4993840/SPRAWL_zero_Soundtrack/",
           "seenAt": "2026-09-09T14:07:59Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sprawl-zero",
+          "seenAt": "2026-09-10T14:02:05Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=SPRAWL+zero+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9LVTb5hTst2",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4993840/a842cd97cec4357fafc52e5fb64009b3f25f2bcf/header.jpg",
       "notable": true,
+      "albumTitle": "SPRAWL zero (Original Game Soundtrack)",
+      "company": "Maeth",
+      "console": true,
+      "genres": [
+        "Shooter"
+      ],
       "tracks": [
         {
           "title": "ANTITHESIS",
-          "plays": null
+          "plays": "28 plays",
+          "videoId": "8Bf3m0IBKYE"
         },
         {
           "title": "THE GRAVEYARD",
-          "plays": null
+          "plays": "53 plays",
+          "videoId": "m7tBVcqxac8"
         },
         {
           "title": "BURIED",
-          "plays": null
+          "plays": "27 plays",
+          "videoId": "CENdvaHKw2o"
         },
         {
           "title": "DOMINATION",
-          "plays": null
+          "plays": "26 plays",
+          "videoId": "FOeD5j_yd5g"
         },
         {
           "title": "ADUSTA TERRA",
-          "plays": null
+          "plays": "9 plays",
+          "videoId": "CgLCvSPdDh0"
         },
         {
           "title": "GOD'S LIGHT",
-          "plays": null
+          "plays": "17 plays",
+          "videoId": "NFjWoX8I1X0"
         },
         {
           "title": "SILAS",
-          "plays": null
+          "plays": "9 plays",
+          "videoId": "PWUjCq9myyI"
         },
         {
           "title": "MAETH",
-          "plays": null
+          "plays": "8 plays",
+          "videoId": "6TWLoSDt3Do"
         },
         {
           "title": "EDEN",
-          "plays": null
+          "plays": "21 plays",
+          "videoId": "AlYshpMGEac"
         },
         {
           "title": "ACROPHOBIA",
-          "plays": null
+          "plays": "8 plays",
+          "videoId": "N2eVRcvS2BQ"
         },
         {
           "title": "THE SPIRE (ZERO VERSION)",
-          "plays": null
+          "plays": "7 plays",
+          "videoId": "rGgpITI1e-o"
         },
         {
           "title": "KATABASIS",
-          "plays": null
+          "plays": "4 plays",
+          "videoId": "w91YXGxmrhw"
         },
         {
           "title": "FROM KINGDOM TO CROWN",
-          "plays": null
+          "plays": "5 plays",
+          "videoId": "HK5M2laq4oo"
         },
         {
           "title": "AMET",
-          "plays": null
+          "plays": "5 plays",
+          "videoId": "z60aD4jQwnM"
         },
         {
           "title": "CHIAROSCURO",
-          "plays": null
+          "plays": "32 plays",
+          "videoId": "EwVumoOpMSg"
         },
         {
           "title": "COLLAPSE (BONUS)",
-          "plays": null
+          "plays": "14 plays",
+          "videoId": "JbfRC9QCr1U"
         },
         {
           "title": "CLUB EDEN (BONUS)",
+          "plays": "14 plays",
+          "videoId": "6MgVJVNyQDQ"
+        }
+      ],
+      "ytmPlaylistId": "OLAK5uy_mbdRhu7R3XF-tF_S1oI7LqLRs9hcJWKyA"
+    },
+    {
+      "id": "the-7th-guest-vinyl-soundtrack-up-for-preorder-from-back-on-wax-records",
+      "title": "The 7th Guest vinyl soundtrack up for preorder from Back On Wax Records",
+      "game": null,
+      "composers": [],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "blipblop",
+          "type": "editorial",
+          "url": "https://blipblop.net/the-7th-guest-vinyl-soundtrack-up-for-preorder-from-back-on-wax-records/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+7th+Guest+vinyl+soundtrack+up+for+preorder+from+Back+On+Wax+Records",
+      "ytmAlbumUrl": null,
+      "art": null,
+      "notable": true,
+      "albumTitle": "7th Guest vinyl soundtrack"
+    },
+    {
+      "id": "astralis-dawnblades",
+      "title": "Astralis: Dawnblades Soundtrack",
+      "game": "Astralis: Dawnblades",
+      "composers": [],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5185110/Astralis_Dawnblades_Soundtrack/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Astralis%3A+Dawnblades+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5185110/6de3b4e4976b7d9dfd0aacc690ebaea3c8ba3ee1/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "slots-daggers",
+      "title": "Slots & Daggers Soundtrack",
+      "game": "Slots & Daggers",
+      "composers": [],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4128100/Slots__Daggers_Soundtrack/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Slots+%26+Daggers+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4128100/1e2492e46d4cd4161fcd2be89ceda7ba46c39b24/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "orebits-original-soundtrack-story",
+      "title": "Orebits Original Soundtrack & Story",
+      "game": null,
+      "composers": [],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5107880/Orebits_Original_Soundtrack__Story/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Orebits+Original+Soundtrack+%26+Story",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5107880/f9adcc404045fc6a2767d95c660711f42e8b2044/header.jpg",
+      "notable": true
+    },
+    {
+      "id": "platina-lab-additional",
+      "title": "PLATiNA :: LAB - ADDITIONAL OST",
+      "game": "PLATiNA :: LAB",
+      "composers": [],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5132280/PLATiNA__LAB__ADDITIONAL_OST/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=PLATiNA+%3A%3A+LAB+-+ADDITIONAL+OST",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5132280/78776cec642405f9e65c5a1eaa166b9cd5ce4ebe/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Strawberry Cake",
+          "plays": null
+        },
+        {
+          "title": "Firework (feat. 앤씨아)",
+          "plays": null
+        },
+        {
+          "title": "일상탈출 (feat. Mayo)",
+          "plays": null
+        },
+        {
+          "title": "2 Pianollas",
+          "plays": null
+        },
+        {
+          "title": "Koi Allergy",
+          "plays": null
+        },
+        {
+          "title": "自分探し",
+          "plays": null
+        },
+        {
+          "title": "Euro25!",
+          "plays": null
+        },
+        {
+          "title": "Frost Shadow",
+          "plays": null
+        },
+        {
+          "title": "Prayer -片割星- (feat. Isla・la)",
+          "plays": null
+        },
+        {
+          "title": "Stellar Hitchhiker",
+          "plays": null
+        },
+        {
+          "title": "Cat Likes MilkLatte",
+          "plays": null
+        },
+        {
+          "title": "PLATiNUM Drive",
+          "plays": null
+        },
+        {
+          "title": "Wolfsbane",
+          "plays": null
+        },
+        {
+          "title": "Koi Allergy (Full Size)",
+          "plays": null
+        },
+        {
+          "title": "Frost Shadow (Full Size)",
+          "plays": null
+        },
+        {
+          "title": "Strawberry Cake (Instrumental)",
+          "plays": null
+        },
+        {
+          "title": "Firework (Instrumental)",
+          "plays": null
+        },
+        {
+          "title": "일상탈출 (Instrumental)",
+          "plays": null
+        },
+        {
+          "title": "Koi Allergy (Instrumental)",
+          "plays": null
+        },
+        {
+          "title": "Koi Allergy (Full Size) [Instrumental]",
+          "plays": null
+        },
+        {
+          "title": "自分探し (Instrumental)",
+          "plays": null
+        },
+        {
+          "title": "Euro25! (Instrumental)",
+          "plays": null
+        },
+        {
+          "title": "Prayer -片割星- (Instrumental)",
+          "plays": null
+        },
+        {
+          "title": "Low Moon (Title Bgm)",
+          "plays": null
+        },
+        {
+          "title": "Ice Breaking (Mode Select Bgm)",
+          "plays": null
+        },
+        {
+          "title": "My Jewel Box (Character Select Bgm)",
+          "plays": null
+        },
+        {
+          "title": "New New World (Research Bgm)",
+          "plays": null
+        },
+        {
+          "title": "Cheering Cheering (Result Bgm)",
           "plays": null
         }
       ]
+    },
+    {
+      "id": "platina-lab-sweetie-s",
+      "title": "PLATiNA :: LAB - SWEETIE;S OST",
+      "game": "PLATiNA :: LAB - SWEETIE;S",
+      "composers": [],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5130210/PLATiNA__LAB__SWEETIES_OST/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=PLATiNA+%3A%3A+LAB+-+SWEETIE%3BS+OST",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5130210/376f9ac7290a9b495486955193425eb4094558f9/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "嘉豪-原声集",
+      "title": "嘉豪 原声集",
+      "game": null,
+      "composers": [],
+      "date": "2026-09-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5072280/_/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E5%98%89%E8%B1%AA+%E5%8E%9F%E5%A3%B0%E9%9B%86+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5072280/f3fb9bbd99fc724ba05a14520f06063ba9574897/header.jpg",
+      "notable": true
+    },
+    {
+      "id": "warlord-awaji",
+      "title": "Warlord: Awaji Soundtrack",
+      "game": "Warlord: Awaji",
+      "composers": [],
+      "date": "2026-09-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5195240/Warlord_Awaji_Soundtrack/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Warlord%3A+Awaji+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5195240/d0e0453df1349a6ae54b0c26ed5c26fe98d2cbbd/header.jpg",
+      "notable": true,
+      "tracks": [
+        {
+          "title": "Welcome to Awaji (Main Menu)",
+          "plays": null
+        },
+        {
+          "title": "My City",
+          "plays": null
+        },
+        {
+          "title": "The Veil Opens",
+          "plays": null
+        },
+        {
+          "title": "Victory Or Seppuku",
+          "plays": null
+        },
+        {
+          "title": "Ma",
+          "plays": null
+        },
+        {
+          "title": "A Glorious Victory",
+          "plays": null
+        },
+        {
+          "title": "Shinobi-No-Mono",
+          "plays": null
+        },
+        {
+          "title": "A Tale of Mountains and Valleys",
+          "plays": null
+        },
+        {
+          "title": "Folding Steel",
+          "plays": null
+        },
+        {
+          "title": "Nukekubi’s Hunt",
+          "plays": null
+        },
+        {
+          "title": "Kōhai",
+          "plays": null
+        },
+        {
+          "title": "Senpai",
+          "plays": null
+        },
+        {
+          "title": "Sealed Fate",
+          "plays": null
+        },
+        {
+          "title": "Ikkō-shū",
+          "plays": null
+        },
+        {
+          "title": "Stars Like Fish Scales",
+          "plays": null
+        },
+        {
+          "title": "Kyomu yo (feat. Yuka)",
+          "plays": null
+        },
+        {
+          "title": "Sumoto Flows",
+          "plays": null
+        },
+        {
+          "title": "Make Camp Here",
+          "plays": null
+        },
+        {
+          "title": "A New Warlord",
+          "plays": null
+        },
+        {
+          "title": "Finding Joryu-ji",
+          "plays": null
+        },
+        {
+          "title": "Breathing Village",
+          "plays": null
+        },
+        {
+          "title": "Gagaku at Court",
+          "plays": null
+        },
+        {
+          "title": "Spring Beneath the Pines",
+          "plays": null
+        },
+        {
+          "title": "The Rivers Awaken",
+          "plays": null
+        },
+        {
+          "title": "Tatarigami",
+          "plays": null
+        },
+        {
+          "title": "Yamauba Doesn’t Exist…",
+          "plays": null
+        },
+        {
+          "title": "Bujutsu",
+          "plays": null
+        },
+        {
+          "title": "Imperfect Blossom",
+          "plays": null
+        },
+        {
+          "title": "Shinbutsu-shūgō",
+          "plays": null
+        },
+        {
+          "title": "Break Our Chains",
+          "plays": null
+        },
+        {
+          "title": "Bring Them Fire",
+          "plays": null
+        },
+        {
+          "title": "Katana or Yari",
+          "plays": null
+        },
+        {
+          "title": "Trail of Misdeeds",
+          "plays": null
+        },
+        {
+          "title": "An Island to Remember",
+          "plays": null
+        },
+        {
+          "title": "South",
+          "plays": null
+        },
+        {
+          "title": "Shamisen and Taiko",
+          "plays": null
+        },
+        {
+          "title": "Setting Sail",
+          "plays": null
+        },
+        {
+          "title": "The Sun Will Rise in the East",
+          "plays": null
+        },
+        {
+          "title": "Awaji Suite (feat. Miwele)",
+          "plays": null
+        }
+      ]
+    },
+    {
+      "id": "touhou-koumakyou-new-classic",
+      "title": "Touhou Koumakyou: New Classic Soundtrack",
+      "game": "Touhou Koumakyou: New Classic",
+      "composers": [],
+      "date": "2026-09-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4924910/Touhou_Koumakyou_New_Classic_Soundtrack/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Touhou+Koumakyou%3A+New+Classic+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4924910/c81ce75aed3cf30bd08dfea2e120d0fe4567dd6a/header.jpg",
+      "notable": true,
+      "tracks": []
+    },
+    {
+      "id": "star-vortex",
+      "title": "Star Vortex Soundtrack",
+      "game": "Star Vortex",
+      "composers": [],
+      "date": "2026-09-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5196380/Star_Vortex_Soundtrack/",
+          "seenAt": "2026-09-10T14:02:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Vortex+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5196380/d615c9a0215f4022dff1f21d67d9447c1051f2c7/header.jpg",
+      "notable": true,
+      "tracks": []
     }
   ]
 }
