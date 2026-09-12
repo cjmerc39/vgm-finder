@@ -40,11 +40,13 @@ input{font:inherit;font-size:16px;color:var(--ink);background:var(--bg3);border:
 input:focus{outline:1px solid var(--amberdim)}
 ::placeholder{color:var(--dim)}
 
-#topbar{flex:none;width:100%;max-width:560px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 16px 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+#topbar{flex:none;width:100%;max-width:560px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 16px 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:nowrap}
 #topbar h1{font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:1px;color:var(--amber2);
   text-shadow:0 0 14px rgba(245,168,60,.35)}
 #topbar .sub{color:var(--dim);font-size:10.5px;letter-spacing:3px;text-transform:uppercase}
-#sync{margin-left:auto;color:var(--dim);font-size:11px;white-space:nowrap}
+#hrandom{margin-left:auto;flex:none;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
+  color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:6px 13px;white-space:nowrap}
+#hrandom:active{color:var(--amber2);border-color:var(--amberdim)}
 
 #controls{flex:none;width:100%;max-width:560px;margin:0 auto;padding:8px 16px 10px;border-bottom:1px solid var(--line)}
 #qwrap{position:relative}
@@ -251,16 +253,13 @@ a.xsrc{text-decoration:none}
 .shfoot button{color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
   border:1px solid var(--amberdim);border-radius:9px;padding:9px 15px}
 #subctl .fchip{flex-shrink:1000}  /* the label chip gives way first; sort and year stay whole */
-#hrandom{margin:-12px 0 -12px 2px;padding:12px 14px;color:var(--dim);font-size:11px;white-space:nowrap}
-#hrandom:active{color:var(--amber)}
 </style>
 </head>
 <body>
 <header id="topbar">
   <h1>VGM FINDER</h1>
   <span class="sub">Sound Test</span>
-  <span id="sync"></span>
-  <button id="hrandom" aria-label="Random soundtrack">▸</button>
+  <button id="hrandom" aria-label="Random soundtrack">random ▸</button>
 </header>
 <div id="controls">
   <div id="qwrap">
@@ -874,12 +873,7 @@ function trackUrl(r, t){
 }
 
 /* =========================== render ============================ */
-function renderAll(){ renderSync(); renderTabs(); renderControls(); renderList(); renderColophon(); renderAlbum(); renderSheet(); }
-
-function renderSync(){
-  const el = document.getElementById('sync');
-  el.textContent = R.updatedAt ? 'synced ' + fmtDate(R.updatedAt).toLowerCase() : '';
-}
+function renderAll(){ renderTabs(); renderControls(); renderList(); renderColophon(); renderAlbum(); renderSheet(); }
 
 function renderTabs(){
   const nb = newCount();
@@ -1306,7 +1300,8 @@ function renderColophon(){
   if(LOADSTATE !== 'ok'){ el.innerHTML = ''; return; }
   const h = hiddenRows().length;
   el.innerHTML =
-    `<span>${R.releases.length} tracks · collected daily 6am ET</span> · ` +
+    `<span>${R.releases.length} tracks · collected daily 6am ET` +
+    (R.updatedAt ? ' · synced ' + fmtDate(R.updatedAt).toLowerCase() : '') + `</span> · ` +
     (h ? `<button id="hidtoggle">${h} hidden · ${S.showHidden ? 'tuck away' : 'show'}</button> · ` : '') +
     `<button id="exp">export backup</button> · ` +
     `<label for="impfile">import backup</label><input type="file" id="impfile" accept=".json,application/json" hidden>` +

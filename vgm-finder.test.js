@@ -125,6 +125,15 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(tab('queue').textContent.includes('0'), 'queue count starts 0');
   assert(tab('library').textContent.includes('1'), 'library counts the migrated listen');
 
+  // ---------- header: random chip in the right slot, one line ----------
+  assert(d.querySelector('#topbar #hrandom') !== null && d.querySelector('#sync') === null,
+    'the random chip owns the header right slot and synced moved out');
+  assert(d.querySelector('#hrandom').textContent === 'random ▸', 'the chip keeps its original label');
+  assert(/#topbar\{[^}]*flex-wrap:nowrap/.test(d.querySelector('style').textContent),
+    'the header row cannot wrap with the chip present');
+  assert(d.querySelector('#colophon').textContent.includes('synced jul 28'),
+    'the synced date lives in the colophon next to collected daily');
+
   // ---------- album-name labels ----------
   assert(rowById('chrono-cross-the-radical-dreamers-edition').querySelector('.rtitle').textContent
     === 'Chrono Cross: The Radical Dreamers Edition (Original Soundtrack)',
