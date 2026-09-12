@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T22:04:49Z",
+  "updatedAt": "2026-09-12T22:11:27Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -39884,7 +39884,14 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 32
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GFo9SY0bTCv",
+      "art": "https://yt3.googleusercontent.com/6H_-9bQIL8z_q3_0vKbjVBzLdsg2OwFmI6BUcqJgFyz_ArP5qvQwnyB1gY_9IR-5URnsrxBfifsSUFA=w544-h544-l90-rj",
+      "composers": [
+        "Noisia"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m-Do43QSjVnbmS-i1R2IugngYH1A2SNWE",
+      "tracksN": 36,
+      "playsTotal": 8716000
     },
     {
       "id": "command-conquer-red-alert",
@@ -48887,7 +48894,9 @@
       "id": "sunrise",
       "title": "Sunrise Soundtrack",
       "game": "Sunrise",
-      "composers": [],
+      "composers": [
+        "Let It Bloom"
+      ],
       "date": "2026-07-28",
       "sources": [
         {
@@ -48898,11 +48907,13 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sunrise+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_TYe19sdWJqn",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4463410/3ae5416f74aa471a1f002a5247493afb456f8e06/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 5
+      "ytmPlaylistId": "OLAK5uy_njpmRVjXbtPFDLcPwrGpYm3tXFw_UrzGM",
+      "tracksN": 5,
+      "playsTotal": 805
     },
     {
       "id": "lunarium",
@@ -51594,7 +51605,9 @@
       "id": "scum",
       "title": "Scum Soundtrack",
       "game": "Scum",
-      "composers": [],
+      "composers": [
+        "TH3O-"
+      ],
       "date": "2025-06-17",
       "sources": [
         {
@@ -51605,7 +51618,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Scum+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_p3lCfHr6JcL",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coa05f.jpg",
       "notable": true,
       "company": "Gamepires",
@@ -51616,7 +51629,9 @@
         "Simulator"
       ],
       "medium": "game",
-      "tracksN": 0
+      "ytmPlaylistId": "OLAK5uy_lNOptK3Ya29O1UhvUQIWUlYlrq_U_MVb8",
+      "tracksN": 8,
+      "playsTotal": 30
     },
     {
       "id": "abiotic-factor",
@@ -51815,7 +51830,9 @@
       "id": "grounded-2",
       "title": "Grounded 2 Soundtrack",
       "game": "Grounded 2",
-      "composers": [],
+      "composers": [
+        "Finishing Move Inc."
+      ],
       "date": "2025-07-29",
       "sources": [
         {
@@ -51826,7 +51843,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Grounded+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NKZWmgw7UB1",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9xwo.jpg",
       "notable": true,
       "company": "Obsidian Entertainment",
@@ -51836,7 +51853,10 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 0
+      "albumTitle": "Grounded 2 (Official Game Soundtrack)",
+      "ytmPlaylistId": "OLAK5uy_kZKBNQgvZ9P4c0liOtkrDf8tf_jWqaauw",
+      "tracksN": 35,
+      "playsTotal": 119438
     },
     {
       "id": "game-of-thrones-kingsroad",
@@ -54167,7 +54187,9 @@
       "id": "space-haven",
       "title": "Space Haven Soundtrack",
       "game": "Space Haven",
-      "composers": [],
+      "composers": [
+        "Paul Zimmermann"
+      ],
       "date": "2026-05-13",
       "sources": [
         {
@@ -54178,7 +54200,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Space+Haven+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_p49geCDXaYD",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xhv.jpg",
       "notable": true,
       "company": "Bugbyte Ltd.",
@@ -54189,7 +54211,9 @@
         "Strategy"
       ],
       "medium": "game",
-      "tracksN": 19
+      "ytmPlaylistId": "OLAK5uy_n5LFBO-8ORdig9HEpb8rA8sR6nRRJ4B-c",
+      "tracksN": 19,
+      "playsTotal": 128100
     },
     {
       "id": "directive-8020",
@@ -55222,7 +55246,9 @@
       "id": "timberborn",
       "title": "Timberborn Soundtrack",
       "game": "Timberborn",
-      "composers": [],
+      "composers": [
+        "Zofia Domaradzka"
+      ],
       "date": "2026-03-12",
       "sources": [
         {
@@ -55233,7 +55259,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Timberborn+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_rir1ksnd1BO",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobtu9.jpg",
       "notable": true,
       "company": "Mechanistry",
@@ -55244,7 +55270,9 @@
         "Indie"
       ],
       "medium": "game",
-      "tracksN": 11
+      "ytmPlaylistId": "OLAK5uy_nH-eq4QXyB9hAskMIHqEtiKJc6AGE0u9Y",
+      "tracksN": 11,
+      "playsTotal": 31403
     },
     {
       "id": "greedfall-the-dying-world",
@@ -56048,7 +56076,9 @@
       "id": "cairn",
       "title": "Cairn Soundtrack",
       "game": "Cairn",
-      "composers": [],
+      "composers": [
+        "David Dudeney"
+      ],
       "date": "2026-01-29",
       "sources": [
         {
@@ -56059,7 +56089,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Cairn+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_dI0t0RDrCCk",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobdqk.jpg",
       "notable": true,
       "company": "The Game Bakers",
@@ -56070,7 +56100,9 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 0
+      "ytmPlaylistId": "OLAK5uy_k6dRKxVERotTL8nCyHHsp9y6DmB7ZDFf4",
+      "tracksN": 7,
+      "playsTotal": 72
     },
     {
       "id": "the-midnight-walkers",
@@ -56701,7 +56733,9 @@
       "id": "kirby-air-riders-2025",
       "title": "Kirby Air Riders Soundtrack",
       "game": "Kirby Air Riders",
-      "composers": [],
+      "composers": [
+        "Decisions"
+      ],
       "date": "2025-11-20",
       "sources": [
         {
@@ -56712,7 +56746,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Kirby+Air+Riders+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9KPRL12y3PX",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaauz.jpg",
       "notable": true,
       "company": "Sora",
@@ -56723,7 +56757,9 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 9
+      "ytmPlaylistId": "OLAK5uy_kGJrveNr_mwmxwlQhetEPD95PeVQ3X3fQ",
+      "tracksN": 4,
+      "playsTotal": 258
     },
     {
       "id": "total-chaos",
@@ -148293,6 +148329,1526 @@
       "ytmPlaylistId": "OLAK5uy_m0amOMe69gG0IprlOPzuAFEq16NXDpr7A",
       "tracksN": 25,
       "playsTotal": 8254
+    },
+    {
+      "id": "film-close",
+      "title": "Close Soundtrack",
+      "medium": "film",
+      "game": "Close",
+      "composers": [
+        "Valentin Hadjadj"
+      ],
+      "date": "2022-11-01",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/901563",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Close+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GObGis9zij7",
+      "art": "https://yt3.googleusercontent.com/8hIxrCCp4Jndhbv0303MOFul4Mz0s8N-IKAf13Hq5VMnnEcw47lwSX5sKksyDndzxoYYHKYsstu0LX3h=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Close (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kTNsnArEsSovenV88fh7dU4AukzHt4kMM",
+      "tracksN": 11,
+      "playsTotal": 891000
+    },
+    {
+      "id": "film-clouds",
+      "title": "Clouds Soundtrack",
+      "medium": "film",
+      "game": "Clouds",
+      "composers": [
+        "Brian Tyler"
+      ],
+      "date": "2020-10-09",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/630566",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Clouds+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HZcwouzIzTS",
+      "art": "https://yt3.googleusercontent.com/VT_OhzXcsrbPyneRHh_FRTybY7s0GD6WvkcYa1mC0-NmZhlYcNDVacGdaIhJ41QLDQNtBF1CVbo04c1Q=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Clouds (Original Score)",
+      "genres": [
+        "Music",
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_khAOezZu8HesLe-5rlV1YsGFk_5vZZny4",
+      "tracksN": 20,
+      "playsTotal": 936901
+    },
+    {
+      "id": "film-executive-decision",
+      "title": "Executive Decision Soundtrack",
+      "medium": "film",
+      "game": "Executive Decision",
+      "composers": [
+        "Jerry Goldsmith"
+      ],
+      "date": "1996-03-15",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/2320",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Executive+Decision+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gD8AmFS1g2l",
+      "art": "https://yt3.googleusercontent.com/l4DdjziZK9uGJnDQFrCQqunCrz2dwl2pO5kl9_VyJgQfMvY9rwnghskHvqaGQ4KJz_BX3H0udJTt43w=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Executive Decision (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kEXxUnaT1rq9kwKSkS8r_ruBE_pWbx_2M",
+      "tracksN": 9,
+      "playsTotal": 137700
+    },
+    {
+      "id": "film-emily-the-criminal",
+      "title": "Emily the Criminal Soundtrack",
+      "medium": "film",
+      "game": "Emily the Criminal",
+      "composers": [
+        "Nathan Halpern"
+      ],
+      "date": "2022-08-12",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/862965",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Emily+the+Criminal+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_oK3b4xY6c9F",
+      "art": "https://yt3.googleusercontent.com/Cd7_id0lzLZGb4HcKqQ4m90NHesg_ubj5Pon-hSCkjKvyQQ2YXVshC8gvKK083yspM8AaAKlCERDA1oV=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Emily The Criminal (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mHJXmI__lepcVvO0u1y_EzqL7RebNFb7I",
+      "tracksN": 15,
+      "playsTotal": 17763
+    },
+    {
+      "id": "film-our-idiot-brother",
+      "title": "Our Idiot Brother Soundtrack",
+      "medium": "film",
+      "game": "Our Idiot Brother",
+      "composers": [
+        "Eric D. Johnson",
+        "Nathan Larson"
+      ],
+      "date": "2011-08-26",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/59968",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Our+Idiot+Brother+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_X9fugMyeWj3",
+      "art": "https://yt3.googleusercontent.com/TATrtOY6UQszf_NMfDk4F9y6glfsEyWLKir7h4sxHubg_wj3xq_BisOvCAP_L_duMtaMmIf1vW3BmwiF=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Our Idiot Brother (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mzSvv_mopw6SFnSlqu-oL8RyTd0dCVRJE",
+      "tracksN": 16,
+      "playsTotal": 6885000
+    },
+    {
+      "id": "film-searching-for-sugar-man",
+      "title": "Searching for Sugar Man Soundtrack",
+      "medium": "film",
+      "game": "Searching for Sugar Man",
+      "composers": [
+        "Rodriguez"
+      ],
+      "date": "2012-06-30",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/84334",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Searching+for+Sugar+Man+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OZSiPYFieJK",
+      "art": "https://yt3.googleusercontent.com/btNFY0vwTZfGqWOxQZ2qAFCBbrr2oRO44XsNytwuaa7tDBMkr2_9kQhKBLNfc7F0gd8W0goRSZHG49I2NQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Searching For Sugar Man (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Music",
+        "Documentary"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lnQb4kj1SpsGXZGsQ7eI81ZpqM5VtqDig",
+      "tracksN": 14,
+      "playsTotal": 74449000
+    },
+    {
+      "id": "film-parallel-mothers",
+      "title": "Parallel Mothers Soundtrack",
+      "medium": "film",
+      "game": "Parallel Mothers",
+      "composers": [
+        "Alberto Iglesias"
+      ],
+      "date": "2021-10-08",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/766798",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Parallel+Mothers+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hBaDZmd1GP5",
+      "art": "https://yt3.googleusercontent.com/oOo5738k7Oi8adu0c-YxQLov5fORdn2NWJGyXpUPwxKvWmybLwkp8Z6n2DDEnyDF-yC_Ksjkru_YRhE3lg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Parallel Mothers (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nB88NpJOxKDvispJoUnSEzTRuKgQTy96o",
+      "tracksN": 19,
+      "playsTotal": 164000
+    },
+    {
+      "id": "film-joe",
+      "title": "Joe Soundtrack",
+      "medium": "film",
+      "game": "Joe",
+      "composers": [
+        "Jeff McIlwain"
+      ],
+      "date": "2014-04-11",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/157847",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Joe+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5y4oi32ImN2",
+      "art": "https://yt3.googleusercontent.com/lX8tGfKzfYOn8WEqySNLzPvOEEW_FFzOd8xzEY65jnZbmpupAtn-NVDc2EvczKTHbmjB6rrO_R9HFSl9yw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Joe (Original Soundtrack Album)",
+      "genres": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kzvioqJISfU4Nj8Sae_d-1MPBCRgG0isE",
+      "tracksN": 17,
+      "playsTotal": 315160
+    },
+    {
+      "id": "film-a-cinderella-story-once-upon-a-song",
+      "title": "A Cinderella Story: Once Upon a Song Soundtrack",
+      "medium": "film",
+      "game": "A Cinderella Story: Once Upon a Song",
+      "composers": [],
+      "date": "2011-09-05",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/74018",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Cinderella+Story%3A+Once+Upon+a+Song+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YXpdakRMQ1H",
+      "art": "https://yt3.googleusercontent.com/RRo00qvRJ0C-Q37m41zG88BVcu0aWzCw38IboXQIvAvyLu527p2wtZxT851XDShtyHkQfi5qjeZ2-mef7w=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "A Cinderella Story: Once Upon A Song (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Family",
+        "Romance"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kKZKOceFBkDUTIHni4fitNEUfwByTBx4E",
+      "tracksN": 10,
+      "playsTotal": 107781000
+    },
+    {
+      "id": "film-firewall",
+      "title": "Firewall Soundtrack",
+      "medium": "film",
+      "game": "Firewall",
+      "composers": [
+        "Alexandre Desplat"
+      ],
+      "date": "2006-02-08",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/9754",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Firewall+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_3ZlK3ihK4Gs",
+      "art": "https://yt3.googleusercontent.com/y1qf0RXgcCizOwk0c3Nvjw-bJ0hW-xP8q6YGhM3dVtuWnC4xPFojNzxESbqOb5YWp82NOtskPu7uutfy=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Firewall (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kXB_ZCXK3xc4wILF4gO4GHSEtAsshIIO8",
+      "tracksN": 15,
+      "playsTotal": 42841
+    },
+    {
+      "id": "tv-game-of-thrones-season-2",
+      "title": "Game of Thrones Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2012-04-01",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HRZhqQ1GZXQ",
+      "art": "https://yt3.googleusercontent.com/PbGpQrBnKSvE8lprHviza_7Ia4a6hdANhVlv8LyzcagDvhUDspkt6kYCqAl9RUZ7-tf3XnWQySnSTYBzxg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones: Season 2 (Music From The HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kFgs4Cft-TeYX4r9CCIUB3kP6vAHNmog0",
+      "tracksN": 21,
+      "playsTotal": 32831000
+    },
+    {
+      "id": "tv-game-of-thrones-season-3",
+      "title": "Game of Thrones Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2013-03-31",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_o6Q9t62lT7M",
+      "art": "https://yt3.googleusercontent.com/Bkh-gtrmitpiPygpd_T1iNdHiUPIJTQMIVmWgR3oZ4kygQKUdXlnCSuyWYwaV-tt6xplBVl6fRHOQlbAjA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones: Season 3 (Music from the HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mJrvBu34picOGmmMm4MsA6Z0RFF9x-b-E",
+      "tracksN": 19,
+      "playsTotal": 102837000
+    },
+    {
+      "id": "tv-game-of-thrones-season-4",
+      "title": "Game of Thrones Season 4 Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2014-04-06",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Season+4+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7pBBJ1jd1R3",
+      "art": "https://yt3.googleusercontent.com/sRZ_e0Jc8070y-rJ6L2GT--pB2bd-NgDkrc62QC_-iD5wqHzHNxh5HhVcqZGIuUbHOPHlckxwCdMT1aL=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones: Season 4 (Music from the HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nHmHTV6AHjAPD3RHQhaEERgz_5ARnq5mg",
+      "tracksN": 22,
+      "playsTotal": 38045000
+    },
+    {
+      "id": "tv-game-of-thrones-season-5",
+      "title": "Game of Thrones Season 5 Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2015-04-12",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Season+5+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_y2Qm8VuuD7C",
+      "art": "https://yt3.googleusercontent.com/Zlm8eEZuPBWTOOjlwndbuUc1xGF9Zm-HTYDgPXBs-v9HN_MpU3EYxd1NfqDRxTl1Sc3VIJFBNU5b878=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones: Season 5 (Music from the HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kyc-hGATSaz5DMC2IHpgHXttV3ktVhAxU",
+      "tracksN": 18,
+      "playsTotal": 41644000
+    },
+    {
+      "id": "tv-game-of-thrones-season-6",
+      "title": "Game of Thrones Season 6 Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2016-04-24",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Season+6+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uVY14a5o33p",
+      "art": "https://yt3.googleusercontent.com/4-yw6rfX9t-ojOyAqpSPtChizrw1gf7xIgwP9dV3kizuJKEH56RQFXGRvsn3NMJXjfbiDtXGOycWcA8tlg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones: Season 6 (Music from the HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lHYz8ubYlX-R58jNM2Du1iAlPs6VjL3r0",
+      "tracksN": 26,
+      "playsTotal": 236483000
+    },
+    {
+      "id": "tv-game-of-thrones-season-7",
+      "title": "Game of Thrones Season 7 Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2017-07-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Season+7+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mzc9NUfBwmF",
+      "art": "https://yt3.googleusercontent.com/kJ8wVyn4e8jIG0MPOSknrXDl-h2emOLpiR0Q_FBFr8d730zTFwM9M06gJFRdkcv1vDYNVXTqo04W1rl1=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones: Season 7 (Music from the HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m6xSyZmXenFV-S8VuhrWZ_Bsj7tkE1uv4",
+      "tracksN": 24,
+      "playsTotal": 67608000
+    },
+    {
+      "id": "tv-game-of-thrones-season-8",
+      "title": "Game of Thrones Season 8 Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2019-04-14",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Season+8+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_yPFiB37kgFP",
+      "art": "https://yt3.googleusercontent.com/XfB2c0ukXvImDiNOtynWhHu_mN9c9IHo5Hb86vh7sGnkwtvjZ1c_dqbjI9rt_Oy0gj0TGB7EpmT1xY0=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones: Season 8 (Music from the HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m1VXX6wbfo-KZgOCxFK7ZVGKeAHUR-B5Q",
+      "tracksN": 32,
+      "playsTotal": 172884000
+    },
+    {
+      "id": "tv-game-of-thrones",
+      "title": "Game of Thrones Soundtrack",
+      "medium": "tv",
+      "game": "Game of Thrones",
+      "composers": [
+        "Ramin Djawadi"
+      ],
+      "date": "2011-04-17",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1399",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Game+of+Thrones+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_jkTXrWk8BSr",
+      "art": "https://yt3.googleusercontent.com/-9zj6W9zPvp9R-3GTzC2Bv80J_n5SiHpNi4GNknqiEcM90kavt5rLADN-KgmIIoL5mJXx-y1OR7E4qs8lQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Game Of Thrones (Music From The HBO Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_neNeFu1-QP8xjRo9ReLvR2Ya-QFcLJ01Q",
+      "tracksN": 29,
+      "playsTotal": 67295000
+    },
+    {
+      "id": "tv-stranger-things-season-1",
+      "title": "Stranger Things Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Stranger Things",
+      "composers": [
+        "Michael Stein",
+        "Kyle Dixon",
+        "Dan Romer"
+      ],
+      "date": "2016-07-15",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/66732",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stranger+Things+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_RteONAtPTan",
+      "art": "https://yt3.googleusercontent.com/HfV0vh423BBdPz3YY2zMEHum2wjF59J8jnYaSkovqGvwmZCmlh46lLsH4yiSacifsS37H5uqvMpyeGlvNw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Stranger Things, Vol. 1 (A Netflix Original Series Soundtrack)",
+      "genres": [
+        "Action & Adventure",
+        "Mystery",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mdCf04m8PPOvCCFniNFv5MrL6VEmoxKDU",
+      "tracksN": 36,
+      "playsTotal": 86117000
+    },
+    {
+      "id": "tv-stranger-things-season-2",
+      "title": "Stranger Things Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Stranger Things",
+      "composers": [
+        "Michael Stein",
+        "Kyle Dixon",
+        "Dan Romer"
+      ],
+      "date": "2017-10-27",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/66732",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stranger+Things+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_SHOZmk7LXpY",
+      "art": "https://yt3.googleusercontent.com/90p4ZMJPhP3smo-w5kwSdL74mpYkQskuu8LUCSc3yW2cSlJovPw3DA4vQujVcnFx9QyBOCuGbTIVOwc=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Stranger Things, Vol. 2 (A Netflix Original Series Soundtrack)",
+      "genres": [
+        "Action & Adventure",
+        "Mystery",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m_meDJZOVCcIXPy2bXncKXgfZPbX7ZBVA",
+      "tracksN": 39,
+      "playsTotal": 22510000
+    },
+    {
+      "id": "tv-stranger-things",
+      "title": "Stranger Things Soundtrack",
+      "medium": "tv",
+      "game": "Stranger Things",
+      "composers": [
+        "Michael Stein",
+        "Kyle Dixon",
+        "Dan Romer"
+      ],
+      "date": "2016-07-15",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/66732",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stranger+Things+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_rz1WZTXfDbB",
+      "art": "https://yt3.googleusercontent.com/aMWc8etU89XvCvha9EX6oPgAg3vJSgADCUIblTs3lUPti-tCOEo4Yos9oo6PeO5lHBmXviwe5Kj8jXi9=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Stranger Things (Soundtrack from the Netflix Original Series)",
+      "genres": [
+        "Action & Adventure",
+        "Mystery",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kzfuT-HpfdiQ-KGiUVyaDo9_Xl4qPTmuU",
+      "tracksN": 30,
+      "playsTotal": 3555000000
+    },
+    {
+      "id": "tv-breaking-bad-season-2",
+      "title": "Breaking Bad Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Breaking Bad",
+      "composers": [
+        "Dave Porter"
+      ],
+      "date": "2009-03-08",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1396",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Breaking+Bad+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9ETKIodPnZ1",
+      "art": "https://yt3.googleusercontent.com/rH1h7VBRYkwfX-OU6gU8rQE4zf-TQzn8twM9Lnx91LhejwJNysvP9OV1nA-Qd8grkLEbShWyXFfqwVAP=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Breaking Bad (Original Score from the Television Series), Vol. 2",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kouPFrZd4ofw2XEoMTE97taMUbWa_iLSw",
+      "tracksN": 20,
+      "playsTotal": 3729000
+    },
+    {
+      "id": "tv-breaking-bad",
+      "title": "Breaking Bad Soundtrack",
+      "medium": "tv",
+      "game": "Breaking Bad",
+      "composers": [
+        "Dave Porter"
+      ],
+      "date": "2008-01-20",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1396",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Breaking+Bad+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_IQ7oPjIRFvT",
+      "art": "https://yt3.googleusercontent.com/hzrNUe4wKx7p0tnwRxLWBfaYKUK2sqC3-dMHfWEGVi0-AczR158E257oQ5hj8emgEBFibwy5T18fnaKXlQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Breaking Bad: Original Score from the Television Series",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mKMZdmoPStfad2b5RRVNasAypFTjkj-9o",
+      "tracksN": 20,
+      "playsTotal": 23049000
+    },
+    {
+      "id": "tv-riverdale-season-1",
+      "title": "Riverdale Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Riverdale",
+      "composers": [
+        "Blake Neely",
+        "Sherri Chung"
+      ],
+      "date": "2017-01-26",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/69050",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Riverdale+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DwHJQokCsJm",
+      "art": "https://yt3.googleusercontent.com/QfVczz8OwDTrLG8LDwVQlsemd4QEqdfbXNfw9u_CXOJLgKxJrXW_6xOqmf2vrEvSuIlKsxCr_r0aaF-Ssg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Riverdale: Season 1 (Score from the Original Television Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kpgouI3YfUKOF2y7RnoFvPppOhlBhks1Q",
+      "tracksN": 25,
+      "playsTotal": 3804000
+    },
+    {
+      "id": "tv-riverdale-season-2",
+      "title": "Riverdale Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Riverdale",
+      "composers": [
+        "Blake Neely",
+        "Sherri Chung"
+      ],
+      "date": "2017-10-11",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/69050",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Riverdale+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_1dgN3YtxPAI",
+      "art": "https://yt3.googleusercontent.com/efxH7l39ZMfovYxo9sBrvWnGOxAkEiuJK8xniSArUCaQbM75gtqqvjd4fZTUeIb40p--MzzZOK9AVOG0=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Riverdale: Season 2 (Score from the Original Television Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kmS2R3kB958mg8wNc_VHKj27xfWRlC2sY",
+      "tracksN": 31,
+      "playsTotal": 158900
+    },
+    {
+      "id": "tv-riverdale-season-3",
+      "title": "Riverdale Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "Riverdale",
+      "composers": [
+        "Blake Neely",
+        "Sherri Chung"
+      ],
+      "date": "2018-10-10",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/69050",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Riverdale+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GBSsg8zaIku",
+      "art": "https://yt3.googleusercontent.com/tIryidJGsP5Yazs4F3Tes7RBsOoou0wxGeZI2gCX4tbh-LLGBsQxiWt44baE7_ofe8fs1MOWcJ5IGLGq0w=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Riverdale: Season 3 (Score from the Original Television Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mPHUWKph7O9C6bEgEB-Nu_rlXPpHlmYoQ",
+      "tracksN": 15,
+      "playsTotal": 82700
+    },
+    {
+      "id": "tv-riverdale-season-4",
+      "title": "Riverdale Season 4 Soundtrack",
+      "medium": "tv",
+      "game": "Riverdale",
+      "composers": [
+        "Blake Neely",
+        "Sherri Chung"
+      ],
+      "date": "2019-10-09",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/69050",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Riverdale+Season+4+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qExQ9qi1Qbl",
+      "art": "https://yt3.googleusercontent.com/0fVHyAIICA5mEOgMHdtYKgTMkwNU47HkR1B9-dW7BBisv5J6H8wNwFdbMkJOZlc3eDpCoPdFKfkcdNxl=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Riverdale Season 4: Special Halloween Episode (Score from the Original Television Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lCMh-zZ2MrtJG87jvG5RuzaqGocjBksjg",
+      "tracksN": 17,
+      "playsTotal": 39405
+    },
+    {
+      "id": "tv-the-boys-season-2",
+      "title": "The Boys Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "The Boys",
+      "composers": [
+        "Christopher Lennertz",
+        "Matt Bowen"
+      ],
+      "date": "2020-09-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/76479",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Boys+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ellUwvna1ep",
+      "art": "https://yt3.googleusercontent.com/MwTS_upxSwo5e8A-mdTiUZnWaISuxf_nYGl8j-UzC9w110irprr16q9bZsZ2ZnfTfr8Qev3pQHAhuw-_=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Boys: Season 2 (Music from the Amazon Original Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lw-clVQwl3_134wdvZ1uoUK7WT5I8OU48",
+      "tracksN": 31,
+      "playsTotal": 5267000
+    },
+    {
+      "id": "tv-the-boys-season-3",
+      "title": "The Boys Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "The Boys",
+      "composers": [
+        "Christopher Lennertz",
+        "Matt Bowen"
+      ],
+      "date": "2022-06-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/76479",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Boys+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_apJaxvYFNmJ",
+      "art": "https://yt3.googleusercontent.com/AZuQPFvyDHyIh4HzfA2F6rFhMZ9eMtPnt69RvH3mQGOLtT9vcsXwsgMwUA4Q4J_sCcgVRGqgd7Zr_Es=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Boys: Season 3 (Amazon Original Series Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mDtHINZddp0z8wfpwy6zFzgAA69JAuQvk",
+      "tracksN": 33,
+      "playsTotal": 18703700
+    },
+    {
+      "id": "tv-the-boys-season-4",
+      "title": "The Boys Season 4 Soundtrack",
+      "medium": "tv",
+      "game": "The Boys",
+      "composers": [
+        "Christopher Lennertz",
+        "Matt Bowen"
+      ],
+      "date": "2024-06-13",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/76479",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Boys+Season+4+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_vvN7AOoAdhQ",
+      "art": "https://yt3.googleusercontent.com/bP3AiBkTPKvESmXJ_wbWoLRmRwKwMA11L_WffY4kzng2HzH2OmN5LLAkdmpV1STxVw0oROjehjt2IXqT=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Boys: Season 4 (Prime Video Original Series Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lJ9BEgyFzswLB85taEjxTfehEk_rwO34Q",
+      "tracksN": 25,
+      "playsTotal": 860100
+    },
+    {
+      "id": "tv-the-boys-season-5",
+      "title": "The Boys Season 5 Soundtrack",
+      "medium": "tv",
+      "game": "The Boys",
+      "composers": [
+        "Christopher Lennertz",
+        "Matt Bowen"
+      ],
+      "date": "2026-04-08",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/76479",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Boys+Season+5+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HeaN5WBlCGg",
+      "art": "https://yt3.googleusercontent.com/IFDokUnGxf0AxIjBPwnuQakeIkflGMaN9WLKY6jpYHobCZC1MjOZ7e5T1L3FQrjimA9BCqIRoOs_UmamBA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Boys: Season 5 (Prime Original Series Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kdja2vjZ-glvGP13T_gIfw8vvXGCLDrpE",
+      "tracksN": 32,
+      "playsTotal": 2680500
+    },
+    {
+      "id": "tv-the-boys",
+      "title": "The Boys Soundtrack",
+      "medium": "tv",
+      "game": "The Boys",
+      "composers": [
+        "Christopher Lennertz",
+        "Matt Bowen"
+      ],
+      "date": "2019-07-25",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/76479",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Boys+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NgWExXUqqmw",
+      "art": "https://yt3.googleusercontent.com/EqSZznFz86YEXbkw0M9E1yF-LjrheP4DiwOzwxnrPAgT-h6nBtMLAlDTchbl_MNM0N_VHmcUlBBVu5rR=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Boys (Music from the Amazon Original Series)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m_GgYHGIH3bopUy3yhgU8FDghl9lh1l60",
+      "tracksN": 50,
+      "playsTotal": 3410900
+    },
+    {
+      "id": "tv-wandavision",
+      "title": "WandaVision Soundtrack",
+      "medium": "tv",
+      "game": "WandaVision",
+      "composers": [
+        "Robert Lopez",
+        "Christophe Beck",
+        "Kristen Anderson-Lopez",
+        "Alex Kovacs"
+      ],
+      "date": "2021-01-15",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/85271",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=WandaVision+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mjdMtiMt9No",
+      "art": "https://yt3.googleusercontent.com/LAhhcza-MkCIA69nkqNmuxNooEslzkcm0SpBtsJObMNZssixJ6A2rqGJ6_g3iAf-hs-25H__df5zWgxG=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "WandaVision: Episode 1 (Original Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Mystery",
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_njZWIphLSmVh1mIpO4l9GPQWsIpBSZj78",
+      "tracksN": 9,
+      "playsTotal": 2227700
+    },
+    {
+      "id": "tv-loki-season-1",
+      "title": "Loki Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Loki",
+      "composers": [
+        "Natalie Holt"
+      ],
+      "date": "2021-06-09",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/84958",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Loki+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uISYL63fVv7",
+      "art": "https://yt3.googleusercontent.com/dbc59fhAQCz31R9-6eOMPe-heDbCen2j0YDjFkxYjvaS7CBI6M4sQhcRaRjC2ppB_ljDh2cv0TEREAs=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Loki, Vol. 1 (Episodes 1-3) [Original Soundtrack]",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mtsTTnFcYuDoGiS3FN0Io89GvrMKPBpGg",
+      "tracksN": 25,
+      "playsTotal": 26687000
+    },
+    {
+      "id": "tv-loki-season-2",
+      "title": "Loki Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Loki",
+      "composers": [
+        "Natalie Holt"
+      ],
+      "date": "2023-10-05",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/84958",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Loki+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_us9PNQtZCoh",
+      "art": "https://yt3.googleusercontent.com/t4LQQlAGfNH7BcUb-fs6RgXYgQkTwim8nCZ1LsIlXF8D6N236GY-LfD9dmMUqBQWfu2FU4y0O474ZYN4=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Loki, Vol. 2 (Episodes 4-6) [Original Soundtrack]",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kkdeYskELn5tfrjBn0fBEVUtyLyNJCYq0",
+      "tracksN": 23,
+      "playsTotal": 11048000
+    },
+    {
+      "id": "tv-the-flash-season-1",
+      "title": "The Flash Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "The Flash",
+      "composers": [
+        "Blake Neely",
+        "Nathaniel Blume"
+      ],
+      "date": "2014-10-06",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60735",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Flash+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_TvDHhsEzRdY",
+      "art": "https://yt3.googleusercontent.com/s3UrNlaUg3-q2rZfkuhw3hgrqyLVm38zYcsChb1dFx1n92nTns0ky5l912YOdY9zXtxjHVWfD9rP5co=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Flash: Season 1 (Original Television Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ls0v2vqITwIwl5t3eZIrQGIsu6PQ1Qnog",
+      "tracksN": 29,
+      "playsTotal": 5414000
+    },
+    {
+      "id": "tv-the-flash-season-2",
+      "title": "The Flash Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "The Flash",
+      "composers": [
+        "Blake Neely",
+        "Nathaniel Blume"
+      ],
+      "date": "2015-10-05",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60735",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Flash+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_dwOlQUUpywJ",
+      "art": "https://yt3.googleusercontent.com/xDiEs8Bd2iIVmfUprAa6TJTvKRu4nEm2gUGzCoStmb8aoxMnlyuID-bNCj3HWWKLT4KLrMOaL0vvKiY=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Flash: Season 2 (Original Television Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nfBYqx8kazRYvC0_OuZxHkk6c3-E7EgMw",
+      "tracksN": 26,
+      "playsTotal": 2546000
+    },
+    {
+      "id": "tv-the-flash-season-3",
+      "title": "The Flash Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "The Flash",
+      "composers": [
+        "Blake Neely",
+        "Nathaniel Blume"
+      ],
+      "date": "2016-10-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60735",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Flash+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KY3xVynkZ0Y",
+      "art": "https://yt3.googleusercontent.com/cmxzKv9ybBv2x9jtTCY13dI7KzhlJywkUWtF3ZZSbrdbVPUt-LR7EA1-d9crFaVpJtfajUVmggPbXAol=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Flash: Season 3 (Original Television Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nCRJr7XUWI1ndt36W-m6FtyN33KQ3iIT0",
+      "tracksN": 27,
+      "playsTotal": 1732700
+    },
+    {
+      "id": "tv-the-flash-season-4",
+      "title": "The Flash Season 4 Soundtrack",
+      "medium": "tv",
+      "game": "The Flash",
+      "composers": [
+        "Blake Neely",
+        "Nathaniel Blume"
+      ],
+      "date": "2017-10-10",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60735",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Flash+Season+4+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fl0omdyRMtE",
+      "art": "https://yt3.googleusercontent.com/3NNIVHrWNkuVmanpSirIl6YzpgEK7BuOXVOM0xrY-FVDvhh6jAurjL1MofWcid74xiItVUmMhzqIrq6AFw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Flash: Season 4 (Original Television Soundtrack) ",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lyyS0qUXk681nAn-rV0Mx2sVC_zXLEWCM",
+      "tracksN": 30,
+      "playsTotal": 529200
+    },
+    {
+      "id": "tv-the-flash-season-5",
+      "title": "The Flash Season 5 Soundtrack",
+      "medium": "tv",
+      "game": "The Flash",
+      "composers": [
+        "Blake Neely",
+        "Nathaniel Blume"
+      ],
+      "date": "2018-10-09",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60735",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Flash+Season+5+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WXfErJB2c5D",
+      "art": "https://yt3.googleusercontent.com/zKoqnagltj-JDB5mL482ChAe3xL9dYBeUXIUs9KMjR0D_gidk1vrSF3RMauNGGYLggD4ncbVHRkd318=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Flash: Season 5 (Original Television Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nZrAiOr6TYrD7nLDahUdGQU0xHhyuU4qw",
+      "tracksN": 15,
+      "playsTotal": 126900
+    },
+    {
+      "id": "tv-the-flash-season-6",
+      "title": "The Flash Season 6 Soundtrack",
+      "medium": "tv",
+      "game": "The Flash",
+      "composers": [
+        "Blake Neely",
+        "Nathaniel Blume"
+      ],
+      "date": "2019-10-08",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60735",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Flash+Season+6+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Q42fQMiD3c9",
+      "art": "https://yt3.googleusercontent.com/3mkBAF557WIMMh2nVb1jM1Jzj3w7Q4-nxCSGtRs21lLuAwTS-W__aNzwjG3vA88u0EsDAaE_V0hle0lO=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Flash: Season 6 (Original Television Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n7MTgDhawlb8dDIB4YS_kjr8n-s2f99Dg",
+      "tracksN": 15,
+      "playsTotal": 143000
+    },
+    {
+      "id": "tv-the-flash",
+      "title": "The Flash Soundtrack",
+      "medium": "tv",
+      "game": "The Flash",
+      "composers": [
+        "Blake Neely",
+        "Nathaniel Blume"
+      ],
+      "date": "2014-10-07",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60735",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Flash+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_V6Odynz8iiE",
+      "art": "https://yt3.googleusercontent.com/LvmDqpWq0gjQRZ5uW5JPXu5gMzAtCBMBHECFg10oBjwiVBxY4p1ku7AzjVpMrUDPj3ClvTFVSQkY9CsL=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Flash: Armageddon (Original Television Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lIFRWsy_vojQlIQ_l9p3SSD6AJrn921NA",
+      "tracksN": 15,
+      "playsTotal": 105600
+    },
+    {
+      "id": "tv-peaky-blinders-season-5",
+      "title": "Peaky Blinders Season 5 Soundtrack",
+      "medium": "tv",
+      "game": "Peaky Blinders",
+      "composers": [
+        "Martin Phipps",
+        "Paul Hartnoll",
+        "Anna Calvi"
+      ],
+      "date": "2019-08-25",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60574",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Peaky+Blinders+Season+5+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_1x0uwzB99Ua",
+      "art": "https://yt3.googleusercontent.com/uU0zyrAYYqC7wOHCIsyfQ_1hS_9E7L3gIfnG7wpAbKklSoG7sOQUjdge8m_SKtnrURh2IIr1cK6mn_s=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Peaky Blinders: Season 5 (Original Score)",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mv1E_ICToLBOzKg0EAdjZmANsMWw0LbQo",
+      "tracksN": 17,
+      "playsTotal": 2973800
+    },
+    {
+      "id": "tv-peaky-blinders-season-6",
+      "title": "Peaky Blinders Season 6 Soundtrack",
+      "medium": "tv",
+      "game": "Peaky Blinders",
+      "composers": [
+        "Martin Phipps",
+        "Paul Hartnoll",
+        "Anna Calvi"
+      ],
+      "date": "2022-02-27",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/60574",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Peaky+Blinders+Season+6+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KL6ZBUGCTXn",
+      "art": "https://yt3.googleusercontent.com/UO8uolO9Yk3QuflmiOTvFuvHWfQK6csXZDpxHh6j4P-Tg9UlPutFNTZB5-eTM-e8u3cyOvQPGjsb4yg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Peaky Blinders: Season 6 (Original Score)",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kU7hRC0m2AWdKTT5Mw01-SM1Io-tXWTGg",
+      "tracksN": 20,
+      "playsTotal": 1051600
+    },
+    {
+      "id": "tv-the-mandalorian-season-3",
+      "title": "The Mandalorian Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "The Mandalorian",
+      "composers": [
+        "Ludwig Göransson",
+        "Joseph Shirley"
+      ],
+      "date": "2023-03-01",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/82856",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Mandalorian+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KOVg9m6JLeZ",
+      "art": "https://yt3.googleusercontent.com/3p4qSFMBMWrK7RFr5a1OMg-gXIYSIG8rjFdC-k-6v3b0UdjA2wVWxs4xGqjC2GN98Lin6-6TBEddcFdUQA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Mandalorian: Season 3 - Vol. 2 (Chapters 21-24) (Original Score)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kS2jRUzl5duBbuaMpRuznxEiRSlJWgfu8",
+      "tracksN": 16,
+      "playsTotal": 1020000
+    },
+    {
+      "id": "tv-the-mandalorian",
+      "title": "The Mandalorian Soundtrack",
+      "medium": "tv",
+      "game": "The Mandalorian",
+      "composers": [
+        "Ludwig Göransson",
+        "Joseph Shirley"
+      ],
+      "date": "2019-11-12",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/82856",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Mandalorian+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MHuhCxz4Su6",
+      "art": "https://yt3.googleusercontent.com/sV7ec1QYbyvzk6RDVjkZJOROg9sxBer8FVxnzckvAVz1vtX0GQYaGy4bewdNIcIFR0m1BqFHqDFURAr-=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Mandalorian: Chapter 1 (Original Score)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lpeQMTrIx66Bo_ek_xh9Sjw0qySjYW5SA",
+      "tracksN": 9,
+      "playsTotal": 46113000
+    },
+    {
+      "id": "tv-euphoria-season-2",
+      "title": "Euphoria Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Euphoria",
+      "composers": [
+        "Labrinth",
+        "Hans Zimmer",
+        "Gustave Rudman"
+      ],
+      "date": "2022-01-09",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/85552",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Euphoria+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_TcFNafKvm7b",
+      "art": "https://yt3.googleusercontent.com/VtUVt_dPJKx39ueAK2RNJvU0IrQ9yXSi_G2M_McJwtlo8fhm1A55KXlBTcR-sJobGPxD-hieg1-n07c=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Euphoria Season 2 Official Score (From The HBO Original Series)",
+      "genres": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kJnCVMWCkSBqkZb9uD0N-ROV_r6K3RIqs",
+      "tracksN": 24,
+      "playsTotal": 538432000
+    },
+    {
+      "id": "tv-euphoria-season-3",
+      "title": "Euphoria Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "Euphoria",
+      "composers": [
+        "Labrinth",
+        "Hans Zimmer",
+        "Gustave Rudman"
+      ],
+      "date": "2026-04-11",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/85552",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Euphoria+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xIxMLLqN3xz",
+      "art": "https://yt3.googleusercontent.com/lOL9U_sFWpk4m9dUqYLmCjmYGPEjb5Q6g6QfIIbAxsvBBNP23m2xgReB1a5gHszpexKvHblQcMgoIOcdaw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Euphoria: Season 3 (HBO Original Series Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k5FOUMz0RjY7S25aJKwUZzshFyx2UujBA",
+      "tracksN": 23,
+      "playsTotal": 736000
+    },
+    {
+      "id": "tv-euphoria",
+      "title": "Euphoria Soundtrack",
+      "medium": "tv",
+      "game": "Euphoria",
+      "composers": [
+        "Labrinth",
+        "Hans Zimmer",
+        "Gustave Rudman"
+      ],
+      "date": "2019-06-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/85552",
+          "seenAt": "2026-09-12T22:11:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Euphoria+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_SvgMfVPlhNF",
+      "art": "https://yt3.googleusercontent.com/UW8uuTZ0PaTS6U_8gXHAwc-_BS9a_l0M21BEZfCqKdTpca2yKY6tRa3ADB8EAcAW5PBkTBX7BZ1861H6=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Euphoria (Original Score from the HBO Series)",
+      "genres": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mQYwdoK7S7WJRMEo6iniezHGpJpWieAI8",
+      "tracksN": 26,
+      "playsTotal": 751087000
     }
   ]
 }
