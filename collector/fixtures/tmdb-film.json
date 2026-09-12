@@ -1,0 +1,87 @@
+{
+ "results": [
+  {
+   "adult": false,
+   "genre_ids": [
+    878,
+    12
+   ],
+   "id": 693134,
+   "title": "Dune: Part Two",
+   "original_language": "en",
+   "original_title": "Dune: Part Two",
+   "overview": "Paul Atreides unites with Chani and the Fremen.",
+   "popularity": 120.5,
+   "poster_path": "/dune2.jpg",
+   "release_date": "2024-02-27",
+   "video": false,
+   "vote_average": 8.2,
+   "vote_count": 6900
+  },
+  {
+   "adult": false,
+   "genre_ids": [
+    18,
+    36
+   ],
+   "id": 872585,
+   "title": "Oppenheimer",
+   "original_language": "en",
+   "original_title": "Oppenheimer",
+   "overview": "The story of J. Robert Oppenheimer.",
+   "popularity": 90.1,
+   "poster_path": "/oppie.jpg",
+   "release_date": "2023-07-19",
+   "video": false,
+   "vote_average": 8.1,
+   "vote_count": 10100
+  },
+  {
+   "adult": false,
+   "genre_ids": [
+    53
+   ],
+   "id": 111111,
+   "title": "Mayday",
+   "original_language": "en",
+   "original_title": "Mayday",
+   "overview": "A thriller with no score album anywhere.",
+   "popularity": 44.0,
+   "poster_path": "/mayday.jpg",
+   "release_date": "2026-09-03",
+   "video": false,
+   "vote_average": 6.4,
+   "vote_count": 446
+  }
+ ],
+ "genres": {
+  "28": "Action",
+  "12": "Adventure",
+  "16": "Animation",
+  "35": "Comedy",
+  "80": "Crime",
+  "99": "Documentary",
+  "18": "Drama",
+  "10751": "Family",
+  "14": "Fantasy",
+  "36": "History",
+  "27": "Horror",
+  "10402": "Music",
+  "9648": "Mystery",
+  "10749": "Romance",
+  "878": "Science Fiction",
+  "10770": "TV Movie",
+  "53": "Thriller",
+  "10752": "War",
+  "37": "Western"
+ },
+ "composers": {
+  "693134": [
+   "Hans Zimmer"
+  ],
+  "872585": [
+   "Ludwig Göransson"
+  ],
+  "111111": []
+ }
+}

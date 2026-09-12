@@ -33,6 +33,10 @@ GAP_RATINGS = 2
 GAP_HYPES = 8
 GAP_NOALBUM_BAR = 8     # search-row bar for gap games with no findable album
 NOALBUM_BAR = 400       # canon tier: games this notable get a search row even with no YTM album
+FILM_BAR = 1000         # vote_count floor for the film catalog walk, ~5k films
+TV_BAR = 500            # vote_count floor for the tv walk, ~1.1k shows
+TMDB_SRC_FILM = {"name": "tmdb-film", "type": "catalog"}
+TMDB_SRC_TV = {"name": "tmdb-tv", "type": "catalog"}
 IGDB_PAGE = 500
 STEAM_TARGET = 600      # most-reviewed soundtracks to ingest overall
 STEAM_PAGE = 50
@@ -112,6 +116,10 @@ def default_fetch(url):
         cutoff = int(time.time()) - IGDB_RECENT_YEARS * 365 * 86400
         return _igdb_query(f"rating_count >= {IGDB_RECENT_BAR} & first_release_date >= {cutoff}",
                            int(url.split(":", 1)[1]))
+    if url.startswith("tmdb-film:"):
+        return collect.tmdb_film_catalog(int(url.split(":", 1)[1]), FILM_BAR)
+    if url.startswith("tmdb-tv:"):
+        return collect.tmdb_tv_catalog(int(url.split(":", 1)[1]), TV_BAR)
     if url.startswith("igdb-gap:"):
         # fresh releases haven't had time to accumulate ratings, so the
         # recent leg's bar misses them wholesale — hype stands in for the
@@ -134,14 +142,20 @@ def load_state(path):
                     "igdbRecentOffset": int(d.get("igdbRecentOffset", 0)),
                     "igdbFranchiseOffset": int(d.get("igdbFranchiseOffset", 0)),
                     "igdbGapOffset": int(d.get("igdbGapOffset", 0)),
+                    "tmdbFilmOffset": int(d.get("tmdbFilmOffset", 1)),
+                    "tmdbTvOffset": int(d.get("tmdbTvOffset", 1)),
                     "gapChecked": list(d.get("gapChecked", [])),
                     "checked": list(d.get("checked", [])),
+                    "tmdbFilmChecked": list(d.get("tmdbFilmChecked", [])),
+                    "tmdbTvChecked": list(d.get("tmdbTvChecked", [])),
                     "resolveTried": list(d.get("resolveTried", []))}
     except (OSError, ValueError):
         pass
     return {"steamStart": 0, "igdbOffset": 0, "igdbRecentOffset": 0,
-            "igdbFranchiseOffset": 0, "igdbGapOffset": 0, "gapChecked": [],
-            "checked": [], "resolveTried": []}
+            "igdbFranchiseOffset": 0, "igdbGapOffset": 0,
+            "tmdbFilmOffset": 1, "tmdbTvOffset": 1, "gapChecked": [],
+            "checked": [], "tmdbFilmChecked": [], "tmdbTvChecked": [],
+            "resolveTried": []}
 
 
 def steam_leg(releases, state, fetch_fn, seen_at):
@@ -307,6 +321,81 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
     return added, exhausted, looked
 
 
+def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
+             offset_key, checked_key, cap):
+    """Film and TV catalog walk: one YTM check per candidate ever, one row
+    per film, one row per season album for TV, a real album or nothing.
+    Pages come pre-bundled with composers (and season air dates for TV)."""
+    prefix = "tmdb-film" if medium == "film" else "tmdb-tv"
+    src = TMDB_SRC_FILM if medium == "film" else TMDB_SRC_TV
+    checked = set(state.get(checked_key, []))
+    looked = added = 0
+    exhausted = False
+    while looked < cap and not exhausted:
+        try:
+            data = json.loads(fetch_fn(f"{prefix}:{state[offset_key]}"))
+        except Exception as exc:
+            print(f"::warning::{prefix} backfill page {state[offset_key]} failed: {exc}")
+            return added, False, looked
+        results = data.get("results", [])
+        if not results:
+            exhausted = True
+            break
+        gmap = data.get("genres", {})
+        page_done = True
+        for entry in results:
+            eid = entry.get("id")
+            name = ((entry.get("title") if medium == "film" else entry.get("name")) or "").strip()
+            date = entry.get("release_date") if medium == "film" else entry.get("first_air_date")
+            if eid is None or eid in checked:
+                continue
+            if not name or not date:
+                checked.add(eid)
+                continue
+            if looked >= cap:
+                page_done = False
+                break
+            looked += 1
+            composers = data.get("composers", {}).get(str(eid), [])
+            try:
+                found = resolve_fn(collect._query(name))
+                if medium == "film":
+                    hit = collect.match_film(found, name, int(date[:4]), composers)
+                    hits = [hit] if hit else []
+                else:
+                    hits = collect.tv_season_albums(found, name, int(date[:4]), composers)
+            except Exception:
+                continue  # transient lookup failure: leave unchecked, retry next run
+            checked.add(eid)
+            if not hits:
+                continue  # no confidently matching album: no row, ever
+            poster = entry.get("poster_path")
+            season_dates = data.get("seasons", {}).get(str(eid), {})
+            items = []
+            for hit in hits:
+                n = hit.get("season") if medium == "tv" else None
+                title = f"{name} Season {n} Soundtrack" if n else f"{name} Soundtrack"
+                items.append({
+                    "title": title, "albumTitle": hit["title"], "medium": medium,
+                    "game": name, "composers": hit["composers"],
+                    "genres": collect._tmdb_genres(entry, gmap),
+                    "url": f"https://www.themoviedb.org/{'movie' if medium == 'film' else 'tv'}/{eid}",
+                    "date": (season_dates.get(str(n)) if n else None) or date,
+                    "ytmAlbumUrl": hit["url"],
+                    "art": hit["art"] or (f"{collect.TMDB_IMG}{poster}" if poster else None)})
+            a, _ = collect.merge(releases, items, src, seen_at)
+            added += a
+        if page_done:
+            if state[offset_key] >= int(data.get("total_pages", 1)):
+                exhausted = True
+            else:
+                state[offset_key] += 1
+    state[checked_key] = sorted(checked)
+    print(f"{prefix} leg: {looked} lookups, {len(checked)} checked, {added} rows added"
+          + (", exhausted" if exhausted else ""))
+    return added, exhausted, looked
+
+
 TRACKS_CAP_BACKFILL = 250
 
 
@@ -318,6 +407,8 @@ def resolve_leg(releases, state, resolve_fn, cap):
     looked = filled = 0
     untried_left = False
     for r in releases:
+        if collect._medium(r) != "game":
+            continue  # the game matchers must never run on a film or show title
         if r.get("ytmAlbumUrl") or r["id"] in tried:
             continue
         name = r.get("game") or r["title"]
@@ -371,6 +462,7 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     releases = data["releases"]
     state = load_state(state_path)
     before = json.dumps(releases, sort_keys=True, ensure_ascii=False)
+    preexisting = {r["id"] for r in releases}
 
     seeds_leg(releases, fetch_fn, resolve_fn, seen_at)
     steam_leg(releases, state, fetch_fn, seen_at)
@@ -385,9 +477,20 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
                                    prefix="igdb-gap", offset_key="igdbGapOffset",
                                    cap=max(0, YTM_CAP - spent - spent2 - spent3),
                                    noalbum_bar=GAP_NOALBUM_BAR, checked_key="gapChecked")
+    _, film_done, spent5 = tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, "film",
+                                    "tmdbFilmOffset", "tmdbFilmChecked",
+                                    cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4))
+    _, tv_done, spent6 = tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, "tv",
+                                  "tmdbTvOffset", "tmdbTvChecked",
+                                  cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4 - spent5))
     resolve_done = resolve_leg(releases, state, resolve_fn,
-                               cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4))
-    igdb_done = top_done and recent_done and fran_done and gap_done and resolve_done
+                               cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4
+                                       - spent5 - spent6))
+    igdb_done = (top_done and recent_done and fran_done and gap_done
+                 and film_done and tv_done and resolve_done)
+    dropped = collect.drop_claimed_newcomers(releases, preexisting)
+    if dropped:
+        print(f"claimed-album guard: {dropped} newcomer rows dropped")
     fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL,
                                   tracks_dir=Path(data_path).parent / "tracks")
     print(f"tracklists: {fetched} looked up")

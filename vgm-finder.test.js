@@ -133,6 +133,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'the header row cannot wrap with the chip present');
   assert(d.querySelector('#colophon').textContent.includes('synced jul 28'),
     'the synced date lives in the colophon next to collected daily');
+  assert(d.querySelector('#colophon').textContent.includes('6 soundtracks'),
+    'the colophon counts soundtracks, not tracks');
 
   // ---------- album-name labels ----------
   assert(rowById('chrono-cross-the-radical-dreamers-edition').querySelector('.rtitle').textContent

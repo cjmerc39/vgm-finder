@@ -61,7 +61,13 @@ def igdb_fetch():
 
 
 def fetch_any(url):
-    return igdb_fetch() if url == IGDB_URL else fetch_feed(url)
+    if url == IGDB_URL:
+        return igdb_fetch()
+    if url == "tmdb:film":
+        return tmdb_film_fetch()
+    if url == "tmdb:tv":
+        return tmdb_tv_fetch()
+    return fetch_feed(url)
 
 
 _YT = None
@@ -747,6 +753,376 @@ def parse_igdb(raw, resolve):
     return items
 
 
+# ---------------- film and TV (Phase B, FILM-TV-SPEC) ----------------
+# Discovery (2026-09-12) measured the current matcher at 2/40 on screen
+# titles: film and TV albums wear wording the game rules reject on purpose.
+# The screen matcher below is its own lane: wording is mandatory, the
+# TMDb-credited composer vouches for the album, and the era window backs
+# up composer-less compilations. Verified 18/20 film, 15/20 TV in
+# simulation with zero tribute or knockoff acceptances.
+
+TMDB_FILM_WINDOW_DAYS = 14
+TMDB_FILM_VOTES = 5
+TMDB_TV_WINDOW_DAYS = 60   # season scores trail the premiere by weeks
+TMDB_TV_VOTES = 10
+TMDB_PAGES = 2             # discover pages per daily run, 20 titles each
+
+# suffix remnants left after normalize_title has eaten its own suffixes
+# ("Original Motion Picture Soundtrack" loses only the trailing word), plus
+# streaming-era series wording, catalogued from 320 live YTM album titles
+_SCREEN_TAILS = (
+    "music from the original motion picture",
+    "soundtrack from the motion picture",
+    "music from the motion picture",
+    "original motion picture score",
+    "original motion picture",
+    "music from the original",
+    "original score from the television series",
+    "original television series",
+    "original television",
+    "music from the original tv series",
+    "music from the original series",
+    "music from the tv series",
+    "soundtrack from the tv series",
+    "music from the hbo original series",
+    "music from the hbo series",
+    "hbo original series",
+    "soundtrack from the hbo original series",
+    "music from the limited event series",
+    "limited event series",
+    "soundtrack from the netflix original series",
+    "a netflix original series",
+    "netflix original series",
+    "soundtrack from the animated series",
+    "music from the series",
+    "music from the netflix original series",
+    "the complete recordings",
+    "expanded edition",
+    "deluxe edition",
+    "collector s anniversary edition",
+    "anniversary edition",
+    "remastered",
+    "the album",
+    "u s version",
+)
+_SCREEN_HEADS = ("soundtrack from the ", "soundtrack from ", "music from the ", "music from ")
+_SEASON_MARK = re.compile(r"\b(?:season|series)\s+(\d+)\b")
+_VOL_MARK = re.compile(r"\b(?:vol|volume)\s+(\d+)\b")   # Stranger Things counts seasons in volumes
+_CHAPTER_MARK = re.compile(r"\bchapters?\s+\d+(\s+\d+)?\b")  # episode markers, never a season
+
+# an album title must say it is a soundtrack; a bare name is never enough,
+# that is exactly how a TV row would steal The Last of Us game album
+_SCREEN_WORDING = re.compile(r"\b(soundtrack|score|music from|ost)\b", re.IGNORECASE)
+_SCREEN_REJECT = re.compile(
+    r"\b(inspired|tribute|karaoke|remix(es|ed)?|covers?|lullab|8.?bit|lo.?fi"
+    r"|music box|relaxing|piano (covers?|versions?|tributes?|renditions?)"
+    r"|orchestral adaptation|the best of|reimagined|anniversary celebration"
+    r"|video ?game|videogame)\b", re.IGNORECASE)
+
+# serial screen-knockoff acts seen in discovery, same doctrine as _COVERS_ARTISTS
+_SCREEN_TRIBUTE = {"the soundtrack studio stars", "the london film score orchestra",
+                   "the original movies orchestra", "movie sounds unlimited",
+                   "the hollywood symphony orchestra",
+                   "the hollywood symphony orchestra and voices",
+                   "the roy hamilton orchestra", "relaxing piano crew",
+                   "the o'neill brothers group", "john beal", "pink spirit",
+                   "rewindmusic", "the remix station", "chill bros studios",
+                   "tv hits", "jerrik dizlop", "tmc movie tunez", "tv theme band"}
+
+
+def normalize_screen(title):
+    """normalize_title, then the screen vocabulary: season and volume
+    markers fold away, motion-picture and series tails drop, and a leading
+    "Soundtrack From" unwraps. "Westworld: Season 1 (Music from the HBO
+    Series)" comes out as plain "westworld"."""
+    base = normalize_title(title)
+    t = _SEASON_MARK.sub(" ", base)
+    t = _VOL_MARK.sub(" ", t)
+    t = _CHAPTER_MARK.sub(" ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    stripped = True
+    while stripped:
+        stripped = False
+        t2 = normalize_title(t)  # an edition tail can hide a plain suffix behind it
+        if t2 != t:
+            t, stripped = t2, True
+        for tail in _SCREEN_TAILS:
+            if t.endswith(" " + tail):
+                t = t[: -len(tail)].strip()
+                stripped = True
+    for head in _SCREEN_HEADS:
+        if t.startswith(head) and len(t) > len(head) + 3:
+            t = t[len(head):]
+            break
+    return t or base
+
+
+def _season_of(title):
+    """The season an album belongs to, or None for miniseries and
+    per-episode releases. Explicit seasons outrank volume counting."""
+    norm = _numfold(normalize_title(title))
+    m = _SEASON_MARK.search(norm)
+    if m:
+        return int(m.group(1))
+    m = _VOL_MARK.search(norm)
+    return int(m.group(1)) if m else None
+
+
+def _screen_candidates(results, name, year, composers):
+    """Albums that could be this film or show's score: soundtrack wording
+    required, tribute acts and knockoff vocabulary rejected, then either
+    the TMDb-credited composer appears among the artists (era-free, real
+    albums reach streaming decades late) or the album year sits within the
+    era window. Subtitle drift (Star Wars vs A New Hope) passes only with
+    the composer aboard and never onto a numeral tail (Jaws 2, Part II)."""
+    want = _numfold(normalize_title(name))
+    comp = [normalize_title(c) for c in composers or [] if c]
+    out = []
+    for r in results or []:
+        if r.get("resultType") != "album" or not r.get("browseId"):
+            continue
+        title = r.get("title", "")
+        if _SCREEN_REJECT.search(title) or not _SCREEN_WORDING.search(title):
+            continue
+        artists = [a["name"] for a in r.get("artists", []) if a.get("name")]
+        if any(a.lower() in _COVERS_ARTISTS or a.lower() in _SCREEN_TRIBUTE for a in artists):
+            continue
+        n2 = _numfold(normalize_screen(title))
+        prefix = False
+        if n2 != want:
+            if not n2.startswith(want + " "):
+                continue
+            if re.match(r"^(part\s+)?\d", n2[len(want):].strip()):
+                continue  # a sequel wearing the base name
+            prefix = True
+        overlap = any(c and any(c in normalize_title(a) or normalize_title(a) in c
+                                for a in artists) for c in comp)
+        yr = None
+        try:
+            yr = int(r.get("year"))
+        except (TypeError, ValueError):
+            pass
+        near = yr is not None and year is not None and abs(yr - year) <= 2
+        if prefix and not overlap:
+            continue
+        if not overlap and not near:
+            continue
+        people = [a for a in artists if a.lower() != "various artists"
+                  and normalize_title(a) != normalize_title(name)]
+        thumbs = sorted((t for t in r.get("thumbnails", []) if t.get("url")),
+                        key=lambda t: t.get("width") or 0)
+        out.append({"title": title, "composers": list(composers or []) or people,
+                    "art": thumbs[-1]["url"] if thumbs else None,
+                    "url": "https://music.youtube.com/browse/" + r["browseId"],
+                    "season": _season_of(title), "overlap": overlap,
+                    "dist": abs(yr - year) if (yr is not None and year is not None) else 999})
+    return out
+
+
+def match_film(results, name, year, composers):
+    """One film, one album: composer-vouched first, then closest era."""
+    cands = _screen_candidates(results, name, year, composers)
+    cands.sort(key=lambda c: (not c["overlap"], c["dist"]))
+    return cands[0] if cands else None
+
+
+def tv_season_albums(results, show, year, composers):
+    """One row per season album: the best candidate for every season the
+    search surfaces, with season-less albums (miniseries, per-episode
+    scores) collapsing into a single unnumbered slot."""
+    best = {}
+    for c in _screen_candidates(results, show, year, composers):
+        key = c["season"]
+        cur = best.get(key)
+        if cur is None or (not c["overlap"], c["dist"]) < (not cur["overlap"], cur["dist"]):
+            best[key] = c
+    return [best[k] for k in sorted(best, key=lambda s: (s is None, s))]
+
+
+TMDB_IMG = "https://image.tmdb.org/t/p/w500"
+
+
+def _tmdb_get(path, **params):
+    key = os.environ.get("TMDB_API_KEY", "")
+    if not key:
+        raise RuntimeError("TMDB_API_KEY not set")
+    headers = {"User-Agent": USER_AGENT}
+    if key.startswith("eyJ"):
+        headers["Authorization"] = f"Bearer {key}"
+    else:
+        params["api_key"] = key
+    resp = requests.get(f"https://api.themoviedb.org/3/{path}", params=params,
+                        headers=headers, timeout=30)
+    resp.raise_for_status()
+    return resp.json()
+
+
+_TMDB_GMAP = {}
+
+
+def _tmdb_genre_map(kind):
+    if kind not in _TMDB_GMAP:
+        _TMDB_GMAP[kind] = {g["id"]: g["name"]
+                            for g in _tmdb_get(f"genre/{kind}/list").get("genres", [])}
+    return _TMDB_GMAP[kind]
+
+
+def tmdb_film_catalog(page, floor):
+    """One backfill page of films by vote count, bundled like the daily."""
+    d = _tmdb_get("discover/movie", page=page,
+                  **{"vote_count.gte": floor, "sort_by": "vote_count.desc"})
+    results = d.get("results", [])
+    composers = {}
+    for m in results:
+        crew = _tmdb_get(f"movie/{m['id']}/credits").get("crew", [])
+        composers[str(m["id"])] = [c["name"] for c in crew
+                                   if c.get("job") == "Original Music Composer"]
+    return json.dumps({"results": results, "genres": _tmdb_genre_map("movie"),
+                       "composers": composers,
+                       "total_pages": d.get("total_pages", 1)}).encode()
+
+
+def tmdb_tv_catalog(page, floor):
+    """One backfill page of shows by vote count, with aggregate composers
+    and per-season air dates."""
+    d = _tmdb_get("discover/tv", page=page,
+                  **{"vote_count.gte": floor, "sort_by": "vote_count.desc"})
+    results = d.get("results", [])
+    composers, seasons = {}, {}
+    for s in results:
+        crew = _tmdb_get(f"tv/{s['id']}/aggregate_credits").get("crew", [])
+        composers[str(s["id"])] = [c["name"] for c in crew
+                                   if any("composer" in (j.get("job") or "").lower()
+                                          for j in c.get("jobs", []))]
+        detail = _tmdb_get(f"tv/{s['id']}")
+        seasons[str(s["id"])] = {str(x["season_number"]): x.get("air_date")
+                                 for x in detail.get("seasons", [])
+                                 if x.get("season_number")}
+    return json.dumps({"results": results, "genres": _tmdb_genre_map("tv"),
+                       "composers": composers, "seasons": seasons,
+                       "total_pages": d.get("total_pages", 1)}).encode()
+
+
+def tmdb_film_fetch(now=None):
+    """Recent films above the vote floor, bundled with their credited
+    composers and the genre map so the parser needs no network."""
+    now = now or datetime.now(timezone.utc)
+    since = (now - timedelta(days=TMDB_FILM_WINDOW_DAYS)).strftime("%Y-%m-%d")
+    results = []
+    for page in range(1, TMDB_PAGES + 1):
+        d = _tmdb_get("discover/movie", page=page, **{
+            "primary_release_date.gte": since,
+            "primary_release_date.lte": now.strftime("%Y-%m-%d"),
+            "vote_count.gte": TMDB_FILM_VOTES, "sort_by": "vote_count.desc"})
+        results.extend(d.get("results", []))
+        if page >= d.get("total_pages", 1):
+            break
+    composers = {}
+    for m in results:
+        crew = _tmdb_get(f"movie/{m['id']}/credits").get("crew", [])
+        composers[str(m["id"])] = [c["name"] for c in crew
+                                   if c.get("job") == "Original Music Composer"]
+    return json.dumps({"results": results, "genres": _tmdb_genre_map("movie"),
+                       "composers": composers}).encode()
+
+
+def tmdb_tv_fetch(now=None):
+    """Recent shows above the vote floor, with composers from
+    aggregate_credits (18/20 in discovery vs 15/20 for plain credits) and
+    per-season air dates for row dating."""
+    now = now or datetime.now(timezone.utc)
+    since = (now - timedelta(days=TMDB_TV_WINDOW_DAYS)).strftime("%Y-%m-%d")
+    results = []
+    for page in range(1, TMDB_PAGES + 1):
+        d = _tmdb_get("discover/tv", page=page, **{
+            "first_air_date.gte": since, "first_air_date.lte": now.strftime("%Y-%m-%d"),
+            "vote_count.gte": TMDB_TV_VOTES, "sort_by": "vote_count.desc"})
+        results.extend(d.get("results", []))
+        if page >= d.get("total_pages", 1):
+            break
+    composers, seasons = {}, {}
+    for s in results:
+        crew = _tmdb_get(f"tv/{s['id']}/aggregate_credits").get("crew", [])
+        composers[str(s["id"])] = [c["name"] for c in crew
+                                   if any("composer" in (j.get("job") or "").lower()
+                                          for j in c.get("jobs", []))]
+        detail = _tmdb_get(f"tv/{s['id']}")
+        seasons[str(s["id"])] = {str(x["season_number"]): x.get("air_date")
+                                 for x in detail.get("seasons", [])
+                                 if x.get("season_number")}
+    return json.dumps({"results": results, "genres": _tmdb_genre_map("tv"),
+                       "composers": composers, "seasons": seasons}).encode()
+
+
+def _tmdb_genres(entry, gmap):
+    names = [gmap.get(str(g)) or gmap.get(g) for g in entry.get("genre_ids") or []]
+    return [n for n in names if n][:3] or None
+
+
+def parse_tmdb_film(raw, resolve):
+    data = json.loads(raw)
+    gmap = data.get("genres", {})
+    items, errors = [], 0
+    for m in data.get("results", []):
+        name = (m.get("title") or "").strip()
+        date = m.get("release_date") or m.get("primary_release_date")
+        if not name or not date:
+            continue
+        composers = data.get("composers", {}).get(str(m.get("id")), [])
+        try:
+            hit = match_film(resolve(_query(name)), name, int(date[:4]), composers)
+        except Exception:
+            errors += 1
+            continue
+        if not hit:
+            continue  # released film, but no confidently matching album
+        poster = m.get("poster_path")
+        items.append({
+            "title": f"{name} Soundtrack", "albumTitle": hit["title"],
+            "medium": "film", "game": name, "composers": hit["composers"],
+            "genres": _tmdb_genres(m, gmap),
+            "url": f"https://www.themoviedb.org/movie/{m.get('id')}",
+            "date": date, "ytmAlbumUrl": hit["url"],
+            "art": hit["art"] or (f"{TMDB_IMG}{poster}" if poster else None)})
+    if errors and not items:
+        raise RuntimeError(f"all {errors} album lookups failed")
+    return items
+
+
+def parse_tmdb_tv(raw, resolve):
+    data = json.loads(raw)
+    gmap = data.get("genres", {})
+    items, errors = [], 0
+    for s in data.get("results", []):
+        show = (s.get("name") or "").strip()
+        aired = s.get("first_air_date")
+        if not show or not aired:
+            continue
+        sid = str(s.get("id"))
+        composers = data.get("composers", {}).get(sid, [])
+        season_dates = data.get("seasons", {}).get(sid, {})
+        try:
+            hits = tv_season_albums(resolve(_query(show)), show, int(aired[:4]), composers)
+        except Exception:
+            errors += 1
+            continue
+        poster = s.get("poster_path")
+        for hit in hits:
+            n = hit["season"]
+            title = f"{show} Season {n} Soundtrack" if n else f"{show} Soundtrack"
+            date = (season_dates.get(str(n)) if n else None) or aired
+            items.append({
+                "title": title, "albumTitle": hit["title"],
+                "medium": "tv", "game": show, "composers": hit["composers"],
+                "genres": _tmdb_genres(s, gmap),
+                "url": f"https://www.themoviedb.org/tv/{s.get('id')}",
+                "date": date, "ytmAlbumUrl": hit["url"],
+                "art": hit["art"] or (f"{TMDB_IMG}{poster}" if poster else None)})
+    if errors and not items:
+        raise RuntimeError(f"all {errors} album lookups failed")
+    return items
+
+
 SOURCES = [
     # nowplaying.cool dropped 2026-07-30 at CJ's request: headline rows with
     # no art or game anchor read as noise next to catalog rows (the parser
@@ -760,6 +1136,10 @@ SOURCES = [
             "?query&start=0&count=25&category1=990&sort_by=Released_DESC&infinite=1&l=english&cc=US",
      "parse": parse_steam},
     {"name": "igdb", "type": "catalog", "url": IGDB_URL, "parse": parse_igdb},
+    # film and TV: TMDb plays the role IGDB plays; a missing TMDB_API_KEY
+    # warns and skips these two while everything else still runs
+    {"name": "tmdb-film", "type": "catalog", "url": "tmdb:film", "parse": parse_tmdb_film},
+    {"name": "tmdb-tv", "type": "catalog", "url": "tmdb:tv", "parse": parse_tmdb_tv},
 ]
 
 _PUNCT = re.compile(r"[^\w\s]", re.UNICODE)
@@ -947,6 +1327,8 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
     claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
     looked = filled = 0
     for r in releases:
+        if _medium(r) != "game":
+            continue  # film and tv rows are born with an album or not at all
         if not r.get("date") or r["date"] < cutoff:
             continue
         if r.get("ytmAlbumUrl") and r.get("art"):
@@ -1052,6 +1434,25 @@ def gaas_albums(releases, resolve, seen_at, names=None):
     return added, merged
 
 
+def drop_claimed_newcomers(releases, preexisting_ids):
+    """One album, one row, across mediums: a row born this run wearing an
+    album an earlier row already wears is dropped before it is ever
+    written. This is what keeps a film or TV row from stealing its
+    namesake game's album (The Last of Us, The Witcher)."""
+    seen = set()
+    kept, dropped = [], 0
+    for r in releases:
+        url = r.get("ytmAlbumUrl")
+        if url and url in seen and r["id"] not in preexisting_ids:
+            dropped += 1
+            continue
+        if url:
+            seen.add(url)
+        kept.append(r)
+    releases[:] = kept
+    return dropped
+
+
 def load_data(path):
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -1069,6 +1470,7 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     data = load_data(data_path)
     releases = data["releases"]
     before = json.dumps(releases, sort_keys=True, ensure_ascii=False)
+    preexisting = {r["id"] for r in releases}
 
     ok = 0
     for source in SOURCES:
@@ -1082,6 +1484,9 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     if ok == 0:
         print("::error::every source failed")
         return 1
+    dropped = drop_claimed_newcomers(releases, preexisting)
+    if dropped:
+        print(f"claimed-album guard: {dropped} newcomer rows dropped")
 
     looked, filled = resolve_albums(releases, resolve_fn, now)
     print(f"album resolver: {looked} lookups, {filled} filled")

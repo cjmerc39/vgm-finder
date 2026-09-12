@@ -934,7 +934,7 @@ function renderControls(){
     modeChips;
 }
 
-const SRC_LABEL = { igdb: 'catalog', ytm: 'catalog' };  // site names read fine; api names get friendly labels
+const SRC_LABEL = { igdb: 'catalog', ytm: 'catalog', 'tmdb-film': 'catalog', 'tmdb-tv': 'catalog' };  // site names read fine; api names get friendly labels
 
 function genreCounts(medium, sel){
   // counts come from the active medium's rows, so IGDB and TMDb genre
@@ -1300,7 +1300,7 @@ function renderColophon(){
   if(LOADSTATE !== 'ok'){ el.innerHTML = ''; return; }
   const h = hiddenRows().length;
   el.innerHTML =
-    `<span>${R.releases.length} tracks · collected daily 6am ET` +
+    `<span>${R.releases.length} soundtracks · collected daily 6am ET` +
     (R.updatedAt ? ' · synced ' + fmtDate(R.updatedAt).toLowerCase() : '') + `</span> · ` +
     (h ? `<button id="hidtoggle">${h} hidden · ${S.showHidden ? 'tuck away' : 'show'}</button> · ` : '') +
     `<button id="exp">export backup</button> · ` +

@@ -22,6 +22,8 @@ def make_fetch(counter=None):
             return b"[]"  # these legs are exercised by their own tests
         if "store.steampowered.com" in url:
             return raw("steam-top-soundtracks.json")
+        if url.startswith(("tmdb-film:", "tmdb-tv:")):
+            return json.dumps({"results": [], "total_pages": 1}).encode()  # legs exhaust clean
         raise AssertionError("unexpected url " + url)
     return fetch
 
@@ -210,3 +212,48 @@ def test_gap_leg_state_and_dispatch(tmp_path):
         noalbum_bar=backfill.GAP_NOALBUM_BAR, checked_key="gapChecked")
     assert (added, done, looked) == (1, True, 1)  # search row despite being checked
     assert state["gapChecked"] == [7] and state["checked"] == [7]  # own progress set
+
+
+def test_tmdb_legs_walk_pages_and_mark_checked():
+    from test_collect import screen_resolve
+    releases, state = [], backfill.load_state("missing")
+    fetch = lambda url: raw("tmdb-film.json") if url.startswith("tmdb-film:") \
+        else raw("tmdb-tv.json")
+    added, done, looked = backfill.tmdb_leg(
+        releases, state, fetch, screen_resolve, "2026-09-12T12:00:00Z",
+        "film", "tmdbFilmOffset", "tmdbFilmChecked", cap=250)
+    assert done and looked == 3      # every fixture film checked once
+    assert added == 2                # Mayday has no album: checked, no row
+    assert sorted(state["tmdbFilmChecked"]) == [111111, 693134, 872585]
+    assert all(r["medium"] == "film" for r in releases)
+
+    added, done, looked = backfill.tmdb_leg(
+        releases, state, fetch, screen_resolve, "2026-09-12T12:00:00Z",
+        "tv", "tmdbTvOffset", "tmdbTvChecked", cap=250)
+    assert done and looked == 2 and added == 6  # one row per season album
+    ids = [r["id"] for r in releases]
+    assert "tv-succession-season-3" in ids and "tv-the-last-of-us-season-1" in ids
+    tlou1 = next(r for r in releases if r["id"] == "tv-the-last-of-us-season-1")
+    assert tlou1["date"] == "2023-01-15" and tlou1["game"] == "The Last of Us"
+
+    # second pass: everything checked, zero lookups, nothing new
+    calls = []
+    def counting(q, limit=8):
+        calls.append(q)
+        return screen_resolve(q)
+    a2, d2, l2 = backfill.tmdb_leg(releases, state, fetch, counting,
+                                   "2026-09-13T12:00:00Z", "film",
+                                   "tmdbFilmOffset", "tmdbFilmChecked", cap=250)
+    assert (a2, d2, l2) == (0, True, 0) and calls == []
+
+
+def test_tmdb_leg_cap_interrupt_keeps_the_cursor():
+    from test_collect import screen_resolve
+    releases, state = [], backfill.load_state("missing")
+    fetch = lambda url: raw("tmdb-film.json")
+    added, done, looked = backfill.tmdb_leg(
+        releases, state, fetch, screen_resolve, "2026-09-12T12:00:00Z",
+        "film", "tmdbFilmOffset", "tmdbFilmChecked", cap=1)
+    assert looked == 1 and not done
+    assert state["tmdbFilmOffset"] == 1  # interrupted page replays next run
+    assert len(state["tmdbFilmChecked"]) == 1  # the checked film never re-spends its lookup

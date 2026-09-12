@@ -1028,3 +1028,126 @@ def test_write_tracklist_resets_cleanly(tmp_path):
     collect.write_tracklist(r, [], tmp_path)
     assert not (tmp_path / "x.json").exists()  # a reset check leaves no stale list
     assert r["tracksN"] == 0 and "playsTotal" not in r
+
+
+# ---------------- film and TV (Phase B) ----------------
+
+YTM_SCREEN = json.loads((FIXTURES / "ytm-screen.json").read_text(encoding="utf-8"))
+
+
+def screen_resolve(query, limit=8):
+    return YTM_SCREEN.get(query, [])
+
+
+def test_normalize_screen_folds_the_screen_vocabulary():
+    cases = {
+        "Westworld: Season 1 (Music from the HBO Series)": "westworld",
+        "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]": "interstellar",
+        "Stranger Things, Vol. 1 (A Netflix Original Series Soundtrack)": "stranger things",
+        "Breaking Bad: Original Score from the Television Series": "breaking bad",
+        "Soundtrack From Twin Peaks": "twin peaks",
+        "Chernobyl (Music from the Original TV Series)": "chernobyl",
+        "The Mandalorian: Chapter 1 (Original Score)": "the mandalorian",
+        "La La Land (Original Motion Picture Score)": "la la land",
+    }
+    for title, want in cases.items():
+        assert collect.normalize_screen(title) == want, title
+
+
+def test_season_numbers_come_from_seasons_and_volumes():
+    assert collect._season_of("Succession: Season 4 (HBO Original Series Soundtrack)") == 4
+    assert collect._season_of("Doctor Who - Series 8 (Original Television Soundtrack)") == 8
+    assert collect._season_of("Stranger Things, Vol. 2 (A Netflix Original Series Soundtrack)") == 2
+    assert collect._season_of("The Mandalorian: Chapter 1 (Original Score)") is None
+    assert collect._season_of("Chernobyl (Music from the Original TV Series)") is None
+    # an explicit season outranks a volume marker
+    assert collect._season_of("The Mandalorian: Season 2, Vol. 1 (Chapters 9-12)") == 2
+
+
+def test_match_film_prefers_the_credited_composer_over_knockoffs():
+    # the fixture carries a real knockoff: "Oppenheimer Soundtrack" by a
+    # remix mill, same year as the film
+    hit = collect.match_film(screen_resolve("Oppenheimer soundtrack"), "Oppenheimer", 2023,
+                             ["Ludwig Göransson"])
+    assert hit["title"] == "Oppenheimer (Original Motion Picture Soundtrack)"
+    assert hit["composers"] == ["Ludwig Göransson"]  # the TMDb credit, not the artist soup
+
+
+def test_match_film_never_takes_sequels_or_game_albums():
+    hit = collect.match_film(screen_resolve("Dune: Part Two soundtrack"), "Dune: Part Two", 2024,
+                             ["Hans Zimmer"])
+    assert hit["title"] == "Dune: Part Two (Original Motion Picture Soundtrack)"
+    # Jaws must wear neither Jaws 2 nor Jaws 3-D
+    hit = collect.match_film(screen_resolve("Jaws soundtrack"), "Jaws", 1975, ["John Williams"])
+    assert hit["title"] == "Jaws (Original Motion Picture Score)"
+
+
+def test_subtitle_drift_needs_the_composer_aboard():
+    results = screen_resolve("Star Wars soundtrack")
+    hit = collect.match_film(results, "Star Wars", 1977, ["John Williams"])
+    assert hit["title"] == "Star Wars: A New Hope (Original Motion Picture Soundtrack)"
+    assert collect.match_film(results, "Star Wars", 1977, []) is None
+
+
+def test_tv_yields_one_row_per_season_album():
+    hits = collect.tv_season_albums(screen_resolve("Succession soundtrack"), "Succession", 2018,
+                                    ["Nicholas Britell"])
+    assert [h["season"] for h in hits] == [1, 2, 3, 4]
+    assert all(h["composers"] == ["Nicholas Britell"] for h in hits)
+    titles = " | ".join(h["title"] for h in hits)
+    assert "Music from Succession" not in titles  # covers act stays out
+    assert "Piano Covers" not in titles           # knockoff wording stays out
+    assert "NIKKE" not in titles                  # the namesake game album stays out
+
+
+def test_tv_never_wears_the_namesake_game_album():
+    hits = collect.tv_season_albums(screen_resolve("The Last of Us soundtrack"), "The Last of Us",
+                                    2023, ["Gustavo Santaolalla", "David Fleming"])
+    assert [h["season"] for h in hits] == [1, 2]
+    assert all("HBO" in h["title"] for h in hits)  # never the 2013 game album or Part II
+
+
+def test_parse_tmdb_film_builds_film_rows():
+    items = collect.parse_tmdb_film(raw("tmdb-film.json"), screen_resolve)
+    assert [it["game"] for it in items] == ["Dune: Part Two", "Oppenheimer"]  # no album, no row
+    d2 = items[0]
+    assert d2["medium"] == "film" and d2["title"] == "Dune: Part Two Soundtrack"
+    assert d2["date"] == "2024-02-27" and d2["genres"] == ["Science Fiction", "Adventure"]
+    assert d2["ytmAlbumUrl"].startswith("https://music.youtube.com/browse/")
+    assert d2["art"].startswith("https://yt.example/")  # the YTM thumbnail comes first
+    assert d2["composers"] == ["Hans Zimmer"]
+
+
+def test_parse_tmdb_film_falls_back_to_the_poster():
+    bundle = json.loads(raw("tmdb-film.json").decode("utf-8"))
+    bundle["results"] = [r for r in bundle["results"] if r["title"] == "Oppenheimer"]
+    bare = {q: [dict(r, thumbnails=[]) for r in rs] for q, rs in YTM_SCREEN.items()}
+    items = collect.parse_tmdb_film(json.dumps(bundle).encode(),
+                                    lambda q, limit=8: bare.get(q, []))
+    assert items[0]["art"] == "https://image.tmdb.org/t/p/w500/oppie.jpg"
+
+
+def test_parse_tmdb_tv_dates_rows_by_season():
+    items = collect.parse_tmdb_tv(raw("tmdb-tv.json"), screen_resolve)
+    assert len(items) == 6  # Succession seasons 1-4 plus The Last of Us seasons 1-2
+    s2 = next(it for it in items if it["title"] == "Succession Season 2 Soundtrack")
+    assert s2["medium"] == "tv" and s2["date"] == "2019-08-11" and s2["game"] == "Succession"
+    releases = []
+    collect.merge(releases, items, src("tmdb-tv", "catalog"), SEEN)
+    ids = [r["id"] for r in releases]
+    assert "tv-succession-season-1" in ids and "tv-the-last-of-us-season-2" in ids
+    assert all(r["medium"] == "tv" for r in releases)
+
+
+def test_claimed_albums_never_leave_their_first_row():
+    releases = [
+        {"id": "the-last-of-us", "medium": "game", "title": "The Last of Us Soundtrack",
+         "sources": [], "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_tlou"},
+        {"id": "tv-imposter", "medium": "tv", "title": "Imposter Soundtrack",
+         "sources": [], "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_tlou"},
+    ]
+    dropped = collect.drop_claimed_newcomers(releases, {"the-last-of-us"})
+    assert dropped == 1 and [r["id"] for r in releases] == ["the-last-of-us"]
+    # both preexisting: published rows are never deleted
+    two = [{"id": "a", "ytmAlbumUrl": "u"}, {"id": "b", "ytmAlbumUrl": "u"}]
+    assert collect.drop_claimed_newcomers(two, {"a", "b"}) == 0 and len(two) == 2

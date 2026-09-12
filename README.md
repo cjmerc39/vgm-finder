@@ -30,6 +30,16 @@ plus a year-jump picker and a back-to-top control.
 | [VGMO](https://vgmonline.net) | editorial, long-form game music writing | `News` + `Album Reviews` |
 | Steam Soundtracks | catalog: every album shipped on Steam | newest 25, released only |
 | IGDB + YT Music | catalog: notable game releases that have a real album | last 14 days, hypes ≥ 5, strict album match |
+| TMDb film + YT Music | catalog: film scores with a real album | last 14 days, 5+ votes, composer-vouched match |
+| TMDb TV + YT Music | catalog: one row per season score album | last 60 days, 10+ votes, composer-vouched match |
+
+Film and TV rows follow the game rules with a screen-specific matcher:
+the album must carry soundtrack wording, tribute and karaoke acts are
+rejected, and the composer TMDb credits ("Original Music Composer" for
+film, `aggregate_credits` for TV) has to appear among the album artists,
+with the release era as fallback. A film with no findable score album is
+skipped, never seeded. `TMDB_API_KEY` (free at themoviedb.org) rides in
+Actions secrets; without it the two TMDb sources warn and skip.
 
 On equal dates the list ranks editorial picks above catalog rows above
 community rows (a few early community rows remain in the data from v1).
