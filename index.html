@@ -51,11 +51,10 @@ input:focus{outline:1px solid var(--amberdim)}
 #qwrap input{padding-right:42px}
 #qclear{display:none;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:36px;height:36px;color:var(--dim);font-size:14px}
 #qwrap.has #qclear{display:block}
-#subctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-#subctl select{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--mut);
-  background:var(--bg3);border:1px solid var(--line);border-radius:99px;padding:6px 10px;-webkit-appearance:none;appearance:none}
+#subctl{display:flex;gap:6px;align-items:center;flex-wrap:nowrap}
 #subctl:not(:empty){margin-top:8px}
-#subctl button{flex:0 0 auto;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim);
+#subctl button{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim);
   border:1px solid var(--line);border-radius:99px;padding:6px 13px}
 #subctl button.on{color:var(--amber2);border-color:var(--amberdim)}
 
@@ -232,6 +231,28 @@ a.xsrc{text-decoration:none}
 #sheet .sactions{display:flex;align-items:center;gap:14px;margin-top:16px}
 #sh-save{background:var(--amber);color:#241a08;font-weight:700;letter-spacing:2px;border-radius:10px;padding:12px 26px;font-size:13px}
 #sh-unlog{color:var(--dim);font-size:11px;letter-spacing:.5px;text-decoration:underline;text-underline-offset:2px}
+
+/* control sheets: the picker sheet, parameterised (sorts, filters, years) */
+#sheet.ctrl{max-height:70vh;display:flex;flex-direction:column}
+#sheet .shbody{overflow-y:auto;min-height:0;-webkit-overflow-scrolling:touch}
+.shrow{display:flex;width:100%;align-items:center;gap:10px;min-height:44px;padding:10px 4px;
+  border-bottom:1px solid var(--line);color:var(--mut);font-size:14px}
+.shrow:active{background:var(--bg3)}
+.shrow .shl{flex:1;min-width:0;text-align:left;overflow-wrap:anywhere}
+.shrow .shr{color:var(--dim);font-size:12px;white-space:nowrap}
+.shrow[disabled]{opacity:.45}
+.shseg{display:flex;gap:6px;margin:4px 0 8px}
+.shseg button{flex:1;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);
+  border:1px solid var(--line);border-radius:99px;padding:9px 4px}
+.shseg button.on{color:var(--amber2);border-color:var(--amberdim)}
+.shseg button[disabled]{opacity:.45}
+.shnote{color:var(--dim);font-size:11px;margin:2px 0 8px}
+.shfoot{display:flex;justify-content:space-between;margin-top:12px;flex:none}
+.shfoot button{color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
+  border:1px solid var(--amberdim);border-radius:9px;padding:9px 15px}
+#subctl .fchip{flex-shrink:1000}  /* the label chip gives way first; sort and year stay whole */
+#hrandom{margin:-12px 0 -12px 2px;padding:12px 14px;color:var(--dim);font-size:11px;white-space:nowrap}
+#hrandom:active{color:var(--amber)}
 </style>
 </head>
 <body>
@@ -239,6 +260,7 @@ a.xsrc{text-decoration:none}
   <h1>VGM FINDER</h1>
   <span class="sub">Sound Test</span>
   <span id="sync"></span>
+  <button id="hrandom" aria-label="Random soundtrack">▸</button>
 </header>
 <div id="controls">
   <div id="qwrap">
@@ -269,6 +291,7 @@ let TRACKNO = {};                             // id -> position in the append-on
 let Q = '';                                   // search text, deliberately not persisted
 let SHEET = null;                             // {id, draft} while the logging sheet is open
 let CPICK = null;                             // {rid, t, from?} save-to-playlist picker, or {create:true} from the library
+let CSHEET = null;                            // which control sheet is open: feedsort | filters | year | libsort | plyear | plgenre
 let TOAST = null;                             // {msg, song?} transient snackbar
 let TOAST_TIMER = 0;
 let CPLDEL = null;                            // playlist id armed for delete (two-tap, no native confirm)
@@ -410,15 +433,19 @@ function editEntry(id, fn){
   if(isBlank(e)) delete S.entries[id];
   save(); renderAll();
 }
-function setView(v){ if(VIEWS.includes(v)){ S.view = v; save(); ensureViewTracks(); renderAll(); } }
+function setView(v){ if(VIEWS.includes(v)){ S.view = v; CSHEET = null; save(); ensureViewTracks(); renderAll(); } }
 function setFeedMedium(m){ if(MEDIUMS.includes(m)){ S.feedMedium = m; save(); renderAll(); } }
-function setLibMedium(m){ if(MEDIUMS.includes(m)){ S.libMedium = m; save(); renderAll(); } }
 function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
 function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
 function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(); }
 function setFeedGenre(g){ S.feedGenre = g || 'all'; save(); renderAll(); }
+function clearFeedFilters(){
+  S.feedCo = 'all'; S.feedConsole = false; S.feedGenre = 'all'; S.feedMedium = 'all';
+  save(); renderAll();
+}
 function randomListen(){
+  if(S.view !== 'feed'){ S.view = 'feed'; save(); renderAll(); }  // random always picks from the feed
   const rows = searched(feedRows());
   if(!rows.length) return;
   const i = Math.floor(Math.random() * rows.length);
@@ -456,7 +483,7 @@ function toggleTrackLike(id, title){ editEntry(id, e => {
     ? e.likedTracks.filter(t => fold(t) !== f)
     : e.likedTracks.concat([title]);  // store the display title; compare folded
 }); }
-function setLibView(v){ if(LIB_VIEWS.includes(v)){ S.libView = v; save(); ensureViewTracks(); renderAll(); } }
+function setLibView(v){ if(LIB_VIEWS.includes(v)){ S.libView = v; CSHEET = null; save(); ensureViewTracks(); renderAll(); } }
 function setPlYear(y){ S.plYear = /^\d{4}$/.test(y) ? y : 'all'; save(); renderAll(); }
 function setPlGenre(g){ S.plGenre = g || 'all'; save(); renderAll(); }
 function toggleShowHidden(){ S.showHidden = !S.showHidden; save(); renderAll(); }
@@ -866,42 +893,32 @@ function renderTabs(){
     `<span class="lbl">${t.label}</span>${t.extra}</button>`).join('');
 }
 
-const MEDIUM_CHIPS = [['all', 'all'], ['game', 'games'], ['film', 'film'], ['tv', 'tv']];
 function multiMedium(){ return R.releases.some(r => mediumOf(r) !== 'game'); }
-function mediumChipsHtml(attr, sel){
-  // the chip row only earns its place once a second medium exists in the data
-  if(!multiMedium()) return '';
-  return MEDIUM_CHIPS.map(([k, name]) =>
-    `<button data-${attr}="${k}" class="${sel === k ? 'on' : ''}">${name}</button>`).join('');
-}
-function yjumpHtml(){
-  if(S.feedSort !== 'date' && S.feedSort !== 'oldest') return '';
-  const years = [];
-  for(const r of searched(feedRows())){
-    const y = (r.date || '').slice(0, 4) || '····';
-    if(!years.includes(y)) years.push(y);
+const SORT_NAMES = { date: 'newest', oldest: 'oldest', az: 'a–z', added: 'added', plays: 'most played' };
+const LIB_SORT_NAMES = { listenedOn: 'heard on', rating: 'rating', date: 'released' };
+const MEDIUM_NAMES = { all: 'all', game: 'games', film: 'film', tv: 'tv' };
+function feedFilterBits(){
+  // chip label order is fixed: company tier, console, genre, medium; the
+  // game-only pair only reads out while the medium actually applies it
+  const bits = [];
+  if(gamesShown('feedMedium')){
+    if(S.feedCo !== 'all') bits.push(S.feedCo === 'big' ? 'big studios' : 'indie');
+    if(S.feedConsole) bits.push('console');
   }
-  if(years.length < 2) return '';
-  return `<select id="yjump" aria-label="Jump to a year">` +
-    `<option value="" selected>year ⇢</option>` +
-    years.map(y => `<option value="${esc(y)}">${esc(y)}</option>`).join('') + `</select>`;
+  if(S.feedGenre !== 'all') bits.push(S.feedGenre.toLowerCase());
+  if(S.feedMedium !== 'all') bits.push(MEDIUM_NAMES[S.feedMedium]);
+  return bits;
 }
 function renderControls(){
   const el = document.getElementById('subctl');
   if(S.view === 'feed'){
-    const sorts = [['date', 'newest'], ['oldest', 'oldest'], ['az', 'a–z'], ['added', 'added'], ['plays', 'most played']];
-    const cos = [['all', 'all'], ['big', 'big studios'], ['indie', 'indie']];
-    el.innerHTML = mediumChipsHtml('fm', S.feedMedium) +
-      sorts.map(([k, name]) =>
-      `<button data-fs="${k}" class="${S.feedSort === k ? 'on' : ''}">${name}</button>`).join('') +
-      (gamesShown('feedMedium')
-        ? cos.map(([k, name]) =>
-          `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('') +
-          `<button id="fconsole" class="${S.feedConsole ? 'on' : ''}" aria-pressed="${S.feedConsole}">console</button>`
-        : '') +
-      genreSelectHtml('fgenre', S.feedGenre, S.feedMedium) +
-      yjumpHtml() +
-      `<button id="frandom" aria-label="Listen to a random soundtrack">random ▸</button>`;
+    // one row, three chips, never a fourth: sort, filters, year
+    const bits = feedFilterBits();
+    el.innerHTML =
+      `<button id="c-sort" aria-haspopup="dialog">${esc(SORT_NAMES[S.feedSort])} ▾</button>` +
+      `<button id="c-filters" class="fchip${bits.length ? ' on' : ''}" aria-haspopup="dialog">` +
+        `${esc(bits.length ? 'filters · ' + bits.join(', ') : 'filters')}</button>` +
+      `<button id="c-year" aria-haspopup="dialog">year ▾</button>`;
     return;
   }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
@@ -909,44 +926,53 @@ function renderControls(){
     `<button id="libsongs" class="${S.libView === 'songs' ? 'on' : ''}" aria-pressed="${S.libView === 'songs'}">♥ songs</button>` +
     `<button id="libpl" class="${S.libView === 'playlists' ? 'on' : ''}" aria-pressed="${S.libView === 'playlists'}">playlists</button>`;
   if(S.libView === 'songs'){ el.innerHTML = modeChips; return; }
-  if(S.libView === 'playlists'){ el.innerHTML = modeChips + plYearSelectHtml() + genreSelectHtml('plgenre', S.plGenre); return; }
-  const sorts = [['listenedOn', 'heard on'], ['rating', 'rating'], ['date', 'released']];
-  el.innerHTML = mediumChipsHtml('lm', S.libMedium) +
-    sorts.map(([k, name]) =>
-    `<button data-ls="${k}" class="${S.libSort === k ? 'on' : ''}">${name}</button>`).join('') +
+  if(S.libView === 'playlists'){
+    el.innerHTML = modeChips +
+      `<button id="c-plyear" class="${S.plYear !== 'all' ? 'on' : ''}" aria-haspopup="dialog">` +
+        `${esc(S.plYear === 'all' ? 'year' : S.plYear)} ▾</button>` +
+      `<button id="c-plgenre" class="fchip${S.plGenre !== 'all' ? ' on' : ''}" aria-haspopup="dialog">` +
+        `${esc(S.plGenre === 'all' ? 'genre' : S.plGenre.toLowerCase())} ▾</button>`;
+    return;
+  }
+  el.innerHTML =
+    `<button id="c-libsort" aria-haspopup="dialog">${esc(LIB_SORT_NAMES[S.libSort])} ▾</button>` +
     `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>` +
     modeChips;
 }
 
 const SRC_LABEL = { igdb: 'catalog', ytm: 'catalog' };  // site names read fine; api names get friendly labels
 
-function genreSelectHtml(id, sel, medium){
-  // options come from the active medium's rows, so IGDB and TMDb genre
-  // vocabularies never mix in one dropdown
+function genreCounts(medium, sel){
+  // counts come from the active medium's rows, so IGDB and TMDb genre
+  // vocabularies never mix in one list
   const counts = {};
   for(const r of R.releases){
     if(medium && medium !== 'all' && mediumOf(r) !== medium) continue;
     for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
   }
   const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 24);
-  if(!names.length) return '';
-  if(sel !== 'all' && !names.includes(sel)) names.push(sel);
-  return `<select id="${id}" aria-label="Genre">` +
-    `<option value="all"${sel === 'all' ? ' selected' : ''}>genre: all</option>` +
-    names.map(n => `<option value="${esc(n)}"${sel === n ? ' selected' : ''}>${esc(n.toLowerCase())}</option>`).join('') +
-    `</select>`;
+  if(sel && sel !== 'all' && !names.includes(sel)) names.push(sel);
+  return names.map(n => [n, counts[n] || 0]);
 }
 
-function plYearSelectHtml(){
+function plYearList(){
   const years = new Set();
   for(const r of R.releases){ const y = (r.date || '').slice(0, 4); if(/^\d{4}$/.test(y)) years.add(y); }
   const list = [...years].sort().reverse();
   if(S.plYear !== 'all' && !list.includes(S.plYear)) list.push(S.plYear);
-  if(!list.length) return '';
-  return `<select id="plyear" aria-label="Year">` +
-    `<option value="all"${S.plYear === 'all' ? ' selected' : ''}>year: all</option>` +
-    list.map(y => `<option value="${esc(y)}"${S.plYear === y ? ' selected' : ''}>${esc(y)}</option>`).join('') +
-    `</select>`;
+  return list;
+}
+
+function yearCounts(){
+  // years present in the current filtered feed, newest first, undated last
+  const counts = {};
+  for(const r of searched(feedRows())){
+    const y = (r.date || '').slice(0, 4) || '····';
+    counts[y] = (counts[y] || 0) + 1;
+  }
+  const ys = Object.keys(counts).filter(y => y !== '····').sort().reverse();
+  if(counts['····']) ys.push('····');
+  return ys.map(y => [y, counts[y]]);
 }
 
 function pubBtnHtml(key, n, tok){
@@ -1239,7 +1265,8 @@ function jumpToYear(y){
   pageSlice(rows);  // sync PAGE_KEY first so the bump below survives the render
   PAGE_N = Math.max(PAGE_N, Math.ceil((idx + 1) / PAGE));
   renderList();
-  const head = [...document.querySelectorAll('#list .yhead')].find(h => h.textContent === y);
+  const head = [...document.querySelectorAll('#list .yhead')].find(h => h.textContent === y)
+    || document.querySelector(`#list .row[data-id="${rows[idx].id}"]`);  // no rails outside date sorts: land on the year's first row
   if(head && head.scrollIntoView) head.scrollIntoView({ block: 'start', behavior: motionOk() ? 'smooth' : 'auto' });
 }
 function renderList(){
@@ -1299,9 +1326,86 @@ function pickerHtml(){
     <button id="cp-create">create</button></div>
   </div>`;
 }
+function shPickRow(attr, val, label, right){
+  return `<button class="shrow" data-${attr}="${esc(val)}"><span class="shl">${esc(label)}</span>` +
+    `<span class="shr">${right}</span></button>`;
+}
+function csheetHtml(){
+  // one sheet component for every control: sorts, filters, year jumps
+  let label = '', body = '', footer = '';
+  if(CSHEET === 'feedsort' || CSHEET === 'libsort'){
+    label = 'Sort';
+    const feed = CSHEET === 'feedsort';
+    const defs = feed
+      ? [['date', 'newest'], ['oldest', 'oldest'], ['az', 'a–z'], ['added', 'added'], ['plays', 'most played']]
+      : [['listenedOn', 'heard on'], ['rating', 'rating'], ['date', 'released']];
+    const cur = feed ? S.feedSort : S.libSort;
+    body = defs.map(([k, name]) =>
+      `<button class="shrow" data-${feed ? 'shsort' : 'shlsort'}="${k}">` +
+      `<span class="shl">${cur === k ? '✓ ' : ''}${name}</span></button>`).join('');
+  } else if(CSHEET === 'year'){
+    label = 'Jump to a year';
+    const ys = yearCounts();
+    body = ys.length ? ys.map(([y, n]) => shPickRow('shyear', y, y, n)).join('')
+                     : `<div class="shnote">nothing in the current list</div>`;
+  } else if(CSHEET === 'plyear'){
+    label = 'Year';
+    body = shPickRow('shplyear', 'all', 'all', S.plYear === 'all' ? '✓' : '') +
+      plYearList().map(y => shPickRow('shplyear', y, y, S.plYear === y ? '✓' : '')).join('');
+  } else if(CSHEET === 'plgenre'){
+    label = 'Genre';
+    body = shPickRow('shplgenre', 'all', 'all', S.plGenre === 'all' ? '✓' : '') +
+      genreCounts('all', S.plGenre).map(([g]) =>
+        shPickRow('shplgenre', g, g.toLowerCase(), S.plGenre === g ? '✓' : '')).join('');
+  } else {  // filters
+    label = 'Filters';
+    const gamey = gamesShown('feedMedium');
+    const dis = gamey ? '' : ' disabled';
+    const seg = (attr, val, name, on, d) =>
+      `<button data-${attr}="${val}"${d || ''} class="${on ? 'on' : ''}">${name}</button>`;
+    body =
+      `<div class="slab">Scope</div>` +
+      `<div class="shseg">` +
+        seg('shco', 'all', 'all', S.feedCo === 'all', dis) +
+        seg('shco', 'big', 'big studios', S.feedCo === 'big', dis) +
+        seg('shco', 'indie', 'indie', S.feedCo === 'indie', dis) + `</div>` +
+      `<button class="shrow" id="shconsole"${dis} aria-pressed="${S.feedConsole}">` +
+        `<span class="shl">console</span><span class="shr">${S.feedConsole ? '✓' : ''}</span></button>` +
+      (gamey ? '' : `<div class="shnote">games only</div>`) +
+      `<div class="slab">Genre</div>` +
+      shPickRow('shgenre', 'all', 'all', S.feedGenre === 'all' ? '✓' : '') +
+      genreCounts(S.feedMedium, S.feedGenre).map(([g, n]) =>
+        shPickRow('shgenre', g, g.toLowerCase(), `${n}${S.feedGenre === g ? ' ✓' : ''}`)).join('') +
+      (multiMedium()
+        ? `<div class="slab">Medium</div><div class="shseg">` +
+          seg('shmed', 'all', 'all', S.feedMedium === 'all') +
+          seg('shmed', 'game', 'games', S.feedMedium === 'game') +
+          seg('shmed', 'film', 'film', S.feedMedium === 'film') +
+          seg('shmed', 'tv', 'tv', S.feedMedium === 'tv') + `</div>`
+        : '');
+    footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
+  }
+  return `<div id="scrim"></div>` +
+    `<div id="sheet" class="ctrl" role="dialog" aria-modal="true" aria-label="${esc(label)}">` +
+    `<div class="shbody">${body}</div>${footer}</div>`;
+}
 function renderSheet(){
   const wrap = document.getElementById('sheetwrap');
+  if(CPICK && CSHEET) CSHEET = null;  // the save picker takes the sheet over cleanly
   if(CPICK){ wrap.innerHTML = pickerHtml(); return; }
+  if(CSHEET){
+    const prev = wrap.querySelector('#sheet .shbody');
+    const scroll = prev ? prev.scrollTop : null;
+    wrap.innerHTML = csheetHtml();
+    if(scroll != null){
+      // live-apply re-render: keep the scroll spot, skip the slide-up replay
+      const sh = wrap.querySelector('#sheet');
+      sh.style.animation = 'none';
+      const body = sh.querySelector('.shbody');
+      if(body) body.scrollTop = scroll;
+    }
+    return;
+  }
   if(!SHEET){ wrap.innerHTML = ''; return; }
   const r = byId(SHEET.id) || { title: SHEET.id };
   const d = SHEET.draft;
@@ -1416,21 +1520,16 @@ document.querySelector('#tabbar .trow').addEventListener('click', e => {
   if(b) setView(b.dataset.v);
 });
 document.getElementById('subctl').addEventListener('click', e => {
-  const f = e.target.closest('button[data-fs]');
-  if(f){ setFeedSort(f.dataset.fs); return; }
-  const c = e.target.closest('button[data-fc]');
-  if(c){ setFeedCo(c.dataset.fc); return; }
-  const fm = e.target.closest('button[data-fm]');
-  if(fm){ setFeedMedium(fm.dataset.fm); return; }
-  const lm = e.target.closest('button[data-lm]');
-  if(lm){ setLibMedium(lm.dataset.lm); return; }
-  if(e.target.closest('#fconsole')){ toggleFeedConsole(); return; }
-  if(e.target.closest('#frandom')){ randomListen(); return; }
-  const s = e.target.closest('button[data-ls]');
-  if(s){ setLibSort(s.dataset.ls); return; }
+  const open = [['#c-sort', 'feedsort'], ['#c-filters', 'filters'], ['#c-year', 'year'],
+                ['#c-libsort', 'libsort'], ['#c-plyear', 'plyear'], ['#c-plgenre', 'plgenre']]
+    .find(([sel]) => e.target.closest(sel));
+  if(open){ CSHEET = open[1]; renderSheet(); return; }
   if(e.target.closest('#libliked')){ toggleLibLiked(); return; }
   if(e.target.closest('#libsongs')){ setLibView(S.libView === 'songs' ? 'albums' : 'songs'); return; }
   if(e.target.closest('#libpl')) setLibView(S.libView === 'playlists' ? 'albums' : 'playlists');
+});
+document.getElementById('topbar').addEventListener('click', e => {
+  if(e.target.closest('#hrandom')) randomListen();
 });
 document.getElementById('colophon').addEventListener('click', e => {
   if(e.target.closest('#hidtoggle')){ toggleShowHidden(); return; }
@@ -1442,16 +1541,6 @@ document.getElementById('colophon').addEventListener('change', e => {
     IMPMSG = applyImport(t) ? 'imported ✓' : 'import failed: not a vgm-finder backup';
     renderAll();
   });
-});
-document.getElementById('subctl').addEventListener('change', e => {
-  if(e.target.id === 'fgenre') setFeedGenre(e.target.value);
-  else if(e.target.id === 'plyear') setPlYear(e.target.value);
-  else if(e.target.id === 'plgenre') setPlGenre(e.target.value);
-  else if(e.target.id === 'yjump' && e.target.value){
-    const y = e.target.value;
-    e.target.value = '';  // it is a jump control, not a filter: snap back
-    jumpToYear(y);
-  }
 });
 document.getElementById('q').addEventListener('input', e => {
   document.getElementById('qwrap').classList.toggle('has', !!e.target.value);
@@ -1467,6 +1556,28 @@ document.getElementById('qclear').addEventListener('click', () => {
 
 const sheetwrap = document.getElementById('sheetwrap');
 sheetwrap.addEventListener('click', e => {
+  if(CSHEET){
+    if(e.target.id === 'scrim' || e.target.closest('#shdone')){ CSHEET = null; renderSheet(); return; }
+    const fs = e.target.closest('[data-shsort]');
+    if(fs){ CSHEET = null; setFeedSort(fs.dataset.shsort); return; }
+    const ls = e.target.closest('[data-shlsort]');
+    if(ls){ CSHEET = null; setLibSort(ls.dataset.shlsort); return; }
+    const y = e.target.closest('[data-shyear]');
+    if(y){ CSHEET = null; renderSheet(); jumpToYear(y.dataset.shyear); return; }
+    const co = e.target.closest('[data-shco]');
+    if(co){ setFeedCo(co.dataset.shco); return; }        // filters apply live; the sheet stays open
+    if(e.target.closest('#shconsole')){ toggleFeedConsole(); return; }
+    const g = e.target.closest('[data-shgenre]');
+    if(g){ setFeedGenre(g.dataset.shgenre); return; }
+    const m = e.target.closest('[data-shmed]');
+    if(m){ setFeedMedium(m.dataset.shmed); return; }
+    const py = e.target.closest('[data-shplyear]');
+    if(py){ CSHEET = null; setPlYear(py.dataset.shplyear); return; }
+    const pg = e.target.closest('[data-shplgenre]');
+    if(pg){ CSHEET = null; setPlGenre(pg.dataset.shplgenre); return; }
+    if(e.target.closest('#shclear')){ clearFeedFilters(); return; }
+    return;
+  }
   if(CPICK){
     if(e.target.id === 'scrim'){ CPICK = null; renderSheet(); return; }
     const row = e.target.closest('[data-cpick]');
@@ -1519,10 +1630,28 @@ document.getElementById('albumwrap').addEventListener('click', e => {
 });
 window.addEventListener('keydown', e => {
   if(e.key !== 'Escape') return;
-  if(CPICK){ CPICK = null; renderSheet(); }
+  if(CSHEET){ CSHEET = null; renderSheet(); }
+  else if(CPICK){ CPICK = null; renderSheet(); }
   else if(SHEET) closeLog();
   else if(ALBUM) closeAlbum();
 });
+let SHEET_Y0 = null;
+sheetwrap.addEventListener('touchstart', e => {
+  // control sheets and the picker dismiss on swipe; the logging sheet never
+  // does, because a stray drag there would discard the draft. A swipe that
+  // starts inside a scrolled list is a scroll, not a dismiss.
+  const body = e.target.closest('.shbody');
+  SHEET_Y0 = (CSHEET || CPICK) && e.target.closest('#sheet') && !(body && body.scrollTop > 0)
+    ? e.touches[0].clientY : null;
+}, { passive: true });
+sheetwrap.addEventListener('touchend', e => {
+  if(SHEET_Y0 == null) return;
+  const dy = e.changedTouches[0].clientY - SHEET_Y0;
+  SHEET_Y0 = null;
+  if(dy <= 60) return;
+  if(CSHEET){ CSHEET = null; renderSheet(); }
+  else if(CPICK){ CPICK = null; renderSheet(); }
+}, { passive: true });
 document.getElementById('toastwrap').addEventListener('click', e => {
   if(e.target.id !== 'toast-change' || !TOAST || !TOAST.song) return;
   CPICK = { rid: TOAST.song.rid, t: TOAST.song.t, from: TOAST.song.from };

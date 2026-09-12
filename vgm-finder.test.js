@@ -85,6 +85,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   const stored = () => JSON.parse(w.localStorage.getItem('vgm-v1'));
   const tab = (v) => d.querySelector(`#tabbar button[data-v="${v}"]`);
   const S = (expr) => w.eval(expr);
+  const inSheet = (dd, sel) => dd.querySelector('#sheetwrap ' + sel);
+  const sheetEl = (dd) => dd.querySelector('#sheetwrap #sheet');
+  const pickFeedSort = async (k) => { d.querySelector('#c-sort').click(); inSheet(d, `[data-shsort="${k}"]`).click(); await sleep(20); };
 
   assert(errors.length === 0, 'no runtime errors on boot' + (errors.length ? ' -> ' + errors.join(' | ') : ''));
 
@@ -129,55 +132,96 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rowById('fresh-drop').querySelector('.rtitle').textContent.startsWith('Fresh Drop'),
     'rows without a resolved album keep their title');
 
-  // ---------- feed sort control ----------
-  assert(d.querySelectorAll('#subctl button[data-fs]').length === 5, 'feed offers five sorts');
-  d.querySelector('#subctl button[data-fs="oldest"]').click(); await sleep(20);
+  // ---------- feed sort chip + sheet ----------
+  assert(d.querySelectorAll('#subctl button').length === 3, 'feed control row is exactly three chips');
+  assert(d.querySelector('#c-sort').textContent.trim() === 'newest ▾', 'sort chip names the active sort');
+  assert(!d.querySelector('#c-sort').classList.contains('on'), 'sort chip never fills');
+  d.querySelector('#c-sort').click();
+  assert(d.querySelectorAll('#sheetwrap [data-shsort]').length === 5, 'sort sheet offers five sorts');
+  assert(inSheet(d, '[data-shsort="date"] .shl').textContent.startsWith('✓'), 'current sort wears a leading check');
+  inSheet(d, '[data-shsort="oldest"]').click(); await sleep(20);
+  assert(sheetEl(d) === null, 'picking a sort closes the sheet');
   assert(rows()[0].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'oldest-first surfaces the back catalog');
   assert(stored().feedSort === 'oldest', 'feed sort persists');
-  d.querySelector('#subctl button[data-fs="az"]').click(); await sleep(20);
+  assert(d.querySelector('#c-sort').textContent.trim() === 'oldest ▾', 'chip label follows the sort');
+  await pickFeedSort('az');
   assert(JSON.stringify(rows().map(r => r.dataset.id)) === JSON.stringify(
     ['chrono-cross-the-radical-dreamers-edition', 'fresh-drop', 'hades-ii', 'ratchet-clank-rift-apart', 'ゼルダの伝説']),
     'a–z sorts by the display label');
-  d.querySelector('#subctl button[data-fs="added"]').click(); await sleep(20);
+  await pickFeedSort('added');
   assert(rows()[0].dataset.id === 'fresh-drop', 'recently-added sort leads with the newest find');
-  d.querySelector('#subctl button[data-fs="date"]').click(); await sleep(20);
+  await pickFeedSort('date');
   assert(rows()[0].dataset.id === 'fresh-drop', 'newest-first restored');
 
   // ---------- year rails + company facets ----------
   assert(d.querySelectorAll('#list .yhead').length === 1
     && d.querySelector('#list .yhead').textContent === '2026', 'date sorts group rows under year rails');
-  assert(d.querySelectorAll('#subctl button[data-fc]').length === 3, 'company facet chips render');
-  d.querySelector('#subctl button[data-fc="big"]').click(); await sleep(20);
+  assert(d.querySelector('#c-filters').textContent === 'filters'
+    && !d.querySelector('#c-filters').classList.contains('on'), 'filters chip reads neutral at defaults');
+  d.querySelector('#c-filters').click();
+  assert(d.querySelectorAll('#sheetwrap [data-shco]').length === 3, 'filters sheet offers the company tiers');
+  inSheet(d, '[data-shco="big"]').click(); await sleep(20);
+  assert(sheetEl(d) !== null, 'filter changes keep the sheet open');
   assert(rows().length === 1 && rows()[0].dataset.id === 'fresh-drop', 'big-studios facet keeps the Nintendo row');
-  d.querySelector('#subctl button[data-fc="indie"]').click(); await sleep(20);
+  inSheet(d, '[data-shco="indie"]').click(); await sleep(20);
   assert(rows().length === 1 && rows()[0].dataset.id === 'hades-ii', 'indie facet keeps the Supergiant row');
   assert(stored().feedCo === 'indie', 'company facet persists');
-  d.querySelector('#subctl button[data-fc="all"]').click(); await sleep(20);
-  assert(rows().length === 5, 'all restores the unfaceted feed');
-  d.querySelector('#fconsole').click(); await sleep(20);
+  assert(d.querySelector('#c-filters').textContent === 'filters · indie'
+    && d.querySelector('#c-filters').classList.contains('on'), 'filters chip fills and names the tier');
+  inSheet(d, '#shconsole').click(); await sleep(20);
+  assert(stored().feedConsole === true, 'console filter persists');
+  assert(d.querySelector('#c-filters').textContent === 'filters · indie, console',
+    'chip lists active filters in order');
+  inSheet(d, '#shclear').click(); await sleep(20);
+  assert(sheetEl(d) !== null, 'clear keeps the sheet open');
+  assert(rows().length === 5 && stored().feedCo === 'all' && stored().feedConsole === false,
+    'clear resets scope and console');
+  assert(d.querySelector('#c-filters').textContent === 'filters', 'chip label returns to neutral');
+  inSheet(d, '.shbody').scrollTop = 120;
+  inSheet(d, '#shconsole').click(); await sleep(20);
+  assert(inSheet(d, '.shbody').scrollTop === 120 && sheetEl(d).style.animation === 'none',
+    'live-apply keeps the sheet scroll spot and skips the slide replay');
   assert(rows().length === 4 && rowById('ゼルダの伝説') === null,
     'console filter keeps confirmed console games, drops PC-only and unknown');
-  assert(stored().feedConsole === true, 'console filter persists');
-  d.querySelector('#fconsole').click(); await sleep(20);
+  inSheet(d, '#shconsole').click(); await sleep(20);
   assert(rows().length === 5, 'console filter toggles back off');
 
-  // ---------- genre facet + random listen ----------
-  assert(d.querySelector('#fgenre') !== null, 'genre select renders when genre data exists');
-  d.querySelector('#fgenre').value = 'Platform';
-  d.querySelector('#fgenre').dispatchEvent(new w.Event('change', { bubbles: true }));
-  await sleep(20);
+  // ---------- genre rows in the filters sheet + random listen ----------
+  const platRow = inSheet(d, '[data-shgenre="Platform"]');
+  assert(platRow !== null && platRow.querySelector('.shr').textContent === '1', 'genre rows carry counts');
+  platRow.click(); await sleep(20);
   assert(rows().length === 1 && rows()[0].dataset.id === 'fresh-drop', 'genre facet filters the feed');
   assert(stored().feedGenre === 'Platform', 'genre choice persists');
-  d.querySelector('#fgenre').value = 'all';
-  d.querySelector('#fgenre').dispatchEvent(new w.Event('change', { bubbles: true }));
-  await sleep(20);
+  assert(d.querySelector('#c-filters').textContent === 'filters · platform', 'genre reads lowercase on the chip');
+  inSheet(d, '[data-shgenre="all"]').click(); await sleep(20);
   assert(rows().length === 5, 'genre back to all');
+  inSheet(d, '#shdone').click();
+  assert(sheetEl(d) === null, 'done closes the filters sheet');
   w.__opened = null;
   w.eval('Math.random = () => 0');
-  d.querySelector('#frandom').click();
+  d.querySelector('#hrandom').click();
   assert(rowById('fresh-drop').getAttribute('aria-expanded') === 'true' && w.__opened === null,
-    'random expands a pick in-app instead of leaving the app');
+    'header random expands a pick in-app instead of leaving the app');
   rowById('fresh-drop').click();
+
+  // ---------- sheet handover and dismissal guards ----------
+  d.querySelector('#c-sort').click();
+  S(`addFlow('hades-ii', 'No Escape')`);
+  assert(S('CSHEET') === null && inSheet(d, '#cp-name') !== null,
+    'the save picker takes over an open control sheet cleanly');
+  inSheet(d, '#scrim').click();
+  assert(sheetEl(d) === null, 'one scrim tap closes the picker');
+  d.querySelector('#c-filters').click();
+  tab('library').click(); await sleep(20);
+  assert(sheetEl(d) === null, 'switching views closes a control sheet');
+  tab('feed').click(); await sleep(20);
+  rowById('hades-ii').querySelector('[data-act="log"]').click();
+  const lg1 = new w.Event('touchstart', { bubbles: true }); lg1.touches = [{ clientY: 80 }];
+  sheetEl(d).dispatchEvent(lg1);
+  const lg2 = new w.Event('touchend', { bubbles: true }); lg2.changedTouches = [{ clientY: 300 }];
+  sheetEl(d).dispatchEvent(lg2);
+  assert(sheetEl(d) !== null, 'swipe down never discards a logging draft');
+  d.querySelector('#scrim').click();
 
   // ---------- expand, then listen ----------
   w.__opened = null;
@@ -307,13 +351,18 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   await sleep(20);
   assert(rows()[0].dataset.id === 'ratchet-clank-rift-apart', 'default sort: most recent listen first');
   assert(rows()[2].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'dateless migrated listen sinks');
-  d.querySelector('#subctl button[data-ls="rating"]').click(); await sleep(20);
+  assert(d.querySelector('#c-libsort').textContent.trim() === 'heard on ▾', 'library sort chip names the sort');
+  d.querySelector('#c-libsort').click();
+  assert(inSheet(d, '[data-shlsort="listenedOn"] .shl').textContent.startsWith('✓'), 'current library sort checked');
+  inSheet(d, '[data-shlsort="rating"]').click(); await sleep(20);
+  assert(sheetEl(d) === null, 'library sort sheet closes on pick');
   assert(rows()[0].dataset.id === 'fresh-drop' && rows()[1].dataset.id === 'ratchet-clank-rift-apart',
     'rating sort: 5 before 3.5');
   assert(rows()[2].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'unrated sorts last on rating sort');
   assert(rowById('fresh-drop').querySelector('.minis').textContent === '★★★★★', 'five stars render');
   assert(rowById('ratchet-clank-rift-apart').querySelector('.minis').textContent === '★★★½', 'half star renders as ½');
-  d.querySelector('#subctl button[data-ls="date"]').click(); await sleep(20);
+  d.querySelector('#c-libsort').click();
+  inSheet(d, '[data-shlsort="date"]').click(); await sleep(20);
   assert(rows()[0].dataset.id === 'fresh-drop' && rows()[2].dataset.id === 'chrono-cross-the-radical-dreamers-edition',
     'release-date sort uses the shared newest-first order');
   assert(rowById('ratchet-clank-rift-apart').querySelector('.rnote').textContent.includes('slaps'),
@@ -369,7 +418,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   tab('library').click(); await sleep(20);
   d.querySelector('#libsongs').click(); await sleep(20);
   assert(stored().libView === 'songs', 'songs view persists');
-  assert(d.querySelector('#subctl button[data-ls]') === null, 'sort chips step aside in songs view');
+  assert(d.querySelector('#c-libsort') === null, 'the sort chip steps aside in songs view');
   assert(rows().length === 1 && rows()[0].classList.contains('song'), 'liked songs list the hearted tracks');
   assert(rows()[0].querySelector('.rtitle').textContent === 'No Escape'
     && rows()[0].querySelector('.rsub').textContent === 'Hades II'
@@ -447,14 +496,19 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'year facet empties recipes with no matching releases');
   assert(plCard().querySelector('.plx').disabled === true, 'nothing to export at zero tracks');
   S(`setPlYear('all')`); await sleep(20);
-  d.querySelector('#plgenre').value = 'Role-playing (RPG)';
-  d.querySelector('#plgenre').dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(20);
+  assert(d.querySelector('#c-plyear').textContent.trim() === 'year ▾', 'playlists year chip reads neutral at all');
+  d.querySelector('#c-plgenre').click();
+  assert(sheetEl(d) !== null, 'playlists genre chip opens the sheet');
+  inSheet(d, '[data-shplgenre="Role-playing (RPG)"]').click(); await sleep(20);
+  assert(sheetEl(d) === null, 'picking a playlist genre closes the sheet');
   assert(cardMeta('queue').startsWith('5 tracks'), 'genre facet keeps only tagged releases');
   assert(plCard().querySelector('.plname').textContent.includes('— Role-playing (RPG)'),
     'facet variants get their own playlist name');
   assert(stored().plGenre === 'Role-playing (RPG)', 'facet choice persists');
-  d.querySelector('#plgenre').value = 'all';
-  d.querySelector('#plgenre').dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(20);
+  assert(d.querySelector('#c-plgenre').textContent.trim() === 'role-playing (rpg) ▾'
+    && d.querySelector('#c-plgenre').classList.contains('on'), 'genre chip shows the active facet');
+  d.querySelector('#c-plgenre').click();
+  inSheet(d, '[data-shplgenre="all"]').click(); await sleep(20);
   plCard().querySelector('.plx').click();
   assert(errors.length === 0, 'export click stays clean');
 
@@ -770,29 +824,34 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(String(sp.w.__opened).startsWith('https://music.youtube.com/search?q='),
     'a liked song without its file falls back to search');
 
-  // ---------- medium chips ----------
+  // ---------- medium lives in the filters sheet ----------
   sq('#libsongs').click();
   await sleep(20);
-  assert(sp.d.querySelectorAll('#subctl button[data-lm]').length === 4, 'library offers medium chips');
-  sp.d.querySelector('#subctl button[data-lm="film"]').click();
-  await sleep(20);
-  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film',
-    'library medium chip narrows to film scores');
-  assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).libMedium === 'film', 'library medium persists');
-  sp.d.querySelector('#subctl button[data-lm="all"]').click();
-  await sleep(20);
+  assert(sp.d.querySelectorAll('#subctl button').length === 4 && sq('#subctl [data-lm]') === null,
+    'library row is sort, liked, and the mode chips; no medium control');
 
   sp.d.querySelector('#tabbar button[data-v="feed"]').click();
   await sleep(20);
-  assert(sp.d.querySelectorAll('#subctl button[data-fm]').length === 4, 'feed offers medium chips once film data exists');
-  sp.d.querySelector('#subctl button[data-fm="film"]').click();
+  sq('#c-filters').click();
+  assert(sp.d.querySelectorAll('#sheetwrap [data-shmed]').length === 4,
+    'medium segment appears in the filters sheet once film data exists');
+  inSheet(sp.d, '[data-shmed="film"]').click();
   await sleep(20);
-  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film', 'film chip shows only film rows');
-  assert(sp.d.querySelector('#subctl button[data-fc]') === null && sq('#fconsole') === null,
-    'game-only filters hide when the medium excludes games');
-  const fgOpts = [...sp.d.querySelectorAll('#fgenre option')].map(o => o.value);
-  assert(fgOpts.includes('Science Fiction') && !fgOpts.includes('Platform'),
-    'genre dropdown scopes to the active medium');
+  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film', 'film medium shows only film rows');
+  assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).feedMedium === 'film', 'medium persists');
+  assert(sq('#c-filters').textContent === 'filters · film', 'the chip names the medium');
+  sp.w.eval("S.feedCo = 'indie'; renderAll()");
+  assert(sq('#c-filters').textContent === 'filters · film',
+    'the chip hides game-only filters while the medium excludes games');
+  sp.w.eval("S.feedCo = 'all'; renderAll()");
+  assert(inSheet(sp.d, '[data-shco="big"]').disabled === true
+    && inSheet(sp.d, '#shconsole').disabled === true
+    && inSheet(sp.d, '.shnote').textContent === 'games only',
+    'game-only filters disable with a note when the medium excludes games');
+  const gRows = [...sp.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
+  assert(gRows.includes('Science Fiction') && !gRows.includes('Platform'),
+    'genre list scopes to the active medium');
+  inSheet(sp.d, '#shdone').click();
   assert(sRows()[0].querySelector('.rsub').textContent === 'Split Film · Comp F',
     'film subtitle reads film title and composers');
   sRows()[0].click();
@@ -802,14 +861,19 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   sp.w.eval("openAlbum('film-split-film')");
   assert(sq('#album .ameta').textContent.includes('film score'), 'album header names the medium');
   sq('#album .aclose').click();
-  sp.d.querySelector('#subctl button[data-fm="game"]').click();
+  sq('#c-filters').click();
+  inSheet(sp.d, '[data-shmed="game"]').click();
   await sleep(20);
-  assert(sRows().length === 5 && sq('#fconsole') !== null, 'games chip restores the game rows and their filters');
-  sp.d.querySelector('#subctl button[data-fm="all"]').click();
+  assert(sRows().length === 5, 'games medium restores the game rows');
+  assert(inSheet(sp.d, '[data-shco="big"]').disabled === false
+    && inSheet(sp.d, '#shconsole').disabled === false, 'game filters re-enable for games');
+  inSheet(sp.d, '[data-shmed="all"]').click();
   await sleep(20);
+  inSheet(sp.d, '#shdone').click();
 
   // ---------- most played sort ----------
-  sp.d.querySelector('#subctl button[data-fs="plays"]').click();
+  sq('#c-sort').click();
+  inSheet(sp.d, '[data-shsort="plays"]').click();
   await sleep(20);
   const order = sRows().map(x => x.dataset.id);
   assert(order[0] === 'split-a' && order[1] === 'film-split-film',
@@ -870,14 +934,16 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   bg.w.eval('if(S.showHidden) toggleShowHidden()');
   await sleep(20);
 
-  const yj = bg.d.querySelector('#yjump');
-  assert(yj !== null && [...yj.options].some(o => o.value === '2020'), 'year jump lists the years in the list');
-  yj.value = '2020';
-  yj.dispatchEvent(new bg.w.Event('change', { bubbles: true }));
+  bg.d.querySelector('#c-year').click();
+  const yRows = [...bg.d.querySelectorAll('#sheetwrap [data-shyear]')];
+  assert(yRows.length === 8 && yRows[0].dataset.shyear === '2026'
+    && yRows[0].querySelector('.shr').textContent === '20',
+    'year sheet lists the years newest first with counts');
+  inSheet(bg.d, '[data-shyear="2020"]').click();
   await sleep(20);
+  assert(sheetEl(bg.d) === null, 'picking a year closes the sheet');
   assert([...bg.d.querySelectorAll('#list .yhead')].some(h => h.textContent === '2020'),
     'year jump pages in far years and lands on the header');
-  assert(bg.d.querySelector('#yjump').value === '', 'the jump control snaps back to neutral');
 
   const bMain = bg.d.querySelector('main');
   const toTop = bg.d.querySelector('#totop');
@@ -889,8 +955,57 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   toTop.click();
   bMain.dispatchEvent(new bg.w.Event('scroll'));
   assert(bMain.scrollTop === 0 && toTop.hidden === true, 'back-to-top returns to the top and tucks away');
-  assert(bg.d.querySelector('#subctl button[data-fm]') === null,
-    'medium chips stay out of the way while the catalog is games only');
+  bg.d.querySelector('#c-filters').click();
+  assert(bg.d.querySelector('#sheetwrap [data-shmed]') === null,
+    'medium segment stays out of the way while the catalog is games only');
+  inSheet(bg.d, '#scrim').click();
+  assert(sheetEl(bg.d) === null, 'the scrim closes the sheet');
+
+  // ---------- addendum invariants: three chips, dismissals, random ----------
+  for(const change of [`setFeedSort('plays')`, `setFeedCo('indie')`, `toggleFeedConsole()`,
+                       `setFeedSort('date')`, `clearFeedFilters()`]){
+    bg.w.eval(change);
+    assert(bg.d.querySelectorAll('#subctl button').length === 3,
+      'feed row stays exactly three chips after ' + change);
+  }
+  assert(bg.d.querySelector('#c-filters').classList.contains('fchip'),
+    'filters chip carries the truncation hook');
+
+  bg.d.querySelector('#c-sort').click();
+  const swSheet = sheetEl(bg.d);
+  const ts = new bg.w.Event('touchstart', { bubbles: true });
+  ts.touches = [{ clientY: 100 }];
+  swSheet.dispatchEvent(ts);
+  const te = new bg.w.Event('touchend', { bubbles: true });
+  te.changedTouches = [{ clientY: 220 }];
+  swSheet.dispatchEvent(te);
+  assert(sheetEl(bg.d) === null, 'swipe down dismisses the sheet');
+
+  bg.d.querySelector('#c-sort').click();
+  bg.w.dispatchEvent(new bg.w.KeyboardEvent('keydown', { key: 'Escape' }));
+  assert(sheetEl(bg.d) === null, 'escape closes the control sheet');
+
+  bg.d.querySelector('#q').value = 'Big 149';
+  bg.d.querySelector('#q').dispatchEvent(new bg.w.Event('input', { bubbles: true }));
+  await sleep(20);
+  bg.w.eval('Math.random = () => 0');
+  bg.w.__opened = null;
+  bg.d.querySelector('#hrandom').click();
+  assert(bg.d.querySelector('#list .row[data-id="big-149"]').getAttribute('aria-expanded') === 'true',
+    'header random respects the current filters');
+  bg.d.querySelector('#qclear').click(); await sleep(20);
+
+  bg.d.querySelector('#tabbar button[data-v="library"]').click(); await sleep(20);
+  bg.d.querySelector('#hrandom').click(); await sleep(20);
+  assert(JSON.parse(bg.w.localStorage.getItem('vgm-v1')).view === 'feed',
+    'header random hops back to the feed first');
+
+  bg.w.eval(`setFeedSort('az')`);
+  bg.d.querySelector('#c-year').click();
+  inSheet(bg.d, '[data-shyear="2019"]').click(); await sleep(20);
+  assert(bg.d.querySelector('#list .row[data-id="big-140"]') !== null,
+    'a year pick under a flat sort still pages in that year');
+  bg.w.eval(`setFeedSort('date')`);
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();
