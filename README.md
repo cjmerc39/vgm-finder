@@ -11,6 +11,18 @@ Actions cron and folds releases append-only into `data/releases.json`;
 listened marks, hides, and per-track ♥s are yours alone — they live in
 `localStorage` (`vgm-v1`) and never touch the shared JSON.
 
+The catalog is split for speed: `data/releases.json` carries every row
+while each full tracklist lives in `data/tracks/<id>.json`, fetched only
+when a view needs it. On the row, `tracksN` is the track count and the
+completed-check marker (absent means never checked, 0 means checked and
+nothing found), and `playsTotal` feeds the "most played" sort without
+loading a single tracklist. Every row also carries `medium` (`game`,
+`film`, or `tv`, ahead of the film/TV expansion); for film and TV rows
+the `game` field holds the film or show title. The one-time split lives
+in `collector/split_tracks.py` and stays in the daily workflow as an
+idempotent no-op. The feed renders 60 rows per page with a MORE sentinel,
+plus a year-jump picker and a back-to-top control.
+
 | source | what it is | filter |
 | --- | --- | --- |
 | [NOWPLAYING](https://nowplaying.cool) | editorial, daily VGM release tracking | `OST` + `Vinyl` categories |

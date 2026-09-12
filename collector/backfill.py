@@ -346,6 +346,8 @@ def resolve_leg(releases, state, resolve_fn, cap):
         claimed.add(hit["url"])
         r["ytmAlbumUrl"] = hit["url"]
         r.pop("tracks", None)
+        r.pop("tracksN", None)
+        r.pop("playsTotal", None)
         r.pop("ytmPlaylistId", None)
         if collect.normalize_title(hit["title"]) != collect.normalize_title(r["title"]):
             r["albumTitle"] = hit["title"]
@@ -386,7 +388,8 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     resolve_done = resolve_leg(releases, state, resolve_fn,
                                cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4))
     igdb_done = top_done and recent_done and fran_done and gap_done and resolve_done
-    fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL)
+    fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL,
+                                  tracks_dir=Path(data_path).parent / "tracks")
     print(f"tracklists: {fetched} looked up")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:

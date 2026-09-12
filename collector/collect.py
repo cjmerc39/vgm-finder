@@ -248,13 +248,45 @@ def _patch_audio_ids(tracks, playlist):
             t["videoId"] = vid
 
 
-def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_playlist):
+def _plays_total(tracks):
+    total, seen = 0.0, False
+    for t in tracks:
+        n = _plays_num(t.get("plays"))
+        if n is not None:
+            total, seen = total + n, True
+    return int(total) if seen else None
+
+
+def write_tracklist(r, tracks, tracks_dir):
+    """The split convention in one place: the list lives in
+    data/tracks/<id>.json, the row carries tracksN (0 marks a completed
+    empty check, no file) and playsTotal when any track has plays."""
+    r["tracksN"] = len(tracks)
+    total = _plays_total(tracks)
+    if total is not None:
+        r["playsTotal"] = total
+    else:
+        r.pop("playsTotal", None)
+    path = Path(tracks_dir) / f"{r['id']}.json"
+    if tracks:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(tracks, indent=2, ensure_ascii=False) + "\n",
+                        encoding="utf-8")
+    elif path.exists():
+        path.unlink()  # a reset check must not leave a stale list behind
+    return r
+
+
+def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_playlist,
+                tracks_dir=None):
     """Full tracklists, capped per run: YTM albums carry plays + per-track
     videoIds; game-named rows without a YTM album fall back to Apple's
-    catalog. [] is a completed check, and legacy topTracks is retired."""
+    catalog. Lists land in per-release files via write_tracklist; tracksN
+    is the completed-check marker, and legacy topTracks is retired."""
+    tracks_dir = Path(tracks_dir) if tracks_dir else DATA_PATH.parent / "tracks"
     looked = 0
     for r in releases:
-        if "tracks" in r:
+        if "tracksN" in r or "tracks" in r:
             continue
         if looked >= cap:
             break
@@ -265,22 +297,23 @@ def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_p
                 album = album_fn(url.rsplit("/", 1)[1])
             except Exception:
                 continue  # transient: retry on a later run
-            r["tracks"] = ytm_tracks_from(album)
+            tracks = ytm_tracks_from(album)
             plid = (album or {}).get("audioPlaylistId")
             if plid:
                 r["ytmPlaylistId"] = plid  # &list= makes track links open the song, not the video
-                if playlist_fn and any(not t["videoId"] for t in r["tracks"]):
+                if playlist_fn and any(not t["videoId"] for t in tracks):
                     try:
-                        _patch_audio_ids(r["tracks"], playlist_fn(plid))
+                        _patch_audio_ids(tracks, playlist_fn(plid))
                     except Exception:
                         pass  # patch is best-effort: links fall back to search
+            write_tracklist(r, tracks, tracks_dir)
         elif r.get("game"):
             looked += 1
             try:
                 got = itunes_fn(_query(r["game"]))
             except Exception:
                 continue
-            r["tracks"] = got or []
+            write_tracklist(r, got or [], tracks_dir)
         else:
             continue  # headline rows with no game name: nothing to look up
         r.pop("topTracks", None)
@@ -788,10 +821,16 @@ def _numeral_tail(norm):
     return _ROMAN.get(tail)
 
 
-def _fuzzy_find(norm, releases, norms):
+def _medium(r):
+    return r.get("medium") or "game"
+
+
+def _fuzzy_find(norm, releases, norms, med="game"):
     best, best_ratio = None, 0.0
     tail = _numeral_tail(norm)
     for r in releases:
+        if _medium(r) != med:
+            continue  # mediums never fuzzy-merge: a film is not its namesake game
         other = norms[id(r)]
         if _numeral_tail(other) != tail:
             continue  # Mass Effect 2 and 3 are near-identical strings and different albums
@@ -814,25 +853,33 @@ def _far_apart(a, b):
 def merge(releases, items, source, seen_at):
     """Fold one source's items in. Append-only: existing entries only ever gain
     a source, an earlier date, or a fill for a still-null enrichment field;
-    id and title never change."""
+    id and title never change. Mediums never mix: a film and a game sharing a
+    name are different releases by definition, so medium is part of the
+    dedupe key and non-game slugs carry a medium prefix."""
     by_id = {r["id"]: r for r in releases}
     norms = {id(r): normalize_title(r["title"]) for r in releases}
     by_numfold = {}
     for r in releases:
-        by_numfold.setdefault(_numfold(norms[id(r)]), r)
+        by_numfold.setdefault((_medium(r), _numfold(norms[id(r)])), r)
     added = merged = 0
     for it in items:
         if not it["title"] or not it["url"]:
             continue
-        slug = slugify(it["title"])
+        med = it.get("medium") or "game"
+        slug = slugify(it["title"]) if med == "game" else f"{med}-{slugify(it['title'])}"
         norm = normalize_title(it["title"])
+        target = by_id.get(slug)
+        if target is not None and _medium(target) != med:
+            target = None  # the id belongs to another medium's row: never merge
         # numeral variants (II vs 2) are the same name exactly — never left to fuzzy odds
-        target = by_id.get(slug) or by_numfold.get(_numfold(norm)) or _fuzzy_find(norm, releases, norms)
+        target = target or by_numfold.get((med, _numfold(norm))) or _fuzzy_find(norm, releases, norms, med)
         if target is not None and it["date"] and target.get("date") and _far_apart(it["date"], target["date"]):
             # same name, different era: Tomb Raider 1996 is not Tomb Raider 2013.
             # The newcomer gets a year-suffixed id; reruns find it there again.
             slug = f"{slug}-{it['date'][:4]}"
             target = by_id.get(slug)
+            if target is not None and _medium(target) != med:
+                target = None
             if target is not None and target.get("date") and _far_apart(it["date"], target["date"]):
                 target = None
         src = {"name": source["name"], "type": source["type"],
@@ -858,11 +905,21 @@ def merge(releases, items, source, seen_at):
             if not target.get("ytmAlbumUrl") and it.get("ytmAlbumUrl"):
                 target["ytmAlbumUrl"] = it["ytmAlbumUrl"]
                 target.pop("tracks", None)  # a real album arrived: refresh the tracklist with plays
+                target.pop("tracksN", None)
+                target.pop("playsTotal", None)
                 target.pop("ytmPlaylistId", None)
             if not target.get("art") and it.get("art"):
                 target["art"] = it["art"]
         else:
-            entry = {"id": slug, "title": it["title"], "game": it.get("game"),
+            if slug in by_id:
+                # the id is worn by a row this item must not merge with (a
+                # cross-medium name collision): year-suffix like the era rule,
+                # and skip rather than ever duplicate an id
+                alt = f"{slug}-{it['date'][:4]}" if it.get("date") else None
+                if not alt or alt in by_id:
+                    continue
+                slug = alt
+            entry = {"id": slug, "title": it["title"], "medium": med, "game": it.get("game"),
                      "composers": list(it.get("composers") or []),
                      "date": it["date"], "sources": [src],
                      "ytmSearchUrl": ytm_search_url(it["title"], it.get("game")),
@@ -878,7 +935,7 @@ def merge(releases, items, source, seen_at):
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
-            by_numfold.setdefault(_numfold(norms[id(entry)]), entry)
+            by_numfold.setdefault((med, _numfold(norms[id(entry)])), entry)
             added += 1
     return added, merged
 
@@ -916,6 +973,8 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
             claimed.add(hit["url"])
             r["ytmAlbumUrl"] = hit["url"]
             r.pop("tracks", None)  # refresh with the album's own tracklist
+            r.pop("tracksN", None)
+            r.pop("playsTotal", None)
             r.pop("ytmPlaylistId", None)
             filled += 1
         if normalize_title(hit["title"]) != norm:
@@ -1028,7 +1087,8 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     print(f"album resolver: {looked} lookups, {filled} filled")
     ga, gm = gaas_albums(releases, resolve_fn, seen_at)
     print(f"live-service albums: {ga} new, {gm} merged")
-    fetched = fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP)
+    fetched = fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP,
+                          tracks_dir=Path(data_path).parent / "tracks")
     print(f"tracklists: {fetched} looked up")
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:

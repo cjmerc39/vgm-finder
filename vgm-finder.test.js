@@ -89,7 +89,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(errors.length === 0, 'no runtime errors on boot' + (errors.length ? ' -> ' + errors.join(' | ') : ''));
 
   // ---------- legacy migration ----------
-  assert(stored().v === 2, 'v1 state migrated to v2 and persisted');
+  assert(stored().v === 3, 'v1 state migrated to v3 and persisted');
+  assert(stored().feedMedium === 'all' && stored().libMedium === 'all', 'medium chips default to all');
   assert(!('starred' in stored()) && !('listened' in stored()) && !('hidden' in stored()), 'legacy keys retired');
   assert(stored().entries['hades-ii'].liked === true, 'starred became liked');
   assert(stored().entries['chrono-cross-the-radical-dreamers-edition'].status === 'listened', 'listened became status listened');
@@ -129,7 +130,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'rows without a resolved album keep their title');
 
   // ---------- feed sort control ----------
-  assert(d.querySelectorAll('#subctl button[data-fs]').length === 4, 'feed offers four sorts');
+  assert(d.querySelectorAll('#subctl button[data-fs]').length === 5, 'feed offers five sorts');
   d.querySelector('#subctl button[data-fs="oldest"]').click(); await sleep(20);
   assert(rows()[0].dataset.id === 'chrono-cross-the-radical-dreamers-edition', 'oldest-first surfaces the back catalog');
   assert(stored().feedSort === 'oldest', 'feed sort persists');
@@ -592,7 +593,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   // ---------- export / import round-trip ----------
   const dump = S('JSON.stringify(buildExport())');
   const parsedDump = JSON.parse(dump);
-  assert(parsedDump.app === 'vgm-finder' && parsedDump.state.v === 2, 'export wraps the v2 state');
+  assert(parsedDump.app === 'vgm-finder' && parsedDump.state.v === 3, 'export wraps the v3 state');
   S(`editEntry('ratchet-clank-rift-apart', e => { e.note = 'clobbered'; e.rating = 1; })`);
   assert(S(`applyImport(${JSON.stringify(dump)})`) === true, 'import accepts its own export');
   assert(stored().entries['ratchet-clank-rift-apart'].note.includes('slaps') &&
@@ -600,7 +601,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(S(`applyImport('{"nope":true}')`) === false, 'import rejects foreign JSON');
   assert(S(`applyImport('not json')`) === false, 'import rejects non-JSON');
   const legacy = JSON.stringify({ v: 1, starred: { 'hades-ii': true }, listened: {}, hidden: {}, lastSeen: 5 });
-  assert(S(`applyImport(${JSON.stringify(legacy)})`) === true && stored().v === 2 &&
+  assert(S(`applyImport(${JSON.stringify(legacy)})`) === true && stored().v === 3 &&
          stored().entries['hades-ii'].liked === true, 'importing a v1 backup migrates it');
   assert(S(`applyImport(${JSON.stringify(dump)})`) === true, 'state restored for the reload test');
 
@@ -636,6 +637,260 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(alone.w.__nav === 'https://music.youtube.com/playlist?list=OLAK5uy_hades2'
     && alone.w.__opened === undefined,
     'standalone mode navigates directly so the universal link takes over — no leftover sheet');
+
+  // ================= Phase A: split tracklists, mediums, paging =================
+
+  // ---------- lazy tracklists from data/tracks/<id>.json ----------
+  const SA_TRACKS = [
+    { title: 'Alpha', plays: '2M plays', videoId: 'vidA' },
+    { title: 'Beta', plays: '200K plays', videoId: 'vidB' },
+    { title: 'Gamma', plays: null, videoId: null },
+  ];
+  const SB_TRACKS = [{ title: 'Delta', plays: null, videoId: 'vidD' }];
+  const SPLIT_FIX = {
+    updatedAt: '2026-09-01T10:00:00Z',
+    releases: [
+      { id: 'split-a', title: 'Split A Soundtrack', medium: 'game', game: 'Split A',
+        composers: ['Comp A'], date: '2026-08-01', tracksN: 3, playsTotal: 2200000,
+        ytmPlaylistId: 'OLAK5uy_sa', genres: ['Platform'], console: true, company: 'Nintendo',
+        sources: [{ name: 'igdb', type: 'catalog', url: 'https://x/a', seenAt: '2026-08-01T10:00:00Z' }],
+        ytmSearchUrl: 'https://music.youtube.com/search?q=Split+A', notable: true,
+        ytmAlbumUrl: 'https://music.youtube.com/browse/MPREb_sa', art: null },
+      { id: 'split-b', title: 'Split B Soundtrack', medium: 'game', game: 'Split B',
+        composers: [], date: '2026-07-20', tracksN: 1,
+        sources: [{ name: 'steam', type: 'catalog', url: 'https://x/b', seenAt: '2026-07-20T10:00:00Z' }],
+        ytmSearchUrl: 'https://music.youtube.com/search?q=Split+B', notable: true,
+        ytmAlbumUrl: null, art: null },
+      { id: 'split-miss', title: 'Split Miss Soundtrack', medium: 'game', game: 'Split Miss',
+        composers: [], date: '2026-07-10', tracksN: 2,
+        sources: [{ name: 'steam', type: 'catalog', url: 'https://x/m', seenAt: '2026-07-10T10:00:00Z' }],
+        ytmSearchUrl: 'https://music.youtube.com/search?q=Split+Miss', notable: true,
+        ytmAlbumUrl: null, art: null },
+      { id: 'split-empty', title: 'Split Empty Soundtrack', medium: 'game', game: 'Split Empty',
+        composers: [], date: '2026-07-05', tracksN: 0,
+        sources: [{ name: 'steam', type: 'catalog', url: 'https://x/e', seenAt: '2026-07-05T10:00:00Z' }],
+        ytmSearchUrl: 'https://music.youtube.com/search?q=Split+Empty', notable: true,
+        ytmAlbumUrl: null, art: null },
+      { id: 'split-c', title: 'Split C Soundtrack', medium: 'game', game: 'Split C',
+        composers: [], date: '2026-06-20', tracksN: 1,
+        sources: [{ name: 'steam', type: 'catalog', url: 'https://x/c', seenAt: '2026-06-20T10:00:00Z' }],
+        ytmSearchUrl: 'https://music.youtube.com/search?q=Split+C', notable: true,
+        ytmAlbumUrl: null, art: null },
+      { id: 'film-split-film', title: 'Split Film Soundtrack', medium: 'film', game: 'Split Film',
+        composers: ['Comp F'], date: '2026-07-15', playsTotal: 500000, genres: ['Science Fiction'],
+        sources: [{ name: 'tmdb', type: 'catalog', url: 'https://x/f', seenAt: '2026-07-15T10:00:00Z' }],
+        ytmSearchUrl: 'https://music.youtube.com/search?q=Split+Film', notable: true,
+        ytmAlbumUrl: null, art: null },
+      { id: 'tv-split-show', title: 'Split Show Soundtrack', medium: 'tv', game: 'Split Show',
+        composers: ['Comp T'], date: '2026-07-01',
+        sources: [{ name: 'tmdb', type: 'catalog', url: 'https://x/t', seenAt: '2026-07-01T10:00:00Z' }],
+        ytmSearchUrl: 'https://music.youtube.com/search?q=Split+Show', notable: true,
+        ytmAlbumUrl: null, art: null },
+    ],
+  };
+  const SC_TRACKS = [{ title: 'Epsilon', plays: null, videoId: 'vidE' }];
+  const hits = {};
+  const routedFetch = async (url) => {
+    hits[url] = (hits[url] || 0) + 1;
+    if (url === 'data/releases.json') return { ok: true, status: 200, json: async () => SPLIT_FIX };
+    if (url === 'data/tracks/split-a.json') return { ok: true, status: 200, json: async () => SA_TRACKS };
+    if (url === 'data/tracks/split-b.json') return { ok: true, status: 200, json: async () => SB_TRACKS };
+    if (url === 'data/tracks/split-c.json') {  // slow on purpose: the concurrent-await test races it
+      await sleep(60);
+      return { ok: true, status: 200, json: async () => SC_TRACKS };
+    }
+    return { ok: false, status: 404, json: async () => ({}) };
+  };
+  const sp = makeDom(routedFetch, { v: 2, entries: {
+    'split-a': { status: 'listened', listenedOn: '2026-08-02', likedTracks: ['Alpha'] },
+    'split-b': { likedTracks: ['Delta'] },
+    'split-miss': { likedTracks: ['Ghost Song'] },
+    'film-split-film': { status: 'listened', listenedOn: '2026-08-03' },
+  }, lastSeen: T('2026-08-20T00:00:00Z') });
+  await sleep(120);
+  const sq = (sel) => sp.d.querySelector(sel);
+  const sRows = () => [...sp.d.querySelectorAll('#list .row:not(.ghost)')];
+  const sRow = (id) => sp.d.querySelector(`#list .row[data-id="${id}"]`);
+  const sStored = () => JSON.parse(sp.w.localStorage.getItem('vgm-v1'));
+  assert(sp.errors.length === 0, 'split-shape data boots clean on old v2 state');
+  assert(sStored().v === 3 && sStored().feedMedium === 'all', 'v2 state upgraded in place, mediums default to all');
+  assert(hits['data/tracks/split-a.json'] === undefined, 'boot fetches no tracklist files');
+
+  sRow('split-a').click();
+  await sleep(120);
+  assert(hits['data/tracks/split-a.json'] === 1, 'expanding a row fetches its tracks file');
+  const sx = sRow('split-a').querySelector('.rx');
+  assert(sx.textContent.includes('TOP TRACKS') && sx.textContent.includes('Alpha')
+    && sx.textContent.includes('All 3 tracks'), 'expanded panel renders the lazy-loaded tracklist');
+  sRow('split-a').click();
+  sRow('split-a').click();
+  await sleep(80);
+  assert(hits['data/tracks/split-a.json'] === 1, 're-expanding reuses the session cache, no refetch');
+
+  sRow('split-a').querySelector('[data-act="album"]').click();
+  await sleep(40);
+  assert(sp.d.querySelectorAll('#album .atrack').length === 3, 'album page lists the loaded tracks');
+  sq('#album .aclose').click();
+
+  sRow('split-miss').click();
+  await sleep(120);
+  assert(sRow('split-miss').querySelector('.rx') !== null
+    && sRow('split-miss').querySelectorAll('.xtrack').length === 0
+    && sRow('split-miss').querySelector('[data-act="listen"]') !== null,
+    'a missing tracks file degrades to the listen link, not an error');
+  assert(sp.errors.length === 0, 'the 404 tracklist raises no runtime errors');
+  sRow('split-miss').click();
+  sRow('split-miss').click();
+  await sleep(120);
+  assert(hits['data/tracks/split-miss.json'] === 2, 'a failed tracklist fetch retries on the next tap');
+  sRow('split-miss').click();
+
+  // ---------- concurrent callers share one in-flight fetch ----------
+  const raced = await sp.w.eval(
+    `Promise.all([loadTracks(['split-c']), loadTracks(['split-c'])]).then(() => TRACKS['split-c'].map(t => t.title))`);
+  assert(JSON.stringify([...raced]) === '["Epsilon"]' && hits['data/tracks/split-c.json'] === 1,
+    'a second caller awaits the in-flight fetch instead of skipping it');
+
+  // ---------- liked songs load only the ids they reference ----------
+  sp.d.querySelector('#tabbar button[data-v="library"]').click();
+  sq('#libsongs').click();
+  await sleep(120);
+  assert(hits['data/tracks/split-b.json'] === 1, 'liked songs fetch a referenced tracklist');
+  assert(hits['data/tracks/film-split-film.json'] === undefined
+    && hits['data/tracks/tv-split-show.json'] === undefined,
+    'liked songs never fetch unreferenced tracklists');
+  const songRows = [...sp.d.querySelectorAll('#list .row.song')];
+  assert(songRows.length === 3, 'liked songs render, including the one with a lost file');
+  sp.w.__opened = null;
+  songRows.find(x => x.dataset.t === 'Alpha').click();
+  assert(sp.w.__opened === 'https://music.youtube.com/watch?v=vidA&list=OLAK5uy_sa',
+    'a loaded liked song plays with album context');
+  sp.w.__opened = null;
+  songRows.find(x => x.dataset.t === 'Ghost Song').click();
+  assert(String(sp.w.__opened).startsWith('https://music.youtube.com/search?q='),
+    'a liked song without its file falls back to search');
+
+  // ---------- medium chips ----------
+  sq('#libsongs').click();
+  await sleep(20);
+  assert(sp.d.querySelectorAll('#subctl button[data-lm]').length === 4, 'library offers medium chips');
+  sp.d.querySelector('#subctl button[data-lm="film"]').click();
+  await sleep(20);
+  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film',
+    'library medium chip narrows to film scores');
+  assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).libMedium === 'film', 'library medium persists');
+  sp.d.querySelector('#subctl button[data-lm="all"]').click();
+  await sleep(20);
+
+  sp.d.querySelector('#tabbar button[data-v="feed"]').click();
+  await sleep(20);
+  assert(sp.d.querySelectorAll('#subctl button[data-fm]').length === 4, 'feed offers medium chips once film data exists');
+  sp.d.querySelector('#subctl button[data-fm="film"]').click();
+  await sleep(20);
+  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film', 'film chip shows only film rows');
+  assert(sp.d.querySelector('#subctl button[data-fc]') === null && sq('#fconsole') === null,
+    'game-only filters hide when the medium excludes games');
+  const fgOpts = [...sp.d.querySelectorAll('#fgenre option')].map(o => o.value);
+  assert(fgOpts.includes('Science Fiction') && !fgOpts.includes('Platform'),
+    'genre dropdown scopes to the active medium');
+  assert(sRows()[0].querySelector('.rsub').textContent === 'Split Film · Comp F',
+    'film subtitle reads film title and composers');
+  sRows()[0].click();
+  assert([...sRows()[0].querySelectorAll('.xk')].some(k => k.textContent === 'film'),
+    'expanded info labels the work by its medium');
+  sRows()[0].click();
+  sp.w.eval("openAlbum('film-split-film')");
+  assert(sq('#album .ameta').textContent.includes('film score'), 'album header names the medium');
+  sq('#album .aclose').click();
+  sp.d.querySelector('#subctl button[data-fm="game"]').click();
+  await sleep(20);
+  assert(sRows().length === 5 && sq('#fconsole') !== null, 'games chip restores the game rows and their filters');
+  sp.d.querySelector('#subctl button[data-fm="all"]').click();
+  await sleep(20);
+
+  // ---------- most played sort ----------
+  sp.d.querySelector('#subctl button[data-fs="plays"]').click();
+  await sleep(20);
+  const order = sRows().map(x => x.dataset.id);
+  assert(order[0] === 'split-a' && order[1] === 'film-split-film',
+    'most played ranks by playsTotal without loading tracklists');
+  assert(order.length === 7 && order.slice(2).every(id => !SPLIT_FIX.releases.find(r => r.id === id).playsTotal),
+    'rows without playsTotal sink to the bottom');
+  assert(hits['data/tracks/split-empty.json'] === undefined, 'sorting fetches nothing');
+
+  // ---------- paging, year jump, back to top ----------
+  const bigRows = [];
+  for (let i = 0; i < 150; i++) {
+    const year = 2026 - Math.floor(i / 20);
+    bigRows.push({
+      id: `big-${i}`, title: `Big ${i} Soundtrack`, medium: 'game', game: `Big ${i}`,
+      composers: [], date: `${year}-${String(12 - (i % 12)).padStart(2, '0')}-15`,
+      sources: [{ name: 'steam', type: 'catalog', url: `https://x/${i}`, seenAt: '2026-07-01T00:00:00Z' }],
+      ytmSearchUrl: `https://music.youtube.com/search?q=Big+${i}`, ytmAlbumUrl: null,
+      art: null, notable: true,
+    });
+  }
+  const bg = makeDom(okFetch({ updatedAt: '2026-09-01T10:00:00Z', releases: bigRows }));
+  await sleep(150);
+  const bRows = () => [...bg.d.querySelectorAll('#list .row:not(.ghost)')];
+  assert(bg.errors.length === 0, 'a 150-row catalog boots clean');
+  assert(bRows().length === 60, 'the feed renders one page of 60 rows');
+  const more = () => bg.d.querySelector('#more');
+  assert(more() !== null && more().textContent.includes('90'), 'the MORE sentinel counts what is left');
+  const keepEl = bRows()[0];
+  more().click();
+  assert(bRows().length === 120 && bRows()[0] === keepEl,
+    'MORE appends the next page without rebuilding the shown rows');
+  more().click();
+  assert(bRows().length === 150 && more() === null, 'the last page retires the sentinel');
+
+  bRows()[0].click();
+  assert(bRows().length === 150 && bRows()[0].getAttribute('aria-expanded') === 'true',
+    'expanding a row never resets paging');
+  bRows()[0].click();
+
+  bg.d.querySelector('#q').value = 'Big 1';
+  bg.d.querySelector('#q').dispatchEvent(new bg.w.Event('input', { bubbles: true }));
+  await sleep(20);
+  assert(bRows().length === 60 && more() !== null && more().textContent.includes('1'),
+    'search results page from the top');
+  bg.d.querySelector('#qclear').click();
+  await sleep(20);
+  assert(bRows().length === 60, 'clearing search starts back at page one');
+
+  bRows()[0].querySelector('[data-act="hide"]').click();
+  await sleep(20);
+  bg.d.querySelector('#hidtoggle').click();
+  await sleep(20);
+  assert(bg.d.querySelector('#hidhead') !== null && more() !== null,
+    'the hidden shelf renders even while pages remain');
+  assert(bRows().length === 60, 'revealing hidden rows never resets paging');
+  bg.d.querySelector('#list .row.ghost [data-act="restore"]').click();
+  await sleep(20);
+  bg.w.eval('if(S.showHidden) toggleShowHidden()');
+  await sleep(20);
+
+  const yj = bg.d.querySelector('#yjump');
+  assert(yj !== null && [...yj.options].some(o => o.value === '2020'), 'year jump lists the years in the list');
+  yj.value = '2020';
+  yj.dispatchEvent(new bg.w.Event('change', { bubbles: true }));
+  await sleep(20);
+  assert([...bg.d.querySelectorAll('#list .yhead')].some(h => h.textContent === '2020'),
+    'year jump pages in far years and lands on the header');
+  assert(bg.d.querySelector('#yjump').value === '', 'the jump control snaps back to neutral');
+
+  const bMain = bg.d.querySelector('main');
+  const toTop = bg.d.querySelector('#totop');
+  assert(toTop.hidden === true, 'back-to-top hides at the top of the list');
+  bMain.scrollTop = 900;
+  bMain.dispatchEvent(new bg.w.Event('scroll'));
+  assert(toTop.hidden === false, 'back-to-top appears after a screen of scroll');
+  bg.w.eval('document.querySelector("main").scrollTo = function(o){ this.scrollTop = o.top; }');
+  toTop.click();
+  bMain.dispatchEvent(new bg.w.Event('scroll'));
+  assert(bMain.scrollTop === 0 && toTop.hidden === true, 'back-to-top returns to the top and tucks away');
+  assert(bg.d.querySelector('#subctl button[data-fm]') === null,
+    'medium chips stay out of the way while the catalog is games only');
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

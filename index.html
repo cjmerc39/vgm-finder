@@ -126,6 +126,12 @@ a.xsrc{text-decoration:none}
 #colophon button,#colophon label{color:var(--mut);text-decoration:underline;text-underline-offset:2px;padding:2px 2px;cursor:pointer;font-size:11px;letter-spacing:.5px}
 #colophon .impmsg{color:var(--amber)}
 
+#totop{position:fixed;right:14px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:6;
+  background:var(--bg2);border:1px solid var(--amberdim);color:var(--amber);border-radius:99px;
+  padding:10px 15px;font-family:var(--disp);font-size:10px;letter-spacing:1.5px;
+  box-shadow:0 6px 22px rgba(0,0,0,.55)}
+#totop[hidden]{display:none}
+
 #tabbar{flex:none;width:100%;background:rgba(9,11,17,.97);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
 #tabbar .trow{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
 #tabbar button{padding:13px 4px 12px;color:var(--dim);font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase}
@@ -242,6 +248,7 @@ a.xsrc{text-decoration:none}
   <div id="subctl"></div>
 </div>
 <main><div id="list" aria-live="polite"></div><div id="colophon"></div></main>
+<button id="totop" hidden aria-label="Back to top">↑ TOP</button>
 <nav id="tabbar" aria-label="Views"><div class="trow"></div></nav>
 <div id="albumwrap"></div>
 <div id="sheetwrap"></div>
@@ -253,7 +260,8 @@ const VIEWS = ['feed', 'queue', 'library'];
 const STATUSES = ['unsorted', 'queued', 'listened', 'hidden'];
 const LIB_SORTS = ['listenedOn', 'rating', 'date'];
 const LIB_VIEWS = ['albums', 'songs', 'playlists'];
-const FEED_SORTS = ['date', 'oldest', 'az', 'added'];
+const FEED_SORTS = ['date', 'oldest', 'az', 'added', 'plays'];
+const MEDIUMS = ['all', 'game', 'film', 'tv'];
 let R = { updatedAt: null, releases: [] };   // shared data from the collector; never written here
 let LOADSTATE = 'loading';                    // loading | ok | empty | error
 let LOADERR = '';
@@ -268,6 +276,16 @@ let IMPMSG = '';                              // one-shot import feedback line
 let EXPANDED = null;                          // id of the row opened into its detail panel
 let ALBUM = null;                             // id of the row opened into the full album page
 let PLOPEN = null;                            // key of the playlist card opened into its preview
+let BYID = {};                                // id -> release, built once at boot
+let BASE = [];                                // the shared newest-first order, sorted once at boot
+let TRACKS = {};                              // id -> tracklist fetched from data/tracks/<id>.json
+let TLOAD = {};                               // id -> 'loading' | 'error', the fetch status a render can show
+let TPEND = {};                               // id -> in-flight fetch promise, so later callers await it
+let TRK_TIMER = 0;                            // collapses a burst of tracklist arrivals into one render
+const PAGE = 60;                              // rows rendered per page of any list
+let PAGE_N = 1;                               // pages currently shown
+let PAGE_KEY = '';                            // list identity; paging resets when it changes
+let MORE_IO = null;                           // IntersectionObserver on the MORE sentinel
 const STANDALONE = (window.matchMedia && matchMedia('(display-mode: standalone)').matches)
   || window.navigator.standalone === true;
 const BIG_STUDIOS = ['nintendo','sony','playstation','capcom','square enix','squaresoft','sega',
@@ -275,7 +293,9 @@ const BIG_STUDIOS = ['nintendo','sony','playstation','capcom','square enix','squ
   'namco','konami','rockstar','take-two','2k games','cd projekt','bethesda','valve','epic games',
   'fromsoftware','atlus','koei tecmo','naughty dog','insomniac','santa monica','guerrilla','bungie',
   'id software','respawn','infinity ward','treyarch'];
+function mediumOf(r){ return r.medium || 'game'; }
 function coTier(r){
+  if(mediumOf(r) !== 'game') return null;  // Sony Pictures is not a game studio
   if(!r.company) return null;
   const c = r.company.toLowerCase();
   return BIG_STUDIOS.some(b => c.includes(b)) ? 'big' : 'indie';
@@ -285,7 +305,7 @@ function blank(){ return { status:'unsorted', rating:null, liked:false, note:'',
 function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn && !(e.likedTracks || []).length; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:2, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', libSort:'listenedOn', libLiked:false, libView:'albums', plYear:'all', plGenre:'all', showHidden:false, cpls:[], cplLast:null }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:'all', showHidden:false, cpls:[], cplLast:null }; }
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -303,7 +323,7 @@ function migrateV1(d){
 function validateState(d){
   if(!d || typeof d !== 'object') return null;
   if(d.v === 1) return migrateV1(d);
-  if(d.v !== 2) return null;
+  if(d.v !== 2 && d.v !== 3) return null;  // v2 predates medium chips: fields below default to all
   const s = fresh();
   s.lastSeen = typeof d.lastSeen === 'number' ? d.lastSeen : 0;
   s.view = VIEWS.includes(d.view) ? d.view : 'feed';
@@ -311,6 +331,8 @@ function validateState(d){
   s.feedCo = ['all', 'big', 'indie'].includes(d.feedCo) ? d.feedCo : 'all';
   s.feedConsole = d.feedConsole === true;
   s.feedGenre = typeof d.feedGenre === 'string' && d.feedGenre ? d.feedGenre : 'all';
+  s.feedMedium = MEDIUMS.includes(d.feedMedium) ? d.feedMedium : 'all';
+  s.libMedium = MEDIUMS.includes(d.libMedium) ? d.libMedium : 'all';
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
   s.libView = LIB_VIEWS.includes(d.libView) ? d.libView : 'albums';
@@ -388,7 +410,9 @@ function editEntry(id, fn){
   if(isBlank(e)) delete S.entries[id];
   save(); renderAll();
 }
-function setView(v){ if(VIEWS.includes(v)){ S.view = v; save(); renderAll(); } }
+function setView(v){ if(VIEWS.includes(v)){ S.view = v; save(); ensureViewTracks(); renderAll(); } }
+function setFeedMedium(m){ if(MEDIUMS.includes(m)){ S.feedMedium = m; save(); renderAll(); } }
+function setLibMedium(m){ if(MEDIUMS.includes(m)){ S.libMedium = m; save(); renderAll(); } }
 function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
 function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
@@ -397,14 +421,21 @@ function setFeedGenre(g){ S.feedGenre = g || 'all'; save(); renderAll(); }
 function randomListen(){
   const rows = searched(feedRows());
   if(!rows.length) return;
-  const pick = rows[Math.floor(Math.random() * rows.length)];
+  const i = Math.floor(Math.random() * rows.length);
+  const pick = rows[i];
   EXPANDED = pick.id;  // open it here first; LISTEN is one tap away
+  PAGE_N = Math.max(PAGE_N, Math.ceil((i + 1) / PAGE));  // the pick may sit past the rendered pages
+  loadTracks([pick.id]);
   renderList();
   const el = [...document.querySelectorAll('.row')].find(x => x.dataset.id === pick.id);
   if(el && el.scrollIntoView) el.scrollIntoView({ block: 'center' });
 }
-function toggleExpand(id){ EXPANDED = EXPANDED === id ? null : id; renderList(); }
-function openAlbum(id){ ALBUM = id; renderAlbum(); }
+function toggleExpand(id){
+  EXPANDED = EXPANDED === id ? null : id;
+  if(EXPANDED) loadTracks([id]);
+  renderList();
+}
+function openAlbum(id){ ALBUM = id; loadTracks([id]); renderAlbum(); }
 function closeAlbum(){ ALBUM = null; renderAlbum(); }
 function toggleLibLiked(){ S.libLiked = !S.libLiked; save(); renderAll(); }
 function toggleQueued(id){ editEntry(id, e => {
@@ -425,7 +456,7 @@ function toggleTrackLike(id, title){ editEntry(id, e => {
     ? e.likedTracks.filter(t => fold(t) !== f)
     : e.likedTracks.concat([title]);  // store the display title; compare folded
 }); }
-function setLibView(v){ if(LIB_VIEWS.includes(v)){ S.libView = v; save(); renderAll(); } }
+function setLibView(v){ if(LIB_VIEWS.includes(v)){ S.libView = v; save(); ensureViewTracks(); renderAll(); } }
 function setPlYear(y){ S.plYear = /^\d{4}$/.test(y) ? y : 'all'; save(); renderAll(); }
 function setPlGenre(g){ S.plGenre = g || 'all'; save(); renderAll(); }
 function toggleShowHidden(){ S.showHidden = !S.showHidden; save(); renderAll(); }
@@ -458,7 +489,7 @@ function clearListen(){
 }
 
 /* ========================== derived ============================ */
-function byId(id){ return R.releases.find(r => r.id === id); }
+function byId(id){ return BYID[id] || null; }
 function firstSeen(r){
   let t = Infinity;
   for(const s of r.sources || []){ const p = Date.parse(s.seenAt); if(p && p < t) t = p; }
@@ -472,12 +503,65 @@ function srcRank(r){
   return ranks.length ? Math.min(...ranks) : 1;
 }
 function dcmp(b, a){ return String(b || '').localeCompare(String(a || '')); }  // desc, nulls sink
-function sorted(){
-  return R.releases.slice().sort((a, b) =>
+function buildIndexes(){
+  // R never changes after boot, so the id index and the shared newest-first
+  // order are computed exactly once; every view filters a copy of BASE
+  BYID = {};
+  R.releases.forEach((r, i) => { BYID[r.id] = r; TRACKNO[r.id] = i + 1; });  // append-only: numbers never reshuffle
+  BASE = R.releases.slice().sort((a, b) =>
     dcmp(b.date, a.date) ||
     srcRank(a) - srcRank(b) ||   // same day: an editor's pick outranks the firehose outranks the crowd
     firstSeen(b) - firstSeen(a) ||
     TRACKNO[b.id] - TRACKNO[a.id]);
+}
+function sorted(){ return BASE; }
+
+/* tracklists live in data/tracks/<id>.json since the Phase A split; they are
+   fetched when a view first needs them and cached for the session. A missing
+   file is not an error: the row simply degrades to its search link. */
+function tracksOf(r){
+  if(r.tracks && r.tracks.length) return r.tracks;  // pre-split rows, until the collector migrates
+  return TRACKS[r.id] || null;
+}
+function needsTrackLoad(r){
+  return (r.tracksN || 0) > 0 && !(r.tracks || []).length && !TRACKS[r.id];
+}
+function loadTracks(ids){
+  const ps = [];
+  for(const id of [...new Set(ids)]){
+    const r = byId(id);
+    if(!r || !needsTrackLoad(r)) continue;
+    if(!TPEND[id]){
+      TLOAD[id] = 'loading';
+      TPEND[id] = fetch('data/tracks/' + encodeURIComponent(id) + '.json', { cache: 'no-store' })
+        .then(resp => { if(!resp.ok) throw new Error('HTTP ' + resp.status); return resp.json(); })
+        .then(list => { TRACKS[id] = Array.isArray(list) ? list : []; delete TLOAD[id]; })
+        .catch(() => { TLOAD[id] = 'error'; })  // rendered as absent; the next tap retries
+        .finally(() => { delete TPEND[id]; });
+    }
+    ps.push(TPEND[id]);  // a second caller waits for the same fetch, never skips it
+  }
+  if(!ps.length) return Promise.resolve();
+  return Promise.all(ps).then(() => {
+    clearTimeout(TRK_TIMER);
+    TRK_TIMER = setTimeout(() => { renderList(); renderAlbum(); }, 30);
+  });
+}
+function likedIds(){
+  return Object.keys(S.entries).filter(id => (S.entries[id].likedTracks || []).length && BYID[id]);
+}
+function playlistRefIds(){
+  const ids = new Set(likedIds());
+  for(const r of queueRows()) ids.add(r.id);
+  for(const id in S.entries){ if(S.entries[id].rating >= 4 && BYID[id]) ids.add(id); }
+  for(const p of S.cpls) for(const t of p.tracks){ if(BYID[t.id]) ids.add(t.id); }
+  return [...ids];
+}
+function ensureViewTracks(){
+  if(S.view !== 'library') return Promise.resolve();
+  if(S.libView === 'songs') return loadTracks(likedIds());
+  if(S.libView === 'playlists') return loadTracks(playlistRefIds());
+  return Promise.resolve();
 }
 function label(r){ return r.albumTitle || r.title; }
 function fold(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }  // pokemon finds Pokémon
@@ -488,10 +572,14 @@ function matches(r, q){
   return fold(hay).includes(fold(q));
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
+function gamesShown(which){ const m = S[which]; return m === 'all' || m === 'game'; }
 function feedRows(){
   let rows = sorted().filter(r => E(r.id).status !== 'hidden');
-  if(S.feedCo !== 'all') rows = rows.filter(r => coTier(r) === S.feedCo);
-  if(S.feedConsole) rows = rows.filter(r => r.console === true);
+  if(S.feedMedium !== 'all') rows = rows.filter(r => mediumOf(r) === S.feedMedium);
+  if(gamesShown('feedMedium')){  // studio and console filters are game concepts; they idle otherwise
+    if(S.feedCo !== 'all') rows = rows.filter(r => coTier(r) === S.feedCo);
+    if(S.feedConsole) rows = rows.filter(r => r.console === true);
+  }
   if(S.feedGenre !== 'all') rows = rows.filter(r => (r.genres || []).includes(S.feedGenre));
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
@@ -499,6 +587,8 @@ function feedRows(){
     rows.sort((a, b) => label(a).toLowerCase().localeCompare(label(b).toLowerCase()));
   else if(S.feedSort === 'added')
     rows.sort((a, b) => firstSeen(b) - firstSeen(a) || TRACKNO[b.id] - TRACKNO[a.id]);
+  else if(S.feedSort === 'plays')
+    rows.sort((a, b) => ((b.playsTotal ?? -1) - (a.playsTotal ?? -1)) || (TRACKNO[b.id] - TRACKNO[a.id]));
   return rows;  // 'date' keeps the shared newest-first order
 }
 function queueRows(){
@@ -507,6 +597,7 @@ function queueRows(){
 }
 function libraryRows(){
   let rows = sorted().filter(r => E(r.id).status === 'listened');
+  if(S.libMedium !== 'all') rows = rows.filter(r => mediumOf(r) === S.libMedium);
   if(S.libLiked) rows = rows.filter(r => E(r.id).liked);
   if(S.libSort === 'rating')
     rows.sort((a, b) => ((E(b.id).rating ?? -1) - (E(a.id).rating ?? -1)) || dcmp(E(b.id).listenedOn, E(a.id).listenedOn));
@@ -521,7 +612,7 @@ function likedSongRows(){
     const list = (S.entries[r.id] || {}).likedTracks || [];
     for(const title of list){
       // rematch by folded title so refetched tracklists keep their videoIds
-      const t = (r.tracks || []).find(x => fold(x.title) === fold(title)) || { title };
+      const t = (tracksOf(r) || []).find(x => fold(x.title) === fold(title)) || { title };
       out.push({ r, t });
     }
   }
@@ -551,7 +642,7 @@ function plLiked(){
 function plQueue(){
   const out = [];
   for(const r of plFacetRows(queueRows())){
-    for(const t of (r.tracks || []).length ? r.tracks : (r.topTracks || [])) out.push(plTrack(r, t));
+    for(const t of (tracksOf(r) || r.topTracks || [])) out.push(plTrack(r, t));
   }
   return out;
 }
@@ -560,7 +651,7 @@ function plRated(){
   for(const r of plFacetRows(sorted())){
     const e = S.entries[r.id];
     if(!e || !(e.rating >= 4)) continue;
-    const tt = (r.tracks || []).length ? top3Of(r).ranked : (r.topTracks || []).slice(0, 3);
+    const tt = (tracksOf(r) || []).length ? top3Of(r).ranked : (r.topTracks || []).slice(0, 3);
     for(const t of tt) out.push(plTrack(r, t));
   }
   return out;
@@ -583,7 +674,8 @@ function plExportObj(key){
   return p ? { app: 'vgm-finder-playlist', name: p.name, tracks: p.tracks } : null;
 }
 function plSlug(name){ return fold(name).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'playlist'; }
-function exportPlaylist(key){
+async function exportPlaylist(key){
+  await loadTracks(playlistRefIds());  // videoIds live in the track files now
   const data = plExportObj(key);
   if(!data || !data.tracks.length) return;
   try{
@@ -649,7 +741,7 @@ function cplResolved(p){
   for(const x of p.tracks){
     const r = byId(x.id); if(!r) continue;
     // rematch by folded title so refetched tracklists keep their videoIds
-    const t = (r.tracks || []).find(k => fold(k.title) === fold(x.t)) || { title: x.t };
+    const t = (tracksOf(r) || []).find(k => fold(k.title) === fold(x.t)) || { title: x.t };
     out.push(plTrack(r, t));
   }
   return out;
@@ -674,9 +766,11 @@ let PUB_POLL_MS = 8000;
 function pubToken(){ try{ return localStorage.getItem(PUB_KEY) || ''; }catch(e){ return ''; } }
 function setPubToken(t){ try{ t ? localStorage.setItem(PUB_KEY, t) : localStorage.removeItem(PUB_KEY); }catch(e){} PUBSTATE = {}; }
 async function publishPlaylist(key){
-  const tok = pubToken(), data = plExportObj(key);
   const busy = PUBSTATE[key] === 'sending' || PUBSTATE[key] === 'watching';
-  if(!tok || !data || !data.tracks.length || busy) return;
+  if(busy) return;
+  await loadTracks(playlistRefIds());  // videoIds live in the track files now
+  const tok = pubToken(), data = plExportObj(key);
+  if(!tok || !data || !data.tracks.length) return;
   const body = JSON.stringify({ event_type: 'publish', client_payload: { playlist: data } });
   if(body.length > 60000){ PUBSTATE[key] = 'too big — export instead'; renderList(); return; }  // dispatch caps payloads at 64KB
   PUBSTATE[key] = 'sending'; renderList();
@@ -725,6 +819,7 @@ function todayLocal(){
   const d = new Date(), p = n => String(n).padStart(2, '0');
   return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
 }
+function motionOk(){ return !!(window.matchMedia && matchMedia('(prefers-reduced-motion: no-preference)').matches); }
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function pad3(n){ return String(n).padStart(3, '0'); }
 function minis(rating){
@@ -738,7 +833,7 @@ function playsNum(s){
   return isNaN(n) ? null : n * ({ K:1e3, M:1e6, B:1e9 }[(m[2] || '').toUpperCase()] || 1);
 }
 function top3Of(r){
-  const tt = r.tracks || [];
+  const tt = tracksOf(r) || [];
   const scored = tt.map((t, i) => ({ i, n: playsNum(t.plays) }));
   if(!scored.some(x => x.n != null)) return { idx: new Set(), ranked: tt.slice(0, 3), byPlays: false };
   scored.sort((a, b) => (b.n ?? -1) - (a.n ?? -1));
@@ -771,17 +866,41 @@ function renderTabs(){
     `<span class="lbl">${t.label}</span>${t.extra}</button>`).join('');
 }
 
+const MEDIUM_CHIPS = [['all', 'all'], ['game', 'games'], ['film', 'film'], ['tv', 'tv']];
+function multiMedium(){ return R.releases.some(r => mediumOf(r) !== 'game'); }
+function mediumChipsHtml(attr, sel){
+  // the chip row only earns its place once a second medium exists in the data
+  if(!multiMedium()) return '';
+  return MEDIUM_CHIPS.map(([k, name]) =>
+    `<button data-${attr}="${k}" class="${sel === k ? 'on' : ''}">${name}</button>`).join('');
+}
+function yjumpHtml(){
+  if(S.feedSort !== 'date' && S.feedSort !== 'oldest') return '';
+  const years = [];
+  for(const r of searched(feedRows())){
+    const y = (r.date || '').slice(0, 4) || '····';
+    if(!years.includes(y)) years.push(y);
+  }
+  if(years.length < 2) return '';
+  return `<select id="yjump" aria-label="Jump to a year">` +
+    `<option value="" selected>year ⇢</option>` +
+    years.map(y => `<option value="${esc(y)}">${esc(y)}</option>`).join('') + `</select>`;
+}
 function renderControls(){
   const el = document.getElementById('subctl');
   if(S.view === 'feed'){
-    const sorts = [['date', 'newest'], ['oldest', 'oldest'], ['az', 'a–z'], ['added', 'added']];
+    const sorts = [['date', 'newest'], ['oldest', 'oldest'], ['az', 'a–z'], ['added', 'added'], ['plays', 'most played']];
     const cos = [['all', 'all'], ['big', 'big studios'], ['indie', 'indie']];
-    el.innerHTML = sorts.map(([k, name]) =>
+    el.innerHTML = mediumChipsHtml('fm', S.feedMedium) +
+      sorts.map(([k, name]) =>
       `<button data-fs="${k}" class="${S.feedSort === k ? 'on' : ''}">${name}</button>`).join('') +
-      cos.map(([k, name]) =>
-      `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('') +
-      `<button id="fconsole" class="${S.feedConsole ? 'on' : ''}" aria-pressed="${S.feedConsole}">console</button>` +
-      genreSelectHtml('fgenre', S.feedGenre) +
+      (gamesShown('feedMedium')
+        ? cos.map(([k, name]) =>
+          `<button data-fc="${k}" class="${S.feedCo === k ? 'on' : ''}">${name}</button>`).join('') +
+          `<button id="fconsole" class="${S.feedConsole ? 'on' : ''}" aria-pressed="${S.feedConsole}">console</button>`
+        : '') +
+      genreSelectHtml('fgenre', S.feedGenre, S.feedMedium) +
+      yjumpHtml() +
       `<button id="frandom" aria-label="Listen to a random soundtrack">random ▸</button>`;
     return;
   }
@@ -792,7 +911,8 @@ function renderControls(){
   if(S.libView === 'songs'){ el.innerHTML = modeChips; return; }
   if(S.libView === 'playlists'){ el.innerHTML = modeChips + plYearSelectHtml() + genreSelectHtml('plgenre', S.plGenre); return; }
   const sorts = [['listenedOn', 'heard on'], ['rating', 'rating'], ['date', 'released']];
-  el.innerHTML = sorts.map(([k, name]) =>
+  el.innerHTML = mediumChipsHtml('lm', S.libMedium) +
+    sorts.map(([k, name]) =>
     `<button data-ls="${k}" class="${S.libSort === k ? 'on' : ''}">${name}</button>`).join('') +
     `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>` +
     modeChips;
@@ -800,9 +920,14 @@ function renderControls(){
 
 const SRC_LABEL = { igdb: 'catalog', ytm: 'catalog' };  // site names read fine; api names get friendly labels
 
-function genreSelectHtml(id, sel){
+function genreSelectHtml(id, sel, medium){
+  // options come from the active medium's rows, so IGDB and TMDb genre
+  // vocabularies never mix in one dropdown
   const counts = {};
-  for(const r of R.releases) for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
+  for(const r of R.releases){
+    if(medium && medium !== 'all' && mediumOf(r) !== medium) continue;
+    for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
+  }
   const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 24);
   if(!names.length) return '';
   if(sel !== 'all' && !names.includes(sel)) names.push(sel);
@@ -944,24 +1069,29 @@ function xtrackHtml(r, t, i){
     `<span class="xend">${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}${taddHtml(r, t)}${tlikeHtml(r, t)}</span></div>`;
 }
 
+function mediumNoun(r){ return { game: 'game', film: 'film', tv: 'show' }[mediumOf(r)] || 'game'; }
 function expandedHtml(r, e){
   const info = [];
-  if(r.game) info.push(['game', r.game]);
+  if(r.game) info.push([mediumNoun(r), r.game]);
   if((r.composers || []).length) info.push(['composer', r.composers.join(', ')]);
   if(r.company) info.push(['studio', r.company]);
   if(r.date) info.push(['released', fmtDate(r.date)]);
   if(e.listenedOn) info.push(['heard on', fmtDate(e.listenedOn)]);
   let tracks = '';
-  if((r.tracks || []).length){
+  const tt = tracksOf(r);
+  if(tt && tt.length){
     const t3 = top3Of(r);
     tracks = `<div class="xh">${t3.byPlays ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` +
       t3.ranked.map((t, i) => xtrackHtml(r, t, i)).join('') +
-      `<button class="xall" data-act="album">All ${r.tracks.length} tracks ›</button>`;
+      `<button class="xall" data-act="album">All ${tt.length} tracks ›</button>`;
+  } else if(TLOAD[r.id] === 'loading'){
+    tracks = `<div class="xh">TRACKLIST</div><div class="xtrack"><span class="xplays">loading…</span></div>`;
   } else if((r.topTracks || []).length){  // legacy shape until the collector refetches
-    const tt = r.topTracks;
-    tracks = `<div class="xh">${tt.some(t => t && t.plays) ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` +
-      tt.map((t, i) => xtrackHtml(r, t, i)).join('');
+    const tt2 = r.topTracks;
+    tracks = `<div class="xh">${tt2.some(t => t && t.plays) ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` +
+      tt2.map((t, i) => xtrackHtml(r, t, i)).join('');
   }
+  // a tracks file that failed to load renders no list at all: LISTEN still works
   const links = (r.sources || []).map(s =>
     `<a class="chip xsrc" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(SRC_LABEL[s.name] || s.name)} ↗</a>`).join('');
   return `<div class="rx">
@@ -994,11 +1124,13 @@ function renderAlbum(){
   const prev = wrap.querySelector('#album');
   const scroll = prev ? prev.scrollTop : 0;  // hearting a track mid-list must not jump to the top
   const e = E(r.id);
+  const tt = tracksOf(r) || [];
   const t3 = top3Of(r);
   const medal = { };
-  t3.ranked.forEach((t, rank) => { medal[(r.tracks || []).indexOf(t)] = rank + 1; });
-  const meta = [r.company, (r.date || '').slice(0, 4)].filter(Boolean).join(' · ');
-  const rows = (r.tracks || []).map((t, i) =>
+  t3.ranked.forEach((t, rank) => { medal[tt.indexOf(t)] = rank + 1; });
+  const kind = mediumOf(r) === 'game' ? null : (mediumOf(r) === 'tv' ? 'tv score' : 'film score');
+  const meta = [kind, r.company, (r.date || '').slice(0, 4)].filter(Boolean).join(' · ');
+  const rows = tt.length ? tt.map((t, i) =>
     `<div class="atrack" data-i="${i}" role="link" tabindex="0">
       <span class="tix">${String(i + 1).padStart(2, '0')}</span>
       <span class="ttl">${esc(t.title)}</span>
@@ -1006,7 +1138,8 @@ function renderAlbum(){
       ${t.plays ? `<span class="tplays">${esc(t.plays)}</span>` : ''}
       ${taddHtml(r, t)}
       ${tlikeHtml(r, t)}
-    </div>`).join('');
+    </div>`).join('')
+    : (TLOAD[r.id] === 'loading' ? `<div class="atrack"><span class="ttl">loading tracklist…</span></div>` : '');
   wrap.innerHTML = `<div id="album">
     <div class="ahead"><button class="aclose" aria-label="Back">✕</button><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span></div>
     <div class="abody">
@@ -1038,6 +1171,77 @@ function emptyHtml(){
   return stateHtml('ALL TRACKS HIDDEN', 'Everything is hidden. Use “show” below to bring tracks back.');
 }
 
+function pageKey(){
+  // showHidden stays out on purpose: revealing the hidden shelf must not
+  // reset paging or throw the scroll position back to the top
+  return [S.view, S.libView, S.feedSort, S.feedCo, S.feedConsole, S.feedGenre, S.feedMedium,
+          S.libSort, S.libLiked, S.libMedium, Q.trim()].join('\n');
+}
+function pageSlice(list){
+  // a new list identity starts back at page one; actions on rows (expand,
+  // heart, log) keep the identity and therefore the paging and scroll spot
+  const key = pageKey();
+  if(key !== PAGE_KEY){ PAGE_KEY = key; PAGE_N = 1; }
+  return { shown: list.slice(0, PAGE_N * PAGE), left: Math.max(0, list.length - PAGE_N * PAGE) };
+}
+function moreHtml(left){
+  return left > 0 ? `<button id="more" class="xall">MORE · ${left} TO GO</button>` : '';
+}
+function rowsHtml(rows, from, to, view){
+  const rails = view === 'feed' && (S.feedSort === 'date' || S.feedSort === 'oldest');
+  let year = rails && from > 0 ? ((rows[from - 1].date || '').slice(0, 4) || '····') : null;
+  let html = '';
+  for(let i = from; i < Math.min(to, rows.length); i++){
+    const r = rows[i];
+    if(rails){
+      const y = (r.date || '').slice(0, 4) || '····';
+      if(y !== year) html += `<div class="yhead">${y}</div>`;
+      year = y;
+    }
+    html += rowHtml(r, view, false);
+  }
+  return html;
+}
+function pagedRows(){
+  if(S.view === 'library' && S.libView === 'songs')
+    return likedSongRows().filter(s => songMatches(s, Q.trim()));
+  return searched(S.view === 'queue' ? queueRows() : S.view === 'library' ? libraryRows() : feedRows());
+}
+function morePage(){
+  const btn = document.getElementById('more');
+  if(!btn || pageKey() !== PAGE_KEY){ PAGE_N += 1; renderList(); return; }
+  // append the next page in place: a full re-render would rebuild every
+  // shown row and re-create its cover image, which crawls deep in the catalog
+  const rows = pagedRows();
+  const from = PAGE_N * PAGE;
+  PAGE_N += 1;
+  const songs = S.view === 'library' && S.libView === 'songs';
+  const html = songs ? rows.slice(from, PAGE_N * PAGE).map(songRowHtml).join('')
+                     : rowsHtml(rows, from, PAGE_N * PAGE, S.view);
+  btn.insertAdjacentHTML('beforebegin', html);
+  const left = Math.max(0, rows.length - PAGE_N * PAGE);
+  if(left === 0) btn.remove();
+  else btn.textContent = `MORE · ${left} TO GO`;
+  observeMore();
+}
+function observeMore(){
+  if(MORE_IO){ MORE_IO.disconnect(); MORE_IO = null; }
+  const btn = document.getElementById('more');
+  if(!btn || typeof IntersectionObserver === 'undefined') return;  // without IO the button still pages
+  MORE_IO = new IntersectionObserver(es => { if(es.some(x => x.isIntersecting)) morePage(); },
+                                     { root: document.querySelector('main') });
+  MORE_IO.observe(btn);
+}
+function jumpToYear(y){
+  const rows = searched(feedRows());
+  const idx = rows.findIndex(r => ((r.date || '').slice(0, 4) || '····') === y);
+  if(idx < 0) return;
+  pageSlice(rows);  // sync PAGE_KEY first so the bump below survives the render
+  PAGE_N = Math.max(PAGE_N, Math.ceil((idx + 1) / PAGE));
+  renderList();
+  const head = [...document.querySelectorAll('#list .yhead')].find(h => h.textContent === y);
+  if(head && head.scrollIntoView) head.scrollIntoView({ block: 'start', behavior: motionOk() ? 'smooth' : 'auto' });
+}
 function renderList(){
   const el = document.getElementById('list');
   if(LOADSTATE === 'loading'){ el.innerHTML = stateHtml('LOADING…', 'Reading the release log.'); return; }
@@ -1051,31 +1255,23 @@ function renderList(){
     return;
   }
   if(S.view === 'library' && S.libView === 'songs'){
-    const songs = likedSongRows().filter(s => songMatches(s, Q.trim()));
-    el.innerHTML = songs.length ? songs.map(songRowHtml).join('') : emptyHtml();
+    const songs = pagedRows();
+    const { shown, left } = pageSlice(songs);
+    el.innerHTML = songs.length ? shown.map(songRowHtml).join('') + moreHtml(left) : emptyHtml();
+    observeMore();
     return;
   }
   if(S.view === 'library' && S.libView === 'playlists'){ el.innerHTML = playlistsHtml(); return; }
-  const rows = searched(S.view === 'queue' ? queueRows() : S.view === 'library' ? libraryRows() : feedRows());
-  let html;
-  if(!rows.length){
-    html = emptyHtml();
-  } else if(S.view === 'feed' && (S.feedSort === 'date' || S.feedSort === 'oldest')){
-    let year = null;
-    html = rows.map(r => {
-      const y = (r.date || '').slice(0, 4) || '····';
-      const head = y !== year ? `<div class="yhead">${y}</div>` : '';
-      year = y;
-      return head + rowHtml(r, S.view, false);
-    }).join('');
-  } else {
-    html = rows.map(r => rowHtml(r, S.view, false)).join('');
-  }
+  const rows = pagedRows();
+  const { left } = pageSlice(rows);
+  let html = rows.length ? rowsHtml(rows, 0, PAGE_N * PAGE, S.view) : emptyHtml();
+  html += moreHtml(left);
   if(S.showHidden && hiddenRows().length){
     html += `<div id="hidhead">HIDDEN (${hiddenRows().length})</div>` +
             hiddenRows().map(r => rowHtml(r, S.view, true)).join('');
   }
   el.innerHTML = html;
+  observeMore();
 }
 
 function renderColophon(){
@@ -1154,6 +1350,7 @@ document.addEventListener('visibilitychange', () => {
 
 document.getElementById('list').addEventListener('click', e => {
   if(e.target.closest('a')) return;  // article links navigate normally
+  if(e.target.closest('#more')){ morePage(); return; }
   const pp = e.target.closest('[data-plp]');
   if(pp){ publishPlaylist(pp.dataset.plp); return; }
   const px = e.target.closest('[data-plx]');
@@ -1197,7 +1394,7 @@ document.getElementById('list').addEventListener('click', e => {
     const r = byId(id);
     if(r){
       const f = fold(row.dataset.t);
-      const tr = (r.tracks || []).find(x => fold(x.title) === f) || { title: row.dataset.t };
+      const tr = (tracksOf(r) || []).find(x => fold(x.title) === f) || { title: row.dataset.t };
       openUrl(trackUrl(r, tr));
     }
     return;
@@ -1223,6 +1420,10 @@ document.getElementById('subctl').addEventListener('click', e => {
   if(f){ setFeedSort(f.dataset.fs); return; }
   const c = e.target.closest('button[data-fc]');
   if(c){ setFeedCo(c.dataset.fc); return; }
+  const fm = e.target.closest('button[data-fm]');
+  if(fm){ setFeedMedium(fm.dataset.fm); return; }
+  const lm = e.target.closest('button[data-lm]');
+  if(lm){ setLibMedium(lm.dataset.lm); return; }
   if(e.target.closest('#fconsole')){ toggleFeedConsole(); return; }
   if(e.target.closest('#frandom')){ randomListen(); return; }
   const s = e.target.closest('button[data-ls]');
@@ -1246,6 +1447,11 @@ document.getElementById('subctl').addEventListener('change', e => {
   if(e.target.id === 'fgenre') setFeedGenre(e.target.value);
   else if(e.target.id === 'plyear') setPlYear(e.target.value);
   else if(e.target.id === 'plgenre') setPlGenre(e.target.value);
+  else if(e.target.id === 'yjump' && e.target.value){
+    const y = e.target.value;
+    e.target.value = '';  // it is a jump control, not a filter: snap back
+    jumpToYear(y);
+  }
 });
 document.getElementById('q').addEventListener('input', e => {
   document.getElementById('qwrap').classList.toggle('has', !!e.target.value);
@@ -1309,7 +1515,7 @@ document.getElementById('albumwrap').addEventListener('click', e => {
   const ad = e.target.closest('[data-act="tadd"]');
   if(ad && r){ addFlow(r.id, ad.dataset.t); return; }          // plus, not play
   const t = e.target.closest('.atrack');
-  if(t && r){ const tr = (r.tracks || [])[+t.dataset.i]; if(tr) openUrl(trackUrl(r, tr)); }
+  if(t && r){ const tr = (tracksOf(r) || [])[+t.dataset.i]; if(tr) openUrl(trackUrl(r, tr)); }
 });
 window.addEventListener('keydown', e => {
   if(e.key !== 'Escape') return;
@@ -1322,6 +1528,15 @@ document.getElementById('toastwrap').addEventListener('click', e => {
   CPICK = { rid: TOAST.song.rid, t: TOAST.song.t, from: TOAST.song.from };
   TOAST = null; clearTimeout(TOAST_TIMER);
   renderToast(); renderSheet();
+});
+const MAIN_EL = document.querySelector('main');
+MAIN_EL.addEventListener('scroll', () => {
+  // one screen of scroll earns the shortcut back up
+  document.getElementById('totop').hidden = MAIN_EL.scrollTop <= MAIN_EL.clientHeight;
+}, { passive: true });
+document.getElementById('totop').addEventListener('click', () => {
+  if(MAIN_EL.scrollTo) MAIN_EL.scrollTo({ top: 0, behavior: motionOk() ? 'smooth' : 'auto' });
+  else MAIN_EL.scrollTop = 0;
 });
 
 /* ======================= backup lifeboat ======================= */
@@ -1352,8 +1567,9 @@ fetch('data/releases.json', { cache: 'no-store' })
   .then(data => {
     if(!data || !Array.isArray(data.releases)) throw new Error('bad shape');
     R = data;
-    R.releases.forEach((r, i) => { TRACKNO[r.id] = i + 1; });  // append-only order: numbers never reshuffle
+    buildIndexes();
     LOADSTATE = R.releases.length ? 'ok' : 'empty';
+    ensureViewTracks();  // landing straight on liked songs or playlists needs its files
     renderAll();
     markVisit();  // after render: this visit's NEW badges compare against the previous visit
   })

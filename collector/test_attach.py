@@ -23,16 +23,21 @@ def data():
     ]}
 
 
-def test_attach_fills_the_row_like_the_pipeline():
+def test_attach_fills_the_row_like_the_pipeline(tmp_path):
+    import json
     d = data()
-    row, _ = attach.attach(d, "game", "MPREb_new", composers=["Sea Power"],
-                           album_fn=lambda b: fake_album(),
-                           playlist_fn=lambda pid: {"tracks": [
-                               {"title": "Opening", "videoId": "vA"},
-                               {"title": "Finale", "videoId": "vATV"}]})
+    row, _, tracks = attach.attach(d, "game", "MPREb_new", composers=["Sea Power"],
+                                   album_fn=lambda b: fake_album(),
+                                   playlist_fn=lambda pid: {"tracks": [
+                                       {"title": "Opening", "videoId": "vA"},
+                                       {"title": "Finale", "videoId": "vATV"}]},
+                                   tracks_dir=tmp_path)
     assert row["ytmAlbumUrl"] == "https://music.youtube.com/browse/MPREb_new"
     assert row["ytmPlaylistId"] == "OLAK5uy_pl"
-    assert [t["videoId"] for t in row["tracks"]] == ["vA", "vATV"]  # OMV id nulled, patched from the audio playlist
+    assert [t["videoId"] for t in tracks] == ["vA", "vATV"]  # OMV id nulled, patched from the audio playlist
+    saved = json.loads((tmp_path / "game.json").read_text(encoding="utf-8"))
+    assert saved == tracks  # the split convention: the list lives in its own file
+    assert row["tracksN"] == 2 and row["playsTotal"] == 1_000_000 and "tracks" not in row
     assert row["composers"] == ["Sea Power"]
     assert row["art"] == "big" and "topTracks" not in row
 

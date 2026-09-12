@@ -14,6 +14,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r collector/requirements.txt
+      - run: python collector/split_tracks.py   # one-time tracklist split; no-op once migrated
       - run: python collector/collect.py
         env:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
@@ -21,5 +22,5 @@ jobs:
       - run: |
           git config user.name vgm-bot
           git config user.email actions@users.noreply.github.com
-          git add data/releases.json
+          git add data
           git diff --cached --quiet || (git commit -m collect && git pull --rebase && git push)

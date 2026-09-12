@@ -19,12 +19,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from collect import _patch_audio_ids, ytm_album, ytm_playlist, ytm_tracks_from
+from collect import _patch_audio_ids, write_tracklist, ytm_album, ytm_playlist, ytm_tracks_from
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "releases.json"
 
 
-def attach(data, row_id, browse_id, composers=None, album_fn=ytm_album, playlist_fn=ytm_playlist):
+def attach(data, row_id, browse_id, composers=None, album_fn=ytm_album, playlist_fn=ytm_playlist,
+           tracks_dir=None):
     url = "https://music.youtube.com/browse/" + browse_id
     claimed = [r["id"] for r in data["releases"] if r.get("ytmAlbumUrl") == url]
     if claimed:
@@ -47,14 +48,15 @@ def attach(data, row_id, browse_id, composers=None, album_fn=ytm_album, playlist
             except Exception:
                 pass  # patch is best-effort: links fall back to search
     row["ytmAlbumUrl"] = url
-    row["tracks"] = tracks
+    write_tracklist(row, tracks, Path(tracks_dir) if tracks_dir else DATA.parent / "tracks")
+    row.pop("tracks", None)  # retire the legacy inline shape if the row had one
     if composers:
         row["composers"] = list(composers)
     thumbs = album.get("thumbnails") or []
     if thumbs:
         row["art"] = thumbs[-1]["url"]  # YTM thumbs outrank store/IGDB art
     row.pop("topTracks", None)
-    return row, album
+    return row, album, tracks
 
 
 def main(argv=None):
@@ -68,11 +70,11 @@ def main(argv=None):
     ap.add_argument("--composers", nargs="*", default=None)
     a = ap.parse_args(argv)
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    row, album = attach(data, a.row_id, a.browse_id, a.composers)
+    row, album, tracks = attach(data, a.row_id, a.browse_id, a.composers)
     data["updatedAt"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    linked = sum(1 for t in row["tracks"] if t["videoId"])
-    print(f"attached {album.get('title')!r} to {a.row_id}: {len(row['tracks'])} tracks ({linked} linked)")
+    linked = sum(1 for t in tracks if t["videoId"])
+    print(f"attached {album.get('title')!r} to {a.row_id}: {len(tracks)} tracks ({linked} linked)")
     return 0
 
 

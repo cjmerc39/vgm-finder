@@ -262,11 +262,12 @@ def test_arriving_album_invalidates_stale_tracklists():
     releases = []
     collect.merge(releases, [{"title": "Hi-Fi Rush Soundtrack",
                               "url": "https://a.example/hfr", "date": "2023-01-25"}], src("a"), SEEN)
-    releases[0]["tracks"] = []  # checked while it was a search row: nothing found
+    releases[0]["tracksN"] = 0  # checked while it was a search row: nothing found
+    releases[0]["tracks"] = []  # and the pre-split shape, for rows migrated mid-flight
     collect.merge(releases, [{"title": "Hi-Fi Rush Soundtrack", "albumTitle": "Hi-Fi RUSH OST",
                               "url": "https://b.example/hfr", "date": "2023-01-25",
                               "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hfr"}], src("b"), SEEN)
-    assert "tracks" not in releases[0]  # stale check cleared: fill refetches with plays
+    assert "tracks" not in releases[0] and "tracksN" not in releases[0]  # stale check cleared: fill refetches
     assert releases[0]["ytmAlbumUrl"]
 
 
@@ -407,28 +408,32 @@ def test_genres_of_takes_top_three_names():
     assert collect.genres_of({}) is None
 
 
-def test_fill_tracks_uses_ytm_then_itunes_and_never_refetches():
+def test_fill_tracks_uses_ytm_then_itunes_and_never_refetches(tmp_path):
     def album(bid):
         return {"tracks": [{"title": f"T-{bid}", "views": "5 plays", "videoId": "v"}],
                 "audioPlaylistId": f"OLAK_{bid}"}
     def itunes(query):
         return [{"title": "Apple Track", "plays": None}] if "Gold" in query else None
     rows = [
-        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_a", "topTracks": []},
-        {"ytmAlbumUrl": None, "game": "Pokémon Gold Version"},
-        {"ytmAlbumUrl": None, "game": "Obscure Nothing"},
-        {"ytmAlbumUrl": None, "game": None, "title": "headline row"},  # nothing to look up
-        {"ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_b", "tracks": []},  # already checked
+        {"id": "a", "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_a", "topTracks": []},
+        {"id": "gold", "ytmAlbumUrl": None, "game": "Pokémon Gold Version"},
+        {"id": "obscure", "ytmAlbumUrl": None, "game": "Obscure Nothing"},
+        {"id": "headline", "ytmAlbumUrl": None, "game": None, "title": "headline row"},  # nothing to look up
+        {"id": "b", "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_b", "tracksN": 0},  # already checked
     ]
-    assert collect.fill_tracks(rows, album, itunes, cap=1) == 1
-    assert rows[0]["tracks"][0] == {"title": "T-MPREb_a", "plays": "5 plays", "videoId": "v"}
+    assert collect.fill_tracks(rows, album, itunes, cap=1, tracks_dir=tmp_path) == 1
+    saved = json.loads((tmp_path / "a.json").read_text(encoding="utf-8"))
+    assert saved[0] == {"title": "T-MPREb_a", "plays": "5 plays", "videoId": "v"}
+    assert rows[0]["tracksN"] == 1 and rows[0]["playsTotal"] == 5
     assert rows[0]["ytmPlaylistId"] == "OLAK_MPREb_a"  # album context for song-not-video links
     assert "topTracks" not in rows[0]  # legacy field retired on refetch
-    assert collect.fill_tracks(rows, album, itunes, cap=10) == 2
-    assert rows[1]["tracks"] == [{"title": "Apple Track", "plays": None}]  # Apple fallback
-    assert rows[2]["tracks"] == []  # no match anywhere: completed check
-    assert "tracks" not in rows[3]
-    assert collect.fill_tracks(rows, album, itunes, cap=10) == 0  # everything settled
+    assert collect.fill_tracks(rows, album, itunes, cap=10, tracks_dir=tmp_path) == 2
+    assert json.loads((tmp_path / "gold.json").read_text(encoding="utf-8")) \
+        == [{"title": "Apple Track", "plays": None}]  # Apple fallback
+    assert rows[1]["tracksN"] == 1 and "playsTotal" not in rows[1]  # no plays: sinks in the plays sort
+    assert rows[2]["tracksN"] == 0 and not (tmp_path / "obscure.json").exists()  # completed empty check
+    assert "tracksN" not in rows[3]
+    assert collect.fill_tracks(rows, album, itunes, cap=10, tracks_dir=tmp_path) == 0  # everything settled
 
 
 def test_is_console_classification():
@@ -728,7 +733,7 @@ def test_new_entry_shape_matches_schema():
                               "url": "https://a.example/tunic", "date": "2026-06-01"}],
                   src("a", type="catalog"), SEEN)
     entry = releases[0]
-    assert set(entry) == {"id", "title", "game", "composers", "date", "sources",
+    assert set(entry) == {"id", "title", "medium", "game", "composers", "date", "sources",
                           "ytmSearchUrl", "ytmAlbumUrl", "art", "notable"}
     assert entry["game"] is None and entry["composers"] == []
     assert entry["ytmAlbumUrl"] is None and entry["art"] is None and entry["notable"] is True
@@ -866,7 +871,7 @@ def test_hit_gates_cover_the_publisher_conventions():
     assert collect._hit_from(gta)
 
 
-def test_video_edition_tracks_take_ids_from_the_audio_playlist():
+def test_video_edition_tracks_take_ids_from_the_audio_playlist(tmp_path):
     # Minecraft Volume Alpha: the album page links 13 tracks as music videos
     # (OMV); their audio ids live in the album's OLAK playlist instead
     album = {"title": "Minecraft - Volume Alpha", "audioPlaylistId": "OLAK5uy_alpha",
@@ -881,20 +886,24 @@ def test_video_edition_tracks_take_ids_from_the_audio_playlist():
     r = {"id": "mva", "title": "Minecraft - Volume Alpha", "date": "2011-03-04",
          "sources": [], "notable": True,
          "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_alpha"}
-    collect.fill_tracks([r], lambda b: album, no_itunes, cap=5,
+    collect.fill_tracks([r], lambda b: album, no_itunes, cap=5, tracks_dir=tmp_path,
                         playlist_fn=lambda p: (fetched.append(p), playlist)[1])
     assert fetched == ["OLAK5uy_alpha"]
-    assert [t["videoId"] for t in r["tracks"]] == ["vidKeyATV", "vidSweATV"]
+    saved = json.loads((tmp_path / "mva.json").read_text(encoding="utf-8"))
+    assert [t["videoId"] for t in saved] == ["vidKeyATV", "vidSweATV"]
     assert r["ytmPlaylistId"] == "OLAK5uy_alpha"
+    assert r["playsTotal"] == 91_200_000  # 1.2M + 90M, parsed from the plays strings
     # an all-audio album never fetches the playlist
     clean = {"title": "Volume Beta", "audioPlaylistId": "OLAK5uy_beta",
              "tracks": [{"title": "Flake", "views": "2M", "videoId": "vidFlake",
                          "videoType": "MUSIC_VIDEO_TYPE_ATV"}]}
     r2 = dict(r, id="mvb", ytmAlbumUrl="https://music.youtube.com/browse/MPREb_beta")
-    r2.pop("tracks", None)
-    collect.fill_tracks([r2], lambda b: clean, no_itunes, cap=5,
+    r2.pop("tracksN", None)
+    r2.pop("playsTotal", None)
+    collect.fill_tracks([r2], lambda b: clean, no_itunes, cap=5, tracks_dir=tmp_path,
                         playlist_fn=lambda p: (_ for _ in ()).throw(AssertionError("no fetch")))
-    assert r2["tracks"][0]["videoId"] == "vidFlake"
+    saved2 = json.loads((tmp_path / "mvb.json").read_text(encoding="utf-8"))
+    assert saved2[0]["videoId"] == "vidFlake"
 
 
 def test_purename_album_needs_composer_and_matching_era():
@@ -950,3 +959,72 @@ def test_bare_franchise_heads_never_match_media_albums():
               "title": "NARUTO SHIPPUDEN ORIGINAL SOUNDTRACK",
               "artists": [{"name": "Yasuharu Takanashi"}], "thumbnails": []}]
     assert collect._match_album_tokens(anime, "Naruto Shippuden: Ultimate Ninja 4", year=2007) is None
+
+
+# ---------------- medium-aware dedupe (film and TV expansion) ----------------
+
+def test_same_name_different_medium_never_merges():
+    releases = []
+    collect.merge(releases, [{"title": "Dune Soundtrack",
+                              "url": "https://a.example/g", "date": "2021-09-14"}],
+                  src("steam", "catalog"), SEEN)
+    a, m = collect.merge(releases, [{"title": "Dune Soundtrack", "medium": "film",
+                                     "url": "https://b.example/f", "date": "2021-10-22"}],
+                         src("tmdb-film", "catalog"), SEEN)
+    assert (a, m) == (1, 0)  # same name, same era, still two rows
+    assert [r["id"] for r in releases] == ["dune", "film-dune"]
+    assert releases[0]["medium"] == "game" and releases[1]["medium"] == "film"
+    # rerun folds into its own medium's row, not the game's
+    a2, m2 = collect.merge(releases, [{"title": "Dune Soundtrack", "medium": "film",
+                                       "url": "https://c.example/f2", "date": "2021-10-22"}],
+                           src("other"), SEEN)
+    assert (a2, m2) == (0, 1) and len(releases) == 2
+    assert any(s["url"] == "https://c.example/f2" for s in releases[1]["sources"])
+
+
+def test_film_enrichment_never_lands_on_the_game_row():
+    releases = []
+    collect.merge(releases, [{"title": "Arcane Soundtrack",
+                              "url": "https://a.example/g", "date": "2024-11-01"}], src("a"), SEEN)
+    collect.merge(releases, [{"title": "Arcane Soundtrack", "medium": "tv",
+                              "composers": ["Composer X"],
+                              "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_arc",
+                              "url": "https://b.example/t", "date": "2024-11-09"}], src("b"), SEEN)
+    assert releases[0].get("ytmAlbumUrl") is None and not releases[0]["composers"]
+    assert releases[1]["id"] == "tv-arcane" and releases[1]["ytmAlbumUrl"]
+
+
+def test_fuzzy_dedupe_never_reaches_across_mediums():
+    releases = []
+    collect.merge(releases, [{"title": "Oblivion Soundtrack",
+                              "url": "https://a.example/g", "date": "2006-03-20"}], src("a"), SEEN)
+    # near-identical name inside the fuzzy threshold, close era, other medium
+    collect.merge(releases, [{"title": "Oblivions Soundtrack", "medium": "film",
+                              "url": "https://b.example/f", "date": "2007-01-01"}], src("b"), SEEN)
+    assert len(releases) == 2 and releases[1]["id"] == "film-oblivions"
+
+
+def test_cross_medium_id_collision_gets_a_year_suffix():
+    # a game literally named "Film Noir" owns the slug a film named "Noir" wants
+    releases = []
+    collect.merge(releases, [{"title": "Film Noir",
+                              "url": "https://a.example/g", "date": "2020-01-01"}], src("a"), SEEN)
+    collect.merge(releases, [{"title": "Noir", "medium": "film",
+                              "url": "https://b.example/f", "date": "2024-05-01"}], src("b"), SEEN)
+    assert [r["id"] for r in releases] == ["film-noir", "film-noir-2024"]
+    assert releases[1]["medium"] == "film"
+    # rerun finds the suffixed row by medium-scoped name, adds nothing
+    a, m = collect.merge(releases, [{"title": "Noir", "medium": "film",
+                                     "url": "https://c.example/f2", "date": "2024-05-01"}],
+                         src("c"), SEEN)
+    assert (a, m) == (0, 1) and len(releases) == 2
+
+
+def test_write_tracklist_resets_cleanly(tmp_path):
+    r = {"id": "x"}
+    collect.write_tracklist(r, [{"title": "A", "plays": "1K plays", "videoId": None}], tmp_path)
+    assert (tmp_path / "x.json").exists()
+    assert r["tracksN"] == 1 and r["playsTotal"] == 1000
+    collect.write_tracklist(r, [], tmp_path)
+    assert not (tmp_path / "x.json").exists()  # a reset check leaves no stale list
+    assert r["tracksN"] == 0 and "playsTotal" not in r
