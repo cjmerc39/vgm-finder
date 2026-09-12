@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T19:28:06Z",
+  "updatedAt": "2026-09-12T19:30:44Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -21916,6 +21916,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/sonic-the-hedgehog",
           "seenAt": "2026-07-28T22:52:42Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-the-hedgehog--2",
+          "seenAt": "2026-09-12T19:30:44Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+the+Hedgehog+Soundtrack",
@@ -22051,13 +22057,19 @@
       "composers": [
         "Masato Nakamura"
       ],
-      "date": "1992-11-01",
+      "date": "1992-10-16",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/sonic-the-hedgehog-2",
           "seenAt": "2026-07-28T22:52:42Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-the-hedgehog-2--1",
+          "seenAt": "2026-09-12T19:30:44Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+the+Hedgehog+2+Soundtrack",
@@ -34122,7 +34134,9 @@
       "id": "pokémon-legends-z-a",
       "title": "Pokémon Legends: Z-A Soundtrack",
       "game": "Pokémon Legends: Z-A",
-      "composers": [],
+      "composers": [
+        "Chewie Melodies"
+      ],
       "date": "2025-10-16",
       "sources": [
         {
@@ -34133,7 +34147,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Pok%C3%A9mon+Legends%3A+Z-A+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fPCDiuRJkFs",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9wzc.jpg",
       "notable": true,
       "company": "Game Freak",
@@ -34143,7 +34157,10 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 0
+      "albumTitle": "Pokémon Legends: Z-A",
+      "ytmPlaylistId": "OLAK5uy_lhBsEI7PawDQK0vt7bPnf-fCgNPvKPh7Y",
+      "tracksN": 5,
+      "playsTotal": 22000
     },
     {
       "id": "pokémon-shining-pearl",
@@ -34638,7 +34655,9 @@
       "id": "007-first-light",
       "title": "007 First Light Soundtrack",
       "game": "007 First Light",
-      "composers": [],
+      "composers": [
+        "The Flight"
+      ],
       "date": "2026-05-27",
       "sources": [
         {
@@ -34649,7 +34668,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=007+First+Light+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Qyot9WwxEh5",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaoiz.jpg",
       "notable": true,
       "company": "IO Interactive",
@@ -34659,7 +34678,10 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 1
+      "albumTitle": "007 First Light (Original Video Game Soundtrack)",
+      "ytmPlaylistId": "OLAK5uy_lYlCfVL3hW754khDiOTNGZMY7orETj6ms",
+      "tracksN": 38,
+      "playsTotal": 89790
     },
     {
       "id": "star-fox-adventures",
@@ -35287,7 +35309,14 @@
       ],
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1o4l.jpg",
       "medium": "game",
-      "tracksN": 0
+      "albumTitle": "Solar Skate, Vol. 3 (Original Videogame Soundtrack)",
+      "composers": [
+        "BXY"
+      ],
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_P6cOKbzfnsW",
+      "ytmPlaylistId": "OLAK5uy_k5vKotFNuy5W0jae9hPiXGq_Nmt05CsZY",
+      "tracksN": 15,
+      "playsTotal": 181
     },
     {
       "id": "ea-sports-fc-24",
@@ -37446,7 +37475,9 @@
       "id": "like-a-dragon-gaiden-the-man-who-erased-his-name",
       "title": "Like a Dragon Gaiden: The Man Who Erased His Name Soundtrack",
       "game": "Like a Dragon Gaiden: The Man Who Erased His Name",
-      "composers": [],
+      "composers": [
+        "SEGA"
+      ],
       "date": "2023-11-09",
       "sources": [
         {
@@ -37457,7 +37488,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Like+a+Dragon+Gaiden%3A+The+Man+Who+Erased+His+Name+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Jg4x8R9FHci",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ln4.jpg",
       "notable": true,
       "company": "Ryu Ga Gotoku Studio",
@@ -37468,7 +37499,10 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 50
+      "albumTitle": "LIKE A DRAGON GAIDEN The Man Who Erased His Name",
+      "ytmPlaylistId": "OLAK5uy_mI8Li3zL2uF8bvO5QAPAkdGS8-k8s3JZ0",
+      "tracksN": 64,
+      "playsTotal": 13021000
     },
     {
       "id": "power-stone",
@@ -44770,7 +44804,9 @@
       "id": "fire-emblem-three-houses",
       "title": "Fire Emblem: Three Houses Soundtrack",
       "game": "Fire Emblem: Three Houses",
-      "composers": [],
+      "composers": [
+        "Chippy Bits"
+      ],
       "date": "2019-07-26",
       "sources": [
         {
@@ -44781,7 +44817,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Fire+Emblem%3A+Three+Houses+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qIhqhjz36G7",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n8t.jpg",
       "notable": true,
       "company": "Intelligent Systems",
@@ -44792,7 +44828,10 @@
         "Turn-based strategy (TBS)"
       ],
       "medium": "game",
-      "tracksN": 18
+      "albumTitle": "Fire Emblem Three Houses",
+      "ytmPlaylistId": "OLAK5uy_nCRL4z8kxd0cNF6wKg2t0FdHRqk32VK4I",
+      "tracksN": 18,
+      "playsTotal": 5512
     },
     {
       "id": "overcooked-2",
@@ -49251,7 +49290,9 @@
       "id": "sonic-the-hedgehog-2006",
       "title": "Sonic the Hedgehog Soundtrack",
       "game": "Sonic the Hedgehog",
-      "composers": [],
+      "composers": [
+        "SEGA"
+      ],
       "date": "2006-11-14",
       "sources": [
         {
@@ -49262,7 +49303,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+the+Hedgehog+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_B01X953tw0M",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocae8.jpg",
       "notable": true,
       "company": "Sonic Team",
@@ -49272,7 +49313,10 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 29
+      "albumTitle": "SONIC THE HEDGEHOG ORIGINAL SOUND TRACK Vol. 3",
+      "ytmPlaylistId": "OLAK5uy_luT456bIbzKM3_1Ce1a7fFO_W-SY7UTHc",
+      "tracksN": 29,
+      "playsTotal": 9693800
     },
     {
       "id": "shadow-the-hedgehog",
@@ -51068,7 +51112,7 @@
       "title": "Yoshi's Woolly World Soundtrack",
       "game": "Yoshi's Woolly World",
       "composers": [],
-      "date": "2015-06-26",
+      "date": "2015-06-25",
       "sources": [
         {
           "name": "igdb",
@@ -51236,7 +51280,9 @@
       "id": "palworld",
       "title": "Palworld Soundtrack",
       "game": "Palworld",
-      "composers": [],
+      "composers": [
+        "Tatsuya Yano"
+      ],
       "date": "2024-01-19",
       "sources": [
         {
@@ -51247,7 +51293,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Palworld+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MrR1geyExkl",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7n02.jpg",
       "notable": true,
       "company": "PocketPair",
@@ -51258,7 +51304,10 @@
         "Hack and slash/Beat 'em up"
       ],
       "medium": "game",
-      "tracksN": 1
+      "albumTitle": "Palworld (Original Video Game Soundtrack)",
+      "ytmPlaylistId": "OLAK5uy_mnfq4ogViC3MwafU6J5UDdcdiSOQ4w2u4",
+      "tracksN": 45,
+      "playsTotal": 81342
     },
     {
       "id": "dynasty-warriors-4-empires",
@@ -59973,7 +60022,9 @@
       "id": "cars-3-driven-to-win",
       "title": "Cars 3: Driven to Win Soundtrack",
       "game": "Cars 3: Driven to Win",
-      "composers": [],
+      "composers": [
+        "Randy Newman"
+      ],
       "date": "2017-06-13",
       "sources": [
         {
@@ -59984,7 +60035,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Cars+3%3A+Driven+to+Win+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GpYeHouSVak",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co22v7.jpg",
       "notable": true,
       "company": "Avalanche Software",
@@ -59993,7 +60044,10 @@
         "Racing"
       ],
       "medium": "game",
-      "tracksN": 0
+      "albumTitle": "Cars 3 (Original Score)",
+      "ytmPlaylistId": "OLAK5uy_mnH1DzimgqJUaGMSaR1ORSxf4c6xDpZO0",
+      "tracksN": 21,
+      "playsTotal": 8983000
     },
     {
       "id": "synapse",
@@ -60016,7 +60070,8 @@
         "Shooter"
       ],
       "medium": "game",
-      "tracksN": 9
+      "tracksN": 9,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6z2p.jpg"
     },
     {
       "id": "gotham-knights",
@@ -60184,7 +60239,9 @@
       "id": "catan-console-edition",
       "title": "Catan: Console Edition Soundtrack",
       "game": "Catan: Console Edition",
-      "composers": [],
+      "composers": [
+        "Benjamin Symons"
+      ],
       "date": "2023-02-23",
       "sources": [
         {
@@ -60195,7 +60252,7 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Catan%3A+Console+Edition+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mLO8Ucv4Oc9",
       "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ftz.jpg",
       "notable": true,
       "company": "Nomad Games",
@@ -60205,7 +60262,10 @@
         "Card & Board Game"
       ],
       "medium": "game",
-      "tracksN": 3
+      "albumTitle": "CATAN - Console Edition: Cities & Knights (Original Game Soundtrack)",
+      "ytmPlaylistId": "OLAK5uy_mEpIN6gOGVYyCalzpHtWfqlXnNA7Icsw4",
+      "tracksN": 3,
+      "playsTotal": 538
     },
     {
       "id": "star-wars-squadrons",
@@ -69597,6 +69657,1554 @@
       "ytmPlaylistId": "OLAK5uy_lyiFmlzE4clfEE_3NZDtDpiDqRwzCYkcM",
       "tracksN": 17,
       "playsTotal": 1863
+    },
+    {
+      "id": "psychonauts-2",
+      "title": "Psychonauts 2 Soundtrack",
+      "medium": "game",
+      "game": "Psychonauts 2",
+      "composers": [
+        "Peter McConnell"
+      ],
+      "date": "2021-08-24",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/psychonauts-2",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Psychonauts+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cej6Cu204Yk",
+      "art": "https://yt3.googleusercontent.com/_G_kLBijLToYVAaMLQVWoNEVDkli8AITtnKqzsXOWWdE5nk4BqlOKVYLIZQX8MsPuBzwfrMwiaUsODVD=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Psychonauts 2 (Original Soundtrack), Vol. 1",
+      "company": "Double Fine Productions",
+      "console": true,
+      "genres": [
+        "Platform",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n5cju4DVlzsQGLBUXTRzBWqPgYqxmR0Fk",
+      "tracksN": 29,
+      "playsTotal": 848100
+    },
+    {
+      "id": "streets-of-rage-2",
+      "title": "Streets of Rage 2 Soundtrack",
+      "medium": "game",
+      "game": "Streets of Rage 2",
+      "composers": [
+        "Yuzo Koshiro",
+        "Motohiro Kawashima"
+      ],
+      "date": "1992-12-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/streets-of-rage-2",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Streets+of+Rage+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DZ47AU4VlOJ",
+      "art": "https://yt3.googleusercontent.com/YpDNQyk28CJNbxrJyKgMbEdYZUVJfMCByUFRnhDBbf9YVv6djh8Mdk3AhlBv5IK_bK96D2H3brRnUKBI=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Streets of Rage 2 (Official Game Soundtrack)",
+      "company": "Ancient",
+      "console": true,
+      "genres": [
+        "Hack and slash/Beat 'em up",
+        "Arcade"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mou1T4M_n90kRO2DfA7qxPf0VGgO9etCo",
+      "tracksN": 25,
+      "playsTotal": 5528000
+    },
+    {
+      "id": "streets-of-rage-4",
+      "title": "Streets of Rage 4 Soundtrack",
+      "medium": "game",
+      "game": "Streets of Rage 4",
+      "composers": [
+        "Olivier Deriviere"
+      ],
+      "date": "2020-04-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/streets-of-rage-4",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Streets+of+Rage+4+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Tmm9QzCJB3z",
+      "art": "https://yt3.googleusercontent.com/ztaMtbxjWaBnQ6TY_DlIMKaoU64CXt3UDFnOfh1vazNFcXMPlsQToIcoFnxLIx8UvlAH8yBCwj9g_0cP=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Streets of Rage 4 (Original Game Soundtrack)",
+      "company": "DotEmu",
+      "console": true,
+      "genres": [
+        "Fighting",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n99BvdrxioexEeUhAk9_goRAHUY107ac4",
+      "tracksN": 35,
+      "playsTotal": 15099000
+    },
+    {
+      "id": "final-fantasy-iv",
+      "title": "Final Fantasy IV Soundtrack",
+      "medium": "game",
+      "game": "Final Fantasy IV",
+      "composers": [
+        "Nobuo Uematsu"
+      ],
+      "date": "1991-07-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/final-fantasy-iv--1",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Final+Fantasy+IV+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_u5BxeS6nX5l",
+      "art": "https://yt3.googleusercontent.com/V69EMsSBexy7W3pfCsHZt85-CBTz9VCEqwJZXIUOihEzYISGgvVyQj6EzLat4mJaAu-cHC0RVxVf9OfH=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "FINAL FANTASY IV Original Soundtrack",
+      "company": "Square",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kA0JL6oHEX4nB_Pj7r8gu8CAyZbSpFJ5E",
+      "tracksN": 44,
+      "playsTotal": 10831000
+    },
+    {
+      "id": "medal-of-honor-airborne",
+      "title": "Medal of Honor: Airborne Soundtrack",
+      "medium": "game",
+      "game": "Medal of Honor: Airborne",
+      "composers": [
+        "Michael Giacchino",
+        "EA Games Soundtrack"
+      ],
+      "date": "2007-09-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/medal-of-honor-airborne",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Medal+of+Honor%3A+Airborne+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_PFhd6JybjLQ",
+      "art": "https://yt3.googleusercontent.com/RHmH-ViSz3EpeR_OnnoKHuHoPPZ7CqNTuTNPT7teqMoQIVcQ7RmVdVbyx3gI9Wdlqp_mpIjCmD6GaK-Mfg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Medal of Honor: Airborne (Original Soundtrack)",
+      "company": "EA Los Angeles",
+      "console": true,
+      "genres": [
+        "Shooter"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ndZ48TPnaGy8AgbFYQoE2id2AD6xKXFT4",
+      "tracksN": 20,
+      "playsTotal": 456400
+    },
+    {
+      "id": "tekken-2",
+      "title": "Tekken 2 Soundtrack",
+      "medium": "game",
+      "game": "Tekken 2",
+      "composers": [
+        "TEKKEN Project",
+        "Bandai Namco Game Music"
+      ],
+      "date": "1995-06-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tekken-2",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tekken+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Z3Y38XihDhx",
+      "art": "https://yt3.googleusercontent.com/tNnuRMP1VcDfbOw1OXmqKZq7_zx8RC_reaWNaoUrJe0twYy9DJDDfO-EDjQBwBuxLja4KzQtzOICNkmj=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "TEKKEN 2 (Original Soundtrack)",
+      "company": "Namco",
+      "console": true,
+      "genres": [
+        "Fighting"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nO2N1cFPFhwQ89bgwzqtu2W31w6wyUdh0",
+      "tracksN": 32,
+      "playsTotal": 2518000
+    },
+    {
+      "id": "snufkin-melody-of-moominvalley",
+      "title": "Snufkin: Melody of Moominvalley Soundtrack",
+      "medium": "game",
+      "game": "Snufkin: Melody of Moominvalley",
+      "composers": [
+        "Oda Tilset"
+      ],
+      "date": "2024-03-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/snufkin-melody-of-moominvalley",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Snufkin%3A+Melody+of+Moominvalley+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fpTaatFFbf7",
+      "art": "https://yt3.googleusercontent.com/x2ujxP0RAE-Ne2AbQyGconbjoFaLRv6iOeQYRDXzvWHonJff1QFBo3HbBVmVWREEe-_9XTGxZzvchoAnTw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Snufkin: Melody of Moominvalley (Original Video Game Soundtrack)",
+      "company": "Hyper Games",
+      "console": true,
+      "genres": [
+        "Music",
+        "Puzzle",
+        "Role-playing (RPG)"
+      ],
+      "ytmPlaylistId": "OLAK5uy_llLwzfZZ-9D24Y2Ug7j9BFMGFKGQZLHmE",
+      "tracksN": 25,
+      "playsTotal": 192800
+    },
+    {
+      "id": "copycat",
+      "title": "Copycat Soundtrack",
+      "medium": "game",
+      "game": "Copycat",
+      "composers": [
+        "Daniel Bunting"
+      ],
+      "date": "2024-09-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/copycat--1",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Copycat+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NUuJF4YRPgs",
+      "art": "https://yt3.googleusercontent.com/u8RaHoyB0tQjWXnRZaGSDUcMZDsAXHtxT2DyUqrxmxV9JZnQgTq5Q8HAAnPSkx595bzLpnZSDXtw5xtn=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Copycat (Original Soundtrack)",
+      "company": "Spoonful of Wonder",
+      "console": true,
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k1trOGffcDQaVZnoglVNIZHaCL9-u3Z_Y",
+      "tracksN": 28,
+      "playsTotal": 10529
+    },
+    {
+      "id": "drova-forsaken-kin",
+      "title": "Drova: Forsaken Kin Soundtrack",
+      "medium": "game",
+      "game": "Drova: Forsaken Kin",
+      "composers": [
+        "Drova Team"
+      ],
+      "date": "2024-10-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/drova-forsaken-kin",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Drova%3A+Forsaken+Kin+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_EcqiYXjrmoQ",
+      "art": "https://yt3.googleusercontent.com/j1DZFOBh0QsanBTPYFouI_8B6AQSp78pxezpvxXuhbYyAX--Ey-YmEmsT-NsvtQNxRq6QmX-EWA1e5zPow=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Drova - Forsaken Kin Volume 1 (Original Game Soundtrack)",
+      "company": "Just2D",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mSgSuhsUb6uk2ERGyFj1EjMvHRnvXH92w",
+      "tracksN": 23,
+      "playsTotal": 18795
+    },
+    {
+      "id": "tactical-breach-wizards",
+      "title": "Tactical Breach Wizards Soundtrack",
+      "medium": "game",
+      "game": "Tactical Breach Wizards",
+      "composers": [
+        "Robert Arzola"
+      ],
+      "date": "2024-08-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tactical-breach-wizards",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tactical+Breach+Wizards+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_IC8t4k7S8vw",
+      "art": "https://yt3.googleusercontent.com/hJ8q57YEvH6jsALlLeYqvKjw4BeS7KOjhKhzQ4Q2d4q8ECoJTCcg6mtd9l5rkdZWZpgOkgY2k9x2Cclu=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Tactical Breach Wizards (Original Game Soundtrack)",
+      "company": "Suspicious Developments",
+      "console": false,
+      "genres": [
+        "Strategy",
+        "Turn-based strategy (TBS)",
+        "Tactical"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nd1X6qzmYVU--MFj4i60k6JpYVN-j_b2M",
+      "tracksN": 47,
+      "playsTotal": 44797
+    },
+    {
+      "id": "naruto-ultimate-ninja-3",
+      "title": "Naruto: Ultimate Ninja 3 Soundtrack",
+      "medium": "game",
+      "game": "Naruto: Ultimate Ninja 3",
+      "composers": [],
+      "date": "2005-12-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/naruto-ultimate-ninja-3",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Naruto%3A+Ultimate+Ninja+3+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u9b.jpg",
+      "notable": true,
+      "company": "CyberConnect2",
+      "console": true,
+      "genres": [
+        "Fighting"
+      ],
+      "tracksN": 82
+    },
+    {
+      "id": "halo-spartan-assault",
+      "title": "Halo: Spartan Assault Soundtrack",
+      "medium": "game",
+      "game": "Halo: Spartan Assault",
+      "composers": [
+        "Tom Salta"
+      ],
+      "date": "2013-07-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/halo-spartan-assault",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Halo%3A+Spartan+Assault+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7Sq4H8sqWwx",
+      "art": "https://yt3.googleusercontent.com/4khCu-e4EIbO6kg5TJHbuyxIi_xG-b12yis2rt5h4CVWxo6dHz-lHeki4CuUaUchsd_rpjAct9Rye0LR=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Halo: Spartan Assault (Original Soundtrack)",
+      "company": "343 Industries",
+      "console": true,
+      "genres": [
+        "Shooter"
+      ],
+      "ytmPlaylistId": "OLAK5uy_myX7GsP2SrtSYb9D5GnH5_1jpUufnEKbM",
+      "tracksN": 27,
+      "playsTotal": 498900
+    },
+    {
+      "id": "kingdom-hearts-re-coded",
+      "title": "Kingdom Hearts Re:coded Soundtrack",
+      "medium": "game",
+      "game": "Kingdom Hearts Re:coded",
+      "composers": [],
+      "date": "2010-10-07",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts-re-coded",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+Re%3Acoded+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tq6.jpg",
+      "notable": true,
+      "company": "Square Enix 1st Production Department",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Role-playing (RPG)"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "drakengard",
+      "title": "Drakengard Soundtrack",
+      "medium": "game",
+      "game": "Drakengard",
+      "composers": [],
+      "date": "2003-09-11",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/drakengard",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Drakengard+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4agx.jpg",
+      "notable": true,
+      "company": "Cavia",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up"
+      ],
+      "tracksN": 47
+    },
+    {
+      "id": "kingdom-hearts-hd-1-5-2-5-remix",
+      "title": "Kingdom Hearts HD 1.5 + 2.5 Remix Soundtrack",
+      "medium": "game",
+      "game": "Kingdom Hearts HD 1.5 + 2.5 Remix",
+      "composers": [],
+      "date": "2017-03-09",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts-hd-1-dot-5-plus-2-dot-5-remix",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+HD+1.5+%2B+2.5+Remix+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb23.jpg",
+      "notable": true,
+      "company": "Square Enix Business Division 3",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracksN": 191
+    },
+    {
+      "id": "sonic-mania-plus",
+      "title": "Sonic Mania Plus Soundtrack",
+      "medium": "game",
+      "game": "Sonic Mania Plus",
+      "composers": [],
+      "date": "2018-07-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-mania-plus",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+Mania+Plus+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob8we.jpg",
+      "notable": true,
+      "company": "Headcannon",
+      "console": true,
+      "genres": [
+        "Platform"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "dr-robotnik-s-mean-bean-machine",
+      "title": "Dr. Robotnik's Mean Bean Machine Soundtrack",
+      "medium": "game",
+      "game": "Dr. Robotnik's Mean Bean Machine",
+      "composers": [],
+      "date": "1993-11-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/dr-robotnik-s-mean-bean-machine",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dr.+Robotnik%27s+Mean+Bean+Machine+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2v8c.jpg",
+      "notable": true,
+      "company": "Compile",
+      "console": true,
+      "genres": [
+        "Puzzle",
+        "Strategy",
+        "Arcade"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "hitman-world-of-assassination",
+      "title": "Hitman World of Assassination Soundtrack",
+      "medium": "game",
+      "game": "Hitman World of Assassination",
+      "composers": [],
+      "date": "2023-01-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hitman-world-of-assassination",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hitman+World+of+Assassination+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co620f.jpg",
+      "notable": true,
+      "company": "IO Interactive",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Tactical",
+        "Adventure"
+      ],
+      "tracksN": 50
+    },
+    {
+      "id": "naruto-ultimate-ninja",
+      "title": "Naruto: Ultimate Ninja Soundtrack",
+      "medium": "game",
+      "game": "Naruto: Ultimate Ninja",
+      "composers": [],
+      "date": "2003-10-23",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/naruto-ultimate-ninja",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Naruto%3A+Ultimate+Ninja+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1oxo.jpg",
+      "notable": true,
+      "company": "CyberConnect2",
+      "console": true,
+      "genres": [
+        "Fighting",
+        "Hack and slash/Beat 'em up"
+      ],
+      "tracksN": 31
+    },
+    {
+      "id": "sonic-the-hedgehog-4-episode-i",
+      "title": "Sonic the Hedgehog 4: Episode I Soundtrack",
+      "medium": "game",
+      "game": "Sonic the Hedgehog 4: Episode I",
+      "composers": [],
+      "date": "2010-10-11",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-the-hedgehog-4-episode-i",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+the+Hedgehog+4%3A+Episode+I+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_IiqJXTeOlYS",
+      "art": "https://yt3.googleusercontent.com/hlz0GWLmXBTar_Ser_G1zcyoNrQiZn1ipRD8x8chsaJzDHYllUIFTDKWhZVQyQsOJlLdAJQITZVU1KA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "SONIC THE HEDGEHOG 4 EPISODE I ORIGINAL SOUNDTRACK",
+      "company": "Dimps",
+      "console": true,
+      "genres": [
+        "Platform",
+        "Adventure",
+        "Arcade"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kte6iLiFl5p-PCaMng9XEpjJDjQu1t_vM",
+      "tracksN": 23,
+      "playsTotal": 563000
+    },
+    {
+      "id": "the-sims-medieval",
+      "title": "The Sims Medieval Soundtrack",
+      "medium": "game",
+      "game": "The Sims Medieval",
+      "composers": [
+        "EA Games Soundtrack",
+        "John Debney"
+      ],
+      "date": "2011-03-22",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims-medieval",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+Medieval+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_XZWZIEuP1Q0",
+      "art": "https://yt3.googleusercontent.com/-KwYLbpoH9JG2BIzXilGzi0mF-WNHq4or9PcJ6tvOd1VIpu4Nn4G8BsE04aUJ3KvXe9ZagoPPHdxSi-v=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Sims Medieval, Vol. 1 (Original Score Soundtrack)",
+      "company": "The Sims Studio",
+      "console": false,
+      "genres": [
+        "Simulator",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nhA31Ap8XKieeL0FZM1LgR69Q9ahTbCiA",
+      "tracksN": 8,
+      "playsTotal": 74800
+    },
+    {
+      "id": "kingdom-hearts-ii-final-mix",
+      "title": "Kingdom Hearts II Final Mix Soundtrack",
+      "medium": "game",
+      "game": "Kingdom Hearts II Final Mix",
+      "composers": [],
+      "date": "2007-03-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts-ii-final-mix",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+II+Final+Mix+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaevv.jpg",
+      "notable": true,
+      "company": "Square Enix Product Development Division 1",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Platform",
+        "Role-playing (RPG)"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "sonic-and-the-secret-rings",
+      "title": "Sonic and the Secret Rings Soundtrack",
+      "medium": "game",
+      "game": "Sonic and the Secret Rings",
+      "composers": [
+        "SEGA"
+      ],
+      "date": "2007-02-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-and-the-secret-rings",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+and+the+Secret+Rings+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_u6pkyZy4lKX",
+      "art": "https://yt3.googleusercontent.com/k-CVKBS3nBik9oGOZ5P6Wq_nsGcMxZfce8xKmxRdivI0UwZtBg5gTX4OcnGNKSHeeRoIQiJFvrLWXcel=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Sonic And The Secret Rings Original Soundtrack Vol.1",
+      "company": "Sonic Team",
+      "console": true,
+      "genres": [
+        "Platform"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kPDuDlvLio3DcC9FNX02Ve3i84sxCD8mE",
+      "tracksN": 14,
+      "playsTotal": 14411000
+    },
+    {
+      "id": "cars",
+      "title": "Cars Soundtrack",
+      "medium": "game",
+      "game": "Cars",
+      "composers": [],
+      "date": "2006-06-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/cars",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cars+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co57b4.jpg",
+      "notable": true,
+      "company": "Rainbow Studios",
+      "console": true,
+      "genres": [
+        "Racing",
+        "Adventure"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "kingdom-hearts-final-mix-2002",
+      "title": "Kingdom Hearts Final Mix Soundtrack",
+      "medium": "game",
+      "game": "Kingdom Hearts Final Mix",
+      "composers": [],
+      "date": "2002-12-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts-final-mix",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+Final+Mix+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co30zn.jpg",
+      "notable": true,
+      "company": "Square Product Development Division 1",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "drakengard-3-2013",
+      "title": "Drakengard 3 Soundtrack",
+      "medium": "game",
+      "game": "Drakengard 3",
+      "composers": [],
+      "date": "2013-12-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/drakengard-3",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Drakengard+3+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coccwj.jpg",
+      "notable": true,
+      "company": "Access Games",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Hack and slash/Beat 'em up"
+      ],
+      "tracksN": 31
+    },
+    {
+      "id": "naruto-to-boruto-shinobi-striker",
+      "title": "Naruto to Boruto: Shinobi Striker Soundtrack",
+      "medium": "game",
+      "game": "Naruto to Boruto: Shinobi Striker",
+      "composers": [],
+      "date": "2018-08-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/naruto-to-boruto-shinobi-striker",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Naruto+to+Boruto%3A+Shinobi+Striker+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/fwx6dgszjzxuyxegltlh.jpg",
+      "notable": true,
+      "company": "Soleil",
+      "console": true,
+      "genres": [
+        "Fighting"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "kingdom-hearts-hd-2-8-final-chapter-prologue",
+      "title": "Kingdom Hearts HD 2.8 Final Chapter Prologue Soundtrack",
+      "medium": "game",
+      "game": "Kingdom Hearts HD 2.8 Final Chapter Prologue",
+      "composers": [],
+      "date": "2017-01-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts-hd-2-dot-8-final-chapter-prologue",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+HD+2.8+Final+Chapter+Prologue+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocb24.jpg",
+      "notable": true,
+      "company": "Square Enix Business Division 3",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "sonic-battle",
+      "title": "Sonic Battle Soundtrack",
+      "medium": "game",
+      "game": "Sonic Battle",
+      "composers": [],
+      "date": "2003-12-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-battle",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+Battle+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zvd.jpg",
+      "notable": true,
+      "company": "Sonic Team",
+      "console": true,
+      "genres": [
+        "Fighting",
+        "Adventure"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "the-sims-bustin-out",
+      "title": "The Sims Bustin' Out Soundtrack",
+      "medium": "game",
+      "game": "The Sims Bustin' Out",
+      "composers": [],
+      "date": "2003-12-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims-bustin-out",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+Bustin%27+Out+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20ag.jpg",
+      "notable": true,
+      "company": "Maxis",
+      "console": true,
+      "genres": [
+        "Simulator",
+        "Strategy"
+      ],
+      "tracksN": 29
+    },
+    {
+      "id": "the-sims-2-pets",
+      "title": "The Sims 2: Pets Soundtrack",
+      "medium": "game",
+      "game": "The Sims 2: Pets",
+      "composers": [],
+      "date": "2006-10-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims-2-pets",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+2%3A+Pets+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zov.jpg",
+      "notable": true,
+      "company": "Maxis",
+      "console": false,
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Strategy"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "kingdom-hearts-0-2-birth-by-sleep-a-fragmentary-passage",
+      "title": "Kingdom Hearts 0.2: Birth by Sleep - A Fragmentary Passage Soundtrack",
+      "medium": "game",
+      "game": "Kingdom Hearts 0.2: Birth by Sleep - A Fragmentary Passage",
+      "composers": [],
+      "date": "2017-01-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts-0-dot-2-birth-by-sleep-a-fragmentary-passage",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+0.2%3A+Birth+by+Sleep+-+A+Fragmentary+Passage+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8m20.jpg",
+      "notable": true,
+      "company": "Square Enix Business Division 3",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "hitman-sniper-challenge",
+      "title": "Hitman: Sniper Challenge Soundtrack",
+      "medium": "game",
+      "game": "Hitman: Sniper Challenge",
+      "composers": [],
+      "date": "2012-05-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/hitman-sniper-challenge",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hitman%3A+Sniper+Challenge+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co42hs.jpg",
+      "notable": true,
+      "company": "IO Interactive",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Tactical"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "the-incredible-hulk",
+      "title": "The Incredible Hulk Soundtrack",
+      "medium": "game",
+      "game": "The Incredible Hulk",
+      "composers": [],
+      "date": "2008-06-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-incredible-hulk",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Incredible+Hulk+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2d20.jpg",
+      "notable": true,
+      "company": "Edge of Reality",
+      "console": true,
+      "genres": [
+        "Adventure"
+      ],
+      "tracksN": 45
+    },
+    {
+      "id": "kingdom-hearts-dream-drop-distance-hd",
+      "title": "Kingdom Hearts Dream Drop Distance HD Soundtrack",
+      "medium": "game",
+      "game": "Kingdom Hearts Dream Drop Distance HD",
+      "composers": [],
+      "date": "2017-01-12",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/kingdom-hearts-dream-drop-distance-hd",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kingdom+Hearts+Dream+Drop+Distance+HD+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8m1w.jpg",
+      "notable": true,
+      "company": "Square Enix Business Division 3",
+      "console": true,
+      "genres": [
+        "Fighting",
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "naruto-ultimate-ninja-2",
+      "title": "Naruto: Ultimate Ninja 2 Soundtrack",
+      "medium": "game",
+      "game": "Naruto: Ultimate Ninja 2",
+      "composers": [],
+      "date": "2004-09-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/naruto-ultimate-ninja-2",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Naruto%3A+Ultimate+Ninja+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u9f.jpg",
+      "notable": true,
+      "company": "CyberConnect2",
+      "console": true,
+      "genres": [
+        "Fighting"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "the-sims-2-university",
+      "title": "The Sims 2: University Soundtrack",
+      "medium": "game",
+      "game": "The Sims 2: University",
+      "composers": [
+        "Mark Mothersbaugh",
+        "EA Games Soundtrack"
+      ],
+      "date": "2005-02-28",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims-2-university",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+2%3A+University+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OszcZMww3I6",
+      "art": "https://yt3.googleusercontent.com/MtyQ442sSKbm23OqV5ZQ1MSJULjYfQuNc278k23eX_7hh-x8HWxBS9qvfy44ucYV78mKm96ZJgcDOEY=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Sims 2: University (Original Soundtrack)",
+      "company": "Maxis",
+      "console": false,
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Strategy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l8v4WfWu_yvuilrKDezygUvlLynhucK0s",
+      "tracksN": 12,
+      "playsTotal": 362000
+    },
+    {
+      "id": "the-sims-3-pets-2011",
+      "title": "The Sims 3: Pets Soundtrack",
+      "medium": "game",
+      "game": "The Sims 3: Pets",
+      "composers": [
+        "EA Games Soundtrack"
+      ],
+      "date": "2011-10-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims-3-pets",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+3%3A+Pets+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OHW5S5Ux5GS",
+      "art": "https://yt3.googleusercontent.com/3Ki41fScstPXlUdCkUZE0pivxlXjyvOmPpEF9nEtw8mtlFcByzevjSFNvh0WjKGaAjXaruZ3e2ckR6gx=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Sims 3 Pets (Original Video Game Score)",
+      "company": "Maxis",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Strategy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l3vDsDa6q7vabiOmhHndZkV-cBvm_lzqo",
+      "tracksN": 14,
+      "playsTotal": 207300
+    },
+    {
+      "id": "halo-spartan-strike",
+      "title": "Halo: Spartan Strike Soundtrack",
+      "medium": "game",
+      "game": "Halo: Spartan Strike",
+      "composers": [
+        "Halo",
+        "Tom Salta"
+      ],
+      "date": "2015-04-16",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/halo-spartan-strike",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Halo%3A+Spartan+Strike+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_r7Cl6taE7V5",
+      "art": "https://yt3.googleusercontent.com/vnmJ5K7FxvhddQxmDCyAiJwQ8KuWvboRuQkjTD035RX_dlGs49KD3sGU6yHYuDkPO-UWhtdq68ugJndu=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Halo: Spartan Strike (Original Soundtrack)",
+      "company": "343 Industries",
+      "console": true,
+      "genres": [
+        "Shooter"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n0Cmp1aaQv6qZgX0fIulSeNVeghSNeOgo",
+      "tracksN": 27,
+      "playsTotal": 410200
+    },
+    {
+      "id": "cars-2",
+      "title": "Cars 2 Soundtrack",
+      "medium": "game",
+      "game": "Cars 2",
+      "composers": [],
+      "date": "2011-06-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/cars-2",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cars+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_unTEhozyMKf",
+      "art": "https://yt3.googleusercontent.com/9E0F87GCS9g8P3iMiHYxG5vBasewdf73bJk_kPvV5uqXsaOmfmL2OQSysThFVAeMbIkWtfN7wgzvvgA2PA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Cars 2 (Original Soundtrack)",
+      "company": "Avalanche Software",
+      "console": true,
+      "genres": [
+        "Racing",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mr9bi50xT7eAopuHf7weT2GpKor6agoHw",
+      "tracksN": 26,
+      "playsTotal": 84514000
+    },
+    {
+      "id": "the-sims-3-generations",
+      "title": "The Sims 3: Generations Soundtrack",
+      "medium": "game",
+      "game": "The Sims 3: Generations",
+      "composers": [
+        "Steve Jablonsky"
+      ],
+      "date": "2011-05-31",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/the-sims-3-generations",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Sims+3%3A+Generations+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_czuEr5030uv",
+      "art": "https://yt3.googleusercontent.com/I0mQqvfr3CGIv3StOUxoseLMWdI6ZRMQREdoCbgayqoei1Pvo3BYwXlu8uaFZgFWdXFu2NUml0hr3sjY=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Sims 3: Generations (Original Videogame Soundtrack)",
+      "company": "The Sims Studio",
+      "console": false,
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Strategy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mO_EEdO7Ea9tlmLWyz7OL5makkCOMioE4",
+      "tracksN": 9,
+      "playsTotal": 67600
+    },
+    {
+      "id": "simcity-societies",
+      "title": "SimCity Societies Soundtrack",
+      "medium": "game",
+      "game": "SimCity Societies",
+      "composers": [
+        "EA Games Soundtrack"
+      ],
+      "date": "2007-11-13",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/simcity-societies",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SimCity+Societies+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_e7MCdMIOiLZ",
+      "art": "https://yt3.googleusercontent.com/YXGxUeHflQWOLzKLvqUf2Vib1Ov7NgP7wIh1V-2ReUIeSHFZp91ih46IzuZL8eIJigBEdXbw1iYfK1WP=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "SimCity Societies (Original Soundtrack)",
+      "company": "Tilted Mill Entertainment",
+      "console": false,
+      "genres": [
+        "Simulator",
+        "Strategy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m_zVc-L9o09_ihaY-yioomT_3hV33qYGo",
+      "tracksN": 15,
+      "playsTotal": 67800
+    },
+    {
+      "id": "sonic-adventure-2010",
+      "title": "Sonic Adventure Soundtrack",
+      "medium": "game",
+      "game": "Sonic Adventure",
+      "composers": [],
+      "date": "2010-09-15",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/sonic-adventure--1",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sonic+Adventure+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_AxidmFzY9kt",
+      "art": "https://yt3.googleusercontent.com/x-9ORHwgiU7kb8fpXleLICMi2jQVXhGFl_geD_S6koT_YqFFuYU1OhekAgNA670K68c-4tAurXaHFavk=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Sonic Adventure Original Soundtrack vol.2",
+      "company": "Sonic Team",
+      "console": true,
+      "genres": [
+        "Platform"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l2TggsaOPfugIjBe16m_JkTcvW8Pu1rd0",
+      "tracksN": 34,
+      "playsTotal": 11290200
+    },
+    {
+      "id": "iron-man-2",
+      "title": "Iron Man 2 Soundtrack",
+      "medium": "game",
+      "game": "Iron Man 2",
+      "composers": [
+        "Ultimate Heroes"
+      ],
+      "date": "2010-04-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/iron-man-2",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Iron+Man+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hpONfPfoltY",
+      "art": "https://yt3.googleusercontent.com/JHerTdzsuWo8hUJiRbeC_6LAOZvRFWHkHigk6UumHWy4pRn0Qu7bOC8MZ6Odf6n9wGpgBGEcBYD1gKDRvA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Music from Iron Man & Iron Man 2",
+      "company": "Sega Studios San Francisco",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kN6LlCjy07iUVTKy5sghjYvjaLg8KLj2M",
+      "tracksN": 7,
+      "playsTotal": 532900
+    },
+    {
+      "id": "nier-re-in-carnation",
+      "title": "NieR Re[in]carnation Soundtrack",
+      "medium": "game",
+      "game": "NieR Re[in]carnation",
+      "composers": [
+        "SQUARE ENIX MUSIC",
+        "MONACA",
+        "Keiichi Okabe"
+      ],
+      "date": "2021-02-18",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/nier-re-in-carnation",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=NieR+Re%5Bin%5Dcarnation+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_FYW5dTbf7Zs",
+      "art": "https://yt3.googleusercontent.com/4oFI8NX6yPgHRd0cEnkx4pJDZQiAi9tlZ5WreXJdw1P1104RVbITdM_f5oTilZqSKCNui2yAC6c7twCx0w=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "NieR Re[in]carnation Original Soundtrack",
+      "company": "Applibot, Inc",
+      "console": false,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lJbiLReBRTTxFBDyoebBPPbJDDUhcMYvI",
+      "tracksN": 18,
+      "playsTotal": 972000
+    },
+    {
+      "id": "leaf-it-alone",
+      "title": "Leaf It Alone Soundtrack",
+      "medium": "game",
+      "game": "Leaf It Alone",
+      "composers": [],
+      "date": "2025-10-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/leaf-it-alone",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Leaf+It+Alone+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/coatpx.jpg",
+      "notable": true,
+      "company": "Eternity",
+      "console": false,
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "tracksN": 0
+    },
+    {
+      "id": "unhinged",
+      "title": "Unhinged Soundtrack",
+      "medium": "game",
+      "game": "Unhinged",
+      "composers": [
+        "ParaMattKoopa Lolking"
+      ],
+      "date": "2026-06-30",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/unhinged--4",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Unhinged+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_vyPV0KvndVf",
+      "art": "https://yt3.googleusercontent.com/k-1Iw5q8ilZ__e-en-DsGcopjXKmuBDOfaOxJh4N7fhFVb5kEAHdYMsCyporjDWuX5KyoAnkujqE_zVl=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "UNHINGED (Original Game Soundtrack)",
+      "company": "Night School Studio",
+      "console": false,
+      "genres": [
+        "Point-and-click"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nnj5OxEYS83mJz14GPFE0TtVyknSqCBUU",
+      "tracksN": 5,
+      "playsTotal": 331
+    },
+    {
+      "id": "film-interstellar",
+      "title": "Interstellar Soundtrack",
+      "medium": "film",
+      "game": "Interstellar",
+      "composers": [
+        "Hans Zimmer"
+      ],
+      "date": "2014-11-05",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/157336",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Interstellar+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ubWVztfWvdp",
+      "art": "https://yt3.googleusercontent.com/vHg1BrOwidLFzCWeJ2mYDXtb3rUIvyhW4JPOrNai2K08-Va329yERoCTtt_SW0BT-9cY_roe-Mvd4vK1=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Interstellar (Original Motion Picture Soundtrack) [Expanded Edition]",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Science Fiction"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ksMcoC36wmr-fyFQfcpM_TjVqo3pBA1H4",
+      "tracksN": 30,
+      "playsTotal": 375400000
+    },
+    {
+      "id": "film-inception",
+      "title": "Inception Soundtrack",
+      "medium": "film",
+      "game": "Inception",
+      "composers": [
+        "Hans Zimmer"
+      ],
+      "date": "2010-07-15",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/27205",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Inception+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_JL3tq9xT4hB",
+      "art": "https://yt3.googleusercontent.com/FQLhWVH26fPCwhtlBNCpFMHCBJ5Vuq0TMJOtRWZb2aqEvRsRSZ45WW5lGSnTzXbAGxpMEgGdzzrGn7kb9Q=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Inception (Music from the Motion Picture)",
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n3LxyHxNjQjYMbNeBkv78oNcCM2diLkJs",
+      "tracksN": 12,
+      "playsTotal": 360700000
+    },
+    {
+      "id": "film-the-avengers",
+      "title": "The Avengers Soundtrack",
+      "medium": "film",
+      "game": "The Avengers",
+      "composers": [
+        "Alan Silvestri"
+      ],
+      "date": "2012-04-25",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/24428",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Avengers+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DqRv3MG1RN3",
+      "art": "https://yt3.googleusercontent.com/7Z1_i8GDk7U7PF2XDwJDhqA9yaNoCmz45AincRyciOQN0Sx9kykNhbIyKs3ZzEyov82PU5VsxJ5xyCt4=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Avengers (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kNzKtUD-CbDlyVA6J4Rvhn3PoCfF4X4iU",
+      "tracksN": 18,
+      "playsTotal": 71421000
+    },
+    {
+      "id": "film-the-dark-knight",
+      "title": "The Dark Knight Soundtrack",
+      "medium": "film",
+      "game": "The Dark Knight",
+      "composers": [
+        "Hans Zimmer",
+        "James Newton Howard"
+      ],
+      "date": "2008-07-16",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/155",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Dark+Knight+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_0OhXjI7eltC",
+      "art": "https://yt3.googleusercontent.com/P3k2P4w9NaKKuGuS2cwDP1xYHw68_3B_ohGwiKfXC5J6qdiVinbS_ATBmPljiBseIqUJX37ag5Ts_vZshw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Dark Knight (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nieyHi9WNuz7hPBfyVFVqrqR4i-gE5DMY",
+      "tracksN": 14,
+      "playsTotal": 53130000
+    },
+    {
+      "id": "film-avengers-infinity-war",
+      "title": "Avengers: Infinity War Soundtrack",
+      "medium": "film",
+      "game": "Avengers: Infinity War",
+      "composers": [
+        "Alan Silvestri"
+      ],
+      "date": "2018-04-25",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/299536",
+          "seenAt": "2026-09-12T19:30:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Avengers%3A+Infinity+War+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cZ3xC1asvnt",
+      "art": "https://yt3.googleusercontent.com/3iiCuWdHbJHUtUVPGS7wKa95_Du_55l28CW0Q8m9acZ92Tc9xfeLh26Vlnnr5TGGQ7PbhEaBZhkIvY15cg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Avengers: Infinity War (Original Motion Picture Soundtrack / Deluxe Edition)",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kjV7cg40qU4qkTtoOw5SSAkLEt3xw7nIw",
+      "tracksN": 30,
+      "playsTotal": 66407000
     }
   ]
 }
