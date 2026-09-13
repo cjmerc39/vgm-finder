@@ -233,21 +233,51 @@ def test_resolve_judges_stored_results_again_without_youtube_music(tmp_path, fak
     assert EXPANDED in [c["url"] for c in ev[("film", "105")]["accepted"]]
 
 
-def test_a_seasonless_tv_row_moves_into_the_season_its_album_names(tmp_path):
-    url = "https://music.youtube.com/browse/crown1"
-    cand = _cand("The Crown: Season One (Soundtrack from the Netflix Original Series)", url, season=1)
-    ev = {("tv", "65494"): _record("65494", "The Crown", [cand], {url: "accepted"}, medium="tv")}
-    releases = [row("tv-the-crown", "tv", "The Crown Soundtrack", cand["title"], url, 65494)]
+def test_tv_rows_take_the_id_of_the_slot_their_album_fills(tmp_path):
+    v2 = _cand("Andor: Vol. 2 (Episodes 5-8) (Original Score)", "https://music.youtube.com/browse/v2",
+               volume=2, year="2022")
+    s2v1 = _cand("Andor: Season 2 - Vol. 1 (Episodes 1-3) (Original Score)", "https://music.youtube.com/browse/s2v1",
+                 season=2, volume=1, year="2025")
+    crown = _cand("The Crown: Season One (Soundtrack from the Netflix Original Series)",
+                  "https://music.youtube.com/browse/crown1", season=1)
+    ev = {("tv", "83867"): dict(_record("83867", "Andor", [v2, s2v1], {v2["url"]: "accepted"}, medium="tv"),
+                                seasons={"1": "2022-09-21", "2": "2025-04-22"}),
+          ("tv", "65494"): dict(_record("65494", "The Crown", [crown], {crown["url"]: "accepted"}, medium="tv"),
+                                seasons={"1": "2016-11-04", "2": "2017-12-08"})}
+    releases = [row("tv-andor-season-2", "tv", "Andor Season 2 Soundtrack", v2["title"], v2["url"], 83867),
+                row("tv-the-crown", "tv", "The Crown Soundtrack", crown["title"], crown["url"], 65494)]
     plan = rewalk.plan_rewalk(releases, ev)
-    assert plan["counts"]["retitled"] == 1
-    assert plan["counts"]["orphans"] == 0 and plan["counts"]["additions"] == 0
-    assert [u["row"] for u in plan["unchanged"]] == ["tv-the-crown"]
-    assert plan["retitles"][0]["title"] == "The Crown Season 1 Soundtrack"
-    out = rewalk.apply_plan(releases, plan, ev, tmp_path / "backfill-state.json", tmp_path,
-                            "2026-09-13T00:00:00Z")
-    assert out["retitled"] == ["tv-the-crown"]
-    assert releases[0]["title"] == "The Crown Season 1 Soundtrack" and releases[0]["id"] == "tv-the-crown"
-    assert rewalk.row_slot(releases[0]) == ("tv", "65494", 1)
+    assert {(x["row"], x["newId"], x["seasonFrom"]) for x in plan["reids"]} == {
+        ("tv-andor-season-2", "tv-andor-season-1-vol-2", "release year"),
+        ("tv-the-crown", "tv-the-crown-season-1", "title")}
+    assert sorted(u["row"] for u in plan["unchanged"]) == ["tv-andor-season-2", "tv-the-crown"]
+    assert [a["slot"] for a in plan["additions"]] == [["tv", "83867", 2, 1]]
+    tracks = tmp_path / "tracks"
+    tracks.mkdir()
+    (tracks / "tv-andor-season-2.json").write_text("[]", encoding="utf-8")
+    out = rewalk.apply_plan(releases, plan, ev, tmp_path / "backfill-state.json", tracks, "2026-09-13T00:00:00Z")
+    ids = [r["id"] for r in releases]
+    assert ids[:2] == ["tv-andor-season-1-vol-2", "tv-the-crown-season-1"]  # same places, new ids
+    assert releases[0]["title"] == "Andor Season 1 Vol. 2 Soundtrack"
+    assert (tracks / "tv-andor-season-1-vol-2.json").exists() and not (tracks / "tv-andor-season-2.json").exists()
+    assert "tv-andor-season-2-vol-1" in ids and out["stale"] == []
+    assert rewalk.row_slot(releases[0]) == ("tv", "83867", 1, 2)
+
+
+def test_reids_settle_a_chain_in_any_order(tmp_path):
+    # row A moves into the id row B is leaving
+    a = _cand("Show: Season 1 (Original Soundtrack)", "https://music.youtube.com/browse/a", season=1)
+    b = _cand("Show: Vol. 1 (Original Soundtrack)", "https://music.youtube.com/browse/b", volume=1, year="2020")
+    ev = {("tv", "9"): dict(_record("9", "Show", [a, b], {a["url"]: "accepted", b["url"]: "accepted"}, medium="tv"),
+                            seasons={"1": "2020-01-01", "2": "2021-01-01"})}
+    releases = [row("tv-show", "tv", "Show Soundtrack", a["title"], a["url"], 9),
+                row("tv-show-season-1", "tv", "Show Season 1 Soundtrack", b["title"], b["url"], 9)]
+    plan = rewalk.plan_rewalk(releases, ev)
+    assert {(x["row"], x["newId"]) for x in plan["reids"]} == {
+        ("tv-show", "tv-show-season-1"), ("tv-show-season-1", "tv-show-season-1-vol-1")}
+    out = rewalk.apply_plan(releases, plan, ev, tmp_path / "b.json", tmp_path, "2026-09-13T00:00:00Z")
+    assert [r["id"] for r in releases] == ["tv-show-season-1", "tv-show-season-1-vol-1"]
+    assert out["stale"] == [] and len(out["reids"]) == 2
 
 
 def test_weak_guard_admits_disney_beside_the_cast():

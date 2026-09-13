@@ -180,6 +180,15 @@ def test_an_album_that_names_the_other_medium_belongs_to_it():
     assert not c["verdict"].startswith("medium")
 
 
+def test_episode_ranges_fold_away_on_tv_titles():
+    assert collect.normalize_screen("Andor: Season 2 - Vol. 1 (Episodes 1-3) (Original Score)", "tv") == "andor"
+    album = {"resultType": "album", "browseId": "a4", "year": "2025", "thumbnails": [],
+             "title": "Andor: Season 2 - Vol. 4 (Episodes 10-12) (Original Score)",
+             "artists": [{"name": "Brandon Roberts"}]}
+    c = collect.screen_classify([album], show("Andor", [2022, 2025], []))[0]
+    assert c["accepted"] and c["rule"] == "1 exact title" and (c["season"], c["volume"]) == (2, 4)
+
+
 def test_composer_accents_fold_on_latin_names_only():
     assert collect._credited(["Roque Banos"], ["Roque Baños"])
     assert collect._credited(["Jóhann Jóhannsson"], ["Johann Johannsson"])
@@ -260,8 +269,8 @@ def test_rule5_credited_first_then_fewer_extra_words():
     ws = best(noct)
     # an exact but uncredited upload loses to the credited series album
     assert verdict(noct, "Castlevania Nocturne (Original Soundtrack)")["accepted"]
-    assert ws[("tv", noct["id"], None)]["title"] == "Castlevania Nocturne (Original Series Soundtrack)"
-    assert ws[("tv", noct["id"], 2)]["title"] == "Castlevania Nocturne Season 2 (Original Series Soundtrack)"
+    assert ws[("tv", noct["id"], None, None)]["title"] == "Castlevania Nocturne (Original Series Soundtrack)"
+    assert ws[("tv", noct["id"], 2, None)]["title"] == "Castlevania Nocturne Season 2 (Original Series Soundtrack)"
     # Empire: the real soundtrack adds two words ("star wars"), the Symphonic
     # Suite three ("symphonic suite from"), so the real soundtrack ranks first
     suite = verdict(film("The Empire Strikes Back", 1980, ["John Williams"]),
@@ -454,11 +463,11 @@ def test_rule5_a_worded_album_wins_a_dead_heat_over_a_bare_one():
 
 def test_tv_books_and_network_series_wording():
     it = show("Infinity Train", [2019, 2020, 2021], ["Morgan Z Whirledge"])
-    assert best(it)[("tv", it["id"], 1)]["title"] == "Infinity Train: Book 1 (Original Soundtrack)"
+    assert best(it)[("tv", it["id"], 1, None)]["title"] == "Infinity Train: Book 1 (Original Soundtrack)"
     sr = show("Scavengers Reign", [2023], ["Nicolas Snyder"])
-    assert best(sr)[("tv", sr["id"], None)]["rule"].startswith("1")
+    assert best(sr)[("tv", sr["id"], None, None)]["rule"].startswith("1")
     cse = show("Common Side Effects", [2025], ["Nicolas Snyder"])
-    assert best(cse)[("tv", cse["id"], None)]["title"] == \
+    assert best(cse)[("tv", cse["id"], None, None)]["title"] == \
         "Common Side Effects (Adult Swim Original Series Soundtrack)"
     assert collect.normalize_screen("Stranger Things 4 (Original Series Soundtrack)") == "stranger things 4"
     assert collect.normalize_screen("Breaking Bad: Original Score from the Television Series") == "breaking bad"

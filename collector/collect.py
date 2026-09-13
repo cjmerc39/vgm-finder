@@ -872,8 +872,9 @@ _CJK_TAIL = re.compile(
     r"|オリジナル\s*サウンドトラック|サウンドトラック)$")
 
 _SEASON_MARK = re.compile(r"\b(?:season|series|book)\s+(\d+)\b")  # Infinity Train counts Books
-_VOL_MARK = re.compile(r"\b(?:vol|volume)\s+(\d+)\b")   # Stranger Things counts seasons in volumes
+_VOL_MARK = re.compile(r"\b(?:vol|volume)\s+(\d+)\b")   # a volume, never a season: Andor's first season shipped in three
 _CHAPTER_MARK = re.compile(r"\bchapters?\s+\d+(\s+\d+)?\b")  # episode markers, never a season
+_EPISODE_RANGE = re.compile(r"\bepisodes?\s+\d+(\s+\d+)?\b")  # "(Episodes 1-4)", a stretch of one season
 _EPISODE_MARK = re.compile(r"\bepisode\s+(?:\d+|i)\b")  # "Episode I - The Phantom Menace"
 _WORD_NUMS = {w: i for i, w in enumerate(
     "one two three four five six seven eight nine ten eleven twelve".split(), 1)}
@@ -927,8 +928,8 @@ def _screen_base(text):
 
 
 def normalize_screen(title, medium=None):
-    """The comparable form of an album title. For TV, season, volume and
-    chapter markers fold away (films keep them: Vol. 2 is another film);
+    """The comparable form of an album title. For TV, season, volume, chapter
+    and episode-range markers fold away (films keep them: Vol. 2 is another film);
     motion-picture, series and edition tails drop, Chinese and Japanese
     soundtrack words drop, and a leading "Soundtrack From" unwraps.
     "Westworld: Season 1 (Music from the HBO Series)" comes out "westworld"."""
@@ -939,6 +940,7 @@ def normalize_screen(title, medium=None):
         t = _SEASON_MARK.sub(" ", t)
         t = _VOL_MARK.sub(" ", t)
         t = _CHAPTER_MARK.sub(" ", t)
+        t = _EPISODE_RANGE.sub(" ", t)
     t = re.sub(r"\s+", " ", t).strip()
     stripped = True
     while stripped:
@@ -965,13 +967,15 @@ def normalize_screen(title, medium=None):
 
 
 def _season_of(title):
-    """The season an album belongs to, or None for miniseries and
-    per-episode releases. Explicit seasons outrank volume counting."""
-    norm = _screen_base(title)
-    m = _SEASON_MARK.search(norm)
-    if m:
-        return int(m.group(1))
-    m = _VOL_MARK.search(norm)
+    """The season an album title names, or None. A volume is never read as
+    a season; screen_slot places a volume the title gives no season."""
+    m = _SEASON_MARK.search(_screen_base(title))
+    return int(m.group(1)) if m else None
+
+
+def _volume_of(title):
+    """The volume an album title names, or None."""
+    m = _VOL_MARK.search(_screen_base(title))
     return int(m.group(1)) if m else None
 
 
@@ -1208,6 +1212,7 @@ def screen_classify(results, info, album_fn=None):
                         url="https://music.youtube.com/browse/" + bid,
                         art=thumbs[-1]["url"] if thumbs else None,
                         season=_season_of(title) if medium != "film" else None,
+                        volume=_volume_of(title) if medium != "film" else None,
                         composers=list(info.get("composers") or []) or people,
                         overlap=credited, dist=gap if gap is not None else 999))
     return out
@@ -1263,7 +1268,7 @@ def _claim_key(c, slot):
 
 def resolve_screen(slots, reserved=()):
     """Hand albums out across every title in a batch at once. slots maps a
-    row target, ("film", id) or ("tv", id, season), to its accepted
+    row target, ("film", id) or ("tv", id, season, volume), to its accepted
     candidates. Each title takes its best album by rule 5; an album wanted
     by several goes to the best claim by rule 6, and the displaced title
     moves on to its next choice. Albums in reserved are never handed out.
@@ -1294,13 +1299,42 @@ def resolve_screen(slots, reserved=()):
     return {k: c for k, c in holder.values()}, conflicts
 
 
+def screen_slot(info, c):
+    """The row an accepted album fills, and where its season came from. A
+    film is one row. A show has one row per album, season and volume read
+    from the title ("Season 2 - Vol. 3"). A volume whose title names no
+    season takes the season that aired in the album's release year when
+    exactly one did, or the only season a show has; otherwise it stays
+    season-less. Returns (slot, "title" | "release year" | "only season" |
+    "season-less" | None)."""
+    if info["medium"] == "film":
+        return ("film", info["id"]), None
+    season, volume = c.get("season"), c.get("volume")
+    if season is not None:
+        return ("tv", info["id"], season, volume), "title"
+    if volume is None:
+        return ("tv", info["id"], None, None), None
+    seasons = {int(n): d for n, d in (info.get("seasons") or {}).items() if str(n).isdigit() and int(n) > 0}
+    if len(seasons) == 1:
+        return ("tv", info["id"], next(iter(seasons)), volume), "only season"
+    year = _year_of(c.get("year"))
+    aired = [n for n, d in seasons.items() if year and d and d[:4] == str(year)]
+    if len(aired) == 1:
+        return ("tv", info["id"], aired[0], volume), "release year"
+    return ("tv", info["id"], None, volume), "season-less"
+
+
 def screen_slots(info, cands):
-    """Row targets for one title: a film is one slot, a show one per season."""
+    """Row targets for one title, each TV album tagged with where its season
+    came from (seasonFrom)."""
     if info["medium"] == "film":
         return {("film", info["id"]): cands}
     out = {}
     for c in cands:
-        out.setdefault(("tv", info["id"], c["season"]), []).append(c)
+        slot, how = screen_slot(info, c)
+        if how:
+            c["seasonFrom"] = how
+        out.setdefault(slot, []).append(c)
     return out
 
 
@@ -1332,12 +1366,12 @@ def match_film(results, name, year, composers, aliases=None, original=None, albu
 
 def tv_season_albums(results, show, year, composers, season_years=None, aliases=None,
                      original=None, album_fn=None):
-    """One album per season slot, season-less albums sharing one slot."""
+    """One album per row slot (season and volume), season-less albums sharing one slot."""
     info = {"medium": "tv", "id": "match", "name": show, "original": original,
             "years": sorted({y for y in [year, *(season_years or [])] if y}),
             "composers": list(composers or []), "aliases": list(aliases or [])}
     winners, _ = resolve_screen(screen_slots(info, screen_matches(results, info, album_fn)))
-    return [winners[k] for k in sorted(winners, key=lambda k: (k[2] is None, k[2] or 0))]
+    return [winners[k] for k in sorted(winners, key=lambda k: (k[2] is None, k[2] or 0, k[3] or 0))]
 
 
 TMDB_IMG = "https://image.tmdb.org/t/p/w500"
@@ -1492,6 +1526,13 @@ def tv_info(entry, data):
             "aliases": list(data.get("aliases", {}).get(sid, []))}
 
 
+def screen_row_title(name, season=None, volume=None):
+    """A row title naming its season and volume, "Andor Season 1 Vol. 2
+    Soundtrack", whose id slugs to tv-andor-season-1-vol-2."""
+    return " ".join([name] + ([f"Season {season}"] if season is not None else [])
+                    + ([f"Vol. {volume}"] if volume is not None else []) + ["Soundtrack"])
+
+
 def screen_items(winners, titles):
     """Merge items for resolved slots, in title order then season order.
     titles: [(info, discover entry, genre map)]."""
@@ -1502,13 +1543,13 @@ def screen_items(winners, titles):
     for info, entry, gmap in titles:
         medium = info["medium"]
         keys = sorted(by_title.get((medium, info["id"]), []),
-                      key=lambda k: (k[-1] is None, k[-1] or 0) if medium == "tv" else 0)
+                      key=lambda k: (k[2] is None, k[2] or 0, k[3] or 0) if medium == "tv" else 0)
         for k in keys:
             hit = winners[k]
-            n = k[2] if medium == "tv" else None
+            n, v = (k[2], k[3]) if medium == "tv" else (None, None)
             name = info["name"]
             poster = entry.get("poster_path")
-            item = {"title": f"{name} Season {n} Soundtrack" if n else f"{name} Soundtrack",
+            item = {"title": screen_row_title(name, n, v),
                     "albumTitle": hit["title"], "medium": medium,
                     "game": name, "composers": hit["composers"],
                     "genres": _tmdb_genres(entry, gmap),
@@ -1639,12 +1680,15 @@ def _medium(r):
 def _fuzzy_find(norm, releases, norms, med="game"):
     best, best_ratio = None, 0.0
     tail = _numeral_tail(norm)
+    digits = re.findall(r"\d+", norm)
     for r in releases:
         if _medium(r) != med or r.get("retired"):
             continue  # mediums never fuzzy-merge, and retired rows never merge at all
         other = norms[id(r)]
         if _numeral_tail(other) != tail:
             continue  # Mass Effect 2 and 3 are near-identical strings and different albums
+        if med != "game" and re.findall(r"\d+", other) != digits:
+            continue  # every number counts on screen rows: Andor Season 1 Vol. 2 is not Season 2 Vol. 2
         m = SequenceMatcher(None, norm, other)
         if m.real_quick_ratio() < FUZZY_THRESHOLD or m.quick_ratio() < FUZZY_THRESHOLD:
             continue

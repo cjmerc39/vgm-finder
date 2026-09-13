@@ -48,7 +48,8 @@ PHASES = EVALUATE_PHASES + ("evaluated", "resolved", "applied")
 KINDS = {"film": ("movie", "FILM_BAR", "filmPage"), "tv": ("tv", "TV_BAR", "tvPage")}
 SRC = {"film": backfill.TMDB_SRC_FILM, "tv": backfill.TMDB_SRC_TV}
 _KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded",
-         "weak", "season", "composers", "rank", "artists", "plays", "trackStats", "yearFrom")
+         "weak", "season", "volume", "year", "seasonFrom", "composers", "rank", "artists", "plays",
+         "trackStats", "yearFrom")
 _REAL_KEYS = ("credited composer", "exact title", "fewer extra words", "closer year")
 YTM_ALBUM = "https://music.youtube.com/browse/"
 
@@ -97,8 +98,9 @@ def row_slot(row):
         return None
     if row.get("medium") == "film":
         return ("film", tid)
-    m = re.search(r" Season (\d+) Soundtrack$", row.get("title", ""))
-    return ("tv", tid, int(m.group(1)) if m else None)
+    m = re.search(r"(?: Season (\d+))?(?: Vol\. (\d+))? Soundtrack$", row.get("title", ""))
+    season, volume = (m.group(1), m.group(2)) if m else (None, None)
+    return ("tv", tid, int(season) if season else None, int(volume) if volume else None)
 
 
 # ---------------- evaluate ----------------
@@ -204,7 +206,7 @@ def judge_record(rec, worn, album_fn):
     groups = {}
     for c in judged:
         if c["accepted"]:
-            groups.setdefault(c["season"] if medium == "tv" else None, []).append(c)
+            groups.setdefault((c["season"], c.get("volume")) if medium == "tv" else None, []).append(c)
     for group in groups.values():
         if any(c["credited"] for c in group):
             continue
@@ -503,37 +505,64 @@ def plan_rewalk(releases, evaluations):
         else:
             rows_by_slot[slot] = r
 
-    # a season-less TV row whose album names a season no row holds moves into
-    # that season, keeping its id and album: rows made before "Season One"
-    # read as season 1 (The Crown, Dickinson)
-    retitles = []
-    for slot, r in sorted(rows_by_slot.items(), key=lambda kv: kv[1]["id"]):
-        if slot[0] != "tv" or slot[2] is not None:
+    # every TV row moves to the slot its own album fills (season and volume
+    # from the title, or a volume's season from its release year) and takes
+    # that slot's id and title: CJ's volume decision, re-id'd this once. A row
+    # whose target another row keeps stays put and is listed as blocked.
+    moved = {}
+    for slot, r in rows_by_slot.items():
+        if slot[0] != "tv":
             continue
         rec = evaluations.get(("tv", slot[1])) or {}
         own = next((c for c in rec.get("accepted", []) if c["url"] == r.get("ytmAlbumUrl")), None)
-        season = own.get("season") if own else None
-        if season is not None and ("tv", slot[1], season) not in rows_by_slot:
-            del rows_by_slot[slot]
-            rows_by_slot[("tv", slot[1], season)] = r
-            retitles.append({"row": r["id"], "album": {"title": r.get("albumTitle"), "url": r.get("ytmAlbumUrl")},
-                             "slot": ["tv", slot[1], season], "title": f"{rec['name']} Season {season} Soundtrack"})
+        if own is None:
+            continue
+        want, how = collect.screen_slot({"medium": "tv", "id": slot[1], "seasons": rec.get("seasons")}, own)
+        if want != slot:
+            moved[r["id"]] = (slot, want, how)
+    taken = {slot: r for slot, r in rows_by_slot.items() if r["id"] not in moved}
+    pending, placed, progress = sorted(moved.items()), {}, True
+    while pending and progress:
+        progress = False
+        for item in list(pending):
+            rid, (old, want, how) = item
+            if want not in taken:
+                taken[want] = rows_by_slot[old]
+                placed[rid] = (old, want, how)
+                pending.remove(item)
+                progress = True
+    blocked = []
+    for rid, (old, want, how) in pending:
+        blocked.append({"row": rid, "wants": list(want), "heldBy": taken[want]["id"]})
+        if old in taken:
+            duplicates.append({"row": rid, "slot": list(old), "sameSlotAs": taken[old]["id"]})
+        else:
+            taken[old] = rows_by_slot[old]
+    reids = []
+    for rid, (old, want, how) in sorted(placed.items()):
+        r = taken[want]
+        title = collect.screen_row_title(evaluations[("tv", want[1])]["name"], want[2], want[3])
+        reids.append({"row": rid, "newId": "tv-" + collect.slugify(title), "title": title,
+                      "from": list(old), "slot": list(want), "seasonFrom": how,
+                      "album": {"title": r.get("albumTitle"), "url": r.get("ytmAlbumUrl")}})
+    rows_by_slot = taken
 
     slots, weak_dropped = {}, []
     for (medium, tid), rec in sorted(evaluations.items()):
         if rec.get("gone") or rec.get("skipped"):
             continue
         cands = []
+        title_info = {"medium": medium, "id": tid, "seasons": rec.get("seasons")}
         for c in rec["accepted"]:
             if c.get("weak") and not _weak_artist_ok(c, rec):
                 weak_dropped.append({"title": rec["name"], "album": c["title"], "artists": c.get("artists")})
                 continue
-            slot = ("film", tid) if medium == "film" else ("tv", tid, c["season"])
+            slot = collect.screen_slot(title_info, c)[0]
             row = rows_by_slot.get(slot)
             if row and row.get("ytmAlbumUrl") == c["url"]:
                 c = dict(c, worded=True, rank=-1)  # the incumbent takes a dead heat
             cands.append(c)
-        slots.update(collect.screen_slots({"medium": medium, "id": tid}, cands))
+        slots.update(collect.screen_slots(title_info, cands))
     winners, conflicts = collect.resolve_screen(slots, reserved=set(game))
     holder = {c["url"]: slot for slot, c in winners.items()}
 
@@ -551,7 +580,9 @@ def plan_rewalk(releases, evaluations):
             unverified.append(dict(base, reason=reason))
             continue
         if win and cur and win["url"] == cur:
-            unchanged.append(dict(base, weakMatch=bool(win.get("weak")), **_songs(win)))
+            unchanged.append(dict(base, weakMatch=bool(win.get("weak")), credited=bool(win.get("credited")),
+                                  artists=win.get("artists"), rule=win.get("rule"),
+                                  seasonFrom=win.get("seasonFrom"), **_songs(win)))
             continue
         seen = rec["seen"].get(cur) if cur else None
         if cur and cur in game:
@@ -601,7 +632,8 @@ def plan_rewalk(releases, evaluations):
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "counts": {
             "corrections": len(corrections), "additions": len(additions), "orphans": len(orphans),
-            "unverified": len(unverified), "unchanged": len(unchanged), "retitled": len(retitles),
+            "unverified": len(unverified), "unchanged": len(unchanged), "reids": len(reids),
+            "reidsBlocked": len(blocked),
             "duplicateSlotRows": len(duplicates), "albumClaimsSettled": len(conflicts),
             "weakMatch": sum(1 for x in final if x["weakMatch"]),
             "songsAlbum": sum(1 for x in final if x["songsAlbum"]),
@@ -615,11 +647,11 @@ def plan_rewalk(releases, evaluations):
         },
         "hitRates": {"before": {"film": rate("film", rows_by_slot), "tv": rate("tv", rows_by_slot)},
                      "after": {"film": rate("film", winners), "tv": rate("tv", winners)}},
-        "retitles": retitles,
+        "reids": reids, "reidsBlocked": blocked,
         "corrections": corrections, "additions": additions, "orphans": orphans,
         "unverified": unverified, "duplicateSlotRows": duplicates, "weakDropped": weak_dropped,
-        "unchanged": [{"row": u["row"], "album": u["album"], "weakMatch": u["weakMatch"],
-                       "songsAlbum": u["songsAlbum"], "songsAlbumLiteral": u["songsAlbumLiteral"]}
+        "unchanged": [{k: u[k] for k in ("row", "slot", "album", "weakMatch", "songsAlbum", "songsAlbumLiteral",
+                                         "credited", "artists", "rule", "seasonFrom")}
                       for u in unchanged],
         "conflicts": [{"album": url, "winner": _label(w, rows_by_slot), "loser": _label(lo, rows_by_slot)}
                       for url, w, lo in conflicts],
@@ -630,15 +662,15 @@ def plan_rewalk(releases, evaluations):
 def print_review(plan, sample=30):
     c = plan["counts"]
     print("===== re-walk review =====")
-    for k in ("corrections", "additions", "orphans", "unverified", "unchanged", "retitled", "weakMatch",
+    for k in ("corrections", "additions", "orphans", "unverified", "unchanged", "reids", "reidsBlocked", "weakMatch",
               "weakDroppedByArtistGuard", "yearFromAlbumPage", "songsAlbum", "songsAlbumLiteral",
               "songsAlbumUnknown",
               "duplicateSlotRows", "albumClaimsSettled", "tvSeasonRowsBefore", "tvSeasonRowsAfter"):
         print(f"{k}: {c[k]}")
     print("hit rates:", json.dumps(plan["hitRates"]))
-    print(f"--- retitles ({len(plan.get('retitles', []))})")
-    for x in plan.get("retitles", [])[:sample]:
-        print(f"   {x['row']}: -> {x['title']!r} ({x['album']['title']!r})")
+    print(f"--- re-ids ({len(plan.get('reids', []))})")
+    for x in plan.get("reids", [])[:sample]:
+        print(f"   {x['row']} -> {x['newId']} ({x['seasonFrom']}; {x['album']['title']!r})")
     for name in ("corrections", "orphans", "unverified", "additions"):
         items = plan[name]
         print(f"--- {name} ({len(items)}), first {min(sample, len(items))}")
@@ -667,9 +699,9 @@ def _set_flag(row, key, on):
 def addition_item(a, songs_policy="tracks"):
     t, al, slot = a["title"], a["album"], a["slot"]
     medium = slot[0]
-    n = slot[2] if medium == "tv" else None
+    n, v = (slot[2], slot[3]) if medium == "tv" else (None, None)
     name = t["name"]
-    item = {"title": f"{name} Season {n} Soundtrack" if n else f"{name} Soundtrack",
+    item = {"title": collect.screen_row_title(name, n, v),
             "albumTitle": al["title"], "medium": medium, "game": name,
             "composers": list(al.get("composers") or []), "genres": t.get("genres"),
             "url": f"https://www.themoviedb.org/{'movie' if medium == 'film' else 'tv'}/{t['id']}",
@@ -690,23 +722,53 @@ def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, see
     as stale rather than forced. Nothing is ever deleted, so every TRACK
     number stays where it is."""
     by_id = {r["id"]: r for r in releases}
-    out = {"retitled": [], "retired": [], "corrected": [], "added": [], "flagged": 0, "stale": []}
+    out = {"reids": [], "retired": [], "corrected": [], "added": [], "flagged": 0, "stale": []}
 
     def stale(kind, ref, why):
         out["stale"].append({"kind": kind, "ref": ref, "why": why})
 
-    # season-less TV rows take the season their album names: id and album stay
-    for t in plan.get("retitles", []):
+    # re-ids first (CJ's volume decision, this once). A row keeps its place in
+    # the file, so its TRACK number, and takes the id and title of the slot
+    # its album fills; its tracklist file moves with it. A move waits until
+    # its new id is free, so chains settle in any order; a move that never
+    # frees up keeps its id and takes only the title.
+    movers = []
+    for t in plan.get("reids", []):
         r = by_id.get(t["row"])
         if not r or r.get("retired") or r.get("ytmAlbumUrl") != t["album"]["url"]:
-            stale("retitle", t["row"], "row changed since resolve")
+            stale("reid", t["row"], "row changed since resolve")
             continue
+        movers.append((r, t))
+    remap, progress = {}, True
+    while movers and progress:
+        progress = False
+        ids_now = {x["id"] for x in releases}
+        for item in list(movers):
+            r, t = item
+            old = r["id"]
+            if t["newId"] != old and t["newId"] in ids_now:
+                continue
+            r["title"], r["id"] = t["title"], t["newId"]
+            ids_now.discard(old)
+            ids_now.add(t["newId"])
+            remap[t["row"]] = t["newId"]
+            track = Path(tracks_dir) / f"{old}.json"
+            if track.exists() and old != t["newId"]:
+                track.replace(Path(tracks_dir) / f"{t['newId']}.json")
+            out["reids"].append({"row": t["row"], "newId": t["newId"], "title": t["title"]})
+            movers.remove(item)
+            progress = True
+    for r, t in movers:
         r["title"] = t["title"]
-        out["retitled"].append(t["row"])
+        stale("reid", t["row"], f"id {t['newId']} stays taken; title changed, id kept")
+    by_id = {r["id"]: r for r in releases}
+
+    def row_of(rid):
+        return by_id.get(remap.get(rid, rid))
 
     # orphans first: retiring a row frees its album for the row it belongs to
     for o in plan["orphans"]:
-        r = by_id.get(o["row"])
+        r = row_of(o["row"])
         if not r or r.get("retired") or r.get("ytmAlbumUrl") != o["album"]["url"]:
             stale("orphan", o["row"], "row changed since resolve")
             continue
@@ -717,7 +779,7 @@ def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, see
     # albums moving along a chain of rows never trip the one-album rule midway
     ready = []
     for c in plan["corrections"]:
-        r = by_id.get(c["row"])
+        r = row_of(c["row"])
         if not r or r.get("retired") or r.get("ytmAlbumUrl") != c["album"]["url"]:
             stale("correction", c["row"], "row changed since resolve")
             continue
@@ -762,7 +824,7 @@ def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, see
 
     # flags on rows whose album did not change
     for u in plan["unchanged"]:
-        r = by_id.get(u["row"])
+        r = row_of(u["row"])
         if not r or r.get("retired") or r.get("ytmAlbumUrl") != u["album"]["url"]:
             stale("flag", u["row"], "row changed since resolve")
             continue
@@ -836,7 +898,7 @@ def main(argv=None, data_path=None, folder=None, backfill_state_path=None, track
                                              encoding="utf-8")
         state["phase"] = "applied"
         save_state(state, folder)
-        print(f"re-walk applied: {len(out['retitled'])} retitled, {len(out['corrected'])} corrected, "
+        print(f"re-walk applied: {len(out['reids'])} re-id'd, {len(out['corrected'])} corrected, "
               f"{len(out['added'])} added, "
               f"{len(out['retired'])} retired, {out['flagged']} flags changed, {len(out['stale'])} stale")
         for s in out["stale"]:

@@ -1071,14 +1071,45 @@ def test_normalize_screen_folds_the_screen_vocabulary():
         assert collect.normalize_screen(title) == want, title
 
 
-def test_season_numbers_come_from_seasons_and_volumes():
+def test_season_numbers_come_from_seasons_never_volumes():
     assert collect._season_of("Succession: Season 4 (HBO Original Series Soundtrack)") == 4
     assert collect._season_of("Doctor Who - Series 8 (Original Television Soundtrack)") == 8
-    assert collect._season_of("Stranger Things, Vol. 2 (A Netflix Original Series Soundtrack)") == 2
+    assert collect._season_of("Stranger Things, Vol. 2 (A Netflix Original Series Soundtrack)") is None
+    assert collect._volume_of("Stranger Things, Vol. 2 (A Netflix Original Series Soundtrack)") == 2
     assert collect._season_of("The Mandalorian: Chapter 1 (Original Score)") is None
     assert collect._season_of("Chernobyl (Music from the Original TV Series)") is None
-    # an explicit season outranks a volume marker
     assert collect._season_of("The Mandalorian: Season 2, Vol. 1 (Chapters 9-12)") == 2
+    assert collect._volume_of("Xena: Warrior Princess, Volume Two (Original Television Soundtrack)") == 2
+
+
+def test_a_volume_takes_its_season_from_the_title_then_the_release_year():
+    andor = {"medium": "tv", "id": "83867", "seasons": {"1": "2022-09-21", "2": "2025-04-22"}}
+
+    def slot(title, year, info=andor):
+        return collect.screen_slot(info, {"season": collect._season_of(title),
+                                          "volume": collect._volume_of(title), "year": year})
+    assert slot("Andor: Season 2 - Vol. 3 (Episode 7-9) (Original Score)", "2025") == \
+        (("tv", "83867", 2, 3), "title")
+    assert slot("Andor: Vol. 2 (Episodes 5-8) (Original Score)", "2022") == (("tv", "83867", 1, 2), "release year")
+    assert slot("Andor: Vol. 2 (Episodes 5-8) (Original Score)", "2023") == (("tv", "83867", None, 2), "season-less")
+    watchmen = {"medium": "tv", "id": "79788", "seasons": {"1": "2019-10-20"}}
+    assert slot("Watchmen: Volume 3 (Music from the HBO Series)", "2020", watchmen) == \
+        (("tv", "79788", 1, 3), "only season")
+    assert slot("Andor (Original Score)", "2022") == (("tv", "83867", None, None), None)
+    assert collect.screen_row_title("Andor", 1, 2) == "Andor Season 1 Vol. 2 Soundtrack"
+    assert collect.slugify(collect.screen_row_title("Andor", 1, 2)) == "andor-season-1-vol-2"
+    assert collect.slugify(collect.screen_row_title("Mr. Robot", None, 3)) == "mr-robot-vol-3"
+
+
+def test_merge_never_folds_one_volume_into_another():
+    def item(title):
+        return {"title": title, "medium": "tv", "game": "Andor", "date": "2025-04-22",
+                "url": "https://www.themoviedb.org/tv/83867", "ytmAlbumUrl": f"https://music.youtube.com/browse/{title}"}
+    releases = []
+    for t in ("Andor Season 1 Vol. 2 Soundtrack", "Andor Season 2 Vol. 2 Soundtrack", "Andor Season 2 Vol. 3 Soundtrack"):
+        collect.merge(releases, [item(t)], src("tmdb-tv", "catalog"), SEEN)
+    assert [r["id"] for r in releases] == ["tv-andor-season-1-vol-2", "tv-andor-season-2-vol-2",
+                                           "tv-andor-season-2-vol-3"]
 
 
 def test_match_film_prefers_the_credited_composer_over_knockoffs():
