@@ -259,6 +259,29 @@ def test_tmdb_leg_cap_interrupt_keeps_the_cursor():
     assert len(state["tmdbFilmChecked"]) == 1  # the checked film never re-spends its lookup
 
 
+def test_tmdb_leg_keeps_a_page_open_when_a_lookup_fails():
+    # a YouTube Music reset on one title must not let the cursor pass it by
+    from test_collect import screen_resolve
+    releases, state = [], backfill.load_state("missing")
+    page = json.loads(raw("tmdb-film.json"))
+    page["total_pages"] = 2
+    fetch = lambda url: json.dumps(page).encode()
+    first = page["results"][0]
+
+    def flaky(query):
+        if first["title"].lower() in query.lower():
+            raise ConnectionResetError("Connection reset by peer")
+        return screen_resolve(query)
+    backfill.tmdb_leg(releases, state, fetch, flaky, "2026-09-13T00:00:00Z",
+                      "film", "tmdbFilmOffset", "tmdbFilmChecked", cap=250)
+    assert state["tmdbFilmOffset"] == 1  # the page stays open
+    assert first["id"] not in state["tmdbFilmChecked"]
+    assert len(state["tmdbFilmChecked"]) == len(page["results"]) - 1  # the rest are recorded
+    backfill.tmdb_leg(releases, state, fetch, screen_resolve, "2026-09-13T00:00:00Z",
+                      "film", "tmdbFilmOffset", "tmdbFilmChecked", cap=250)
+    assert state["tmdbFilmOffset"] == 2 and first["id"] in state["tmdbFilmChecked"]
+
+
 def test_tmdb_leg_records_checked_titles_when_a_page_fails():
     # a TMDb connection reset on page 2 must not throw away page 1's work
     from test_collect import screen_resolve

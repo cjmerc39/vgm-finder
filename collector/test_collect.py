@@ -462,6 +462,12 @@ def test_merge_keeps_different_tmdb_titles_of_one_name_apart():
     assert len(releases) == 4 and len(releases[2]["sources"]) == 1
 
 
+def test_run_summary_counts_weak_matches():
+    rows = [{"medium": "film", "weakMatch": True}, {"medium": "tv", "weakMatch": True},
+            {"medium": "tv", "weakMatch": True, "retired": True}, {"medium": "film"}]
+    assert collect.weak_match_summary(rows) == "weakMatch rows: 2 (1 film, 1 tv)"
+
+
 def test_merge_carries_console_flag():
     releases = []
     collect.merge(releases, [{"title": "Tunic Soundtrack", "url": "https://a.example/t",

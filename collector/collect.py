@@ -2089,6 +2089,14 @@ def drop_claimed_newcomers(releases, preexisting_ids):
     return dropped
 
 
+def weak_match_summary(releases):
+    """The run summary's weakMatch line: rows matched on plays alone
+    (rule 2 without a composer), kept observable run to run."""
+    live = [r for r in releases if r.get("weakMatch") and not r.get("retired")]
+    film = sum(1 for r in live if r.get("medium") == "film")
+    return f"weakMatch rows: {len(live)} ({film} film, {len(live) - film} tv)"
+
+
 def load_data(path):
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -2134,6 +2142,7 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     fetched = fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP,
                           tracks_dir=Path(data_path).parent / "tracks")
     print(f"tracklists: {fetched} looked up")
+    print(weak_match_summary(releases))
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data["updatedAt"] = seen_at

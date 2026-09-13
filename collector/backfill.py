@@ -363,7 +363,11 @@ def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
             try:
                 cands = collect.screen_matches(collect.screen_search(resolve_fn, info), info, album_fn)
             except Exception:
-                continue  # transient lookup failure: leave unchecked, retry next run
+                # transient lookup failure: the title stays unchecked and its
+                # page stays open, so the cursor never moves past a title
+                # nobody looked up; the next run replays the page
+                page_done = False
+                continue
             checked.add(eid)
             collect.date_volumes(cands, date_fn)
             slots.update(collect.screen_slots(info, cands))
@@ -488,6 +492,7 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL,
                                   tracks_dir=Path(data_path).parent / "tracks")
     print(f"tracklists: {fetched} looked up")
+    print(collect.weak_match_summary(releases))
 
     if json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data["updatedAt"] = seen_at
