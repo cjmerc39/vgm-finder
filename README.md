@@ -1,4 +1,4 @@
-# VGM Finder
+# Scorekeep
 
 A single-file, mobile-first PWA that tracks notable new video game soundtrack
 releases from curated sources — open it, see what's new, tap a row, listen on
@@ -80,9 +80,12 @@ mv browser.json companion/        # gitignored, never committed
 python companion/make_playlists.py playlist-*.json
 ```
 
-Idempotent: playlists it created carry a `# vgm-finder` marker in their
+Idempotent: playlists it created carry a `# scorekeep` marker in their
 description and get topped up, never duplicated; a same-named playlist
-without the marker is reported and left alone. Tracks without a videoId
+without the marker is reported and left alone. Playlists published before
+the rename carry `vgm-finder · ` names and the old `# vgm-finder` marker:
+both are still recognized, and such a playlist is topped up and renamed to
+the `Scorekeep · ` prefix on its next publish. Tracks without a videoId
 are search-resolved with the collector's strict matcher — anything it
 can't confidently place is listed instead of guessed.
 

@@ -131,6 +131,15 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(d.querySelector('#hrandom').textContent === 'random ▸', 'the chip keeps its original label');
   assert(/#topbar\{[^}]*flex-wrap:nowrap/.test(d.querySelector('style').textContent),
     'the header row cannot wrap with the chip present');
+  // the rename: SCOREKEEP wordmark, Sound Test subtitle kept. Measured in
+  // headless Edge at 390px with Silkscreen 19px/1px spacing: SCOREKEEP is
+  // 151.5px and the row uses 387px of 390; VGM FINDER (10 characters) was
+  // 164.4px and spilled 10px into the right padding. Nine characters is the
+  // budget for this row.
+  assert(d.querySelector('#topbar h1').textContent === 'SCOREKEEP', 'the header wordmark is SCOREKEEP');
+  assert(d.querySelector('#topbar h1').textContent.length <= 9, 'the wordmark stays within the measured 390px budget');
+  assert(d.querySelector('#topbar .sub').textContent === 'Sound Test', 'the Sound Test subtitle stays');
+  assert(d.querySelector('title').textContent === 'Scorekeep', 'the page title is Scorekeep');
   assert(d.querySelector('#colophon').textContent.includes('synced jul 28'),
     'the synced date lives in the colophon next to collected daily');
   assert(d.querySelector('#colophon').textContent.includes('6 soundtracks'),
@@ -495,7 +504,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     && plCard().querySelector('.pltrack .g').textContent === 'Hades II', 'card preview lists game + title');
   assert(plCard().querySelector('.plx').disabled === false, 'export offered when tracks exist');
   const exp1 = JSON.parse(S(`JSON.stringify(plExportObj('liked'))`));
-  assert(exp1.app === 'vgm-finder-playlist' && exp1.name === 'vgm-finder · Liked Songs', 'export carries the playlist name');
+  assert(exp1.app === 'scorekeep-playlist' && exp1.name === 'Scorekeep · Liked Songs', 'export carries the playlist name');
   assert(JSON.stringify(exp1.tracks[0]) === JSON.stringify({ game: 'Hades II', title: 'No Escape',
     videoId: 'vidNE', ytmPlaylistId: 'OLAK5uy_plHades', searchQuery: 'Hades II No Escape' }),
     'liked export track: videoId, album context, search fallback');
@@ -547,8 +556,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     && dis.opts.method === 'POST' && dis.opts.headers['Authorization'] === 'Bearer github_pat_TEST',
     'publish dispatches to the publisher repo with the token');
   const sent = JSON.parse(dis.opts.body);
-  assert(sent.event_type === 'publish' && sent.client_payload.playlist.app === 'vgm-finder-playlist'
-    && sent.client_payload.playlist.name === 'vgm-finder · Liked Songs'
+  assert(sent.event_type === 'publish' && sent.client_payload.playlist.app === 'scorekeep-playlist'
+    && sent.client_payload.playlist.name === 'Scorekeep · Liked Songs'
     && sent.client_payload.playlist.tracks.length === 1, 'dispatch carries the playlist export');
   assert(plCard().querySelector('[data-plp]').textContent.includes('PUBLISHED'),
     'button reports the green run');
@@ -658,9 +667,12 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   // ---------- export / import round-trip ----------
   const dump = S('JSON.stringify(buildExport())');
   const parsedDump = JSON.parse(dump);
-  assert(parsedDump.app === 'vgm-finder' && parsedDump.state.v === 3, 'export wraps the current state');
+  assert(parsedDump.app === 'scorekeep' && parsedDump.state.v === 3, 'export wraps the current state');
   S(`editEntry('ratchet-clank-rift-apart', e => { e.note = 'clobbered'; e.rating = 1; })`);
   assert(S(`applyImport(${JSON.stringify(dump)})`) === true, 'import accepts its own export');
+  const oldDump = dump.replace('"app":"scorekeep"', '"app":"vgm-finder"');
+  assert(oldDump !== dump && S(`applyImport(${JSON.stringify(oldDump)})`) === true,
+    'a backup made before the rename still imports');
   assert(stored().entries['ratchet-clank-rift-apart'].note.includes('slaps') &&
          stored().entries['ratchet-clank-rift-apart'].rating === 3.5, 'import restores the exported state');
   assert(S(`applyImport('{"nope":true}')`) === false, 'import rejects foreign JSON');

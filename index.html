@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>VGM Finder</title>
+<title>Scorekeep</title>
 <meta name="theme-color" content="#0b0e14">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -257,7 +257,7 @@ a.xsrc{text-decoration:none}
 </head>
 <body>
 <header id="topbar">
-  <h1>VGM FINDER</h1>
+  <h1>SCOREKEEP</h1>
   <span class="sub">Sound Test</span>
   <button id="hrandom" aria-label="Random soundtrack">random ▸</button>
 </header>
@@ -749,18 +749,18 @@ function playlistDefs(){
                  S.plGenre.screen !== 'all' ? S.plGenre.screen : ''].filter(Boolean).join(' ');
   const suff = facet ? ' — ' + facet : '';
   return [
-    { key: 'liked', name: 'vgm-finder · Liked Songs' + suff, blurb: 'every ♥ track', tracks: plLiked() },
-    { key: 'queue', name: 'vgm-finder · Queue' + suff, blurb: 'tracklists of queued albums', tracks: plQueue() },
-    { key: 'rated', name: 'vgm-finder · 4★ Mix' + suff, blurb: 'top tracks of releases rated 4+', tracks: plRated() },
+    { key: 'liked', name: 'Scorekeep · Liked Songs' + suff, blurb: 'every ♥ track', tracks: plLiked() },
+    { key: 'queue', name: 'Scorekeep · Queue' + suff, blurb: 'tracklists of queued albums', tracks: plQueue() },
+    { key: 'rated', name: 'Scorekeep · 4★ Mix' + suff, blurb: 'top tracks of releases rated 4+', tracks: plRated() },
   ];
 }
 function plExportObj(key){
   if(key.slice(0, 2) === 'c:'){
     const p = cplById(key.slice(2));
-    return p ? { app: 'vgm-finder-playlist', name: p.name, tracks: cplResolved(p) } : null;
+    return p ? { app: 'scorekeep-playlist', name: p.name, tracks: cplResolved(p) } : null;
   }
   const p = playlistDefs().find(x => x.key === key);
-  return p ? { app: 'vgm-finder-playlist', name: p.name, tracks: p.tracks } : null;
+  return p ? { app: 'scorekeep-playlist', name: p.name, tracks: p.tracks } : null;
 }
 function plSlug(name){ return fold(name).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'playlist'; }
 async function exportPlaylist(key){
@@ -1669,7 +1669,7 @@ document.getElementById('colophon').addEventListener('click', e => {
 document.getElementById('colophon').addEventListener('change', e => {
   if(e.target.id !== 'impfile' || !e.target.files || !e.target.files[0]) return;
   e.target.files[0].text().then(t => {
-    IMPMSG = applyImport(t) ? 'imported ✓' : 'import failed: not a vgm-finder backup';
+    IMPMSG = applyImport(t) ? 'imported ✓' : 'import failed: not a Scorekeep backup';
     renderAll();
   });
 });
@@ -1821,13 +1821,13 @@ document.getElementById('totop').addEventListener('click', () => {
 });
 
 /* ======================= backup lifeboat ======================= */
-function buildExport(){ return { app: 'vgm-finder', exportedAt: new Date().toISOString(), state: S }; }
+function buildExport(){ return { app: 'scorekeep', exportedAt: new Date().toISOString(), state: S }; }
 function exportBackup(){
   try{
     const blob = new Blob([JSON.stringify(buildExport(), null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'vgm-finder-backup-' + todayLocal() + '.json';
+    a.download = 'scorekeep-backup-' + todayLocal() + '.json';
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 5000);
   }catch(e){}

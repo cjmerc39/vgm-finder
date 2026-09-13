@@ -13,6 +13,7 @@ class FakeYT:
         self.search_hits = dict(search_hits or {})  # query -> [search result dicts]
         self.created = []
         self.added = []
+        self.edited = []
         self.searches = []
         self._n = 0
 
@@ -30,6 +31,15 @@ class FakeYT:
         self.playlists[pid] = {"title": title, "description": description, "tracks": []}
         self.created.append((title, description, privacy_status))
         return pid
+
+    def edit_playlist(self, pid, title=None, description=None, privacyStatus=None):
+        p = self.playlists[pid]
+        if title is not None:
+            p["title"] = title
+        if description is not None:
+            p["description"] = description
+        self.edited.append((pid, title, description))
+        return "STATUS_SUCCEEDED"
 
     def add_playlist_items(self, pid, video_ids, duplicates=False):
         self.playlists[pid]["tracks"].extend(video_ids)
@@ -107,13 +117,51 @@ TRACKS = [
 
 def test_sync_creates_private_marked_playlist():
     yt = FakeYT()
-    rep = mp.sync_playlist(yt, "vgm-finder · Liked Songs", TRACKS)
+    rep = mp.sync_playlist(yt, "Scorekeep · Liked Songs", TRACKS)
     assert rep["created"] is True and rep["added"] == 2 and rep["already"] == 0
     (title, description, privacy), = yt.created
-    assert title == "vgm-finder · Liked Songs"
-    assert mp.MARKER in description
+    assert title == "Scorekeep · Liked Songs"
+    assert mp.MARKER in description and mp.LEGACY_MARKER not in description
     assert privacy == "PRIVATE"
-    assert yt.added == [("PL1", ["v1", "v2"])]
+    assert yt.added == [("PL1", ["v1", "v2"])] and yt.edited == []
+
+
+LEGACY_DESCRIPTION = "Built by vgm-finder from your exported picks. # vgm-finder"
+
+
+def test_sync_tops_up_and_renames_a_playlist_from_before_the_rename():
+    yt = FakeYT(playlists={"PLX": {"title": "vgm-finder · Liked Songs", "description": LEGACY_DESCRIPTION,
+                                   "tracks": ["v1"]}})
+    rep = mp.sync_playlist(yt, "Scorekeep · Liked Songs", TRACKS)
+    assert rep["created"] is False and rep["added"] == 1 and rep["already"] == 1
+    assert rep["renamed"] == "vgm-finder · Liked Songs"
+    assert yt.created == [] and yt.added == [("PLX", ["v2"])]  # the same playlist, never a second one
+    assert yt.edited == [("PLX", "Scorekeep · Liked Songs", mp.DESCRIPTION)]
+    assert yt.playlists["PLX"]["title"] == "Scorekeep · Liked Songs"
+    rep = mp.sync_playlist(yt, "Scorekeep · Liked Songs", TRACKS)  # the rerun finds it under the new name
+    assert rep["renamed"] is None and rep["added"] == 0 and len(yt.edited) == 1
+
+
+def test_sync_refreshes_the_marker_on_a_custom_list_without_renaming_it():
+    yt = FakeYT(playlists={"PLX": {"title": "Mix", "description": LEGACY_DESCRIPTION, "tracks": ["v1", "v2"]}})
+    rep = mp.sync_playlist(yt, "Mix", TRACKS)
+    assert rep["renamed"] is None and rep["added"] == 0
+    assert yt.edited == [("PLX", "Mix", mp.DESCRIPTION)]
+
+
+def test_sync_prefers_the_current_name_over_the_old_one():
+    yt = FakeYT(playlists={
+        "PLOLD": {"title": "vgm-finder · Queue", "description": LEGACY_DESCRIPTION, "tracks": ["z"]},
+        "PLNEW": {"title": "Scorekeep · Queue", "description": mp.DESCRIPTION, "tracks": ["v1"]},
+    })
+    rep = mp.sync_playlist(yt, "Scorekeep · Queue", TRACKS)
+    assert rep["renamed"] is None and yt.added == [("PLNEW", ["v2"])] and yt.edited == []
+
+
+def test_sync_skips_an_unmarked_namesake_under_the_old_name_too():
+    yt = FakeYT(playlists={"PLX": {"title": "vgm-finder · Queue", "description": "hand-made", "tracks": ["z"]}})
+    rep = mp.sync_playlist(yt, "Scorekeep · Queue", TRACKS)
+    assert rep["skipped"] is True and yt.created == [] and yt.edited == []
 
 
 def test_sync_rerun_is_idempotent():

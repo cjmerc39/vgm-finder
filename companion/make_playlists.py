@@ -1,4 +1,4 @@
-"""Publish vgm-finder playlist exports to your YT Music account.
+"""Publish Scorekeep playlist exports to your YT Music account.
 
 The static app can never sign in for you, so this runs on the PC:
 
@@ -11,10 +11,13 @@ gitignored and must never be committed or shared; the phone exports, the
 PC publishes.
 
 Re-runs are idempotent: playlists this script created carry a
-"# vgm-finder" marker in their description, and a matching one is topped
+"# scorekeep" marker in their description, and a matching one is topped
 up with missing tracks instead of duplicated. A same-named playlist
 WITHOUT the marker is reported and left untouched — never edit something
-made by hand.
+made by hand. Playlists published before the rename to Scorekeep carry
+"vgm-finder · " names and the "# vgm-finder" marker: both are recognized,
+and such a playlist is topped up, then renamed to the new prefix and given
+the new marker on that same run.
 """
 import argparse
 import glob
@@ -26,8 +29,16 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "collector"))
 from collect import _COVERS_ARTISTS, _numfold, normalize_title  # the collector's strict folds
 
-MARKER = "# vgm-finder"
-DESCRIPTION = "Built by vgm-finder from your exported picks. " + MARKER
+MARKER = "# scorekeep"
+LEGACY_MARKER = "# vgm-finder"   # playlists published before the rename
+MARKERS = (MARKER, LEGACY_MARKER)
+DESCRIPTION = "Built by Scorekeep from your exported picks. " + MARKER
+PREFIX, LEGACY_PREFIX = "Scorekeep · ", "vgm-finder · "
+
+
+def legacy_name(name):
+    """The name a built-in playlist was published under before the rename."""
+    return LEGACY_PREFIX + name[len(PREFIX):] if name.startswith(PREFIX) else None
 
 
 def _fold(text):
@@ -41,10 +52,10 @@ def load_export(path):
     except (OSError, json.JSONDecodeError) as e:
         raise ValueError(f"unreadable: {e}")
     if not isinstance(data, dict):
-        raise ValueError("not a vgm-finder playlist export")
+        raise ValueError("not a Scorekeep playlist export")
     name, tracks = data.get("name"), data.get("tracks")
     if not isinstance(name, str) or not name.strip() or not isinstance(tracks, list):
-        raise ValueError("not a vgm-finder playlist export")
+        raise ValueError("not a Scorekeep playlist export")
     return name.strip(), [t for t in tracks
                           if isinstance(t, dict) and isinstance(t.get("title"), str) and t["title"]]
 
@@ -78,18 +89,29 @@ def resolve_video_id(yt, track):
 
 
 def find_marked_playlist(yt, name):
-    """-> (playlistId or None, present videoIds, same-name-but-unmarked?)."""
-    unmarked = False
+    """-> (playlistId or None, present videoIds, same-name-but-unmarked?,
+    found as {title, description} or None). A marked playlist under the
+    name, or under its pre-rename name, counts; the current name wins when
+    both exist."""
+    wanted = {name, legacy_name(name)} - {None}
+    unmarked, found = False, {}
     for p in yt.get_library_playlists(limit=None) or []:
-        if (p.get("title") or "").strip() != name:
+        title = (p.get("title") or "").strip()
+        if title not in wanted or title in found:
             continue
         pid = p.get("playlistId")
         full = yt.get_playlist(pid, limit=None) or {}
-        if MARKER in (full.get("description") or ""):
+        desc = full.get("description") or ""
+        if any(m in desc for m in MARKERS):
             present = [t.get("videoId") for t in (full.get("tracks") or []) if t.get("videoId")]
-            return pid, present, False
-        unmarked = True
-    return None, [], unmarked
+            found[title] = (pid, present, {"title": title, "description": desc})
+        else:
+            unmarked = True
+    for title in (name, legacy_name(name)):
+        if title in found:
+            pid, present, meta = found[title]
+            return pid, present, False, meta
+    return None, [], unmarked, None
 
 
 def _add_items(yt, pid, video_ids):
@@ -107,7 +129,7 @@ def _add_items(yt, pid, video_ids):
 
 def sync_playlist(yt, name, tracks):
     """Create or top up the marked playlist for one export. Returns a report."""
-    rep = {"name": name, "created": False, "skipped": False,
+    rep = {"name": name, "created": False, "skipped": False, "renamed": None,
            "added": 0, "already": 0, "unresolved": []}
     ids, seen = [], set()
     for t in tracks:
@@ -118,7 +140,7 @@ def sync_playlist(yt, name, tracks):
         if vid not in seen:
             seen.add(vid)
             ids.append(vid)
-    pid, present, unmarked = find_marked_playlist(yt, name)
+    pid, present, unmarked, found = find_marked_playlist(yt, name)
     if pid is None and unmarked:
         rep["skipped"] = True  # a hand-made playlist wears this name; leave it alone
         return rep
@@ -133,6 +155,11 @@ def sync_playlist(yt, name, tracks):
     if to_add:
         _add_items(yt, pid, to_add)
         rep["added"] = len(to_add)
+    if found and (found["title"] != name or MARKER not in found["description"]):
+        # a playlist from before the rename: same playlist, new label and marker
+        yt.edit_playlist(pid, title=name, description=DESCRIPTION)
+        if found["title"] != name:
+            rep["renamed"] = found["title"]
     return rep
 
 
@@ -180,7 +207,8 @@ def main(argv=None):
             failures += 1
             continue
         verb = "created" if rep["created"] else "updated"
-        print(f"{verb} “{name}”: {rep['added']} added, {rep['already']} already there")
+        renamed = f" (renamed from “{rep['renamed']}”)" if rep["renamed"] else ""
+        print(f"{verb} “{name}”: {rep['added']} added, {rep['already']} already there{renamed}")
         for miss in rep["unresolved"]:
             print(f"  couldn't confidently place: {miss}")
     return 1 if failures else 0
