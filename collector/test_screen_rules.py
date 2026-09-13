@@ -165,10 +165,14 @@ def test_rule5_credited_first_then_fewer_extra_words():
     assert verdict(noct, "Castlevania Nocturne (Original Soundtrack)")["accepted"]
     assert ws[("tv", noct["id"], None)]["title"] == "Castlevania Nocturne (Original Series Soundtrack)"
     assert ws[("tv", noct["id"], 2)]["title"] == "Castlevania Nocturne Season 2 (Original Series Soundtrack)"
-    # Empire: the real soundtrack adds two words, the Symphonic Suite four
+    # Empire: the real soundtrack adds two words ("star wars"), the Symphonic
+    # Suite three ("symphonic suite from"), so the real soundtrack ranks first
     suite = verdict(film("The Empire Strikes Back", 1980, ["John Williams"]),
                     "The Empire Strikes Back (Symphonic Suite")
-    assert suite["accepted"] and suite["extra"] == 4
+    assert suite["accepted"] and suite["extra"] == 3
+    real = verdict(film("The Empire Strikes Back", 1980, ["John Williams"]),
+                   "Star Wars: The Empire Strikes Back")
+    assert real["accepted"] and real["extra"] < suite["extra"]
 
 
 # ---------------- rule 6: resolution across titles ----------------
@@ -269,6 +273,18 @@ def test_a_first_volume_stays_an_exact_film_match_and_later_volumes_stay_apart()
     w, _ = collect.resolve_screen(slots)
     assert w[("film", "24")]["title"].startswith("Kill Bill Vol. 1")
     assert w[("film", "393")]["title"].startswith("Kill Bill Vol. 2")
+
+
+def test_article_expanded_and_selections_wording_found_by_the_first_rewalk_shard():
+    assert collect.normalize_screen("Bohemian Rhapsody (The Original Soundtrack)", "film") == "bohemian rhapsody"
+    assert collect.normalize_screen("Gang Related (The Soundtrack)", "film") == "gang related"
+    assert collect.normalize_screen("Scarface (Expanded Motion Picture Soundtrack)", "film") == "scarface"
+    assert collect.normalize_screen(
+        "The Shining (Selections from the Original Motion Picture Soundtrack)", "film") == "the shining"
+    # a title whose name is "The Motion Picture" keeps it
+    assert collect.normalize_screen(
+        "Star Trek: The Motion Picture (Original Motion Picture Soundtrack)", "film") == \
+        "star trek the motion picture"
 
 
 def test_from_the_wording_is_stripped_before_the_network_pattern():

@@ -832,6 +832,10 @@ _SCREEN_TAILS = (
     "music from",
     "soundtrack from",
     "score from",
+    "selections from the",   # "(Selections from the Original Motion Picture Soundtrack)"
+    "highlights from the",
+    "excerpts from the",
+    "the",                   # "(The Original Soundtrack)" leaves its article stranded
 )
 _SCREEN_HEADS = ("soundtrack from the ", "soundtrack from ", "music from the ", "music from ")
 
@@ -851,6 +855,11 @@ _FROM_TAIL = re.compile(
     rf"(?:original\s+)?(?:{_NET}\s+){{0,3}}{_FORM}$")
 _EDITION_TAIL = re.compile(
     r"\s+(?:\d+\s+(?:st|nd|rd|th)\s+anniversary(?:\s+edition)?|\d{4}\s+(?:mix|remaster|remastered))$")
+# "(Expanded Motion Picture Soundtrack)" and kin. A qualifier is required, so
+# "Star Trek: The Motion Picture" keeps the words that are its name.
+_PICTURE_TAIL = re.compile(
+    r"\s+(?:(?:expanded|extended|complete|deluxe|remastered)\s+(?:original\s+)?|original\s+)"
+    r"motion\s+picture(?:\s+(?:soundtrack|score|ost))?$")
 # rule 8: soundtrack wording in Chinese and Japanese album titles
 _CJK_TAIL = re.compile(
     r"\s*(?:電影|电影|映画|影視|影视|劇場版|剧场版|動畫|动画|劇集|剧集)?\s*"
@@ -936,7 +945,7 @@ def normalize_screen(title, medium=None):
             if t.endswith(" " + tail):
                 t = t[: -len(tail)].strip()
                 stripped = True
-        for rx in (_FROM_TAIL, _NETWORK_TAIL, _EDITION_TAIL, _CJK_TAIL, first_volume):
+        for rx in (_FROM_TAIL, _NETWORK_TAIL, _EDITION_TAIL, _PICTURE_TAIL, _CJK_TAIL, first_volume):
             if rx is None:
                 continue
             t2 = rx.sub("", t).strip()
@@ -1434,8 +1443,6 @@ def screen_items(winners, titles):
                     "art": hit["art"] or (f"{TMDB_IMG}{poster}" if poster else None)}
             if hit.get("weak"):
                 item["weakMatch"] = True
-            if is_songs_album(hit):
-                item["songsAlbum"] = True
             items.append(item)
     return items
 

@@ -43,7 +43,7 @@ PHASES = EVALUATE_PHASES + ("evaluated", "resolved", "applied")
 KINDS = {"film": ("movie", "FILM_BAR", "filmPage"), "tv": ("tv", "TV_BAR", "tvPage")}
 SRC = {"film": backfill.TMDB_SRC_FILM, "tv": backfill.TMDB_SRC_TV}
 _KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded",
-         "weak", "season", "composers", "rank", "artists", "plays")
+         "weak", "season", "composers", "rank", "artists", "plays", "trackStats")
 _REAL_KEYS = ("credited composer", "exact title", "fewer extra words", "closer year")
 
 
@@ -131,12 +131,53 @@ def evaluate_title(medium, entry, worn, resolve, album_fn):
     if not info["name"] or not info["date"]:
         rec["skipped"] = "no title or date on TMDb"
         return rec
-    for c in collect.screen_classify(collect.screen_search(resolve, info), info, album_fn):
+    albums = {}
+
+    def album_once(browse_id):
+        if browse_id not in albums:
+            albums[browse_id] = album_fn(browse_id)
+        return albums[browse_id]
+
+    judged = collect.screen_classify(collect.screen_search(resolve, info), info, album_once)
+    # song-compilation evidence: where no candidate for a slot credits the
+    # composer, read the top candidate's tracklist once. YouTube Music
+    # credits most studio scores to Various Artists at album level, so the
+    # track artists are the only honest signal.
+    groups = {}
+    for c in judged:
+        if c["accepted"]:
+            groups.setdefault(c["season"] if medium == "tv" else None, []).append(c)
+    for group in groups.values():
+        if any(c["credited"] for c in group):
+            continue
+        top = min(group, key=collect._rank_key)
+        try:
+            top["trackStats"] = track_stats(album_once(top["url"].rsplit("/", 1)[1]),
+                                            info["composers"] + info["aliases"])
+        except Exception:
+            pass  # no stats: the track-based songs call stays unknown
+    for c in judged:
         if c["accepted"]:
             rec["accepted"].append({k: c.get(k) for k in _KEEP})
         if c.get("url") in worn:
             rec["seen"][c["url"]] = "accepted" if c["accepted"] else c["verdict"]
     return rec
+
+
+def track_stats(album, names):
+    """Tracks, tracks with a named artist other than Various Artists, the
+    distinct named artists, and tracks a credited composer performs."""
+    named = composer = 0
+    distinct = set()
+    tracks = (album or {}).get("tracks") or []
+    for t in tracks:
+        artists = [a.get("name") for a in t.get("artists") or [] if a.get("name")]
+        real = [a for a in artists if a.lower() != "various artists"]
+        if real:
+            named += 1
+            distinct.update(real)
+            composer += bool(names) and collect._credited(real, names)
+    return {"tracks": len(tracks), "named": named, "distinct": len(distinct), "composerTracks": composer}
 
 
 def _discover(medium, page):
@@ -263,6 +304,39 @@ def evaluate(releases, state, folder=REWALK_DIR, resolve=None, album_fn=None, ca
 
 # ---------------- resolve ----------------
 
+def songs_by_tracks(c):
+    """The track-based songs call: True, False, or None when the album's
+    tracks were never read. At least three distinct named track artists
+    and the composer on fewer than half of the named tracks. Albums whose
+    every track says Various Artists carry no evidence and count as score."""
+    if c.get("credited"):
+        return False
+    s = c.get("trackStats")
+    if not s:
+        return None
+    if not s["named"]:
+        return False
+    return s["distinct"] >= 3 and s["composerTracks"] * 2 < s["named"]
+
+
+def _songs(c):
+    by_tracks = songs_by_tracks(c)
+    return {"songsAlbum": bool(by_tracks), "songsAlbumLiteral": collect.is_songs_album(c),
+            "songsUnknown": by_tracks is None}
+
+
+def _weak_artist_ok(c, rec):
+    """The plays-only path is for albums credited to Various Artists or to
+    the work itself (Infinity Train, The Intouchables). A bare title by any
+    other act is a cover: the Royal Philharmonic's Bohemian Rhapsody, a
+    dance act's Frozen."""
+    artists = c.get("artists") or []
+    names = [collect._screen_base(n) for n in (rec.get("name"), rec.get("original")) if n]
+    return bool(artists) and all(
+        a.lower() == "various artists" or any(n and n in collect._screen_base(a) for n in names)
+        for a in artists)
+
+
 def real_key(c):
     return (not c["credited"], collect._CLASS_RANK[c["klass"]], c["extra"],
             c["gap"] if c["gap"] is not None else 99)
@@ -306,12 +380,15 @@ def plan_rewalk(releases, evaluations):
         else:
             rows_by_slot[slot] = r
 
-    slots = {}
+    slots, weak_dropped = {}, []
     for (medium, tid), rec in sorted(evaluations.items()):
         if rec.get("gone") or rec.get("skipped"):
             continue
         cands = []
         for c in rec["accepted"]:
+            if c.get("weak") and not _weak_artist_ok(c, rec):
+                weak_dropped.append({"title": rec["name"], "album": c["title"], "artists": c.get("artists")})
+                continue
             slot = ("film", tid) if medium == "film" else ("tv", tid, c["season"])
             row = rows_by_slot.get(slot)
             if row and row.get("ytmAlbumUrl") == c["url"]:
@@ -335,7 +412,7 @@ def plan_rewalk(releases, evaluations):
             unverified.append(dict(base, reason=reason))
             continue
         if win and cur and win["url"] == cur:
-            unchanged.append(dict(base, weakMatch=bool(win.get("weak")), songsAlbum=collect.is_songs_album(win)))
+            unchanged.append(dict(base, weakMatch=bool(win.get("weak")), **_songs(win)))
             continue
         seen = rec["seen"].get(cur) if cur else None
         if cur and cur in game:
@@ -359,7 +436,7 @@ def plan_rewalk(releases, evaluations):
             reason = seen  # the rule that now rejects the album the row wears
         if win:
             corrections.append(dict(base, newAlbum=_album(win), reason=reason,
-                                    weakMatch=bool(win.get("weak")), songsAlbum=collect.is_songs_album(win)))
+                                    weakMatch=bool(win.get("weak")), **_songs(win)))
         else:
             orphans.append(dict(base, reason=reason))
 
@@ -369,7 +446,7 @@ def plan_rewalk(releases, evaluations):
             continue
         rec = evaluations[(slot[0], slot[1])]
         additions.append({"slot": list(slot), "album": _album(win), "weakMatch": bool(win.get("weak")),
-                          "songsAlbum": collect.is_songs_album(win),
+                          **_songs(win),
                           "title": {k: rec.get(k) for k in ("medium", "id", "name", "date", "seasons",
                                                             "genres", "poster", "votes")}})
 
@@ -389,6 +466,9 @@ def plan_rewalk(releases, evaluations):
             "duplicateSlotRows": len(duplicates), "albumClaimsSettled": len(conflicts),
             "weakMatch": sum(1 for x in final if x["weakMatch"]),
             "songsAlbum": sum(1 for x in final if x["songsAlbum"]),
+            "songsAlbumLiteral": sum(1 for x in final if x["songsAlbumLiteral"]),
+            "songsAlbumUnknown": sum(1 for x in final if x["songsUnknown"]),
+            "weakDroppedByArtistGuard": len(weak_dropped),
             "tvSeasonRowsBefore": sum(1 for s in rows_by_slot if s[0] == "tv"),
             "tvSeasonRowsAfter": sum(1 for s in rows_by_slot if s[0] == "tv") - sum(
                 1 for o in orphans if o["slot"][0] == "tv") + sum(1 for a in additions if a["slot"][0] == "tv"),
@@ -396,9 +476,10 @@ def plan_rewalk(releases, evaluations):
         "hitRates": {"before": {"film": rate("film", rows_by_slot), "tv": rate("tv", rows_by_slot)},
                      "after": {"film": rate("film", winners), "tv": rate("tv", winners)}},
         "corrections": corrections, "additions": additions, "orphans": orphans,
-        "unverified": unverified, "duplicateSlotRows": duplicates,
+        "unverified": unverified, "duplicateSlotRows": duplicates, "weakDropped": weak_dropped,
         "unchanged": [{"row": u["row"], "album": u["album"], "weakMatch": u["weakMatch"],
-                       "songsAlbum": u["songsAlbum"]} for u in unchanged],
+                       "songsAlbum": u["songsAlbum"], "songsAlbumLiteral": u["songsAlbumLiteral"]}
+                      for u in unchanged],
         "conflicts": [{"album": url, "winner": _label(w, rows_by_slot), "loser": _label(lo, rows_by_slot)}
                       for url, w, lo in conflicts],
     }
@@ -408,7 +489,8 @@ def plan_rewalk(releases, evaluations):
 def print_review(plan, sample=30):
     c = plan["counts"]
     print("===== re-walk review =====")
-    for k in ("corrections", "additions", "orphans", "unverified", "unchanged", "weakMatch", "songsAlbum",
+    for k in ("corrections", "additions", "orphans", "unverified", "unchanged", "weakMatch",
+              "weakDroppedByArtistGuard", "songsAlbum", "songsAlbumLiteral", "songsAlbumUnknown",
               "duplicateSlotRows", "albumClaimsSettled", "tvSeasonRowsBefore", "tvSeasonRowsAfter"):
         print(f"{k}: {c[k]}")
     print("hit rates:", json.dumps(plan["hitRates"]))
@@ -437,7 +519,7 @@ def _set_flag(row, key, on):
     return False
 
 
-def addition_item(a):
+def addition_item(a, songs_policy="tracks"):
     t, al, slot = a["title"], a["album"], a["slot"]
     medium = slot[0]
     n = slot[2] if medium == "tv" else None
@@ -451,12 +533,13 @@ def addition_item(a):
             "art": al.get("art") or (f"{collect.TMDB_IMG}{t['poster']}" if t.get("poster") else None)}
     if a.get("weakMatch"):
         item["weakMatch"] = True
-    if a.get("songsAlbum"):
+    if a.get("songsAlbumLiteral" if songs_policy == "literal" else "songsAlbum"):
         item["songsAlbum"] = True
     return item
 
 
-def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, seen_at):
+def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, seen_at,
+               songs_policy="tracks"):
     """Apply a reviewed plan. Each action is re-checked against the rows as
     they are now; anything that moved since resolve is skipped and listed
     as stale rather than forced. Nothing is ever deleted, so every TRACK
@@ -504,7 +587,7 @@ def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, see
         if track_file.exists():
             track_file.unlink()
         _set_flag(r, "weakMatch", c["weakMatch"])
-        _set_flag(r, "songsAlbum", c["songsAlbum"])
+        _set_flag(r, "songsAlbum", c["songsAlbumLiteral" if songs_policy == "literal" else "songsAlbum"])
         out["corrected"].append({"row": r["id"], "old": c["album"]["title"], "new": new["title"]})
 
     # additions go through merge like any collected item
@@ -513,7 +596,7 @@ def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, see
         if a["album"]["url"] in collect.claimed_albums(releases):
             stale("addition", a["slot"], "album already worn by another row")
             continue
-        item = addition_item(a)
+        item = addition_item(a, songs_policy)
         wanted[item["ytmAlbumUrl"]] = a["slot"]
         before = {x["id"] for x in releases}
         collect.merge(releases, [item], SRC[item["medium"]], seen_at)
@@ -529,7 +612,8 @@ def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, see
         if not r or r.get("retired") or r.get("ytmAlbumUrl") != u["album"]["url"]:
             stale("flag", u["row"], "row changed since resolve")
             continue
-        out["flagged"] += _set_flag(r, "weakMatch", u["weakMatch"]) | _set_flag(r, "songsAlbum", u["songsAlbum"])
+        songs = u["songsAlbumLiteral" if songs_policy == "literal" else "songsAlbum"]
+        out["flagged"] += _set_flag(r, "weakMatch", u["weakMatch"]) | _set_flag(r, "songsAlbum", songs)
 
     # one album, one row among film and TV rows (two game-era pairs predate this)
     owners = {}
@@ -583,14 +667,15 @@ def main(argv=None, data_path=None, folder=None, backfill_state_path=None, track
         print("review stop: nothing has been applied" + (" (partial plan)" if partial else ""))
         return 0
 
-    if step == "apply":
+    if step in ("apply", "apply-literal"):
         if state["phase"] != "resolved":
             print(f"::error::nothing to apply (phase {state['phase']})")
             return 1
         plan = json.loads((folder / "plan.json").read_text(encoding="utf-8"))
         seen_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         out = apply_plan(releases, plan, load_evaluations(folder),
-                         backfill_state_path or backfill.STATE_PATH, tracks_dir or TRACKS_DIR, seen_at)
+                         backfill_state_path or backfill.STATE_PATH, tracks_dir or TRACKS_DIR, seen_at,
+                         songs_policy="literal" if step == "apply-literal" else "tracks")
         data["updatedAt"] = seen_at
         data_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         (folder / "applied.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n",

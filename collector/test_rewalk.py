@@ -152,6 +152,10 @@ def test_evaluate_walks_pages_then_sweeps_rows_below_the_bars(tmp_path, fake_tmd
     assert "movie/330" in fake_tmdb and ev[("film", "330")]["accepted"]
     # the verdict on the album each row wears is kept for resolve
     assert "sequel guard" in ev[("film", "105")]["seen"][PT3]
+    assert not any(c.get("trackStats") for c in ev[("film", "105")]["accepted"])  # a credited album exists
+    castlevania = ev[("tv", "71024")]["accepted"]
+    assert castlevania and castlevania[0]["trackStats"] == \
+        {"tracks": 0, "named": 0, "distinct": 0, "composerTracks": 0}
     assert ev[("film", "1891")]["seen"][SUITE] == "accepted"
     assert list(folder.glob("eval-*.json"))
 
@@ -248,20 +252,61 @@ def test_a_dead_heat_never_corrects_a_row():
 
 
 def test_songs_album_and_weak_match_are_counted_at_the_review_stop():
+    # track evidence as read live: Pulp Fiction 22 artists, Lion King 15 with
+    # Zimmer on 4 of 12, Grand Budapest Desplat on 28 of 32, Chamber of
+    # Secrets every track "Various Artists"
     songs = _cand("Pulp Fiction (Music From The Motion Picture)", "https://music.youtube.com/browse/pf",
-                  credited=False, artists=["Various Artists"], composers=[])
+                  credited=False, artists=["Various Artists"], composers=[],
+                  trackStats={"tracks": 20, "named": 20, "distinct": 22, "composerTracks": 0})
     weak = _cand("The Lion King", "https://music.youtube.com/browse/lk", credited=False, worded=False,
                  klass="weak", weak=True, rule="2 bare title by plays (weak)", artists=["Various Artists"],
-                 composers=[])
+                 composers=[], trackStats={"tracks": 12, "named": 12, "distinct": 15, "composerTracks": 4})
     score = _cand("Inception (Music from the Motion Picture)", "https://music.youtube.com/browse/in",
                   artists=["Hans Zimmer"])
+    budapest = _cand("The Grand Budapest Hotel (Original Soundtrack)", "https://music.youtube.com/browse/gb",
+                     credited=False, artists=["Various Artists"],
+                     trackStats={"tracks": 32, "named": 32, "distinct": 5, "composerTracks": 28})
+    potter = _cand("Harry Potter and The Chamber of Secrets/ Original Motion Picture Soundtrack",
+                   "https://music.youtube.com/browse/hp", credited=False, artists=["Various Artists"],
+                   trackStats={"tracks": 20, "named": 0, "distinct": 0, "composerTracks": 0})
     ev = {("film", "680"): _record("680", "Pulp Fiction", [songs]),
           ("film", "8587"): _record("8587", "The Lion King", [weak]),
-          ("film", "27205"): _record("27205", "Inception", [score])}
+          ("film", "27205"): _record("27205", "Inception", [score]),
+          ("film", "120467"): _record("120467", "The Grand Budapest Hotel", [budapest]),
+          ("film", "672"): _record("672", "Harry Potter and the Chamber of Secrets", [potter])}
     plan = rewalk.plan_rewalk([], ev)
-    flags = {a["title"]["name"]: (a["weakMatch"], a["songsAlbum"]) for a in plan["additions"]}
-    assert flags == {"Pulp Fiction": (False, True), "The Lion King": (True, True), "Inception": (False, False)}
-    assert plan["counts"]["songsAlbum"] == 2 and plan["counts"]["weakMatch"] == 1
+    flags = {a["title"]["name"]: (a["weakMatch"], a["songsAlbum"], a["songsAlbumLiteral"])
+             for a in plan["additions"]}
+    assert flags == {"Pulp Fiction": (False, True, True), "The Lion King": (True, True, True),
+                     "Inception": (False, False, False),
+                     "The Grand Budapest Hotel": (False, False, True),
+                     "Harry Potter and the Chamber of Secrets": (False, False, True)}
+    c = plan["counts"]
+    assert (c["songsAlbum"], c["songsAlbumLiteral"], c["songsAlbumUnknown"], c["weakMatch"]) == (2, 4, 0, 1)
+
+
+def test_the_weak_path_keeps_various_artists_and_title_named_acts_only():
+    cover = _cand("Bohemian Rhapsody", "https://music.youtube.com/browse/rpo", credited=False, worded=False,
+                  klass="weak", weak=True, artists=["The Royal Philharmonic Orchestra London",
+                                                     "The Royal Choral Society"])
+    named = _cand("The Intouchables", "https://music.youtube.com/browse/int", credited=False, worded=False,
+                  klass="weak", weak=True, artists=["The Intouchables (Motion Picture Soundtrack)"])
+    ev = {("film", "424694"): _record("424694", "Bohemian Rhapsody", [cover]),
+          ("film", "77338"): _record("77338", "The Intouchables", [named])}
+    plan = rewalk.plan_rewalk([], ev)
+    assert [a["title"]["name"] for a in plan["additions"]] == ["The Intouchables"]
+    assert plan["counts"]["weakDroppedByArtistGuard"] == 1
+    assert plan["weakDropped"][0]["album"] == "Bohemian Rhapsody"
+
+
+def test_track_stats_count_named_artists_and_the_composer():
+    album = {"tracks": [
+        {"title": "a", "artists": [{"name": "Alexandre Desplat"}]},
+        {"title": "b", "artists": [{"name": "Alexandre Desplat"}]},
+        {"title": "c", "artists": [{"name": "Osipov State Russian Folk Orchestra"}]},
+        {"title": "d", "artists": [{"name": "Various Artists"}]}]}
+    assert rewalk.track_stats(album, ["Alexandre Desplat"]) == \
+        {"tracks": 4, "named": 3, "distinct": 2, "composerTracks": 2}
 
 
 def test_songs_album_detection():

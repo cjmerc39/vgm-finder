@@ -15,6 +15,7 @@ on:
           - resolve-partial
           - resolve
           - apply
+          - apply-literal
 permissions:
   contents: write
 concurrency:
