@@ -92,7 +92,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(errors.length === 0, 'no runtime errors on boot' + (errors.length ? ' -> ' + errors.join(' | ') : ''));
 
   // ---------- legacy migration ----------
-  assert(stored().v === 3, 'v1 state migrated to v3 and persisted');
+  assert(stored().v === 3, 'v1 state migrated and persisted at a version old builds can still read');
   assert(stored().feedMedium === 'all' && stored().libMedium === 'all', 'medium chips default to all');
   assert(!('starred' in stored()) && !('listened' in stored()) && !('hidden' in stored()), 'legacy keys retired');
   assert(stored().entries['hades-ii'].liked === true, 'starred became liked');
@@ -202,7 +202,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(platRow !== null && platRow.querySelector('.shr').textContent === '1', 'genre rows carry counts');
   platRow.click(); await sleep(20);
   assert(rows().length === 1 && rows()[0].dataset.id === 'fresh-drop', 'genre facet filters the feed');
-  assert(stored().feedGenre === 'Platform', 'genre choice persists');
+  assert(stored().feedGenre.game === 'Platform', 'genre choice persists in the game bucket');
   assert(d.querySelector('#c-filters').textContent === 'filters · platform', 'genre reads lowercase on the chip');
   inSheet(d, '[data-shgenre="all"]').click(); await sleep(20);
   assert(rows().length === 5, 'genre back to all');
@@ -510,16 +510,16 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(d.querySelector('#c-plyear').textContent.trim() === 'year ▾', 'playlists year chip reads neutral at all');
   d.querySelector('#c-plgenre').click();
   assert(sheetEl(d) !== null, 'playlists genre chip opens the sheet');
-  inSheet(d, '[data-shplgenre="Role-playing (RPG)"]').click(); await sleep(20);
+  inSheet(d, '[data-shplg-game="Role-playing (RPG)"]').click(); await sleep(20);
   assert(sheetEl(d) === null, 'picking a playlist genre closes the sheet');
   assert(cardMeta('queue').startsWith('5 tracks'), 'genre facet keeps only tagged releases');
   assert(plCard().querySelector('.plname').textContent.includes('— Role-playing (RPG)'),
     'facet variants get their own playlist name');
-  assert(stored().plGenre === 'Role-playing (RPG)', 'facet choice persists');
+  assert(stored().plGenre.game === 'Role-playing (RPG)', 'facet choice persists per medium');
   assert(d.querySelector('#c-plgenre').textContent.trim() === 'role-playing (rpg) ▾'
     && d.querySelector('#c-plgenre').classList.contains('on'), 'genre chip shows the active facet');
   d.querySelector('#c-plgenre').click();
-  inSheet(d, '[data-shplgenre="all"]').click(); await sleep(20);
+  inSheet(d, '[data-shplg-game="all"]').click(); await sleep(20);
   plCard().querySelector('.plx').click();
   assert(errors.length === 0, 'export click stays clean');
 
@@ -658,7 +658,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   // ---------- export / import round-trip ----------
   const dump = S('JSON.stringify(buildExport())');
   const parsedDump = JSON.parse(dump);
-  assert(parsedDump.app === 'vgm-finder' && parsedDump.state.v === 3, 'export wraps the v3 state');
+  assert(parsedDump.app === 'vgm-finder' && parsedDump.state.v === 3, 'export wraps the current state');
   S(`editEntry('ratchet-clank-rift-apart', e => { e.note = 'clobbered'; e.rating = 1; })`);
   assert(S(`applyImport(${JSON.stringify(dump)})`) === true, 'import accepts its own export');
   assert(stored().entries['ratchet-clank-rift-apart'].note.includes('slaps') &&
@@ -747,7 +747,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
         ytmSearchUrl: 'https://music.youtube.com/search?q=Split+Film', notable: true,
         ytmAlbumUrl: null, art: null },
       { id: 'tv-split-show', title: 'Split Show Soundtrack', medium: 'tv', game: 'Split Show',
-        composers: ['Comp T'], date: '2026-07-01',
+        composers: ['Comp T'], date: '2026-07-01', genres: ['Drama'],
         sources: [{ name: 'tmdb', type: 'catalog', url: 'https://x/t', seenAt: '2026-07-01T10:00:00Z' }],
         ytmSearchUrl: 'https://music.youtube.com/search?q=Split+Show', notable: true,
         ytmAlbumUrl: null, art: null },
@@ -779,6 +779,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   const sStored = () => JSON.parse(sp.w.localStorage.getItem('vgm-v1'));
   assert(sp.errors.length === 0, 'split-shape data boots clean on old v2 state');
   assert(sStored().v === 3 && sStored().feedMedium === 'all', 'v2 state upgraded in place, mediums default to all');
+  assert(sStored().feedGenre.game === 'all' && sStored().feedGenre.screen === 'all', 'old single-value genre state migrates to buckets');
   assert(hits['data/tracks/split-a.json'] === undefined, 'boot fetches no tracklist files');
 
   sRow('split-a').click();
@@ -838,30 +839,42 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   // ---------- medium lives in the filters sheet ----------
   sq('#libsongs').click();
   await sleep(20);
-  assert(sp.d.querySelectorAll('#subctl button').length === 4 && sq('#subctl [data-lm]') === null,
-    'library row is sort, liked, and the mode chips; no medium control');
+  assert(sp.d.querySelectorAll('#subctl button').length === 4 && sq('#c-libfilters') !== null
+    && sq('#libliked') === null,
+    'library row stays four chips: sort, filters, and the two mode chips');
 
   sp.d.querySelector('#tabbar button[data-v="feed"]').click();
   await sleep(20);
   sq('#c-filters').click();
-  assert(sp.d.querySelectorAll('#sheetwrap [data-shmed]').length === 4,
-    'medium segment appears in the filters sheet once film data exists');
-  inSheet(sp.d, '[data-shmed="film"]').click();
+  assert(sp.d.querySelectorAll('#sheetwrap [data-shmed]').length === 3,
+    'the medium segment leads the filters sheet once film data exists');
+  assert(inSheet(sp.d, '[data-shco]') === null && inSheet(sp.d, '[data-shgenre]') === null,
+    'under all, the sheet is just the segment and the footer');
+  inSheet(sp.d, '[data-shmed="screen"]').click();
   await sleep(20);
-  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film', 'film medium shows only film rows');
+  assert(sRows().length === 2 && sRows().every(x => x.dataset.id.match(/^(film|tv)-/)),
+    'film + tv shows both screen mediums');
+  assert(sq('#c-filters').textContent === 'filters · film + tv', 'the chip names the screen medium');
+  assert(sp.d.querySelectorAll('#sheetwrap [data-shsub]').length === 3,
+    'the both/film/tv sub-segment appears under film + tv');
+  inSheet(sp.d, '[data-shsub="film"]').click();
+  await sleep(20);
+  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film', 'film narrows to film rows');
   assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).feedMedium === 'film', 'medium persists');
   assert(sq('#c-filters').textContent === 'filters · film', 'the chip names the medium');
+  assert(inSheet(sp.d, '[data-shco]') === null && sq('#sheetwrap #shconsole') === null,
+    'scope and console never render outside games');
   sp.w.eval("S.feedCo = 'indie'; renderAll()");
   assert(sq('#c-filters').textContent === 'filters · film',
-    'the chip hides game-only filters while the medium excludes games');
-  sp.w.eval("S.feedCo = 'all'; renderAll()");
-  assert(inSheet(sp.d, '[data-shco="big"]').disabled === true
-    && inSheet(sp.d, '#shconsole').disabled === true
-    && inSheet(sp.d, '.shnote').textContent === 'games only',
-    'game-only filters disable with a note when the medium excludes games');
+    'an inert stored scope never reads out on the chip');
+  assert(sRows().length === 1, 'an inert stored scope filters nothing');
   const gRows = [...sp.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
   assert(gRows.includes('Science Fiction') && !gRows.includes('Platform'),
-    'genre list scopes to the active medium');
+    'genre list scopes to the screen selection');
+  inSheet(sp.d, '[data-shgenre="Science Fiction"]').click();
+  await sleep(20);
+  assert(sq('#c-filters').textContent === 'filters · film, science fiction',
+    'the chip reads medium then genre');
   inSheet(sp.d, '#shdone').click();
   assert(sRows()[0].querySelector('.rsub').textContent === 'Split Film · Comp F',
     'film subtitle reads film title and composers');
@@ -875,12 +888,133 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   sq('#c-filters').click();
   inSheet(sp.d, '[data-shmed="game"]').click();
   await sleep(20);
-  assert(sRows().length === 5, 'games medium restores the game rows');
-  assert(inSheet(sp.d, '[data-shco="big"]').disabled === false
-    && inSheet(sp.d, '#shconsole').disabled === false, 'game filters re-enable for games');
-  inSheet(sp.d, '[data-shmed="all"]').click();
+  assert(sRows().length === 0, 'the stored indie scope wakes up with the games medium');
+  assert(sq('#c-filters').textContent === 'filters · games, indie',
+    'the chip reads medium then scope again');
+  assert(inSheet(sp.d, '[data-shco="indie"]').classList.contains('on')
+    && sq('#sheetwrap #shconsole') !== null && inSheet(sp.d, '[data-shsub]') === null,
+    'games mode shows scope and console, never the sub-segment');
+  const gameGenres = [...sp.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
+  assert(gameGenres.includes('Platform') && !gameGenres.includes('Science Fiction'),
+    'the game genre list never carries screen genres');
+  assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).feedGenre.screen === 'Science Fiction',
+    'the screen genre pick survives, stored in its own bucket');
+  inSheet(sp.d, '#shclear').click();
+  await sleep(20);
+  assert(sheetEl(sp.d) !== null, 'clear keeps the sheet open');
+  const cleared = JSON.parse(sp.w.localStorage.getItem('vgm-v1'));
+  assert(cleared.feedMedium === 'all' && cleared.feedCo === 'all'
+    && cleared.feedGenre.game === 'all' && cleared.feedGenre.screen === 'all',
+    'clear resets medium, scope, and both genre buckets');
+  assert(sRows().length === 7 && sq('#c-filters').textContent === 'filters',
+    'cleared feed shows everything and the chip reads neutral');
+  inSheet(sp.d, '#shdone').click();
+
+  // both unions the genre vocabularies; the sub-selections keep them apart
+  sq('#c-filters').click();
+  inSheet(sp.d, '[data-shmed="screen"]').click();
+  await sleep(20);
+  const unionG = [...sp.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
+  assert(unionG.includes('Science Fiction') && unionG.includes('Drama') && !unionG.includes('Platform'),
+    'both lists the union of film and tv genres, never game ones');
+  inSheet(sp.d, '[data-shsub="film"]').click();
+  await sleep(20);
+  inSheet(sp.d, '[data-shmed="screen"]').click();
+  await sleep(20);
+  assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).feedMedium === 'film',
+    'tapping the already-on film + tv segment keeps the sub-selection');
+  inSheet(sp.d, '#scrim').click();
+  sp.w.eval("clearFeedFilters()");
+  await sleep(20);
+
+  // a v3 backup with a single-value genre imports and migrates
+  const spKeep = sp.w.localStorage.getItem('vgm-v1');
+  assert(sp.w.eval(`applyImport(JSON.stringify({ v: 3, entries: {}, feedGenre: 'Platform', feedMedium: 'film' }))`) === true,
+    'a v3 backup still imports');
+  const mig = JSON.parse(sp.w.localStorage.getItem('vgm-v1'));
+  assert(mig.v === 3 && mig.feedGenre.screen === 'Platform' && mig.feedGenre.game === 'all'
+    && mig.feedMedium === 'film',
+    'a legacy genre saved under a screen medium migrates into the screen bucket');
+  assert(sp.w.eval(`applyImport(JSON.stringify({ v: 3, entries: {}, feedGenre: 'Platform', feedMedium: 'game' }))`) === true
+    && JSON.parse(sp.w.localStorage.getItem('vgm-v1')).feedGenre.game === 'Platform',
+    'a legacy genre saved under games migrates into the game bucket');
+  assert(sp.w.eval(`applyImport(JSON.stringify({ v: 3, entries: {}, plGenre: 'Drama' }))`) === true
+    && JSON.parse(sp.w.localStorage.getItem('vgm-v1')).plGenre.screen === 'Drama',
+    'the merged playlists genre reaches the bucket that can actually match it');
+  assert(sp.w.eval(`applyImport(${JSON.stringify(spKeep)})`) === true, 'prior state restored after the import test');
+  sp.w.eval("clearFeedFilters()");
+  await sleep(20);
+
+  // random under film + tv never returns a game row
+  sp.w.eval("setFeedMedium('screen')");
+  sp.w.eval('Math.random = () => 0.999');
+  sp.d.querySelector('#hrandom').click();
+  await sleep(50);
+  const expanded = sp.d.querySelector('#list .row[aria-expanded="true"]');
+  assert(expanded && /^(film|tv)-/.test(expanded.dataset.id),
+    'random under film + tv never returns a game row');
+  expanded.click();
+  sp.w.eval("setFeedMedium('all')");
+  await sleep(20);
+
+  // library filters chip drives libMedium with the same sheet
+  sp.d.querySelector('#tabbar button[data-v="library"]').click();
+  await sleep(20);
+  assert(sq('#c-libfilters') !== null && sq('#c-libfilters').textContent === 'filters',
+    'the library albums row gains its own filters chip');
+  sq('#c-libfilters').click();
+  inSheet(sp.d, '[data-shlmed="screen"]').click();
+  await sleep(20);
+  assert(sRows().length === 1 && sRows()[0].dataset.id === 'film-split-film',
+    'library film + tv narrows to logged screen rows');
+  assert(sq('#c-libfilters').textContent === 'filters · film + tv', 'the library chip names the medium');
+  inSheet(sp.d, '[data-shlsub="tv"]').click();
+  await sleep(20);
+  assert(sRows().length === 0, 'library tv narrows further; nothing logged there yet');
+  inSheet(sp.d, '#shliked').click();
+  await sleep(20);
+  assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).libLiked === true
+    && sq('#c-libfilters').textContent === 'filters · tv, liked',
+    'the liked toggle lives in the sheet and reads out on the chip');
+  inSheet(sp.d, '#shclear').click();
+  await sleep(20);
+  const lcl = JSON.parse(sp.w.localStorage.getItem('vgm-v1'));
+  assert(lcl.libMedium === 'all' && lcl.libLiked === false && sheetEl(sp.d) !== null,
+    'library clear resets medium and liked, and stays open');
+  inSheet(sp.d, '#shdone').click();
+
+  // the medium filter follows into the liked-songs view
+  sp.w.eval("setLibMedium('game')");
+  sq('#libsongs').click();
+  await sleep(60);
+  assert(sq('#c-libfilters').textContent === 'filters · games', 'songs view keeps the medium chip');
+  const songIds = [...sp.d.querySelectorAll('#list .row.song')].map(x => x.dataset.id);
+  assert(songIds.length && songIds.every(id => !/^(film|tv)-/.test(id)),
+    'liked songs obey the library medium filter');
+  sq('#c-libfilters').click();
+  assert(inSheet(sp.d, '#shliked') === null, 'the liked toggle is omitted where every row is already liked');
+  inSheet(sp.d, '#shclear').click();
   await sleep(20);
   inSheet(sp.d, '#shdone').click();
+  sq('#libsongs').click();
+  await sleep(20);
+  sq('#libpl').click();
+  await sleep(20);
+  sq('#c-plgenre').click();
+  assert(inSheet(sp.d, '[data-shplg-game]') !== null && inSheet(sp.d, '[data-shplg-screen]') !== null,
+    'the playlists genre sheet offers both medium groups');
+  inSheet(sp.d, '[data-shplg-screen="Science Fiction"]').click();
+  await sleep(20);
+  assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).plGenre.screen === 'Science Fiction'
+    && sq('#c-plgenre').textContent.trim() === 'science fiction ▾',
+    'a screen genre facet lands in its own bucket and on the chip');
+  sq('#c-plgenre').click();
+  inSheet(sp.d, '[data-shplg-screen="all"]').click();
+  await sleep(20);
+  sq('#libpl').click();
+  await sleep(20);
+  sp.d.querySelector('#tabbar button[data-v="feed"]').click();
+  await sleep(20);
 
   // ---------- most played sort ----------
   sq('#c-sort').click();

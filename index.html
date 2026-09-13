@@ -282,7 +282,7 @@ const STATUSES = ['unsorted', 'queued', 'listened', 'hidden'];
 const LIB_SORTS = ['listenedOn', 'rating', 'date'];
 const LIB_VIEWS = ['albums', 'songs', 'playlists'];
 const FEED_SORTS = ['date', 'oldest', 'az', 'added', 'plays'];
-const MEDIUMS = ['all', 'game', 'film', 'tv'];
+const MEDIUMS = ['all', 'game', 'screen', 'film', 'tv'];  // screen = film + tv together
 let R = { updatedAt: null, releases: [] };   // shared data from the collector; never written here
 let LOADSTATE = 'loading';                    // loading | ok | empty | error
 let LOADERR = '';
@@ -316,6 +316,13 @@ const BIG_STUDIOS = ['nintendo','sony','playstation','capcom','square enix','squ
   'fromsoftware','atlus','koei tecmo','naughty dog','insomniac','santa monica','guerrilla','bungie',
   'id software','respawn','infinity ward','treyarch'];
 function mediumOf(r){ return r.medium || 'game'; }
+function mediumMatches(sel, r){
+  const m = mediumOf(r);
+  if(sel === 'all') return true;
+  if(sel === 'screen') return m === 'film' || m === 'tv';
+  return m === sel;
+}
+function screenish(sel){ return sel === 'screen' || sel === 'film' || sel === 'tv'; }
 function coTier(r){
   if(mediumOf(r) !== 'game') return null;  // Sony Pictures is not a game studio
   if(!r.company) return null;
@@ -327,7 +334,27 @@ function blank(){ return { status:'unsorted', rating:null, liked:false, note:'',
 function isBlank(e){ return e.status === 'unsorted' && e.rating == null && !e.liked && !e.note && !e.listenedOn && !(e.likedTracks || []).length; }
 function validRating(r){ return typeof r === 'number' && r >= 0.5 && r <= 5 && Math.round(r * 2) === r * 2; }
 function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s); }
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:'all', feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:'all', showHidden:false, cpls:[], cplLast:null }; }
+/* The version stays 3 on purpose. Genre picks are now keyed by medium,
+   but the shape is backward tolerable: a v3 build reads the object, fails
+   its typeof string check, and falls back to "all" without losing a single
+   diary entry. Bumping would make a briefly-cached v3 page reject this
+   state and overwrite it with a blank one, which costs the queue, the
+   library, and every custom playlist. */
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null }; }
+function genreState(v, hint){
+  // hint routes a legacy single value into the bucket it actually came
+  // from: the old feed sheet scoped its list by medium, the old playlists
+  // sheet merged both vocabularies, so that one lands in both buckets
+  if(v && typeof v === 'object' && !Array.isArray(v)){
+    return { game: typeof v.game === 'string' && v.game ? v.game : 'all',
+             screen: typeof v.screen === 'string' && v.screen ? v.screen : 'all' };
+  }
+  const one = typeof v === 'string' && v ? v : 'all';
+  if(one === 'all') return { game: 'all', screen: 'all' };
+  if(hint === 'screen') return { game: 'all', screen: one };
+  if(hint === 'both') return { game: one, screen: one };
+  return { game: one, screen: 'all' };
+}
 
 function migrateV1(d){
   // one-time v1 -> v2: starred becomes liked, listened becomes a dateless
@@ -345,21 +372,21 @@ function migrateV1(d){
 function validateState(d){
   if(!d || typeof d !== 'object') return null;
   if(d.v === 1) return migrateV1(d);
-  if(d.v !== 2 && d.v !== 3) return null;  // v2 predates medium chips: fields below default to all
+  if(d.v !== 2 && d.v !== 3) return null;  // v2 predates the medium fields: defaults fill in
   const s = fresh();
   s.lastSeen = typeof d.lastSeen === 'number' ? d.lastSeen : 0;
   s.view = VIEWS.includes(d.view) ? d.view : 'feed';
   s.feedSort = FEED_SORTS.includes(d.feedSort) ? d.feedSort : 'date';
   s.feedCo = ['all', 'big', 'indie'].includes(d.feedCo) ? d.feedCo : 'all';
   s.feedConsole = d.feedConsole === true;
-  s.feedGenre = typeof d.feedGenre === 'string' && d.feedGenre ? d.feedGenre : 'all';
   s.feedMedium = MEDIUMS.includes(d.feedMedium) ? d.feedMedium : 'all';
+  s.feedGenre = genreState(d.feedGenre, screenish(s.feedMedium) ? 'screen' : 'game');
   s.libMedium = MEDIUMS.includes(d.libMedium) ? d.libMedium : 'all';
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
   s.libView = LIB_VIEWS.includes(d.libView) ? d.libView : 'albums';
   s.plYear = typeof d.plYear === 'string' && /^\d{4}$/.test(d.plYear) ? d.plYear : 'all';
-  s.plGenre = typeof d.plGenre === 'string' && d.plGenre ? d.plGenre : 'all';
+  s.plGenre = genreState(d.plGenre, 'both');  // the old playlists list merged both vocabularies
   s.showHidden = d.showHidden === true;
   const src = (d.entries && typeof d.entries === 'object' && !Array.isArray(d.entries)) ? d.entries : {};
   for(const id in src){
@@ -434,13 +461,20 @@ function editEntry(id, fn){
 }
 function setView(v){ if(VIEWS.includes(v)){ S.view = v; CSHEET = null; save(); ensureViewTracks(); renderAll(); } }
 function setFeedMedium(m){ if(MEDIUMS.includes(m)){ S.feedMedium = m; save(); renderAll(); } }
+function setLibMedium(m){ if(MEDIUMS.includes(m)){ S.libMedium = m; save(); renderAll(); } }
 function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
 function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
 function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(); }
-function setFeedGenre(g){ S.feedGenre = g || 'all'; save(); renderAll(); }
+function setFeedGenre(bucket, g){
+  if(bucket !== 'game' && bucket !== 'screen') return;
+  S.feedGenre[bucket] = g || 'all';
+  save(); renderAll();
+}
 function clearFeedFilters(){
-  S.feedCo = 'all'; S.feedConsole = false; S.feedGenre = 'all'; S.feedMedium = 'all';
+  S.feedCo = 'all'; S.feedConsole = false;
+  S.feedGenre = { game: 'all', screen: 'all' };
+  S.feedMedium = 'all';
   save(); renderAll();
 }
 function randomListen(){
@@ -484,7 +518,11 @@ function toggleTrackLike(id, title){ editEntry(id, e => {
 }); }
 function setLibView(v){ if(LIB_VIEWS.includes(v)){ S.libView = v; CSHEET = null; save(); ensureViewTracks(); renderAll(); } }
 function setPlYear(y){ S.plYear = /^\d{4}$/.test(y) ? y : 'all'; save(); renderAll(); }
-function setPlGenre(g){ S.plGenre = g || 'all'; save(); renderAll(); }
+function setPlGenre(bucket, g){
+  if(bucket !== 'game' && bucket !== 'screen') return;
+  S.plGenre[bucket] = g || 'all';
+  save(); renderAll();
+}
 function toggleShowHidden(){ S.showHidden = !S.showHidden; save(); renderAll(); }
 function markVisit(){ S.lastSeen = Date.now(); save(); }
 function setQuery(q){ Q = q; renderAll(); }
@@ -598,15 +636,25 @@ function matches(r, q){
   return fold(hay).includes(fold(q));
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
-function gamesShown(which){ const m = S[which]; return m === 'all' || m === 'game'; }
+function feedMediumEff(){
+  // a games-only catalog behaves as if games were selected, whatever a
+  // previous session stored, so no orphan screen controls can render
+  return multiMedium() ? S.feedMedium : 'game';
+}
+function libMediumEff(){ return multiMedium() ? S.libMedium : 'all'; }
 function feedRows(){
   let rows = sorted().filter(r => E(r.id).status !== 'hidden');
-  if(S.feedMedium !== 'all') rows = rows.filter(r => mediumOf(r) === S.feedMedium);
-  if(gamesShown('feedMedium')){  // studio and console filters are game concepts; they idle otherwise
+  const m = feedMediumEff();
+  if(m !== 'all') rows = rows.filter(r => mediumMatches(m, r));
+  if(m === 'game'){
+    // scope, console, and the game genre live and die with the games medium
     if(S.feedCo !== 'all') rows = rows.filter(r => coTier(r) === S.feedCo);
     if(S.feedConsole) rows = rows.filter(r => r.console === true);
+    if(S.feedGenre.game !== 'all') rows = rows.filter(r => (r.genres || []).includes(S.feedGenre.game));
+  } else if(screenish(m) && S.feedGenre.screen !== 'all'){
+    rows = rows.filter(r => (r.genres || []).includes(S.feedGenre.screen));
   }
-  if(S.feedGenre !== 'all') rows = rows.filter(r => (r.genres || []).includes(S.feedGenre));
+  // under all, only search and the hidden state apply
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
   else if(S.feedSort === 'az')
@@ -623,7 +671,8 @@ function queueRows(){
 }
 function libraryRows(){
   let rows = sorted().filter(r => E(r.id).status === 'listened');
-  if(S.libMedium !== 'all') rows = rows.filter(r => mediumOf(r) === S.libMedium);
+  const lm = libMediumEff();
+  if(lm !== 'all') rows = rows.filter(r => mediumMatches(lm, r));
   if(S.libLiked) rows = rows.filter(r => E(r.id).liked);
   if(S.libSort === 'rating')
     rows.sort((a, b) => ((E(b.id).rating ?? -1) - (E(a.id).rating ?? -1)) || dcmp(E(b.id).listenedOn, E(a.id).listenedOn));
@@ -634,7 +683,9 @@ function libraryRows(){
 function hiddenRows(){ return sorted().filter(r => E(r.id).status === 'hidden'); }
 function likedSongRows(){
   const out = [];
+  const lm = libMediumEff();
   for(const r of sorted()){
+    if(lm !== 'all' && !mediumMatches(lm, r)) continue;  // the library filter owns this view too
     const list = (S.entries[r.id] || {}).likedTracks || [];
     for(const title of list){
       // rematch by folded title so refetched tracklists keep their videoIds
@@ -651,7 +702,15 @@ function songMatches(s, q){ return !q || fold(s.t.title).includes(fold(q)) || ma
 function plFacetRows(rows){
   let out = rows;
   if(S.plYear !== 'all') out = out.filter(r => (r.date || '').slice(0, 4) === S.plYear);
-  if(S.plGenre !== 'all') out = out.filter(r => (r.genres || []).includes(S.plGenre));
+  // Genre facets are exclusive, so the playlist's contents match the name
+  // it is stamped with: once any bucket is set, only rows from a medium
+  // with a set-and-matching pick survive.
+  if(S.plGenre.game !== 'all' || S.plGenre.screen !== 'all'){
+    out = out.filter(r => {
+      const g = mediumOf(r) === 'game' ? S.plGenre.game : S.plGenre.screen;
+      return g !== 'all' && (r.genres || []).includes(g);
+    });
+  }
   return out;
 }
 function plTrack(r, t){
@@ -683,7 +742,9 @@ function plRated(){
   return out;
 }
 function playlistDefs(){
-  const facet = [S.plYear !== 'all' ? S.plYear : '', S.plGenre !== 'all' ? S.plGenre : ''].filter(Boolean).join(' ');
+  const facet = [S.plYear !== 'all' ? S.plYear : '',
+                 S.plGenre.game !== 'all' ? S.plGenre.game : '',
+                 S.plGenre.screen !== 'all' ? S.plGenre.screen : ''].filter(Boolean).join(' ');
   const suff = facet ? ' — ' + facet : '';
   return [
     { key: 'liked', name: 'vgm-finder · Liked Songs' + suff, blurb: 'every ♥ track', tracks: plLiked() },
@@ -890,17 +951,27 @@ function renderTabs(){
 function multiMedium(){ return R.releases.some(r => mediumOf(r) !== 'game'); }
 const SORT_NAMES = { date: 'newest', oldest: 'oldest', az: 'a–z', added: 'added', plays: 'most played' };
 const LIB_SORT_NAMES = { listenedOn: 'heard on', rating: 'rating', date: 'released' };
-const MEDIUM_NAMES = { all: 'all', game: 'games', film: 'film', tv: 'tv' };
+const MEDIUM_NAMES = { all: 'all', game: 'games', screen: 'film + tv', film: 'film', tv: 'tv' };
 function feedFilterBits(){
-  // chip label order is fixed: company tier, console, genre, medium; the
-  // game-only pair only reads out while the medium actually applies it
+  // label order per the addendum: medium, scope, console, genre;
+  // inert selections never read out
   const bits = [];
-  if(gamesShown('feedMedium')){
+  if(S.feedMedium !== 'all') bits.push(MEDIUM_NAMES[S.feedMedium]);
+  const m = feedMediumEff();
+  if(m === 'game'){
     if(S.feedCo !== 'all') bits.push(S.feedCo === 'big' ? 'big studios' : 'indie');
     if(S.feedConsole) bits.push('console');
+    if(S.feedGenre.game !== 'all') bits.push(S.feedGenre.game.toLowerCase());
+  } else if(screenish(m) && S.feedGenre.screen !== 'all'){
+    bits.push(S.feedGenre.screen.toLowerCase());
   }
-  if(S.feedGenre !== 'all') bits.push(S.feedGenre.toLowerCase());
-  if(S.feedMedium !== 'all') bits.push(MEDIUM_NAMES[S.feedMedium]);
+  return bits;
+}
+function libFilterBits(){
+  const bits = [];
+  const lm = libMediumEff();
+  if(lm !== 'all') bits.push(MEDIUM_NAMES[lm]);
+  if(S.libLiked) bits.push('liked');
   return bits;
 }
 function renderControls(){
@@ -916,32 +987,50 @@ function renderControls(){
     return;
   }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
+  const lbits = libFilterBits();
+  // Which control the row carries depends on the catalog, never on state,
+  // so it cannot swap under a finger. Games only: the ♥ toggle keeps its
+  // one-tap chip. Mixed catalog: medium and ♥ share one filters sheet,
+  // because a fifth chip does not fit 390px.
+  const libFiltersChip = multiMedium()
+    ? `<button id="c-libfilters" class="fchip${lbits.length ? ' on' : ''}" aria-haspopup="dialog">` +
+      `${esc(lbits.length ? 'filters · ' + lbits.join(', ') : 'filters')}</button>`
+    : `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>`;
   const modeChips =
     `<button id="libsongs" class="${S.libView === 'songs' ? 'on' : ''}" aria-pressed="${S.libView === 'songs'}">♥ songs</button>` +
     `<button id="libpl" class="${S.libView === 'playlists' ? 'on' : ''}" aria-pressed="${S.libView === 'playlists'}">playlists</button>`;
-  if(S.libView === 'songs'){ el.innerHTML = modeChips; return; }
+  if(S.libView === 'songs'){
+    // liked-only is meaningless here (every row is a liked track), but the
+    // medium filter still applies, so the chip stays when there is a medium
+    el.innerHTML = (multiMedium()
+      ? `<button id="c-libfilters" class="fchip${libMediumEff() !== 'all' ? ' on' : ''}" aria-haspopup="dialog">` +
+        `${esc(libMediumEff() !== 'all' ? 'filters · ' + MEDIUM_NAMES[libMediumEff()] : 'filters')}</button>`
+      : '') + modeChips;
+    return;
+  }
   if(S.libView === 'playlists'){
+    const gbits = [S.plGenre.game !== 'all' ? S.plGenre.game.toLowerCase() : '',
+                   S.plGenre.screen !== 'all' ? S.plGenre.screen.toLowerCase() : ''].filter(Boolean);
     el.innerHTML = modeChips +
       `<button id="c-plyear" class="${S.plYear !== 'all' ? 'on' : ''}" aria-haspopup="dialog">` +
         `${esc(S.plYear === 'all' ? 'year' : S.plYear)} ▾</button>` +
-      `<button id="c-plgenre" class="fchip${S.plGenre !== 'all' ? ' on' : ''}" aria-haspopup="dialog">` +
-        `${esc(S.plGenre === 'all' ? 'genre' : S.plGenre.toLowerCase())} ▾</button>`;
+      `<button id="c-plgenre" class="fchip${gbits.length ? ' on' : ''}" aria-haspopup="dialog">` +
+        `${esc(gbits.length ? gbits.join(', ') : 'genre')} ▾</button>`;
     return;
   }
   el.innerHTML =
     `<button id="c-libsort" aria-haspopup="dialog">${esc(LIB_SORT_NAMES[S.libSort])} ▾</button>` +
-    `<button id="libliked" class="${S.libLiked ? 'on' : ''}" aria-pressed="${S.libLiked}">♥ only</button>` +
-    modeChips;
+    libFiltersChip + modeChips;
 }
 
 const SRC_LABEL = { igdb: 'catalog', ytm: 'catalog', 'tmdb-film': 'catalog', 'tmdb-tv': 'catalog' };  // site names read fine; api names get friendly labels
 
 function genreCounts(medium, sel){
-  // counts come from the active medium's rows, so IGDB and TMDb genre
-  // vocabularies never mix in one list
+  // counts come from the selected medium's rows only, so IGDB and TMDb
+  // genre vocabularies never mix in one list; screen unions film and tv
   const counts = {};
   for(const r of R.releases){
-    if(medium && medium !== 'all' && mediumOf(r) !== medium) continue;
+    if(!mediumMatches(medium, r)) continue;
     for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
   }
   const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 24);
@@ -1194,7 +1283,8 @@ function emptyHtml(){
 function pageKey(){
   // showHidden stays out on purpose: revealing the hidden shelf must not
   // reset paging or throw the scroll position back to the top
-  return [S.view, S.libView, S.feedSort, S.feedCo, S.feedConsole, S.feedGenre, S.feedMedium,
+  return [S.view, S.libView, S.feedSort, S.feedCo, S.feedConsole,
+          S.feedGenre.game, S.feedGenre.screen, S.feedMedium,
           S.libSort, S.libLiked, S.libMedium, Q.trim()].join('\n');
 }
 function pageSlice(list){
@@ -1349,35 +1439,75 @@ function csheetHtml(){
       plYearList().map(y => shPickRow('shplyear', y, y, S.plYear === y ? '✓' : '')).join('');
   } else if(CSHEET === 'plgenre'){
     label = 'Genre';
-    body = shPickRow('shplgenre', 'all', 'all', S.plGenre === 'all' ? '✓' : '') +
-      genreCounts('all', S.plGenre).map(([g]) =>
-        shPickRow('shplgenre', g, g.toLowerCase(), S.plGenre === g ? '✓' : '')).join('');
-  } else {  // filters
+    const group = (bucket, name, medium) => {
+      const sel = S.plGenre[bucket];
+      const rows = genreCounts(medium, sel);
+      if(!rows.length) return '';
+      return `<div class="slab">${name}</div>` +
+        shPickRow('shplg-' + bucket, 'all', 'all', sel === 'all' ? '✓' : '') +
+        rows.map(([g, n]) =>
+          shPickRow('shplg-' + bucket, g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
+    };
+    body = group('game', 'Game genres', 'game') +
+           (multiMedium() ? group('screen', 'Film + TV genres', 'screen') : '');
+  } else if(CSHEET === 'libfilters'){
     label = 'Filters';
-    const gamey = gamesShown('feedMedium');
-    const dis = gamey ? '' : ' disabled';
-    const seg = (attr, val, name, on, d) =>
-      `<button data-${attr}="${val}"${d || ''} class="${on ? 'on' : ''}">${name}</button>`;
-    body =
-      `<div class="slab">Scope</div>` +
-      `<div class="shseg">` +
-        seg('shco', 'all', 'all', S.feedCo === 'all', dis) +
-        seg('shco', 'big', 'big studios', S.feedCo === 'big', dis) +
-        seg('shco', 'indie', 'indie', S.feedCo === 'indie', dis) + `</div>` +
-      `<button class="shrow" id="shconsole"${dis} aria-pressed="${S.feedConsole}">` +
-        `<span class="shl">console</span><span class="shr">${S.feedConsole ? '✓' : ''}</span></button>` +
-      (gamey ? '' : `<div class="shnote">games only</div>`) +
-      `<div class="slab">Genre</div>` +
-      shPickRow('shgenre', 'all', 'all', S.feedGenre === 'all' ? '✓' : '') +
-      genreCounts(S.feedMedium, S.feedGenre).map(([g, n]) =>
-        shPickRow('shgenre', g, g.toLowerCase(), `${n}${S.feedGenre === g ? ' ✓' : ''}`)).join('') +
-      (multiMedium()
+    const seg = (attr, val, name, on) =>
+      `<button data-${attr}="${val}" class="${on ? 'on' : ''}">${name}</button>`;
+    const lm = libMediumEff();
+    body = (multiMedium()
         ? `<div class="slab">Medium</div><div class="shseg">` +
-          seg('shmed', 'all', 'all', S.feedMedium === 'all') +
-          seg('shmed', 'game', 'games', S.feedMedium === 'game') +
-          seg('shmed', 'film', 'film', S.feedMedium === 'film') +
-          seg('shmed', 'tv', 'tv', S.feedMedium === 'tv') + `</div>`
-        : '');
+          seg('shlmed', 'all', 'all', lm === 'all') +
+          seg('shlmed', 'game', 'games', lm === 'game') +
+          seg('shlmed', 'screen', 'film + tv', screenish(lm)) + `</div>` +
+          (screenish(lm)
+            ? `<div class="shseg">` +
+              seg('shlsub', 'screen', 'both', lm === 'screen') +
+              seg('shlsub', 'film', 'film', lm === 'film') +
+              seg('shlsub', 'tv', 'tv', lm === 'tv') + `</div>`
+            : '')
+        : '') +
+      (S.libView === 'songs' ? ''  // every row here is already a liked track
+        : `<div class="slab">Show</div>` +
+          `<button class="shrow" id="shliked" aria-pressed="${S.libLiked}">` +
+          `<span class="shl">♥ only</span><span class="shr">${S.libLiked ? '✓' : ''}</span></button>`);
+    footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
+  } else {  // feed filters: medium first, the rest follows the selection
+    label = 'Filters';
+    const seg = (attr, val, name, on) =>
+      `<button data-${attr}="${val}" class="${on ? 'on' : ''}">${name}</button>`;
+    const mode = feedMediumEff();
+    body = multiMedium()
+      ? `<div class="slab">Medium</div><div class="shseg">` +
+        seg('shmed', 'all', 'all', mode === 'all') +
+        seg('shmed', 'game', 'games', mode === 'game') +
+        seg('shmed', 'screen', 'film + tv', screenish(mode)) + `</div>`
+      : '';
+    if(mode === 'game'){
+      body +=
+        `<div class="slab">Scope</div>` +
+        `<div class="shseg">` +
+          seg('shco', 'all', 'all', S.feedCo === 'all') +
+          seg('shco', 'big', 'big studios', S.feedCo === 'big') +
+          seg('shco', 'indie', 'indie', S.feedCo === 'indie') + `</div>` +
+        `<button class="shrow" id="shconsole" aria-pressed="${S.feedConsole}">` +
+          `<span class="shl">console</span><span class="shr">${S.feedConsole ? '✓' : ''}</span></button>` +
+        `<div class="slab">Genre</div>` +
+        shPickRow('shgenre', 'all', 'all', S.feedGenre.game === 'all' ? '✓' : '') +
+        genreCounts('game', S.feedGenre.game).map(([g, n]) =>
+          shPickRow('shgenre', g, g.toLowerCase(), `${n}${S.feedGenre.game === g ? ' ✓' : ''}`)).join('');
+    } else if(screenish(mode)){
+      body +=
+        `<div class="shseg">` +
+          seg('shsub', 'screen', 'both', mode === 'screen') +
+          seg('shsub', 'film', 'film', mode === 'film') +
+          seg('shsub', 'tv', 'tv', mode === 'tv') + `</div>` +
+        `<div class="slab">Genre</div>` +
+        shPickRow('shgenre', 'all', 'all', S.feedGenre.screen === 'all' ? '✓' : '') +
+        genreCounts(mode, S.feedGenre.screen).map(([g, n]) =>
+          shPickRow('shgenre', g, g.toLowerCase(), `${n}${S.feedGenre.screen === g ? ' ✓' : ''}`)).join('');
+    }
+    // mode all: the segment and the footer are the whole sheet
     footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
   }
   return `<div id="scrim"></div>` +
@@ -1516,7 +1646,8 @@ document.querySelector('#tabbar .trow').addEventListener('click', e => {
 });
 document.getElementById('subctl').addEventListener('click', e => {
   const open = [['#c-sort', 'feedsort'], ['#c-filters', 'filters'], ['#c-year', 'year'],
-                ['#c-libsort', 'libsort'], ['#c-plyear', 'plyear'], ['#c-plgenre', 'plgenre']]
+                ['#c-libsort', 'libsort'], ['#c-libfilters', 'libfilters'],
+                ['#c-plyear', 'plyear'], ['#c-plgenre', 'plgenre']]
     .find(([sel]) => e.target.closest(sel));
   if(open){ CSHEET = open[1]; renderSheet(); return; }
   if(e.target.closest('#libliked')){ toggleLibLiked(); return; }
@@ -1563,14 +1694,35 @@ sheetwrap.addEventListener('click', e => {
     if(co){ setFeedCo(co.dataset.shco); return; }        // filters apply live; the sheet stays open
     if(e.target.closest('#shconsole')){ toggleFeedConsole(); return; }
     const g = e.target.closest('[data-shgenre]');
-    if(g){ setFeedGenre(g.dataset.shgenre); return; }
+    if(g){ setFeedGenre(feedMediumEff() === 'game' ? 'game' : 'screen', g.dataset.shgenre); return; }
     const m = e.target.closest('[data-shmed]');
-    if(m){ setFeedMedium(m.dataset.shmed); return; }
+    if(m){
+      // tapping the already-on film + tv segment keeps the sub-selection
+      if(!(m.dataset.shmed === 'screen' && screenish(S.feedMedium))) setFeedMedium(m.dataset.shmed);
+      return;
+    }
+    const sub = e.target.closest('[data-shsub]');
+    if(sub){ setFeedMedium(sub.dataset.shsub); return; }
+    const lm = e.target.closest('[data-shlmed]');
+    if(lm){
+      if(!(lm.dataset.shlmed === 'screen' && screenish(S.libMedium))) setLibMedium(lm.dataset.shlmed);
+      return;
+    }
+    const lsub = e.target.closest('[data-shlsub]');
+    if(lsub){ setLibMedium(lsub.dataset.shlsub); return; }
+    if(e.target.closest('#shliked')){ toggleLibLiked(); return; }
     const py = e.target.closest('[data-shplyear]');
     if(py){ CSHEET = null; setPlYear(py.dataset.shplyear); return; }
-    const pg = e.target.closest('[data-shplgenre]');
-    if(pg){ CSHEET = null; setPlGenre(pg.dataset.shplgenre); return; }
-    if(e.target.closest('#shclear')){ clearFeedFilters(); return; }
+    const pgg = e.target.closest('[data-shplg-game]');
+    if(pgg){ CSHEET = null; setPlGenre('game', pgg.dataset.shplgGame); return; }
+    const pgs = e.target.closest('[data-shplg-screen]');
+    if(pgs){ CSHEET = null; setPlGenre('screen', pgs.dataset.shplgScreen); return; }
+    if(e.target.closest('#shclear')){
+      if(CSHEET === 'libfilters'){
+        S.libMedium = 'all'; S.libLiked = false; save(); renderAll();
+      } else clearFeedFilters();
+      return;
+    }
     return;
   }
   if(CPICK){
