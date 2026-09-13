@@ -5,11 +5,14 @@
             at the current vote bars, then sweeps for anything the walk
             missed (a title that crossed a page boundary while it ran, a row
             the daily run added below the bars), searches YouTube Music
-            exactly as the collector does, and writes the accepted
-            candidates to one shard file per run. Last, every album a row
+            exactly as the collector does, and writes the album results,
+            the album pages read and the accepted candidates to one shard
+            file per run. Last, every album a row
             wears that its own title turned away on a year condition is
             re-read from the album page and judged again. No row changes.
-  resolve   One offline pass over every shard. Hands albums out across the
+  resolve   One offline pass over every shard. Judges every title again
+            from its stored results under the current matcher, then hands
+            albums out across the
             whole catalog at once, with game-owned albums reserved, compares
             the outcome with every film and TV row, and writes plan.json plus
             the review: corrections, additions, orphans, unverified rows, and
@@ -47,6 +50,7 @@ SRC = {"film": backfill.TMDB_SRC_FILM, "tv": backfill.TMDB_SRC_TV}
 _KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded",
          "weak", "season", "composers", "rank", "artists", "plays", "trackStats", "yearFrom")
 _REAL_KEYS = ("credited composer", "exact title", "fewer extra words", "closer year")
+YTM_ALBUM = "https://music.youtube.com/browse/"
 
 
 # ---------------- state and shards ----------------
@@ -133,14 +137,66 @@ def evaluate_title(medium, entry, worn, resolve, album_fn):
     if not info["name"] or not info["date"]:
         rec["skipped"] = "no title or date on TMDb"
         return rec
-    albums = {}
+    rec["albums"] = {}
+    rec["results"] = [_trim_result(r) for r in collect.screen_search(resolve, info)
+                      if r.get("resultType") == "album" and r.get("browseId")]
+    return judge_record(rec, worn, _album_store(rec, album_fn))
 
-    def album_once(browse_id):
-        if browse_id not in albums:
-            albums[browse_id] = album_fn(browse_id)
-        return albums[browse_id]
 
-    judged = collect.screen_classify(collect.screen_search(resolve, info), info, album_once)
+def _trim_result(r):
+    """A search result as screen_classify reads it, and nothing more."""
+    thumbs = sorted((t for t in r.get("thumbnails") or [] if t.get("url")), key=lambda t: t.get("width") or 0)
+    return {"resultType": "album", "browseId": r["browseId"], "title": r.get("title") or "",
+            "year": r.get("year"), "thumbnails": thumbs[-1:],
+            "artists": [{"name": a["name"]} for a in r.get("artists") or [] if a.get("name")]}
+
+
+def _trim_album(album):
+    """An album page as the plays check, the year fill and track_stats read it."""
+    if not album:
+        return None
+    return {"title": album.get("title"), "year": album.get("year"),
+            "artists": [{"name": a["name"]} for a in album.get("artists") or [] if a.get("name")],
+            "tracks": [{"title": t.get("title"), "views": t.get("views"),
+                        "artists": [{"name": a["name"]} for a in t.get("artists") or [] if a.get("name")]}
+                       for t in album.get("tracks") or []]}
+
+
+def _album_store(rec, album_fn):
+    """Album pages read for a title, fetched once and kept in its record so
+    resolve can judge the title again without YouTube Music. With no fetch
+    function an album never read raises, so a later judgment reports it
+    unknown rather than empty."""
+    store = rec.setdefault("albums", {})
+
+    def get(browse_id):
+        if browse_id not in store:
+            if album_fn is None:
+                raise KeyError(browse_id)
+            store[browse_id] = _trim_album(album_fn(browse_id))
+        return store[browse_id]
+    return get
+
+
+def judge_record(rec, worn, album_fn):
+    """A title's stored search results judged under the current matcher: the
+    accepted candidates, song-compilation evidence, and the verdict on every
+    album a row wears. Evaluate runs it on a fresh search and resolve runs
+    it again on the stored one, so a matcher fix needs no second walk. An
+    album whose year the search got wrong (yearVerified) is judged with the
+    year on its album page."""
+    medium = rec["medium"]
+    info = {k: rec.get(k) for k in ("medium", "name", "original", "years", "composers", "aliases")}
+    verified = rec.get("yearVerified") or []
+    results = []
+    for r in rec.get("results") or []:
+        if YTM_ALBUM + r["browseId"] in verified:
+            try:
+                r = dict(r, year=(album_fn(r["browseId"]) or {}).get("year") or r.get("year"))
+            except Exception:
+                pass
+        results.append(r)
+    judged = collect.screen_classify(results, info, album_fn)
     # song-compilation evidence: where no candidate for a slot credits the
     # composer, read the top candidate's tracklist once. YouTube Music
     # credits most studio scores to Various Artists at album level, so the
@@ -154,10 +210,11 @@ def evaluate_title(medium, entry, worn, resolve, album_fn):
             continue
         top = min(group, key=collect._rank_key)
         try:
-            top["trackStats"] = track_stats(album_once(top["url"].rsplit("/", 1)[1]),
-                                            info["composers"] + info["aliases"])
+            top["trackStats"] = track_stats(album_fn(top["url"].rsplit("/", 1)[1]),
+                                            (info["composers"] or []) + (info["aliases"] or []))
         except Exception:
             pass  # no stats: the track-based songs call stays unknown
+    rec["accepted"], rec["seen"] = [], {}
     for c in judged:
         if c["accepted"]:
             rec["accepted"].append({k: c.get(k) for k in _KEEP})
@@ -171,6 +228,11 @@ def track_stats(album, names):
     distinct named artists, and tracks a credited composer performs or is
     named on. Classical labels put the composer in the title and the
     orchestra in the artists: "Zimmer: Dear Clarice" (Hannibal)."""
+    if not names:
+        # TMDb names no composer for most shows: the album's own credited
+        # artists stand in (Fringe's Chris Tilton), never Various Artists
+        names = [a.get("name") for a in (album or {}).get("artists") or []
+                 if a.get("name") and a["name"].lower() not in ("various artists", "various")]
     named = composer = 0
     distinct = set()
     tracks = (album or {}).get("tracks") or []
@@ -315,12 +377,19 @@ def evaluate(releases, state, folder=REWALK_DIR, resolve=None, album_fn=None, ca
     return records, stopped
 
 
+def _worn(releases):
+    return {r["ytmAlbumUrl"] for r in releases
+            if r.get("medium") in ("film", "tv") and r.get("ytmAlbumUrl")}
+
+
 def verify_worn_years(releases, evaluations, album_fn):
     """A row is never retired or corrected on a year one search got wrong.
     Every album a row wears that its own title turned away on a condition
-    involving the year is read from its album page and judged again.
-    Returns the updated title records; a later shard record supersedes
-    the earlier one, so nothing already written is edited."""
+    involving the year is read from its album page, marked yearVerified,
+    and the title judged again with the page's year. Returns the updated
+    title records; a later shard record supersedes the earlier one, so
+    nothing already written is edited."""
+    worn = _worn(releases)
     out = {}
     for r in releases:
         url = r.get("ytmAlbumUrl")
@@ -330,27 +399,29 @@ def verify_worn_years(releases, evaluations, album_fn):
         key = (slot[0], slot[1]) if slot else None
         rec = out.get(key) or evaluations.get(key)
         verdict = rec["seen"].get(url) if rec else None
-        if not isinstance(verdict, str) or "year" not in verdict:
+        if (not isinstance(verdict, str) or "year" not in verdict or "results" not in rec
+                or url in (rec.get("yearVerified") or [])):
             continue
-        browse_id = url.rsplit("/", 1)[1]
-        album = album_fn(browse_id) or {}
-        result = {"resultType": "album", "browseId": browse_id,
-                  "title": album.get("title") or r.get("albumTitle") or "",
-                  "year": album.get("year"), "artists": album.get("artists") or [],
-                  "thumbnails": album.get("thumbnails") or []}
-        info = {k: rec.get(k) for k in ("medium", "name", "original", "years", "composers", "aliases")}
-        c = collect.screen_classify([result], info, lambda b: album if b == browse_id else album_fn(b))[0]
-        rec = dict(rec, seen=dict(rec["seen"]), accepted=list(rec["accepted"]),
-                   yearVerified=list(rec.get("yearVerified", [])) + [url])
-        rec["seen"][url] = "accepted" if c["accepted"] else c["verdict"]
-        if c["accepted"] and not any(x["url"] == url for x in rec["accepted"]):
-            cand = {k: c.get(k) for k in _KEEP}
-            cand["rank"] = 99
-            if not cand.get("credited"):
-                cand["trackStats"] = track_stats(album, (info["composers"] or []) + (info["aliases"] or []))
-            rec["accepted"].append(cand)
-        out[key] = rec
+        rec = dict(rec, albums=dict(rec.get("albums") or {}),
+                   yearVerified=list(rec.get("yearVerified") or []) + [url])
+        store = _album_store(rec, album_fn)
+        store(url.rsplit("/", 1)[1])  # read the page now, so the judgment has its year
+        out[key] = judge_record(rec, worn, store)
     return list(out.values())
+
+
+def rejudge(releases, evaluations):
+    """Every stored title judged again under the current matcher, offline.
+    Records written before results were stored pass through unchanged."""
+    worn = _worn(releases)
+    out = {}
+    for key, rec in evaluations.items():
+        if rec.get("gone") or rec.get("skipped") or "results" not in rec:
+            out[key] = rec
+            continue
+        rec = dict(rec, albums=dict(rec.get("albums") or {}))
+        out[key] = judge_record(rec, worn, _album_store(rec, None))
+    return out
 
 
 # ---------------- resolve ----------------
@@ -378,13 +449,14 @@ def _songs(c):
 
 def _weak_artist_ok(c, rec):
     """The plays-only path is for albums credited to Various Artists or to
-    the work itself (Infinity Train, The Intouchables). A bare title by any
+    the work itself (Infinity Train, The Intouchables), Disney included beside
+    its cast (High School Musical). A bare title by any
     other act is a cover: the Royal Philharmonic's Bohemian Rhapsody, a
     dance act's Frozen."""
     artists = c.get("artists") or []
     names = [collect._screen_base(n) for n in (rec.get("name"), rec.get("original")) if n]
     return bool(artists) and all(
-        a.lower() == "various artists" or any(n and n in collect._screen_base(a) for n in names)
+        a.lower() in ("various artists", "disney") or any(n and n in collect._screen_base(a) for n in names)
         for a in artists)
 
 
@@ -430,6 +502,22 @@ def plan_rewalk(releases, evaluations):
             duplicates.append({"row": r["id"], "slot": list(slot), "sameSlotAs": rows_by_slot[slot]["id"]})
         else:
             rows_by_slot[slot] = r
+
+    # a season-less TV row whose album names a season no row holds moves into
+    # that season, keeping its id and album: rows made before "Season One"
+    # read as season 1 (The Crown, Dickinson)
+    retitles = []
+    for slot, r in sorted(rows_by_slot.items(), key=lambda kv: kv[1]["id"]):
+        if slot[0] != "tv" or slot[2] is not None:
+            continue
+        rec = evaluations.get(("tv", slot[1])) or {}
+        own = next((c for c in rec.get("accepted", []) if c["url"] == r.get("ytmAlbumUrl")), None)
+        season = own.get("season") if own else None
+        if season is not None and ("tv", slot[1], season) not in rows_by_slot:
+            del rows_by_slot[slot]
+            rows_by_slot[("tv", slot[1], season)] = r
+            retitles.append({"row": r["id"], "album": {"title": r.get("albumTitle"), "url": r.get("ytmAlbumUrl")},
+                             "slot": ["tv", slot[1], season], "title": f"{rec['name']} Season {season} Soundtrack"})
 
     slots, weak_dropped = {}, []
     for (medium, tid), rec in sorted(evaluations.items()):
@@ -513,7 +601,7 @@ def plan_rewalk(releases, evaluations):
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "counts": {
             "corrections": len(corrections), "additions": len(additions), "orphans": len(orphans),
-            "unverified": len(unverified), "unchanged": len(unchanged),
+            "unverified": len(unverified), "unchanged": len(unchanged), "retitled": len(retitles),
             "duplicateSlotRows": len(duplicates), "albumClaimsSettled": len(conflicts),
             "weakMatch": sum(1 for x in final if x["weakMatch"]),
             "songsAlbum": sum(1 for x in final if x["songsAlbum"]),
@@ -527,6 +615,7 @@ def plan_rewalk(releases, evaluations):
         },
         "hitRates": {"before": {"film": rate("film", rows_by_slot), "tv": rate("tv", rows_by_slot)},
                      "after": {"film": rate("film", winners), "tv": rate("tv", winners)}},
+        "retitles": retitles,
         "corrections": corrections, "additions": additions, "orphans": orphans,
         "unverified": unverified, "duplicateSlotRows": duplicates, "weakDropped": weak_dropped,
         "unchanged": [{"row": u["row"], "album": u["album"], "weakMatch": u["weakMatch"],
@@ -541,12 +630,15 @@ def plan_rewalk(releases, evaluations):
 def print_review(plan, sample=30):
     c = plan["counts"]
     print("===== re-walk review =====")
-    for k in ("corrections", "additions", "orphans", "unverified", "unchanged", "weakMatch",
+    for k in ("corrections", "additions", "orphans", "unverified", "unchanged", "retitled", "weakMatch",
               "weakDroppedByArtistGuard", "yearFromAlbumPage", "songsAlbum", "songsAlbumLiteral",
               "songsAlbumUnknown",
               "duplicateSlotRows", "albumClaimsSettled", "tvSeasonRowsBefore", "tvSeasonRowsAfter"):
         print(f"{k}: {c[k]}")
     print("hit rates:", json.dumps(plan["hitRates"]))
+    print(f"--- retitles ({len(plan.get('retitles', []))})")
+    for x in plan.get("retitles", [])[:sample]:
+        print(f"   {x['row']}: -> {x['title']!r} ({x['album']['title']!r})")
     for name in ("corrections", "orphans", "unverified", "additions"):
         items = plan[name]
         print(f"--- {name} ({len(items)}), first {min(sample, len(items))}")
@@ -598,10 +690,19 @@ def apply_plan(releases, plan, evaluations, backfill_state_path, tracks_dir, see
     as stale rather than forced. Nothing is ever deleted, so every TRACK
     number stays where it is."""
     by_id = {r["id"]: r for r in releases}
-    out = {"retired": [], "corrected": [], "added": [], "flagged": 0, "stale": []}
+    out = {"retitled": [], "retired": [], "corrected": [], "added": [], "flagged": 0, "stale": []}
 
     def stale(kind, ref, why):
         out["stale"].append({"kind": kind, "ref": ref, "why": why})
+
+    # season-less TV rows take the season their album names: id and album stay
+    for t in plan.get("retitles", []):
+        r = by_id.get(t["row"])
+        if not r or r.get("retired") or r.get("ytmAlbumUrl") != t["album"]["url"]:
+            stale("retitle", t["row"], "row changed since resolve")
+            continue
+        r["title"] = t["title"]
+        out["retitled"].append(t["row"])
 
     # orphans first: retiring a row frees its album for the row it belongs to
     for o in plan["orphans"]:
@@ -710,7 +811,7 @@ def main(argv=None, data_path=None, folder=None, backfill_state_path=None, track
         if not partial and state["phase"] not in ("evaluated", "resolved"):
             print(f"::error::evaluation not complete (phase {state['phase']}); use resolve-partial to peek")
             return 1
-        plan = plan_rewalk(releases, load_evaluations(folder))
+        plan = plan_rewalk(releases, rejudge(releases, load_evaluations(folder)))
         name = "plan-partial.json" if partial else "plan.json"
         (folder / name).write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         if not partial:
@@ -735,7 +836,8 @@ def main(argv=None, data_path=None, folder=None, backfill_state_path=None, track
                                              encoding="utf-8")
         state["phase"] = "applied"
         save_state(state, folder)
-        print(f"re-walk applied: {len(out['corrected'])} corrected, {len(out['added'])} added, "
+        print(f"re-walk applied: {len(out['retitled'])} retitled, {len(out['corrected'])} corrected, "
+              f"{len(out['added'])} added, "
               f"{len(out['retired'])} retired, {out['flagged']} flags changed, {len(out['stale'])} stale")
         for s in out["stale"]:
             print(f"   stale {s['kind']} {s['ref']}: {s['why']}")

@@ -445,6 +445,23 @@ def test_is_console_classification():
     assert collect.is_console({}) is None                               # unknown stays unknown
 
 
+def test_merge_keeps_different_tmdb_titles_of_one_name_apart():
+    def item(title, tid, date):
+        return {"title": f"{title} Soundtrack", "medium": "film", "game": title, "date": date,
+                "url": f"https://www.themoviedb.org/movie/{tid}", "albumTitle": title,
+                "ytmAlbumUrl": f"https://music.youtube.com/browse/{tid}"}
+    releases = []
+    for title, tid, date in (("21 Jump Street", 64688, "2012-03-12"), ("22 Jump Street", 187017, "2014-06-05"),
+                             ("Pinocchio", 413518, "2019-12-19"), ("Pinocchio", 532639, "2022-09-07")):
+        collect.merge(releases, [item(title, tid, date)], src("tmdb-film", "catalog"), SEEN)
+    assert [r["id"] for r in releases] == ["film-21-jump-street", "film-22-jump-street",
+                                           "film-pinocchio", "film-pinocchio-2022"]
+    assert all(len(r["sources"]) == 1 for r in releases)
+    # the same TMDb title from a second source still folds into its row
+    collect.merge(releases, [item("Pinocchio", 413518, "2019-12-19")], src("tmdb-film-backfill", "catalog"), SEEN)
+    assert len(releases) == 4 and len(releases[2]["sources"]) == 1
+
+
 def test_merge_carries_console_flag():
     releases = []
     collect.merge(releases, [{"title": "Tunic Soundtrack", "url": "https://a.example/t",

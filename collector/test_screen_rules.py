@@ -129,7 +129,8 @@ def test_wording_only_extras_name_the_title_itself():
             ("The Good, the Bad and the Ugly",
              "The Good, The Bad and The Ugly (Original Motion Picture Soundtrack) (Remastered Edition)"),
             ("My Neighbor Totoro", "My Neighbor Totoro Soundtrack Collection"),
-            ("Halloween", "Halloween Motion Picture Soundtrack")]:
+            ("Halloween", "Halloween Motion Picture Soundtrack"),
+            ("Hotel Transylvania", "Hotel Transylvania: Score from the Motion Pictures")]:
         assert rel(name, album) == ("exact", 0, []), album
     for name, album in [
             ("Frozen", "Frozen 2 (Original Motion Picture Soundtrack / Deluxe Edition)"),
@@ -137,9 +138,46 @@ def test_wording_only_extras_name_the_title_itself():
             ("Star Trek", "Star Trek: The Motion Picture (Original Soundtrack)"),
             ("The Hangover", "The Hangover Trilogy (Original Score)"),
             ("Die Hard", "Die Hard 2: Die Harder (Original Motion Picture Soundtrack)"),
-            ("Hotel Transylvania", "Hotel Transylvania: Score from the Motion Pictures"),
             ("Blade Runner", "Blade Runner 2049 (Original Motion Picture Soundtrack)")]:
         assert rel(name, album)[0] == "extended", album
+
+
+def test_more_wording_articles_and_own_years():
+    def rel(name, album, years=()):
+        return collect._relation(collect.normalize_screen(album, "film").split(),
+                                 collect._screen_wants(film(name, 2000, [])), years)
+    for name, album in [
+            ("Pitch Black", "Pitch Black (Original Score from the Motion Picture)"),
+            ("Cashback", "Cashback (Original Soundtrack Recording)"),
+            ("Videodrome", "Videodrome (The Complete Restored Score)"),
+            ("Jacob's Ladder", "Jacob's Ladder (Music from the Motion Picture) [35th Anniversary Edition]"),
+            ("Crash", "Crash (The Complete Original Score Remastered) [Collector's Edition Vol. 4]")]:
+        assert rel(name, album) == ("exact", 0, []), album
+    assert rel("King Kong", "King Kong (Original 1933 Motion Picture Soundtrack)", [1933]) == ("exact", 0, [])
+    for name, album, years in [
+            ("King Kong", "King Kong (Original 1933 Motion Picture Soundtrack)", [2005]),
+            ("Invasion", "The Invasion (Original Soundtrack)", ()),
+            ("Hustlers", "The Hustlers Soundtrack", ()),
+            ("Nowhere", "Nowhere Special (Original Motion Picture Soundtrack)", ()),
+            ("Friday", "Friday the 13th (Original Motion Picture Soundtrack)", ())]:
+        assert rel(name, album, years)[0] == "extended", album
+    assert (collect.normalize_screen("The Terminal List (Music from the Original Series on Prime Video)", "tv")
+            == "the terminal list")
+
+
+def test_an_album_that_names_the_other_medium_belongs_to_it():
+    mash = {"resultType": "album", "browseId": "m", "year": "1970", "thumbnails": [],
+            "title": "M*A*S*H (Original Motion Picture Soundtrack)", "artists": [{"name": "Johnny Mandel"}]}
+    c = collect.screen_classify([mash], show("M*A*S*H", [1972, 1973], ["Johnny Mandel"]))[0]
+    assert not c["accepted"] and c["verdict"] == "medium: 'Motion Picture' names a film"
+    assert collect.screen_classify([mash], film("M*A*S*H", 1970, ["Johnny Mandel"]))[0]["accepted"]
+    sun = dict(mash, title="Midnight Sun (Original Soundtrack from the TV Series)", year="2016")
+    c = collect.screen_classify([sun], film("Midnight Sun", 2018, ["Nate Walcott"]))[0]
+    assert c["verdict"] == "medium: 'Series' names a series"
+    snicket = dict(mash, year="2004",
+                   title="Lemony Snicket's A Series of Unfortunate Events (Music from the Motion Picture)")
+    c = collect.screen_classify([snicket], film("A Series of Unfortunate Events", 2004, ["Thomas Newman"]))[0]
+    assert not c["verdict"].startswith("medium")
 
 
 def test_composer_accents_fold_on_latin_names_only():

@@ -201,15 +201,73 @@ def test_track_stats_reads_a_classical_byline():
 
 def _wolf(year):
     url = "https://music.youtube.com/browse/MPREb_wolf"
+    title = "The Wolf Of Wall Street (Music From The Motion Picture)"
     rec = _record("106646", "The Wolf of Wall Street", [],
                   {url: "rule 1: no credited composer and the album year is outside the window"})
-    rec.update(years=[2013], composers=[])
+    # the search showed a wrong year; the album page carries the real one
+    rec.update(years=[2013], composers=[], results=[
+        {"resultType": "album", "browseId": "MPREb_wolf", "title": title, "year": "2009",
+         "artists": [{"name": "Various Artists"}], "thumbnails": []}])
     releases = [row("film-the-wolf-of-wall-street", "film", "The Wolf of Wall Street Soundtrack",
-                    "The Wolf Of Wall Street (Music From The Motion Picture)", url, 106646)]
-    album = {"title": "The Wolf Of Wall Street (Music From The Motion Picture)", "year": year,
-             "artists": [{"name": "Various Artists"}], "thumbnails": [],
+                    title, url, 106646)]
+    album = {"title": title, "year": year, "artists": [{"name": "Various Artists"}], "thumbnails": [],
              "tracks": [{"title": f"t{i}", "artists": [{"name": f"Band {i}"}]} for i in range(6)]}
     return rec, releases, url, (lambda browse_id: album)
+
+
+def test_resolve_judges_stored_results_again_without_youtube_music(tmp_path, fake_tmdb, monkeypatch):
+    import re
+    folder = tmp_path / "rewalk"
+    releases = catalog()
+    evaluate_fully(folder, releases)
+    ev = rewalk.load_evaluations(folder)
+    assert all("results" in r for r in ev.values() if not r.get("gone") and not r.get("skipped"))
+
+    def outcome(evs):
+        return {k: ([c["url"] for c in r["accepted"]], r["seen"]) for k, r in evs.items()}
+    assert outcome(rewalk.rejudge(releases, ev)) == outcome(ev)
+    # a matcher change reaches resolve with no new search
+    monkeypatch.setattr(collect, "_SCREEN_REJECT", re.compile(r"\bexpanded\b", re.IGNORECASE))
+    changed = rewalk.rejudge(releases, ev)
+    assert EXPANDED not in [c["url"] for c in changed[("film", "105")]["accepted"]]
+    assert EXPANDED in [c["url"] for c in ev[("film", "105")]["accepted"]]
+
+
+def test_a_seasonless_tv_row_moves_into_the_season_its_album_names(tmp_path):
+    url = "https://music.youtube.com/browse/crown1"
+    cand = _cand("The Crown: Season One (Soundtrack from the Netflix Original Series)", url, season=1)
+    ev = {("tv", "65494"): _record("65494", "The Crown", [cand], {url: "accepted"}, medium="tv")}
+    releases = [row("tv-the-crown", "tv", "The Crown Soundtrack", cand["title"], url, 65494)]
+    plan = rewalk.plan_rewalk(releases, ev)
+    assert plan["counts"]["retitled"] == 1
+    assert plan["counts"]["orphans"] == 0 and plan["counts"]["additions"] == 0
+    assert [u["row"] for u in plan["unchanged"]] == ["tv-the-crown"]
+    assert plan["retitles"][0]["title"] == "The Crown Season 1 Soundtrack"
+    out = rewalk.apply_plan(releases, plan, ev, tmp_path / "backfill-state.json", tmp_path,
+                            "2026-09-13T00:00:00Z")
+    assert out["retitled"] == ["tv-the-crown"]
+    assert releases[0]["title"] == "The Crown Season 1 Soundtrack" and releases[0]["id"] == "tv-the-crown"
+    assert rewalk.row_slot(releases[0]) == ("tv", "65494", 1)
+
+
+def test_weak_guard_admits_disney_beside_the_cast():
+    assert rewalk._weak_artist_ok({"artists": ["High School Musical Cast", "Disney"]},
+                                  {"name": "High School Musical", "original": None})
+    assert not rewalk._weak_artist_ok({"artists": ["The Rock Of Ages Cast"]},
+                                      {"name": "The L Word", "original": None})
+
+
+def test_track_stats_lets_album_artists_stand_in_when_tmdb_names_no_composer():
+    album = {"artists": [{"name": "Chris Tilton"}], "tracks": [
+        {"title": "Main Title", "artists": [{"name": "Chris Tilton"}]},
+        {"title": "Olivia", "artists": [{"name": "Chris Tilton"}, {"name": "Hollywood Studio Orchestra"}]},
+        {"title": "Walter", "artists": [{"name": "Michael Giacchino"}]},
+        {"title": "Peter", "artists": [{"name": "Choir"}]}]}
+    stats = rewalk.track_stats(album, [])
+    assert stats["composerTracks"] == 2
+    assert rewalk.songs_by_tracks({"credited": False, "trackStats": stats}) is False
+    various = dict(album, artists=[{"name": "Various Artists"}])
+    assert rewalk.track_stats(various, [])["composerTracks"] == 0
 
 
 def test_verify_rereads_a_worn_album_that_failed_on_its_year():

@@ -854,6 +854,10 @@ _NETWORK_TAIL = re.compile(
 _FROM_TAIL = re.compile(
     rf"\s+(?:original\s+)?(?:soundtrack|music|score)\s+from\s+(?:(?:a|an|the)\s+)?(?:{_NET}\s+){{0,3}}"
     rf"(?:original\s+)?(?:{_NET}\s+){{0,3}}{_FORM}$")
+# "(Music from the Original Series on Prime Video)"
+_ON_NETWORK_TAIL = re.compile(
+    rf"\s+(?:original\s+)?(?:music|soundtrack|score)\s+from\s+(?:the\s+)?(?:original\s+)?{_FORM}"
+    rf"\s+on\s+(?:{_NET}\s+){{0,2}}{_NET}$")
 _EDITION_TAIL = re.compile(
     r"\s+(?:\d+\s+(?:st|nd|rd|th)\s+anniversary(?:\s+edition)?|\d{4}\s+(?:mix|remaster|remastered))$")
 # "(Expanded Motion Picture Soundtrack)" and kin. A qualifier is required, so
@@ -946,7 +950,8 @@ def normalize_screen(title, medium=None):
             if t.endswith(" " + tail):
                 t = t[: -len(tail)].strip()
                 stripped = True
-        for rx in (_FROM_TAIL, _NETWORK_TAIL, _EDITION_TAIL, _PICTURE_TAIL, _CJK_TAIL, first_volume):
+        for rx in (_ON_NETWORK_TAIL, _FROM_TAIL, _NETWORK_TAIL, _EDITION_TAIL, _PICTURE_TAIL, _CJK_TAIL,
+                   first_volume):
             if rx is None:
                 continue
             t2 = rx.sub("", t).strip()
@@ -992,29 +997,35 @@ def _screen_wants(info):
 # words that only say an album is a soundtrack, or which edition it is. An
 # album whose words beyond the title are all of these names the title
 # itself: "Alien: Covenant (Original Soundtrack Album)". Numerals count only
-# inside an anniversary or remaster date, so a sequel number never
-# qualifies, and "motion picture" never right after "the" unless a
-# soundtrack word follows, so "Star Trek: The Motion Picture" still names
-# another film than Star Trek. Film, movie and series stay out: The
-# Simpsons Movie is not The Simpsons.
+# as an ordinal not right after "the" (Friday the 13th keeps its number), a
+# remaster date, a collector's edition number, or one of the title's own
+# years (King Kong's "Original 1933 Motion Picture Soundtrack"), so a sequel
+# number never qualifies. "Motion picture" never counts right after "the"
+# unless a soundtrack word sits beside it, so "Star Trek: The Motion
+# Picture" still names another film than Star Trek. Special, film, movie
+# and series stay out: Nowhere Special is not Nowhere, The Simpsons Movie
+# is not The Simpsons.
 _WORDING_WORDS = frozenset(
     "original soundtrack soundtracks score music from the album ost complete expanded extended "
-    "deluxe special collector collectors edition version remastered remaster anniversary "
-    "collection official selections highlights excerpts".split())
+    "deluxe collector collectors edition version remastered remaster restored recording "
+    "anniversary collection official selections highlights excerpts".split())
 _WORDING_PHRASES = re.compile(
-    r"\b(?:\d+ (?:st|nd|rd|th) anniversary|remaster(?:ed)? \d{4}|\d{4} (?:remaster(?:ed)?|mix)"
+    r"\b(?:(?<!the )\d+ (?:st|nd|rd|th)|remaster(?:ed)? \d{4}|\d{4} (?:remaster(?:ed)?|mix)"
+    r"|collector s (?:anniversary )?edition(?: volume \d+)?|special edition"
+    r"|(?:score|music|soundtrack|songs) from the motion pictures?"
     r"|motion pictures? (?:soundtrack|score|ost)|(?<!the )motion pictures?)\b")
 
 
-def _only_wording(tokens):
-    rest = _WORDING_PHRASES.sub(" ", " ".join(tokens)).split()
+def _only_wording(tokens, years=()):
+    dates = {str(y) for y in years}
+    rest = _WORDING_PHRASES.sub(" ", " ".join(t for t in tokens if t not in dates)).split()
     return bool(tokens) and all(t in _WORDING_WORDS for t in rest)
 
 
 _REL_RANK = {"exact": 0, "episode": 1, "extended": 1}
 
 
-def _relation(tokens, wants):
+def _relation(tokens, wants, years=()):
     """How an album's tokens relate to a title: ("exact", 0, []),
     ("episode", extra, tail) for rule 4, ("extended", extra, tail) for
     rule 3, or None when the album names a different work."""
@@ -1027,7 +1038,10 @@ def _relation(tokens, wants):
         else:
             for i in range(len(tokens) - n + 1):
                 if tokens[i:i + n] == w:
-                    if not ep and _only_wording(tokens[:i] + tokens[i + n:]) and not _only_wording(w):
+                    head = tokens[:i]
+                    # an article right before the title changes the name: The Invasion
+                    if (not ep and not (head and head[-1] == "the") and not _only_wording(w)
+                            and _only_wording(head + tokens[i + n:], years)):
                         rel = ("exact", 0, [])
                     else:
                         rel = ("episode" if ep else "extended", len(tokens) - n + dropped, tokens[i + n:])
@@ -1076,6 +1090,16 @@ def _album_plays(album_fn, browse_id):
         return None
 
 
+# an album that names the other medium is that medium's album: "M*A*S*H
+# (Original Motion Picture Soundtrack)" is the film's, "Midnight Sun
+# (Original Soundtrack from the TV Series)" the show's. A title whose own
+# name carries the word (A Series of Unfortunate Events) is exempt.
+_OTHER_MEDIUM = {
+    "tv": re.compile(r"\bmotion pictures?\b|\bmovies?\b|\bfilms?\b|劇場版|映画", re.IGNORECASE),
+    "film": re.compile(r"\bseries\b|\bseasons?\b", re.IGNORECASE),
+}
+
+
 def _year_of(value):
     try:
         return int(value)
@@ -1115,9 +1139,14 @@ def screen_classify(results, info, album_fn=None):
         if bad:
             out.append(dict(e, verdict=f"tribute artist '{bad}'"))
             continue
+        other = _OTHER_MEDIUM.get(medium)
+        hit = other.search(title) if other else None
+        if hit and not other.search(" ".join(n for n in (info.get("name"), info.get("original")) if n)):
+            out.append(dict(e, verdict=f"medium: '{hit.group(0)}' names a {'film' if medium == 'tv' else 'series'}"))
+            continue
         tokens = normalize_screen(title, medium).split()
         e["normalized"] = " ".join(tokens)
-        rel = _relation(tokens, wants)
+        rel = _relation(tokens, wants, years)
         if rel is None:
             out.append(dict(e, verdict="title: the album names a different work"))
             continue
@@ -1632,6 +1661,16 @@ def _far_apart(a, b):
         return False
 
 
+_TMDB_TITLE = re.compile(r"themoviedb\.org/(movie|tv)/(\d+)")
+
+
+def _tmdb_other(row, url):
+    """Whether a row belongs to a different TMDb title than this url."""
+    m = _TMDB_TITLE.search(url or "")
+    ids = {x.groups() for s in row.get("sources", []) for x in [_TMDB_TITLE.search(s.get("url") or "")] if x}
+    return bool(m and ids) and m.groups() not in ids
+
+
 def merge(releases, items, source, seen_at):
     """Fold one source's items in. Append-only: existing entries only ever gain
     a source, an earlier date, or a fill for a still-null enrichment field;
@@ -1656,6 +1695,17 @@ def merge(releases, items, source, seen_at):
             target = None  # another medium's row, or a retired one: never merge
         # numeral variants (II vs 2) are the same name exactly — never left to fuzzy odds
         target = target or by_numfold.get((med, _numfold(norm))) or _fuzzy_find(norm, releases, norms, med)
+        if target is not None and _tmdb_other(target, it["url"]):
+            # one name, two TMDb titles (21 and 22 Jump Street, Pinocchio 2019
+            # and 2022): never one row. The newcomer takes its own id,
+            # year-suffixed when the plain one is worn
+            target = None
+            if slug in by_id:
+                slug = f"{slug}-{it['date'][:4]}" if it.get("date") else slug
+                target = by_id.get(slug)
+                if target is not None and (_medium(target) != med or target.get("retired")
+                                           or _tmdb_other(target, it["url"])):
+                    target = None
         if target is not None and it["date"] and target.get("date") and _far_apart(it["date"], target["date"]):
             # same name, different era: Tomb Raider 1996 is not Tomb Raider 2013.
             # The newcomer gets a year-suffixed id; reruns find it there again.
