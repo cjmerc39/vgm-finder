@@ -322,21 +322,26 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
 
 
 def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
-             offset_key, checked_key, cap):
+             offset_key, checked_key, cap, album_fn=None):
     """Film and TV catalog walk: one YTM check per candidate ever, one row
     per film, one row per season album for TV, a real album or nothing.
-    Pages come pre-bundled with composers (and season air dates for TV)."""
+    Candidates are gathered for the whole run and resolved together
+    (MATCHER-FIX-SPEC rule 6), so an album goes to its best title whatever
+    page each title sat on; albums other rows already wear stay theirs."""
     prefix = "tmdb-film" if medium == "film" else "tmdb-tv"
     src = TMDB_SRC_FILM if medium == "film" else TMDB_SRC_TV
     checked = set(state.get(checked_key, []))
-    looked = added = 0
-    exhausted = False
+    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
+    slots, titles = {}, []
+    looked = 0
+    exhausted = failed = False
     while looked < cap and not exhausted:
         try:
             data = json.loads(fetch_fn(f"{prefix}:{state[offset_key]}"))
         except Exception as exc:
             print(f"::warning::{prefix} backfill page {state[offset_key]} failed: {exc}")
-            return added, False, looked
+            failed = True
+            break
         results = data.get("results", [])
         if not results:
             exhausted = True
@@ -345,55 +350,40 @@ def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
         page_done = True
         for entry in results:
             eid = entry.get("id")
-            name = ((entry.get("title") if medium == "film" else entry.get("name")) or "").strip()
-            date = entry.get("release_date") if medium == "film" else entry.get("first_air_date")
             if eid is None or eid in checked:
                 continue
-            if not name or not date:
+            info = collect.film_info(entry, data) if medium == "film" else collect.tv_info(entry, data)
+            if not info["name"] or not info["date"]:
                 checked.add(eid)
                 continue
             if looked >= cap:
                 page_done = False
                 break
             looked += 1
-            composers = data.get("composers", {}).get(str(eid), [])
             try:
-                found = resolve_fn(collect._query(name))
-                if medium == "film":
-                    hit = collect.match_film(found, name, int(date[:4]), composers)
-                    hits = [hit] if hit else []
-                else:
-                    hits = collect.tv_season_albums(found, name, int(date[:4]), composers)
+                cands = collect.screen_matches(collect.screen_search(resolve_fn, info), info, album_fn)
             except Exception:
                 continue  # transient lookup failure: leave unchecked, retry next run
             checked.add(eid)
-            if not hits:
-                continue  # no confidently matching album: no row, ever
-            poster = entry.get("poster_path")
-            season_dates = data.get("seasons", {}).get(str(eid), {})
-            items = []
-            for hit in hits:
-                n = hit.get("season") if medium == "tv" else None
-                title = f"{name} Season {n} Soundtrack" if n else f"{name} Soundtrack"
-                items.append({
-                    "title": title, "albumTitle": hit["title"], "medium": medium,
-                    "game": name, "composers": hit["composers"],
-                    "genres": collect._tmdb_genres(entry, gmap),
-                    "url": f"https://www.themoviedb.org/{'movie' if medium == 'film' else 'tv'}/{eid}",
-                    "date": (season_dates.get(str(n)) if n else None) or date,
-                    "ytmAlbumUrl": hit["url"],
-                    "art": hit["art"] or (f"{collect.TMDB_IMG}{poster}" if poster else None)})
-            a, _ = collect.merge(releases, items, src, seen_at)
-            added += a
+            slots.update(collect.screen_slots(info, cands))
+            titles.append((info, entry, gmap))
         if page_done:
             if state[offset_key] >= int(data.get("total_pages", 1)):
                 exhausted = True
             else:
                 state[offset_key] += 1
+    winners, conflicts = collect.resolve_screen(slots, reserved=claimed)
+    items = collect.screen_items(winners, titles)
+    added = collect.merge(releases, items, src, seen_at)[0] if items else 0
+    weak = sum(1 for it in items if it.get("weakMatch"))
+    # written on every exit, a failed page included: the titles this run
+    # looked up are never forgotten while their rows are kept
     state[checked_key] = sorted(checked)
     print(f"{prefix} leg: {looked} lookups, {len(checked)} checked, {added} rows added"
+          + (f", {weak} weak" if weak else "")
+          + (f", {len(conflicts)} album claims settled" if conflicts else "")
           + (", exhausted" if exhausted else ""))
-    return added, exhausted, looked
+    return added, exhausted and not failed, looked
 
 
 TRACKS_CAP_BACKFILL = 250
@@ -479,10 +469,12 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
                                    noalbum_bar=GAP_NOALBUM_BAR, checked_key="gapChecked")
     _, film_done, spent5 = tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, "film",
                                     "tmdbFilmOffset", "tmdbFilmChecked",
-                                    cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4))
+                                    cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4),
+                                    album_fn=album_fn)
     _, tv_done, spent6 = tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, "tv",
                                   "tmdbTvOffset", "tmdbTvChecked",
-                                  cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4 - spent5))
+                                  cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4 - spent5),
+                                  album_fn=album_fn)
     resolve_done = resolve_leg(releases, state, resolve_fn,
                                cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4
                                        - spent5 - spent6))

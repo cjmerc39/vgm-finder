@@ -257,3 +257,21 @@ def test_tmdb_leg_cap_interrupt_keeps_the_cursor():
     assert looked == 1 and not done
     assert state["tmdbFilmOffset"] == 1  # interrupted page replays next run
     assert len(state["tmdbFilmChecked"]) == 1  # the checked film never re-spends its lookup
+
+
+def test_tmdb_leg_records_checked_titles_when_a_page_fails():
+    # a TMDb connection reset on page 2 must not throw away page 1's work
+    from test_collect import screen_resolve
+    releases, state = [], backfill.load_state("missing")
+    def fetch(url):
+        if url == "tmdb-film:1":
+            page = json.loads(raw("tmdb-film.json"))
+            page["total_pages"] = 3
+            return json.dumps(page).encode()
+        raise ConnectionResetError("Connection reset by peer")
+    added, done, looked = backfill.tmdb_leg(
+        releases, state, fetch, screen_resolve, "2026-09-13T00:00:00Z",
+        "film", "tmdbFilmOffset", "tmdbFilmChecked", cap=250)
+    assert not done and looked == 3 and added == 2
+    assert sorted(state["tmdbFilmChecked"]) == [111111, 693134, 872585]
+    assert state["tmdbFilmOffset"] == 2  # page 1 finished; page 2 replays next run
