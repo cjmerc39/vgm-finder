@@ -18,8 +18,10 @@ wanted: personal state already keys by stable release ids.
 ## Smaller knobs
 - Deeper catalog: raise `IGDB_BAR` / `NOALBUM_BAR` / `STEAM_TARGET` in
   collector/backfill.py and dispatch until "backfill complete". For film
-  and TV the same lever is `FILM_BAR` (vote_count floor, 1000) and
-  `TV_BAR` (500): lower them and re-dispatch.
+  and TV the same lever is `FILM_BAR` (vote_count floor, 500) and
+  `TV_BAR` (300), walked through the re-walk (`WALK_BARS` in
+  collector/rewalk.py) with a review stop before apply, then matched in
+  backfill.
 - Apple Music secondary links (declined for now — YTM-only listener).
 - Franchise-artist credit cleanup ("Assassin's Creed" listed among
   composers on some YTM albums).
