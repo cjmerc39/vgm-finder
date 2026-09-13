@@ -117,6 +117,33 @@ def test_rule3_still_needs_soundtrack_wording():
     assert not c["accepted"] and "wording" in c["verdict"]
 
 
+def test_verdicts_name_the_condition_that_failed():
+    info = film("Jurassic Park", 1993, ["John Williams"])
+    far = {"resultType": "album", "browseId": "lw", "year": "1997", "thumbnails": [],
+           "title": "The Lost World: Jurassic Park (Original Motion Picture Score)",
+           "artists": [{"name": "John Williams"}]}
+    assert collect.screen_classify([far], info)[0]["verdict"] == "rule 3: needs the album year within the window"
+    assert collect.screen_classify([dict(far, year=None)], info)[0]["verdict"] == "rule 3: needs a known album year"
+    c = collect.screen_classify([dict(far, year=None, artists=[{"name": "Somebody"}])], info)[0]
+    assert c["verdict"] == "rule 3: needs the credited composer, a known album year"
+
+
+def test_a_result_without_its_year_reads_it_from_the_album_page():
+    info = film("Rogue One: A Star Wars Story", 2016, ["Michael Giacchino"])
+    bare = {"resultType": "album", "browseId": "ro", "year": None, "thumbnails": [],
+            "title": "Rogue One: A Star Wars Story (Original Motion Picture Soundtrack)",
+            "artists": [{"name": "Various Artists"}]}
+    c = collect.screen_classify([bare], info)[0]
+    assert c["verdict"] == "rule 1: no credited composer and the album year is unknown"
+    asked = []
+    c = collect.screen_classify([bare], info, lambda b: asked.append(b) or {"year": "2016"})[0]
+    assert c["accepted"] and c["gap"] == 0 and c["yearFrom"] == "album" and asked == ["ro"]
+    c = collect.screen_classify([bare], info, lambda b: {"year": None})[0]
+    assert not c["accepted"] and "is unknown" in c["verdict"]
+    c = collect.screen_classify([dict(bare, year="2016")], info, lambda b: asked.append(b))[0]
+    assert c["accepted"] and "yearFrom" not in c and asked == ["ro"]  # a dated result costs no call
+
+
 def test_rule3_era_keeps_the_lost_world_off_jurassic_park():
     c = verdict(film("Jurassic Park", 1993, ["John Williams"]), "The Lost World: Jurassic Park")
     assert not c["accepted"] and c["verdict"].startswith("rule 3")

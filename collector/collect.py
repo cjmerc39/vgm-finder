@@ -1047,6 +1047,13 @@ def _album_plays(album_fn, browse_id):
         return None
 
 
+def _year_of(value):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def screen_classify(results, info, album_fn=None):
     """Every album result judged against one title. Each entry carries a
     verdict: the rule that accepted it, or the first rule that turned it
@@ -1090,24 +1097,31 @@ def screen_classify(results, info, album_fn=None):
             out.append(dict(e, verdict=f"sequel guard (tail '{' '.join(tail)}')"))
             continue
         credited = _credited(artists, names)
-        try:
-            yr = int(r.get("year"))
-        except (TypeError, ValueError):
-            yr = None
+        yr = _year_of(r.get("year"))
+        if yr is None and album_fn and years:
+            # a search result sometimes arrives without its year (The Wolf of
+            # Wall Street on the Actions runner); the album page carries it
+            try:
+                yr = _year_of((album_fn(bid) or {}).get("year"))
+            except Exception:
+                yr = None
+            if yr is not None:
+                e.update(year=str(yr), yearFrom="album")
         gap = min(abs(yr - y) for y in years) if (yr is not None and years) else None
         near = gap is not None and gap <= SCREEN_YEAR_WINDOW
         wording = bool(_SCREEN_WORDING.search(title))
         e.update(credited=credited, gap=gap, extra=extra, worded=wording)
+        era = "is outside the window" if gap is not None else "is unknown"
         klass, weak, ok, why = "exact", False, False, ""
         if kind == "exact" and wording:
             rule, ok = "1 exact title", credited or near
-            why = "rule 1: no credited composer and the album year is outside the window"
+            why = f"rule 1: no credited composer and the album year {era}"
         elif kind == "exact":
             if credited:
                 rule, ok = "2 bare title, composer credited", near
-                why = "rule 2: composer credited but the album year is outside the window"
+                why = f"rule 2: composer credited but the album year {era}"
             elif not near:
-                rule, why = "2 bare title", "rule 2: no wording, no credited composer, year outside the window"
+                rule, why = "2 bare title", f"rule 2: no wording, no credited composer, and the album year {era}"
             else:
                 plays = _album_plays(album_fn, bid) if album_fn else None
                 e["plays"] = plays
@@ -1119,8 +1133,11 @@ def screen_classify(results, info, album_fn=None):
             klass = "extended"
             rule = "4 episode marker" if kind == "episode" else "3 franchise prefix or suffix"
             ok = wording and credited and near
-            why = (f"rule {rule[0]}: needs soundtrack wording, the credited composer, "
-                   f"and the album year within the window")
+            missing = [need for need, have in (
+                ("soundtrack wording", wording), ("the credited composer", credited),
+                ("the album year within the window" if gap is not None else "a known album year", near))
+                if not have]
+            why = f"rule {rule[0]}: needs " + ", ".join(missing)
         if not ok:
             out.append(dict(e, verdict=why))
             continue

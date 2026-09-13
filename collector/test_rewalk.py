@@ -188,6 +188,49 @@ def test_evaluate_respects_the_lookup_cap(tmp_path, fake_tmdb):
     assert len(records) == 1 and state["phase"] == "film" and state["filmPage"] == 1
 
 
+def _wolf(year):
+    url = "https://music.youtube.com/browse/MPREb_wolf"
+    rec = _record("106646", "The Wolf of Wall Street", [],
+                  {url: "rule 1: no credited composer and the album year is outside the window"})
+    rec.update(years=[2013], composers=[])
+    releases = [row("film-the-wolf-of-wall-street", "film", "The Wolf of Wall Street Soundtrack",
+                    "The Wolf Of Wall Street (Music From The Motion Picture)", url, 106646)]
+    album = {"title": "The Wolf Of Wall Street (Music From The Motion Picture)", "year": year,
+             "artists": [{"name": "Various Artists"}], "thumbnails": [],
+             "tracks": [{"title": f"t{i}", "artists": [{"name": f"Band {i}"}]} for i in range(6)]}
+    return rec, releases, url, (lambda browse_id: album)
+
+
+def test_verify_rereads_a_worn_album_that_failed_on_its_year():
+    rec, releases, url, album_fn = _wolf("2013")
+    verified = rewalk.verify_worn_years(releases, {("film", "106646"): rec}, album_fn)
+    assert len(verified) == 1 and verified[0]["seen"][url] == "accepted"
+    assert verified[0]["yearVerified"] == [url]
+    cand = verified[0]["accepted"][0]
+    assert cand["url"] == url and cand["trackStats"]["distinct"] == 6
+    plan = rewalk.plan_rewalk(releases, {("film", "106646"): verified[0]})
+    assert plan["counts"]["orphans"] == 0
+    assert [u["row"] for u in plan["unchanged"]] == ["film-the-wolf-of-wall-street"]
+    assert plan["unchanged"][0]["songsAlbum"] is True  # six named track artists, no composer
+
+
+def test_verify_keeps_a_rejection_the_album_page_confirms():
+    rec, releases, url, album_fn = _wolf("1990")
+    verified = rewalk.verify_worn_years(releases, {("film", "106646"): rec}, album_fn)
+    assert "outside the window" in verified[0]["seen"][url] and verified[0]["accepted"] == []
+    plan = rewalk.plan_rewalk(releases, {("film", "106646"): verified[0]})
+    assert [o["row"] for o in plan["orphans"]] == ["film-the-wolf-of-wall-street"]
+
+
+def test_verify_leaves_rejections_that_are_not_about_the_year():
+    rec, releases, url, _ = _wolf("2013")
+    rec["seen"][url] = "sequel guard (tail 'part 2')"
+    fetched = []
+    assert rewalk.verify_worn_years(releases, {("film", "106646"): rec},
+                                    lambda b: fetched.append(b) or {}) == []
+    assert fetched == []
+
+
 # ---------------- resolve ----------------
 
 def test_resolve_plans_corrections_additions_orphans_and_unverified(tmp_path, fake_tmdb):

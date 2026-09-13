@@ -6,7 +6,9 @@
             missed (a title that crossed a page boundary while it ran, a row
             the daily run added below the bars), searches YouTube Music
             exactly as the collector does, and writes the accepted
-            candidates to one shard file per run. No row changes.
+            candidates to one shard file per run. Last, every album a row
+            wears that its own title turned away on a year condition is
+            re-read from the album page and judged again. No row changes.
   resolve   One offline pass over every shard. Hands albums out across the
             whole catalog at once, with game-owned albums reserved, compares
             the outcome with every film and TV row, and writes plan.json plus
@@ -38,12 +40,12 @@ import collect
 
 REWALK_DIR = collect.ROOT / "collector" / "rewalk"
 TRACKS_DIR = collect.DATA_PATH.parent / "tracks"
-EVALUATE_PHASES = ("film", "tv", "sweep", "pending")
+EVALUATE_PHASES = ("film", "tv", "sweep", "pending", "verify")
 PHASES = EVALUATE_PHASES + ("evaluated", "resolved", "applied")
 KINDS = {"film": ("movie", "FILM_BAR", "filmPage"), "tv": ("tv", "TV_BAR", "tvPage")}
 SRC = {"film": backfill.TMDB_SRC_FILM, "tv": backfill.TMDB_SRC_TV}
 _KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded",
-         "weak", "season", "composers", "rank", "artists", "plays", "trackStats")
+         "weak", "season", "composers", "rank", "artists", "plays", "trackStats", "yearFrom")
 _REAL_KEYS = ("credited composer", "exact title", "fewer extra words", "closer year")
 
 
@@ -263,6 +265,13 @@ def evaluate(releases, state, folder=REWALK_DIR, resolve=None, album_fn=None, ca
             elif phase == "sweep":
                 state["pending"] = sweep_pending(releases, done)
                 state["phase"] = "pending"
+            elif phase == "verify":
+                current = load_evaluations(folder)
+                current.update({(x["medium"], x["id"]): x for x in records})
+                verified = verify_worn_years(releases, current, fetch_album)
+                records.extend(verified)
+                print(f"re-walk verify: {len(verified)} titles had a worn album re-read for its year")
+                state["phase"] = "evaluated"
             else:
                 while state["pending"] and calls[0] < cap:
                     medium, tid = state["pending"][0]
@@ -279,7 +288,7 @@ def evaluate(releases, state, folder=REWALK_DIR, resolve=None, album_fn=None, ca
                             run_title(medium, entry)
                     state["pending"].pop(0)
                 if not state["pending"]:
-                    state["phase"] = "evaluated"
+                    state["phase"] = "verify"
     except Exception as exc:
         stopped = repr(exc)
         print(f"::warning::re-walk evaluate stopped early, progress kept: {exc}")
@@ -300,6 +309,44 @@ def evaluate(releases, state, folder=REWALK_DIR, resolve=None, album_fn=None, ca
     else:
         print("evaluation in progress: dispatch evaluate again")
     return records, stopped
+
+
+def verify_worn_years(releases, evaluations, album_fn):
+    """A row is never retired or corrected on a year one search got wrong.
+    Every album a row wears that its own title turned away on a condition
+    involving the year is read from its album page and judged again.
+    Returns the updated title records; a later shard record supersedes
+    the earlier one, so nothing already written is edited."""
+    out = {}
+    for r in releases:
+        url = r.get("ytmAlbumUrl")
+        if r.get("medium") not in ("film", "tv") or r.get("retired") or not url:
+            continue
+        slot = row_slot(r)
+        key = (slot[0], slot[1]) if slot else None
+        rec = out.get(key) or evaluations.get(key)
+        verdict = rec["seen"].get(url) if rec else None
+        if not isinstance(verdict, str) or "year" not in verdict:
+            continue
+        browse_id = url.rsplit("/", 1)[1]
+        album = album_fn(browse_id) or {}
+        result = {"resultType": "album", "browseId": browse_id,
+                  "title": album.get("title") or r.get("albumTitle") or "",
+                  "year": album.get("year"), "artists": album.get("artists") or [],
+                  "thumbnails": album.get("thumbnails") or []}
+        info = {k: rec.get(k) for k in ("medium", "name", "original", "years", "composers", "aliases")}
+        c = collect.screen_classify([result], info, lambda b: album if b == browse_id else album_fn(b))[0]
+        rec = dict(rec, seen=dict(rec["seen"]), accepted=list(rec["accepted"]),
+                   yearVerified=list(rec.get("yearVerified", [])) + [url])
+        rec["seen"][url] = "accepted" if c["accepted"] else c["verdict"]
+        if c["accepted"] and not any(x["url"] == url for x in rec["accepted"]):
+            cand = {k: c.get(k) for k in _KEEP}
+            cand["rank"] = 99
+            if not cand.get("credited"):
+                cand["trackStats"] = track_stats(album, (info["composers"] or []) + (info["aliases"] or []))
+            rec["accepted"].append(cand)
+        out[key] = rec
+    return list(out.values())
 
 
 # ---------------- resolve ----------------
@@ -469,6 +516,7 @@ def plan_rewalk(releases, evaluations):
             "songsAlbumLiteral": sum(1 for x in final if x["songsAlbumLiteral"]),
             "songsAlbumUnknown": sum(1 for x in final if x["songsUnknown"]),
             "weakDroppedByArtistGuard": len(weak_dropped),
+            "yearFromAlbumPage": sum(1 for c in winners.values() if c.get("yearFrom")),
             "tvSeasonRowsBefore": sum(1 for s in rows_by_slot if s[0] == "tv"),
             "tvSeasonRowsAfter": sum(1 for s in rows_by_slot if s[0] == "tv") - sum(
                 1 for o in orphans if o["slot"][0] == "tv") + sum(1 for a in additions if a["slot"][0] == "tv"),
@@ -490,7 +538,8 @@ def print_review(plan, sample=30):
     c = plan["counts"]
     print("===== re-walk review =====")
     for k in ("corrections", "additions", "orphans", "unverified", "unchanged", "weakMatch",
-              "weakDroppedByArtistGuard", "songsAlbum", "songsAlbumLiteral", "songsAlbumUnknown",
+              "weakDroppedByArtistGuard", "yearFromAlbumPage", "songsAlbum", "songsAlbumLiteral",
+              "songsAlbumUnknown",
               "duplicateSlotRows", "albumClaimsSettled", "tvSeasonRowsBefore", "tvSeasonRowsAfter"):
         print(f"{k}: {c[k]}")
     print("hit rates:", json.dumps(plan["hitRates"]))
