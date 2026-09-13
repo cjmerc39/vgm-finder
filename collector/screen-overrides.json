@@ -71,7 +71,8 @@
     {"medium": "tv", "tmdb": 74440, "name": "Harley Quinn", "album": "MPREb_SwZH48O7bTp", "albumTitle": "Harley Quinn (Original Soundtrack)", "why": "Remi Brossier's album, not the show's composer Jefferson Friedman"},
     {"medium": "tv", "tmdb": 14929, "name": "Heartland", "album": "MPREb_1Z3CZCpfpAu", "albumTitle": "Music from the Heartland", "why": "Dorf Kapelle's regional album, unrelated to the show"},
     {"medium": "tv", "tmdb": 127235, "name": "Invasion", "album": "MPREb_fIIhfambng6", "albumTitle": "Invasion (Original Soundtrack)", "why": "Nightcrawler's Invasion, not the show's score"},
-    {"medium": "tv", "tmdb": 21494, "name": "V", "album": "MPREb_goZCjcobliQ", "albumTitle": "Soundtrack V", "why": "Emmanuel Top's techno album, unrelated to the show"}
+    {"medium": "tv", "tmdb": 21494, "name": "V", "album": "MPREb_goZCjcobliQ", "albumTitle": "Soundtrack V", "why": "Emmanuel Top's techno album, unrelated to the show"},
+    {"medium": "tv", "tmdb": 196322, "name": "Dark Matter (2024)", "album": "MPREb_uZonVTxguQI", "albumTitle": "Dark Matter (Original Series Soundtrack)", "why": "Benjamin Pinkerton's score for the 2015 Syfy show, its TMDb-credited composer; the 2024 Apple show has its own season albums"}
   ],
   "seasonlessVolumes": [
     {"tmdb": 60059, "name": "Better Call Saul", "why": "Vol. 1 to 3 are score compilations spanning seasons"},
@@ -80,6 +81,7 @@
     {"tmdb": 95557, "name": "INVINCIBLE", "why": "Vol. 1 (2025) gathers cues from Seasons 1 to 3, released after the third aired"},
     {"tmdb": 604, "name": "Teen Titans", "why": "Vol. 1 to 5 are compilations released after the show ended"},
     {"tmdb": 4615, "name": "Hercules: The Legendary Journeys", "albums": ["MPREb_mmFVACeI3DW"],
-     "why": "Vol. 4 is a compilation spanning seasons; Volume Two and Three keep their seasons"}
+     "why": "Vol. 4 is a compilation spanning seasons; Volume Two and Three keep their seasons"},
+    {"tmdb": 2661, "name": "Kamen Rider", "why": "one TMDb show spans every yearly series (Gavv, Zeztz), so no season number fits its volumes"}
   ]
 }

@@ -332,6 +332,7 @@ def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
     src = TMDB_SRC_FILM if medium == "film" else TMDB_SRC_TV
     checked = set(state.get(checked_key, []))
     claimed = collect.claimed_albums(releases)
+    sets = collect.screen_override_sets(collect.load_screen_overrides())
     slots, titles = {}, []
     looked = 0
     exhausted = failed = False
@@ -361,7 +362,8 @@ def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
                 break
             looked += 1
             try:
-                cands = collect.screen_matches(collect.screen_search(resolve_fn, info), info, album_fn)
+                title_slots = collect.screen_title_slots(info, collect.screen_search(resolve_fn, info),
+                                                         album_fn, sets, date_fn)
             except Exception:
                 # transient lookup failure: the title stays unchecked and its
                 # page stays open, so the cursor never moves past a title
@@ -369,8 +371,7 @@ def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
                 page_done = False
                 continue
             checked.add(eid)
-            collect.date_volumes(cands, date_fn)
-            slots.update(collect.screen_slots(info, cands))
+            slots.update(title_slots)
             titles.append((info, entry, gmap))
         if page_done:
             if state[offset_key] >= int(data.get("total_pages", 1)):

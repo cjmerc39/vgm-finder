@@ -235,6 +235,31 @@ def test_walk3_blocklist_game_wording_and_spin_offs():
     assert world["accepted"]
 
 
+def test_weak_guard_turns_away_a_bare_title_by_another_act():
+    fetched = []
+    album = {"resultType": "album", "browseId": "kimmel", "year": "2005", "thumbnails": [],
+             "title": "Jimmy Kimmel Live!", "artists": [{"name": "Simple Plan"}]}
+    loud = lambda b: fetched.append(b) or {"tracks": [{"title": "t", "views": "5M plays"}]}
+    c = collect.screen_classify([album], show("Jimmy Kimmel Live", [2003, 2026], []), loud)[0]
+    assert not c["accepted"] and c["verdict"].startswith("weak guard") and fetched == []  # no plays read
+    va = dict(album, artists=[{"name": "Various Artists"}])
+    assert collect.screen_classify([va], show("Jimmy Kimmel Live", [2003, 2026], []), loud)[0]["weak"]
+
+
+def test_daily_and_backfill_apply_screen_overrides():
+    info = {"medium": "tv", "id": "62425", "name": "Dark Matter", "original": None, "years": [2015, 2017],
+            "composers": ["Benjamin Pinkerton"], "aliases": [], "seasons": {"1": "2015-06-12"}}
+    results = [{"resultType": "album", "browseId": "dm", "year": "2016", "thumbnails": [],
+                "title": "Dark Matter (Original Series Soundtrack)", "artists": [{"name": "Benjamin Pinkerton"}]}]
+    assert collect.screen_title_slots(info, results, None, collect.screen_override_sets({}))
+    excluded = collect.screen_override_sets({"exclude": [{"medium": "tv", "tmdb": 62425, "album": "dm"}]})
+    assert collect.screen_title_slots(info, results, None, excluded) == {}
+    pins = collect.screen_override_sets({"tv": [{"tmdb": 62425, "season": None, "album": "dm"}]})
+    assert collect.screen_title_slots(info, results, None, pins)[("tv", "62425", None, None)][0]["pinned"]
+    other = dict(info, id="196322", years=[2024, 2026])
+    assert collect.screen_title_slots(other, results, None, pins) == {}  # pinned to another title
+
+
 def test_composer_accents_fold_on_latin_names_only():
     assert collect._credited(["Roque Banos"], ["Roque Baños"])
     assert collect._credited(["Jóhann Jóhannsson"], ["Johann Johannsson"])

@@ -47,6 +47,9 @@ TRACKS_DIR = collect.DATA_PATH.parent / "tracks"
 EVALUATE_PHASES = ("film", "tv", "sweep", "pending", "verify")
 PHASES = EVALUATE_PHASES + ("evaluated", "resolved", "applied")
 KINDS = {"film": ("movie", "FILM_BAR", "filmPage"), "tv": ("tv", "TV_BAR", "tvPage")}
+# walk 4 (CJ, 2026-09-13): the lower bars, walked with a review stop. The
+# backfill keeps FILM_BAR and TV_BAR until walk 4 is applied.
+WALK_BARS = {"film": 500, "tv": 300}
 SRC = {"film": backfill.TMDB_SRC_FILM, "tv": backfill.TMDB_SRC_TV}
 _KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded",
          "weak", "season", "volume", "year", "seasonFrom", "composers", "rank", "artists", "plays",
@@ -218,6 +221,8 @@ def judge_record(rec, worn, album_fn):
         except Exception:
             pass  # no stats: the track-based songs call stays unknown
     rec["accepted"], rec["seen"] = [], {}
+    rec["weakDropped"] = [{"album": c["title"], "artists": c.get("artists")}
+                          for c in judged if str(c.get("verdict") or "").startswith("weak guard")]
     for c in judged:
         if c["accepted"]:
             rec["accepted"].append({k: c.get(k) for k in _KEEP})
@@ -254,8 +259,7 @@ def track_stats(album, names):
 def _discover(medium, page):
     kind, bar_name, _ = KINDS[medium]
     return collect._tmdb_get(f"discover/{kind}", page=page,
-                             **{"vote_count.gte": getattr(backfill, bar_name),
-                                "sort_by": "vote_count.desc"})
+                             **{"vote_count.gte": WALK_BARS[medium], "sort_by": "vote_count.desc"})
 
 
 def sweep_pending(releases, done):
@@ -493,16 +497,9 @@ def _songs(c):
 
 
 def _weak_artist_ok(c, rec):
-    """The plays-only path is for albums credited to Various Artists or to
-    the work itself (Infinity Train, The Intouchables), Disney included beside
-    its cast (High School Musical). A bare title by any
-    other act is a cover: the Royal Philharmonic's Bohemian Rhapsody, a
-    dance act's Frozen."""
-    artists = c.get("artists") or []
-    names = [collect._screen_base(n) for n in (rec.get("name"), rec.get("original")) if n]
-    return bool(artists) and all(
-        a.lower() in ("various artists", "disney") or any(n and n in collect._screen_base(a) for n in names)
-        for a in artists)
+    """collect.weak_artist_ok for a stored candidate. screen_classify applies
+    the check itself now; this still catches records judged before it did."""
+    return collect.weak_artist_ok(c.get("artists") or [], rec)
 
 
 def real_key(c):
@@ -537,24 +534,13 @@ def _dated(c, dates):
 
 
 def _pin_candidate(p, rec, medium):
-    """A screen-overrides.json pin as a winning candidate, built from the
-    title's stored search result for that album."""
-    url = YTM_ALBUM + p["album"]
-    result = next((r for r in rec.get("results") or [] if r["browseId"] == p["album"]), None) or {}
-    artists = [a["name"] for a in result.get("artists") or []]
-    thumbs = result.get("thumbnails") or []
-    names = (rec.get("composers") or []) + (rec.get("aliases") or [])
-    credited = bool(names) and collect._credited(artists, names)
-    c = {"title": result.get("title") or p.get("albumTitle"), "url": url,
-         "art": thumbs[-1]["url"] if thumbs else None, "rule": "pinned by screen-overrides.json",
-         "klass": "exact", "credited": credited, "extra": 0, "gap": None, "worded": True, "weak": False,
-         "season": p.get("season") if medium == "tv" else None, "volume": p.get("volume") if medium == "tv" else None,
-         "year": result.get("year"), "seasonFrom": "override" if medium == "tv" else None,
-         "composers": list(rec.get("composers") or []) or [a for a in artists if a.lower() != "various artists"],
-         "rank": 0, "artists": artists, "plays": None, "pinned": True}
+    """A screen-overrides.json pin as a winning candidate, from the title's
+    stored search, with song-compilation evidence when its page was read."""
+    info = {"medium": medium, "composers": rec.get("composers"), "aliases": rec.get("aliases")}
+    c = {k: v for k, v in collect.pin_candidate(p, info, rec.get("results")).items() if k != "accepted"}
     album = (rec.get("albums") or {}).get(p["album"])
-    if album is not None and not credited:
-        c["trackStats"] = track_stats(album, names)
+    if album is not None and not c["credited"]:
+        c["trackStats"] = track_stats(album, (rec.get("composers") or []) + (rec.get("aliases") or []))
     return c
 
 
@@ -572,10 +558,8 @@ def plan_rewalk(releases, evaluations, overrides=None, dates=None):
     did not show its album at all."""
     game = {r["ytmAlbumUrl"]: r["id"] for r in releases
             if (r.get("medium") or "game") == "game" and r.get("ytmAlbumUrl")}
-    overrides = overrides or {}
-    excluded = {(x["medium"], str(x["tmdb"]), YTM_ALBUM + x["album"]) for x in overrides.get("exclude", [])}
-    seasonless = {str(x["tmdb"]): ({YTM_ALBUM + a for a in x["albums"]} if x.get("albums") else True)
-                  for x in overrides.get("seasonlessVolumes", [])}
+    sets = collect.screen_override_sets(overrides)
+    excluded, seasonless = sets["excluded"], sets["seasonless"]
     dates = dates or {}
     rows_by_slot, duplicates, no_slot = {}, [], []
     for r in releases:
@@ -638,6 +622,7 @@ def plan_rewalk(releases, evaluations, overrides=None, dates=None):
             continue
         cands = []
         title_info = _title_info(medium, tid, rec, seasonless)
+        weak_dropped.extend({"title": rec["name"], **w} for w in rec.get("weakDropped") or [])
         for c in rec["accepted"]:
             if (medium, tid, c["url"]) in excluded:
                 excluded_hits.append({"title": rec["name"], "album": c["title"], "artists": c.get("artists")})
@@ -655,14 +640,11 @@ def plan_rewalk(releases, evaluations, overrides=None, dates=None):
     # screen-overrides.json pins: the pinned album is held back from every
     # other title, and after resolve the pin takes its row
     pinned = {}
-    for medium in ("film", "tv"):
-        for p in overrides.get(medium, []):
-            tid = str(p["tmdb"])
-            rec = evaluations.get((medium, tid))
-            if not rec or rec.get("gone") or rec.get("skipped"):
-                continue
-            slot = ("film", tid) if medium == "film" else ("tv", tid, p.get("season"), p.get("volume"))
-            pinned[slot] = _pin_candidate(p, rec, medium)
+    for slot, p in sets["pins"].items():
+        rec = evaluations.get((slot[0], slot[1]))
+        if not rec or rec.get("gone") or rec.get("skipped"):
+            continue
+        pinned[slot] = _pin_candidate(p, rec, slot[0])
     for slot in pinned:
         slots.pop(slot, None)
     winners, conflicts = collect.resolve_screen(slots, reserved=set(game) | {c["url"] for c in pinned.values()})

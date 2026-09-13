@@ -1201,6 +1201,19 @@ _GAME_WORDING = re.compile(r"\b(?:original\s+)?games?\s+(?:soundtracks?|score|mu
                            re.IGNORECASE)
 
 
+def weak_artist_ok(artists, info):
+    """The plays-only path (rule 2 with no composer) is for albums credited
+    to Various Artists or to the work itself (Infinity Train, The
+    Intouchables), Disney included beside its cast (High School Musical). A
+    bare title by any other act is someone else's record: the Royal
+    Philharmonic's Bohemian Rhapsody, a dance act's Frozen, Simple Plan's
+    live EP named Jimmy Kimmel Live!"""
+    names = [_screen_base(n) for n in (info.get("name"), info.get("original")) if n]
+    return bool(artists) and all(
+        a.lower() in ("various artists", "disney") or any(n and n in _screen_base(a) for n in names)
+        for a in artists)
+
+
 def _year_of(value):
     try:
         return int(value)
@@ -1291,6 +1304,10 @@ def screen_classify(results, info, album_fn=None):
                 why = f"rule 2: composer credited but the album year {era}"
             elif not near:
                 rule, why = "2 bare title", f"rule 2: no wording, no credited composer, and the album year {era}"
+            elif not weak_artist_ok(artists, info):
+                rule, klass, weak = "2 bare title by plays (weak)", "weak", True
+                why = (f"weak guard: a bare title credited to {', '.join(artists) or 'no artist'}, "
+                       f"neither Various Artists nor the work")
             else:
                 plays = _album_plays(album_fn, bid) if album_fn else None
                 e["plays"] = plays
@@ -1468,6 +1485,72 @@ def screen_slots(info, cands):
             c["seasonFrom"] = how
         out.setdefault(slot, []).append(c)
     return out
+
+
+SCREEN_OVERRIDES_PATH = ROOT / "collector" / "screen-overrides.json"
+YTM_BROWSE = "https://music.youtube.com/browse/"
+
+
+def load_screen_overrides(path=None):
+    """collector/screen-overrides.json, or no overrides when it is missing."""
+    try:
+        d = json.loads(Path(path or SCREEN_OVERRIDES_PATH).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return d if isinstance(d, dict) else {}
+
+
+def screen_override_sets(overrides):
+    """screen-overrides.json as lookups every screen leg shares: excluded
+    (medium, TMDb id, album url), season-less volume shows ({TMDb id: True,
+    or a set of album urls}), pins by row slot, and the pinned album urls."""
+    overrides = overrides or {}
+    excluded = {(x["medium"], str(x["tmdb"]), YTM_BROWSE + x["album"]) for x in overrides.get("exclude", [])}
+    seasonless = {str(x["tmdb"]): ({YTM_BROWSE + a for a in x["albums"]} if x.get("albums") else True)
+                  for x in overrides.get("seasonlessVolumes", [])}
+    pins = {}
+    for medium in ("film", "tv"):
+        for p in overrides.get(medium, []):
+            tid = str(p["tmdb"])
+            pins[("film", tid) if medium == "film" else ("tv", tid, p.get("season"), p.get("volume"))] = p
+    return {"excluded": excluded, "seasonless": seasonless, "pins": pins,
+            "pinnedUrls": {YTM_BROWSE + p["album"] for p in pins.values()}}
+
+
+def pin_candidate(p, info, results):
+    """A pin as a winning candidate, built from the title's search result for
+    that album when the search shows it, from the pin itself when not."""
+    result = next((r for r in results or [] if r.get("browseId") == p["album"]), None) or {}
+    artists = [a["name"] for a in result.get("artists") or [] if a.get("name")]
+    thumbs = sorted((t for t in result.get("thumbnails") or [] if t.get("url")), key=lambda t: t.get("width") or 0)
+    names = list(info.get("composers") or []) + list(info.get("aliases") or [])
+    tv = info.get("medium") == "tv"
+    return {"title": result.get("title") or p.get("albumTitle"), "url": YTM_BROWSE + p["album"],
+            "art": thumbs[-1]["url"] if thumbs else None, "rule": "pinned by screen-overrides.json",
+            "klass": "exact", "credited": bool(names) and _credited(artists, names), "extra": 0, "gap": None,
+            "worded": True, "weak": False, "accepted": True,
+            "season": p.get("season") if tv else None, "volume": p.get("volume") if tv else None,
+            "year": result.get("year"), "seasonFrom": "override" if tv else None,
+            "composers": list(info.get("composers") or []) or [a for a in artists if a.lower() != "various artists"],
+            "rank": 0, "artists": artists, "plays": None, "pinned": True}
+
+
+def screen_title_slots(info, results, album_fn, sets, date_fn=None):
+    """One title's row slots with screen-overrides.json applied: an excluded
+    album never lands on that title, an album pinned anywhere lands only on
+    its pin, a season-less show's volumes stay season-less, and a pin takes
+    its slot."""
+    medium, tid = info["medium"], str(info["id"])
+    if medium == "tv" and tid in sets["seasonless"]:
+        info = dict(info, volumesSeasonless=sets["seasonless"][tid])
+    cands = [c for c in screen_matches(results, info, album_fn)
+             if (medium, tid, c["url"]) not in sets["excluded"] and c["url"] not in sets["pinnedUrls"]]
+    date_volumes(cands, date_fn)
+    slots = screen_slots(info, cands)
+    for slot, p in sets["pins"].items():
+        if slot[0] == medium and slot[1] == tid:
+            slots[slot] = [pin_candidate(p, info, results)]
+    return slots
 
 
 def screen_queries(info):
@@ -1717,22 +1800,22 @@ def screen_items(winners, titles):
     return items
 
 
-def _screen_batch(raw, resolve, medium, album_fn, date_fn=None):
-    """Search, judge, and resolve every title in a bundle together."""
+def _screen_batch(raw, resolve, medium, album_fn, date_fn=None, overrides=None):
+    """Search, judge, and resolve every title in a bundle together, with
+    screen-overrides.json applied."""
     data = json.loads(raw)
     gmap = data.get("genres", {})
+    sets = screen_override_sets(load_screen_overrides() if overrides is None else overrides)
     slots, titles, errors = {}, [], 0
     for entry in data.get("results", []):
         info = film_info(entry, data) if medium == "film" else tv_info(entry, data)
         if not info["name"] or not info["date"]:
             continue
         try:
-            cands = screen_matches(screen_search(resolve, info), info, album_fn)
+            slots.update(screen_title_slots(info, screen_search(resolve, info), album_fn, sets, date_fn))
         except Exception:
             errors += 1
             continue
-        date_volumes(cands, date_fn)
-        slots.update(screen_slots(info, cands))
         titles.append((info, entry, gmap))
     winners, _ = resolve_screen(slots)
     items = screen_items(winners, titles)
@@ -1750,7 +1833,7 @@ def parse_tmdb_tv(raw, resolve, album_fn=None, date_fn=None):
 
 
 def parse_tmdb_tv_window(raw, resolve, album_fn=None, date_fn=None, state=None, now=None,
-                         credits_fn=None, cap=TV_WINDOW_SEARCH_CAP):
+                         credits_fn=None, cap=TV_WINDOW_SEARCH_CAP, overrides=None):
     """The daily TV leg on CJ's spend rules: a show whose season premiered
     in the last 60 days is searched at most once every 7 days, and the leg
     spends at most `cap` YouTube Music searches a run, highest-voted shows
@@ -1768,6 +1851,7 @@ def parse_tmdb_tv_window(raw, resolve, album_fn=None, date_fn=None, state=None, 
     for sid in [k for k, v in shows.items() if (v.get("premiere") or "") < since]:
         del shows[sid]  # its premiere left the window
     credits_fn = credits_fn or tmdb_credits
+    sets = screen_override_sets(load_screen_overrides() if overrides is None else overrides)
     composers, aliases = data.setdefault("composers", {}), data.setdefault("aliases", {})
     gmap = data.get("genres", {})
     premiered = data.get("results", [])
@@ -1798,14 +1882,13 @@ def parse_tmdb_tv_window(raw, resolve, album_fn=None, date_fn=None, state=None, 
         if not info["name"] or not info["date"]:
             continue
         try:
-            cands = screen_matches(screen_search(counted, info), info, album_fn)
+            title_slots = screen_title_slots(info, screen_search(counted, info), album_fn, sets, date_fn)
         except Exception:
             errors += 1  # not recorded as searched: due again next run
             continue
         searched += 1
         shows[sid] = {"premiere": entry.get("premiere") or info["date"], "searched": today.isoformat()}
-        date_volumes(cands, date_fn)
-        slots.update(screen_slots(info, cands))
+        slots.update(title_slots)
         titles.append((info, entry, gmap))
     runs.append({"date": today.isoformat(), "premiered": len(premiered), "due": len(due),
                  "searched": searched, "searches": calls[0], "deferred": deferred})
