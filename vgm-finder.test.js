@@ -1152,5 +1152,40 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'a year pick under a flat sort still pages in that year');
   bg.w.eval(`setFeedSort('date')`);
 
+  // ---------- retired rows (MATCHER-FIX-SPEC Phase 2 orphans) ----------
+  const retiredRow = (id, medium, title, date, genre, extra) => Object.assign({
+    id, title, medium, game: title.replace(' Soundtrack', ''), composers: [], date, genres: [genre],
+    sources: [{ name: 'tmdb-' + medium, type: 'catalog', url: 'https://x/' + id, seenAt: '2026-09-01T00:00:00Z' }],
+    ytmSearchUrl: 'https://music.youtube.com/search?q=' + id,
+    ytmAlbumUrl: 'https://music.youtube.com/browse/' + id, art: null, notable: true }, extra || {});
+  const RET = { updatedAt: '2026-09-13T10:00:00Z', releases: [
+    retiredRow('film-live', 'film', 'Live Soundtrack', '2020-01-01', 'Drama'),
+    retiredRow('tv-gone-season-2', 'tv', 'Gone Season 2 Soundtrack', '2018-01-01', 'Mystery', { retired: true }),
+    retiredRow('tv-quiet', 'tv', 'Quiet Soundtrack', '2015-01-01', 'Western', { retired: true }),
+  ] };
+  const rt = makeDom(okFetch(RET),
+    { v: 3, entries: { 'tv-gone-season-2': { status: 'listened', listenedOn: '2026-08-01' } } });
+  await sleep(120);
+  const rtRows = () => [...rt.d.querySelectorAll('#list .row:not(.ghost)')].map(x => x.dataset.id);
+  assert(rt.errors.length === 0, 'a catalog with retired rows boots clean');
+  assert(JSON.stringify(rtRows()) === JSON.stringify(['film-live']), 'retired rows leave the feed');
+  assert(rt.d.querySelector('#colophon').textContent.includes('1 soundtracks'),
+    'the colophon counts only live rows');
+  rt.d.querySelector('#q').value = 'Gone';
+  rt.d.querySelector('#q').dispatchEvent(new rt.w.Event('input', { bubbles: true }));
+  await sleep(20);
+  assert(rtRows().length === 0, 'search never surfaces a retired row');
+  rt.d.querySelector('#qclear').click(); await sleep(20);
+  rt.d.querySelector('#c-filters').click();
+  rt.d.querySelector('#sheetwrap [data-shmed="screen"]').click(); await sleep(20);
+  const rtGenres = [...rt.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
+  assert(rtGenres.includes('Drama') && !rtGenres.includes('Mystery') && !rtGenres.includes('Western'),
+    'retired rows add nothing to the genre lists');
+  rt.d.querySelector('#sheetwrap #shdone').click();
+  rt.w.eval('clearFeedFilters()');
+  rt.d.querySelector('#tabbar button[data-v="library"]').click(); await sleep(20);
+  assert(JSON.stringify(rtRows()) === JSON.stringify(['tv-gone-season-2']),
+    'a retired row the listener logged stays in the library');
+
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

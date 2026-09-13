@@ -27,7 +27,8 @@ DATA = Path(__file__).resolve().parent.parent / "data" / "releases.json"
 def attach(data, row_id, browse_id, composers=None, album_fn=ytm_album, playlist_fn=ytm_playlist,
            tracks_dir=None):
     url = "https://music.youtube.com/browse/" + browse_id
-    claimed = [r["id"] for r in data["releases"] if r.get("ytmAlbumUrl") == url]
+    claimed = [r["id"] for r in data["releases"]
+               if r.get("ytmAlbumUrl") == url and not r.get("retired")]
     if claimed:
         raise SystemExit(f"{browse_id} is already worn by {claimed[0]} — one album, one row")
     row = next((r for r in data["releases"] if r["id"] == row_id), None)

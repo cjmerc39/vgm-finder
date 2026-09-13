@@ -643,7 +643,9 @@ function feedMediumEff(){
 }
 function libMediumEff(){ return multiMedium() ? S.libMedium : 'all'; }
 function feedRows(){
-  let rows = sorted().filter(r => E(r.id).status !== 'hidden');
+  // retired rows (a wrong album with no right one) leave the feed, search
+  // and random; queue, library and liked songs still show them
+  let rows = sorted().filter(r => !r.retired && E(r.id).status !== 'hidden');
   const m = feedMediumEff();
   if(m !== 'all') rows = rows.filter(r => mediumMatches(m, r));
   if(m === 'game'){
@@ -948,7 +950,7 @@ function renderTabs(){
     `<span class="lbl">${t.label}</span>${t.extra}</button>`).join('');
 }
 
-function multiMedium(){ return R.releases.some(r => mediumOf(r) !== 'game'); }
+function multiMedium(){ return R.releases.some(r => !r.retired && mediumOf(r) !== 'game'); }
 const SORT_NAMES = { date: 'newest', oldest: 'oldest', az: 'a–z', added: 'added', plays: 'most played' };
 const LIB_SORT_NAMES = { listenedOn: 'heard on', rating: 'rating', date: 'released' };
 const MEDIUM_NAMES = { all: 'all', game: 'games', screen: 'film + tv', film: 'film', tv: 'tv' };
@@ -1030,7 +1032,7 @@ function genreCounts(medium, sel){
   // genre vocabularies never mix in one list; screen unions film and tv
   const counts = {};
   for(const r of R.releases){
-    if(!mediumMatches(medium, r)) continue;
+    if(r.retired || !mediumMatches(medium, r)) continue;
     for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
   }
   const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 24);
@@ -1040,7 +1042,10 @@ function genreCounts(medium, sel){
 
 function plYearList(){
   const years = new Set();
-  for(const r of R.releases){ const y = (r.date || '').slice(0, 4); if(/^\d{4}$/.test(y)) years.add(y); }
+  for(const r of R.releases){
+    if(r.retired) continue;
+    const y = (r.date || '').slice(0, 4); if(/^\d{4}$/.test(y)) years.add(y);
+  }
   const list = [...years].sort().reverse();
   if(S.plYear !== 'all' && !list.includes(S.plYear)) list.push(S.plYear);
   return list;
@@ -1390,7 +1395,7 @@ function renderColophon(){
   if(LOADSTATE !== 'ok'){ el.innerHTML = ''; return; }
   const h = hiddenRows().length;
   el.innerHTML =
-    `<span>${R.releases.length} soundtracks · collected daily 6am ET` +
+    `<span>${R.releases.filter(r => !r.retired).length} soundtracks · collected daily 6am ET` +
     (R.updatedAt ? ' · synced ' + fmtDate(R.updatedAt).toLowerCase() : '') + `</span> · ` +
     (h ? `<button id="hidtoggle">${h} hidden · ${S.showHidden ? 'tuck away' : 'show'}</button> · ` : '') +
     `<button id="exp">export backup</button> · ` +

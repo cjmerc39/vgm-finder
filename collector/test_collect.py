@@ -1147,7 +1147,8 @@ def test_claimed_albums_never_leave_their_first_row():
          "sources": [], "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_tlou"},
     ]
     dropped = collect.drop_claimed_newcomers(releases, {"the-last-of-us"})
-    assert dropped == 1 and [r["id"] for r in releases] == ["the-last-of-us"]
+    assert dropped == [("tv-imposter", "the-last-of-us")]
+    assert [r["id"] for r in releases] == ["the-last-of-us"]
     # both preexisting: published rows are never deleted
     two = [{"id": "a", "ytmAlbumUrl": "u"}, {"id": "b", "ytmAlbumUrl": "u"}]
-    assert collect.drop_claimed_newcomers(two, {"a", "b"}) == 0 and len(two) == 2
+    assert collect.drop_claimed_newcomers(two, {"a", "b"}) == [] and len(two) == 2

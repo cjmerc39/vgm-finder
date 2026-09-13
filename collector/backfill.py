@@ -185,7 +185,7 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
         print(f"::warning::seeds leg failed: {exc}")
         return 0
     added = 0
-    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
+    claimed = collect.claimed_albums(releases)
     for g in games if isinstance(games, list) else []:
         name = (g.get("name") or "").strip()
         stamp = g.get("first_release_date")
@@ -243,7 +243,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
     its own, or cap-interrupted pages replay forever."""
     cap = YTM_CAP if cap is None else cap
     checked = set(state.get(checked_key, []))
-    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
+    claimed = collect.claimed_albums(releases)
     looked = added = 0
     exhausted = False
     while looked < cap and not exhausted:
@@ -331,7 +331,7 @@ def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
     prefix = "tmdb-film" if medium == "film" else "tmdb-tv"
     src = TMDB_SRC_FILM if medium == "film" else TMDB_SRC_TV
     checked = set(state.get(checked_key, []))
-    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
+    claimed = collect.claimed_albums(releases)
     slots, titles = {}, []
     looked = 0
     exhausted = failed = False
@@ -393,7 +393,7 @@ def resolve_leg(releases, state, resolve_fn, cap):
     """One shot per album-less row: strict + token matching against YTM, with
     a tried-marker so misses never burn future caps."""
     tried = set(state.get("resolveTried", []))
-    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
+    claimed = collect.claimed_albums(releases)
     looked = filled = 0
     untried_left = False
     for r in releases:
@@ -482,7 +482,8 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
                  and film_done and tv_done and resolve_done)
     dropped = collect.drop_claimed_newcomers(releases, preexisting)
     if dropped:
-        print(f"claimed-album guard: {dropped} newcomer rows dropped")
+        print(f"claimed-album guard: {len(dropped)} newcomer rows dropped: "
+              + "; ".join(f"{d} (album worn by {o})" for d, o in dropped))
     fetched = collect.fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP_BACKFILL,
                                   tracks_dir=Path(data_path).parent / "tracks")
     print(f"tracklists: {fetched} looked up")

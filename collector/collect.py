@@ -1060,6 +1060,7 @@ def screen_classify(results, info, album_fn=None):
         if bid in seen:
             continue
         seen.add(bid)
+        e["url"] = "https://music.youtube.com/browse/" + bid
         m = _SCREEN_REJECT.search(title)
         if m:
             out.append(dict(e, verdict=f"reject vocabulary '{m.group(0)}'"))
@@ -1130,6 +1131,31 @@ def screen_classify(results, info, album_fn=None):
 
 def screen_matches(results, info, album_fn=None):
     return [c for c in screen_classify(results, info, album_fn) if c["accepted"]]
+
+
+_COMPILATION_WORDING = re.compile(
+    r"\bmusic from (?:and inspired by )?the (?:original )?(?:motion picture|film|movie)\b"
+    r"|\bsongs? from\b", re.IGNORECASE)
+
+
+def is_songs_album(c):
+    """A licensed-song compilation rather than a score: no credited
+    composer, and the album is credited only to Various Artists or its
+    title uses compilation wording ("Music From The Motion Picture").
+    A credited composer's album never counts, whatever its wording
+    (Inception), and neither does one credited to the show itself
+    (Infinity Train). Flag only: scores-only filtering can come later."""
+    if c.get("credited"):
+        return False
+    artists = [a.lower() for a in c.get("artists") or []]
+    various_only = bool(artists) and all(a == "various artists" for a in artists)
+    return various_only or bool(_COMPILATION_WORDING.search(c.get("title") or ""))
+
+
+def claimed_albums(releases):
+    """Albums rows currently wear. A retired row keeps its album for the
+    listener's history but no longer holds it against the row it belongs to."""
+    return {r["ytmAlbumUrl"] for r in releases if r.get("ytmAlbumUrl") and not r.get("retired")}
 
 
 _CLASS_RANK = {"exact": 0, "extended": 1, "weak": 2}
@@ -1408,6 +1434,8 @@ def screen_items(winners, titles):
                     "art": hit["art"] or (f"{TMDB_IMG}{poster}" if poster else None)}
             if hit.get("weak"):
                 item["weakMatch"] = True
+            if is_songs_album(hit):
+                item["songsAlbum"] = True
             items.append(item)
     return items
 
@@ -1530,8 +1558,8 @@ def _fuzzy_find(norm, releases, norms, med="game"):
     best, best_ratio = None, 0.0
     tail = _numeral_tail(norm)
     for r in releases:
-        if _medium(r) != med:
-            continue  # mediums never fuzzy-merge: a film is not its namesake game
+        if _medium(r) != med or r.get("retired"):
+            continue  # mediums never fuzzy-merge, and retired rows never merge at all
         other = norms[id(r)]
         if _numeral_tail(other) != tail:
             continue  # Mass Effect 2 and 3 are near-identical strings and different albums
@@ -1561,7 +1589,8 @@ def merge(releases, items, source, seen_at):
     norms = {id(r): normalize_title(r["title"]) for r in releases}
     by_numfold = {}
     for r in releases:
-        by_numfold.setdefault((_medium(r), _numfold(norms[id(r)])), r)
+        if not r.get("retired"):  # a retired row is history, never a merge target
+            by_numfold.setdefault((_medium(r), _numfold(norms[id(r)])), r)
     added = merged = 0
     for it in items:
         if not it["title"] or not it["url"]:
@@ -1570,8 +1599,8 @@ def merge(releases, items, source, seen_at):
         slug = slugify(it["title"]) if med == "game" else f"{med}-{slugify(it['title'])}"
         norm = normalize_title(it["title"])
         target = by_id.get(slug)
-        if target is not None and _medium(target) != med:
-            target = None  # the id belongs to another medium's row: never merge
+        if target is not None and (_medium(target) != med or target.get("retired")):
+            target = None  # another medium's row, or a retired one: never merge
         # numeral variants (II vs 2) are the same name exactly — never left to fuzzy odds
         target = target or by_numfold.get((med, _numfold(norm))) or _fuzzy_find(norm, releases, norms, med)
         if target is not None and it["date"] and target.get("date") and _far_apart(it["date"], target["date"]):
@@ -1579,7 +1608,7 @@ def merge(releases, items, source, seen_at):
             # The newcomer gets a year-suffixed id; reruns find it there again.
             slug = f"{slug}-{it['date'][:4]}"
             target = by_id.get(slug)
-            if target is not None and _medium(target) != med:
+            if target is not None and (_medium(target) != med or target.get("retired")):
                 target = None
             if target is not None and target.get("date") and _far_apart(it["date"], target["date"]):
                 target = None
@@ -1607,6 +1636,8 @@ def merge(releases, items, source, seen_at):
                 target["ytmAlbumUrl"] = it["ytmAlbumUrl"]
                 if it.get("weakMatch"):
                     target["weakMatch"] = True
+                if it.get("songsAlbum"):
+                    target["songsAlbum"] = True
                 target.pop("tracks", None)  # a real album arrived: refresh the tracklist with plays
                 target.pop("tracksN", None)
                 target.pop("playsTotal", None)
@@ -1637,6 +1668,8 @@ def merge(releases, items, source, seen_at):
                 entry["genres"] = list(it["genres"])
             if it.get("weakMatch"):
                 entry["weakMatch"] = True  # rule 2 by plays alone: auditable later
+            if it.get("songsAlbum"):
+                entry["songsAlbum"] = True  # licensed songs, not a score
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])
@@ -1649,7 +1682,7 @@ def resolve_albums(releases, resolve, now, cap=RESOLVE_CAP):
     """Fill ytmAlbumUrl for recent rows that lack one, with the same strict
     matcher. Bounded per run; unresolved rows retry until they age out."""
     cutoff = (now - timedelta(days=RESOLVE_WINDOW_DAYS)).strftime("%Y-%m-%d")
-    claimed = {u for u in (x.get("ytmAlbumUrl") for x in releases) if u}
+    claimed = claimed_albums(releases)
     looked = filled = 0
     for r in releases:
         if _medium(r) != "game":
@@ -1716,7 +1749,7 @@ def gaas_albums(releases, resolve, seen_at, names=None):
     # spin-off like Rocket League Sideswipe) must not spawn a twin album row
     claimed = {}
     for x in releases:
-        if x.get("ytmAlbumUrl"):
+        if x.get("ytmAlbumUrl") and not x.get("retired"):
             claimed[x["ytmAlbumUrl"]] = x["id"]
     added = merged = 0
     for name in names:
@@ -1763,16 +1796,18 @@ def drop_claimed_newcomers(releases, preexisting_ids):
     """One album, one row, across mediums: a row born this run wearing an
     album an earlier row already wears is dropped before it is ever
     written. This is what keeps a film or TV row from stealing its
-    namesake game's album (The Last of Us, The Witcher)."""
-    seen = set()
-    kept, dropped = [], 0
+    namesake game's album (The Last of Us, The Witcher). A retired row
+    holds no claim. Returns (dropped row id, owner row id) pairs, so every
+    drop is logged by name."""
+    owner = {}
+    kept, dropped = [], []
     for r in releases:
-        url = r.get("ytmAlbumUrl")
-        if url and url in seen and r["id"] not in preexisting_ids:
-            dropped += 1
+        url = None if r.get("retired") else r.get("ytmAlbumUrl")
+        if url and url in owner and r["id"] not in preexisting_ids:
+            dropped.append((r["id"], owner[url]))
             continue
         if url:
-            seen.add(url)
+            owner.setdefault(url, r["id"])
         kept.append(r)
     releases[:] = kept
     return dropped
@@ -1812,7 +1847,8 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
         return 1
     dropped = drop_claimed_newcomers(releases, preexisting)
     if dropped:
-        print(f"claimed-album guard: {dropped} newcomer rows dropped")
+        print(f"claimed-album guard: {len(dropped)} newcomer rows dropped: "
+              + "; ".join(f"{d} (album worn by {o})" for d, o in dropped))
 
     looked, filled = resolve_albums(releases, resolve_fn, now)
     print(f"album resolver: {looked} lookups, {filled} filled")

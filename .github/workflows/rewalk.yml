@@ -1,0 +1,42 @@
+name: Screen re-walk
+# MATCHER-FIX-SPEC Phase 2. Dispatch by hand: evaluate until it reports
+# "evaluation complete", then resolve (the review stop), then apply only
+# after the review is signed off.
+on:
+  workflow_dispatch:
+    inputs:
+      step:
+        description: Which step to run
+        required: true
+        default: evaluate
+        type: choice
+        options:
+          - evaluate
+          - resolve-partial
+          - resolve
+          - apply
+permissions:
+  contents: write
+concurrency:
+  group: screen-rewalk
+  cancel-in-progress: false
+jobs:
+  rewalk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: python collector/rewalk.py "$STEP"
+        env:
+          STEP: ${{ inputs.step }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      - run: |
+          git config user.name vgm-bot
+          git config user.email actions@users.noreply.github.com
+          git add collector/rewalk collector/backfill-state.json data
+          git diff --cached --quiet || (git commit -m "rewalk $STEP" && git pull --rebase && git push)
+        env:
+          STEP: ${{ inputs.step }}
