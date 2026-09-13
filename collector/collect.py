@@ -819,6 +819,10 @@ TMDB_FILM_VOTES = 5
 TMDB_TV_WINDOW_DAYS = 60   # season scores trail the premiere by weeks
 TMDB_TV_VOTES = 10
 TMDB_PAGES = 2             # discover pages per daily run, 20 titles each
+TMDB_TV_MAX_PAGES = 50     # the TV window pages until done; 541 shows (28 pages) at 10 votes when probed
+TV_WINDOW_RESEARCH_DAYS = 7  # a show inside the window is searched at most once a week
+TV_WINDOW_SEARCH_CAP = 60    # YouTube Music searches the TV window may spend in one run
+TV_WINDOW_RUNS_KEPT = 30     # recent runs kept to say how often the cap binds
 SCREEN_YEAR_WINDOW = 2
 WEAK_PLAYS_MIN = 100_000   # rule 2 without a composer: total plays on the album
 
@@ -1466,15 +1470,20 @@ def screen_slots(info, cands):
     return out
 
 
-def screen_search(resolve, info):
-    """Rule 8: the title's search, plus one on TMDb's original title when
-    it reads differently. Results merge in order with repeats dropped."""
+def screen_queries(info):
+    """Rule 8: the title's search, plus one on TMDb's original title when it
+    reads differently."""
     queries = [_query(info["name"])]
     orig = info.get("original")
     if orig and _screen_base(orig) != _screen_base(info["name"]):
         queries.append(_query(orig))
+    return queries
+
+
+def screen_search(resolve, info):
+    """Every query for a title, results merged in order with repeats dropped."""
     merged, seen = [], set()
-    for q in queries:
+    for q in screen_queries(info):
         for r in resolve(q) or []:
             key = r.get("browseId") or id(r)
             if key not in seen:
@@ -1613,18 +1622,35 @@ def tmdb_film_fetch(now=None):
 
 
 def tmdb_tv_fetch(now=None):
-    """Recent shows above the vote floor, bundled for the parser."""
+    """Shows whose season premiered inside the window, bundled for the window
+    parser. discover/tv's air_date filter returns every show with an episode
+    inside the window (the 2026-09-13 probe: 541 shows at 10 votes, about 40%
+    of them real premieres, the rest mid-season), so each show's season air
+    dates narrow it to the shows whose season premiered inside it. A new show
+    arrives the same way, its first season premiering inside the window; an
+    old one with a new season (Futurama's eleventh) no longer slips past.
+    Credits are left for the parser, which reads them only for shows it
+    searches."""
     now = now or datetime.now(timezone.utc)
     since = (now - timedelta(days=TMDB_TV_WINDOW_DAYS)).strftime("%Y-%m-%d")
-    results = []
-    for page in range(1, TMDB_PAGES + 1):
+    today = now.strftime("%Y-%m-%d")
+    found, page, pages = [], 1, 1
+    while page <= min(pages, TMDB_TV_MAX_PAGES):
         d = _tmdb_get("discover/tv", page=page, **{
-            "first_air_date.gte": since, "first_air_date.lte": now.strftime("%Y-%m-%d"),
+            "air_date.gte": since, "air_date.lte": today,
             "vote_count.gte": TMDB_TV_VOTES, "sort_by": "vote_count.desc"})
-        results.extend(d.get("results", []))
-        if page >= d.get("total_pages", 1):
-            break
-    return _tmdb_bundle("tv", results)
+        pages = int(d.get("total_pages") or 1)
+        found.extend(d.get("results") or [])
+        page += 1
+    shows, seasons = [], {}
+    for x in found:
+        aired = tmdb_seasons(x["id"])
+        premieres = [d for d in aired.values() if d and since <= d <= today]
+        if premieres:
+            shows.append(dict(x, premiere=max(premieres)))
+            seasons[str(x["id"])] = aired
+    return json.dumps({"results": shows, "genres": _tmdb_genre_map("tv"), "seasons": seasons,
+                       "composers": {}, "aliases": {}, "discovered": len(found), "since": since}).encode()
 
 
 def _tmdb_genres(entry, gmap):
@@ -1722,6 +1748,79 @@ def parse_tmdb_film(raw, resolve, album_fn=None, date_fn=None):
 def parse_tmdb_tv(raw, resolve, album_fn=None, date_fn=None):
     return _screen_batch(raw, resolve, "tv", album_fn, date_fn)
 
+
+def parse_tmdb_tv_window(raw, resolve, album_fn=None, date_fn=None, state=None, now=None,
+                         credits_fn=None, cap=TV_WINDOW_SEARCH_CAP):
+    """The daily TV leg on CJ's spend rules: a show whose season premiered
+    in the last 60 days is searched at most once every 7 days, and the leg
+    spends at most `cap` YouTube Music searches a run, highest-voted shows
+    first; when the next show's searches would pass the cap, it and every
+    show after it wait for the next run. `state` (tv-window-state.json)
+    keeps each show's last search and the recent runs, so the summary can
+    say how often the cap binds."""
+    data = json.loads(raw)
+    now = now or datetime.now(timezone.utc)
+    today = now.date()
+    state = state if state is not None else {}
+    shows = state.setdefault("shows", {})
+    runs = state.setdefault("runs", [])
+    since = data.get("since") or (now - timedelta(days=TMDB_TV_WINDOW_DAYS)).strftime("%Y-%m-%d")
+    for sid in [k for k, v in shows.items() if (v.get("premiere") or "") < since]:
+        del shows[sid]  # its premiere left the window
+    credits_fn = credits_fn or tmdb_credits
+    composers, aliases = data.setdefault("composers", {}), data.setdefault("aliases", {})
+    gmap = data.get("genres", {})
+    premiered = data.get("results", [])
+    due, waiting = [], 0
+    for entry in premiered:
+        last = (shows.get(str(entry.get("id"))) or {}).get("searched")
+        if last and (today - datetime.fromisoformat(last).date()).days < TV_WINDOW_RESEARCH_DAYS:
+            waiting += 1
+        else:
+            due.append(entry)
+    due.sort(key=lambda x: -(x.get("vote_count") or 0))
+    calls = [0]
+
+    def counted(query):
+        calls[0] += 1
+        return resolve(query)
+    slots, titles, searched, deferred, errors = {}, [], 0, 0, 0
+    for n, entry in enumerate(due):
+        sid = str(entry.get("id"))
+        queries = screen_queries({"name": (entry.get("name") or "").strip(),
+                                  "original": (entry.get("original_name") or "").strip() or None})
+        if calls[0] + len(queries) > cap:
+            deferred = len(due) - n
+            break
+        if sid not in composers:
+            composers[sid], aliases[sid] = credits_fn("tv", entry["id"])
+        info = tv_info(entry, data)
+        if not info["name"] or not info["date"]:
+            continue
+        try:
+            cands = screen_matches(screen_search(counted, info), info, album_fn)
+        except Exception:
+            errors += 1  # not recorded as searched: due again next run
+            continue
+        searched += 1
+        shows[sid] = {"premiere": entry.get("premiere") or info["date"], "searched": today.isoformat()}
+        date_volumes(cands, date_fn)
+        slots.update(screen_slots(info, cands))
+        titles.append((info, entry, gmap))
+    runs.append({"date": today.isoformat(), "premiered": len(premiered), "due": len(due),
+                 "searched": searched, "searches": calls[0], "deferred": deferred})
+    del runs[:-TV_WINDOW_RUNS_KEPT]
+    bound = sum(1 for r in runs if r.get("deferred"))
+    print(f"tmdb-tv window: {data.get('discovered', len(premiered))} shows aired in the last {TMDB_TV_WINDOW_DAYS} days, "
+          f"{len(premiered)} with a season premiere; {len(due)} due, {waiting} searched in the last "
+          f"{TV_WINDOW_RESEARCH_DAYS} days; {searched} searched using {calls[0]} of {cap} searches, "
+          f"{deferred} left for the next run by the cap; the cap bound on {bound} of the last {len(runs)} runs")
+    winners, _ = resolve_screen(slots)
+    items = screen_items(winners, titles)
+    if errors and not items:
+        raise RuntimeError(f"all {errors} album lookups failed")
+    return items
+
 SOURCES = [
     # nowplaying.cool dropped 2026-07-30 at CJ's request: headline rows with
     # no art or game anchor read as noise next to catalog rows (the parser
@@ -1739,8 +1838,8 @@ SOURCES = [
     # warns and skips these two while everything else still runs
     {"name": "tmdb-film", "type": "catalog", "url": "tmdb:film", "parse": parse_tmdb_film,
      "albums": True},
-    {"name": "tmdb-tv", "type": "catalog", "url": "tmdb:tv", "parse": parse_tmdb_tv,
-     "albums": True},
+    {"name": "tmdb-tv", "type": "catalog", "url": "tmdb:tv", "parse": parse_tmdb_tv_window,
+     "albums": True, "window": True},
 ]
 
 _PUNCT = re.compile(r"[^\w\s]", re.UNICODE)
@@ -2097,6 +2196,16 @@ def weak_match_summary(releases):
     return f"weakMatch rows: {len(live)} ({film} film, {len(live) - film} tv)"
 
 
+def load_window_state(path):
+    try:
+        d = json.loads(Path(path).read_text(encoding="utf-8"))
+        if isinstance(d, dict):
+            return {"shows": dict(d.get("shows") or {}), "runs": list(d.get("runs") or [])}
+    except (OSError, ValueError):
+        pass
+    return {"shows": {}, "runs": []}
+
+
 def load_data(path):
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -2108,7 +2217,8 @@ def load_data(path):
 
 
 def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
-        itunes_fn=catalog_tracks, data_path=DATA_PATH, now=None, date_fn=album_release_date):
+        itunes_fn=catalog_tracks, data_path=DATA_PATH, now=None, date_fn=album_release_date,
+        window_path=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_data(data_path)
@@ -2116,17 +2226,26 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     before = json.dumps(releases, sort_keys=True, ensure_ascii=False)
     preexisting = {r["id"] for r in releases}
 
+    # the TV window's weekly searches and cap history live beside the collector
+    window_path = Path(window_path) if window_path else Path(data_path).parent.parent / "collector" / "tv-window-state.json"
+    window_state = load_window_state(window_path)
+    window_before = json.dumps(window_state, sort_keys=True)
     ok = 0
     for source in SOURCES:
         try:
             # rule 2 reads plays; TV volumes read their release dates
             extra = {"album_fn": album_fn, "date_fn": date_fn} if source.get("albums") else {}
+            if source.get("window"):
+                extra.update(state=window_state, now=now)
             items = source["parse"](fetch_fn(source["url"]), resolve_fn, **extra)
             added, merged = merge(releases, items, source, seen_at)
             print(f"{source['name']}: {len(items)} items -> {added} new, {merged} merged")
             ok += 1
         except Exception as exc:  # one bad source must not kill the others
             print(f"::warning::{source['name']} failed: {exc}")
+    if json.dumps(window_state, sort_keys=True) != window_before:
+        window_path.parent.mkdir(parents=True, exist_ok=True)
+        window_path.write_text(json.dumps(window_state, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     if ok == 0:
         print("::error::every source failed")
         return 1

@@ -1242,6 +1242,63 @@ def test_parse_tmdb_film_falls_back_to_the_poster():
     assert items[0]["art"] == "https://image.tmdb.org/t/p/w500/oppie.jpg"
 
 
+def test_tv_window_fetch_keeps_shows_whose_season_premiered_inside_it(monkeypatch):
+    now = datetime(2026, 9, 13, 10, tzinfo=timezone.utc)
+
+    def fake(path, **params):
+        if path == "discover/tv":
+            assert (params["air_date.gte"], params["air_date.lte"]) == ("2026-07-15", "2026-09-13")
+            assert params["vote_count.gte"] == 10
+            return {"total_pages": 1, "results": [
+                {"id": 1, "name": "Futurama", "first_air_date": "1999-03-28", "vote_count": 3899},
+                {"id": 2, "name": "Criminal Minds", "first_air_date": "2005-09-22", "vote_count": 1000},
+                {"id": 3, "name": "New Show", "first_air_date": "2026-08-01", "vote_count": 40}]}
+        if path == "tv/1":
+            return {"seasons": [{"season_number": 10, "air_date": "2023-07-24"},
+                                {"season_number": 11, "air_date": "2026-08-03"}]}
+        if path == "tv/2":  # mid-season: episodes in the window, premiere before it
+            return {"seasons": [{"season_number": 19, "air_date": "2026-05-28"}]}
+        if path == "tv/3":
+            return {"seasons": [{"season_number": 1, "air_date": "2026-08-01"}]}
+        if path == "genre/tv/list":
+            return {"genres": []}
+        raise AssertionError(path)
+    monkeypatch.setattr(collect, "_tmdb_get", fake)
+    monkeypatch.setattr(collect, "_TMDB_GMAP", {})
+    bundle = json.loads(collect.tmdb_tv_fetch(now))
+    assert [(x["id"], x["premiere"]) for x in bundle["results"]] == [(1, "2026-08-03"), (3, "2026-08-01")]
+    assert bundle["discovered"] == 3 and bundle["seasons"]["1"]["11"] == "2026-08-03"
+
+
+def test_tv_window_searches_each_show_weekly_under_a_daily_cap(capsys):
+    def show(i, votes, original=None):
+        return {"id": i, "name": f"Show {i}", "original_name": original or f"Show {i}", "first_air_date": "2020-01-01",
+                "vote_count": votes, "premiere": "2026-08-20", "genre_ids": []}
+    bundle = json.dumps({"results": [show(1, 100), show(2, 900), show(3, 500), show(4, 300, original="Série Quatre")],
+                         "genres": {}, "seasons": {str(i): {"1": "2020-01-01", "2": "2026-08-20"} for i in range(1, 5)},
+                         "composers": {}, "aliases": {}, "discovered": 9, "since": "2026-07-15"}).encode()
+    state = {"shows": {"3": {"premiere": "2026-08-20", "searched": "2026-09-10"},
+                       "8": {"premiere": "2026-06-01", "searched": "2026-06-02"}}, "runs": []}
+    asked = []
+    credits = lambda kind, tid: ([], [])
+    day1 = datetime(2026, 9, 13, 10, tzinfo=timezone.utc)
+    assert collect.parse_tmdb_tv_window(bundle, lambda q: asked.append(q) or [], state=state, now=day1,
+                                        credits_fn=credits, cap=2) == []
+    # show 3 was searched three days ago; show 2 has the most votes; show 4 needs
+    # two searches with one left, so it and show 1 wait for the next run
+    assert asked == [collect._query("Show 2")]
+    assert state["shows"]["2"] == {"premiere": "2026-08-20", "searched": "2026-09-13"}
+    assert "8" not in state["shows"]  # its premiere left the window
+    assert state["runs"] == [{"date": "2026-09-13", "premiered": 4, "due": 3, "searched": 1, "searches": 1, "deferred": 2}]
+    assert "the cap bound on 1 of the last 1 runs" in capsys.readouterr().out
+    asked.clear()
+    day2 = datetime(2026, 9, 14, 10, tzinfo=timezone.utc)
+    collect.parse_tmdb_tv_window(bundle, lambda q: asked.append(q) or [], state=state, now=day2, credits_fn=credits)
+    assert asked == [collect._query("Show 4"), collect._query("Série Quatre"), collect._query("Show 1")]
+    assert state["runs"][-1]["deferred"] == 0
+    assert "the cap bound on 1 of the last 2 runs" in capsys.readouterr().out
+
+
 def test_parse_tmdb_tv_dates_rows_by_season():
     items = collect.parse_tmdb_tv(raw("tmdb-tv.json"), screen_resolve)
     assert len(items) == 6  # Succession seasons 1-4 plus The Last of Us seasons 1-2
