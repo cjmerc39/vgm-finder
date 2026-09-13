@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T23:07:17Z",
+  "updatedAt": "2026-09-13T14:02:31Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -63352,7 +63352,10 @@
       "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WvZdQ0uzPwr",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4963450/22723f86d198bdde5da85c37a883c8e650724f00/header.jpg",
       "notable": true,
-      "medium": "game"
+      "medium": "game",
+      "ytmPlaylistId": "OLAK5uy_nIOyFwqZgebv8DhDn6i-hQSgDRT6MtzAY",
+      "tracksN": 26,
+      "playsTotal": 1882
     },
     {
       "id": "paper-void",
@@ -63445,7 +63448,10 @@
       "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hM82YkHUP8U",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4744750/eaf7b7523650c839c4876f9c82aee65a214a9f42/header.jpg",
       "notable": true,
-      "medium": "game"
+      "medium": "game",
+      "ytmPlaylistId": "OLAK5uy_nZ5cv8OfNdEmgEthdANfnfvOBeWa1w4mk",
+      "tracksN": 14,
+      "playsTotal": 370
     },
     {
       "id": "pro-jank-footy",
@@ -69018,7 +69024,10 @@
       "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fBdx29Fmck1",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5195240/d0e0453df1349a6ae54b0c26ed5c26fe98d2cbbd/header.jpg",
       "notable": true,
-      "medium": "game"
+      "medium": "game",
+      "ytmPlaylistId": "OLAK5uy_lft-7a9QrvOsPciOoQP-vOY9Ny7DJIZ3Y",
+      "tracksN": 39,
+      "playsTotal": 678
     },
     {
       "id": "touhou-koumakyou-new-classic",
@@ -172080,6 +172089,386 @@
       "ytmPlaylistId": "OLAK5uy_lxxks9xKjqEBizX6kQENnV9NmrpOU91V8",
       "tracksN": 14,
       "playsTotal": 147700
+    },
+    {
+      "id": "your-fiancée",
+      "title": "Your Fiancée Soundtrack",
+      "medium": "game",
+      "game": "Your Fiancée",
+      "composers": [],
+      "date": "2026-09-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4996750/Your_Fiancee_Soundtrack/",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Your+Fianc%C3%A9e+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4996750/8ca235d312e12769e5865e9977964c99057177b1/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "fox7-the-real-workout-simulator",
+      "title": "Fox7: The Real Workout Simulator Soundtrack",
+      "medium": "game",
+      "game": "Fox7: The Real Workout Simulator",
+      "composers": [],
+      "date": "2026-09-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4987340/Fox7_The_Real_Workout_Simulator_Soundtrack/",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Fox7%3A+The+Real+Workout+Simulator+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4987340/645cd6a6d436e14f5ce8fb306d9353807c0d71ec/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "messy-hearts",
+      "title": "Messy Hearts Original Soundtrack",
+      "medium": "game",
+      "game": "Messy Hearts",
+      "composers": [],
+      "date": "2026-09-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4669970/Messy_Hearts_Original_Soundtrack/",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Messy+Hearts+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669970/e787a82e93e923c1653d479a08263ac734a7b2f9/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "tomotomo",
+      "title": "TomoTomo Soundtrack",
+      "medium": "game",
+      "game": "TomoTomo",
+      "composers": [],
+      "date": "2026-09-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4711100/TomoTomo_Soundtrack/",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=TomoTomo+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4711100/6c35fc174b3424160ac7a550d456ce9096eb6bfc/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "film-drawn-together",
+      "title": "Drawn Together Soundtrack",
+      "medium": "film",
+      "game": "Drawn Together",
+      "composers": [
+        "Luis Almau"
+      ],
+      "date": "2026-09-09",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1440098",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Drawn+Together+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_X16bx1hrjM5",
+      "art": "https://yt3.googleusercontent.com/xTjAcdszazzCspX3y0h3QMR1PmqTb72k20n8pi1l4wR4YqTPmxwI_j0Mpu_Xf9ybeRGitF2Ix2M1zF-F=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Enfrentados: Marfil (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Romance",
+        "Thriller"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mhyhUv8hHBodBsBFkdqjPLnV-x91jWho4",
+      "tracksN": 5,
+      "playsTotal": 53100
+    },
+    {
+      "id": "film-the-uprising",
+      "title": "The Uprising Soundtrack",
+      "medium": "film",
+      "game": "The Uprising",
+      "composers": [
+        "Volker Bertelmann"
+      ],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/977942",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Uprising+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mrQkFNIAoWP",
+      "art": "https://yt3.googleusercontent.com/oeRyE0uHqQQrmdliq5K8Y0ciap7aJbHNb-f9btOhfl_pFD7sS4ZAWEjJq9KEQukzW3ED5yFqq031hL4=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Uprising (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama",
+        "Action",
+        "History"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nPKY6P_vECcuZAcOW4n1QGZbcJToNxLUk",
+      "tracksN": 28,
+      "playsTotal": 2914
+    },
+    {
+      "id": "tv-furious",
+      "title": "Furious Soundtrack",
+      "medium": "tv",
+      "game": "Furious",
+      "composers": [
+        "Ariel Marx"
+      ],
+      "date": "2026-07-27",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/287238",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Furious+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_412VMg8pd0m",
+      "art": "https://yt3.googleusercontent.com/rf9bvha3Y5NJI8wdz-ghs4N9Z7v3Kvo_fFqCJ2Lc8tFeLLHn13LOFwjcpjXSVKZWesGsPCfL8jG4_O4=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Furious (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l5Api83DijesHwTMf8gvjLdhV9aRAuyjA",
+      "tracksN": 26,
+      "playsTotal": 75800
+    },
+    {
+      "id": "tv-ride-or-die",
+      "title": "Ride or Die Soundtrack",
+      "medium": "tv",
+      "game": "Ride or Die",
+      "composers": [
+        "Isabella Summers"
+      ],
+      "date": "2026-07-15",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/241882",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ride+or+Die+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ELlilV2F9CX",
+      "art": "https://yt3.googleusercontent.com/UZeFHd-qMiaI2VS1c7bfJLz66E0vGGQHJ_Zhsoc0ATgJdcDL6dNNKXEHfbHO2KOK5eSN32bOjPzcJgmo=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Ride or Die (Prime Original Series Soundtrack)",
+      "genres": [
+        "Action & Adventure"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n3reu4j-iG4uIXJDsCDE7HwI5yMbb2le4",
+      "tracksN": 13,
+      "playsTotal": 33800
+    },
+    {
+      "id": "tv-the-east-palace",
+      "title": "The East Palace Soundtrack",
+      "medium": "tv",
+      "game": "The East Palace",
+      "composers": [],
+      "date": "2026-07-17",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/279323",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+East+Palace+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9urVyQTn73o",
+      "art": "https://yt3.googleusercontent.com/8DAZmzXslbMApB-4ESnedSLDTvu5myvnFQhU4ti8T85-2S1G8Q1sfcByaA_gVYZLmUIaX7u9ODfVUXet6Q=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The East Palace (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Mystery",
+        "Action & Adventure",
+        "Sci-Fi & Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nux97e_lIhBzH4OnQ7cBJc__KDMmzu73Q",
+      "tracksN": 47,
+      "playsTotal": 447800
+    },
+    {
+      "id": "tv-our-sticky-love",
+      "title": "Our Sticky Love Soundtrack",
+      "medium": "tv",
+      "game": "Our Sticky Love",
+      "composers": [],
+      "date": "2026-08-07",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/291496",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Our+Sticky+Love+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_0QmhsBOHnsT",
+      "art": "https://yt3.googleusercontent.com/NWtxiaFut2Cn8N49ZrWh98VQqrBQ9IFC8QTgod1m4-x5qWsSZRt8uJgql85pO5jdr-JrzIaW2Ez_Z4XJ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Our Sticky Love (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nvDs7MC0bbX4Rtqzl7QxkLUFhfJx5YtBg",
+      "tracksN": 25,
+      "playsTotal": 1315500
+    },
+    {
+      "id": "tv-the-hawk",
+      "title": "The Hawk Soundtrack",
+      "medium": "tv",
+      "game": "The Hawk",
+      "composers": [
+        "Toto Miranda",
+        "Yvonne Lambert",
+        "Josh Lambert"
+      ],
+      "date": "2026-07-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/254528",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Hawk+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_APZ5KQ6MX2q",
+      "art": "https://yt3.googleusercontent.com/K_I-Wpy4WA28gRlcKqkTVZqOBqUwXOOykAP77-grCRrR6T7sBP6WdAT7rRtswdkSOAkopWm9QkydI8Apag=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Hawk (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Comedy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lKcGc6H2o2rKiwlJI5u-O6u_hCRl2WYnA",
+      "tracksN": 32,
+      "playsTotal": 14462
+    },
+    {
+      "id": "tv-pompeii-out-of-time-with-tom-hiddleston",
+      "title": "Pompeii: Out of Time with Tom Hiddleston Soundtrack",
+      "medium": "tv",
+      "game": "Pompeii: Out of Time with Tom Hiddleston",
+      "composers": [
+        "Aisling Brouwer",
+        "National Geographic"
+      ],
+      "date": "2026-07-22",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/277640",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pompeii%3A+Out+of+Time+with+Tom+Hiddleston+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_lIpzssxxFVW",
+      "art": "https://yt3.googleusercontent.com/h2e2RqabYqLKixHDZSkC8pEET2lcEkf_eAEat71aAnERZNcP0VCMkZr-R0J-sqODIEipPN_e4_bWvMko=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Pompeii: Out of Time with Tom Hiddleston (Original Series Soundtrack)",
+      "genres": [
+        "Documentary",
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l4DZPnGep187GInzUD3GrjszFnFid6dw4",
+      "tracksN": 17,
+      "playsTotal": 179871
+    },
+    {
+      "id": "tv-my-brilliant-career",
+      "title": "My Brilliant Career Soundtrack",
+      "medium": "tv",
+      "game": "My Brilliant Career",
+      "composers": [
+        "Frank Tetaz"
+      ],
+      "date": "2026-08-13",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/309798",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=My+Brilliant+Career+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_EgluiIA8P0o",
+      "art": "https://yt3.googleusercontent.com/affayPbEdlB4tL1B7_uI-_ujPUxfQhAq78z7br9-KM6H2Jkl1gtnzmpxF40Dt3tUIMiqvcQPL40UiL5sGg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "My Brilliant Career (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mXkUkEqxzh4xMaq4NZ4rpmqBdWKQpccGU",
+      "tracksN": 31,
+      "playsTotal": 9450
+    },
+    {
+      "id": "tv-the-early-spring",
+      "title": "The Early Spring Soundtrack",
+      "medium": "tv",
+      "game": "The Early Spring",
+      "composers": [],
+      "date": "2026-08-26",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/299952",
+          "seenAt": "2026-09-13T14:02:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Early+Spring+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uPaF9aecsNr",
+      "art": "https://yt3.googleusercontent.com/0zd99oykz1u3Jq2OfHFuvRt6uYBvICuVd4FoiUevpmwklCtpRe9Aid5FaO0Qozq3polze6BXVY16n_02eQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "早春晴朗 影视原声带",
+      "genres": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nO4OR5foUEyBhS1Z_LTneMgwSr_G7yrlk",
+      "tracksN": 26,
+      "playsTotal": 3266381
     }
   ]
 }
