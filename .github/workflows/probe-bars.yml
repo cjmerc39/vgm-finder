@@ -1,0 +1,19 @@
+name: Bars probe
+# MATCHER-FIX-SPEC bars proposal. Read-only: prints title counts at candidate
+# vote bars and the named test shows' votes, touches no data, commits nothing.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: python collector/probe_bars.py
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
