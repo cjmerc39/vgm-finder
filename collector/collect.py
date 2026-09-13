@@ -1409,8 +1409,9 @@ def screen_slot(info, c):
     season belongs to the most recent season that premiered on or before
     the album's release date (c["releaseDate"], from Apple or Deezer), or,
     with only a year to go on, before that year ended; a one-season show's
-    volumes are its season. A show marked volumesSeasonless (its volumes
-    span seasons) and a volume released before any season aired stay
+    volumes are its season. A volume the overrides mark season-less
+    (volumesSeasonless: True for every volume of the show, or a set of
+    album urls) and a volume released before any season aired stay
     season-less. Returns (slot, "title" | "release date" | "release year" |
     "only season" | "override" | "season-less" | None)."""
     if info["medium"] == "film":
@@ -1422,7 +1423,8 @@ def screen_slot(info, c):
         return ("tv", info["id"], None, None), None
     if _SEASON_RANGE.search(_screen_base(c.get("title") or "")):
         return ("tv", info["id"], None, volume), "several seasons"
-    if info.get("volumesSeasonless"):
+    seasonless = info.get("volumesSeasonless")
+    if seasonless is True or (seasonless and c.get("url") in seasonless):
         return ("tv", info["id"], None, volume), "override"
     seasons = {int(n): d for n, d in (info.get("seasons") or {}).items() if str(n).isdigit() and int(n) > 0}
     if len(seasons) == 1:

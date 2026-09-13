@@ -1112,6 +1112,15 @@ def test_a_volume_belongs_to_the_latest_season_premiered_by_its_release_date():
         (("tv", "62560", None, 1), "override")
 
 
+def test_a_season_less_override_can_name_single_albums():
+    herc = {"medium": "tv", "id": "8554", "seasons": {"4": "1998-09-21", "6": "1999-10-11"},
+            "volumesSeasonless": {"https://music.youtube.com/browse/vol4"}}
+    vol4 = {"url": "https://music.youtube.com/browse/vol4", "season": None, "volume": 4, "releaseDate": "2000-01-01"}
+    vol2 = dict(vol4, url="https://music.youtube.com/browse/vol2", volume=2)
+    assert collect.screen_slot(herc, vol4) == (("tv", "8554", None, 4), "override")
+    assert collect.screen_slot(herc, vol2) == (("tv", "8554", 6, 2), "release date")
+
+
 def test_a_title_naming_several_seasons_names_none():
     assert collect._season_of("BARRY (HBO Original Music Soundtrack Season 1 & 2)") is None
     assert collect._season_of("The Mentalist: Seasons 1-2 (Original Television Soundtrack)") is None

@@ -1,14 +1,14 @@
 {
- "generatedAt": "2026-09-13T17:21:18Z",
+ "generatedAt": "2026-09-13T18:04:33Z",
  "counts": {
   "corrections": 75,
   "additions": 720,
-  "orphans": 86,
+  "orphans": 79,
   "unverified": 2,
-  "unchanged": 3139,
+  "unchanged": 3146,
   "reids": 91,
   "reidsBlocked": 0,
-  "pinned": 9,
+  "pinned": 16,
   "excludedByOverrides": 19,
   "duplicateSlotRows": 0,
   "albumClaimsSettled": 8,
@@ -19,7 +19,7 @@
   "weakDroppedByArtistGuard": 113,
   "yearFromAlbumPage": 0,
   "tvSeasonRowsBefore": 688,
-  "tvSeasonRowsAfter": 916
+  "tvSeasonRowsAfter": 923
  },
  "hitRates": {
   "before": {
@@ -42,8 +42,8 @@
    },
    "tv": {
     "titles": 1163,
-    "withAlbum": 500,
-    "rate": 0.43
+    "withAlbum": 505,
+    "rate": 0.434
    }
   }
  },
@@ -842,8 +842,8 @@
   },
   {
    "row": "tv-hercules-the-legendary-journeys-season-4",
-   "newId": "tv-hercules-the-legendary-journeys-season-6-vol-4",
-   "title": "Hercules: The Legendary Journeys Season 6 Vol. 4 Soundtrack",
+   "newId": "tv-hercules-the-legendary-journeys-vol-4",
+   "title": "Hercules: The Legendary Journeys Vol. 4 Soundtrack",
    "from": [
     "tv",
     "4615",
@@ -853,10 +853,10 @@
    "slot": [
     "tv",
     "4615",
-    6,
+    null,
     4
    ],
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "album": {
     "title": "Hercules: The Legendary Journeys, Vol. 4 (Original Television Soundtrack)",
     "url": "https://music.youtube.com/browse/MPREb_mmFVACeI3DW"
@@ -1590,8 +1590,8 @@
   },
   {
    "row": "tv-teen-titans-season-1",
-   "newId": "tv-teen-titans-season-5-vol-1",
-   "title": "Teen Titans Season 5 Vol. 1 Soundtrack",
+   "newId": "tv-teen-titans-vol-1",
+   "title": "Teen Titans Vol. 1 Soundtrack",
    "from": [
     "tv",
     "604",
@@ -1601,10 +1601,10 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     1
    ],
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "album": {
     "title": "Teen Titans: Original Soundtrack Vol. 1",
     "url": "https://music.youtube.com/browse/MPREb_l5NneXBzjMa"
@@ -1612,8 +1612,8 @@
   },
   {
    "row": "tv-teen-titans-season-2",
-   "newId": "tv-teen-titans-season-5-vol-2",
-   "title": "Teen Titans Season 5 Vol. 2 Soundtrack",
+   "newId": "tv-teen-titans-vol-2",
+   "title": "Teen Titans Vol. 2 Soundtrack",
    "from": [
     "tv",
     "604",
@@ -1623,10 +1623,10 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     2
    ],
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "album": {
     "title": "Teen Titans: Original Soundtrack-Vol. 2",
     "url": "https://music.youtube.com/browse/MPREb_kchvJmSn0VP"
@@ -1634,8 +1634,8 @@
   },
   {
    "row": "tv-teen-titans-season-3",
-   "newId": "tv-teen-titans-season-5-vol-3",
-   "title": "Teen Titans Season 5 Vol. 3 Soundtrack",
+   "newId": "tv-teen-titans-vol-3",
+   "title": "Teen Titans Vol. 3 Soundtrack",
    "from": [
     "tv",
     "604",
@@ -1645,10 +1645,10 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     3
    ],
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "album": {
     "title": "Teen Titans: Original Soundtrack-Vol. 3",
     "url": "https://music.youtube.com/browse/MPREb_P7qjm06nrbE"
@@ -1656,8 +1656,8 @@
   },
   {
    "row": "tv-teen-titans-season-4",
-   "newId": "tv-teen-titans-season-5-vol-4",
-   "title": "Teen Titans Season 5 Vol. 4 Soundtrack",
+   "newId": "tv-teen-titans-vol-4",
+   "title": "Teen Titans Vol. 4 Soundtrack",
    "from": [
     "tv",
     "604",
@@ -1667,10 +1667,10 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     4
    ],
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "album": {
     "title": "Teen Titans: Original Soundtrack-Vol. 4",
     "url": "https://music.youtube.com/browse/MPREb_NTEcONfzLNO"
@@ -1678,8 +1678,8 @@
   },
   {
    "row": "tv-teen-titans-season-5",
-   "newId": "tv-teen-titans-season-5-vol-5",
-   "title": "Teen Titans Season 5 Vol. 5 Soundtrack",
+   "newId": "tv-teen-titans-vol-5",
+   "title": "Teen Titans Vol. 5 Soundtrack",
    "from": [
     "tv",
     "604",
@@ -1689,10 +1689,10 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     5
    ],
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "album": {
     "title": "Teen Titans: Original Soundtrack-Vol. 5",
     "url": "https://music.youtube.com/browse/MPREb_AY0SrYB6BqX"
@@ -47696,34 +47696,6 @@
    "reason": "medium: 'Motion Picture' names a film"
   },
   {
-   "row": "tv-mad-men",
-   "slot": [
-    "tv",
-    "1104",
-    null,
-    null
-   ],
-   "album": {
-    "title": "Mad Men: On the Rocks (Music from the Television Series)",
-    "url": "https://music.youtube.com/browse/MPREb_1uHnVLoKsRE"
-   },
-   "reason": "spin-off: the subtitle 'on the rocks' names another show"
-  },
-  {
-   "row": "tv-manhunt",
-   "slot": [
-    "tv",
-    "72597",
-    null,
-    null
-   ],
-   "album": {
-    "title": "Manhunt: Unabomber (Original Soundtrack)",
-    "url": "https://music.youtube.com/browse/MPREb_3jgs3ovCr0A"
-   },
-   "reason": "spin-off: the subtitle 'unabomber' names another show"
-  },
-  {
    "row": "tv-murderbot",
    "slot": [
     "tv",
@@ -47766,20 +47738,6 @@
    "reason": "rule 3: needs the album year within the window"
   },
   {
-   "row": "tv-prehistoric-planet",
-   "slot": [
-    "tv",
-    "95171",
-    null,
-    null
-   ],
-   "album": {
-    "title": "Prehistoric Planet: Ice Age (Apple Original Series Soundtrack)",
-    "url": "https://music.youtube.com/browse/MPREb_Z1uEg2fWyIG"
-   },
-   "reason": "spin-off: the subtitle 'ice age' names another show"
-  },
-  {
    "row": "tv-second-chance",
    "slot": [
     "tv",
@@ -47792,20 +47750,6 @@
     "url": "https://music.youtube.com/browse/MPREb_kP8zIhqRWtT"
    },
    "reason": "medium: 'Motion Picture' names a film"
-  },
-  {
-   "row": "tv-shadowhunters",
-   "slot": [
-    "tv",
-    "63210",
-    null,
-    null
-   ],
-   "album": {
-    "title": "Shadowhunters: The Mortal Instruments (Original Television Series Soundtrack)",
-    "url": "https://music.youtube.com/browse/MPREb_GvHocELU98N"
-   },
-   "reason": "spin-off: the subtitle 'the mortal instruments' names another show"
   },
   {
    "row": "tv-skins-season-1",
@@ -47834,34 +47778,6 @@
     "url": "https://music.youtube.com/browse/MPREb_c5PNkSDgEcf"
    },
    "reason": "tribute artist 'Union Of Sound'"
-  },
-  {
-   "row": "tv-spartacus",
-   "slot": [
-    "tv",
-    "46296",
-    null,
-    null
-   ],
-   "album": {
-    "title": "Spartacus: Blood And Sand (Original Television Soundtrack)",
-    "url": "https://music.youtube.com/browse/MPREb_P10bIdUz8Nn"
-   },
-   "reason": "spin-off: the subtitle 'blood and sand' names another show"
-  },
-  {
-   "row": "tv-the-alienist",
-   "slot": [
-    "tv",
-    "71769",
-    null,
-    null
-   ],
-   "album": {
-    "title": "The Alienist: Angel of Darkness (Music from the Television Series)",
-    "url": "https://music.youtube.com/browse/MPREb_obxZzCGklN4"
-   },
-   "reason": "spin-off: the subtitle 'angel of darkness' names another show"
   },
   {
    "row": "tv-the-killing",
@@ -47932,20 +47848,6 @@
     "url": "https://music.youtube.com/browse/MPREb_8TWaorVeQJW"
    },
    "reason": "medium: 'Motion Picture' names a film"
-  },
-  {
-   "row": "tv-the-wheel-of-time",
-   "slot": [
-    "tv",
-    "71914",
-    null,
-    null
-   ],
-   "album": {
-    "title": "The Wheel of Time: The First Turn (Amazon Original Series Soundtrack)",
-    "url": "https://music.youtube.com/browse/MPREb_XzR78CGBEoU"
-   },
-   "reason": "spin-off: the subtitle 'the first turn' names another show"
   },
   {
    "row": "tv-tom-clancy-s-jack-ryan",
@@ -106725,7 +106627,7 @@
    "slot": [
     "tv",
     "4615",
-    6,
+    null,
     4
    ],
    "album": {
@@ -106741,7 +106643,7 @@
     "Randy Thornton"
    ],
    "rule": "1 exact title",
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "pinned": false
   },
   {
@@ -107897,6 +107799,29 @@
    "pinned": false
   },
   {
+   "row": "tv-mad-men",
+   "slot": [
+    "tv",
+    "1104",
+    null,
+    null
+   ],
+   "album": {
+    "title": "Mad Men: On the Rocks (Music from the Television Series)",
+    "url": "https://music.youtube.com/browse/MPREb_1uHnVLoKsRE"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "David Carbonara"
+   ],
+   "rule": "pinned by screen-overrides.json",
+   "seasonFrom": "override",
+   "pinned": true
+  },
+  {
    "row": "tv-maid-sama",
    "slot": [
     "tv",
@@ -107918,6 +107843,29 @@
    "rule": "1 exact title",
    "seasonFrom": null,
    "pinned": false
+  },
+  {
+   "row": "tv-manhunt",
+   "slot": [
+    "tv",
+    "72597",
+    null,
+    null
+   ],
+   "album": {
+    "title": "Manhunt: Unabomber (Original Soundtrack)",
+    "url": "https://music.youtube.com/browse/MPREb_3jgs3ovCr0A"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "Gregory Tripi"
+   ],
+   "rule": "pinned by screen-overrides.json",
+   "seasonFrom": "override",
+   "pinned": true
   },
   {
    "row": "tv-maniac",
@@ -110058,6 +110006,31 @@
    "pinned": false
   },
   {
+   "row": "tv-prehistoric-planet",
+   "slot": [
+    "tv",
+    "95171",
+    null,
+    null
+   ],
+   "album": {
+    "title": "Prehistoric Planet: Ice Age (Apple Original Series Soundtrack)",
+    "url": "https://music.youtube.com/browse/MPREb_Z1uEg2fWyIG"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "Hans Zimmer",
+    "Kara Talve",
+    "Anze Rozman"
+   ],
+   "rule": "pinned by screen-overrides.json",
+   "seasonFrom": "override",
+   "pinned": true
+  },
+  {
    "row": "tv-prehistoric-planet-season-1",
    "slot": [
     "tv",
@@ -110971,6 +110944,29 @@
    "pinned": false
   },
   {
+   "row": "tv-shadowhunters",
+   "slot": [
+    "tv",
+    "63210",
+    null,
+    null
+   ],
+   "album": {
+    "title": "Shadowhunters: The Mortal Instruments (Original Television Series Soundtrack)",
+    "url": "https://music.youtube.com/browse/MPREb_GvHocELU98N"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "Jack Wall"
+   ],
+   "rule": "pinned by screen-overrides.json",
+   "seasonFrom": "override",
+   "pinned": true
+  },
+  {
    "row": "tv-she-hulk-attorney-at-law-season-1",
    "slot": [
     "tv",
@@ -111440,6 +111436,29 @@
    "rule": "3 franchise prefix or suffix",
    "seasonFrom": "title",
    "pinned": false
+  },
+  {
+   "row": "tv-spartacus",
+   "slot": [
+    "tv",
+    "46296",
+    null,
+    null
+   ],
+   "album": {
+    "title": "Spartacus: Blood And Sand (Original Television Soundtrack)",
+    "url": "https://music.youtube.com/browse/MPREb_P10bIdUz8Nn"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "Joseph LoDuca"
+   ],
+   "rule": "pinned by screen-overrides.json",
+   "seasonFrom": "override",
+   "pinned": true
   },
   {
    "row": "tv-spider-noir",
@@ -112264,7 +112283,7 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     1
    ],
    "album": {
@@ -112281,7 +112300,7 @@
     "Michael McCuistion"
    ],
    "rule": "1 exact title",
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "pinned": false
   },
   {
@@ -112289,7 +112308,7 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     2
    ],
    "album": {
@@ -112306,7 +112325,7 @@
     "Lolita Ritmanis"
    ],
    "rule": "1 exact title",
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "pinned": false
   },
   {
@@ -112314,7 +112333,7 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     3
    ],
    "album": {
@@ -112331,7 +112350,7 @@
     "Lolita Ritmanis"
    ],
    "rule": "1 exact title",
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "pinned": false
   },
   {
@@ -112339,7 +112358,7 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     4
    ],
    "album": {
@@ -112356,7 +112375,7 @@
     "Lolita Ritmanis"
    ],
    "rule": "1 exact title",
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "pinned": false
   },
   {
@@ -112364,7 +112383,7 @@
    "slot": [
     "tv",
     "604",
-    5,
+    null,
     5
    ],
    "album": {
@@ -112381,7 +112400,7 @@
     "Lolita Ritmanis"
    ],
    "rule": "1 exact title",
-   "seasonFrom": "release date",
+   "seasonFrom": "override",
    "pinned": false
   },
   {
@@ -112429,6 +112448,29 @@
    "rule": "1 exact title",
    "seasonFrom": null,
    "pinned": false
+  },
+  {
+   "row": "tv-the-alienist",
+   "slot": [
+    "tv",
+    "71769",
+    null,
+    null
+   ],
+   "album": {
+    "title": "The Alienist: Angel of Darkness (Music from the Television Series)",
+    "url": "https://music.youtube.com/browse/MPREb_obxZzCGklN4"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "Bobby Krlic"
+   ],
+   "rule": "pinned by screen-overrides.json",
+   "seasonFrom": "override",
+   "pinned": true
   },
   {
    "row": "tv-the-americans",
@@ -114824,6 +114866,29 @@
    "rule": "1 exact title",
    "seasonFrom": null,
    "pinned": false
+  },
+  {
+   "row": "tv-the-wheel-of-time",
+   "slot": [
+    "tv",
+    "71914",
+    null,
+    null
+   ],
+   "album": {
+    "title": "The Wheel of Time: The First Turn (Amazon Original Series Soundtrack)",
+    "url": "https://music.youtube.com/browse/MPREb_XzR78CGBEoU"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "Lorne Balfe"
+   ],
+   "rule": "pinned by screen-overrides.json",
+   "seasonFrom": "override",
+   "pinned": true
   },
   {
    "row": "tv-the-wheel-of-time-season-1",

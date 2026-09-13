@@ -523,7 +523,8 @@ def _album(c):
 
 
 def _title_info(medium, tid, rec, seasonless):
-    return {"medium": medium, "id": tid, "seasons": rec.get("seasons"), "volumesSeasonless": tid in seasonless}
+    return {"medium": medium, "id": tid, "seasons": rec.get("seasons"),
+            "volumesSeasonless": seasonless.get(tid, False)}
 
 
 def _dated(c, dates):
@@ -573,7 +574,8 @@ def plan_rewalk(releases, evaluations, overrides=None, dates=None):
             if (r.get("medium") or "game") == "game" and r.get("ytmAlbumUrl")}
     overrides = overrides or {}
     excluded = {(x["medium"], str(x["tmdb"]), YTM_ALBUM + x["album"]) for x in overrides.get("exclude", [])}
-    seasonless = {str(x["tmdb"]) for x in overrides.get("seasonlessVolumes", [])}
+    seasonless = {str(x["tmdb"]): ({YTM_ALBUM + a for a in x["albums"]} if x.get("albums") else True)
+                  for x in overrides.get("seasonlessVolumes", [])}
     dates = dates or {}
     rows_by_slot, duplicates, no_slot = {}, [], []
     for r in releases:

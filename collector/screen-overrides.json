@@ -29,7 +29,28 @@
   "tv": [
     {"tmdb": 4608, "season": null, "name": "30 Rock", "album": "MPREb_5FuG5LzEEeL",
      "albumTitle": "30 Rock",
-     "why": "weak guard: credited to composer Jeff Richmond, whom TMDb does not list"}
+     "why": "weak guard: credited to composer Jeff Richmond, whom TMDb does not list"},
+    {"tmdb": 46296, "season": null, "name": "Spartacus", "album": "MPREb_P10bIdUz8Nn",
+     "albumTitle": "Spartacus: Blood And Sand (Original Television Soundtrack)",
+     "why": "spin-off rule: Blood and Sand is the first season's subtitle, not another show"},
+    {"tmdb": 71769, "season": null, "name": "The Alienist", "album": "MPREb_obxZzCGklN4",
+     "albumTitle": "The Alienist: Angel of Darkness (Music from the Television Series)",
+     "why": "spin-off rule: Angel of Darkness is the second season's subtitle, not another show"},
+    {"tmdb": 72597, "season": null, "name": "Manhunt", "album": "MPREb_3jgs3ovCr0A",
+     "albumTitle": "Manhunt: Unabomber (Original Soundtrack)",
+     "why": "spin-off rule: Unabomber is the first season's subtitle, not another show"},
+    {"tmdb": 95171, "season": null, "name": "Prehistoric Planet", "album": "MPREb_Z1uEg2fWyIG",
+     "albumTitle": "Prehistoric Planet: Ice Age (Apple Original Series Soundtrack)",
+     "why": "spin-off rule: Ice Age is a season's subtitle, not another show"},
+    {"tmdb": 63210, "season": null, "name": "Shadowhunters", "album": "MPREb_GvHocELU98N",
+     "albumTitle": "Shadowhunters: The Mortal Instruments (Original Television Series Soundtrack)",
+     "why": "spin-off rule: The Mortal Instruments is the show's own full title"},
+    {"tmdb": 71914, "season": null, "name": "The Wheel of Time", "album": "MPREb_XzR78CGBEoU",
+     "albumTitle": "The Wheel of Time: The First Turn (Amazon Original Series Soundtrack)",
+     "why": "spin-off rule: The First Turn is the show's own companion album, not another show"},
+    {"tmdb": 1104, "season": null, "name": "Mad Men", "album": "MPREb_1uHnVLoKsRE",
+     "albumTitle": "Mad Men: On the Rocks (Music from the Television Series)",
+     "why": "spin-off rule: On the Rocks is the show's own compilation, not another show"}
   ],
   "exclude": [
     {"medium": "film", "tmdb": 615658, "name": "Awake", "album": "MPREb_RZKYAffmAup", "albumTitle": "AWAKE (Original Soundtrack)", "why": "a different work named Awake (Nozomu Sato)"},
@@ -56,6 +77,9 @@
     {"tmdb": 60059, "name": "Better Call Saul", "why": "Vol. 1 to 3 are score compilations spanning seasons"},
     {"tmdb": 62560, "name": "Mr. Robot", "why": "Vol. 1 to 8 are score compilations spanning seasons"},
     {"tmdb": 33001, "name": "Haven", "why": "Vol. 1 (2013) gathers cues from Season 1 onward, released after three seasons aired"},
-    {"tmdb": 95557, "name": "INVINCIBLE", "why": "Vol. 1 (2025) gathers cues from Seasons 1 to 3, released after the third aired"}
+    {"tmdb": 95557, "name": "INVINCIBLE", "why": "Vol. 1 (2025) gathers cues from Seasons 1 to 3, released after the third aired"},
+    {"tmdb": 604, "name": "Teen Titans", "why": "Vol. 1 to 5 are compilations released after the show ended"},
+    {"tmdb": 4615, "name": "Hercules: The Legendary Journeys", "albums": ["MPREb_mmFVACeI3DW"],
+     "why": "Vol. 4 is a compilation spanning seasons; Volume Two and Three keep their seasons"}
   ]
 }
