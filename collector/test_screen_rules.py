@@ -217,6 +217,22 @@ def test_walk3_blocklist_game_wording_and_spin_offs():
         [album("Star Wars: The Bad Batch - The Final Season: Vol. 1 (Episodes 1-8) (Original Soundtrack)",
                "Kevin Kiner", "2024")], show("Star Wars: The Bad Batch", [2021, 2024], ["Kevin Kiner"]))[0]
     assert final["accepted"]
+    # words after the name with no colon or dash are never a subtitle
+    ep = collect.screen_classify([album("Chainsaw Man Original Soundtrack EP Vol.1 (Episode 1-3)", "Kensuke Ushio", "2022")],
+                                 show("Chainsaw Man", [2022], ["Kensuke Ushio"]))[0]
+    assert ep["accepted"]
+    # a subtitle carrying a season marker is the show's own
+    cobra = collect.screen_classify(
+        [album('Cobra Kai: Season 4, Vol. 1 "All Valley Tournament 51" (Soundtrack from the Netflix Original Series)',
+               "Leo Birenberg & Zach Robinson", "2021")], show("Cobra Kai", [2018, 2021], ["Leo Birenberg", "Zach Robinson"]))[0]
+    assert cobra["accepted"]
+    clear = collect.screen_classify([album("CARDCAPTOR SAKURA -CLEAR CARD- ORIGINAL SOUNDTRACK", "Takayuki Negishi", "2018")],
+                                    show("Cardcaptor Sakura", [1998, 2000, 2018], ["Takayuki Negishi"]))[0]
+    assert clear["verdict"] == "spin-off: the subtitle 'clear card' names another show"
+    # a subtitle after the album's own wording names the album, not a show
+    world = collect.screen_classify([album("ONE PIECE ORIGINAL SOUNDTRACK -NEW WORLD-", "Kohei Tanaka", "2016")],
+                                    show("One Piece", [1999, 2016], ["Kohei Tanaka"]))[0]
+    assert world["accepted"]
 
 
 def test_composer_accents_fold_on_latin_names_only():

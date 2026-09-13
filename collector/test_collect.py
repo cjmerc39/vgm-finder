@@ -1112,6 +1112,16 @@ def test_a_volume_belongs_to_the_latest_season_premiered_by_its_release_date():
         (("tv", "62560", None, 1), "override")
 
 
+def test_a_title_naming_several_seasons_names_none():
+    assert collect._season_of("BARRY (HBO Original Music Soundtrack Season 1 & 2)") is None
+    assert collect._season_of("The Mentalist: Seasons 1-2 (Original Television Soundtrack)") is None
+    assert collect._season_of("Star Trek: Picard, Season 3, Volume 2 (Original Series Soundtrack)") == 3
+    seal = {"medium": "tv", "id": "71790", "seasons": {"5": "2021-10-10", "6": "2022-09-18"}}
+    title = "Seal Team: Vol. 2 - Seasons 5 – 6 (Original Series Soundtrack)"
+    c = {"title": title, "season": collect._season_of(title), "volume": collect._volume_of(title), "year": "2022"}
+    assert collect.screen_slot(seal, c) == (("tv", "71790", None, 2), "several seasons")
+
+
 def test_album_release_date_matches_the_exact_title_and_year(monkeypatch):
     class Resp:
         def __init__(self, data):

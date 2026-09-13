@@ -920,15 +920,40 @@ _FIRST_VOLUME = re.compile(r"^volume\s+1$")
 _FIRST_VOLUME_TAIL = re.compile(r"\s+volume\s+1$")
 
 
-# words a TV album may add after the show's name without naming another
-# show: "The Final Season", "Year 2", "(2nd Season & 3rd Season)"
+# a TV album's subtitle, joined to the show's name by a colon or a dash,
+# names a spin-off unless it carries a season marker or is only season
+# wording: "Outlander: Blood of My Blood" is another show, "The Bad Batch -
+# The Final Season" and "Dark: Cycle 1" are the show's own. Words after the
+# name without a colon or dash ("Chainsaw Man Original Soundtrack EP") are
+# never a subtitle.
+_SUBTITLE_SEP = re.compile(r"\s*[:：]\s*|\s+[-–—]+\s*|\s*[-–—]+\s+")
+_BRACKETED = re.compile(r"[(\[（【][^)\]）】]*[)\]）】]")
+_SEASON_MARKER = re.compile(r"\b(?:seasons?|series|book|volume|vol|part|chapters?|episodes?|cycle|year|class)\s+\d+\b"
+                            r"|\bseason\b")
 _SEASON_WORDS = frozenset(
-    "the final season seasons part year book series volume vol chapter chapters episode episodes and "
+    "the final season seasons part year book series volume vol chapter chapters episode episodes and cycle "
     "st nd rd th first second third fourth fifth sixth seventh eighth ninth tenth".split())
 
 
-def _season_words_only(tokens):
-    return all(t.isdigit() or t in _SEASON_WORDS or t in _WORDING_WORDS for t in tokens)
+def _spin_off_subtitle(title, wants):
+    """The subtitle an album joins to a show's name when it names another
+    show, or None."""
+    raw = _BRACKETED.sub(" ", title)
+    names = {" ".join(w) for w, ep, _ in wants if not ep}
+    for m in _SUBTITLE_SEP.finditer(raw):
+        # compared without stripping wording, so "ONE PIECE ORIGINAL
+        # SOUNDTRACK -NEW WORLD-" is an album subtitle, not a show's
+        head = _numfold(re.sub(r"\s+", " ", _PUNCT.sub(" ", raw[:m.start()].lower())).strip())
+        if head not in names:
+            continue
+        rest = raw[m.end():]
+        if not rest.strip() or _SEASON_MARKER.search(_screen_base(rest)):
+            return None
+        words = normalize_screen(rest, "tv").split()
+        if words and not all(t.isdigit() or t in _SEASON_WORDS or t in _WORDING_WORDS for t in words):
+            return " ".join(words)
+        return None
+    return None
 
 
 def _is_sequel_tail(tail):
@@ -1016,10 +1041,17 @@ def normalize_screen(title, medium=None):
     return t or base
 
 
+_SEASON_RANGE = re.compile(r"\bseasons?\s+\d+(?:\s+(?:and\s+|to\s+)?\d+)+\b|\bseasons\s+\d+\b")
+
+
 def _season_of(title):
-    """The season an album title names, or None. A volume is never read as
-    a season; screen_slot places a volume the title gives no season."""
-    m = _SEASON_MARK.search(_screen_base(title))
+    """The season an album title names, or None. A title naming several
+    seasons ("Season 1 & 2", "Seasons 5 - 6") names none. A volume is never
+    read as a season; screen_slot places a volume the title gives no season."""
+    base = _screen_base(title)
+    if _SEASON_RANGE.search(base):
+        return None
+    m = _SEASON_MARK.search(base)
     return int(m.group(1)) if m else None
 
 
@@ -1225,8 +1257,9 @@ def screen_classify(results, info, album_fn=None):
         if kind != "exact" and tail and _is_sequel_tail(tail):
             out.append(dict(e, verdict=f"sequel guard (tail '{' '.join(tail)}')"))
             continue
-        if medium == "tv" and kind == "extended" and tail and not _season_words_only(tail):
-            out.append(dict(e, verdict=f"spin-off: '{' '.join(tail)}' after the title names another show"))
+        spin = _spin_off_subtitle(title, wants) if medium == "tv" and kind == "extended" else None
+        if spin:
+            out.append(dict(e, verdict=f"spin-off: the subtitle '{spin}' names another show"))
             continue
         credited = _credited(artists, names)
         yr = _year_of(r.get("year"))
@@ -1387,6 +1420,8 @@ def screen_slot(info, c):
         return ("tv", info["id"], season, volume), "title"
     if volume is None:
         return ("tv", info["id"], None, None), None
+    if _SEASON_RANGE.search(_screen_base(c.get("title") or "")):
+        return ("tv", info["id"], None, volume), "several seasons"
     if info.get("volumesSeasonless"):
         return ("tv", info["id"], None, volume), "override"
     seasons = {int(n): d for n, d in (info.get("seasons") or {}).items() if str(n).isdigit() and int(n) > 0}

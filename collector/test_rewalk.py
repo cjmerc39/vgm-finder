@@ -386,7 +386,7 @@ def test_resolve_plans_corrections_additions_orphans_and_unverified(tmp_path, fa
     assert [(a["slot"], a["album"]["url"]) for a in plan["additions"]] == [(["film", "196"], PT3)]
     # Castlevania's series has no album of its own and the game keeps its compilation
     assert [o["row"] for o in plan["orphans"]] == ["tv-castlevania-season-2"]
-    assert plan["orphans"][0]["reason"].startswith("spin-off")  # Nocturne is its own show
+    assert "rule 3" in plan["orphans"][0]["reason"]
     assert [u["row"] for u in plan["unverified"]] == ["film-unseen-film"]
     assert plan["unverified"][0]["reason"] == "current album not in today's search"
     assert [u["row"] for u in plan["unchanged"]] == ["film-the-lost-world-jurassic-park"]
