@@ -188,6 +188,17 @@ def test_evaluate_respects_the_lookup_cap(tmp_path, fake_tmdb):
     assert len(records) == 1 and state["phase"] == "film" and state["filmPage"] == 1
 
 
+def test_track_stats_reads_a_classical_byline():
+    album = {"tracks": [
+        {"title": "Zimmer: Dear Clarice", "artists": [{"name": "The Lyndhurst Orchestra"}, {"name": "Gavin Greenaway"}]},
+        {"title": "J.S. Bach: Goldberg Variations", "artists": [{"name": "Glenn Gould"}]},
+        {"title": "Zimmer: Avarice", "artists": [{"name": "The Lyndhurst Orchestra"}]},
+        {"title": "Vide Cor Meum", "artists": [{"name": "Danielle de Niese"}]}]}
+    stats = rewalk.track_stats(album, ["Hans Zimmer"])
+    assert stats == {"tracks": 4, "named": 4, "distinct": 4, "composerTracks": 2}
+    assert rewalk.songs_by_tracks({"credited": False, "trackStats": stats}) is False
+
+
 def _wolf(year):
     url = "https://music.youtube.com/browse/MPREb_wolf"
     rec = _record("106646", "The Wolf of Wall Street", [],

@@ -117,6 +117,38 @@ def test_rule3_still_needs_soundtrack_wording():
     assert not c["accepted"] and "wording" in c["verdict"]
 
 
+def test_wording_only_extras_name_the_title_itself():
+    def rel(name, album):
+        return collect._relation(collect.normalize_screen(album, "film").split(),
+                                 collect._screen_wants(film(name, 2000, [])))
+    for name, album in [
+            ("Alien: Covenant", "Alien: Covenant (Original Soundtrack Album)"),
+            ("Psycho", "Psycho (The Complete Original Motion Picture Score)"),
+            ("One Flew Over the Cuckoo's Nest", "One Flew Over The Cuckoo's Nest (Original Motion "
+             "Picture Soundtrack / 50th Anniversary / Remastered 2025)"),
+            ("The Good, the Bad and the Ugly",
+             "The Good, The Bad and The Ugly (Original Motion Picture Soundtrack) (Remastered Edition)"),
+            ("My Neighbor Totoro", "My Neighbor Totoro Soundtrack Collection"),
+            ("Halloween", "Halloween Motion Picture Soundtrack")]:
+        assert rel(name, album) == ("exact", 0, []), album
+    for name, album in [
+            ("Frozen", "Frozen 2 (Original Motion Picture Soundtrack / Deluxe Edition)"),
+            ("Ant-Man", "Ant-Man and The Wasp (Original Motion Picture Soundtrack)"),
+            ("Star Trek", "Star Trek: The Motion Picture (Original Soundtrack)"),
+            ("The Hangover", "The Hangover Trilogy (Original Score)"),
+            ("Die Hard", "Die Hard 2: Die Harder (Original Motion Picture Soundtrack)"),
+            ("Hotel Transylvania", "Hotel Transylvania: Score from the Motion Pictures"),
+            ("Blade Runner", "Blade Runner 2049 (Original Motion Picture Soundtrack)")]:
+        assert rel(name, album)[0] == "extended", album
+
+
+def test_composer_accents_fold_on_latin_names_only():
+    assert collect._credited(["Roque Banos"], ["Roque Baños"])
+    assert collect._credited(["Jóhann Jóhannsson"], ["Johann Johannsson"])
+    assert collect._credited(["川井憲次"], ["川井 憲次"])
+    assert not collect._credited(["Roque Banos"], ["Alberto Iglesias"])
+
+
 def test_verdicts_name_the_condition_that_failed():
     info = film("Jurassic Park", 1993, ["John Williams"])
     far = {"resultType": "album", "browseId": "lw", "year": "1997", "thumbnails": [],

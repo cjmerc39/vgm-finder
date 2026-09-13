@@ -11,6 +11,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from html import unescape
@@ -988,6 +989,28 @@ def _screen_wants(info):
     return out
 
 
+# words that only say an album is a soundtrack, or which edition it is. An
+# album whose words beyond the title are all of these names the title
+# itself: "Alien: Covenant (Original Soundtrack Album)". Numerals count only
+# inside an anniversary or remaster date, so a sequel number never
+# qualifies, and "motion picture" never right after "the" unless a
+# soundtrack word follows, so "Star Trek: The Motion Picture" still names
+# another film than Star Trek. Film, movie and series stay out: The
+# Simpsons Movie is not The Simpsons.
+_WORDING_WORDS = frozenset(
+    "original soundtrack soundtracks score music from the album ost complete expanded extended "
+    "deluxe special collector collectors edition version remastered remaster anniversary "
+    "collection official selections highlights excerpts".split())
+_WORDING_PHRASES = re.compile(
+    r"\b(?:\d+ (?:st|nd|rd|th) anniversary|remaster(?:ed)? \d{4}|\d{4} (?:remaster(?:ed)?|mix)"
+    r"|motion pictures? (?:soundtrack|score|ost)|(?<!the )motion pictures?)\b")
+
+
+def _only_wording(tokens):
+    rest = _WORDING_PHRASES.sub(" ", " ".join(tokens)).split()
+    return bool(tokens) and all(t in _WORDING_WORDS for t in rest)
+
+
 _REL_RANK = {"exact": 0, "episode": 1, "extended": 1}
 
 
@@ -1004,7 +1027,10 @@ def _relation(tokens, wants):
         else:
             for i in range(len(tokens) - n + 1):
                 if tokens[i:i + n] == w:
-                    rel = ("episode" if ep else "extended", len(tokens) - n + dropped, tokens[i + n:])
+                    if not ep and _only_wording(tokens[:i] + tokens[i + n:]) and not _only_wording(w):
+                        rel = ("exact", 0, [])
+                    else:
+                        rel = ("episode" if ep else "extended", len(tokens) - n + dropped, tokens[i + n:])
                     break
         if rel and (best is None or (_REL_RANK[rel[0]], rel[1]) < (_REL_RANK[best[0]], best[1])):
             best = rel
@@ -1024,8 +1050,11 @@ def _name_in(short, long):
 def _name_forms(name):
     """A normalized name, plus the same name without spaces when it is
     written in Chinese or Japanese: TMDb spells 川井 憲次 with a space and
-    YouTube Music credits 川井憲次 without one. Latin names are never joined."""
+    YouTube Music credits 川井憲次 without one. Latin names are never joined,
+    and lose their accents: TMDb credits Roque Baños, YouTube Music Roque Banos."""
     n = normalize_title(name)
+    if n and not _has_cjk(n):
+        n = "".join(ch for ch in unicodedata.normalize("NFKD", n) if not unicodedata.combining(ch))
     return [n, n.replace(" ", "")] if (n and " " in n and _has_cjk(n)) else ([n] if n else [])
 
 

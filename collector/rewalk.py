@@ -168,7 +168,9 @@ def evaluate_title(medium, entry, worn, resolve, album_fn):
 
 def track_stats(album, names):
     """Tracks, tracks with a named artist other than Various Artists, the
-    distinct named artists, and tracks a credited composer performs."""
+    distinct named artists, and tracks a credited composer performs or is
+    named on. Classical labels put the composer in the title and the
+    orchestra in the artists: "Zimmer: Dear Clarice" (Hannibal)."""
     named = composer = 0
     distinct = set()
     tracks = (album or {}).get("tracks") or []
@@ -178,7 +180,9 @@ def track_stats(album, names):
         if real:
             named += 1
             distinct.update(real)
-            composer += bool(names) and collect._credited(real, names)
+            title = t.get("title") or ""
+            byline = [title.split(":", 1)[0]] if ":" in title else []
+            composer += bool(names) and collect._credited(real + byline, names)
     return {"tracks": len(tracks), "named": named, "distinct": len(distinct), "composerTracks": composer}
 
 
