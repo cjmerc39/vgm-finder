@@ -308,6 +308,35 @@ def test_rule8_chinese_wording_and_composer_aliases():
     assert winner(film("Ip Man 3", 2015, ["Kenji Kawai"], original="葉問3")) is None
 
 
+def test_rule8_cjk_aliases_match_with_or_without_spaces():
+    # found by the live probe: TMDb's also_known_as spells Kenji Kawai as
+    # "川井 憲次", while YouTube Music credits the albums to "川井憲次"
+    assert collect._credited(["川井憲次"], ["Kenji Kawai", "川井 憲次"])
+    assert not collect._credited(["川井憲次"], ["Kenji Kawai", "Kawai Kenji"])
+    assert not collect._credited(["Hanszimmerman"], ["Hans Zimmer"])  # Latin names never joined
+    for name, year, original, album, rule in (
+            ("Ip Man 3", 2015, "葉問3", "《葉問3》 電影原聲帶", "1"),
+            ("Ip Man 4: The Finale", 2019, "葉問4", "《葉問4: 完結篇》電影原聲大碟", "3")):
+        w = winner(film(name, year, ["Kenji Kawai"], original=original,
+                        aliases=["川井 憲次", "かわい けんじ", "Kawai Kenji"]))
+        assert w and w["title"] == album and w["rule"].startswith(rule) and not w["weak"], name
+
+
+def test_rule5_a_worded_album_wins_a_dead_heat_over_a_bare_one():
+    # Fellowship: the Complete Recordings came first in search and tied the
+    # soundtrack album on every approved key; the album that says it is a
+    # soundtrack takes the tie, so a correct catalog row is not churned
+    complete = _album("The Lord of the Rings: The Fellowship of the Ring - the Complete Recordings",
+                      "Howard Shore", 2001, "lotr-cr")
+    ost = _album("The Lord of the Rings: The Fellowship of the Ring (Original Motion Picture Soundtrack)",
+                 "Howard Shore", 2001, "lotr-ost")
+    w = collect.match_film([complete, ost], "The Lord of the Rings: The Fellowship of the Ring", 2001,
+                           ["Howard Shore"])
+    assert w["title"].endswith("(Original Motion Picture Soundtrack)")
+    assert collect.normalize_screen(
+        "Doctor Who - Series 7 (Original Television Soundtrack) [Deluxe Version]") == "doctor who"
+
+
 # ---------------- TV vocabulary ----------------
 
 def test_tv_books_and_network_series_wording():

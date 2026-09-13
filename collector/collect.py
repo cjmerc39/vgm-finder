@@ -819,6 +819,7 @@ _SCREEN_TAILS = (
     "the complete recordings",
     "expanded edition",
     "deluxe edition",
+    "deluxe version",
     "special edition",
     "collector s anniversary edition",
     "anniversary edition",
@@ -1001,20 +1002,31 @@ def _relation(tokens, wants):
     return best
 
 
+def _has_cjk(text):
+    return any(ord(ch) > 0x2E80 for ch in text)
+
+
 def _name_in(short, long):
     if not short or not long:
         return False
-    cjk = any(ord(ch) > 0x2E80 for ch in short)
-    return len(short) >= (2 if cjk else 4) and short in long
+    return len(short) >= (2 if _has_cjk(short) else 4) and short in long
+
+
+def _name_forms(name):
+    """A normalized name, plus the same name without spaces when it is
+    written in Chinese or Japanese: TMDb spells 川井 憲次 with a space and
+    YouTube Music credits 川井憲次 without one. Latin names are never joined."""
+    n = normalize_title(name)
+    return [n, n.replace(" ", "")] if (n and " " in n and _has_cjk(n)) else ([n] if n else [])
 
 
 def _credited(artists, names):
     """Whether a TMDb-credited composer, under any of their names, appears
     among the album's artists."""
-    keys = [k for k in (normalize_title(n) for n in names if n) if k]
+    keys = [k for n in names if n for k in _name_forms(n)]
     for a in artists:
-        na = normalize_title(a)
-        if any(_name_in(k, na) or _name_in(na, k) for k in keys):
+        forms = _name_forms(a)
+        if any(_name_in(k, f) or _name_in(f, k) for k in keys for f in forms):
             return True
     return False
 
@@ -1075,7 +1087,7 @@ def screen_classify(results, info, album_fn=None):
         gap = min(abs(yr - y) for y in years) if (yr is not None and years) else None
         near = gap is not None and gap <= SCREEN_YEAR_WINDOW
         wording = bool(_SCREEN_WORDING.search(title))
-        e.update(credited=credited, gap=gap, extra=extra)
+        e.update(credited=credited, gap=gap, extra=extra, worded=wording)
         klass, weak, ok, why = "exact", False, False, ""
         if kind == "exact" and wording:
             rule, ok = "1 exact title", credited or near
@@ -1125,16 +1137,18 @@ _CLASS_RANK = {"exact": 0, "extended": 1, "weak": 2}
 
 def _rank_key(c):
     """Rule 5, a title choosing among its albums: credited first, then exact
-    over extended, fewer extra words, closer year, then search order."""
+    over extended, fewer extra words, closer year. A dead heat goes to the
+    album that says it is a soundtrack before search order decides, so
+    Fellowship keeps its soundtrack album over the Complete Recordings."""
     return (not c["credited"], _CLASS_RANK[c["klass"]], c["extra"],
-            c["gap"] if c["gap"] is not None else 99, c["rank"])
+            c["gap"] if c["gap"] is not None else 99, not c.get("worded"), c["rank"])
 
 
 def _claim_key(c, slot):
     """Rule 6, an album choosing among the titles that want it: an exact
     claim beats a tolerant one before anything else is compared."""
     return (_CLASS_RANK[c["klass"]], not c["credited"], c["extra"],
-            c["gap"] if c["gap"] is not None else 99, str(slot))
+            c["gap"] if c["gap"] is not None else 99, not c.get("worded"), str(slot))
 
 
 def resolve_screen(slots, reserved=()):
