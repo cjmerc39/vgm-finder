@@ -22,7 +22,7 @@ def main():
     for kind, floors in (("movie", FILM_FLOORS), ("tv", TV_FLOORS)):
         for floor in floors:
             d = collect._tmdb_get(f"discover/{kind}", page=1, **{"vote_count.gte": floor, "sort_by": "vote_count.desc"})
-            emit("floor", kind=kind, votes_floor=floor, total_results=d.get("total_results"))
+            emit("floor", medium=kind, votes_floor=floor, total_results=d.get("total_results"))
     for name in NAMED:
         d = collect._tmdb_get("search/tv", query=name)
         for x in (d.get("results") or [])[:3]:
