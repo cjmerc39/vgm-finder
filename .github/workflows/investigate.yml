@@ -1,0 +1,19 @@
+name: Missing titles investigation
+# Read-only diagnostic: prints findings to the log, touches no data,
+# commits nothing. Dispatch by hand.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  investigate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: python collector/investigate_missing.py
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
