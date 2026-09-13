@@ -823,6 +823,8 @@ TMDB_TV_MAX_PAGES = 50     # the TV window pages until done; 541 shows (28 pages
 TV_WINDOW_RESEARCH_DAYS = 7  # a show inside the window is searched at most once a week
 TV_WINDOW_SEARCH_CAP = 60    # YouTube Music searches the TV window may spend in one run
 TV_WINDOW_RUNS_KEPT = 30     # recent runs kept to say how often the cap binds
+FILM_RECHECK_DAYS = (30, 60, 90)  # a film that left the window without an album is searched again at these ages
+FILM_RECHECK_SEARCH_CAP = 60      # YouTube Music searches the recheck may spend in one run
 SCREEN_YEAR_WINDOW = 2
 WEAK_PLAYS_MIN = 100_000   # rule 2 without a composer: total plays on the album
 UNCREDITED_PLAYS_FLOOR = 1_000  # an uncredited album by an unrelated act needs this many plays
@@ -1839,7 +1841,11 @@ def screen_items(winners, titles):
 def _screen_batch(raw, resolve, medium, album_fn, date_fn=None, overrides=None):
     """Search, judge, and resolve every title in a bundle together, with
     screen-overrides.json applied."""
-    data = json.loads(raw)
+    return _screen_batch_data(json.loads(raw), resolve, medium, album_fn, date_fn, overrides)[0]
+
+
+def _screen_batch_data(data, resolve, medium, album_fn, date_fn=None, overrides=None):
+    """_screen_batch on a parsed bundle -> (items, TMDb ids that won an album)."""
     gmap = data.get("genres", {})
     sets = screen_override_sets(load_screen_overrides() if overrides is None else overrides)
     slots, titles, errors = {}, [], 0
@@ -1857,11 +1863,107 @@ def _screen_batch(raw, resolve, medium, album_fn, date_fn=None, overrides=None):
     items = screen_items(winners, titles)
     if errors and not items:
         raise RuntimeError(f"all {errors} album lookups failed")
-    return items
+    return items, {k[1] for k in winners}
 
 
 def parse_tmdb_film(raw, resolve, album_fn=None, date_fn=None):
     return _screen_batch(raw, resolve, "film", album_fn)
+
+
+_RECHECK_ENTRY_KEYS = ("id", "title", "original_title", "release_date", "vote_count", "genre_ids", "poster_path")
+
+
+def parse_tmdb_film_window(raw, resolve, album_fn=None, date_fn=None, state=None, now=None, have=(),
+                           cap=FILM_RECHECK_SEARCH_CAP, overrides=None):
+    """The daily film leg plus the recheck. The window's titles are searched
+    as before; any that leaves without an album is remembered (its discover
+    entry and credits, so a recheck costs no TMDb call) and searched again
+    30, 60 and 90 days after release, highest-voted first, at most `cap`
+    searches a run; a film the cap defers waits for the next run. A film is
+    dropped the moment it has an album, from the window, a recheck, or a
+    row that arrived another way (`have`, TMDb ids of film rows wearing an
+    album). After the 90-day check it leaves the list for the vote-band
+    walks. `state` (film-recheck-state.json) keeps the list and the recent
+    runs, so the summary can say how often the cap binds."""
+    data = json.loads(raw)
+    now = now or datetime.now(timezone.utc)
+    today = now.date()
+    state = state if state is not None else {}
+    films = state.setdefault("films", {})
+    runs = state.setdefault("runs", [])
+    have = {str(x) for x in have}
+    items, won = _screen_batch_data(data, resolve, "film", album_fn, date_fn, overrides)
+    window_ids, recorded = set(), 0
+    for entry in data.get("results", []):
+        fid = str(entry.get("id"))
+        window_ids.add(fid)
+        if fid in won or fid in have:
+            films.pop(fid, None)
+        elif fid not in films and (entry.get("release_date") or "")[:4].isdigit():
+            films[fid] = {"entry": {k: entry.get(k) for k in _RECHECK_ENTRY_KEYS},
+                          "composers": list(data.get("composers", {}).get(fid, [])),
+                          "aliases": list(data.get("aliases", {}).get(fid, [])), "checked": []}
+            recorded += 1
+    for fid in [f for f in films if f in have]:
+        del films[fid]
+
+    def age(f):
+        return (today - datetime.fromisoformat(f["entry"]["release_date"]).date()).days
+
+    def milestones(f):
+        return [m for m in FILM_RECHECK_DAYS if m not in f["checked"] and age(f) >= m]
+    due = sorted((fid for fid, f in films.items() if fid not in window_ids and milestones(f)),
+                 key=lambda fid: -(films[fid]["entry"].get("vote_count") or 0))
+    calls = [0]
+
+    def counted(query):
+        calls[0] += 1
+        return resolve(query)
+    batch, deferred = [], 0
+    for n, fid in enumerate(due):
+        entry = films[fid]["entry"]
+        queries = screen_queries({"name": (entry.get("title") or "").strip(),
+                                  "original": (entry.get("original_title") or "").strip() or None})
+        if calls[0] + len(queries) > cap:
+            deferred = len(due) - n
+            break
+        calls[0] += len(queries)
+        batch.append(fid)
+    calls[0] = 0
+    found = 0
+    if batch:
+        recheck = {"results": [films[fid]["entry"] for fid in batch], "genres": data.get("genres", {}),
+                   "composers": {fid: films[fid]["composers"] for fid in batch},
+                   "aliases": {fid: films[fid]["aliases"] for fid in batch}}
+        more, won_now = _screen_batch_data(recheck, counted, "film", album_fn, date_fn, overrides)
+        items = items + more
+        for fid in batch:
+            if fid in won_now:
+                del films[fid]
+                found += 1
+                continue
+            f = films[fid]
+            f["checked"] = sorted(set(f["checked"]) | {m for m in FILM_RECHECK_DAYS if age(f) >= m})
+            if FILM_RECHECK_DAYS[-1] in f["checked"]:
+                del films[fid]  # the last recheck: the vote-band walks take it from here
+    runs.append({"date": today.isoformat(), "recorded": recorded, "tracked": len(films), "due": len(due),
+                 "searched": len(batch), "searches": calls[0], "found": found, "deferred": deferred})
+    del runs[:-TV_WINDOW_RUNS_KEPT]
+    bound = sum(1 for r in runs if r.get("deferred"))
+    print(f"tmdb-film recheck: {recorded} films left the window without an album, {len(films)} tracked; "
+          f"{len(due)} due at {'/'.join(str(m) for m in FILM_RECHECK_DAYS)} days, {len(batch)} searched using "
+          f"{calls[0]} of {cap} searches, {found} found, {deferred} left for the next run by the cap; "
+          f"the cap bound on {bound} of the last {len(runs)} runs")
+    return items
+
+
+def screen_tmdb_id(row):
+    """The TMDb id a film or TV row was collected from, or None."""
+    for s in row.get("sources", []):
+        m = re.search(r"themoviedb\.org/(?:movie|tv)/(\d+)", s.get("url", ""))
+        if m:
+            return m.group(1)
+    return None
 
 
 def parse_tmdb_tv(raw, resolve, album_fn=None, date_fn=None):
@@ -1955,8 +2057,8 @@ SOURCES = [
     {"name": "igdb", "type": "catalog", "url": IGDB_URL, "parse": parse_igdb},
     # film and TV: TMDb plays the role IGDB plays; a missing TMDB_API_KEY
     # warns and skips these two while everything else still runs
-    {"name": "tmdb-film", "type": "catalog", "url": "tmdb:film", "parse": parse_tmdb_film,
-     "albums": True},
+    {"name": "tmdb-film", "type": "catalog", "url": "tmdb:film", "parse": parse_tmdb_film_window,
+     "albums": True, "recheck": True},
     {"name": "tmdb-tv", "type": "catalog", "url": "tmdb:tv", "parse": parse_tmdb_tv_window,
      "albums": True, "window": True},
 ]
@@ -2325,6 +2427,16 @@ def load_window_state(path):
     return {"shows": {}, "runs": []}
 
 
+def load_recheck_state(path):
+    try:
+        d = json.loads(Path(path).read_text(encoding="utf-8"))
+        if isinstance(d, dict):
+            return {"films": dict(d.get("films") or {}), "runs": list(d.get("runs") or [])}
+    except (OSError, ValueError):
+        pass
+    return {"films": {}, "runs": []}
+
+
 def load_data(path):
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
@@ -2337,7 +2449,7 @@ def load_data(path):
 
 def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
         itunes_fn=catalog_tracks, data_path=DATA_PATH, now=None, date_fn=album_release_date,
-        window_path=None):
+        window_path=None, recheck_path=None):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_data(data_path)
@@ -2345,10 +2457,16 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     before = json.dumps(releases, sort_keys=True, ensure_ascii=False)
     preexisting = {r["id"] for r in releases}
 
-    # the TV window's weekly searches and cap history live beside the collector
-    window_path = Path(window_path) if window_path else Path(data_path).parent.parent / "collector" / "tv-window-state.json"
+    # the TV window's weekly searches and the film recheck list live beside the collector
+    collector_dir = Path(data_path).parent.parent / "collector"
+    window_path = Path(window_path) if window_path else collector_dir / "tv-window-state.json"
     window_state = load_window_state(window_path)
     window_before = json.dumps(window_state, sort_keys=True)
+    recheck_path = Path(recheck_path) if recheck_path else collector_dir / "film-recheck-state.json"
+    recheck_state = load_recheck_state(recheck_path)
+    recheck_before = json.dumps(recheck_state, sort_keys=True)
+    have = {screen_tmdb_id(r) for r in releases
+            if r.get("medium") == "film" and r.get("ytmAlbumUrl") and not r.get("retired")} - {None}
     ok = 0
     for source in SOURCES:
         try:
@@ -2356,6 +2474,8 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
             extra = {"album_fn": album_fn, "date_fn": date_fn} if source.get("albums") else {}
             if source.get("window"):
                 extra.update(state=window_state, now=now)
+            if source.get("recheck"):
+                extra.update(state=recheck_state, now=now, have=have)
             items = source["parse"](fetch_fn(source["url"]), resolve_fn, **extra)
             added, merged = merge(releases, items, source, seen_at)
             print(f"{source['name']}: {len(items)} items -> {added} new, {merged} merged")
@@ -2365,6 +2485,9 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     if json.dumps(window_state, sort_keys=True) != window_before:
         window_path.parent.mkdir(parents=True, exist_ok=True)
         window_path.write_text(json.dumps(window_state, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    if json.dumps(recheck_state, sort_keys=True) != recheck_before:
+        recheck_path.parent.mkdir(parents=True, exist_ok=True)
+        recheck_path.write_text(json.dumps(recheck_state, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     if ok == 0:
         print("::error::every source failed")
         return 1

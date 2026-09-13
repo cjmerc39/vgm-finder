@@ -1299,6 +1299,89 @@ def test_tv_window_searches_each_show_weekly_under_a_daily_cap(capsys):
     assert "the cap bound on 1 of the last 2 runs" in capsys.readouterr().out
 
 
+def _mayday_album():
+    return {"resultType": "album", "browseId": "mayday1", "year": "2026", "thumbnails": [],
+            "title": "Mayday (Original Motion Picture Soundtrack)", "artists": [{"name": "Various Artists"}]}
+
+
+def test_film_recheck_remembers_misses_and_searches_them_at_30_60_90_days(capsys):
+    bundle = raw("tmdb-film.json")  # Dune and Oppenheimer find albums, Mayday (2026-09-03) does not
+    empty = json.dumps({"results": [], "genres": {}, "composers": {}}).encode()
+    state = {}
+    day = lambda d: datetime(2026, 9, d, 10, tzinfo=timezone.utc)
+    items = collect.parse_tmdb_film_window(bundle, screen_resolve, state=state, now=day(10))
+    assert [it["game"] for it in items] == ["Dune: Part Two", "Oppenheimer"]
+    assert list(state["films"]) == ["111111"] and state["films"]["111111"]["checked"] == []
+    assert state["films"]["111111"]["entry"]["title"] == "Mayday"
+    assert state["runs"][-1]["recorded"] == 1 and state["runs"][-1]["due"] == 0
+    # inside the window nothing is due; the window itself keeps searching it
+    collect.parse_tmdb_film_window(bundle, screen_resolve, state=state, now=day(12))
+    assert state["runs"][-1]["due"] == 0 and state["runs"][-1]["recorded"] == 0
+    asked = []
+    miss = lambda q: asked.append(q) or []
+    # day 29 after release: not due yet
+    collect.parse_tmdb_film_window(empty, miss, state=state, now=datetime(2026, 10, 2, 10, tzinfo=timezone.utc))
+    assert asked == [] and state["runs"][-1]["due"] == 0
+    # day 31: the 30-day recheck searches it and finds nothing
+    collect.parse_tmdb_film_window(empty, miss, state=state, now=datetime(2026, 10, 4, 10, tzinfo=timezone.utc))
+    assert asked == [collect._query("Mayday")] and state["films"]["111111"]["checked"] == [30]
+    assert state["runs"][-1] == {"date": "2026-10-04", "recorded": 0, "tracked": 1, "due": 1, "searched": 1,
+                                 "searches": 1, "found": 0, "deferred": 0}
+    # day 32: nothing due until 60
+    asked.clear()
+    collect.parse_tmdb_film_window(empty, miss, state=state, now=datetime(2026, 10, 5, 10, tzinfo=timezone.utc))
+    assert asked == []
+    # day 61: the 60-day recheck finds the album; the film leaves the list and becomes a row
+    hit = lambda q: [_mayday_album()]
+    items = collect.parse_tmdb_film_window(empty, hit, state=state, now=datetime(2026, 11, 3, 10, tzinfo=timezone.utc))
+    assert [it["game"] for it in items] == ["Mayday"] and items[0]["ytmAlbumUrl"].endswith("mayday1")
+    assert state["films"] == {} and state["runs"][-1]["found"] == 1
+
+
+def test_film_recheck_gives_up_after_90_days_and_drops_films_that_got_a_row():
+    bundle = raw("tmdb-film.json")
+    empty = json.dumps({"results": [], "genres": {}, "composers": {}}).encode()
+    state = {}
+    collect.parse_tmdb_film_window(bundle, screen_resolve, state=state, now=datetime(2026, 9, 10, 10, tzinfo=timezone.utc))
+    miss = lambda q: []
+    # a late first recheck at day 65 counts for 30 and 60
+    collect.parse_tmdb_film_window(empty, miss, state=state, now=datetime(2026, 11, 7, 10, tzinfo=timezone.utc))
+    assert state["films"]["111111"]["checked"] == [30, 60]
+    collect.parse_tmdb_film_window(empty, miss, state=state, now=datetime(2026, 12, 3, 10, tzinfo=timezone.utc))
+    assert state["films"] == {} and state["runs"][-1]["searched"] == 1  # the 90-day check was its last
+    state = {}
+    collect.parse_tmdb_film_window(bundle, screen_resolve, state=state, now=datetime(2026, 9, 10, 10, tzinfo=timezone.utc))
+    asked = []
+    collect.parse_tmdb_film_window(empty, lambda q: asked.append(q) or [], state=state, have={"111111"},
+                                   now=datetime(2026, 10, 4, 10, tzinfo=timezone.utc))
+    assert state["films"] == {} and asked == []  # a row arrived another way: dropped, never searched
+
+
+def test_film_recheck_cap_takes_the_highest_voted_first(capsys):
+    def film(i, votes, original=None):
+        return {"id": i, "title": f"Film {i}", "original_title": original or f"Film {i}", "release_date": "2026-08-01",
+                "vote_count": votes, "genre_ids": [], "poster_path": None}
+    bundle = json.dumps({"results": [film(1, 100), film(2, 900), film(3, 500, original="Trois")],
+                         "genres": {}, "composers": {}, "aliases": {}}).encode()
+    state = {}
+    collect.parse_tmdb_film_window(bundle, lambda q: [], state=state, now=datetime(2026, 8, 5, 10, tzinfo=timezone.utc))
+    assert sorted(state["films"]) == ["1", "2", "3"]
+    empty = json.dumps({"results": [], "genres": {}, "composers": {}}).encode()
+    asked = []
+    collect.parse_tmdb_film_window(empty, lambda q: asked.append(q) or [], state=state, cap=2,
+                                   now=datetime(2026, 9, 5, 10, tzinfo=timezone.utc))
+    # film 2 first by votes; film 3 needs two searches with one left, so it and film 1 wait
+    assert asked == [collect._query("Film 2")]
+    assert state["films"]["2"]["checked"] == [30] and state["films"]["3"]["checked"] == []
+    assert state["runs"][-1]["deferred"] == 2 and state["runs"][-1]["searches"] == 1
+    assert "the cap bound on 1 of the last 2 runs" in capsys.readouterr().out  # the recording run was run 1
+    asked.clear()
+    collect.parse_tmdb_film_window(empty, lambda q: asked.append(q) or [], state=state,
+                                   now=datetime(2026, 9, 6, 10, tzinfo=timezone.utc))
+    assert asked == [collect._query("Film 3"), collect._query("Trois"), collect._query("Film 1")]
+    assert "the cap bound on 1 of the last 3 runs" in capsys.readouterr().out
+
+
 def test_parse_tmdb_tv_dates_rows_by_season():
     items = collect.parse_tmdb_tv(raw("tmdb-tv.json"), screen_resolve)
     assert len(items) == 6  # Succession seasons 1-4 plus The Last of Us seasons 1-2

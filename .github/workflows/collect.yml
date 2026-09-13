@@ -23,5 +23,5 @@ jobs:
       - run: |
           git config user.name vgm-bot
           git config user.email actions@users.noreply.github.com
-          git add data collector/tv-window-state.json
+          git add data collector/tv-window-state.json collector/film-recheck-state.json
           git diff --cached --quiet || (git commit -m collect && git pull --rebase && git push)
