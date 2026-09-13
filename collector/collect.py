@@ -1304,15 +1304,18 @@ def screen_classify(results, info, album_fn=None):
         gap = min(abs(yr - y) for y in years) if (yr is not None and years) else None
         near = gap is not None and gap <= SCREEN_YEAR_WINDOW
         if medium == "tv":
-            # an album naming a season the show lacks, released before the
-            # show began, belongs to a namesake: "Doctor Who Series 10" (2017)
-            # is the 2005 show's, not the 2024 show's. One released after the
-            # show began is kept: TMDb lists Frieren's second season late
+            # an album naming a season the show lacks belongs to a namesake
+            # when the show could not have that season yet (beyond the next
+            # one TMDb could add) or the album predates the show: "Doctor Who
+            # Series 10" is the 2005 show's, not the 2024 show's, whose
+            # seasons stop at 2. The next season is kept, since TMDb lists
+            # anime seasons late (Frieren's second)
             named = _season_of(title)
             aired = {int(n): d for n, d in (info.get("seasons") or {}).items() if str(n).isdigit() and d}
             first = min((int(d[:4]) for d in aired.values() if d[:4].isdigit()), default=None)
-            if named is not None and aired and named not in aired and yr is not None and first and yr < first:
-                out.append(dict(e, verdict=f"season: the show has no season {named} and began in {first}"))
+            if named is not None and aired and named not in aired and (
+                    named > max(aired) + 1 or (yr is not None and first and yr < first)):
+                out.append(dict(e, verdict=f"season: the show has no season {named} (its seasons stop at {max(aired)})"))
                 continue
         wording = bool(_SCREEN_WORDING.search(title))
         e.update(credited=credited, gap=gap, extra=extra, worded=wording)

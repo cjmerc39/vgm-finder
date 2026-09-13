@@ -268,7 +268,11 @@ def test_walk4_signoff_rules():
     who = album("Doctor Who Series 10 (Original Television Soundtrack)", "Murray Gold", "2017")
     new_who = dict(show("Doctor Who", [2024, 2025], ["Murray Gold"]), seasons={"1": "2024-05-10", "2": "2025-04-12"})
     old_who = dict(show("Doctor Who", [2005, 2017], ["Murray Gold"]), seasons={str(n): f"{2004 + n}-04-01" for n in range(1, 14)})
-    assert collect.screen_classify([who], new_who)[0]["verdict"] == "season: the show has no season 10 and began in 2024"
+    assert collect.screen_classify([who], new_who)[0]["verdict"] == "season: the show has no season 10 (its seasons stop at 2)"
+    reissue = dict(who, year="2025")  # a reissue year does not make it the new show's
+    assert collect.screen_classify([reissue], new_who)[0]["verdict"].startswith("season:")
+    s3 = album("Doctor Who - Series 3 (Original Television Soundtrack)", "Murray Gold", "2025")
+    assert collect.screen_classify([s3], new_who)[0]["accepted"]  # season 3 is the next one the show could add
     assert collect.screen_classify([who], old_who)[0]["accepted"]
     assert collect.screen_classify([who], show("Doctor Who", [2024], ["Murray Gold"]))[0]["accepted"]  # no seasons known
     # TMDb lists a second season late: an album released after the show began is kept

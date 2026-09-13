@@ -1,17 +1,17 @@
 {
- "generatedAt": "2026-09-13T21:40:40Z",
+ "generatedAt": "2026-09-13T21:43:26Z",
  "counts": {
   "corrections": 1,
-  "additions": 1399,
-  "orphans": 6,
+  "additions": 1398,
+  "orphans": 5,
   "unverified": 2,
-  "unchanged": 3958,
+  "unchanged": 3959,
   "reids": 5,
   "reidsBlocked": 0,
   "pinned": 23,
   "excludedByOverrides": 15,
   "duplicateSlotRows": 0,
-  "albumClaimsSettled": 22,
+  "albumClaimsSettled": 21,
   "weakMatch": 199,
   "songsAlbum": 645,
   "songsAlbumLiteral": 815,
@@ -42,8 +42,8 @@
    },
    "tv": {
     "titles": 1838,
-    "withAlbum": 727,
-    "rate": 0.396
+    "withAlbum": 726,
+    "rate": 0.395
    }
   }
  },
@@ -67292,64 +67292,6 @@
   {
    "slot": [
     "tv",
-    "239770",
-    10,
-    null
-   ],
-   "album": {
-    "title": "Doctor Who Series 10 (Original Television Soundtrack)",
-    "url": "https://music.youtube.com/browse/MPREb_xKWNMHC2Zv1",
-    "art": "https://yt3.googleusercontent.com/tJKEmtO2PaEl0-OD22LQgjquNXawM_dwDVXZav6QmZiEYrDmqFRhuNK8f0yjldh10OsVHwF22UVjsEic=w544-h544-l90-rj",
-    "rule": "1 exact title",
-    "klass": "exact",
-    "credited": true,
-    "extra": 0,
-    "gap": 0,
-    "worded": true,
-    "weak": false,
-    "season": 10,
-    "volume": null,
-    "year": "2025",
-    "seasonFrom": "title",
-    "composers": [
-     "Murray Gold",
-     "Ron Grainer"
-    ],
-    "rank": 7,
-    "artists": [
-     "Murray Gold"
-    ],
-    "plays": null,
-    "trackStats": null,
-    "yearFrom": null,
-    "releaseDate": null,
-    "pinned": null
-   },
-   "weakMatch": false,
-   "songsAlbum": false,
-   "songsAlbumLiteral": false,
-   "songsUnknown": false,
-   "title": {
-    "medium": "tv",
-    "id": "239770",
-    "name": "Doctor Who",
-    "date": "2024-05-11",
-    "seasons": {
-     "1": "2024-05-11",
-     "2": "2025-04-12"
-    },
-    "genres": [
-     "Action & Adventure",
-     "Drama",
-     "Sci-Fi & Fantasy"
-    ],
-    "poster": "/2JP6NSmBwxg75uTcIHiv5R8PpPi.jpg",
-    "votes": 331
-   }
-  },
-  {
-   "slot": [
-    "tv",
     "240459",
     null,
     null
@@ -76079,20 +76021,6 @@
     "url": "https://music.youtube.com/browse/MPREb_FhmlC8BDza9"
    },
    "reason": "album belongs to new film/828508"
-  },
-  {
-   "row": "tv-doctor-who-season-10",
-   "slot": [
-    "tv",
-    "57243",
-    10,
-    null
-   ],
-   "album": {
-    "title": "Doctor Who Series 10 (Original Television Soundtrack)",
-    "url": "https://music.youtube.com/browse/MPREb_xKWNMHC2Zv1"
-   },
-   "reason": "album belongs to new tv/239770/10/None"
   },
   {
    "row": "tv-veneno",
@@ -146725,6 +146653,29 @@
    "pinned": false
   },
   {
+   "row": "tv-doctor-who-season-10",
+   "slot": [
+    "tv",
+    "57243",
+    10,
+    null
+   ],
+   "album": {
+    "title": "Doctor Who Series 10 (Original Television Soundtrack)",
+    "url": "https://music.youtube.com/browse/MPREb_xKWNMHC2Zv1"
+   },
+   "weakMatch": false,
+   "songsAlbum": false,
+   "songsAlbumLiteral": false,
+   "credited": true,
+   "artists": [
+    "Murray Gold"
+   ],
+   "rule": "1 exact title",
+   "seasonFrom": "title",
+   "pinned": false
+  },
+  {
    "row": "tv-doctor-who-season-11",
    "slot": [
     "tv",
@@ -164304,11 +164255,6 @@
    "album": "https://music.youtube.com/browse/MPREb_ar7mIOJ0BhG",
    "winner": "film-teenage-mutant-ninja-turtles",
    "loser": "new tv/51817/None/None"
-  },
-  {
-   "album": "https://music.youtube.com/browse/MPREb_xKWNMHC2Zv1",
-   "winner": "new tv/239770/10/None",
-   "loser": "tv-doctor-who-season-10"
   },
   {
    "album": "https://music.youtube.com/browse/MPREb_RQ7MXJCe8za",
