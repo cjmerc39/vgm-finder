@@ -50,7 +50,28 @@
      "why": "spin-off rule: The First Turn is the show's own companion album, not another show"},
     {"tmdb": 1104, "season": null, "name": "Mad Men", "album": "MPREb_1uHnVLoKsRE",
      "albumTitle": "Mad Men: On the Rocks (Music from the Television Series)",
-     "why": "spin-off rule: On the Rocks is the show's own compilation, not another show"}
+     "why": "spin-off rule: On the Rocks is the show's own compilation, not another show"},
+    {"tmdb": 2661, "season": 35, "volume": null, "name": "Kamen Rider", "album": "MPREb_AOWslglEvm2",
+     "albumTitle": "KAMEN RIDER GAVV TV ORIGINAL SOUNDTRACK",
+     "why": "one TMDb show spans every yearly series; Gavv is season 35 (2024-09-01)"},
+    {"tmdb": 2661, "season": 35, "volume": 1, "name": "Kamen Rider", "album": "MPREb_qH6Ux0psezN",
+     "albumTitle": "KAMEN RIDER GAVV ORIGINAL SOUNDTRACK Vol.1",
+     "why": "Gavv is season 35"},
+    {"tmdb": 2661, "season": 35, "volume": 2, "name": "Kamen Rider", "album": "MPREb_LPFbwALsOsL",
+     "albumTitle": "KAMEN RIDER GAVV ORIGINAL SOUNDTRACK Vol.2",
+     "why": "Gavv is season 35; released after Zeztz premiered, so the date rule put it on 36"},
+    {"tmdb": 2661, "season": 36, "volume": 1, "name": "Kamen Rider", "album": "MPREb_42Qgox5TCBU",
+     "albumTitle": "KAMEN RIDER ZEZTZ TV Original Soundtrack Vol.1",
+     "why": "Zeztz is season 36 (2025-09-07)"},
+    {"tmdb": 2661, "season": 36, "volume": 2, "name": "Kamen Rider", "album": "MPREb_4FguUD5rz8y",
+     "albumTitle": "KAMEN RIDER ZEZTZ TV Original Soundtrack Vol.2",
+     "why": "Zeztz is season 36; released after season 37 premiered, so the date rule put it on 37"},
+    {"tmdb": 67166, "season": 1, "volume": 1, "name": "El marginal", "album": "MPREb_DBUkZw1C7WP",
+     "albumTitle": "El Marginal (Music from the Original TV Series), Vol. 1",
+     "why": "plays floor: a niche Argentine series score by Juan Ignacio Bouscayrol, few plays but real"},
+    {"tmdb": 67166, "season": 1, "volume": 2, "name": "El marginal", "album": "MPREb_f1MSVLhqZp3",
+     "albumTitle": "El Marginal (Music from the Original TV Series), Vol. 2",
+     "why": "plays floor: the same score's second volume"}
   ],
   "exclude": [
     {"medium": "film", "tmdb": 615658, "name": "Awake", "album": "MPREb_RZKYAffmAup", "albumTitle": "AWAKE (Original Soundtrack)", "why": "a different work named Awake (Nozomu Sato)"},
@@ -72,6 +93,8 @@
     {"medium": "tv", "tmdb": 14929, "name": "Heartland", "album": "MPREb_1Z3CZCpfpAu", "albumTitle": "Music from the Heartland", "why": "Dorf Kapelle's regional album, unrelated to the show"},
     {"medium": "tv", "tmdb": 127235, "name": "Invasion", "album": "MPREb_fIIhfambng6", "albumTitle": "Invasion (Original Soundtrack)", "why": "Nightcrawler's Invasion, not the show's score"},
     {"medium": "tv", "tmdb": 21494, "name": "V", "album": "MPREb_goZCjcobliQ", "albumTitle": "Soundtrack V", "why": "Emmanuel Top's techno album, unrelated to the show"},
+    {"medium": "film", "tmdb": 377275, "name": "In Bed with Victoria", "album": "MPREb_CrJGCHOiEv3", "albumTitle": "Victoria (Original Soundtrack)", "why": "Martin Phipps and Ruth Barrett's score for the ITV series Victoria, not this film"},
+    {"medium": "film", "tmdb": 514207, "name": "Invasion (2020)", "album": "MPREb_fIIhfambng6", "albumTitle": "Invasion (Original Soundtrack)", "why": "Nightcrawler's Invasion, unrelated to this film as to the show"},
     {"medium": "tv", "tmdb": 196322, "name": "Dark Matter (2024)", "album": "MPREb_uZonVTxguQI", "albumTitle": "Dark Matter (Original Series Soundtrack)", "why": "Benjamin Pinkerton's score for the 2015 Syfy show, its TMDb-credited composer; the 2024 Apple show has its own season albums"}
   ],
   "seasonlessVolumes": [
@@ -81,7 +104,6 @@
     {"tmdb": 95557, "name": "INVINCIBLE", "why": "Vol. 1 (2025) gathers cues from Seasons 1 to 3, released after the third aired"},
     {"tmdb": 604, "name": "Teen Titans", "why": "Vol. 1 to 5 are compilations released after the show ended"},
     {"tmdb": 4615, "name": "Hercules: The Legendary Journeys", "albums": ["MPREb_mmFVACeI3DW"],
-     "why": "Vol. 4 is a compilation spanning seasons; Volume Two and Three keep their seasons"},
-    {"tmdb": 2661, "name": "Kamen Rider", "why": "one TMDb show spans every yearly series (Gavv, Zeztz), so no season number fits its volumes"}
+     "why": "Vol. 4 is a compilation spanning seasons; Volume Two and Three keep their seasons"}
   ]
 }

@@ -260,6 +260,43 @@ def test_daily_and_backfill_apply_screen_overrides():
     assert collect.screen_title_slots(other, results, None, pins) == {}  # pinned to another title
 
 
+def test_walk4_signoff_rules():
+    def album(title, artist, year, bid="x"):
+        return {"resultType": "album", "browseId": bid, "year": year, "thumbnails": [],
+                "title": title, "artists": [{"name": artist}]}
+    # an album naming a season the show lacks belongs to a namesake
+    who = album("Doctor Who Series 10 (Original Television Soundtrack)", "Murray Gold", "2017")
+    new_who = dict(show("Doctor Who", [2024, 2025], ["Murray Gold"]), seasons={"1": "2024-05-10", "2": "2025-04-12"})
+    old_who = dict(show("Doctor Who", [2005, 2017], ["Murray Gold"]), seasons={str(n): f"{2004 + n}-04-01" for n in range(1, 14)})
+    assert collect.screen_classify([who], new_who)[0]["verdict"] == "season: the show has no season 10 and began in 2024"
+    assert collect.screen_classify([who], old_who)[0]["accepted"]
+    assert collect.screen_classify([who], show("Doctor Who", [2024], ["Murray Gold"]))[0]["accepted"]  # no seasons known
+    # TMDb lists a second season late: an album released after the show began is kept
+    frieren = dict(show("Frieren: Beyond Journey's End", [2023, 2026], ["Evan Call"]), seasons={"1": "2023-09-29"})
+    s2 = album("Frieren: Beyond Journey's End: Season 2 (Original Soundtrack)", "Evan Call", "2026")
+    assert collect.screen_classify([s2], frieren)[0]["accepted"]
+    # "Music for the Motion Picture" is wording, and unwraps from the front
+    assert collect.normalize_screen("Music for the Motion Picture Victoria", "film") == "victoria"
+    frahm = album("Music for the Motion Picture Victoria", "Nils Frahm", "2015")
+    c = collect.screen_classify([frahm], film("Victoria", 2015, ["Nils Frahm"]))[0]
+    assert c["accepted"] and c["rule"] == "1 exact title" and c["credited"]
+    # the plays floor: an uncredited album by an unrelated act needs plays
+    gringo = album("Gringo (Original Motion Picture Soundtrack)", "Antonio Mainenti", "2018", bid="g")
+    info = film("Gringo", 2018, ["Christophe Beck"])
+    quiet = lambda b: {"tracks": [{"title": "t", "views": "37 plays"}]}
+    loud = lambda b: {"tracks": [{"title": "t", "views": "5K plays"}]}
+    c = collect.screen_classify([gringo], info, quiet)[0]
+    assert not c["accepted"] and c["verdict"].startswith("plays floor: 37 plays")
+    assert collect.screen_classify([gringo], info, loud)[0]["accepted"]
+    assert collect.screen_classify([gringo], info)[0]["accepted"]  # no album page to read: kept
+    assert collect.screen_classify([gringo], info, lambda b: {"tracks": []})[0]["accepted"]  # no counts: kept
+    asked = []
+    va = dict(gringo, artists=[{"name": "Various Artists"}])
+    assert collect.screen_classify([va], info, lambda b: asked.append(b) or quiet(b))[0]["accepted"] and asked == []
+    real = dict(gringo, artists=[{"name": "Christophe Beck"}])
+    assert collect.screen_classify([real], info, quiet)[0]["accepted"]  # the credited composer needs no plays
+
+
 def test_composer_accents_fold_on_latin_names_only():
     assert collect._credited(["Roque Banos"], ["Roque Baños"])
     assert collect._credited(["Jóhann Jóhannsson"], ["Johann Johannsson"])

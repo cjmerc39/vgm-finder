@@ -316,6 +316,25 @@ def test_overrides_exclude_pin_and_keep_volumes_seasonless():
     assert plan["counts"]["pinned"] == 1 and plan["counts"]["excludedByOverrides"] == 1
 
 
+def test_a_row_whose_album_is_pinned_moves_to_the_pin(tmp_path):
+    gavv2 = _cand("KAMEN RIDER GAVV ORIGINAL SOUNDTRACK Vol.2", "https://music.youtube.com/browse/gavv2",
+                  volume=2, year="2025")
+    ev = {("tv", "2661"): dict(_record("2661", "Kamen Rider", [gavv2], {gavv2["url"]: "accepted"}, medium="tv"),
+                               seasons={"35": "2024-09-01", "36": "2025-09-07"},
+                               results=[{"resultType": "album", "browseId": "gavv2", "title": gavv2["title"],
+                                         "year": "2025", "artists": [], "thumbnails": []}])}
+    releases = [row("tv-kamen-rider-season-36-vol-2", "tv", "Kamen Rider Season 36 Vol. 2 Soundtrack",
+                    gavv2["title"], gavv2["url"], 2661)]
+    overrides = {"tv": [{"tmdb": 2661, "season": 35, "volume": 2, "name": "Kamen Rider", "album": "gavv2"}]}
+    plan = rewalk.plan_rewalk(releases, ev, overrides=overrides)
+    assert [(x["row"], x["newId"], x["seasonFrom"]) for x in plan["reids"]] == [
+        ("tv-kamen-rider-season-36-vol-2", "tv-kamen-rider-season-35-vol-2", "override")]
+    assert plan["counts"]["orphans"] == 0 and plan["counts"]["additions"] == 0
+    assert [u["row"] for u in plan["unchanged"]] == ["tv-kamen-rider-season-36-vol-2"]
+    out = rewalk.apply_plan(releases, plan, ev, tmp_path / "b.json", tmp_path, "2026-09-13T00:00:00Z")
+    assert releases[0]["id"] == "tv-kamen-rider-season-35-vol-2" and out["stale"] == []
+
+
 def test_weak_guard_admits_disney_beside_the_cast():
     assert rewalk._weak_artist_ok({"artists": ["High School Musical Cast", "Disney"]},
                                   {"name": "High School Musical", "original": None})

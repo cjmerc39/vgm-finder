@@ -825,6 +825,7 @@ TV_WINDOW_SEARCH_CAP = 60    # YouTube Music searches the TV window may spend in
 TV_WINDOW_RUNS_KEPT = 30     # recent runs kept to say how often the cap binds
 SCREEN_YEAR_WINDOW = 2
 WEAK_PLAYS_MIN = 100_000   # rule 2 without a composer: total plays on the album
+UNCREDITED_PLAYS_FLOOR = 1_000  # an uncredited album by an unrelated act needs this many plays
 
 # suffix remnants left after normalize_title has eaten its own suffixes
 # ("Original Motion Picture Soundtrack" loses only the trailing word), plus
@@ -876,7 +877,8 @@ _SCREEN_TAILS = (
     "excerpts from the",
     "the",                   # "(The Original Soundtrack)" leaves its article stranded
 )
-_SCREEN_HEADS = ("soundtrack from the ", "soundtrack from ", "music from the ", "music from ")
+_SCREEN_HEADS = ("music for the motion picture ", "soundtrack from the ", "soundtrack from ",
+                 "music from the ", "music from ")
 
 # streaming-era series wording, network agnostic: "(Original Max Series
 # Soundtrack)", "(Adult Swim Original Series Soundtrack)", "(Soundtrack
@@ -969,8 +971,8 @@ def _is_sequel_tail(tail):
 
 # an album title must say it is a soundtrack, in any of these scripts;
 # only rule 2 lets an exact title through without it
-_SCREEN_WORDING = re.compile(r"\b(?:soundtrack|score|music from|ost)\b|原聲|原声|サウンドトラック",
-                             re.IGNORECASE)
+_SCREEN_WORDING = re.compile(r"\b(?:soundtrack|score|music from|music for the motion picture|ost)\b"
+                             r"|原聲|原声|サウンドトラック", re.IGNORECASE)
 _SCREEN_REJECT = re.compile(
     r"\b(inspired|tribute|karaoke|remix(es|ed)?|covers?|lullab|8.?bit|lo.?fi"
     r"|music box|relaxing|piano (covers?|versions?|tributes?|renditions?)"
@@ -1186,6 +1188,16 @@ def _album_plays(album_fn, browse_id):
         return None
 
 
+def _album_plays_known(album_fn, browse_id):
+    """Total plays on an album page, or None when the page cannot be read or
+    carries no play counts. Unlike _album_plays, silence is not zero."""
+    try:
+        album = album_fn(browse_id)
+    except Exception:
+        return None
+    return _plays_total(ytm_tracks_from(album)) if album else None
+
+
 # an album that names the other medium is that medium's album: "M*A*S*H
 # (Original Motion Picture Soundtrack)" is the film's, "Midnight Sun
 # (Original Soundtrack from the TV Series)" the show's. A title whose own
@@ -1291,6 +1303,17 @@ def screen_classify(results, info, album_fn=None):
                 e.update(year=str(yr), yearFrom="album")
         gap = min(abs(yr - y) for y in years) if (yr is not None and years) else None
         near = gap is not None and gap <= SCREEN_YEAR_WINDOW
+        if medium == "tv":
+            # an album naming a season the show lacks, released before the
+            # show began, belongs to a namesake: "Doctor Who Series 10" (2017)
+            # is the 2005 show's, not the 2024 show's. One released after the
+            # show began is kept: TMDb lists Frieren's second season late
+            named = _season_of(title)
+            aired = {int(n): d for n, d in (info.get("seasons") or {}).items() if str(n).isdigit() and d}
+            first = min((int(d[:4]) for d in aired.values() if d[:4].isdigit()), default=None)
+            if named is not None and aired and named not in aired and yr is not None and first and yr < first:
+                out.append(dict(e, verdict=f"season: the show has no season {named} and began in {first}"))
+                continue
         wording = bool(_SCREEN_WORDING.search(title))
         e.update(credited=credited, gap=gap, extra=extra, worded=wording)
         era = "is outside the window" if gap is not None else "is unknown"
@@ -1327,6 +1350,16 @@ def screen_classify(results, info, album_fn=None):
         if not ok:
             out.append(dict(e, verdict=why))
             continue
+        if not credited and not weak and album_fn and not weak_artist_ok(artists, info):
+            # plays floor: an album by an act that is neither the composer,
+            # Various Artists nor the work is someone else's record unless
+            # people play it (Gringo by Antonio Mainenti, 37 plays)
+            plays = _album_plays_known(album_fn, bid)
+            e["plays"] = plays
+            if plays is not None and plays < UNCREDITED_PLAYS_FLOOR:
+                out.append(dict(e, verdict=f"plays floor: {plays} plays, no credited composer, "
+                                           f"credited to {', '.join(artists)}"))
+                continue
         people = [a for a in artists if a.lower() != "various artists"
                   and normalize_title(a) != normalize_title(info.get("name") or "")]
         thumbs = sorted((t for t in r.get("thumbnails", []) or [] if t.get("url")),

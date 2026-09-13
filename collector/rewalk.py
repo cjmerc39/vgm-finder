@@ -192,7 +192,7 @@ def judge_record(rec, worn, album_fn):
     album whose year the search got wrong (yearVerified) is judged with the
     year on its album page."""
     medium = rec["medium"]
-    info = {k: rec.get(k) for k in ("medium", "name", "original", "years", "composers", "aliases")}
+    info = {k: rec.get(k) for k in ("medium", "name", "original", "years", "composers", "aliases", "seasons")}
     verified = rec.get("yearVerified") or []
     results = []
     for r in rec.get("results") or []:
@@ -578,15 +578,19 @@ def plan_rewalk(releases, evaluations, overrides=None, dates=None):
     # that slot's id and title: CJ's volume decision, re-id'd this once. A row
     # whose target another row keeps stays put and is listed as blocked.
     moved = {}
+    pin_slots = {YTM_ALBUM + p["album"]: slot for slot, p in sets["pins"].items()}
     for slot, r in rows_by_slot.items():
         if slot[0] != "tv":
             continue
         rec = evaluations.get(("tv", slot[1])) or {}
-        own = next((c for c in rec.get("accepted", []) if c["url"] == r.get("ytmAlbumUrl")
-                    and ("tv", slot[1], c["url"]) not in excluded), None)
-        if own is None:
-            continue
-        want, how = collect.screen_slot(_title_info("tv", slot[1], rec, seasonless), _dated(own, dates))
+        if r.get("ytmAlbumUrl") in pin_slots and pin_slots[r["ytmAlbumUrl"]][1] == slot[1]:
+            want, how = pin_slots[r["ytmAlbumUrl"]], "override"  # a pinned album's row follows its pin
+        else:
+            own = next((c for c in rec.get("accepted", []) if c["url"] == r.get("ytmAlbumUrl")
+                        and ("tv", slot[1], c["url"]) not in excluded), None)
+            if own is None:
+                continue
+            want, how = collect.screen_slot(_title_info("tv", slot[1], rec, seasonless), _dated(own, dates))
         if want != slot:
             moved[r["id"]] = (slot, want, how)
     taken = {slot: r for slot, r in rows_by_slot.items() if r["id"] not in moved}
