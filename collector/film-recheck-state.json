@@ -1,4 +1,464 @@
 {
- "films": {},
- "runs": []
+ "films": {
+  "1084815": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1084815,
+    "original_title": "La Derni\u00e8re Patiente",
+    "poster_path": "/qnupAunP3yOuhLN6qPJ6uh5K3Zi.jpg",
+    "release_date": "2026-09-02",
+    "title": "The Last Patient",
+    "vote_count": 10
+   }
+  },
+  "1198654": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Chris Roe"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     53
+    ],
+    "id": 1198654,
+    "original_title": "Bad Apples",
+    "poster_path": "/60BxAjKM20ABTSYnWZcJ8ExiVNL.jpg",
+    "release_date": "2026-09-10",
+    "title": "Bad Apples",
+    "vote_count": 7
+   }
+  },
+  "1208117": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     36
+    ],
+    "id": 1208117,
+    "original_title": "Les H\u00e9ros du Louvre",
+    "poster_path": "/lGi41Nho5Gz7dVo3jIEODGqdnZG.jpg",
+    "release_date": "2026-09-09",
+    "title": "Les H\u00e9ros du Louvre",
+    "vote_count": 5
+   }
+  },
+  "1257147": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1257147,
+    "original_title": "Minha Melhor Amiga",
+    "poster_path": "/wGfTFVeguXDXYrwPQ8QMFsaSK2M.jpg",
+    "release_date": "2026-09-03",
+    "title": "My Best Friend",
+    "vote_count": 7
+   }
+  },
+  "1258181": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     35
+    ],
+    "id": 1258181,
+    "original_title": "La vie d'une femme",
+    "poster_path": "/hakvR1eAbMI4xGFfElR6LZQyq8P.jpg",
+    "release_date": "2026-09-09",
+    "title": "A Woman's Life",
+    "vote_count": 15
+   }
+  },
+  "1361982": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     27,
+     53,
+     9648
+    ],
+    "id": 1361982,
+    "original_title": "The Room Below",
+    "poster_path": "/qKDDXjFlWbSJIjSmSH6EzNENSy7.jpg",
+    "release_date": "2026-09-01",
+    "title": "The Room Below",
+    "vote_count": 6
+   }
+  },
+  "1386315": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Tom Hodge"
+   ],
+   "entry": {
+    "genre_ids": [
+     53,
+     28
+    ],
+    "id": 1386315,
+    "original_title": "The Runner",
+    "poster_path": "/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
+    "release_date": "2026-09-03",
+    "title": "The Runner",
+    "vote_count": 432
+   }
+  },
+  "1429713": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Ernst Reijseger"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     35
+    ],
+    "id": 1429713,
+    "original_title": "Bucking Fastard",
+    "poster_path": "/6NVZPz2tkFkIYYX1Ji26vesxhR5.jpg",
+    "release_date": "2026-09-02",
+    "title": "Bucking Fastard",
+    "vote_count": 8
+   }
+  },
+  "1437948": {
+   "aliases": [
+    "Delphine Malauss\u00e9na"
+   ],
+   "checked": [],
+   "composers": [
+    "Delphine Malaussena"
+   ],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1437948,
+    "original_title": "La Frappe",
+    "poster_path": "/aAdoRQO0szrDQC6H3nL4nyJHZ7a.jpg",
+    "release_date": "2026-09-02",
+    "title": "The Blow",
+    "vote_count": 7
+   }
+  },
+  "1447853": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99,
+     10402
+    ],
+    "id": 1447853,
+    "original_title": "Oasis: Don't Look Back in Anger",
+    "poster_path": "/nuNfPuFZKtkrglYnz2F9weQm3Ng.jpg",
+    "release_date": "2026-09-09",
+    "title": "Oasis: Don't Look Back in Anger",
+    "vote_count": 16
+   }
+  },
+  "1497946": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "ermhoi"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     10752
+    ],
+    "id": 1497946,
+    "original_title": "\u30cd\u30eb\u30bd\u30f3\u3055\u3093\u3001\u3042\u306a\u305f\u306f\u4eba\u3092\u6bba\u3057\u307e\u3057\u305f\u304b\uff1f",
+    "poster_path": "/7YT1n9VVPwLbW0QRAQqzKFqvjFY.jpg",
+    "release_date": "2026-09-11",
+    "title": "Mr. Nelson, Did You Kill People?",
+    "vote_count": 5
+   }
+  },
+  "1509381": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     36,
+     10770,
+     10752
+    ],
+    "id": 1509381,
+    "original_title": "Oradour",
+    "poster_path": "/bSI2RoKBKistmF2Cjdyhj5K35ee.jpg",
+    "release_date": "2026-08-30",
+    "title": "Oradour",
+    "vote_count": 5
+   }
+  },
+  "1519320": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [],
+    "id": 1519320,
+    "original_title": "AEW All In: London",
+    "poster_path": "/rYumu3P6c4zzl91Jk1cVI3pt55s.jpg",
+    "release_date": "2026-08-30",
+    "title": "AEW All In: London",
+    "vote_count": 8
+   }
+  },
+  "1530121": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Max Aruj",
+    "W. F. Smith Leithart"
+   ],
+   "entry": {
+    "genre_ids": [
+     80,
+     53
+    ],
+    "id": 1530121,
+    "original_title": "The Girl in the River",
+    "poster_path": "/zk2saSFclmoJDxBovrOTp8W6NSz.jpg",
+    "release_date": "2026-09-04",
+    "title": "The Girl in the River",
+    "vote_count": 9
+   }
+  },
+  "1544437": {
+   "aliases": [
+    "\ub3c4\ubbf8\ub2c8\ud06c \uc170\ub7ec"
+   ],
+   "checked": [],
+   "composers": [
+    "Dominik Scherrer"
+   ],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1544437,
+    "original_title": "La ragazza con la Leica",
+    "poster_path": "/w6Z9qRbGiuwllqPnrFSlAYIH8J0.jpg",
+    "release_date": "2026-09-02",
+    "title": "The Girl with the Leica",
+    "vote_count": 5
+   }
+  },
+  "1558568": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Arnau Bataller"
+   ],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1558568,
+    "original_title": "Gracias, equipo",
+    "poster_path": "/jM8LRvzYIqZqw6Si5xNECiHFDgM.jpg",
+    "release_date": "2026-09-11",
+    "title": "Go Team!",
+    "vote_count": 10
+   }
+  },
+  "1591675": {
+   "aliases": [
+    "Y\u00fbta Bandoh",
+    "Yuuta Bandou",
+    "\u5742\u6771 \u7950\u5927",
+    "\u677e\u53f8\u99ac\u62d3",
+    "Taku Matsushiba",
+    "Bandoh Yuta"
+   ],
+   "checked": [],
+   "composers": [
+    "Yuta Bandoh"
+   ],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1591675,
+    "original_title": "\u30eb\u30c3\u30af\u30d0\u30c3\u30af",
+    "poster_path": "/sxiJhMNTBRvQgMnB9H4VIVdQfW9.jpg",
+    "release_date": "2026-09-11",
+    "title": "Look Back",
+    "vote_count": 6
+   }
+  },
+  "1664003": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1664003,
+    "original_title": "Stavros Halkias: Uncle Stav",
+    "poster_path": "/lVdlQbkpnETCZXN76UwQzMiJH6m.jpg",
+    "release_date": "2026-09-08",
+    "title": "Stavros Halkias: Uncle Stav",
+    "vote_count": 5
+   }
+  },
+  "1739202": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1739202,
+    "original_title": "Untold Raygun: Breaking Badly",
+    "poster_path": "/3pnlJjsGtrUp3cPEOLzkR0sPQAK.jpg",
+    "release_date": "2026-09-01",
+    "title": "Untold Raygun: Breaking Badly",
+    "vote_count": 12
+   }
+  },
+  "1739206": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1739206,
+    "original_title": "Untold Mr. T: I Pity the Fool",
+    "poster_path": "/bUWHsZqPiYl8GwxhXA1nCdKRZbn.jpg",
+    "release_date": "2026-09-08",
+    "title": "Untold Mr. T: I Pity the Fool",
+    "vote_count": 17
+   }
+  },
+  "1742458": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     53,
+     27
+    ],
+    "id": 1742458,
+    "original_title": "Confinement",
+    "poster_path": "/i92X6pBSqZgHAvIX28p0AZJU8xz.jpg",
+    "release_date": "2026-09-01",
+    "title": "Confinement",
+    "vote_count": 12
+   }
+  },
+  "1744876": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Carlos Vandera"
+   ],
+   "entry": {
+    "genre_ids": [
+     99,
+     10402
+    ],
+    "id": 1744876,
+    "original_title": "Fito P\u00e1ez: El mundo cabe en una canci\u00f3n",
+    "poster_path": "/5Olp4wGl2XEGkjVebukgZljYW3Q.jpg",
+    "release_date": "2026-09-03",
+    "title": "Fito P\u00e1ez: The World Within a Song",
+    "vote_count": 9
+   }
+  },
+  "1752159": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "John Dragonetti"
+   ],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1752159,
+    "original_title": "Turning Point: Generation 9/11",
+    "poster_path": "/fSPbxVI1q5sCS4fegzoFByzE749.jpg",
+    "release_date": "2026-09-02",
+    "title": "Turning Point: Generation 9/11",
+    "vote_count": 19
+   }
+  },
+  "1760262": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1760262,
+    "original_title": "Instadocs: The Decoy Plane",
+    "poster_path": "/uItPhP1Joq94T8BYCqQbIyZ73kE.jpg",
+    "release_date": "2026-09-04",
+    "title": "Instadocs: The Decoy Plane",
+    "vote_count": 5
+   }
+  },
+  "1762506": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99,
+     10752
+    ],
+    "id": 1762506,
+    "original_title": "Band of Brothers: Legacy",
+    "poster_path": "/n29MsV1m2OCbDp6PLeHxziOVOLG.jpg",
+    "release_date": "2026-09-09",
+    "title": "Band of Brothers: Legacy",
+    "vote_count": 5
+   }
+  }
+ },
+ "runs": [
+  {
+   "date": "2026-09-13",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 25,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 25
+  }
+ ]
 }
