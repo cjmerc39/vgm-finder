@@ -189,6 +189,36 @@ def test_episode_ranges_fold_away_on_tv_titles():
     assert c["accepted"] and c["rule"] == "1 exact title" and (c["season"], c["volume"]) == (2, 4)
 
 
+def test_walk3_blocklist_game_wording_and_spin_offs():
+    def album(title, artist, year, bid="x"):
+        return {"resultType": "album", "browseId": bid, "year": year, "thumbnails": [],
+                "title": title, "artists": [{"name": artist}]}
+    kick = collect.screen_classify([album("Music from Kick-Ass", "Ultimate Heroes", "2010")],
+                                   film("Kick-Ass", 2010, ["Henry Jackman"]))[0]
+    assert kick["verdict"] == "tribute artist 'Ultimate Heroes'"
+    for artist in ("Union Of Sound", "Songs in Cinema", "Album", "Vita"):
+        c = collect.screen_classify([album("Gossip Girl (Original Soundtrack)", artist, "2008")],
+                                    show("Gossip Girl", [2007, 2008], []))[0]
+        assert c["verdict"].startswith("tribute artist"), artist
+    silence = collect.screen_classify([album("Silence (Original Game Soundtrack)", "Tilo Alpermann", "2016")],
+                                      film("Silence", 2016, []))[0]
+    assert silence["verdict"] == "medium: 'Original Game Soundtrack' names a video game"
+    superman = dict(album("Superman Returns (Original Soundtrack)", "Colin O'Malley", "2006"),
+                    artists=[{"name": "Colin O'Malley"}, {"name": "EA Games Soundtrack"}])
+    assert collect.screen_classify([superman], film("Superman Returns", 2006, ["John Ottman"]))[0]["verdict"] \
+        .startswith("medium:")
+    squid = collect.screen_classify([album("Squid Game Soundtrack", "jung jaeil", "2021")],
+                                    show("Squid Game", [2021], ["Jung Jae-il"]))[0]
+    assert squid["accepted"]
+    spin = collect.screen_classify([album("Outlander: Blood of my Blood (Season 1 Original Series Soundtrack)",
+                                          "Bear McCreary", "2025")], show("Outlander", [2014, 2025], ["Bear McCreary"]))[0]
+    assert spin["verdict"].startswith("spin-off:")
+    final = collect.screen_classify(
+        [album("Star Wars: The Bad Batch - The Final Season: Vol. 1 (Episodes 1-8) (Original Soundtrack)",
+               "Kevin Kiner", "2024")], show("Star Wars: The Bad Batch", [2021, 2024], ["Kevin Kiner"]))[0]
+    assert final["accepted"]
+
+
 def test_composer_accents_fold_on_latin_names_only():
     assert collect._credited(["Roque Banos"], ["Roque Baños"])
     assert collect._credited(["Jóhann Jóhannsson"], ["Johann Johannsson"])

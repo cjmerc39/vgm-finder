@@ -32,6 +32,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -49,7 +50,7 @@ KINDS = {"film": ("movie", "FILM_BAR", "filmPage"), "tv": ("tv", "TV_BAR", "tvPa
 SRC = {"film": backfill.TMDB_SRC_FILM, "tv": backfill.TMDB_SRC_TV}
 _KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded",
          "weak", "season", "volume", "year", "seasonFrom", "composers", "rank", "artists", "plays",
-         "trackStats", "yearFrom")
+         "trackStats", "yearFrom", "releaseDate", "pinned")
 _REAL_KEYS = ("credited composer", "exact title", "fewer extra words", "closer year")
 YTM_ALBUM = "https://music.youtube.com/browse/"
 
@@ -426,6 +427,46 @@ def rejudge(releases, evaluations):
     return out
 
 
+OVERRIDES_PATH = collect.ROOT / "collector" / "screen-overrides.json"
+
+
+def load_overrides(path=OVERRIDES_PATH):
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def load_dates(folder=REWALK_DIR):
+    try:
+        return json.loads((Path(folder) / "release-dates.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def fetch_release_dates(evaluations, date_fn, known=None, pause=0):
+    """Full release dates for TV volume albums whose titles name no season,
+    keyed by album id. An album neither catalog carries is stored as null so
+    it is not asked again; a failed lookup is not stored and is retried."""
+    out = dict(known or {})
+    for (medium, tid), rec in sorted(evaluations.items()):
+        if medium != "tv":
+            continue
+        for c in rec.get("accepted", []):
+            if c.get("volume") is None or c.get("season") is not None:
+                continue
+            bid = c["url"].rsplit("/", 1)[1]
+            if bid in out:
+                continue
+            try:
+                out[bid] = date_fn(c["title"], c.get("year"))
+            except Exception:
+                continue
+            if pause:
+                time.sleep(pause)
+    return out
+
+
 # ---------------- resolve ----------------
 
 def songs_by_tracks(c):
@@ -435,6 +476,8 @@ def songs_by_tracks(c):
     every track says Various Artists carry no evidence and count as score."""
     if c.get("credited"):
         return False
+    if re.search(r"\bscore\b", c.get("title") or "", re.IGNORECASE):
+        return False  # "Peaky Blinders Series 4 Original Score" says what it is
     s = c.get("trackStats")
     if not s:
         return None
@@ -479,12 +522,47 @@ def _album(c):
     return {k: c.get(k) for k in _KEEP}
 
 
+def _title_info(medium, tid, rec, seasonless):
+    return {"medium": medium, "id": tid, "seasons": rec.get("seasons"), "volumesSeasonless": tid in seasonless}
+
+
+def _dated(c, dates):
+    """A TV volume candidate with the release date the dates step stored."""
+    if dates and c.get("volume") is not None and c.get("season") is None and not c.get("releaseDate"):
+        date = dates.get(c["url"].rsplit("/", 1)[1])
+        if date:
+            return dict(c, releaseDate=date)
+    return c
+
+
+def _pin_candidate(p, rec, medium):
+    """A screen-overrides.json pin as a winning candidate, built from the
+    title's stored search result for that album."""
+    url = YTM_ALBUM + p["album"]
+    result = next((r for r in rec.get("results") or [] if r["browseId"] == p["album"]), None) or {}
+    artists = [a["name"] for a in result.get("artists") or []]
+    thumbs = result.get("thumbnails") or []
+    names = (rec.get("composers") or []) + (rec.get("aliases") or [])
+    credited = bool(names) and collect._credited(artists, names)
+    c = {"title": result.get("title") or p.get("albumTitle"), "url": url,
+         "art": thumbs[-1]["url"] if thumbs else None, "rule": "pinned by screen-overrides.json",
+         "klass": "exact", "credited": credited, "extra": 0, "gap": None, "worded": True, "weak": False,
+         "season": p.get("season") if medium == "tv" else None, "volume": p.get("volume") if medium == "tv" else None,
+         "year": result.get("year"), "seasonFrom": "override" if medium == "tv" else None,
+         "composers": list(rec.get("composers") or []) or [a for a in artists if a.lower() != "various artists"],
+         "rank": 0, "artists": artists, "plays": None, "pinned": True}
+    album = (rec.get("albums") or {}).get(p["album"])
+    if album is not None and not credited:
+        c["trackStats"] = track_stats(album, names)
+    return c
+
+
 def _label(slot, rows_by_slot):
     row = rows_by_slot.get(slot)
     return row["id"] if row else "new " + "/".join(str(x) for x in slot)
 
 
-def plan_rewalk(releases, evaluations):
+def plan_rewalk(releases, evaluations, overrides=None, dates=None):
     """The whole-catalog resolution and its comparison with today's rows.
     A row's current album wins any dead heat on the real ranking keys, so a
     correct row is never churned onto an equally good album; a row is
@@ -493,6 +571,10 @@ def plan_rewalk(releases, evaluations):
     did not show its album at all."""
     game = {r["ytmAlbumUrl"]: r["id"] for r in releases
             if (r.get("medium") or "game") == "game" and r.get("ytmAlbumUrl")}
+    overrides = overrides or {}
+    excluded = {(x["medium"], str(x["tmdb"]), YTM_ALBUM + x["album"]) for x in overrides.get("exclude", [])}
+    seasonless = {str(x["tmdb"]) for x in overrides.get("seasonlessVolumes", [])}
+    dates = dates or {}
     rows_by_slot, duplicates, no_slot = {}, [], []
     for r in releases:
         if r.get("medium") not in ("film", "tv") or r.get("retired"):
@@ -514,10 +596,11 @@ def plan_rewalk(releases, evaluations):
         if slot[0] != "tv":
             continue
         rec = evaluations.get(("tv", slot[1])) or {}
-        own = next((c for c in rec.get("accepted", []) if c["url"] == r.get("ytmAlbumUrl")), None)
+        own = next((c for c in rec.get("accepted", []) if c["url"] == r.get("ytmAlbumUrl")
+                    and ("tv", slot[1], c["url"]) not in excluded), None)
         if own is None:
             continue
-        want, how = collect.screen_slot({"medium": "tv", "id": slot[1], "seasons": rec.get("seasons")}, own)
+        want, how = collect.screen_slot(_title_info("tv", slot[1], rec, seasonless), _dated(own, dates))
         if want != slot:
             moved[r["id"]] = (slot, want, how)
     taken = {slot: r for slot, r in rows_by_slot.items() if r["id"] not in moved}
@@ -547,23 +630,41 @@ def plan_rewalk(releases, evaluations):
                       "album": {"title": r.get("albumTitle"), "url": r.get("ytmAlbumUrl")}})
     rows_by_slot = taken
 
-    slots, weak_dropped = {}, []
+    slots, weak_dropped, excluded_hits = {}, [], []
     for (medium, tid), rec in sorted(evaluations.items()):
         if rec.get("gone") or rec.get("skipped"):
             continue
         cands = []
-        title_info = {"medium": medium, "id": tid, "seasons": rec.get("seasons")}
+        title_info = _title_info(medium, tid, rec, seasonless)
         for c in rec["accepted"]:
+            if (medium, tid, c["url"]) in excluded:
+                excluded_hits.append({"title": rec["name"], "album": c["title"], "artists": c.get("artists")})
+                continue
             if c.get("weak") and not _weak_artist_ok(c, rec):
                 weak_dropped.append({"title": rec["name"], "album": c["title"], "artists": c.get("artists")})
                 continue
+            c = _dated(c, dates)
             slot = collect.screen_slot(title_info, c)[0]
             row = rows_by_slot.get(slot)
             if row and row.get("ytmAlbumUrl") == c["url"]:
                 c = dict(c, worded=True, rank=-1)  # the incumbent takes a dead heat
             cands.append(c)
         slots.update(collect.screen_slots(title_info, cands))
-    winners, conflicts = collect.resolve_screen(slots, reserved=set(game))
+    # screen-overrides.json pins: the pinned album is held back from every
+    # other title, and after resolve the pin takes its row
+    pinned = {}
+    for medium in ("film", "tv"):
+        for p in overrides.get(medium, []):
+            tid = str(p["tmdb"])
+            rec = evaluations.get((medium, tid))
+            if not rec or rec.get("gone") or rec.get("skipped"):
+                continue
+            slot = ("film", tid) if medium == "film" else ("tv", tid, p.get("season"), p.get("volume"))
+            pinned[slot] = _pin_candidate(p, rec, medium)
+    for slot in pinned:
+        slots.pop(slot, None)
+    winners, conflicts = collect.resolve_screen(slots, reserved=set(game) | {c["url"] for c in pinned.values()})
+    winners.update(pinned)
     holder = {c["url"]: slot for slot, c in winners.items()}
 
     corrections, orphans, unverified, unchanged = [], [], [], []
@@ -582,10 +683,13 @@ def plan_rewalk(releases, evaluations):
         if win and cur and win["url"] == cur:
             unchanged.append(dict(base, weakMatch=bool(win.get("weak")), credited=bool(win.get("credited")),
                                   artists=win.get("artists"), rule=win.get("rule"),
-                                  seasonFrom=win.get("seasonFrom"), **_songs(win)))
+                                  seasonFrom=win.get("seasonFrom"), pinned=bool(win.get("pinned")),
+                                  **_songs(win)))
             continue
         seen = rec["seen"].get(cur) if cur else None
-        if cur and cur in game:
+        if cur and (slot[0], slot[1], cur) in excluded:
+            reason = "excluded by screen-overrides.json"
+        elif cur and cur in game:
             reason = f"album also worn by game row {game[cur]}"
         elif not cur:
             reason = "row had no album"
@@ -633,7 +737,7 @@ def plan_rewalk(releases, evaluations):
         "counts": {
             "corrections": len(corrections), "additions": len(additions), "orphans": len(orphans),
             "unverified": len(unverified), "unchanged": len(unchanged), "reids": len(reids),
-            "reidsBlocked": len(blocked),
+            "reidsBlocked": len(blocked), "pinned": len(pinned), "excludedByOverrides": len(excluded_hits),
             "duplicateSlotRows": len(duplicates), "albumClaimsSettled": len(conflicts),
             "weakMatch": sum(1 for x in final if x["weakMatch"]),
             "songsAlbum": sum(1 for x in final if x["songsAlbum"]),
@@ -647,11 +751,11 @@ def plan_rewalk(releases, evaluations):
         },
         "hitRates": {"before": {"film": rate("film", rows_by_slot), "tv": rate("tv", rows_by_slot)},
                      "after": {"film": rate("film", winners), "tv": rate("tv", winners)}},
-        "reids": reids, "reidsBlocked": blocked,
+        "reids": reids, "reidsBlocked": blocked, "excluded": excluded_hits,
         "corrections": corrections, "additions": additions, "orphans": orphans,
         "unverified": unverified, "duplicateSlotRows": duplicates, "weakDropped": weak_dropped,
         "unchanged": [{k: u[k] for k in ("row", "slot", "album", "weakMatch", "songsAlbum", "songsAlbumLiteral",
-                                         "credited", "artists", "rule", "seasonFrom")}
+                                         "credited", "artists", "rule", "seasonFrom", "pinned")}
                       for u in unchanged],
         "conflicts": [{"album": url, "winner": _label(w, rows_by_slot), "loser": _label(lo, rows_by_slot)}
                       for url, w, lo in conflicts],
@@ -868,12 +972,22 @@ def main(argv=None, data_path=None, folder=None, backfill_state_path=None, track
         evaluate(releases, state, folder)
         return 0
 
+    if step == "dates":
+        evaluations = rejudge(releases, load_evaluations(folder))
+        dates = fetch_release_dates(evaluations, collect.album_release_date, load_dates(folder), pause=3)
+        (folder / "release-dates.json").write_text(json.dumps(dates, indent=1, sort_keys=True) + "\n",
+                                                  encoding="utf-8")
+        found = sum(1 for d in dates.values() if d)
+        print(f"release dates: {found} found, {len(dates) - found} not carried by Apple or Deezer")
+        return 0
+
     if step in ("resolve", "resolve-partial"):
         partial = step == "resolve-partial"
         if not partial and state["phase"] not in ("evaluated", "resolved"):
             print(f"::error::evaluation not complete (phase {state['phase']}); use resolve-partial to peek")
             return 1
-        plan = plan_rewalk(releases, rejudge(releases, load_evaluations(folder)))
+        plan = plan_rewalk(releases, rejudge(releases, load_evaluations(folder)),
+                           overrides=load_overrides(), dates=load_dates(folder))
         name = "plan-partial.json" if partial else "plan.json"
         (folder / name).write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         if not partial:

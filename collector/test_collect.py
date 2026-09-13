@@ -1091,7 +1091,7 @@ def test_a_volume_takes_its_season_from_the_title_then_the_release_year():
     assert slot("Andor: Season 2 - Vol. 3 (Episode 7-9) (Original Score)", "2025") == \
         (("tv", "83867", 2, 3), "title")
     assert slot("Andor: Vol. 2 (Episodes 5-8) (Original Score)", "2022") == (("tv", "83867", 1, 2), "release year")
-    assert slot("Andor: Vol. 2 (Episodes 5-8) (Original Score)", "2023") == (("tv", "83867", None, 2), "season-less")
+    assert slot("Andor: Vol. 2 (Episodes 5-8) (Original Score)", "2023") == (("tv", "83867", 1, 2), "release year")
     watchmen = {"medium": "tv", "id": "79788", "seasons": {"1": "2019-10-20"}}
     assert slot("Watchmen: Volume 3 (Music from the HBO Series)", "2020", watchmen) == \
         (("tv", "79788", 1, 3), "only season")
@@ -1099,6 +1099,48 @@ def test_a_volume_takes_its_season_from_the_title_then_the_release_year():
     assert collect.screen_row_title("Andor", 1, 2) == "Andor Season 1 Vol. 2 Soundtrack"
     assert collect.slugify(collect.screen_row_title("Andor", 1, 2)) == "andor-season-1-vol-2"
     assert collect.slugify(collect.screen_row_title("Mr. Robot", None, 3)) == "mr-robot-vol-3"
+
+
+def test_a_volume_belongs_to_the_latest_season_premiered_by_its_release_date():
+    robot = {"medium": "tv", "id": "62560",
+             "seasons": {"1": "2015-06-24", "2": "2016-07-13", "3": "2017-10-11", "4": "2019-10-06"}}
+    vol = {"season": None, "volume": 1, "year": "2016"}
+    assert collect.screen_slot(robot, dict(vol, releaseDate="2016-01-08")) == (("tv", "62560", 1, 1), "release date")
+    assert collect.screen_slot(robot, vol) == (("tv", "62560", 2, 1), "release year")  # a year alone reads to its end
+    assert collect.screen_slot(robot, dict(vol, releaseDate="2014-05-01")) == (("tv", "62560", None, 1), "season-less")
+    assert collect.screen_slot(dict(robot, volumesSeasonless=True), dict(vol, releaseDate="2016-01-08")) == \
+        (("tv", "62560", None, 1), "override")
+
+
+def test_album_release_date_matches_the_exact_title_and_year(monkeypatch):
+    class Resp:
+        def __init__(self, data):
+            self.data = data
+
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            return self.data
+
+    def fake_get(url, **kw):
+        if "itunes" in url:
+            return Resp({"results": [
+                {"collectionName": "Mr. Robot, Vol. 1 (Original Television Series Soundtrack) [Deluxe]",
+                 "releaseDate": "2016-02-01T08:00:00Z"},
+                {"collectionName": "Mr. Robot, Vol. 1 (Original Television Series Soundtrack)",
+                 "releaseDate": "2016-01-08T08:00:00Z"}]})
+        return Resp({"data": []})
+    monkeypatch.setattr(collect.requests, "get", fake_get)
+    title = "Mr. Robot, Vol. 1 (Original Television Series Soundtrack)"
+    assert collect.album_release_date(title, "2016") == "2016-01-08"
+    assert collect.album_release_date(title, "2019") is None
+
+
+def test_composer_names_compare_without_spaces_or_hyphens():
+    assert collect._credited(["jung jaeil"], ["Jung Jae-il"])
+    assert collect._credited(["Kim Sungsoo"], ["Kim Sung-soo"])
+    assert not collect._credited(["Rob"], ["Rob Simonsen"])
 
 
 def test_merge_never_folds_one_volume_into_another():

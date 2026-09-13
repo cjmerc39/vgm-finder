@@ -280,6 +280,42 @@ def test_reids_settle_a_chain_in_any_order(tmp_path):
     assert out["stale"] == [] and len(out["reids"]) == 2
 
 
+def test_an_album_titled_score_is_never_a_song_compilation():
+    stats = {"tracks": 55, "named": 55, "distinct": 3, "composerTracks": 0}
+    assert rewalk.songs_by_tracks({"credited": False, "trackStats": stats,
+                                   "title": "Peaky Blinders Series 4 Original Score"}) is False
+    assert rewalk.songs_by_tracks({"credited": False, "trackStats": stats,
+                                   "title": "Peaky Blinders (Original Music From The TV Series)"}) is True
+
+
+def test_overrides_exclude_pin_and_keep_volumes_seasonless():
+    right = _cand("Goal! (Original Motion Picture Soundtrack)", "https://music.youtube.com/browse/right", rank=1)
+    wrong = _cand("Goal (Original Motion Picture Soundtrack)", "https://music.youtube.com/browse/wrong", rank=0)
+    vol = _cand("Mr. Robot, Vol. 1 (Original Television Series Soundtrack)", "https://music.youtube.com/browse/v1",
+                volume=1, year="2016")
+    tap = {"resultType": "album", "browseId": "tap", "title": "This Is Spinal Tap", "year": "1984",
+           "artists": [{"name": "Spinal Tap"}], "thumbnails": []}
+    ev = {("film", "9763"): _record("9763", "Goal!", [wrong, right], {wrong["url"]: "accepted"}),
+          ("tv", "62560"): dict(_record("62560", "Mr. Robot", [vol], {vol["url"]: "accepted"}, medium="tv"),
+                                seasons={"1": "2015-06-24", "2": "2016-07-13"}),
+          ("film", "11031"): dict(_record("11031", "This Is Spinal Tap", []), results=[tap])}
+    releases = [row("film-goal", "film", "Goal! Soundtrack", wrong["title"], wrong["url"], 9763),
+                row("tv-mr-robot-season-1", "tv", "Mr. Robot Season 1 Soundtrack", vol["title"], vol["url"], 62560)]
+    overrides = {"film": [{"tmdb": 11031, "name": "This Is Spinal Tap", "album": "tap", "why": "weak guard"}],
+                 "exclude": [{"medium": "film", "tmdb": 9763, "name": "Goal!", "album": "wrong", "why": "another Goal"}],
+                 "seasonlessVolumes": [{"tmdb": 62560, "name": "Mr. Robot", "why": "volumes span seasons"}]}
+    plan = rewalk.plan_rewalk(releases, ev, overrides=overrides)
+    corr = {c["row"]: c for c in plan["corrections"]}
+    assert corr["film-goal"]["newAlbum"]["url"] == right["url"]
+    assert corr["film-goal"]["reason"] == "excluded by screen-overrides.json"
+    assert [(x["row"], x["newId"], x["seasonFrom"]) for x in plan["reids"]] == [
+        ("tv-mr-robot-season-1", "tv-mr-robot-vol-1", "override")]
+    pin = next(a for a in plan["additions"] if a["slot"] == ["film", "11031"])
+    assert pin["album"]["pinned"] and pin["album"]["rule"] == "pinned by screen-overrides.json"
+    assert not pin["weakMatch"]
+    assert plan["counts"]["pinned"] == 1 and plan["counts"]["excludedByOverrides"] == 1
+
+
 def test_weak_guard_admits_disney_beside_the_cast():
     assert rewalk._weak_artist_ok({"artists": ["High School Musical Cast", "Disney"]},
                                   {"name": "High School Musical", "original": None})
@@ -350,7 +386,7 @@ def test_resolve_plans_corrections_additions_orphans_and_unverified(tmp_path, fa
     assert [(a["slot"], a["album"]["url"]) for a in plan["additions"]] == [(["film", "196"], PT3)]
     # Castlevania's series has no album of its own and the game keeps its compilation
     assert [o["row"] for o in plan["orphans"]] == ["tv-castlevania-season-2"]
-    assert "rule 3" in plan["orphans"][0]["reason"]
+    assert plan["orphans"][0]["reason"].startswith("spin-off")  # Nocturne is its own show
     assert [u["row"] for u in plan["unverified"]] == ["film-unseen-film"]
     assert plan["unverified"][0]["reason"] == "current album not in today's search"
     assert [u["row"] for u in plan["unchanged"]] == ["film-the-lost-world-jurassic-park"]

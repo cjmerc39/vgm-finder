@@ -211,6 +211,40 @@ def itunes_tracks(query):
     return None
 
 
+def album_release_date(title, year=None):
+    """An album's full release date, YYYY-MM-DD, from Apple's catalog, then
+    Deezer's: the normalized title must match exactly and, when YouTube
+    Music gives a year, the date must fall within a year of it. None when
+    neither catalog carries the album."""
+    want = _numfold(normalize_title(title or ""))
+    y = _year_of(year)
+
+    def fits(name, date):
+        return (bool(want) and _numfold(normalize_title(name or "")) == want and len(date) == 10
+                and (y is None or abs(int(date[:4]) - y) <= 1))
+    resp = requests.get("https://itunes.apple.com/search", timeout=30,
+                        params={"term": title, "entity": "album", "limit": 25},
+                        headers={"User-Agent": USER_AGENT})
+    resp.raise_for_status()
+    for a in resp.json().get("results", []):
+        date = (a.get("releaseDate") or "")[:10]
+        if fits(a.get("collectionName"), date):
+            return date
+    resp = requests.get("https://api.deezer.com/search/album", timeout=30,
+                        params={"q": title}, headers={"User-Agent": USER_AGENT})
+    resp.raise_for_status()
+    for a in resp.json().get("data", [])[:10]:
+        if _numfold(normalize_title(a.get("title") or "")) != want:
+            continue
+        detail = requests.get(f"https://api.deezer.com/album/{a['id']}", timeout=30,
+                              headers={"User-Agent": USER_AGENT})
+        detail.raise_for_status()
+        date = (detail.json().get("release_date") or "")[:10]
+        if fits(a.get("title"), date):
+            return date
+    return None
+
+
 def _plays_num(text):
     m = re.match(r"([\d.,]+)\s*([KMB])?", str(text or "").strip(), re.IGNORECASE)
     if not m:
@@ -886,6 +920,17 @@ _FIRST_VOLUME = re.compile(r"^volume\s+1$")
 _FIRST_VOLUME_TAIL = re.compile(r"\s+volume\s+1$")
 
 
+# words a TV album may add after the show's name without naming another
+# show: "The Final Season", "Year 2", "(2nd Season & 3rd Season)"
+_SEASON_WORDS = frozenset(
+    "the final season seasons part year book series volume vol chapter chapters episode episodes and "
+    "st nd rd th first second third fourth fifth sixth seventh eighth ninth tenth".split())
+
+
+def _season_words_only(tokens):
+    return all(t.isdigit() or t in _SEASON_WORDS or t in _WORDING_WORDS for t in tokens)
+
+
 def _is_sequel_tail(tail):
     """A numeral right after the title marks a sequel (Jaws 2, Part II,
     Chapter 2), except a bare Vol. 1, which only ever opens the title's
@@ -903,8 +948,10 @@ _SCREEN_REJECT = re.compile(
     r"|orchestral adaptation|the best of|reimagined|anniversary celebration"
     r"|video ?game|videogame)\b", re.IGNORECASE)
 
-# serial screen-knockoff acts seen in discovery and the missing-titles
-# investigation, same doctrine as _COVERS_ARTISTS
+# serial screen-knockoff acts seen in discovery, the missing-titles
+# investigation and the walk-3 review, same doctrine as _COVERS_ARTISTS.
+# "album" is an uploader literally named Album (Dora, Pet Sematary); Vita
+# records covers of Korean drama songs.
 _SCREEN_TRIBUTE = {"the soundtrack studio stars", "the london film score orchestra",
                    "the original movies orchestra", "movie sounds unlimited",
                    "the hollywood symphony orchestra",
@@ -916,7 +963,10 @@ _SCREEN_TRIBUTE = {"the soundtrack studio stars", "the london film score orchest
                    "tv hits", "jerrik dizlop", "tmc movie tunez", "tv theme band",
                    "the city of prague philharmonic orchestra", "movie magic instrumental",
                    "hollywood soundstage orchestra", "music legends", "the big movie orchestra",
-                   "the virtua philharmonic orchestra & singers"}
+                   "the virtua philharmonic orchestra & singers",
+                   "union of sound", "the academy allstars", "ultimate heroes",
+                   "friday night at the movies", "anthony anderson orchestra", "sonny king",
+                   "mileena rayne", "jennifer athena galatis", "songs in cinema", "vita", "album"}
 
 
 def _screen_base(text):
@@ -1068,8 +1118,9 @@ def _name_in(short, long):
 def _name_forms(name):
     """A normalized name, plus the same name without spaces when it is
     written in Chinese or Japanese: TMDb spells 川井 憲次 with a space and
-    YouTube Music credits 川井憲次 without one. Latin names are never joined,
-    and lose their accents: TMDb credits Roque Baños, YouTube Music Roque Banos."""
+    YouTube Music credits 川井憲次 without one. Latin names lose their accents
+    (TMDb credits Roque Baños, YouTube Music Roque Banos) and are joined only
+    for the whole-name comparison in _credited."""
     n = normalize_title(name)
     if n and not _has_cjk(n):
         n = "".join(ch for ch in unicodedata.normalize("NFKD", n) if not unicodedata.combining(ch))
@@ -1078,11 +1129,16 @@ def _name_forms(name):
 
 def _credited(artists, names):
     """Whether a TMDb-credited composer, under any of their names, appears
-    among the album's artists."""
+    among the album's artists. Spaces and hyphens never decide it: TMDb's
+    Jung Jae-il is YouTube Music's jung jaeil, compared as whole names so
+    Hans Zimmer never matches a longer run of letters."""
     keys = [k for n in names if n for k in _name_forms(n)]
+    joined = {k.replace(" ", "") for k in keys if len(k.replace(" ", "")) >= 6}
     for a in artists:
         forms = _name_forms(a)
         if any(_name_in(k, f) or _name_in(f, k) for k in keys for f in forms):
+            return True
+        if any(f.replace(" ", "") in joined for f in forms):
             return True
     return False
 
@@ -1102,6 +1158,11 @@ _OTHER_MEDIUM = {
     "tv": re.compile(r"\bmotion pictures?\b|\bmovies?\b|\bfilms?\b|劇場版|映画", re.IGNORECASE),
     "film": re.compile(r"\bseries\b|\bseasons?\b", re.IGNORECASE),
 }
+# a video game's album, named in the title or the artist credit ("Original
+# Game Soundtrack", "EA Games Soundtrack"), never lands on a film or TV row
+# unless the title itself is about a game (Squid Game, Game Night)
+_GAME_WORDING = re.compile(r"\b(?:original\s+)?games?\s+(?:soundtracks?|score|music|ost)\b|\boriginal\s+game\b",
+                           re.IGNORECASE)
 
 
 def _year_of(value):
@@ -1143,6 +1204,12 @@ def screen_classify(results, info, album_fn=None):
         if bad:
             out.append(dict(e, verdict=f"tribute artist '{bad}'"))
             continue
+        if medium in ("film", "tv"):
+            game = _GAME_WORDING.search(title) or next(
+                (m for m in (_GAME_WORDING.search(a) for a in artists) if m), None)
+            if game and "game" not in " ".join(n for n in (info.get("name"), info.get("original")) if n).lower():
+                out.append(dict(e, verdict=f"medium: '{game.group(0)}' names a video game"))
+                continue
         other = _OTHER_MEDIUM.get(medium)
         hit = other.search(title) if other else None
         if hit and not other.search(" ".join(n for n in (info.get("name"), info.get("original")) if n)):
@@ -1157,6 +1224,9 @@ def screen_classify(results, info, album_fn=None):
         kind, extra, tail = rel
         if kind != "exact" and tail and _is_sequel_tail(tail):
             out.append(dict(e, verdict=f"sequel guard (tail '{' '.join(tail)}')"))
+            continue
+        if medium == "tv" and kind == "extended" and tail and not _season_words_only(tail):
+            out.append(dict(e, verdict=f"spin-off: '{' '.join(tail)}' after the title names another show"))
             continue
         credited = _credited(artists, names)
         yr = _year_of(r.get("year"))
@@ -1303,10 +1373,13 @@ def screen_slot(info, c):
     """The row an accepted album fills, and where its season came from. A
     film is one row. A show has one row per album, season and volume read
     from the title ("Season 2 - Vol. 3"). A volume whose title names no
-    season takes the season that aired in the album's release year when
-    exactly one did, or the only season a show has; otherwise it stays
-    season-less. Returns (slot, "title" | "release year" | "only season" |
-    "season-less" | None)."""
+    season belongs to the most recent season that premiered on or before
+    the album's release date (c["releaseDate"], from Apple or Deezer), or,
+    with only a year to go on, before that year ended; a one-season show's
+    volumes are its season. A show marked volumesSeasonless (its volumes
+    span seasons) and a volume released before any season aired stay
+    season-less. Returns (slot, "title" | "release date" | "release year" |
+    "only season" | "override" | "season-less" | None)."""
     if info["medium"] == "film":
         return ("film", info["id"]), None
     season, volume = c.get("season"), c.get("volume")
@@ -1314,14 +1387,32 @@ def screen_slot(info, c):
         return ("tv", info["id"], season, volume), "title"
     if volume is None:
         return ("tv", info["id"], None, None), None
+    if info.get("volumesSeasonless"):
+        return ("tv", info["id"], None, volume), "override"
     seasons = {int(n): d for n, d in (info.get("seasons") or {}).items() if str(n).isdigit() and int(n) > 0}
     if len(seasons) == 1:
         return ("tv", info["id"], next(iter(seasons)), volume), "only season"
-    year = _year_of(c.get("year"))
-    aired = [n for n, d in seasons.items() if year and d and d[:4] == str(year)]
-    if len(aired) == 1:
-        return ("tv", info["id"], aired[0], volume), "release year"
+    date, how = (c.get("releaseDate") or "")[:10], "release date"
+    if not date and _year_of(c.get("year")):
+        date, how = f"{_year_of(c.get('year'))}-12-31", "release year"
+    aired = sorted((d, n) for n, d in seasons.items() if d and date and d <= date)
+    if aired:
+        return ("tv", info["id"], aired[-1][1], volume), how
     return ("tv", info["id"], None, volume), "season-less"
+
+
+def date_volumes(cands, date_fn):
+    """Full release dates for volume albums whose titles name no season, so
+    screen_slot can place them by season premiere dates. A failed lookup
+    leaves the album to its year."""
+    if not date_fn:
+        return
+    for c in cands:
+        if c.get("volume") is not None and c.get("season") is None and not c.get("releaseDate"):
+            try:
+                c["releaseDate"] = date_fn(c["title"], c.get("year"))
+            except Exception:
+                pass
 
 
 def screen_slots(info, cands):
@@ -1563,7 +1654,7 @@ def screen_items(winners, titles):
     return items
 
 
-def _screen_batch(raw, resolve, medium, album_fn):
+def _screen_batch(raw, resolve, medium, album_fn, date_fn=None):
     """Search, judge, and resolve every title in a bundle together."""
     data = json.loads(raw)
     gmap = data.get("genres", {})
@@ -1577,6 +1668,7 @@ def _screen_batch(raw, resolve, medium, album_fn):
         except Exception:
             errors += 1
             continue
+        date_volumes(cands, date_fn)
         slots.update(screen_slots(info, cands))
         titles.append((info, entry, gmap))
     winners, _ = resolve_screen(slots)
@@ -1586,12 +1678,12 @@ def _screen_batch(raw, resolve, medium, album_fn):
     return items
 
 
-def parse_tmdb_film(raw, resolve, album_fn=None):
+def parse_tmdb_film(raw, resolve, album_fn=None, date_fn=None):
     return _screen_batch(raw, resolve, "film", album_fn)
 
 
-def parse_tmdb_tv(raw, resolve, album_fn=None):
-    return _screen_batch(raw, resolve, "tv", album_fn)
+def parse_tmdb_tv(raw, resolve, album_fn=None, date_fn=None):
+    return _screen_batch(raw, resolve, "tv", album_fn, date_fn)
 
 SOURCES = [
     # nowplaying.cool dropped 2026-07-30 at CJ's request: headline rows with
@@ -1971,7 +2063,7 @@ def load_data(path):
 
 
 def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
-        itunes_fn=catalog_tracks, data_path=DATA_PATH, now=None):
+        itunes_fn=catalog_tracks, data_path=DATA_PATH, now=None, date_fn=album_release_date):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_data(data_path)
@@ -1982,7 +2074,8 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     ok = 0
     for source in SOURCES:
         try:
-            extra = {"album_fn": album_fn} if source.get("albums") else {}  # rule 2 reads plays
+            # rule 2 reads plays; TV volumes read their release dates
+            extra = {"album_fn": album_fn, "date_fn": date_fn} if source.get("albums") else {}
             items = source["parse"](fetch_fn(source["url"]), resolve_fn, **extra)
             added, merged = merge(releases, items, source, seen_at)
             print(f"{source['name']}: {len(items)} items -> {added} new, {merged} merged")

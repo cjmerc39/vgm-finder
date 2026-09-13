@@ -322,7 +322,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
 
 
 def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
-             offset_key, checked_key, cap, album_fn=None):
+             offset_key, checked_key, cap, album_fn=None, date_fn=None):
     """Film and TV catalog walk: one YTM check per candidate ever, one row
     per film, one row per season album for TV, a real album or nothing.
     Candidates are gathered for the whole run and resolved together
@@ -365,6 +365,7 @@ def tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, medium,
             except Exception:
                 continue  # transient lookup failure: leave unchecked, retry next run
             checked.add(eid)
+            collect.date_volumes(cands, date_fn)
             slots.update(collect.screen_slots(info, cands))
             titles.append((info, entry, gmap))
         if page_done:
@@ -445,7 +446,7 @@ def resolve_leg(releases, state, resolve_fn, cap):
 
 def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect.ytm_album,
         itunes_fn=collect.catalog_tracks, data_path=collect.DATA_PATH,
-        state_path=STATE_PATH, now=None):
+        state_path=STATE_PATH, now=None, date_fn=collect.album_release_date):
     now = now or datetime.now(timezone.utc)
     seen_at = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = collect.load_data(data_path)
@@ -474,7 +475,7 @@ def run(fetch_fn=default_fetch, resolve_fn=collect.ytm_resolve, album_fn=collect
     _, tv_done, spent6 = tmdb_leg(releases, state, fetch_fn, resolve_fn, seen_at, "tv",
                                   "tmdbTvOffset", "tmdbTvChecked",
                                   cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4 - spent5),
-                                  album_fn=album_fn)
+                                  album_fn=album_fn, date_fn=date_fn)
     resolve_done = resolve_leg(releases, state, resolve_fn,
                                cap=max(0, YTM_CAP - spent - spent2 - spent3 - spent4
                                        - spent5 - spent6))
