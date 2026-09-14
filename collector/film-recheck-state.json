@@ -178,6 +178,23 @@
     "vote_count": 16
    }
   },
+  "1482547": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     28,
+     53
+    ],
+    "id": 1482547,
+    "original_title": "Zip Wire",
+    "poster_path": "/cO7J0XSVKPlAjUCMWC7DVBn1Py2.jpg",
+    "release_date": "2026-08-31",
+    "title": "Zip Wire",
+    "vote_count": 6
+   }
+  },
   "1497946": {
    "aliases": [],
    "checked": [],
@@ -288,6 +305,25 @@
     "vote_count": 10
    }
   },
+  "1576934": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Cl\u00e9ment Ducol"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     10749
+    ],
+    "id": 1576934,
+    "original_title": "The Echo Chamber",
+    "poster_path": "/xJvbcxyD8BN8tyr0XdlxRP4czzV.jpg",
+    "release_date": "2026-09-10",
+    "title": "The Echo Chamber",
+    "vote_count": 6
+   }
+  },
   "1591675": {
    "aliases": [
     "Y\u00fbta Bandoh",
@@ -311,6 +347,23 @@
     "release_date": "2026-09-11",
     "title": "Look Back",
     "vote_count": 6
+   }
+  },
+  "1645164": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     35
+    ],
+    "id": 1645164,
+    "original_title": "Serpenti",
+    "poster_path": "/xHDfVddxKnvEaWeEEnr3T4Yemgc.jpg",
+    "release_date": "2026-09-10",
+    "title": "Serpenti",
+    "vote_count": 9
    }
   },
   "1664003": {
@@ -447,6 +500,34 @@
     "title": "Band of Brothers: Legacy",
     "vote_count": 5
    }
+  },
+  "487802": {
+   "aliases": [
+    "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
+    "\u0413\u0430\u043d\u0441 \u0426\u0456\u043c\u043c\u0435\u0440",
+    "\u0e2e\u0e32\u0e19\u0e0b\u0e4c \u0e0b\u0e34\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c",
+    "\u0647\u0627\u0646\u0633 \u0632\u06cc\u0645\u0631",
+    "Hans Florian Zimmer",
+    "Bleeding Fingers"
+   ],
+   "checked": [],
+   "composers": [
+    "Hans Zimmer",
+    "Steven Doar",
+    "Omer Benyamin"
+   ],
+   "entry": {
+    "genre_ids": [
+     12,
+     18
+    ],
+    "id": 487802,
+    "original_title": "The Last Photograph",
+    "poster_path": "/to8YnDGzKvkxKweUI4v8iw6RMCs.jpg",
+    "release_date": "2026-09-13",
+    "title": "The Last Photograph",
+    "vote_count": 6
+   }
   }
  },
  "runs": [
@@ -459,6 +540,16 @@
    "searched": 0,
    "searches": 0,
    "tracked": 25
+  },
+  {
+   "date": "2026-09-14",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 4,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 29
   }
  ]
 }
