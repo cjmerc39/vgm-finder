@@ -1217,6 +1217,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
       genres: ['Drama'], tracksN: 2, playsTotal: 5000000, ytmPlaylistId: 'OLAK5uy_delta' }),
     rcRow('tv-eps', 'tv', 'Epsilon', 'Epsilon Season 1 Soundtrack', { composers: ['Bear McCreary'], date: '2020-02-02',
       genres: ['Drama', 'Crime'], tracksN: 2, playsTotal: 50000 }),
+    rcRow('film-songs', 'film', 'Songs Movie', 'Songs Movie (Music From The Motion Picture)', { composers: ['Various Artists'],
+      date: '2019-06-06', genres: ['Comedy'], tracksN: 1, playsTotal: 2000, songsAlbum: true }),
   ];
   const RC_TRACKS = {
     'g-alpha': [{ title: 'A1', plays: '10 plays', videoId: 'vidA1' }, { title: 'A2', plays: '2M plays', videoId: 'vidA2' },
@@ -1225,8 +1227,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'g-hidden': [{ title: 'H1', plays: '9M plays', videoId: 'vidH1' }],
     'film-delta': [{ title: 'D1', plays: '4M plays', videoId: 'vidD1' }, { title: 'D2', plays: '1M plays', videoId: 'vidD2' }],
     'tv-eps': [{ title: 'E1', plays: '30K plays', videoId: 'vidE1' }, { title: 'E2', plays: '20K plays', videoId: 'vidE2' }],
+    'film-songs': [{ title: 'S1', plays: '2K plays', videoId: 'vidS1' }],
   };
-  const TOP_OF = { 'Alpha Quest': 'A2', 'Zeta Blast': 'B1', 'Gamma Drive': 'G-Top', 'Delta Falls': 'D1', 'Epsilon': 'E1' };
+  const TOP_OF = { 'Alpha Quest': 'A2', 'Zeta Blast': 'B1', 'Gamma Drive': 'G-Top', 'Delta Falls': 'D1', 'Epsilon': 'E1', 'Songs Movie': 'S1' };
   for (let i = 1; i <= 36; i++) {  // a pool wider than the random mix's 30, so a reshuffle changes the selection too
     const id = 'mix-' + String(i).padStart(2, '0');
     RC_ROWS.push(rcRow(id, 'game', 'Mix ' + i, 'Mix ' + i + ' Soundtrack', { composers: ['Mix Person'], date: (1950 + i) + '-01-01',
@@ -1264,14 +1267,14 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(same(rStored().recipes, []), 'a v3 state without recipes gains an empty list');
 
   // filters, alone: each narrows the pool, counted from row metadata without a single file fetch
-  assert(pool({}) === '47/41', 'no rules: every visible album with tracks; the hidden and the empty one stay out');
+  assert(pool({}) === '48/42', 'no rules: every visible album with tracks; the hidden and the empty one stay out');
   assert(Object.keys(rcHits).length === 1, 'counting a recipe fetches no tracklist files');
-  assert(pool({ medium: 'film' }) === '2/1' && pool({ medium: 'tv' }) === '2/1' && pool({ medium: 'screen' }) === '4/2'
+  assert(pool({ medium: 'film' }) === '3/2' && pool({ medium: 'tv' }) === '2/1' && pool({ medium: 'screen' }) === '5/3'
     && pool({ medium: 'game' }) === '43/39', 'medium narrows to games, film, tv, or both screens');
   assert(pool({ medium: 'game', genre: { game: 'Role-playing (RPG)', screen: 'all' } }) === '5/2', 'a game genre narrows inside games');
   assert(pool({ medium: 'screen', genre: { game: 'all', screen: 'Drama' } }) === '4/2'
     && pool({ medium: 'tv', genre: { game: 'all', screen: 'Crime' } }) === '2/1', 'a screen genre narrows inside film + tv');
-  assert(pool({ genre: { game: 'Role-playing (RPG)', screen: 'Drama' } }) === '47/41', 'under all mediums a stored genre is inert');
+  assert(pool({ genre: { game: 'Role-playing (RPG)', screen: 'Drama' } }) === '48/42', 'under all mediums a stored genre is inert');
   assert(pool({ yearFrom: '2020', yearTo: '2022' }) === '6/3' && pool({ yearFrom: '2024' }) === '3/1' && pool({ yearTo: '1951' }) === '1/1',
     'year bounds narrow by release year, either side open');
   assert(pool({ composer: 'uematsu' }) === '5/2' && pool({ composer: '  UEMATSU ' }) === '5/2' && pool({ composer: 'nobody' }) === '0/0',
@@ -1280,7 +1283,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(pool({ hearted: true }) === '5/2', 'hearted keeps albums with at least one ♥ track');
   assert(pool({ medium: 'game', co: 'big' }) === '5/2' && pool({ medium: 'game', co: 'indie' }) === '38/37'
     && pool({ medium: 'game', console: true }) === '5/2', 'scope and console narrow games like the feed');
-  assert(pool({ co: 'big', console: true }) === '47/41', 'scope and console are inert outside the games medium');
+  assert(pool({ co: 'big', console: true }) === '48/42', 'scope and console are inert outside the games medium');
+  assert(pool({ scores: true }) === '47/41' && pool({ medium: 'film', scores: true }) === '2/1' && pool({ medium: 'film' }) === '3/2',
+    'scores only drops rows flagged songsAlbum; off by default');
   assert(pool({ source: 'library' }) === '7/3' && pool({ source: 'queue' }) === '4/2', 'library and queue sources');
   assert(pool({ source: 'library', medium: 'game', rating: '4', hearted: true }) === '3/1', 'filters AND together');
   assert(pool({ source: 'library', medium: 'game', rating: '4', hearted: true, pick: 'top', topN: 2 }) === '2/1'
@@ -1328,6 +1333,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   // names: generated from the rules, editable
   const autoName = (o) => rc.w.eval(`recipeAutoName(${rules(o)})`);
   assert(autoName({ rating: '4', medium: 'film', pick: 'top', topN: 2 }) === '4★+ film scores, top 2 each', 'the default name describes the rules');
+  assert(autoName({ rating: '4', medium: 'film', pick: 'top', topN: 2, scores: true }) === '4★+ film scores only, top 2 each'
+    && autoName({ scores: true }) === 'scores only' && autoName({ medium: 'game', scores: true }) === 'game scores only'
+    && autoName({ medium: 'screen', scores: true, order: 'shuffle' }) === 'film + tv scores only, shuffled', 'scores only reads out in the name');
   assert(autoName({ source: 'queue', medium: 'game', co: 'indie', console: true, genre: { game: 'Platform', screen: 'all' }, order: 'shuffle', pick: 'hearted' })
     === 'indie console platform game soundtracks from the queue, ♥ tracks only, shuffled', 'every rule that is set reads out');
   assert(autoName({ composer: 'Uematsu', yearFrom: '2010', yearTo: '2015', pick: 'top', topN: 1 }) === 'soundtracks by Uematsu 2010 to 2015, top track each'
@@ -1345,7 +1353,13 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   const tapRule = async (field, v) => { rq(`#sheetwrap [data-rc="${field}"][data-v="${v}"]`).click(); await sleep(10); };
   const typeIn = async (id, v) => { const el = rq('#sheetwrap #' + id); el.value = v; el.dispatchEvent(new rc.w.Event('input', { bubbles: true })); await sleep(10); };
   assert(rSheet() !== null && rSheet().classList.contains('tall') && rq('#sheetwrap select') === null, 'the recipe sheet is the tall control sheet, no native select');
-  assert(rCount() === '47 tracks from 41 albums' && rq('#rc-name').placeholder === 'soundtracks', 'a live count and the generated name greet a new recipe');
+  assert(rCount() === '48 tracks from 42 albums' && rq('#rc-name').placeholder === 'soundtracks', 'a live count and the generated name greet a new recipe');
+  assert(rq('#sheetwrap [data-rct="scores"]').getAttribute('aria-pressed') === 'false', 'scores only starts off for a recipe');
+  rq('#sheetwrap [data-rct="scores"]').click(); await sleep(10);
+  assert(rCount() === '47 tracks from 41 albums' && rq('#rc-name').placeholder === 'scores only'
+    && rq('#sheetwrap [data-rct="scores"]').getAttribute('aria-pressed') === 'true', 'the toggle drops the song compilation and names itself');
+  rq('#sheetwrap [data-rct="scores"]').click(); await sleep(10);
+  assert(rCount() === '48 tracks from 42 albums' && rq('#rc-name').placeholder === 'soundtracks', 'and comes back off');
   assert(rq('#sheetwrap [data-rc="medium"]') !== null && rq('#sheetwrap #rc-genre') === null && rq('#sheetwrap [data-rc="co"]') === null,
     'under all mediums the sheet shows no genre, scope, or console rows');
   await tapRule('source', 'library');
@@ -1382,7 +1396,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rSheet() === null && rStored().recipes.length === 1, 'save closes the sheet and stores the recipe');
   const saved = rStored().recipes[0];
   assert(saved.name === 'My Faves' && saved.source === 'library' && saved.rating === '4' && saved.pick === 'top' && saved.topN === 2
-    && saved.medium === 'game' && saved.genre.game === 'Role-playing (RPG)' && saved.limit === 20 && saved.composer === '' && saved.yearFrom === '',
+    && saved.medium === 'game' && saved.genre.game === 'Role-playing (RPG)' && saved.limit === 20 && saved.composer === '' && saved.yearFrom === ''
+    && saved.scores === false,
     'the stored recipe carries every rule as set');
   const rKey = 'r:' + saved.id;
   const rCard = () => rc.d.querySelector(`#list .plcard[data-plc="${rKey}"]`);
@@ -1443,12 +1458,14 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   // backups: recipes ride along, old backups import without them, junk is sanitized
   const rcDump = JSON.parse(rc.w.eval(`JSON.stringify(buildExport())`));
   assert(rcDump.state.recipes.length === 2 && rcDump.state.recipes[0].id === 'rx-hearts', 'a backup carries the recipes');
-  assert(rc.w.eval(`applyImport('{"v":3,"entries":{}}')`) === true && same(rStored().recipes, []), 'an older backup without recipes imports clean');
+  assert(rc.w.eval(`applyImport('{"v":3,"entries":{}}')`) === true && same(rStored().recipes, []) && rStored().mixScores === true,
+    'an older backup without recipes imports clean, with the random mix on scores only');
+  assert(rc.w.eval(`applyImport('{"v":3,"entries":{},"mixScores":false}')`) === true && rStored().mixScores === false, 'the random mix toggle rides in backups');
   assert(rc.w.eval(`applyImport(${JSON.stringify(JSON.stringify(rcDump))})`) === true && rStored().recipes.length === 2
     && rStored().recipes[0].hearted === true && rStored().recipes[0].pick === 'hearted', 'export then import round-trips the recipes');
-  assert(rc.w.eval(`applyImport('{"v":3,"entries":{},"recipes":[{"id":"ok","limit":999,"topN":9,"order":"bogus","rating":"4","name":"  Kept  "},{"id":"ok"},{"name":"no id"},"junk",{"id":"g","genre":"Platform","medium":"game","yearFrom":"20x0"}]}')`) === true
-    && same(rStored().recipes.map(r => [r.id, r.limit, r.topN, r.order, r.rating, r.name, r.genre.game, r.yearFrom]),
-            [['ok', 50, 3, 'plays', '4', 'Kept', 'all', ''], ['g', 50, 3, 'plays', 'any', '', 'Platform', '']]),
+  assert(rc.w.eval(`applyImport('{"v":3,"entries":{},"recipes":[{"id":"ok","limit":999,"topN":9,"order":"bogus","rating":"4","name":"  Kept  ","scores":"yes"},{"id":"ok"},{"name":"no id"},"junk",{"id":"g","genre":"Platform","medium":"game","yearFrom":"20x0"}]}')`) === true
+    && same(rStored().recipes.map(r => [r.id, r.limit, r.topN, r.order, r.rating, r.name, r.genre.game, r.yearFrom, r.scores]),
+            [['ok', 50, 3, 'plays', '4', 'Kept', 'all', '', false], ['g', 50, 3, 'plays', 'any', '', 'Platform', '', false]]),
     'import sanitizes recipes: bad values fall to defaults, dupes and idless entries drop');
   rc.w.eval(`applyImport(${JSON.stringify(JSON.stringify(rcDump))})`);
 
@@ -1491,6 +1508,17 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   rc.w.Math.random = realRandom;
   assert(rc.w.eval('RSEED.random') !== before && rc.w.eval('RSEED.random') === Math.floor(0.25 * 0x7fffffff)
     && mixCard().querySelectorAll('.pltrack').length === 30, 'reshuffle reseeds the mix and redraws the card');
+  rc.w.eval(`setFeedMedium('screen')`); await rc.w.eval(`plLoad('random')`); await sleep(50);
+  const mixRows = () => [...mixCard().querySelectorAll('.pltrack .g')].map(x => x.textContent).sort();
+  assert(same(mixRows(), ['Delta Falls', 'Epsilon']) && mixCard().querySelector('#mixscores').textContent === '✓ SCORES ONLY'
+    && mixCard().querySelector('.plmeta').textContent.includes('scores only'), 'the random mix starts on scores only and says so');
+  mixCard().querySelector('#mixscores').click(); await sleep(120);
+  assert(rStored().mixScores === false && same(mixRows(), ['Delta Falls', 'Epsilon', 'Songs Movie'])
+    && mixCard().querySelector('#mixscores').textContent === 'SCORES ONLY' && !mixCard().querySelector('.plmeta').textContent.includes('scores only'),
+    'switching scores only off lets the song compilation into the mix, and the choice persists');
+  mixCard().querySelector('#mixscores').click(); await sleep(120);
+  assert(rStored().mixScores === true && same(mixRows(), ['Delta Falls', 'Epsilon']), 'and back on drops it again');
+  rc.w.eval(`setFeedMedium('all')`);
   assert(rc.errors.length === 0, 'the random mix stays clean');
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');

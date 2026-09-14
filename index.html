@@ -302,7 +302,7 @@ const RECIPE_MAX = 200;
 function recipeBlank(){
   return { id: '', name: '', source: 'catalog', medium: 'all', genre: { game: 'all', screen: 'all' },
            yearFrom: '', yearTo: '', composer: '', rating: 'any', hearted: false, co: 'all', console: false,
-           pick: 'all', topN: 3, limit: 50, order: 'plays' };
+           scores: false, pick: 'all', topN: 3, limit: 50, order: 'plays' };  // scores: skip songsAlbum rows
 }
 function validRecipe(x, ids){
   if(!x || typeof x !== 'object' || typeof x.id !== 'string' || !x.id || ids.has(x.id)) return null;
@@ -319,6 +319,7 @@ function validRecipe(x, ids){
   b.hearted = x.hearted === true;
   b.co = ['all', 'big', 'indie'].includes(x.co) ? x.co : 'all';
   b.console = x.console === true;
+  b.scores = x.scores === true;
   b.pick = RECIPE_PICKS.includes(x.pick) ? x.pick : 'all';
   b.topN = Number.isInteger(x.topN) && x.topN >= 1 && x.topN <= 5 ? x.topN : 3;
   b.limit = Number.isInteger(x.limit) && x.limit >= 1 && x.limit <= RECIPE_MAX ? x.limit : 50;
@@ -384,7 +385,7 @@ function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.tes
    diary entry. Bumping would make a briefly-cached v3 page reject this
    state and overwrite it with a blank one, which costs the queue, the
    library, and every custom playlist. */
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[] }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true }; }
 function genreState(v, hint){
   // hint routes a legacy single value into the bucket it actually came
   // from: the old feed sheet scoped its list by medium, the old playlists
@@ -475,6 +476,7 @@ function validateState(d){
   if(d.cplLast && typeof d.cplLast === 'object' && typeof d.cplLast.id === 'string'
      && typeof d.cplLast.at === 'number' && s.cpls.some(p => p.id === d.cplLast.id))
     s.cplLast = { id: d.cplLast.id, at: d.cplLast.at };
+  s.mixScores = d.mixScores !== false;  // the random mix skips song compilations unless switched off
   if(Array.isArray(d.recipes)){  // absent in older backups: they import with none, nothing else changes
     const ids = new Set();
     for(const x of d.recipes){
@@ -863,6 +865,7 @@ function recipeAlbums(rec){
     rows = rows.filter(r => { const e = S.entries[r.id]; return !!e && e.rating != null && e.rating >= min; });
   }
   if(rec.hearted) rows = rows.filter(r => (E(r.id).likedTracks || []).length > 0);
+  if(rec.scores) rows = rows.filter(r => !r.songsAlbum);  // licensed-song compilations out, scores stay
   return rows;
 }
 function availTracks(r){
@@ -956,7 +959,9 @@ function recipeAutoName(rec){
   }
   const g = recipeGenre(rec);
   if(g) bits.push(g.toLowerCase());
-  bits.push({ all: 'soundtracks', game: 'game soundtracks', screen: 'film + tv scores', film: 'film scores', tv: 'tv scores' }[m]);
+  bits.push(rec.scores
+    ? { all: 'scores only', game: 'game scores only', screen: 'film + tv scores only', film: 'film scores only', tv: 'tv scores only' }[m]
+    : { all: 'soundtracks', game: 'game soundtracks', screen: 'film + tv scores', film: 'film scores', tv: 'tv scores' }[m]);
   let s = bits.join(' ');
   if(rec.composer.trim()) s += ' by ' + rec.composer.trim();
   if(rec.yearFrom && rec.yearTo) s += rec.yearFrom === rec.yearTo ? ' from ' + rec.yearFrom : ' ' + rec.yearFrom + ' to ' + rec.yearTo;
@@ -972,7 +977,7 @@ function recipeAutoName(rec){
 function randomMixRecipe(){
   // the fourth built-in: the feed's medium and hidden state, nothing else;
   // one most-played track per album so no single game floods the mix
-  return Object.assign(recipeBlank(), { id: 'random', source: 'catalog', medium: feedMediumEff(),
+  return Object.assign(recipeBlank(), { id: 'random', source: 'catalog', medium: feedMediumEff(), scores: S.mixScores,
                                         pick: 'top', topN: 1, limit: 30, order: 'shuffle' });
 }
 function plLoad(key){
@@ -994,7 +999,7 @@ function playlistDefs(){
     { key: 'liked', name: 'Scorekeep · Liked Songs' + suff, blurb: 'every ♥ track', tracks: plLiked() },
     { key: 'queue', name: 'Scorekeep · Queue' + suff, blurb: 'tracklists of queued albums', tracks: plQueue() },
     { key: 'rated', name: 'Scorekeep · 4★ Mix' + suff, blurb: 'top tracks of releases rated 4+', tracks: plRated() },
-    { key: 'random', name: 'Scorekeep · Random Mix', blurb: 'one top track per album, shuffled',
+    { key: 'random', name: 'Scorekeep · Random Mix', blurb: 'one top track per album' + (S.mixScores ? ', scores only' : '') + ', shuffled',
       tracks: recipeBuild(mix, seedFor('random')), expected: recipeStats(mix).expected, replace: true },
   ];
 }
@@ -1107,7 +1112,7 @@ function recipeSet(field, v){
   else if(field === 'topN' && +v >= 1 && +v <= 5) rc.topN = +v;
   else if(field === 'limit' && RECIPE_LIMITS.includes(+v)) rc.limit = +v;
   else if(field === 'order' && RECIPE_ORDERS.includes(v)) rc.order = v;
-  else if(field === 'hearted' || field === 'console') rc[field] = v === true;
+  else if(field === 'hearted' || field === 'console' || field === 'scores') rc[field] = v === true;
   else return;
   renderSheet();
 }
@@ -1142,6 +1147,7 @@ function recipeDelete(id){
   save(); renderList();
 }
 function reshuffleMix(){ reseed('random'); plLoad('random'); renderList(); }
+function toggleMixScores(){ S.mixScores = !S.mixScores; save(); plLoad('random'); renderList(); }
 function toast(msg, song){
   TOAST = { msg, song };
   clearTimeout(TOAST_TIMER);
@@ -1426,7 +1432,8 @@ function playlistsHtml(){
       <div class="plmeta">${n} track${n === 1 ? '' : 's'} · ${esc(p.blurb)}</div>
       ${open ? pubBtnHtml(p.key, n, tok) : ''}
       ${open ? `<button class="plx" data-plx="${p.key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button> ` : ''}
-      ${open && p.key === 'random' ? `<button class="plx" id="reshuffle"${n ? '' : ' disabled'}>↻ RESHUFFLE</button>` : ''}
+      ${open && p.key === 'random' ? `<button class="plx" id="reshuffle"${n ? '' : ' disabled'}>↻ RESHUFFLE</button> ` +
+        `<button class="plx" id="mixscores" aria-pressed="${S.mixScores}">${S.mixScores ? '✓ ' : ''}SCORES ONLY</button>` : ''}
       ${preview}
     </div>`;
   }).join('');
@@ -1826,6 +1833,7 @@ function csheetHtml(){
         ? `<div class="slab">Genre</div><button class="shrow" id="rc-genre">` +
           `<span class="shl">${esc(g ? g.toLowerCase() : 'all')}</span><span class="shr">▸</span></button>`
         : '') +
+      toggle('scores', 'scores only', rc.scores) +
       `<div class="slab">Years</div><div class="shyears">` +
         `<input id="rc-from" inputmode="numeric" maxlength="4" placeholder="any" value="${esc(rc.yearFrom)}" autocomplete="off" aria-label="From year">` +
         `<span>to</span>` +
@@ -2001,6 +2009,7 @@ document.getElementById('list').addEventListener('click', e => {
   if(e.target.closest('#cplnew')){ CPICK = { create: true }; renderSheet(); return; }
   if(e.target.closest('#rcpnew')){ recipeOpen(null); return; }
   if(e.target.closest('#reshuffle')){ reshuffleMix(); return; }
+  if(e.target.closest('#mixscores')){ toggleMixScores(); return; }
   const re = e.target.closest('[data-rcpedit]');
   if(re){ recipeOpen(re.dataset.rcpedit); return; }
   const rd = e.target.closest('[data-rcpdel]');

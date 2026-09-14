@@ -65,19 +65,22 @@ Track likes (the ♥ on any track row) and the Library's Playlists cards
 compose playlists from your own state — liked songs, queued albums'
 tracklists, a 4★ mix, each with year/genre variants, and a **random mix**:
 the most-played track from each of 30 albums drawn from the feed's current
-medium (hidden albums excluded), reshuffled on every tap. Custom playlists
+medium (hidden albums excluded), reshuffled on every tap. Its **scores
+only** toggle, on by default, keeps licensed-song compilations (rows the
+collector flagged `songsAlbum`) out of the draw. Custom playlists
 sit above the recipes: **+ new playlist** names one and drops you on the
 feed, and the **+** on any track row saves to it YT Music-style — the
 first save opens a picker, then that playlist stays the target for ten
 minutes of adds ("saved to X · change" to override).
 
 **+ new recipe** builds a playlist from rules instead of picks: source
-(catalog, library, queue), medium, genre, a year range, a composer, a
-rating floor, hearted albums only, scope and console for games, then how
-many tracks per album (all, the top N by plays, or ♥ tracks only), a cap
-(20 to 200) and an order (most played, album, newest, shuffle). The sheet
-counts "N tracks from M albums" live as you change rules, the name
-defaults to a description of them ("4★+ film scores, top 2 each") and can
+(catalog, library, queue), medium, genre, scores only (off by default), a
+year range, a composer, a rating floor, hearted albums only, scope and
+console for games, then how many tracks per album (all, the top N by
+plays, or ♥ tracks only), a cap (20 to 200) and an order (most played,
+album, newest, shuffle). The sheet counts "N tracks from M albums" live
+as you change rules, the name defaults to a description of them ("4★+
+film scores only, top 2 each") and can
 be typed over, and a saved recipe re-evaluates every time: rate something
 new and it is in. Recipes and custom lists ride in backups and
 publish/export exactly like the built-ins. The app exports each
