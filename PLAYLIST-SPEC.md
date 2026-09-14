@@ -111,13 +111,12 @@ tags yet, using the Anthropic API with `ANTHROPIC_API_KEY` from Actions
 secrets. Missing key warns and skips, same as the Twitch and TMDb keys.
 
 ### 2.2 Vocabulary
-- A fixed list in `collector/moods.json`, committed, roughly 20 terms. CJ
-  approves the list before the first run. The model may only choose from
+- A fixed list in `collector/moods.json`, committed, sixteen terms. CJ
+  approved the list before the first run. The model may only choose from
   it; free text is rejected and the album is left untagged for that run.
-- Proposed starting list, to be confirmed: calm, melancholy, triumphant,
-  tense, eerie, playful, epic, wistful, driving, dreamy, lonely, warm,
-  menacing, hopeful, frantic, solemn, mysterious, bittersweet, cozy,
-  heroic.
+- The list (confirmed by CJ, 2026-09-14): wonder, transcendent, nostalgic,
+  tender, peaceful, joyful, powerful, tense, sad, heroic, eerie, driving,
+  playful, mournful, romantic, mysterious.
 
 ### 2.3 Granularity
 - Tags are per track, generated one album at a time: one API call per

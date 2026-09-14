@@ -59,6 +59,19 @@ IGDB's top-rated games (200+ ratings) checked against YTM. Capped per run
 with a committed cursor (`collector/backfill-state.json`) — dispatch until
 it logs "backfill complete".
 
+## Mood tags
+
+The collector tags tracks with moods from a fixed sixteen-word vocabulary
+(`collector/moods.json`) using Claude Haiku, one call per album; the app
+never calls an AI API and carries no key. The daily run tags albums first
+seen in the last 30 days, capped at 40 a run, and skips with a warning
+when `ANTHROPIC_API_KEY` is not set. `python collector/moods.py backfill
+--cap N` (the "Mood tags backfill" workflow) tags the rest until it
+reports "moods complete"; `--retag` tags an album again. Tags land as a
+`moods` list on each track and their union on the row; a reply with a word
+outside the vocabulary is retried once, then the album waits for a later
+run. Every run's tokens and dollars go to `collector/moods-state.json`.
+
 ## Playlists → your real YT Music account
 
 Track likes (the ♥ on any track row) and the Library's Playlists cards

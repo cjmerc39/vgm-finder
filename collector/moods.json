@@ -1,0 +1,21 @@
+{
+  "_about": "The mood vocabulary for track tags, confirmed by CJ on 2026-09-14. The model may only choose from these sixteen; an off-list tag rejects the album's reply for that run. The glosses steer the model and never reach the app.",
+  "moods": [
+    {"mood": "wonder", "gloss": "awe, discovery, a vista opening up"},
+    {"mood": "transcendent", "gloss": "soaring, sacred, beyond the everyday"},
+    {"mood": "nostalgic", "gloss": "looking back with warmth, a memory of home"},
+    {"mood": "tender", "gloss": "gentle and intimate, a quiet closeness"},
+    {"mood": "peaceful", "gloss": "calm, still, at rest"},
+    {"mood": "joyful", "gloss": "bright, celebratory, uplifting"},
+    {"mood": "powerful", "gloss": "big, forceful, a wall of sound"},
+    {"mood": "tense", "gloss": "suspense, dread, something about to happen"},
+    {"mood": "sad", "gloss": "sorrow, loss, a heavy heart"},
+    {"mood": "heroic", "gloss": "noble, triumphant, a hero's theme"},
+    {"mood": "eerie", "gloss": "unsettling, haunted, not quite right"},
+    {"mood": "driving", "gloss": "propulsive, relentless motion, a chase"},
+    {"mood": "playful", "gloss": "light, mischievous, fun"},
+    {"mood": "mournful", "gloss": "grief, a lament, an elegy"},
+    {"mood": "romantic", "gloss": "love, longing, a swell of feeling"},
+    {"mood": "mysterious", "gloss": "enigmatic, curious, secrets kept"}
+  ]
+}
