@@ -1,0 +1,26 @@
+name: Tracklists for screen rows
+# Dispatch by hand until the run reports "tracklists complete". Reads album
+# pages for visible film and TV rows that have no tracklist yet, capped per
+# run; tracksN is the cursor.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: tracklists
+  cancel-in-progress: false
+jobs:
+  tracklists:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: python collector/fill_tracklists.py
+      - run: |
+          git config user.name vgm-bot
+          git config user.email actions@users.noreply.github.com
+          git add data
+          git diff --cached --quiet || (git commit -m "tracklists" && git pull --rebase && git push)
