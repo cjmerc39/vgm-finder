@@ -207,12 +207,17 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rows().length === 5, 'console filter toggles back off');
 
   // ---------- genre rows in the filters sheet + random listen ----------
+  assert(inSheet(d, '#shgenrerow').textContent.includes('genre · all') && inSheet(d, '[data-shgenre]') === null,
+    'the genre is one row naming its pick, no inline list');
+  inSheet(d, '#shgenrerow').click(); await sleep(10);
   const platRow = inSheet(d, '[data-shgenre="Platform"]');
   assert(platRow !== null && platRow.querySelector('.shr').textContent === '1', 'genre rows carry counts');
   platRow.click(); await sleep(20);
   assert(rows().length === 1 && rows()[0].dataset.id === 'fresh-drop', 'genre facet filters the feed');
   assert(stored().feedGenre.game === 'Platform', 'genre choice persists in the game bucket');
   assert(d.querySelector('#c-filters').textContent === 'filters · platform', 'genre reads lowercase on the chip');
+  assert(inSheet(d, '#shgenrerow').textContent.includes('genre · platform'), 'a pick returns to the filters with the row updated');
+  inSheet(d, '#shgenrerow').click(); await sleep(10);
   inSheet(d, '[data-shgenre="all"]').click(); await sleep(20);
   assert(rows().length === 5, 'genre back to all');
   inSheet(d, '#shdone').click();
@@ -518,9 +523,14 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   S(`setPlYear('all')`); await sleep(20);
   assert(d.querySelector('#c-plyear').textContent.trim() === 'year ▾', 'playlists year chip reads neutral at all');
   d.querySelector('#c-plgenre').click();
-  assert(sheetEl(d) !== null, 'playlists genre chip opens the sheet');
+  assert(sheetEl(d) !== null && inSheet(d, '[data-shplgrow="game"]').textContent.includes('game genre · all'),
+    'playlists genre chip opens the sheet, one row per medium');
+  inSheet(d, '[data-shplgrow="game"]').click(); await sleep(10);
   inSheet(d, '[data-shplg-game="Role-playing (RPG)"]').click(); await sleep(20);
-  assert(sheetEl(d) === null, 'picking a playlist genre closes the sheet');
+  assert(sheetEl(d) !== null && inSheet(d, '[data-shplgrow="game"]').textContent.includes('game genre · role-playing (rpg)'),
+    'picking a playlist genre returns to the rows with the pick named');
+  inSheet(d, '#shdone').click(); await sleep(20);
+  assert(sheetEl(d) === null, 'done closes the genre sheet');
   assert(cardMeta('queue').startsWith('5 tracks'), 'genre facet keeps only tagged releases');
   assert(plCard().querySelector('.plname').textContent.includes('— Role-playing (RPG)'),
     'facet variants get their own playlist name');
@@ -528,7 +538,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(d.querySelector('#c-plgenre').textContent.trim() === 'role-playing (rpg) ▾'
     && d.querySelector('#c-plgenre').classList.contains('on'), 'genre chip shows the active facet');
   d.querySelector('#c-plgenre').click();
+  inSheet(d, '[data-shplgrow="game"]').click(); await sleep(10);
   inSheet(d, '[data-shplg-game="all"]').click(); await sleep(20);
+  inSheet(d, '#shdone').click(); await sleep(20);
   plCard().querySelector('.plx').click();
   assert(errors.length === 0, 'export click stays clean');
 
@@ -880,6 +892,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(sq('#c-filters').textContent === 'filters · film',
     'an inert stored scope never reads out on the chip');
   assert(sRows().length === 1, 'an inert stored scope filters nothing');
+  inSheet(sp.d, '#shgenrerow').click(); await sleep(10);
   const gRows = [...sp.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
   assert(gRows.includes('Science Fiction') && !gRows.includes('Platform'),
     'genre list scopes to the screen selection');
@@ -906,9 +919,11 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(inSheet(sp.d, '[data-shco="indie"]').classList.contains('on')
     && sq('#sheetwrap #shconsole') !== null && inSheet(sp.d, '[data-shsub]') === null,
     'games mode shows scope and console, never the sub-segment');
+  inSheet(sp.d, '#shgenrerow').click(); await sleep(10);
   const gameGenres = [...sp.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
   assert(gameGenres.includes('Platform') && !gameGenres.includes('Science Fiction'),
     'the game genre list never carries screen genres');
+  inSheet(sp.d, '#shback').click(); await sleep(10);
   assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).feedGenre.screen === 'Science Fiction',
     'the screen genre pick survives, stored in its own bucket');
   inSheet(sp.d, '#shclear').click();
@@ -926,9 +941,11 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   sq('#c-filters').click();
   inSheet(sp.d, '[data-shmed="screen"]').click();
   await sleep(20);
+  inSheet(sp.d, '#shgenrerow').click(); await sleep(10);
   const unionG = [...sp.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
   assert(unionG.includes('Science Fiction') && unionG.includes('Drama') && !unionG.includes('Platform'),
     'both lists the union of film and tv genres, never game ones');
+  inSheet(sp.d, '#shback').click(); await sleep(10);
   inSheet(sp.d, '[data-shsub="film"]').click();
   await sleep(20);
   inSheet(sp.d, '[data-shmed="screen"]').click();
@@ -1013,16 +1030,20 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   sq('#libpl').click();
   await sleep(20);
   sq('#c-plgenre').click();
-  assert(inSheet(sp.d, '[data-shplg-game]') !== null && inSheet(sp.d, '[data-shplg-screen]') !== null,
+  assert(inSheet(sp.d, '[data-shplgrow="game"]') !== null && inSheet(sp.d, '[data-shplgrow="screen"]') !== null,
     'the playlists genre sheet offers both medium groups');
+  inSheet(sp.d, '[data-shplgrow="screen"]').click(); await sleep(10);
   inSheet(sp.d, '[data-shplg-screen="Science Fiction"]').click();
   await sleep(20);
+  inSheet(sp.d, '#shdone').click(); await sleep(10);
   assert(JSON.parse(sp.w.localStorage.getItem('vgm-v1')).plGenre.screen === 'Science Fiction'
     && sq('#c-plgenre').textContent.trim() === 'science fiction ▾',
     'a screen genre facet lands in its own bucket and on the chip');
   sq('#c-plgenre').click();
+  inSheet(sp.d, '[data-shplgrow="screen"]').click(); await sleep(10);
   inSheet(sp.d, '[data-shplg-screen="all"]').click();
   await sleep(20);
+  inSheet(sp.d, '#shdone').click(); await sleep(10);
   sq('#libpl').click();
   await sleep(20);
   sp.d.querySelector('#tabbar button[data-v="feed"]').click();
@@ -1190,9 +1211,11 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   rt.d.querySelector('#qclear').click(); await sleep(20);
   rt.d.querySelector('#c-filters').click();
   rt.d.querySelector('#sheetwrap [data-shmed="screen"]').click(); await sleep(20);
+  rt.d.querySelector('#sheetwrap #shgenrerow').click(); await sleep(10);
   const rtGenres = [...rt.d.querySelectorAll('#sheetwrap [data-shgenre]')].map(b => b.dataset.shgenre);
   assert(rtGenres.includes('Drama') && !rtGenres.includes('Mystery') && !rtGenres.includes('Western'),
     'retired rows add nothing to the genre lists');
+  rt.d.querySelector('#sheetwrap #shback').click(); await sleep(10);
   rt.d.querySelector('#sheetwrap #shdone').click();
   rt.w.eval('clearFeedFilters()');
   rt.d.querySelector('#tabbar button[data-v="library"]').click(); await sleep(20);
@@ -1214,20 +1237,23 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
       company: 'Nintendo', console: true, genres: ['Role-playing (RPG)'], tracksN: 1, playsTotal: 9000000 }),
     rcRow('g-empty', 'game', 'Empty', 'Empty Soundtrack', { date: '2023-01-01', tracksN: 0 }),
     rcRow('film-delta', 'film', 'Delta Falls', 'Delta Falls Soundtrack', { composers: ['Hans Zimmer'], date: '2022-07-07',
-      genres: ['Drama'], tracksN: 2, playsTotal: 5000000, ytmPlaylistId: 'OLAK5uy_delta' }),
+      genres: ['Drama'], tracksN: 2, scoresN: 1, playsTotal: 5000000, ytmPlaylistId: 'OLAK5uy_delta' }),
     rcRow('tv-eps', 'tv', 'Epsilon', 'Epsilon Season 1 Soundtrack', { composers: ['Bear McCreary'], date: '2020-02-02',
-      genres: ['Drama', 'Crime'], tracksN: 2, playsTotal: 50000 }),
+      genres: ['Drama', 'Crime'], tracksN: 2, scoresN: 1, playsTotal: 50000 }),
     rcRow('film-songs', 'film', 'Songs Movie', 'Songs Movie (Music From The Motion Picture)', { composers: ['Various Artists'],
-      date: '2019-06-06', genres: ['Comedy'], tracksN: 1, playsTotal: 2000, songsAlbum: true }),
+      date: '2019-06-06', genres: ['Comedy'], tracksN: 1, scoresN: 0, playsTotal: 2000, songsAlbum: true }),
   ];
   const RC_TRACKS = {
     'g-alpha': [{ title: 'A1', plays: '10 plays', videoId: 'vidA1' }, { title: 'A2', plays: '2M plays', videoId: 'vidA2' },
                 { title: 'A3', plays: '900K plays', videoId: 'vidA3' }],
     'g-beta': [{ title: 'B1', plays: '80K plays', videoId: 'vidB1' }, { title: 'B2', plays: '20K plays', videoId: 'vidB2' }],
     'g-hidden': [{ title: 'H1', plays: '9M plays', videoId: 'vidH1' }],
-    'film-delta': [{ title: 'D1', plays: '4M plays', videoId: 'vidD1' }, { title: 'D2', plays: '1M plays', videoId: 'vidD2' }],
-    'tv-eps': [{ title: 'E1', plays: '30K plays', videoId: 'vidE1' }, { title: 'E2', plays: '20K plays', videoId: 'vidE2' }],
-    'film-songs': [{ title: 'S1', plays: '2K plays', videoId: 'vidS1' }],
+    // the collector marks film and tv tracks by anyone but the composer as songs
+    'film-delta': [{ title: 'D1', plays: '1M plays', videoId: 'vidD1', artists: ['Hans Zimmer'] },
+                   { title: 'D2', plays: '4M plays', videoId: 'vidD2', artists: ['Pop Star'], song: true }],
+    'tv-eps': [{ title: 'E1', plays: '30K plays', videoId: 'vidE1', artists: ['Bear McCreary'] },
+               { title: 'E2', plays: '20K plays', videoId: 'vidE2', artists: ['Cast'], song: true }],
+    'film-songs': [{ title: 'S1', plays: '2K plays', videoId: 'vidS1', artists: ['Singer'], song: true }],
   };
   const TOP_OF = { 'Alpha Quest': 'A2', 'Zeta Blast': 'B1', 'Gamma Drive': 'G-Top', 'Delta Falls': 'D1', 'Epsilon': 'E1', 'Songs Movie': 'S1' };
   for (let i = 1; i <= 36; i++) {  // a pool wider than the random mix's 30, so a reshuffle changes the selection too
@@ -1284,8 +1310,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(pool({ medium: 'game', co: 'big' }) === '5/2' && pool({ medium: 'game', co: 'indie' }) === '38/37'
     && pool({ medium: 'game', console: true }) === '5/2', 'scope and console narrow games like the feed');
   assert(pool({ co: 'big', console: true }) === '48/42', 'scope and console are inert outside the games medium');
-  assert(pool({ scores: true }) === '47/41' && pool({ medium: 'film', scores: true }) === '2/1' && pool({ medium: 'film' }) === '3/2',
-    'scores only drops rows flagged songsAlbum; off by default');
+  assert(pool({ scores: true }) === '45/41' && pool({ medium: 'film', scores: true }) === '1/1' && pool({ medium: 'film' }) === '3/2',
+    'scores only drops song tracks and keeps their albums; off by default');
+  assert(pool({ hearted: true, pick: 'hearted', scores: true }) === '2/2', 'before loading, hearted counts cannot know which hearts are songs');
   assert(pool({ source: 'library' }) === '7/3' && pool({ source: 'queue' }) === '4/2', 'library and queue sources');
   assert(pool({ source: 'library', medium: 'game', rating: '4', hearted: true }) === '3/1', 'filters AND together');
   assert(pool({ source: 'library', medium: 'game', rating: '4', hearted: true, pick: 'top', topN: 2 }) === '2/1'
@@ -1300,9 +1327,13 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'top 2 ranks by plays, not running order, and falls back to topTracks without a file');
   assert(rcHits['data/tracks/g-alpha.json'] === 1 && rcHits['data/tracks/g-gamma.json'] === undefined,
     'the build read the album with a file and never asked for one the row does not promise');
-  assert(same(await build({ hearted: true, pick: 'hearted' }), ['A2', 'D2']), 'the ♥ pick keeps only hearted tracks');
+  assert(same(await build({ hearted: true, pick: 'hearted' }), ['D2', 'A2']), 'the ♥ pick keeps only hearted tracks');
   const heartsExp = JSON.parse(rc.w.eval(`JSON.stringify(recipeBuild(${rules({ hearted: true, pick: 'hearted' })}, 1))`));
-  assert(heartsExp[0].videoId === 'vidA2' && heartsExp[1].videoId === 'vidD2', 'hearted tracks carry the videoId from the loaded file');
+  assert(heartsExp[0].videoId === 'vidD2' && heartsExp[1].videoId === 'vidA2', 'hearted tracks carry the videoId from the loaded file');
+  assert(same(await build({ hearted: true, pick: 'hearted', scores: true }), ['A2']) && pool({ hearted: true, pick: 'hearted', scores: true }) === '1/1',
+    'a hearted song leaves under scores only, and the loaded count agrees');
+  assert(same(await build({ medium: 'film', pick: 'top', topN: 1, scores: true }), ['D1'])
+    && same(await build({ medium: 'film', pick: 'top', topN: 1 }), ['D2', 'S1']), 'scores only changes which track is the top one');
 
   // order, then limit: the same pool in four orders, cut after ordering
   const SINCE18 = { medium: 'game', yearFrom: '2018', pick: 'top', topN: 1 };
@@ -1326,7 +1357,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   const LIB4 = { source: 'library', rating: '4' };
   assert(pool(LIB4) === '5/2', 'before: two albums rated 4+');
   rc.w.eval(`editEntry('g-beta', e => { e.rating = 4; })`);
-  assert(pool(LIB4) === '7/3' && same(await build(Object.assign({ order: 'newest', pick: 'top', topN: 1 }, LIB4)), ['A2', 'D1', 'B1']),
+  assert(pool(LIB4) === '7/3' && same(await build(Object.assign({ order: 'newest', pick: 'top', topN: 1 }, LIB4)), ['A2', 'D2', 'B1']),
     'after: rating a third album adds it to the recipe without a save');
   rc.w.eval(`editEntry('g-beta', e => { e.rating = 3; })`);
 
@@ -1356,8 +1387,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rCount() === '48 tracks from 42 albums' && rq('#rc-name').placeholder === 'soundtracks', 'a live count and the generated name greet a new recipe');
   assert(rq('#sheetwrap [data-rct="scores"]').getAttribute('aria-pressed') === 'false', 'scores only starts off for a recipe');
   rq('#sheetwrap [data-rct="scores"]').click(); await sleep(10);
-  assert(rCount() === '47 tracks from 41 albums' && rq('#rc-name').placeholder === 'scores only'
-    && rq('#sheetwrap [data-rct="scores"]').getAttribute('aria-pressed') === 'true', 'the toggle drops the song compilation and names itself');
+  assert(rCount() === '45 tracks from 41 albums' && rq('#rc-name').placeholder === 'scores only'
+    && rq('#sheetwrap [data-rct="scores"]').getAttribute('aria-pressed') === 'true', 'the toggle drops the songs and names itself');
   rq('#sheetwrap [data-rct="scores"]').click(); await sleep(10);
   assert(rCount() === '48 tracks from 42 albums' && rq('#rc-name').placeholder === 'soundtracks', 'and comes back off');
   assert(rq('#sheetwrap [data-rc="medium"]') !== null && rq('#sheetwrap #rc-genre') === null && rq('#sheetwrap [data-rc="co"]') === null,
@@ -1520,6 +1551,110 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rStored().mixScores === true && same(mixRows(), ['Delta Falls', 'Epsilon']), 'and back on drops it again');
   rc.w.eval(`setFeedMedium('all')`);
   assert(rc.errors.length === 0, 'the random mix stays clean');
+
+  // ---------- scores only in the main filters, the genre picker, typed limits ----------
+  rc.d.querySelector('#tabbar button[data-v="feed"]').click(); await sleep(20);
+  rq('#c-filters').click(); await sleep(10);
+  assert(rq('#sheetwrap #shscores') !== null && rq('#sheetwrap #shscores').getAttribute('aria-pressed') === 'false'
+    && rq('#sheetwrap #shgenrerow') === null, 'under all mediums the feed sheet offers scores only and no genre row');
+  rq('#sheetwrap #shscores').click(); await sleep(20);
+  assert(rStored().feedScores === true && rq('#c-filters').textContent === 'filters · scores only', 'scores only persists and names itself on the chip');
+  rq('#sheetwrap [data-shmed="screen"]').click(); await sleep(20);
+  rq('#sheetwrap [data-shsub="film"]').click(); await sleep(20);
+  assert(rq('#c-filters').textContent === 'filters · film, scores only' && rq('#sheetwrap #shgenrerow').textContent.includes('genre · all'),
+    'the chip reads medium then scores only; the genre is one row naming its pick');
+  rq('#sheetwrap #shdone').click(); await sleep(20);
+  const deltaRow = () => rc.d.querySelector('#list .row[data-id="film-delta"]');
+  deltaRow().click(); await sleep(120);
+  assert(deltaRow().querySelectorAll('.xtrack').length === 1 && deltaRow().textContent.includes('D1') && !deltaRow().textContent.includes('D2')
+    && deltaRow().querySelector('.xall').textContent === 'All 1 tracks ›', 'scores only hides the song from the expanded row and its count');
+  rc.w.eval(`openAlbum('film-delta')`); await sleep(20);
+  assert([...rc.d.querySelectorAll('#album .atrack .ttl')].map(x => x.textContent).join() === 'D1', 'the album page lists score tracks only');
+  rc.w.__opened = null; rc.d.querySelector('#album .atrack').click();
+  assert(rc.w.__opened === 'https://music.youtube.com/watch?v=vidD1&list=OLAK5uy_delta', 'tapping the first shown track plays that track, not the hidden one');
+  rq('#album .aclose').click();
+  const songsRow = () => rc.d.querySelector('#list .row[data-id="film-songs"]');
+  songsRow().click(); await sleep(120);
+  assert(songsRow().textContent.includes('songs only, hidden by scores only') && songsRow().querySelector('.xall') === null,
+    'an album with no score track says so instead of listing nothing');
+  songsRow().click();
+  rq('#c-filters').click(); await sleep(10);
+  rq('#sheetwrap [data-shmed="game"]').click(); await sleep(20);
+  assert(rq('#sheetwrap #shscores') === null && rq('#c-filters').textContent === 'filters · games' && rStored().feedScores === true,
+    'under games the row hides and the chip drops it, the choice kept for later');
+  // the genre picker: a row, a sub-sheet with counts, back on a pick, scroll remembered
+  assert(rq('#sheetwrap #shgenrerow').textContent.includes('genre · all') && rq('#sheetwrap [data-shgenre]') === null,
+    'the genre row shows the pick and no inline list');
+  rq('#sheetwrap #shgenrerow').click(); await sleep(10);
+  const rpgRow = () => rq('#sheetwrap [data-shgenre="Role-playing (RPG)"]');
+  assert(rq('#sheetwrap #shback') !== null && rpgRow() !== null && rpgRow().querySelector('.shr').textContent === '3',
+    'the picker lists the medium\'s genres with counts');
+  rq('#sheetwrap .shbody').scrollTop = 37;
+  rpgRow().click(); await sleep(20);
+  assert(rq('#sheetwrap #shgenrerow') !== null && rq('#sheetwrap #shgenrerow').textContent.includes('genre · role-playing (rpg)')
+    && rStored().feedGenre.game === 'Role-playing (RPG)' && rq('#c-filters').textContent === 'filters · games, role-playing (rpg)',
+    'a pick returns to the filters with the row and the chip updated');
+  rq('#sheetwrap #shgenrerow').click(); await sleep(10);
+  assert(rq('#sheetwrap .shbody').scrollTop === 37 && rpgRow().querySelector('.shr').textContent === '3 ✓',
+    'the picker reopens where it was scrolled, the pick ticked');
+  rq('#sheetwrap #shback').click(); await sleep(10);
+  assert(rq('#sheetwrap #shgenrerow') !== null && rStored().feedGenre.game === 'Role-playing (RPG)', 'back returns without changing the pick');
+  rq('#sheetwrap #shclear').click(); await sleep(20);
+  assert(rStored().feedScores === false && rStored().feedGenre.game === 'all', 'clear resets scores only with the rest');
+  rq('#sheetwrap #shdone').click(); await sleep(10);
+  // the library sheet and the songs view
+  rc.d.querySelector('#tabbar button[data-v="library"]').click(); await sleep(20);
+  if (rStored().libView !== 'albums') { rq('#' + (rStored().libView === 'songs' ? 'libsongs' : 'libpl')).click(); await sleep(20); }
+  rq('#c-libfilters').click(); await sleep(10);
+  assert(rq('#sheetwrap #shlscores') !== null, 'the library sheet offers scores only under medium');
+  rq('#sheetwrap #shlscores').click(); await sleep(20);
+  assert(rStored().libScores === true && rq('#c-libfilters').textContent === 'filters · scores only', 'the library toggle persists and labels its chip');
+  rq('#sheetwrap [data-shlmed="game"]').click(); await sleep(20);
+  assert(rq('#sheetwrap #shlscores') === null && rq('#c-libfilters').textContent === 'filters · games', 'hidden under games in the library too');
+  rq('#sheetwrap [data-shlmed="all"]').click(); await sleep(20);
+  rq('#sheetwrap #shdone').click(); await sleep(10);
+  rq('#libsongs').click(); await sleep(150);
+  const songTitles = () => [...rc.d.querySelectorAll('#list .row.song')].map(x => x.dataset.t);
+  assert(same(songTitles(), ['A2']) && rq('#c-libfilters').textContent === 'filters · scores only', 'the songs view hides a hearted song under scores only');
+  rq('#c-libfilters').click(); await sleep(10);
+  rq('#sheetwrap #shlscores').click(); await sleep(150);
+  assert(same(songTitles(), ['A2', 'D2']), 'and shows it again when off');
+  rq('#sheetwrap #shdone').click(); await sleep(10);
+  rq('#libsongs').click(); await sleep(20);
+  // typed limits: the recipe sheet and the random mix card
+  rq('#libpl').click(); await sleep(150);
+  rq('#rcpnew').click(); await sleep(10);
+  assert(rq('#sheetwrap #rc-limit').value === '50' && rq('#sheetwrap [data-rc="limit"][data-v="50"]').classList.contains('on'), 'the limit field starts at the preset');
+  await typeIn('rc-limit', '35');
+  assert(rq('#sheetwrap [data-rc="limit"].on') === null && rCount().endsWith('capped at 35') && rq('#sheetwrap #rc-limit').value === '35',
+    'a typed limit deselects the presets and caps the count, the caret untouched');
+  await typeIn('rc-limit', '999');
+  assert(rCount().endsWith('capped at 35'), 'an out-of-range number changes nothing');
+  await tapRule('limit', '20');
+  assert(rq('#sheetwrap #rc-limit').value === '20' && rCount().endsWith('capped at 20'), 'a preset fills the field');
+  await typeIn('rc-limit', '7');
+  rq('#sheetwrap #rc-save').click(); await sleep(120);
+  assert(rStored().recipes[rStored().recipes.length - 1].limit === 7, 'the typed limit saves');
+  const mixCard2 = () => rc.d.querySelector('#list .plcard[data-plc="random"]');
+  if (mixCard2().getAttribute('aria-expanded') !== 'true') { mixCard2().click(); await sleep(150); }
+  assert(mixCard2().querySelector('#mixlimit').value === '30' && mixCard2().querySelector('[data-mixlimit="30"]').classList.contains('on'),
+    'the random mix shows its 30 with presets');
+  mixCard2().querySelector('[data-mixlimit="20"]').click(); await sleep(150);
+  assert(rStored().mixLimit === 20 && mixCard2().querySelectorAll('.pltrack').length === 20 && mixCard2().querySelector('.plmeta').textContent.startsWith('20 tracks'),
+    'a preset redraws the mix at that size');
+  const mixInp = mixCard2().querySelector('#mixlimit');
+  mixInp.value = '5'; mixInp.dispatchEvent(new rc.w.Event('input', { bubbles: true }));
+  assert(rStored().mixLimit === 5 && mixCard2().querySelector('#mixlimit') === mixInp && mixCard2().querySelector('[data-mixlimit].on') === null,
+    'typing stores the limit at once without redrawing the card mid-keystroke');
+  await sleep(800);
+  assert(mixCard2().querySelectorAll('.pltrack').length === 5 && mixCard2().querySelector('.plmeta').textContent.startsWith('5 tracks'),
+    'the card redraws once the typing settles');
+  mixCard2().querySelector('#mixlimit').click();
+  assert(mixCard2().getAttribute('aria-expanded') === 'true', 'tapping the field never folds the card');
+  assert(rc.w.eval(`applyImport('{"v":3,"entries":{},"mixLimit":999,"feedScores":true}')`) === true
+    && rStored().mixLimit === 30 && rStored().feedScores === true && rStored().libScores === false,
+    'backups carry the toggles and a bad limit falls to 30');
+  assert(rc.errors.length === 0, 'the filters and limits stay clean');
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

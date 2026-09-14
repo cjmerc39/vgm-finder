@@ -397,8 +397,10 @@ def test_ytm_tracks_capture_plays_and_video_ids():
                         {"title": "Quiet", "views": None, "videoId": None},
                         {"title": ""}]}
     tracks = collect.ytm_tracks_from(album)
-    assert tracks == [{"title": "Hit", "plays": "2M plays", "videoId": "vidH"},
-                      {"title": "Quiet", "plays": None, "videoId": None}]
+    assert tracks == [{"title": "Hit", "plays": "2M plays", "videoId": "vidH", "artists": []},
+                      {"title": "Quiet", "plays": None, "videoId": None, "artists": []}]
+    credited = collect.ytm_tracks_from({"tracks": [{"title": "Cue", "artists": [{"name": "Hans Zimmer"}, {"id": "x"}]}]})
+    assert credited[0]["artists"] == ["Hans Zimmer"]
 
 
 def test_genres_of_takes_top_three_names():
@@ -423,7 +425,7 @@ def test_fill_tracks_uses_ytm_then_itunes_and_never_refetches(tmp_path):
     ]
     assert collect.fill_tracks(rows, album, itunes, cap=1, tracks_dir=tmp_path) == 1
     saved = json.loads((tmp_path / "a.json").read_text(encoding="utf-8"))
-    assert saved[0] == {"title": "T-MPREb_a", "plays": "5 plays", "videoId": "v"}
+    assert saved[0] == {"title": "T-MPREb_a", "plays": "5 plays", "videoId": "v", "artists": []}
     assert rows[0]["tracksN"] == 1 and rows[0]["playsTotal"] == 5
     assert rows[0]["ytmPlaylistId"] == "OLAK_MPREb_a"  # album context for song-not-video links
     assert "topTracks" not in rows[0]  # legacy field retired on refetch

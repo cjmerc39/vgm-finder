@@ -51,7 +51,7 @@ KINDS = {"film": ("movie", "FILM_BAR", "filmPage"), "tv": ("tv", "TV_BAR", "tvPa
 # backfill keeps FILM_BAR and TV_BAR until walk 4 is applied.
 WALK_BARS = {"film": 500, "tv": 300}
 SRC = {"film": backfill.TMDB_SRC_FILM, "tv": backfill.TMDB_SRC_TV}
-_KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded",
+_KEEP = ("title", "url", "art", "rule", "klass", "credited", "extra", "gap", "worded", "composersFrom",
          "weak", "season", "volume", "year", "seasonFrom", "composers", "rank", "artists", "plays",
          "trackStats", "yearFrom", "releaseDate", "pinned")
 _REAL_KEYS = ("credited composer", "exact title", "fewer extra words", "closer year")
@@ -520,7 +520,7 @@ def _album(c):
 
 
 def _title_info(medium, tid, rec, seasonless):
-    return {"medium": medium, "id": tid, "seasons": rec.get("seasons"),
+    return {"medium": medium, "id": tid, "seasons": rec.get("seasons"), "aliases": rec.get("aliases"),
             "volumesSeasonless": seasonless.get(tid, False)}
 
 
@@ -804,6 +804,10 @@ def addition_item(a, songs_policy="tracks"):
         item["weakMatch"] = True
     if a.get("songsAlbumLiteral" if songs_policy == "literal" else "songsAlbum"):
         item["songsAlbum"] = True
+    if al.get("composersFrom") == "album":
+        item["composersFrom"] = "album"
+    if t.get("aliases"):
+        item["composerAliases"] = list(t["aliases"])
     return item
 
 

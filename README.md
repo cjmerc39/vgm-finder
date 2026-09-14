@@ -65,9 +65,15 @@ Track likes (the ♥ on any track row) and the Library's Playlists cards
 compose playlists from your own state — liked songs, queued albums'
 tracklists, a 4★ mix, each with year/genre variants, and a **random mix**:
 the most-played track from each of 30 albums drawn from the feed's current
-medium (hidden albums excluded), reshuffled on every tap. Its **scores
-only** toggle, on by default, keeps licensed-song compilations (rows the
-collector flagged `songsAlbum`) out of the draw. Custom playlists
+medium (hidden albums excluded), reshuffled on every tap, its size (30)
+adjustable on the card. Its **scores only** toggle, on by default, drops
+every track the collector marked as a song: a film or TV track credited
+to someone other than the score composer (the album stays, its songs
+leave). The same toggle sits under Medium in the feed and library filter
+sheets, off by default, and hides songs from expanded rows, album pages
+and the ♥ songs view; it reads on the chip ("filters · film, scores
+only") and does nothing under games, which are scores by definition.
+Custom playlists
 sit above the recipes: **+ new playlist** names one and drops you on the
 feed, and the **+** on any track row saves to it YT Music-style — the
 first save opens a picker, then that playlist stays the target for ten
@@ -77,8 +83,8 @@ minutes of adds ("saved to X · change" to override).
 (catalog, library, queue), medium, genre, scores only (off by default), a
 year range, a composer, a rating floor, hearted albums only, scope and
 console for games, then how many tracks per album (all, the top N by
-plays, or ♥ tracks only), a cap (20 to 200) and an order (most played,
-album, newest, shuffle). The sheet counts "N tracks from M albums" live
+plays, or ♥ tracks only), a cap (four presets or any number from 1 to
+200) and an order (most played, album, newest, shuffle). The sheet counts "N tracks from M albums" live
 as you change rules, the name defaults to a description of them ("4★+
 film scores only, top 2 each") and can
 be typed over, and a saved recipe re-evaluates every time: rate something

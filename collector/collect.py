@@ -265,8 +265,14 @@ def ytm_tracks_from(album):
         vtype = t.get("videoType") or ""
         if vid and vtype and not vtype.endswith("ATV"):
             vid = None  # video edition: linking it opens Video mode, not the song
-        out.append({"title": t["title"], "plays": t.get("views") or None, "videoId": vid})
+        out.append({"title": t["title"], "plays": t.get("views") or None, "videoId": vid,
+                    "artists": [a["name"] for a in t.get("artists") or []
+                                if isinstance(a, dict) and a.get("name")]})
     return out
+
+
+def album_artists_of(album):
+    return [a["name"] for a in (album or {}).get("artists") or [] if isinstance(a, dict) and a.get("name")]
 
 
 def _patch_audio_ids(tracks, playlist):
@@ -303,6 +309,8 @@ def write_tracklist(r, tracks, tracks_dir):
     data/tracks/<id>.json, the row carries tracksN (0 marks a completed
     empty check, no file) and playsTotal when any track has plays."""
     r["tracksN"] = len(tracks)
+    if not tracks:
+        r.pop("scoresN", None)
     total = _plays_total(tracks)
     if total is not None:
         r["playsTotal"] = total
@@ -339,6 +347,8 @@ def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_p
             except Exception:
                 continue  # transient: retry on a later run
             tracks = ytm_tracks_from(album)
+            if _medium(r) != "game":
+                r["albumArtists"] = album_artists_of(album)
             plid = (album or {}).get("audioPlaylistId")
             if plid:
                 r["ytmPlaylistId"] = plid  # &list= makes track links open the song, not the video
@@ -347,6 +357,7 @@ def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_p
                         _patch_audio_ids(tracks, playlist_fn(plid))
                     except Exception:
                         pass  # patch is best-effort: links fall back to search
+            judge_tracks(r, tracks)
             write_tracklist(r, tracks, tracks_dir)
         elif r.get("game"):
             looked += 1
@@ -1176,6 +1187,8 @@ def _credited(artists, names):
     joined = {k.replace(" ", "") for k in keys if len(k.replace(" ", "")) >= 6}
     for a in artists:
         forms = _name_forms(a)
+        if any(f == k for k in keys for f in forms):
+            return True  # the same name exactly, however short: BT, Rob, Air
         if any(_name_in(k, f) or _name_in(f, k) for k in keys for f in forms):
             return True
         if any(f.replace(" ", "") in joined for f in forms):
@@ -1376,6 +1389,7 @@ def screen_classify(results, info, album_fn=None):
                         season=_season_of(title) if medium != "film" else None,
                         volume=_volume_of(title) if medium != "film" else None,
                         composers=list(info.get("composers") or []) or people,
+                        composersFrom="tmdb" if info.get("composers") else ("album" if people else None),
                         overlap=credited, dist=gap if gap is not None else 999))
     return out
 
@@ -1401,6 +1415,96 @@ def is_songs_album(c):
     artists = [a.lower() for a in c.get("artists") or []]
     various_only = bool(artists) and all(a == "various artists" for a in artists)
     return various_only or bool(_COMPILATION_WORDING.search(c.get("title") or ""))
+
+
+# ---------------- scores versus songs, one track at a time ----------------
+HIT_PLAYS = 50_000_000     # a track this played is a hit by a performer; no unknown composer's cue gets here
+CO_ACT_PLAYS = 5_000_000   # once the credited composer is found on the album, an extra act is a co-composer only below this
+_CAST_CREDIT = re.compile(r"\b(?:cast|elenco|ensemble|company)\b", re.IGNORECASE)
+
+
+def _various_artist(name):
+    n = (name or "").strip().lower()
+    return n.startswith("various") or n.startswith("varios") or n in ("va", "v.a.")
+
+
+def score_names(composers, aliases, album_artists, tracks, genres=(), medium=None):
+    """The names a track must be credited to for it to count as score.
+    TMDb's composers with their aliases always count. The album's own
+    credited acts count too, so an album by a composer TMDb never listed
+    (Fringe by Chris Tilton) or listed under another name (Zimmer credited,
+    Balfe on the album) keeps its cues, minus the acts that are plainly
+    performers: a cast credit, any act on a film TMDb files under Music
+    (biopics and musicals), and any act with a hit on the album, HIT_PLAYS
+    on one of its tracks. Bands and singers have hits; TV composers do not.
+    When the credited composer is already found on the album's tracks, an
+    extra act is a co-composer only while its tracks stay under CO_ACT_PLAYS:
+    Kamen Rider's second composer does, Magnolia's Aimee Mann does not."""
+    names = [n for n in (composers or []) if n] + [a for a in (aliases or []) if a]
+    musical = medium == "film" and "Music" in (genres or [])
+    found = bool(names) and any(_credited(_track_credits(t), names) for t in tracks or [])
+    floor = CO_ACT_PLAYS if found else HIT_PLAYS
+    for act in album_artists or []:
+        if not act or _various_artist(act) or _CAST_CREDIT.search(act) or musical:
+            continue
+        top = max((_plays_num(t.get("plays")) or 0 for t in tracks or []
+                   if _credited([a for a in t.get("artists") or [] if a], [act])), default=0)
+        if top >= floor:
+            continue
+        if not _credited([act], names):
+            names.append(act)
+    return names
+
+
+def _track_credits(t):
+    """A track's named artists plus a classical byline ("Zimmer: Dear
+    Clarice" by an orchestra), the names a composer can be found under."""
+    artists = [a for a in t.get("artists") or [] if a and not _various_artist(a)]
+    title = t.get("title") or ""
+    return artists + ([title.split(":", 1)[0]] if artists and ":" in title else [])
+
+
+def mark_songs(tracks, names):
+    """song: true on every track credited to named artists none of whom is
+    a score composer. A track credited to nobody, or only to Various
+    Artists, carries no evidence and stays score. Returns (named, score):
+    tracks with named artists, and those among them by a composer."""
+    named = score = 0
+    for t in tracks:
+        t.pop("song", None)
+        credits = _track_credits(t)
+        if not credits:
+            continue
+        named += 1
+        if names and _credited(credits, names):
+            score += 1
+        else:
+            t["song"] = True
+    return named, score
+
+
+def judge_tracks(r, tracks):
+    """A film or TV row's tracks judged one by one: song flags on the
+    tracks, scoresN and songsAlbum on the row. songsAlbum now means fewer
+    than half of the album's tracks are score (a track nobody is credited on
+    counts as score, so one named song on an otherwise uncredited album
+    never flags it). Rows whose composers are the album's own acts
+    (composersFrom album) judge those acts like any album act, never as
+    TMDb credits. Returns the tally, or None when the tracks carry no
+    artists yet (fill_artists.py has not reached the row)."""
+    if _medium(r) == "game" or not tracks or not all("artists" in t for t in tracks):
+        return None
+    tmdb = [] if r.get("composersFrom") == "album" else list(r.get("composers") or [])
+    names = score_names(tmdb, r.get("composerAliases"), r.get("albumArtists"), tracks,
+                        r.get("genres"), _medium(r))
+    named, score = mark_songs(tracks, names)
+    r["scoresN"] = sum(1 for t in tracks if not t.get("song"))
+    songs = r["scoresN"] * 2 < len(tracks)
+    if songs:
+        r["songsAlbum"] = True
+    else:
+        r.pop("songsAlbum", None)
+    return {"named": named, "score": score, "songs": songs, "names": names}
 
 
 def claimed_albums(releases):
@@ -1570,6 +1674,7 @@ def pin_candidate(p, info, results):
             "season": p.get("season") if tv else None, "volume": p.get("volume") if tv else None,
             "year": result.get("year"), "seasonFrom": "override" if tv else None,
             "composers": list(info.get("composers") or []) or [a for a in artists if a.lower() != "various artists"],
+            "composersFrom": "tmdb" if info.get("composers") else "album",
             "rank": 0, "artists": artists, "plays": None, "pinned": True}
 
 
@@ -1834,6 +1939,10 @@ def screen_items(winners, titles):
                     "art": hit["art"] or (f"{TMDB_IMG}{poster}" if poster else None)}
             if hit.get("weak"):
                 item["weakMatch"] = True
+            if hit.get("composersFrom") == "album":
+                item["composersFrom"] = "album"
+            if info.get("aliases"):
+                item["composerAliases"] = list(info["aliases"])
             items.append(item)
     return items
 
@@ -2228,6 +2337,10 @@ def merge(releases, items, source, seen_at):
                 target["game"] = it["game"]
             if not target.get("composers") and it.get("composers"):
                 target["composers"] = list(it["composers"])
+                if it.get("composersFrom") == "album":
+                    target["composersFrom"] = "album"
+                if it.get("composerAliases"):
+                    target["composerAliases"] = list(it["composerAliases"])
             if not target.get("ytmAlbumUrl") and it.get("ytmAlbumUrl"):
                 target["ytmAlbumUrl"] = it["ytmAlbumUrl"]
                 if it.get("weakMatch"):
@@ -2266,6 +2379,10 @@ def merge(releases, items, source, seen_at):
                 entry["weakMatch"] = True  # rule 2 by plays alone: auditable later
             if it.get("songsAlbum"):
                 entry["songsAlbum"] = True  # licensed songs, not a score
+            if it.get("composersFrom") == "album":
+                entry["composersFrom"] = "album"  # the album's own acts stood in for TMDb's credits
+            if it.get("composerAliases"):
+                entry["composerAliases"] = list(it["composerAliases"])
             releases.append(entry)
             by_id[slug] = entry
             norms[id(entry)] = normalize_title(entry["title"])

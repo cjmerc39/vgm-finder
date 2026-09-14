@@ -261,6 +261,13 @@ a.xsrc{text-decoration:none}
 #sheet.ctrl .shbody input{margin:2px 0}
 .shyears{display:flex;gap:10px;align-items:center;color:var(--dim);font-size:12px}
 .shyears input{flex:1;min-width:0;text-align:center}
+
+/* the random mix's limit row: presets plus a typed number */
+.mixlimit{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.mixlimit .mixl{color:var(--dim);font-size:10.5px;letter-spacing:2px;margin-right:4px}
+.mixp{font-size:11px;letter-spacing:1.2px;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:8px 12px}
+.mixp.on{color:var(--amber2);border-color:var(--amberdim)}
+#mixlimit{width:64px;flex:none;text-align:center;padding:7px 8px}
 </style>
 </head>
 <body>
@@ -335,6 +342,7 @@ let SHEET = null;                             // {id, draft} while the logging s
 let CPICK = null;                             // {rid, t, from?} save-to-playlist picker, or {create:true} from the library
 let CSHEET = null;                            // which control sheet is open: feedsort | filters | year | libsort | plyear | plgenre | recipe | rgenre
 let RDRAFT = null;                            // {id|null, rec} while the recipe sheet is open; id set = editing
+let PLGBUCKET = 'game';                       // which medium's genre the playlists picker (plgpick) is showing
 let RSEED = {};                               // playlist key -> shuffle seed for this session; reshuffle replaces it
 let TOAST = null;                             // {msg, song?} transient snackbar
 let TOAST_TIMER = 0;
@@ -385,7 +393,7 @@ function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.tes
    diary entry. Bumping would make a briefly-cached v3 page reject this
    state and overwrite it with a blank one, which costs the queue, the
    library, and every custom playlist. */
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false }; }
 function genreState(v, hint){
   // hint routes a legacy single value into the bucket it actually came
   // from: the old feed sheet scoped its list by medium, the old playlists
@@ -476,7 +484,10 @@ function validateState(d){
   if(d.cplLast && typeof d.cplLast === 'object' && typeof d.cplLast.id === 'string'
      && typeof d.cplLast.at === 'number' && s.cpls.some(p => p.id === d.cplLast.id))
     s.cplLast = { id: d.cplLast.id, at: d.cplLast.at };
-  s.mixScores = d.mixScores !== false;  // the random mix skips song compilations unless switched off
+  s.mixScores = d.mixScores !== false;  // the random mix skips songs unless switched off
+  s.mixLimit = Number.isInteger(d.mixLimit) && d.mixLimit >= 1 && d.mixLimit <= RECIPE_MAX ? d.mixLimit : 30;
+  s.feedScores = d.feedScores === true;
+  s.libScores = d.libScores === true;
   if(Array.isArray(d.recipes)){  // absent in older backups: they import with none, nothing else changes
     const ids = new Set();
     for(const x of d.recipes){
@@ -527,8 +538,14 @@ function setFeedGenre(bucket, g){
 function clearFeedFilters(){
   S.feedCo = 'all'; S.feedConsole = false;
   S.feedGenre = { game: 'all', screen: 'all' };
-  S.feedMedium = 'all';
+  S.feedMedium = 'all'; S.feedScores = false;
   save(); renderAll();
+}
+function toggleFeedScores(){ S.feedScores = !S.feedScores; save(); renderAll(); }
+function toggleLibScores(){ S.libScores = !S.libScores; save(); renderAll(); }
+function setMixLimit(n){
+  if(!(Number.isInteger(n) && n >= 1 && n <= RECIPE_MAX)) return;
+  S.mixLimit = n; save(); plLoad('random'); renderList();
 }
 function randomListen(){
   if(S.view !== 'feed'){ S.view = 'feed'; save(); renderAll(); }  // random always picks from the feed
@@ -643,6 +660,13 @@ function tracksOf(r){
 function needsTrackLoad(r){
   return (r.tracksN || 0) > 0 && !(r.tracks || []).length && !TRACKS[r.id];
 }
+/* scores only, one track at a time: the collector marks every film or TV
+   track credited to someone other than the score composer as a song
+   (song: true) and counts the rest on the row (scoresN). The album always
+   stays; only its songs leave. Games are scores by definition. */
+function scoreTracks(r, tt){ return mediumOf(r) === 'game' ? tt : tt.filter(t => !t.song); }
+function viewScores(){ return S.view === 'feed' ? S.feedScores : S.view === 'library' ? S.libScores : false; }
+function shownTracks(r){ const tt = tracksOf(r) || []; return viewScores() ? scoreTracks(r, tt) : tt; }
 function loadTracks(ids){
   const ps = [];
   for(const id of [...new Set(ids)]){
@@ -737,7 +761,7 @@ function libraryRows(){
   return rows;  // 'date' keeps release order from sorted()
 }
 function hiddenRows(){ return sorted().filter(r => E(r.id).status === 'hidden'); }
-function likedSongRows(){
+function likedSongRows(scores){
   const out = [];
   const lm = libMediumEff();
   for(const r of sorted()){
@@ -746,6 +770,7 @@ function likedSongRows(){
     for(const title of list){
       // rematch by folded title so refetched tracklists keep their videoIds
       const t = (tracksOf(r) || []).find(x => fold(x.title) === fold(title)) || { title };
+      if(scores && mediumOf(r) !== 'game' && t.song) continue;  // the library's scores-only hides hearted songs too
       out.push({ r, t });
     }
   }
@@ -865,27 +890,33 @@ function recipeAlbums(rec){
     rows = rows.filter(r => { const e = S.entries[r.id]; return !!e && e.rating != null && e.rating >= min; });
   }
   if(rec.hearted) rows = rows.filter(r => (E(r.id).likedTracks || []).length > 0);
-  if(rec.scores) rows = rows.filter(r => !r.songsAlbum);  // licensed-song compilations out, scores stay
-  return rows;
+  return rows;  // scores only never drops an album here: its songs leave track by track
 }
-function availTracks(r){
+function availTracks(r, scores){
   // how many tracks an album can offer: what is loaded, else what the row promises
   const tt = tracksOf(r);
-  if(tt && tt.length) return tt.length;
-  return (r.tracksN || 0) > 0 ? r.tracksN : (r.topTracks || []).length;
+  if(tt && tt.length) return (scores ? scoreTracks(r, tt) : tt).length;
+  if((r.tracksN || 0) > 0) return scores && mediumOf(r) !== 'game' && r.scoresN != null ? r.scoresN : r.tracksN;
+  return (r.topTracks || []).length;
 }
 function recipeAlbumCount(rec, r){
-  if(rec.pick === 'hearted') return (E(r.id).likedTracks || []).length;
-  const n = availTracks(r);
+  if(rec.pick === 'hearted'){
+    const hearts = E(r.id).likedTracks || [], tt = tracksOf(r);
+    if(!rec.scores || mediumOf(r) === 'game' || !tt) return hearts.length;  // unloaded: a heart cannot be told from a song yet
+    return hearts.filter(title => { const t = tt.find(x => fold(x.title) === fold(title)); return !(t && t.song); }).length;
+  }
+  const n = availTracks(r, rec.scores);
   return rec.pick === 'top' ? Math.min(rec.topN, n) : n;
 }
 function recipeAlbumTracks(rec, r){
   if(rec.pick === 'hearted'){
     // rematch by folded title so refetched tracklists keep their videoIds
     const tt = tracksOf(r) || [];
-    return (E(r.id).likedTracks || []).map(title => tt.find(x => fold(x.title) === fold(title)) || { title });
+    const hearts = (E(r.id).likedTracks || []).map(title => tt.find(x => fold(x.title) === fold(title)) || { title });
+    return rec.scores ? scoreTracks(r, hearts) : hearts;
   }
-  const tt = tracksOf(r) || r.topTracks || [];   // a missing tracklist falls back to the row's top tracks
+  let tt = tracksOf(r) || r.topTracks || [];   // a missing tracklist falls back to the row's top tracks
+  if(rec.scores) tt = scoreTracks(r, tt);
   return rec.pick === 'top' ? topNOf(tt, rec.topN) : tt;
 }
 function recipeOrdered(rec, rows, seed){
@@ -978,7 +1009,13 @@ function randomMixRecipe(){
   // the fourth built-in: the feed's medium and hidden state, nothing else;
   // one most-played track per album so no single game floods the mix
   return Object.assign(recipeBlank(), { id: 'random', source: 'catalog', medium: feedMediumEff(), scores: S.mixScores,
-                                        pick: 'top', topN: 1, limit: 30, order: 'shuffle' });
+                                        pick: 'top', topN: 1, limit: S.mixLimit, order: 'shuffle' });
+}
+const MIX_LIMITS = [20, 30, 50, 100];
+function mixLimitHtml(){
+  return `<div class="mixlimit"><span class="mixl">LIMIT</span>` +
+    MIX_LIMITS.map(n => `<button class="mixp${S.mixLimit === n ? ' on' : ''}" data-mixlimit="${n}">${n}</button>`).join('') +
+    `<input id="mixlimit" inputmode="numeric" maxlength="3" value="${S.mixLimit}" autocomplete="off" aria-label="Random mix limit"></div>`;
 }
 function plLoad(key){
   // what a card preview or an export needs in memory before it can be right
@@ -1117,11 +1154,12 @@ function recipeSet(field, v){
   renderSheet();
 }
 function recipeRefreshCount(){
-  // typed fields update the count and the suggested name in place; a
-  // re-render here would steal the caret mid-word
+  // typed fields update the count, the suggested name and the limit presets
+  // in place; a re-render here would steal the caret mid-word
   const rc = RDRAFT.rec;
   const c = document.getElementById('rcount'); if(c) c.textContent = recipeCountLine(recipeStats(rc), rc);
   const nm = document.getElementById('rc-name'); if(nm) nm.placeholder = recipeAutoName(rc);
+  document.querySelectorAll('#sheetwrap [data-rc="limit"]').forEach(b => b.classList.toggle('on', +b.dataset.v === rc.limit));
 }
 function recipeSave(){
   const rc = RDRAFT.rec;
@@ -1241,8 +1279,8 @@ function playsRank(tt){
   scored.sort((a, b) => (b.n ?? -1) - (a.n ?? -1));
   return scored.map(x => x.i);
 }
-function top3Of(r){
-  const tt = tracksOf(r) || [];
+function top3Of(r, list){
+  const tt = list || tracksOf(r) || [];
   const rank = playsRank(tt);
   if(!rank) return { idx: new Set(), ranked: tt.slice(0, 3), byPlays: false };
   const top = rank.slice(0, 3);
@@ -1284,6 +1322,7 @@ function feedFilterBits(){
   const bits = [];
   if(S.feedMedium !== 'all') bits.push(MEDIUM_NAMES[S.feedMedium]);
   const m = feedMediumEff();
+  if(m !== 'game' && S.feedScores) bits.push('scores only');
   if(m === 'game'){
     if(S.feedCo !== 'all') bits.push(S.feedCo === 'big' ? 'big studios' : 'indie');
     if(S.feedConsole) bits.push('console');
@@ -1297,6 +1336,7 @@ function libFilterBits(){
   const bits = [];
   const lm = libMediumEff();
   if(lm !== 'all') bits.push(MEDIUM_NAMES[lm]);
+  if(lm !== 'game' && S.libScores) bits.push('scores only');
   if(S.libLiked) bits.push('liked');
   return bits;
 }
@@ -1327,10 +1367,11 @@ function renderControls(){
     `<button id="libpl" class="${S.libView === 'playlists' ? 'on' : ''}" aria-pressed="${S.libView === 'playlists'}">playlists</button>`;
   if(S.libView === 'songs'){
     // liked-only is meaningless here (every row is a liked track), but the
-    // medium filter still applies, so the chip stays when there is a medium
+    // medium and scores-only filters still apply, so the chip stays when there is a medium
+    const sbits = libFilterBits().filter(b => b !== 'liked');
     el.innerHTML = (multiMedium()
-      ? `<button id="c-libfilters" class="fchip${libMediumEff() !== 'all' ? ' on' : ''}" aria-haspopup="dialog">` +
-        `${esc(libMediumEff() !== 'all' ? 'filters · ' + MEDIUM_NAMES[libMediumEff()] : 'filters')}</button>`
+      ? `<button id="c-libfilters" class="fchip${sbits.length ? ' on' : ''}" aria-haspopup="dialog">` +
+        `${esc(sbits.length ? 'filters · ' + sbits.join(', ') : 'filters')}</button>`
       : '') + modeChips;
     return;
   }
@@ -1433,7 +1474,7 @@ function playlistsHtml(){
       ${open ? pubBtnHtml(p.key, n, tok) : ''}
       ${open ? `<button class="plx" data-plx="${p.key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button> ` : ''}
       ${open && p.key === 'random' ? `<button class="plx" id="reshuffle"${n ? '' : ' disabled'}>↻ RESHUFFLE</button> ` +
-        `<button class="plx" id="mixscores" aria-pressed="${S.mixScores}">${S.mixScores ? '✓ ' : ''}SCORES ONLY</button>` : ''}
+        `<button class="plx" id="mixscores" aria-pressed="${S.mixScores}">${S.mixScores ? '✓ ' : ''}SCORES ONLY</button>` + mixLimitHtml() : ''}
       ${preview}
     </div>`;
   }).join('');
@@ -1539,12 +1580,14 @@ function expandedHtml(r, e){
   if(r.date) info.push(['released', fmtDate(r.date)]);
   if(e.listenedOn) info.push(['heard on', fmtDate(e.listenedOn)]);
   let tracks = '';
-  const tt = tracksOf(r);
-  if(tt && tt.length){
-    const t3 = top3Of(r);
+  const tt = shownTracks(r);
+  if(tt.length){
+    const t3 = top3Of(r, tt);
     tracks = `<div class="xh">${t3.byPlays ? 'TOP TRACKS' : 'FROM THE TRACKLIST'}</div>` +
       t3.ranked.map((t, i) => xtrackHtml(r, t, i)).join('') +
       `<button class="xall" data-act="album">All ${tt.length} tracks ›</button>`;
+  } else if((tracksOf(r) || []).length){
+    tracks = `<div class="xh">TRACKLIST</div><div class="xtrack"><span class="xplays">songs only, hidden by scores only</span></div>`;
   } else if(TLOAD[r.id] === 'loading'){
     tracks = `<div class="xh">TRACKLIST</div><div class="xtrack"><span class="xplays">loading…</span></div>`;
   } else if((r.topTracks || []).length){  // legacy shape until the collector refetches
@@ -1585,8 +1628,8 @@ function renderAlbum(){
   const prev = wrap.querySelector('#album');
   const scroll = prev ? prev.scrollTop : 0;  // hearting a track mid-list must not jump to the top
   const e = E(r.id);
-  const tt = tracksOf(r) || [];
-  const t3 = top3Of(r);
+  const tt = shownTracks(r);
+  const t3 = top3Of(r, tt);
   const medal = { };
   t3.ranked.forEach((t, rank) => { medal[tt.indexOf(t)] = rank + 1; });
   const kind = mediumOf(r) === 'game' ? null : (mediumOf(r) === 'tv' ? 'tv score' : 'film score');
@@ -1600,7 +1643,8 @@ function renderAlbum(){
       ${taddHtml(r, t)}
       ${tlikeHtml(r, t)}
     </div>`).join('')
-    : (TLOAD[r.id] === 'loading' ? `<div class="atrack"><span class="ttl">loading tracklist…</span></div>` : '');
+    : (TLOAD[r.id] === 'loading' ? `<div class="atrack"><span class="ttl">loading tracklist…</span></div>`
+       : (tracksOf(r) || []).length ? `<div class="atrack"><span class="ttl">songs only, hidden by scores only</span></div>` : '');
   wrap.innerHTML = `<div id="album">
     <div class="ahead"><button class="aclose" aria-label="Back">✕</button><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span></div>
     <div class="abody">
@@ -1666,7 +1710,7 @@ function rowsHtml(rows, from, to, view){
 }
 function pagedRows(){
   if(S.view === 'library' && S.libView === 'songs')
-    return likedSongRows().filter(s => songMatches(s, Q.trim()));
+    return likedSongRows(S.libScores).filter(s => songMatches(s, Q.trim()));
   return searched(S.view === 'queue' ? queueRows() : S.view === 'library' ? libraryRows() : feedRows());
 }
 function morePage(){
@@ -1790,18 +1834,28 @@ function csheetHtml(){
     body = shPickRow('shplyear', 'all', 'all', S.plYear === 'all' ? '✓' : '') +
       plYearList().map(y => shPickRow('shplyear', y, y, S.plYear === y ? '✓' : '')).join('');
   } else if(CSHEET === 'plgenre'){
+    // one row per medium showing its pick; each opens the picker below
     label = 'Genre';
-    const group = (bucket, name, medium) => {
+    const row = (bucket, name) => {
       const sel = S.plGenre[bucket];
-      const rows = genreCounts(medium, sel);
-      if(!rows.length) return '';
-      return `<div class="slab">${name}</div>` +
-        shPickRow('shplg-' + bucket, 'all', 'all', sel === 'all' ? '✓' : '') +
-        rows.map(([g, n]) =>
-          shPickRow('shplg-' + bucket, g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
+      return `<button class="shrow" data-shplgrow="${bucket}"><span class="shl">${esc(name)} · ${esc(sel === 'all' ? 'all' : sel.toLowerCase())}</span>` +
+        `<span class="shr">▸</span></button>`;
     };
-    body = group('game', 'Game genres', 'game') +
-           (multiMedium() ? group('screen', 'Film + TV genres', 'screen') : '');
+    body = row('game', 'game genre') + (multiMedium() ? row('screen', 'film + tv genre') : '');
+    footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
+  } else if(CSHEET === 'plgpick'){
+    const bucket = PLGBUCKET, sel = S.plGenre[bucket];
+    label = bucket === 'game' ? 'Game genre' : 'Film + TV genre';
+    body = `<button class="shrow" id="shback"><span class="shl">‹ genre</span></button>` +
+      shPickRow('shplg-' + bucket, 'all', 'all', sel === 'all' ? '✓' : '') +
+      genreCounts(bucket, sel).map(([g, n]) => shPickRow('shplg-' + bucket, g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
+  } else if(CSHEET === 'fgenre'){
+    // the feed's genre picker: counts from the selected medium, back to the filters on a pick
+    label = 'Genre';
+    const mode = feedMediumEff(), sel = S.feedGenre[mode === 'game' ? 'game' : 'screen'];
+    body = `<button class="shrow" id="shback"><span class="shl">‹ filters</span></button>` +
+      shPickRow('shgenre', 'all', 'all', sel === 'all' ? '✓' : '') +
+      genreCounts(mode, sel).map(([g, n]) => shPickRow('shgenre', g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
   } else if(CSHEET === 'recipe'){
     // every rule is a segment, a toggle row, or a typed field; the genre
     // list gets its own sheet; the count at the top follows every change
@@ -1845,6 +1899,8 @@ function csheetHtml(){
       `<div class="slab">Tracks per album</div>` + segs('pick', [['all', 'all'], ['top', 'top n'], ['hearted', '♥ only']], rc.pick) +
       (rc.pick === 'top' ? segs('topN', [1, 2, 3, 4, 5].map(n => [n, String(n)]), rc.topN) : '') +
       `<div class="slab">Limit</div>` + segs('limit', RECIPE_LIMITS.map(n => [n, String(n)]), rc.limit) +
+      `<div class="shyears"><input id="rc-limit" inputmode="numeric" maxlength="3" value="${rc.limit}" autocomplete="off" aria-label="Track limit">` +
+        `<span>tracks, up to ${RECIPE_MAX}</span></div>` +
       `<div class="slab">Order</div>` +
         segs('order', [['plays', 'most played'], ['album', 'album'], ['newest', 'newest'], ['shuffle', 'shuffle']], rc.order);
     footer = `<div class="shfoot"><button id="rc-cancel">cancel</button><button id="rc-save">save</button></div>`;
@@ -1870,6 +1926,10 @@ function csheetHtml(){
               seg('shlsub', 'screen', 'both', lm === 'screen') +
               seg('shlsub', 'film', 'film', lm === 'film') +
               seg('shlsub', 'tv', 'tv', lm === 'tv') + `</div>`
+            : '') +
+          (lm !== 'game'  // games are scores by definition: the row would do nothing
+            ? `<button class="shrow" id="shlscores" aria-pressed="${S.libScores}">` +
+              `<span class="shl">scores only</span><span class="shr">${S.libScores ? '✓' : ''}</span></button>`
             : '')
         : '') +
       (S.libView === 'songs' ? ''  // every row here is already a liked track
@@ -1882,6 +1942,11 @@ function csheetHtml(){
     const seg = (attr, val, name, on) =>
       `<button data-${attr}="${val}" class="${on ? 'on' : ''}">${name}</button>`;
     const mode = feedMediumEff();
+    // the genre is one row naming the pick; the list lives in its own sheet
+    const genreRow = sel => `<button class="shrow" id="shgenrerow"><span class="shl">genre · ${esc(sel === 'all' ? 'all' : sel.toLowerCase())}</span>` +
+      `<span class="shr">▸</span></button>`;
+    const scoresRow = `<button class="shrow" id="shscores" aria-pressed="${S.feedScores}">` +
+      `<span class="shl">scores only</span><span class="shr">${S.feedScores ? '✓' : ''}</span></button>`;
     body = multiMedium()
       ? `<div class="slab">Medium</div><div class="shseg">` +
         seg('shmed', 'all', 'all', mode === 'all') +
@@ -1897,22 +1962,17 @@ function csheetHtml(){
           seg('shco', 'indie', 'indie', S.feedCo === 'indie') + `</div>` +
         `<button class="shrow" id="shconsole" aria-pressed="${S.feedConsole}">` +
           `<span class="shl">console</span><span class="shr">${S.feedConsole ? '✓' : ''}</span></button>` +
-        `<div class="slab">Genre</div>` +
-        shPickRow('shgenre', 'all', 'all', S.feedGenre.game === 'all' ? '✓' : '') +
-        genreCounts('game', S.feedGenre.game).map(([g, n]) =>
-          shPickRow('shgenre', g, g.toLowerCase(), `${n}${S.feedGenre.game === g ? ' ✓' : ''}`)).join('');
+        genreRow(S.feedGenre.game);
     } else if(screenish(mode)){
       body +=
         `<div class="shseg">` +
           seg('shsub', 'screen', 'both', mode === 'screen') +
           seg('shsub', 'film', 'film', mode === 'film') +
           seg('shsub', 'tv', 'tv', mode === 'tv') + `</div>` +
-        `<div class="slab">Genre</div>` +
-        shPickRow('shgenre', 'all', 'all', S.feedGenre.screen === 'all' ? '✓' : '') +
-        genreCounts(mode, S.feedGenre.screen).map(([g, n]) =>
-          shPickRow('shgenre', g, g.toLowerCase(), `${n}${S.feedGenre.screen === g ? ' ✓' : ''}`)).join('');
+        scoresRow + genreRow(S.feedGenre.screen);
+    } else {
+      body += scoresRow;  // mode all: songs still leave film and tv tracklists; games are untouched
     }
-    // mode all: the segment and the footer are the whole sheet
     footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
   }
   const tall = CSHEET === 'recipe' || CSHEET === 'rgenre' ? ' tall' : '';  // the recipe sheet runs full height
@@ -1920,23 +1980,25 @@ function csheetHtml(){
     `<div id="sheet" class="ctrl${tall}" role="dialog" aria-modal="true" aria-label="${esc(label)}">` +
     `<div class="shbody">${body}</div>${footer}</div>`;
 }
+let SHEET_SCROLL = {};   // control sheet -> where its list was scrolled, so a picker reopens where it was left
+let SHEET_LAST = null;   // the control sheet on screen after the last render
 function renderSheet(){
   const wrap = document.getElementById('sheetwrap');
   if(CPICK && CSHEET) CSHEET = null;  // the save picker takes the sheet over cleanly
-  if(CPICK){ wrap.innerHTML = pickerHtml(); return; }
+  const prev = wrap.querySelector('#sheet.ctrl .shbody');
+  if(prev && SHEET_LAST) SHEET_SCROLL[SHEET_LAST] = prev.scrollTop;
+  if(CPICK){ wrap.innerHTML = pickerHtml(); SHEET_LAST = null; return; }
   if(CSHEET){
-    const prev = wrap.querySelector('#sheet .shbody');
-    const scroll = prev ? prev.scrollTop : null;
+    const same = !!prev && SHEET_LAST === CSHEET;
     wrap.innerHTML = csheetHtml();
-    if(scroll != null){
-      // live-apply re-render: keep the scroll spot, skip the slide-up replay
-      const sh = wrap.querySelector('#sheet');
-      sh.style.animation = 'none';
-      const body = sh.querySelector('.shbody');
-      if(body) body.scrollTop = scroll;
-    }
+    const sh = wrap.querySelector('#sheet');
+    if(same) sh.style.animation = 'none';  // live-apply re-render: no slide-up replay
+    const body = sh.querySelector('.shbody');
+    if(body && SHEET_SCROLL[CSHEET]) body.scrollTop = SHEET_SCROLL[CSHEET];
+    SHEET_LAST = CSHEET;
     return;
   }
+  SHEET_LAST = null;
   if(!SHEET){ wrap.innerHTML = ''; return; }
   const r = byId(SHEET.id) || { title: SHEET.id };
   const d = SHEET.draft;
@@ -2010,6 +2072,9 @@ document.getElementById('list').addEventListener('click', e => {
   if(e.target.closest('#rcpnew')){ recipeOpen(null); return; }
   if(e.target.closest('#reshuffle')){ reshuffleMix(); return; }
   if(e.target.closest('#mixscores')){ toggleMixScores(); return; }
+  if(e.target.closest('#mixlimit')) return;  // typing a limit must not fold the card
+  const ml = e.target.closest('[data-mixlimit]');
+  if(ml){ setMixLimit(+ml.dataset.mixlimit); return; }
   const re = e.target.closest('[data-rcpedit]');
   if(re){ recipeOpen(re.dataset.rcpedit); return; }
   const rd = e.target.closest('[data-rcpdel]');
@@ -2051,6 +2116,16 @@ document.getElementById('list').addEventListener('click', e => {
     return;
   }
   if(!row.classList.contains('ghost')) toggleExpand(id);
+});
+let MIX_TIMER = 0;
+document.getElementById('list').addEventListener('input', e => {
+  if(e.target.id !== 'mixlimit') return;
+  const n = parseInt(e.target.value.replace(/\D/g, ''), 10);
+  if(!(n >= 1 && n <= RECIPE_MAX)) return;
+  S.mixLimit = n; save();
+  document.querySelectorAll('#list [data-mixlimit]').forEach(b => b.classList.toggle('on', +b.dataset.mixlimit === n));
+  clearTimeout(MIX_TIMER);
+  MIX_TIMER = setTimeout(() => { plLoad('random'); renderList(); }, 600);  // redraw once the typing settles, never mid-keystroke
 });
 document.getElementById('list').addEventListener('keydown', e => {
   if(e.key !== 'Enter' && e.key !== ' ') return;
@@ -2122,7 +2197,16 @@ sheetwrap.addEventListener('click', e => {
     return;
   }
   if(CSHEET){
-    if(e.target.id === 'scrim' || e.target.closest('#shdone')){ CSHEET = null; renderSheet(); return; }
+    if(e.target.id === 'scrim' || e.target.closest('#shdone') || e.target.closest('#shback')){
+      // a picker goes back to the sheet that opened it; anything else closes
+      CSHEET = CSHEET === 'fgenre' ? 'filters' : CSHEET === 'plgpick' ? 'plgenre' : null;
+      renderSheet(); return;
+    }
+    if(e.target.closest('#shgenrerow')){ CSHEET = 'fgenre'; renderSheet(); return; }
+    const pr = e.target.closest('[data-shplgrow]');
+    if(pr){ PLGBUCKET = pr.dataset.shplgrow === 'screen' ? 'screen' : 'game'; CSHEET = 'plgpick'; renderSheet(); return; }
+    if(e.target.closest('#shscores')){ toggleFeedScores(); return; }
+    if(e.target.closest('#shlscores')){ toggleLibScores(); return; }
     const fs = e.target.closest('[data-shsort]');
     if(fs){ CSHEET = null; setFeedSort(fs.dataset.shsort); return; }
     const ls = e.target.closest('[data-shlsort]');
@@ -2133,7 +2217,7 @@ sheetwrap.addEventListener('click', e => {
     if(co){ setFeedCo(co.dataset.shco); return; }        // filters apply live; the sheet stays open
     if(e.target.closest('#shconsole')){ toggleFeedConsole(); return; }
     const g = e.target.closest('[data-shgenre]');
-    if(g){ setFeedGenre(feedMediumEff() === 'game' ? 'game' : 'screen', g.dataset.shgenre); return; }
+    if(g){ CSHEET = 'filters'; setFeedGenre(feedMediumEff() === 'game' ? 'game' : 'screen', g.dataset.shgenre); return; }  // a pick returns to the filters
     const m = e.target.closest('[data-shmed]');
     if(m){
       // tapping the already-on film + tv segment keeps the sub-selection
@@ -2153,12 +2237,14 @@ sheetwrap.addEventListener('click', e => {
     const py = e.target.closest('[data-shplyear]');
     if(py){ CSHEET = null; setPlYear(py.dataset.shplyear); return; }
     const pgg = e.target.closest('[data-shplg-game]');
-    if(pgg){ CSHEET = null; setPlGenre('game', pgg.dataset.shplgGame); return; }
+    if(pgg){ CSHEET = 'plgenre'; setPlGenre('game', pgg.dataset.shplgGame); return; }
     const pgs = e.target.closest('[data-shplg-screen]');
-    if(pgs){ CSHEET = null; setPlGenre('screen', pgs.dataset.shplgScreen); return; }
+    if(pgs){ CSHEET = 'plgenre'; setPlGenre('screen', pgs.dataset.shplgScreen); return; }
     if(e.target.closest('#shclear')){
       if(CSHEET === 'libfilters'){
-        S.libMedium = 'all'; S.libLiked = false; save(); renderAll();
+        S.libMedium = 'all'; S.libLiked = false; S.libScores = false; save(); renderAll();
+      } else if(CSHEET === 'plgenre'){
+        S.plGenre = { game: 'all', screen: 'all' }; save(); renderAll();
       } else clearFeedFilters();
       return;
     }
@@ -2207,6 +2293,10 @@ sheetwrap.addEventListener('input', e => {
     else if(id === 'rc-from' || id === 'rc-to'){
       const v = e.target.value.replace(/\D/g, '').slice(0, 4);
       rc[id === 'rc-from' ? 'yearFrom' : 'yearTo'] = v.length === 4 ? v : '';  // a bound counts once it is a whole year
+    } else if(id === 'rc-limit'){
+      const n = parseInt(e.target.value.replace(/\D/g, ''), 10);
+      if(!(n >= 1 && n <= RECIPE_MAX)) return;  // a half-typed or out-of-range number leaves the limit as it was
+      rc.limit = n;
     } else return;
     recipeRefreshCount();
     return;
@@ -2223,12 +2313,14 @@ document.getElementById('albumwrap').addEventListener('click', e => {
   const ad = e.target.closest('[data-act="tadd"]');
   if(ad && r){ addFlow(r.id, ad.dataset.t); return; }          // plus, not play
   const t = e.target.closest('.atrack');
-  if(t && r){ const tr = (tracksOf(r) || [])[+t.dataset.i]; if(tr) openUrl(trackUrl(r, tr)); }
+  if(t && r){ const tr = shownTracks(r)[+t.dataset.i]; if(tr) openUrl(trackUrl(r, tr)); }
 });
 window.addEventListener('keydown', e => {
   if(e.key !== 'Escape') return;
   if(CSHEET === 'rgenre'){ CSHEET = 'recipe'; renderSheet(); }
   else if(CSHEET === 'recipe') recipeCancel();
+  else if(CSHEET === 'fgenre'){ CSHEET = 'filters'; renderSheet(); }
+  else if(CSHEET === 'plgpick'){ CSHEET = 'plgenre'; renderSheet(); }
   else if(CSHEET){ CSHEET = null; renderSheet(); }
   else if(CPICK){ CPICK = null; renderSheet(); }
   else if(SHEET) closeLog();
