@@ -1,5 +1,5 @@
 {
-  "_about": "Hand-vouched corrections to the film and TV matcher, the screen side's seeds.json. Keyed by TMDb title. film and tv: pins, albums the rules turn away, each taking its row after resolve ahead of any matcher claim and never carrying weakMatch. exclude: one-off albums that name the title but are another work, removed before resolve so the title falls to its next album. seasonlessVolumes: shows whose volume albums span seasons, filed season-less whatever their release dates. Cover and knockoff acts belong in collect._SCREEN_TRIBUTE, not here.",
+  "_about": "Hand-vouched corrections to the film and TV matcher, the screen side's seeds.json. Keyed by TMDb title. film and tv: pins, albums the rules turn away, each taking its row after resolve ahead of any matcher claim and never carrying weakMatch. exclude: one-off albums that name the title but are another work, removed before resolve so the title falls to its next album. seasonlessVolumes: shows whose volume albums span seasons, filed season-less whatever their release dates. songs: albums whose scores-versus-songs call the track rule gets wrong, pinned to a verdict (score or songs) that judge_tracks applies after the rule, in the daily fill and the offline re-judge alike. Cover and knockoff acts belong in collect._SCREEN_TRIBUTE, not here.",
   "film": [
     {"tmdb": 1573, "name": "Die Hard 2", "album": "MPREb_yx9yHqHNFjd",
      "albumTitle": "Die Hard 2: Die Harder (Original Motion Picture Soundtrack)",
@@ -105,5 +105,37 @@
     {"tmdb": 604, "name": "Teen Titans", "why": "Vol. 1 to 5 are compilations released after the show ended"},
     {"tmdb": 4615, "name": "Hercules: The Legendary Journeys", "albums": ["MPREb_mmFVACeI3DW"],
      "why": "Vol. 4 is a compilation spanning seasons; Volume Two and Three keep their seasons"}
+  ],
+  "songs": [
+    {"medium": "tv", "tmdb": 655, "season": 7, "volume": 3, "name": "Star Trek: The Next Generation", "album": "MPREb_swmz34LGJjf",
+     "albumTitle": "Star Trek: The Next Generation Season 7 Vol. 3", "verdict": "score",
+     "why": "tracks credited to Dennis McCarthy and Jay Chattaway, whom TMDb does not list; TMDb names only Ron Jones"},
+    {"medium": "film", "tmdb": 3604, "name": "Flash Gordon", "album": "MPREb_xw8KukDtiww",
+     "albumTitle": "Flash Gordon", "verdict": "score",
+     "why": "Queen wrote the score; TMDb credits Howard Blake, so the band's tracks read as songs"},
+    {"medium": "film", "tmdb": 193756, "name": "Lone Survivor", "album": "MPREb_azfIuRFeV0n",
+     "albumTitle": "Lone Survivor", "verdict": "score",
+     "why": "Explosions in the Sky co-wrote the score and are not in TMDb's credits"},
+    {"medium": "film", "tmdb": 9952, "name": "Rescue Dawn", "album": "MPREb_0JmT7FHJ28j",
+     "albumTitle": "Rescue Dawn", "verdict": "score",
+     "why": "Klaus Badelt's score, with the tracks credited to other names"},
+    {"medium": "film", "tmdb": 3683, "name": "Flags of Our Fathers", "album": "MPREb_sE6yk7MbixU",
+     "albumTitle": "Flags of Our Fathers", "verdict": "score",
+     "why": "Clint Eastwood's score, with the tracks credited to its performers"},
+    {"medium": "tv", "tmdb": 61175, "season": 5, "volume": 1, "name": "Steven Universe", "album": "MPREb_L4kmpcY12kp",
+     "albumTitle": "Steven Universe Season 5 Vol. 1", "verdict": "score",
+     "why": "credited to the show itself, whose one hit over 50M plays made it read as a performer"},
+    {"medium": "film", "tmdb": 10501, "name": "The Road to El Dorado", "album": "MPREb_tiRz1F6mcJF",
+     "albumTitle": "The Road to El Dorado", "verdict": "songs",
+     "why": "Elton John's songs; the credited composers are on none of the tracks, so he stood in"},
+    {"medium": "film", "tmdb": 11897, "name": "How the West Was Won", "album": "MPREb_UiTnD3Dba5t",
+     "albumTitle": "How the West Was Won", "verdict": "songs",
+     "why": "Bing Crosby and Rosemary Clooney songs standing in for an absent Alfred Newman"},
+    {"medium": "film", "tmdb": 1022796, "name": "Wish", "album": "MPREb_g8M0P5uK4vv",
+     "albumTitle": "Wish", "verdict": "songs",
+     "why": "Julia Michaels' songs, credited composer Dave Metzger on none of the tracks"},
+    {"medium": "film", "tmdb": 673593, "name": "Mean Girls", "album": "MPREb_iUerd34jiIX",
+     "albumTitle": "Mean Girls (2024)", "verdict": "songs",
+     "why": "the musical's cast songs; Reneé Rapp stood in for an absent Jeff Richmond"}
   ]
 }

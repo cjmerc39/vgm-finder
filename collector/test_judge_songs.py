@@ -135,8 +135,46 @@ def test_judge_never_flags_on_one_song_among_uncredited_tracks():
     r = {"id": "film-qos", "medium": "film", "composers": ["David Arnold"], "albumArtists": ["Original Soundtrack"]}
     tracks = [_t(f"Cue {i}", [], "50K plays") for i in range(23)] + [_t("Another Way to Die", ["Jack White", "Alicia Keys"], "30M plays")]
     tally = collect.judge_tracks(r, tracks)
-    assert tally == {"named": 1, "score": 0, "songs": False, "names": ["David Arnold", "Original Soundtrack"]}
+    assert tally == {"named": 1, "score": 0, "songs": False, "names": ["David Arnold", "Original Soundtrack"], "pinned": None}
     assert r["scoresN"] == 23 and "songsAlbum" not in r and tracks[-1]["song"] is True
+
+
+def test_songs_pins_are_applied_after_the_rule():
+    pins = collect.screen_override_sets({"songs": [
+        {"medium": "film", "tmdb": 3604, "name": "Flash Gordon", "album": "MPREb_fg", "verdict": "score", "why": "Queen wrote it"},
+        {"medium": "film", "tmdb": 10501, "name": "The Road to El Dorado", "album": "MPREb_eld", "verdict": "songs", "why": "Elton John"},
+        {"medium": "film", "tmdb": 1, "name": "Bad", "album": "MPREb_bad", "verdict": "maybe", "why": "not a verdict"},
+    ]})["songs"]
+    assert pins == {"https://music.youtube.com/browse/MPREb_fg": "score", "https://music.youtube.com/browse/MPREb_eld": "songs"}
+    # force score: Queen's Flash Gordon reads as songs under the rule (TMDb credits Howard Blake)
+    fg = {"id": "film-flash-gordon", "medium": "film", "composers": ["Howard Blake"], "albumArtists": ["Queen"],
+          "songsAlbum": True, "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fg"}
+    tracks = [_t("Flash's Theme", ["Queen"], "80M plays"), _t("In the Space Capsule", ["Queen"], "3M plays")]
+    tally = collect.judge_tracks(fg, tracks, pins)
+    assert tally["pinned"] == "score" and tally["songs"] is False
+    assert "songsAlbum" not in fg and fg["scoresN"] == 2 and not any(t.get("song") for t in tracks)
+    # force songs: Elton John stands in under the rule, the pin says otherwise
+    eld = {"id": "film-the-road-to-el-dorado", "medium": "film", "composers": ["Hans Zimmer", "John Powell"],
+           "albumArtists": ["Elton John"], "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_eld"}
+    tracks = [_t("El Dorado", ["Elton John"], "9M plays"), _t("The Trail We Blaze", ["Elton John"], "4M plays")]
+    tally = collect.judge_tracks(eld, tracks, pins)
+    assert tally["pinned"] == "songs" and eld["songsAlbum"] is True and eld["scoresN"] == 0 and all(t["song"] for t in tracks)
+    # an album without a pin is judged by the rule alone
+    other = {"id": "film-x", "medium": "film", "composers": ["A"], "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_x"}
+    assert collect.judge_tracks(other, [_t("Cue", ["A"])], pins)["pinned"] is None
+
+
+def test_fill_tracks_reads_the_songs_pins_itself(tmp_path, monkeypatch):
+    monkeypatch.setattr(collect, "load_screen_overrides", lambda path=None: {"songs": [
+        {"medium": "film", "tmdb": 3604, "name": "Flash Gordon", "album": "MPREb_fg", "verdict": "score", "why": "Queen"}]})
+    def album(bid):
+        return {"artists": [{"name": "Queen"}],
+                "tracks": [{"title": "Flash's Theme", "views": "80M plays", "videoId": "v1", "artists": [{"name": "Queen"}]}]}
+    r = {"id": "film-flash-gordon", "medium": "film", "composers": ["Howard Blake"],
+         "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fg"}
+    collect.fill_tracks([r], album, lambda q: None, cap=5, tracks_dir=tmp_path, playlist_fn=None)
+    saved = json.loads((tmp_path / "film-flash-gordon.json").read_text(encoding="utf-8"))
+    assert "song" not in saved[0] and r["scoresN"] == 1 and "songsAlbum" not in r  # the daily run honours the pin
 
 
 def test_judge_uses_aliases_and_skips_games_and_unfilled_rows():
@@ -259,8 +297,8 @@ def test_judge_songs_backfills_credits_and_rejudges_offline(tmp_path):
         ("film", "2"): {"composers": ["Tom Holkenborg"], "aliases": ["Junkie XL"],
                         "accepted": [{"url": "https://music.youtube.com/browse/MPREb_dp"}]},
     }
-    out = judge_songs.run(data_path, tracks_dir, evaluations=evaluations, log=lambda s: None)
-    assert out["judged"] == 2 and out["unjudged"] == 1 and out["creditsBackfilled"] == 2
+    out = judge_songs.run(data_path, tracks_dir, evaluations=evaluations, log=lambda s: None, songs_pins={})
+    assert out["judged"] == 2 and out["unjudged"] == 1 and out["creditsBackfilled"] == 2 and out["pinned"] == 0
     assert out["newlyFlagged"] == ["film-br"] and out["cleared"] == ["film-dp"]
     assert (out["flaggedBefore"], out["flaggedAfter"]) == (2, 2)  # bare keeps its old flag, unjudged
     saved = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
@@ -271,5 +309,12 @@ def test_judge_songs_backfills_credits_and_rejudges_offline(tmp_path):
     assert "song" not in dp[0] and dp[1]["song"] is True
     # a dry run reports the same without touching anything
     stamp = data_path.read_text(encoding="utf-8")
-    out = judge_songs.run(data_path, tracks_dir, evaluations=evaluations, write=False, log=lambda s: None)
+    out = judge_songs.run(data_path, tracks_dir, evaluations=evaluations, write=False, log=lambda s: None, songs_pins={})
     assert out["filesWritten"] == 0 and data_path.read_text(encoding="utf-8") == stamp
+    # a songs pin is honoured by the offline re-judge too
+    pins = {"https://music.youtube.com/browse/MPREb_dp": "songs"}
+    out = judge_songs.run(data_path, tracks_dir, evaluations=evaluations, log=lambda s: None, songs_pins=pins)
+    assert out["pinned"] == 1 and out["newlyFlagged"] == ["film-dp"] and out["cleared"] == []
+    saved = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
+    assert saved["film-dp"]["songsAlbum"] is True and saved["film-dp"]["scoresN"] == 0
+    assert all(t["song"] for t in json.loads((tracks_dir / "film-dp.json").read_text(encoding="utf-8")))

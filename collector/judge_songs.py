@@ -10,6 +10,8 @@ Rows the re-walk evaluated first take their credits' provenance from the
 stored records: composers TMDb never listed, where the album's own acts
 stood in, are marked composersFrom "album" so the judgment treats those
 acts as album acts, and TMDb's aliases land on the row as composerAliases.
+The songs pins of collector/screen-overrides.json are applied after the
+rule, the same way the daily fill applies them.
 
   python collector/judge_songs.py                 # judge, write, summarize
   python collector/judge_songs.py --dry-run       # summarize only
@@ -55,11 +57,14 @@ def backfill_credits(releases, evaluations):
     return changed
 
 
-def judge_all(releases, tracks_dir, write=True):
-    """-> summary dict; writes changed track files when write is set."""
+def judge_all(releases, tracks_dir, write=True, songs_pins=None):
+    """-> summary dict; writes changed track files when write is set. The
+    songs pins of screen-overrides.json are applied after the rule."""
     tracks_dir = Path(tracks_dir)
+    if songs_pins is None:
+        songs_pins = collect.screen_override_sets(collect.load_screen_overrides())["songs"]
     out = {"judged": 0, "unjudged": 0, "flaggedBefore": 0, "flaggedAfter": 0,
-           "newlyFlagged": [], "cleared": [], "noScore": 0, "filesWritten": 0}
+           "newlyFlagged": [], "cleared": [], "noScore": 0, "filesWritten": 0, "pinned": 0}
     for r in releases:
         if r.get("medium") not in ("film", "tv") or r.get("retired"):
             continue
@@ -70,12 +75,13 @@ def judge_all(releases, tracks_dir, write=True):
         tracks = json.loads(raw)
         before = bool(r.get("songsAlbum"))
         out["flaggedBefore"] += before
-        tally = collect.judge_tracks(r, tracks)
+        tally = collect.judge_tracks(r, tracks, songs_pins)
         if tally is None:
             out["unjudged"] += 1
             out["flaggedAfter"] += before
             continue
         out["judged"] += 1
+        out["pinned"] += bool(tally.get("pinned"))
         after = bool(r.get("songsAlbum"))
         out["flaggedAfter"] += after
         if after and not before:
@@ -92,7 +98,7 @@ def judge_all(releases, tracks_dir, write=True):
     return out
 
 
-def run(data_path=None, tracks_dir=None, evaluations=None, write=True, log=print):
+def run(data_path=None, tracks_dir=None, evaluations=None, write=True, log=print, songs_pins=None):
     data_path = Path(data_path or collect.DATA_PATH)
     tracks_dir = Path(tracks_dir or TRACKS_DIR)
     data = collect.load_data(data_path)
@@ -105,12 +111,12 @@ def run(data_path=None, tracks_dir=None, evaluations=None, write=True, log=print
             evaluations = {}
     before = json.dumps(releases, sort_keys=True, ensure_ascii=False)
     credits = backfill_credits(releases, evaluations) if evaluations else 0
-    out = judge_all(releases, tracks_dir, write=write)
+    out = judge_all(releases, tracks_dir, write=write, songs_pins=songs_pins)
     out["creditsBackfilled"] = credits
     if write and json.dumps(releases, sort_keys=True, ensure_ascii=False) != before:
         data_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     log(f"songs: {out['judged']} rows judged, {out['unjudged']} still without track artists, "
-        f"{credits} rows given credit provenance")
+        f"{credits} rows given credit provenance, {out['pinned']} verdicts pinned by screen-overrides.json")
     log(f"songsAlbum: {out['flaggedBefore']} before, {out['flaggedAfter']} after "
         f"({len(out['newlyFlagged'])} newly flagged, {len(out['cleared'])} cleared); "
         f"{out['noScore']} albums keep no score track; {out['filesWritten']} track files "
@@ -122,6 +128,7 @@ def show(ids, data_path=None, tracks_dir=None, log=print):
     data_path = Path(data_path or collect.DATA_PATH)
     tracks_dir = Path(tracks_dir or TRACKS_DIR)
     rows = {r["id"]: r for r in collect.load_data(data_path)["releases"]}
+    pins = collect.screen_override_sets(collect.load_screen_overrides())["songs"]
     for rid in ids:
         r = rows.get(rid)
         if not r:
@@ -129,11 +136,12 @@ def show(ids, data_path=None, tracks_dir=None, log=print):
             continue
         path = tracks_dir / f"{rid}.json"
         tracks = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
-        tally = collect.judge_tracks(dict(r), [dict(t) for t in tracks])
+        tally = collect.judge_tracks(dict(r), [dict(t) for t in tracks], pins)
         log(f"{rid}: composers={r.get('composers')} from={r.get('composersFrom') or 'tmdb'} "
             f"aliases={r.get('composerAliases')} albumArtists={r.get('albumArtists')} genres={r.get('genres')}")
         log(f"  score names: {tally and tally['names']} | named {tally and tally['named']}, "
-            f"score {tally and tally['score']}, songsAlbum {tally and tally['songs']}")
+            f"score {tally and tally['score']}, songsAlbum {tally and tally['songs']}"
+            + (f", pinned {tally['pinned']}" if tally and tally.get("pinned") else ""))
         for t in tracks:
             log(f"  {'song ' if t.get('song') else 'score'}  {t.get('title')}  |  {', '.join(t.get('artists') or [])}  |  {t.get('plays')}")
 

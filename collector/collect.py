@@ -327,12 +327,16 @@ def write_tracklist(r, tracks, tracks_dir):
 
 
 def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_playlist,
-                tracks_dir=None):
+                tracks_dir=None, songs_pins=None):
     """Full tracklists, capped per run: YTM albums carry plays + per-track
     videoIds; game-named rows without a YTM album fall back to Apple's
     catalog. Lists land in per-release files via write_tracklist; tracksN
-    is the completed-check marker, and legacy topTracks is retired."""
+    is the completed-check marker, and legacy topTracks is retired. Film
+    and TV tracks are judged scores or songs on the way in, with the songs
+    pins of screen-overrides.json (read here when not given) applied last."""
     tracks_dir = Path(tracks_dir) if tracks_dir else DATA_PATH.parent / "tracks"
+    if songs_pins is None:
+        songs_pins = screen_override_sets(load_screen_overrides())["songs"]
     looked = 0
     for r in releases:
         if "tracksN" in r or "tracks" in r:
@@ -357,7 +361,7 @@ def fill_tracks(releases, album_fn, itunes_fn, cap=TRACKS_CAP, playlist_fn=ytm_p
                         _patch_audio_ids(tracks, playlist_fn(plid))
                     except Exception:
                         pass  # patch is best-effort: links fall back to search
-            judge_tracks(r, tracks)
+            judge_tracks(r, tracks, songs_pins)
             write_tracklist(r, tracks, tracks_dir)
         elif r.get("game"):
             looked += 1
@@ -1483,28 +1487,37 @@ def mark_songs(tracks, names):
     return named, score
 
 
-def judge_tracks(r, tracks):
+def judge_tracks(r, tracks, songs_pins=None):
     """A film or TV row's tracks judged one by one: song flags on the
     tracks, scoresN and songsAlbum on the row. songsAlbum now means fewer
     than half of the album's tracks are score (a track nobody is credited on
     counts as score, so one named song on an otherwise uncredited album
     never flags it). Rows whose composers are the album's own acts
     (composersFrom album) judge those acts like any album act, never as
-    TMDb credits. Returns the tally, or None when the tracks carry no
-    artists yet (fill_artists.py has not reached the row)."""
+    TMDb credits. A songs pin from screen-overrides.json (album url ->
+    "score" | "songs") is applied after the rule: score clears every song
+    mark, songs marks every track. Returns the tally, or None when the
+    tracks carry no artists yet (fill_artists.py has not reached the row)."""
     if _medium(r) == "game" or not tracks or not all("artists" in t for t in tracks):
         return None
     tmdb = [] if r.get("composersFrom") == "album" else list(r.get("composers") or [])
     names = score_names(tmdb, r.get("composerAliases"), r.get("albumArtists"), tracks,
                         r.get("genres"), _medium(r))
     named, score = mark_songs(tracks, names)
+    pin = (songs_pins or {}).get(r.get("ytmAlbumUrl") or "")
+    if pin == "score":
+        for t in tracks:
+            t.pop("song", None)
+    elif pin == "songs":
+        for t in tracks:
+            t["song"] = True
     r["scoresN"] = sum(1 for t in tracks if not t.get("song"))
     songs = r["scoresN"] * 2 < len(tracks)
     if songs:
         r["songsAlbum"] = True
     else:
         r.pop("songsAlbum", None)
-    return {"named": named, "score": score, "songs": songs, "names": names}
+    return {"named": named, "score": score, "songs": songs, "names": names, "pinned": pin}
 
 
 def claimed_albums(releases):
@@ -1655,8 +1668,10 @@ def screen_override_sets(overrides):
         for p in overrides.get(medium, []):
             tid = str(p["tmdb"])
             pins[("film", tid) if medium == "film" else ("tv", tid, p.get("season"), p.get("volume"))] = p
+    songs = {YTM_BROWSE + x["album"]: x["verdict"] for x in overrides.get("songs", [])
+             if x.get("album") and x.get("verdict") in ("score", "songs")}
     return {"excluded": excluded, "seasonless": seasonless, "pins": pins,
-            "pinnedUrls": {YTM_BROWSE + p["album"] for p in pins.values()}}
+            "pinnedUrls": {YTM_BROWSE + p["album"] for p in pins.values()}, "songs": songs}
 
 
 def pin_candidate(p, info, results):
