@@ -18,6 +18,12 @@ made by hand. Playlists published before the rename to Scorekeep carry
 "vgm-finder · " names and the "# vgm-finder" marker: both are recognized,
 and such a playlist is topped up, then renamed to the new prefix and given
 the new marker on that same run.
+
+One export opts out of topping up: the app's random mix carries
+"replace": true, and for it the marked playlist is made to match the
+export exactly, so a reshuffle swaps the 30 tracks instead of piling
+30 more on. Nothing else about the export shape changed, and an export
+without the flag behaves as it always has.
 """
 import argparse
 import glob
@@ -45,8 +51,8 @@ def _fold(text):
     return _numfold(normalize_title(text or ""))
 
 
-def load_export(path):
-    """One exported playlist file -> (name, tracks). Raises ValueError."""
+def read_export(path):
+    """One exported playlist file -> {name, tracks, replace}. Raises ValueError."""
     try:
         data = json.loads(Path(path).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as e:
@@ -56,8 +62,16 @@ def load_export(path):
     name, tracks = data.get("name"), data.get("tracks")
     if not isinstance(name, str) or not name.strip() or not isinstance(tracks, list):
         raise ValueError("not a Scorekeep playlist export")
-    return name.strip(), [t for t in tracks
-                          if isinstance(t, dict) and isinstance(t.get("title"), str) and t["title"]]
+    return {"name": name.strip(),
+            "tracks": [t for t in tracks
+                       if isinstance(t, dict) and isinstance(t.get("title"), str) and t["title"]],
+            "replace": data.get("replace") is True}
+
+
+def load_export(path):
+    """(name, tracks) of one export; see read_export."""
+    e = read_export(path)
+    return e["name"], e["tracks"]
 
 
 def resolve_video_id(yt, track):
@@ -103,8 +117,10 @@ def find_marked_playlist(yt, name):
         full = yt.get_playlist(pid, limit=None) or {}
         desc = full.get("description") or ""
         if any(m in desc for m in MARKERS):
-            present = [t.get("videoId") for t in (full.get("tracks") or []) if t.get("videoId")]
-            found[title] = (pid, present, {"title": title, "description": desc})
+            items = [{"videoId": t["videoId"], "setVideoId": t.get("setVideoId")}
+                     for t in (full.get("tracks") or []) if t.get("videoId")]
+            present = [t["videoId"] for t in items]
+            found[title] = (pid, present, {"title": title, "description": desc, "items": items})
         else:
             unmarked = True
     for title in (name, legacy_name(name)):
@@ -127,10 +143,12 @@ def _add_items(yt, pid, video_ids):
     return yt.add_playlist_items(pid, video_ids, duplicates=False)
 
 
-def sync_playlist(yt, name, tracks):
-    """Create or top up the marked playlist for one export. Returns a report."""
+def sync_playlist(yt, name, tracks, replace=False):
+    """Create or top up the marked playlist for one export. With replace,
+    tracks the export no longer lists are removed first, so the playlist
+    ends up exactly the export. Returns a report."""
     rep = {"name": name, "created": False, "skipped": False, "renamed": None,
-           "added": 0, "already": 0, "unresolved": []}
+           "added": 0, "already": 0, "removed": 0, "unresolved": []}
     ids, seen = [], set()
     for t in tracks:
         vid = t.get("videoId") or resolve_video_id(yt, t)
@@ -150,6 +168,12 @@ def sync_playlist(yt, name, tracks):
             raise RuntimeError(f"create_playlist failed: {pid!r}")
         rep["created"] = True
     have = set(present)
+    if replace and found:
+        stale = [t for t in found["items"] if t["videoId"] not in set(ids)]
+        if stale:
+            yt.remove_playlist_items(pid, stale)
+            rep["removed"] = len(stale)
+            have -= {t["videoId"] for t in stale}
     to_add = [v for v in ids if v not in have]
     rep["already"] = len(ids) - len(to_add)
     if to_add:
@@ -195,12 +219,13 @@ def main(argv=None):
     failures = 0
     for path in expand_args(args.files):
         try:
-            name, tracks = load_export(path)
+            export = read_export(path)
         except ValueError as e:
             print(f"SKIP {path}: {e}", file=sys.stderr)
             failures += 1
             continue
-        rep = sync_playlist(yt, name, tracks)
+        name = export["name"]
+        rep = sync_playlist(yt, name, export["tracks"], replace=export["replace"])
         if rep["skipped"]:
             print(f"SKIP “{name}”: a same-named playlist exists without the {MARKER} marker "
                   "— rename or delete it and re-run")
@@ -208,7 +233,8 @@ def main(argv=None):
             continue
         verb = "created" if rep["created"] else "updated"
         renamed = f" (renamed from “{rep['renamed']}”)" if rep["renamed"] else ""
-        print(f"{verb} “{name}”: {rep['added']} added, {rep['already']} already there{renamed}")
+        removed = f", {rep['removed']} removed" if rep["removed"] else ""
+        print(f"{verb} “{name}”: {rep['added']} added, {rep['already']} already there{removed}{renamed}")
         for miss in rep["unresolved"]:
             print(f"  couldn't confidently place: {miss}")
     return 1 if failures else 0

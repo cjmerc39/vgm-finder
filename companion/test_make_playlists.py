@@ -13,6 +13,7 @@ class FakeYT:
         self.search_hits = dict(search_hits or {})  # query -> [search result dicts]
         self.created = []
         self.added = []
+        self.removed = []
         self.edited = []
         self.searches = []
         self._n = 0
@@ -23,7 +24,7 @@ class FakeYT:
     def get_playlist(self, pid, limit=None):
         p = self.playlists[pid]
         return {"description": p.get("description", ""),
-                "tracks": [{"videoId": v} for v in p.get("tracks", [])]}
+                "tracks": [{"videoId": v, "setVideoId": "set-" + v} for v in p.get("tracks", [])]}
 
     def create_playlist(self, title, description, privacy_status="PRIVATE"):
         self._n += 1
@@ -45,6 +46,13 @@ class FakeYT:
         self.playlists[pid]["tracks"].extend(video_ids)
         self.added.append((pid, list(video_ids)))
         return {"status": "STATUS_SUCCEEDED"}
+
+    def remove_playlist_items(self, pid, videos):
+        gone = {v["videoId"] for v in videos}
+        assert all(v.get("setVideoId") == "set-" + v["videoId"] for v in videos)  # removal needs the set ids
+        self.playlists[pid]["tracks"] = [v for v in self.playlists[pid]["tracks"] if v not in gone]
+        self.removed.append((pid, [v["videoId"] for v in videos]))
+        return "STATUS_SUCCEEDED"
 
     def search(self, query, filter=None, limit=None):
         self.searches.append(query)
@@ -68,6 +76,16 @@ def test_load_export_roundtrip(tmp_path):
     name, tracks = mp.load_export(f)
     assert name == "My Mix"
     assert [t["title"] for t in tracks] == ["No Escape"]  # junk rows fold away
+    assert mp.read_export(f)["replace"] is False  # no flag: top up as always
+
+
+def test_read_export_reads_the_replace_flag(tmp_path):
+    f = tmp_path / "playlist-random.json"
+    f.write_text(json.dumps({"app": "scorekeep-playlist", "name": "Scorekeep · Random Mix", "replace": True,
+                             "tracks": [{"game": "Hades II", "title": "No Escape", "videoId": "v1"}]}), encoding="utf-8")
+    assert mp.read_export(f)["replace"] is True
+    f.write_text(json.dumps({"name": "x", "replace": "yes", "tracks": []}), encoding="utf-8")
+    assert mp.read_export(f)["replace"] is False  # only a literal true counts
 
 
 @pytest.mark.parametrize("body", [
@@ -177,6 +195,43 @@ def test_sync_tops_up_only_missing_tracks():
     rep = mp.sync_playlist(yt, "Mix", TRACKS)
     assert rep["created"] is False and rep["added"] == 1 and rep["already"] == 1
     assert yt.added == [("PLX", ["v2"])]
+
+
+def test_sync_replace_makes_the_playlist_match_the_export():
+    # the random mix: yesterday's 3 tracks, today's export keeps one and brings two
+    yt = FakeYT(playlists={"PLX": {"title": "Scorekeep · Random Mix", "description": mp.DESCRIPTION,
+                                   "tracks": ["old1", "v1", "old2"]}})
+    rep = mp.sync_playlist(yt, "Scorekeep · Random Mix", TRACKS, replace=True)
+    assert rep["removed"] == 2 and rep["added"] == 1 and rep["already"] == 1 and rep["created"] is False
+    assert yt.removed == [("PLX", ["old1", "old2"])] and yt.added == [("PLX", ["v2"])]
+    assert yt.playlists["PLX"]["tracks"] == ["v1", "v2"]
+    assert yt.created == []  # the same playlist, never a second one
+
+
+def test_sync_replace_on_a_fresh_playlist_removes_nothing():
+    yt = FakeYT()
+    rep = mp.sync_playlist(yt, "Scorekeep · Random Mix", TRACKS, replace=True)
+    assert rep["created"] is True and rep["removed"] == 0 and rep["added"] == 2
+    assert yt.removed == []
+
+
+def test_sync_replace_leaves_a_matching_playlist_alone():
+    yt = FakeYT(playlists={"PLX": {"title": "Mix", "description": mp.DESCRIPTION, "tracks": ["v1", "v2"]}})
+    rep = mp.sync_playlist(yt, "Mix", TRACKS, replace=True)
+    assert rep["removed"] == 0 and rep["added"] == 0 and rep["already"] == 2
+    assert yt.removed == [] and yt.added == []
+
+
+def test_sync_replace_never_touches_a_hand_made_namesake():
+    yt = FakeYT(playlists={"PLX": {"title": "Scorekeep · Random Mix", "description": "my own", "tracks": ["z"]}})
+    rep = mp.sync_playlist(yt, "Scorekeep · Random Mix", TRACKS, replace=True)
+    assert rep["skipped"] is True and yt.removed == [] and yt.playlists["PLX"]["tracks"] == ["z"]
+
+
+def test_sync_without_replace_still_only_tops_up():
+    yt = FakeYT(playlists={"PLX": {"title": "Mix", "description": mp.DESCRIPTION, "tracks": ["old1", "v1"]}})
+    rep = mp.sync_playlist(yt, "Mix", TRACKS)
+    assert rep["removed"] == 0 and yt.removed == [] and yt.playlists["PLX"]["tracks"] == ["old1", "v1", "v2"]
 
 
 def test_sync_never_touches_a_hand_made_namesake():

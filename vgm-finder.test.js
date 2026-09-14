@@ -491,7 +491,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   // ---------- playlists: recipes, facets, export ----------
   d.querySelector('#libpl').click(); await sleep(20);
   assert(stored().libView === 'playlists', 'playlists view persists');
-  assert(d.querySelectorAll('#list .plcard').length === 3, 'three recipe cards render');
+  assert(d.querySelectorAll('#list .plcard').length === 4, 'four built-in cards render');
   S(`editEntry('hades-ii', e => { e.status = 'queued'; e.rating = 4.5; })`);
   S(`editEntry('ゼルダの伝説', e => { e.status = 'queued'; })`); await sleep(20);
   const cardMeta = k => d.querySelector(`#list .plcard[data-plc="${k}"] .plmeta`).textContent;
@@ -574,7 +574,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
 
   // ---------- custom playlists: create, sticky add, change, manage ----------
   assert(d.querySelector('#cplhead') !== null && d.querySelector('#cplnew') !== null
-    && d.querySelectorAll('#list .plcard').length === 3, 'library shows the custom section, empty at first');
+    && d.querySelectorAll('#list .plcard').length === 4, 'library shows the custom section, empty at first');
   d.querySelector('#cplnew').click(); await sleep(20);
   d.querySelector('#cp-name').value = 'Boss Rush';
   d.querySelector('#cp-create').click(); await sleep(20);
@@ -609,7 +609,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     && stored().cpls[1].tracks.length === 1, 'change + new playlist MOVES the save');
   const bossId = stored().cpls[0].id, chillId = stored().cpls[1].id;
   tab('library').click(); await sleep(20);
-  assert(d.querySelectorAll('#list .plcard').length === 5, 'custom cards join the recipe cards');
+  assert(d.querySelectorAll('#list .plcard').length === 6, 'custom cards join the recipe cards');
   d.querySelector(`#list .plcard[data-plc="c:${chillId}"]`).click(); await sleep(20);
   const chillCard = () => d.querySelector(`#list .plcard[data-plc="c:${chillId}"]`);
   assert(chillCard().querySelector('.plmeta').textContent.startsWith('1 track ')
@@ -1198,6 +1198,300 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   rt.d.querySelector('#tabbar button[data-v="library"]').click(); await sleep(20);
   assert(JSON.stringify(rtRows()) === JSON.stringify(['tv-gone-season-2']),
     'a retired row the listener logged stays in the library');
+
+  // ---------- recipes: the engine, the sheet, the cards, the random mix ----------
+  const rcRow = (id, medium, game, title, extra) => Object.assign({ id, title, medium, game, composers: [], date: '2000-01-01',
+    sources: [{ name: 'x', type: 'catalog', url: 'https://x/' + id, seenAt: '2026-08-01T10:00:00Z' }],
+    ytmSearchUrl: 'https://music.youtube.com/search?q=' + id, notable: true, ytmAlbumUrl: null, art: null }, extra);
+  const RC_ROWS = [
+    rcRow('g-alpha', 'game', 'Alpha Quest', 'Alpha Quest Soundtrack', { composers: ['Nobuo Uematsu'], date: '2024-05-01',
+      company: 'Square Enix', console: true, genres: ['Role-playing (RPG)'], tracksN: 3, playsTotal: 3000000, ytmPlaylistId: 'OLAK5uy_alpha' }),
+    rcRow('g-beta', 'game', 'Zeta Blast', 'Zeta Blast Soundtrack', { composers: ['Yoko Shimomura'], date: '2021-03-01',
+      company: 'Tiny Indie Co', console: false, genres: ['Platform'], tracksN: 2, playsTotal: 100000 }),
+    rcRow('g-gamma', 'game', 'Gamma Drive', 'Gamma Drive Soundtrack', { composers: ['Nobuo Uematsu', 'Masashi Hamauzu'], date: '2018-09-09',
+      company: 'Nintendo', console: true, genres: ['Role-playing (RPG)'], topTracks: [{ title: 'G-Top', plays: null }, { title: 'G-Two', plays: null }] }),
+    rcRow('g-hidden', 'game', 'Hidden Gem', 'Hidden Gem Soundtrack', { composers: ['Nobuo Uematsu'], date: '2024-01-01',
+      company: 'Nintendo', console: true, genres: ['Role-playing (RPG)'], tracksN: 1, playsTotal: 9000000 }),
+    rcRow('g-empty', 'game', 'Empty', 'Empty Soundtrack', { date: '2023-01-01', tracksN: 0 }),
+    rcRow('film-delta', 'film', 'Delta Falls', 'Delta Falls Soundtrack', { composers: ['Hans Zimmer'], date: '2022-07-07',
+      genres: ['Drama'], tracksN: 2, playsTotal: 5000000, ytmPlaylistId: 'OLAK5uy_delta' }),
+    rcRow('tv-eps', 'tv', 'Epsilon', 'Epsilon Season 1 Soundtrack', { composers: ['Bear McCreary'], date: '2020-02-02',
+      genres: ['Drama', 'Crime'], tracksN: 2, playsTotal: 50000 }),
+  ];
+  const RC_TRACKS = {
+    'g-alpha': [{ title: 'A1', plays: '10 plays', videoId: 'vidA1' }, { title: 'A2', plays: '2M plays', videoId: 'vidA2' },
+                { title: 'A3', plays: '900K plays', videoId: 'vidA3' }],
+    'g-beta': [{ title: 'B1', plays: '80K plays', videoId: 'vidB1' }, { title: 'B2', plays: '20K plays', videoId: 'vidB2' }],
+    'g-hidden': [{ title: 'H1', plays: '9M plays', videoId: 'vidH1' }],
+    'film-delta': [{ title: 'D1', plays: '4M plays', videoId: 'vidD1' }, { title: 'D2', plays: '1M plays', videoId: 'vidD2' }],
+    'tv-eps': [{ title: 'E1', plays: '30K plays', videoId: 'vidE1' }, { title: 'E2', plays: '20K plays', videoId: 'vidE2' }],
+  };
+  const TOP_OF = { 'Alpha Quest': 'A2', 'Zeta Blast': 'B1', 'Gamma Drive': 'G-Top', 'Delta Falls': 'D1', 'Epsilon': 'E1' };
+  for (let i = 1; i <= 36; i++) {  // a pool wider than the random mix's 30, so a reshuffle changes the selection too
+    const id = 'mix-' + String(i).padStart(2, '0');
+    RC_ROWS.push(rcRow(id, 'game', 'Mix ' + i, 'Mix ' + i + ' Soundtrack', { composers: ['Mix Person'], date: (1950 + i) + '-01-01',
+      company: 'Mix Studio', console: false, genres: ['Shooter'], tracksN: 1, playsTotal: 1000 }));
+    RC_TRACKS[id] = [{ title: 'Mix Track ' + i, plays: '1K plays', videoId: 'vidM' + i }];
+    TOP_OF['Mix ' + i] = 'Mix Track ' + i;
+  }
+  const rcHits = {};
+  const rcFetch = async (url) => {
+    rcHits[url] = (rcHits[url] || 0) + 1;
+    if (url === 'data/releases.json') return { ok: true, status: 200, json: async () => ({ updatedAt: '2026-09-01T10:00:00Z', releases: RC_ROWS }) };
+    const m = /^data\/tracks\/(.+)\.json$/.exec(url);
+    const list = m && RC_TRACKS[decodeURIComponent(m[1])];
+    if (list) return { ok: true, status: 200, json: async () => list };
+    return { ok: false, status: 404, json: async () => ({}) };
+  };
+  const rc = makeDom(rcFetch, { v: 3, entries: {
+    'g-alpha': { status: 'listened', listenedOn: '2026-08-01', rating: 4.5, likedTracks: ['A2'] },
+    'g-beta': { status: 'listened', listenedOn: '2026-08-02', rating: 3 },
+    'film-delta': { status: 'listened', listenedOn: '2026-08-03', rating: 5, likedTracks: ['D2'] },
+    'tv-eps': { status: 'queued', queuedOn: '2026-08-04' },
+    'g-gamma': { status: 'queued', queuedOn: '2026-08-05' },
+    'g-hidden': { status: 'hidden' },
+  }, lastSeen: T('2026-08-20T00:00:00Z') });
+  await sleep(120);
+  const rq = (sel) => rc.d.querySelector(sel);
+  const rStored = () => JSON.parse(rc.w.localStorage.getItem('vgm-v1'));
+  const rules = (o) => `Object.assign(recipeBlank(), ${JSON.stringify(o)})`;
+  const stats = (o) => JSON.parse(rc.w.eval(`JSON.stringify(recipeStats(${rules(o)}))`));
+  const pool = (o) => { const s = stats(o); return s.tracks + '/' + s.albums; };
+  const titles = (o, seed = 1) => JSON.parse(rc.w.eval(`JSON.stringify(recipeBuild(${rules(o)}, ${seed}).map(t => t.title))`));
+  const build = async (o, seed = 1) => { await rc.w.eval(`recipeLoad(${rules(o)}, ${seed})`); return titles(o, seed); };
+  const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  assert(rc.errors.length === 0, 'the recipe fixture boots clean');
+  assert(same(rStored().recipes, []), 'a v3 state without recipes gains an empty list');
+
+  // filters, alone: each narrows the pool, counted from row metadata without a single file fetch
+  assert(pool({}) === '47/41', 'no rules: every visible album with tracks; the hidden and the empty one stay out');
+  assert(Object.keys(rcHits).length === 1, 'counting a recipe fetches no tracklist files');
+  assert(pool({ medium: 'film' }) === '2/1' && pool({ medium: 'tv' }) === '2/1' && pool({ medium: 'screen' }) === '4/2'
+    && pool({ medium: 'game' }) === '43/39', 'medium narrows to games, film, tv, or both screens');
+  assert(pool({ medium: 'game', genre: { game: 'Role-playing (RPG)', screen: 'all' } }) === '5/2', 'a game genre narrows inside games');
+  assert(pool({ medium: 'screen', genre: { game: 'all', screen: 'Drama' } }) === '4/2'
+    && pool({ medium: 'tv', genre: { game: 'all', screen: 'Crime' } }) === '2/1', 'a screen genre narrows inside film + tv');
+  assert(pool({ genre: { game: 'Role-playing (RPG)', screen: 'Drama' } }) === '47/41', 'under all mediums a stored genre is inert');
+  assert(pool({ yearFrom: '2020', yearTo: '2022' }) === '6/3' && pool({ yearFrom: '2024' }) === '3/1' && pool({ yearTo: '1951' }) === '1/1',
+    'year bounds narrow by release year, either side open');
+  assert(pool({ composer: 'uematsu' }) === '5/2' && pool({ composer: '  UEMATSU ' }) === '5/2' && pool({ composer: 'nobody' }) === '0/0',
+    'composer is a folded contains-match');
+  assert(pool({ rating: '3' }) === '7/3' && pool({ rating: '4' }) === '5/2' && pool({ rating: '5' }) === '2/1', 'rating thresholds read the diary');
+  assert(pool({ hearted: true }) === '5/2', 'hearted keeps albums with at least one ♥ track');
+  assert(pool({ medium: 'game', co: 'big' }) === '5/2' && pool({ medium: 'game', co: 'indie' }) === '38/37'
+    && pool({ medium: 'game', console: true }) === '5/2', 'scope and console narrow games like the feed');
+  assert(pool({ co: 'big', console: true }) === '47/41', 'scope and console are inert outside the games medium');
+  assert(pool({ source: 'library' }) === '7/3' && pool({ source: 'queue' }) === '4/2', 'library and queue sources');
+  assert(pool({ source: 'library', medium: 'game', rating: '4', hearted: true }) === '3/1', 'filters AND together');
+  assert(pool({ source: 'library', medium: 'game', rating: '4', hearted: true, pick: 'top', topN: 2 }) === '2/1'
+    && pool({ source: 'library', medium: 'game', rating: '4', hearted: true, pick: 'hearted' }) === '1/1',
+    'the track pick counts per album from metadata');
+  assert(stats({ limit: 20 }).capped === true && stats({ limit: 20 }).expected === 20 && stats({}).capped === false,
+    'the cap reports itself without changing the pool');
+
+  // selection: top N ranks by plays, a missing file falls back to topTracks, hearts rematch the tracklist
+  const RPG = { medium: 'game', genre: { game: 'Role-playing (RPG)', screen: 'all' } };
+  assert(same(await build(Object.assign({ pick: 'top', topN: 2, order: 'newest' }, RPG)), ['A2', 'A3', 'G-Top', 'G-Two']),
+    'top 2 ranks by plays, not running order, and falls back to topTracks without a file');
+  assert(rcHits['data/tracks/g-alpha.json'] === 1 && rcHits['data/tracks/g-gamma.json'] === undefined,
+    'the build read the album with a file and never asked for one the row does not promise');
+  assert(same(await build({ hearted: true, pick: 'hearted' }), ['A2', 'D2']), 'the ♥ pick keeps only hearted tracks');
+  const heartsExp = JSON.parse(rc.w.eval(`JSON.stringify(recipeBuild(${rules({ hearted: true, pick: 'hearted' })}, 1))`));
+  assert(heartsExp[0].videoId === 'vidA2' && heartsExp[1].videoId === 'vidD2', 'hearted tracks carry the videoId from the loaded file');
+
+  // order, then limit: the same pool in four orders, cut after ordering
+  const SINCE18 = { medium: 'game', yearFrom: '2018', pick: 'top', topN: 1 };
+  assert(same(await build(Object.assign({ order: 'newest' }, SINCE18)), ['A2', 'B1', 'G-Top']), 'newest album: by release date');
+  assert(same(await build(Object.assign({ order: 'album' }, SINCE18)), ['A2', 'G-Top', 'B1']), 'album order: albums a to z');
+  assert(same(await build(Object.assign({ order: 'plays' }, SINCE18)), ['A2', 'B1', 'G-Top']), 'most played: by track plays, unknown last');
+  assert(same(await build(Object.assign({ order: 'album', limit: 2 }, SINCE18)), ['A2', 'G-Top']), 'the limit cuts after ordering');
+  assert(same(await build({ medium: 'game', order: 'plays', limit: 3 }), ['A2', 'A3', 'B1']),
+    'most played ranks tracks across albums, so one album can fill several slots');
+  assert(same(await build({ medium: 'game', pick: 'top', topN: 1, order: 'plays', limit: 3 }), ['A2', 'B1', 'Mix Track 36']),
+    'select runs before order: top 1 per album, then the best of those');
+  const sh1 = await build({ medium: 'game', yearFrom: '2018', order: 'shuffle' }, 7);
+  const sh2 = await build({ medium: 'game', yearFrom: '2018', order: 'shuffle' }, 8);
+  assert(sh1.length === 7 && sh2.length === 7 && !same(sh1, sh2) && same(sh1.slice().sort(), sh2.slice().sort()),
+    'shuffle reorders the same tracks; a different seed deals differently');
+  assert(same(sh1, titles({ medium: 'game', yearFrom: '2018', order: 'shuffle' }, 7)), 'the same seed deals the same order: a re-export is stable');
+  assert(same(rc.w.eval(`JSON.stringify(recipeLoadIds(${rules({ order: 'newest', limit: 3 })}, 1))`), JSON.stringify(['g-alpha', 'film-delta', 'g-beta', 'tv-eps']))
+    , 'a card or export reads only the albums that can make the cut, plus a small margin');
+
+  // live re-evaluation: a new rating changes what a recipe produces
+  const LIB4 = { source: 'library', rating: '4' };
+  assert(pool(LIB4) === '5/2', 'before: two albums rated 4+');
+  rc.w.eval(`editEntry('g-beta', e => { e.rating = 4; })`);
+  assert(pool(LIB4) === '7/3' && same(await build(Object.assign({ order: 'newest', pick: 'top', topN: 1 }, LIB4)), ['A2', 'D1', 'B1']),
+    'after: rating a third album adds it to the recipe without a save');
+  rc.w.eval(`editEntry('g-beta', e => { e.rating = 3; })`);
+
+  // names: generated from the rules, editable
+  const autoName = (o) => rc.w.eval(`recipeAutoName(${rules(o)})`);
+  assert(autoName({ rating: '4', medium: 'film', pick: 'top', topN: 2 }) === '4★+ film scores, top 2 each', 'the default name describes the rules');
+  assert(autoName({ source: 'queue', medium: 'game', co: 'indie', console: true, genre: { game: 'Platform', screen: 'all' }, order: 'shuffle', pick: 'hearted' })
+    === 'indie console platform game soundtracks from the queue, ♥ tracks only, shuffled', 'every rule that is set reads out');
+  assert(autoName({ composer: 'Uematsu', yearFrom: '2010', yearTo: '2015', pick: 'top', topN: 1 }) === 'soundtracks by Uematsu 2010 to 2015, top track each'
+    && autoName({ yearFrom: '2020' }) === 'soundtracks since 2020' && autoName({ yearTo: '1999' }) === 'soundtracks up to 1999', 'composer and years read out');
+  assert(rc.w.eval(`recipeName(${rules({ name: 'My Faves', rating: '5' })})`) === 'My Faves', 'a typed name wins over the generated one');
+
+  // the sheet: rows, live count, genre sub-sheet, typed fields, save, edit, delete
+  rc.d.querySelector('#tabbar button[data-v="library"]').click();
+  rq('#libpl').click(); await sleep(120);
+  const rCards = () => [...rc.d.querySelectorAll('#list .plcard')].map(x => x.dataset.plc);
+  assert(same(rCards(), ['liked', 'queue', 'rated', 'random']) && rq('#rcpnew') !== null, 'four built-ins and a new-recipe button, no recipes yet');
+  rq('#rcpnew').click();
+  const rSheet = () => rc.d.querySelector('#sheetwrap #sheet');
+  const rCount = () => rq('#rcount').textContent;
+  const tapRule = async (field, v) => { rq(`#sheetwrap [data-rc="${field}"][data-v="${v}"]`).click(); await sleep(10); };
+  const typeIn = async (id, v) => { const el = rq('#sheetwrap #' + id); el.value = v; el.dispatchEvent(new rc.w.Event('input', { bubbles: true })); await sleep(10); };
+  assert(rSheet() !== null && rSheet().classList.contains('tall') && rq('#sheetwrap select') === null, 'the recipe sheet is the tall control sheet, no native select');
+  assert(rCount() === '47 tracks from 41 albums' && rq('#rc-name').placeholder === 'soundtracks', 'a live count and the generated name greet a new recipe');
+  assert(rq('#sheetwrap [data-rc="medium"]') !== null && rq('#sheetwrap #rc-genre') === null && rq('#sheetwrap [data-rc="co"]') === null,
+    'under all mediums the sheet shows no genre, scope, or console rows');
+  await tapRule('source', 'library');
+  assert(rCount() === '7 tracks from 3 albums' && rq('#rc-name').placeholder === 'soundtracks from the library', 'the count and the name follow the source');
+  await tapRule('rating', '4');
+  assert(rCount() === '5 tracks from 2 albums', 'the count follows the rating');
+  assert(rq('#sheetwrap [data-rc="topN"]') === null, 'the per-album N hides until top n is picked');
+  await tapRule('pick', 'top');
+  assert(rq('#sheetwrap [data-rc="topN"][data-v="3"]').classList.contains('on'), 'top n starts at 3');
+  await tapRule('topN', '2');
+  assert(rCount() === '4 tracks from 2 albums' && rq('#rc-name').placeholder === '4★+ soundtracks from the library, top 2 each',
+    'top 2 per album counts two from each');
+  await tapRule('medium', 'game');
+  assert(rCount() === '2 tracks from 1 album' && rq('#sheetwrap #rc-genre') !== null && rq('#sheetwrap [data-rc="co"][data-v="big"]') !== null
+    && rq('#sheetwrap [data-rct="console"]') !== null, 'picking games reveals genre, scope, and console');
+  rq('#sheetwrap #rc-genre').click(); await sleep(10);
+  assert(rq('#sheetwrap [data-shrg="Role-playing (RPG)"]') !== null && rq('#sheetwrap #rc-genre') === null, 'the genre row opens its own list');
+  rq('#sheetwrap [data-shrg="Role-playing (RPG)"]').click(); await sleep(10);
+  assert(rq('#sheetwrap #rc-genre .shl').textContent === 'role-playing (rpg)' && rCount() === '2 tracks from 1 album',
+    'a genre pick returns to the recipe with the pick shown');
+  await tapRule('limit', '20');
+  assert(rq('#sheetwrap [data-rc="limit"][data-v="20"]').classList.contains('on'), 'limit segments select');
+  await typeIn('rc-composer', 'zimmer');
+  assert(rCount() === '0 tracks from 0 albums' && rq('#sheetwrap #rc-composer').value === 'zimmer',
+    'typing a composer updates the count in place, the field keeps its text');
+  await typeIn('rc-composer', '');
+  await typeIn('rc-from', '2025');
+  assert(rCount() === '0 tracks from 0 albums', 'a from-year past every album empties the count');
+  await typeIn('rc-from', '20');
+  assert(rCount() === '2 tracks from 1 album', 'a partial year is not a bound yet');
+  await typeIn('rc-from', '');
+  await typeIn('rc-name', 'My Faves');
+  rq('#sheetwrap #rc-save').click(); await sleep(120);
+  assert(rSheet() === null && rStored().recipes.length === 1, 'save closes the sheet and stores the recipe');
+  const saved = rStored().recipes[0];
+  assert(saved.name === 'My Faves' && saved.source === 'library' && saved.rating === '4' && saved.pick === 'top' && saved.topN === 2
+    && saved.medium === 'game' && saved.genre.game === 'Role-playing (RPG)' && saved.limit === 20 && saved.composer === '' && saved.yearFrom === '',
+    'the stored recipe carries every rule as set');
+  const rKey = 'r:' + saved.id;
+  const rCard = () => rc.d.querySelector(`#list .plcard[data-plc="${rKey}"]`);
+  assert(same(rCards(), ['liked', 'queue', 'rated', 'random', rKey]) && rCard().getAttribute('aria-expanded') === 'true',
+    'the new recipe lands after the built-ins, opened');
+  assert(rCard().querySelector('.plname').textContent === 'My Faves'
+    && rCard().querySelector('.plmeta').textContent === '2 tracks · 4★+ role-playing (rpg) game soundtracks from the library, top 2 each',
+    'a renamed recipe keeps its rules readable on the card');
+  assert(same([...rCard().querySelectorAll('.pltrack .t')].map(x => x.textContent), ['A2', 'A3']), 'the open card previews the tracks');
+  assert(rCard().querySelector('[data-plx]').disabled === false && rCard().querySelector('[data-rcpedit]') !== null
+    && rCard().querySelector('[data-rcpdel]') !== null, 'export, edit, and delete are offered');
+  rCard().querySelector('[data-rcpedit]').click(); await sleep(10);
+  assert(rSheet() !== null && rq('#rc-name').value === 'My Faves' && rq('#sheetwrap [data-rc="rating"][data-v="4"]').classList.contains('on'),
+    'edit reopens the sheet with the saved rules');
+  await tapRule('rating', 'any');
+  rq('#sheetwrap #rc-cancel').click(); await sleep(10);
+  assert(rSheet() === null && rStored().recipes[0].rating === '4', 'cancel keeps the saved recipe as it was');
+  rCard().querySelector('[data-rcpedit]').click(); await sleep(10);
+  await tapRule('rating', 'any');
+  rq('#sheetwrap #rc-save').click(); await sleep(20);
+  assert(rStored().recipes.length === 1 && rStored().recipes[0].rating === 'any' && rStored().recipes[0].id === saved.id,
+    'saving an edit replaces the recipe in place');
+  rq('#rcpnew').click(); await sleep(10);
+  rc.w.dispatchEvent(new rc.w.KeyboardEvent('keydown', { key: 'Escape' }));
+  assert(rSheet() === null && rStored().recipes.length === 1, 'escape discards a new draft');
+  rCard().querySelector('[data-rcpdel]').click(); await sleep(10);
+  assert(rCard().querySelector('[data-rcpdel]').textContent === 'SURE? TAP AGAIN' && rStored().recipes.length === 1, 'delete arms on the first tap');
+  rCard().querySelector('[data-rcpdel]').click(); await sleep(10);
+  assert(rCard() === null && same(rStored().recipes, []), 'the second tap deletes the recipe');
+  assert(rc.errors.length === 0, 'the sheet flow stays clean');
+
+  // export: a recipe's JSON has exactly a built-in's shape; an empty recipe can neither export nor publish
+  rc.w.eval(`S.recipes.push(Object.assign(recipeBlank(), { id: 'rx-hearts', medium: 'game', hearted: true, pick: 'hearted' }),
+                            Object.assign(recipeBlank(), { id: 'rx-empty', composer: 'nobody' })); save(); renderAll();`);
+  await rc.w.eval(`plLoad('liked')`); await rc.w.eval(`plLoad('r:rx-hearts')`);
+  const heartsOut = JSON.parse(rc.w.eval(`JSON.stringify(plExportObj('r:rx-hearts'))`));
+  const likedOut = JSON.parse(rc.w.eval(`JSON.stringify(plExportObj('liked'))`));
+  assert(same(Object.keys(heartsOut), ['app', 'name', 'tracks']) && heartsOut.app === 'scorekeep-playlist'
+    && heartsOut.name === 'Scorekeep · ♥ game soundtracks, ♥ tracks only', 'a recipe export carries the app label and the prefixed name');
+  assert(same(heartsOut.tracks[0], likedOut.tracks[0]) && same(heartsOut.tracks[0],
+    { game: 'Alpha Quest', title: 'A2', videoId: 'vidA2', ytmPlaylistId: 'OLAK5uy_alpha', searchQuery: 'Alpha Quest A2' }),
+    'a recipe track is byte-identical to the same track from a built-in');
+  const emptyCard = () => rc.d.querySelector('#list .plcard[data-plc="r:rx-empty"]');
+  assert(emptyCard().querySelector('.plmeta').textContent.startsWith('0 tracks'), 'an empty recipe shows as empty');
+  emptyCard().click(); await sleep(20);
+  assert(emptyCard().querySelector('[data-plx]').disabled === true && emptyCard().textContent.includes('nothing matches these rules yet'),
+    'an empty recipe cannot export');
+  rc.w.localStorage.setItem('vgm-pub-token', 'github_pat_RC'); rc.w.eval('renderList()');
+  assert(emptyCard().querySelector('[data-plp]').disabled === true, 'an empty recipe cannot publish');
+  const rcCalls = [];
+  const rcRealFetch = rc.w.fetch;
+  rc.w.fetch = async (url, opts) => { rcCalls.push(String(url)); return rcRealFetch(url, opts); };
+  await rc.w.eval(`publishPlaylist('r:rx-empty')`); await rc.w.eval(`exportPlaylist('r:rx-empty')`);
+  assert(!rcCalls.some(u => u.includes('github')) && rc.errors.length === 0, 'forcing an empty publish sends nothing');
+  rc.w.fetch = rcRealFetch;
+  rc.w.localStorage.removeItem('vgm-pub-token');
+
+  // backups: recipes ride along, old backups import without them, junk is sanitized
+  const rcDump = JSON.parse(rc.w.eval(`JSON.stringify(buildExport())`));
+  assert(rcDump.state.recipes.length === 2 && rcDump.state.recipes[0].id === 'rx-hearts', 'a backup carries the recipes');
+  assert(rc.w.eval(`applyImport('{"v":3,"entries":{}}')`) === true && same(rStored().recipes, []), 'an older backup without recipes imports clean');
+  assert(rc.w.eval(`applyImport(${JSON.stringify(JSON.stringify(rcDump))})`) === true && rStored().recipes.length === 2
+    && rStored().recipes[0].hearted === true && rStored().recipes[0].pick === 'hearted', 'export then import round-trips the recipes');
+  assert(rc.w.eval(`applyImport('{"v":3,"entries":{},"recipes":[{"id":"ok","limit":999,"topN":9,"order":"bogus","rating":"4","name":"  Kept  "},{"id":"ok"},{"name":"no id"},"junk",{"id":"g","genre":"Platform","medium":"game","yearFrom":"20x0"}]}')`) === true
+    && same(rStored().recipes.map(r => [r.id, r.limit, r.topN, r.order, r.rating, r.name, r.genre.game, r.yearFrom]),
+            [['ok', 50, 3, 'plays', '4', 'Kept', 'all', ''], ['g', 50, 3, 'plays', 'any', '', 'Platform', '']]),
+    'import sanitizes recipes: bad values fall to defaults, dupes and idless entries drop');
+  rc.w.eval(`applyImport(${JSON.stringify(JSON.stringify(rcDump))})`);
+
+  // the random mix: one top track per album, the feed's medium and hidden state, reseeded per reshuffle, replaced on publish
+  rc.w.eval(`RSEED.random = 1`); await rc.w.eval(`plLoad('random')`);
+  const mix1 = JSON.parse(rc.w.eval(`JSON.stringify(plExportObj('random'))`));
+  assert(same(Object.keys(mix1), ['app', 'name', 'replace', 'tracks']) && mix1.replace === true && mix1.name === 'Scorekeep · Random Mix',
+    'the random mix export asks the companion to replace, and is otherwise a built-in export');
+  assert(mix1.tracks.length === 30 && new Set(mix1.tracks.map(t => t.game)).size === 30, '30 tracks from 30 different albums');
+  assert(mix1.tracks.every(t => TOP_OF[t.game] === t.title) && !mix1.tracks.some(t => t.game === 'Hidden Gem' || t.game === 'Empty'),
+    'each album sends its most-played track; hidden and empty albums never appear');
+  rc.w.eval(`RSEED.random = 2`); await rc.w.eval(`plLoad('random')`);
+  const mix2 = JSON.parse(rc.w.eval(`JSON.stringify(plExportObj('random'))`));
+  const gamesOf = m => m.tracks.map(t => t.game);
+  assert(mix2.tracks.length === 30 && !same(gamesOf(mix1), gamesOf(mix2)) && !same(gamesOf(mix1).slice().sort(), gamesOf(mix2).slice().sort()),
+    'a reshuffle changes both the order and the selection');
+  rc.w.eval(`setFeedMedium('screen')`); await rc.w.eval(`plLoad('random')`);
+  const mixS = JSON.parse(rc.w.eval(`JSON.stringify(plExportObj('random'))`));
+  assert(same(gamesOf(mixS).sort(), ['Delta Falls', 'Epsilon']), 'the mix follows the feed medium: film + tv gives the two screen albums');
+  rc.w.eval(`setFeedMedium('game')`); await rc.w.eval(`plLoad('random')`);
+  const mixG = JSON.parse(rc.w.eval(`JSON.stringify(plExportObj('random'))`));
+  assert(mixG.tracks.length === 30 && !gamesOf(mixG).some(g => g === 'Delta Falls' || g === 'Epsilon'), 'games only keeps screen albums out');
+  rc.w.eval(`setFeedMedium('all')`);
+  for (const seed of [3, 4, 5, 6]) {
+    rc.w.eval(`RSEED.random = ${seed}`); await rc.w.eval(`plLoad('random')`);
+    if (JSON.parse(rc.w.eval(`JSON.stringify(plExportObj('random'))`)).tracks.some(t => t.game === 'Hidden Gem')) assert(false, 'a hidden album leaked into the mix');
+  }
+  rc.d.querySelector('#tabbar button[data-v="library"]').click();
+  if (rStored().libView !== 'playlists') rq('#libpl').click();
+  await sleep(120);
+  const mixCard = () => rc.d.querySelector('#list .plcard[data-plc="random"]');
+  assert(mixCard().querySelector('.plname').textContent === 'Scorekeep · Random Mix' && mixCard().querySelector('.plmeta').textContent.startsWith('30 tracks'),
+    'the random mix card is the fourth built-in');
+  mixCard().click(); await sleep(120);
+  assert(mixCard().querySelector('#reshuffle') !== null && mixCard().querySelectorAll('.pltrack').length === 30, 'the open card offers reshuffle and previews 30 tracks');
+  const before = rc.w.eval('RSEED.random');
+  const realRandom = rc.w.Math.random;
+  rc.w.Math.random = () => 0.25;
+  mixCard().querySelector('#reshuffle').click(); await sleep(120);
+  rc.w.Math.random = realRandom;
+  assert(rc.w.eval('RSEED.random') !== before && rc.w.eval('RSEED.random') === Math.floor(0.25 * 0x7fffffff)
+    && mixCard().querySelectorAll('.pltrack').length === 30, 'reshuffle reseeds the mix and redraws the card');
+  assert(rc.errors.length === 0, 'the random mix stays clean');
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

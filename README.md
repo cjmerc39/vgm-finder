@@ -63,12 +63,24 @@ it logs "backfill complete".
 
 Track likes (the ♥ on any track row) and the Library's Playlists cards
 compose playlists from your own state — liked songs, queued albums'
-tracklists, a 4★ mix, each with year/genre variants. Custom playlists sit
-above the recipes: **+ new playlist** names one and drops you on the feed,
-and the **+** on any track row saves to it YT Music-style — the first save
-opens a picker, then that playlist stays the target for ten minutes of
-adds ("saved to X · change" to override). Custom lists ride in backups and
-publish/export exactly like the recipes. The app exports each
+tracklists, a 4★ mix, each with year/genre variants, and a **random mix**:
+the most-played track from each of 30 albums drawn from the feed's current
+medium (hidden albums excluded), reshuffled on every tap. Custom playlists
+sit above the recipes: **+ new playlist** names one and drops you on the
+feed, and the **+** on any track row saves to it YT Music-style — the
+first save opens a picker, then that playlist stays the target for ten
+minutes of adds ("saved to X · change" to override).
+
+**+ new recipe** builds a playlist from rules instead of picks: source
+(catalog, library, queue), medium, genre, a year range, a composer, a
+rating floor, hearted albums only, scope and console for games, then how
+many tracks per album (all, the top N by plays, or ♥ tracks only), a cap
+(20 to 200) and an order (most played, album, newest, shuffle). The sheet
+counts "N tracks from M albums" live as you change rules, the name
+defaults to a description of them ("4★+ film scores, top 2 each") and can
+be typed over, and a saved recipe re-evaluates every time: rate something
+new and it is in. Recipes and custom lists ride in backups and
+publish/export exactly like the built-ins. The app exports each
 one as `playlist-<name>.json`; a local companion publishes it, because
 playlist creation needs an authenticated YTM session and credentials never
 belong in a static page:
@@ -85,9 +97,12 @@ description and get topped up, never duplicated; a same-named playlist
 without the marker is reported and left alone. Playlists published before
 the rename carry `vgm-finder · ` names and the old `# vgm-finder` marker:
 both are still recognized, and such a playlist is topped up and renamed to
-the `Scorekeep · ` prefix on its next publish. Tracks without a videoId
-are search-resolved with the collector's strict matcher — anything it
-can't confidently place is listed instead of guessed.
+the `Scorekeep · ` prefix on its next publish. The random mix is the one
+exception to topping up: its export carries `"replace": true`, so a
+re-publish makes the playlist match the new draw instead of piling 30 more
+tracks on. Tracks without a videoId are search-resolved with the
+collector's strict matcher — anything it can't confidently place is listed
+instead of guessed.
 
 ### Phone publish (one tap, no PC)
 

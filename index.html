@@ -194,7 +194,7 @@ a.xsrc{text-decoration:none}
 .tadd{flex:none;width:34px;height:36px;font-size:17px;color:var(--dim);display:grid;place-items:center;border-radius:8px}
 .tadd:active{color:var(--amber)}
 #cplhead,#cplhead2{font-family:var(--disp);font-size:10px;letter-spacing:2px;color:var(--dim);padding:14px 4px 2px}
-#cplnew{display:block;width:100%;text-align:center;color:var(--amber);font-size:11px;letter-spacing:1.6px;
+#cplnew,#rcpnew{display:block;width:100%;text-align:center;color:var(--amber);font-size:11px;letter-spacing:1.6px;
   text-transform:uppercase;border:1px dashed var(--amberdim);border-radius:12px;padding:12px;margin:10px 0}
 .pltrack .cprm{flex:none;margin-left:auto;width:32px;height:30px;color:var(--dim);font-size:12px}
 .cprow{display:flex;width:100%;align-items:center;gap:10px;padding:13px 4px;border-bottom:1px solid var(--line);
@@ -253,6 +253,14 @@ a.xsrc{text-decoration:none}
 .shfoot button{color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
   border:1px solid var(--amberdim);border-radius:9px;padding:9px 15px}
 #subctl .fchip{flex-shrink:1000}  /* the label chip gives way first; sort and year stay whole */
+
+/* the recipe sheet: full height, a live count on top, typed fields between the segments */
+#sheet.ctrl.tall{max-height:calc(100vh - 48px)}
+@supports (height:100dvh){#sheet.ctrl.tall{max-height:calc(100dvh - 48px)}}
+.rcount{font-family:var(--disp);font-size:10.5px;letter-spacing:1px;color:var(--amber);padding:2px 0 10px}
+#sheet.ctrl .shbody input{margin:2px 0}
+.shyears{display:flex;gap:10px;align-items:center;color:var(--dim);font-size:12px}
+.shyears input{flex:1;min-width:0;text-align:center}
 </style>
 </head>
 <body>
@@ -283,6 +291,40 @@ const LIB_SORTS = ['listenedOn', 'rating', 'date'];
 const LIB_VIEWS = ['albums', 'songs', 'playlists'];
 const FEED_SORTS = ['date', 'oldest', 'az', 'added', 'plays'];
 const MEDIUMS = ['all', 'game', 'screen', 'film', 'tv'];  // screen = film + tv together
+/* saved recipes: rules, never tracks. A recipe is re-evaluated on every
+   render, so a fresh rating or heart changes what it produces. */
+const RECIPE_SOURCES = ['catalog', 'library', 'queue'];   // library = anything rated or logged
+const RECIPE_RATINGS = ['any', '3', '4', '5'];            // any | 3★+ | 4★+ | 5★
+const RECIPE_PICKS = ['all', 'top', 'hearted'];           // every track | top N by plays | ♥ tracks
+const RECIPE_ORDERS = ['plays', 'album', 'newest', 'shuffle'];
+const RECIPE_LIMITS = [20, 50, 100, 200];
+const RECIPE_MAX = 200;
+function recipeBlank(){
+  return { id: '', name: '', source: 'catalog', medium: 'all', genre: { game: 'all', screen: 'all' },
+           yearFrom: '', yearTo: '', composer: '', rating: 'any', hearted: false, co: 'all', console: false,
+           pick: 'all', topN: 3, limit: 50, order: 'plays' };
+}
+function validRecipe(x, ids){
+  if(!x || typeof x !== 'object' || typeof x.id !== 'string' || !x.id || ids.has(x.id)) return null;
+  const b = recipeBlank();
+  b.id = x.id;
+  b.name = typeof x.name === 'string' ? x.name.trim().slice(0, 80) : '';  // blank = the generated name
+  b.source = RECIPE_SOURCES.includes(x.source) ? x.source : 'catalog';
+  b.medium = MEDIUMS.includes(x.medium) ? x.medium : 'all';
+  b.genre = genreState(x.genre);
+  b.yearFrom = typeof x.yearFrom === 'string' && /^\d{4}$/.test(x.yearFrom) ? x.yearFrom : '';
+  b.yearTo = typeof x.yearTo === 'string' && /^\d{4}$/.test(x.yearTo) ? x.yearTo : '';
+  b.composer = typeof x.composer === 'string' ? x.composer.trim().slice(0, 80) : '';
+  b.rating = RECIPE_RATINGS.includes(x.rating) ? x.rating : 'any';
+  b.hearted = x.hearted === true;
+  b.co = ['all', 'big', 'indie'].includes(x.co) ? x.co : 'all';
+  b.console = x.console === true;
+  b.pick = RECIPE_PICKS.includes(x.pick) ? x.pick : 'all';
+  b.topN = Number.isInteger(x.topN) && x.topN >= 1 && x.topN <= 5 ? x.topN : 3;
+  b.limit = Number.isInteger(x.limit) && x.limit >= 1 && x.limit <= RECIPE_MAX ? x.limit : 50;
+  b.order = RECIPE_ORDERS.includes(x.order) ? x.order : 'plays';
+  return b;
+}
 let R = { updatedAt: null, releases: [] };   // shared data from the collector; never written here
 let LOADSTATE = 'loading';                    // loading | ok | empty | error
 let LOADERR = '';
@@ -290,10 +332,12 @@ let TRACKNO = {};                             // id -> position in the append-on
 let Q = '';                                   // search text, deliberately not persisted
 let SHEET = null;                             // {id, draft} while the logging sheet is open
 let CPICK = null;                             // {rid, t, from?} save-to-playlist picker, or {create:true} from the library
-let CSHEET = null;                            // which control sheet is open: feedsort | filters | year | libsort | plyear | plgenre
+let CSHEET = null;                            // which control sheet is open: feedsort | filters | year | libsort | plyear | plgenre | recipe | rgenre
+let RDRAFT = null;                            // {id|null, rec} while the recipe sheet is open; id set = editing
+let RSEED = {};                               // playlist key -> shuffle seed for this session; reshuffle replaces it
 let TOAST = null;                             // {msg, song?} transient snackbar
 let TOAST_TIMER = 0;
-let CPLDEL = null;                            // playlist id armed for delete (two-tap, no native confirm)
+let CPLDEL = null;                            // playlist key armed for delete (two-tap, no native confirm)
 let IMPMSG = '';                              // one-shot import feedback line
 let EXPANDED = null;                          // id of the row opened into its detail panel
 let ALBUM = null;                             // id of the row opened into the full album page
@@ -340,7 +384,7 @@ function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.tes
    diary entry. Bumping would make a briefly-cached v3 page reject this
    state and overwrite it with a blank one, which costs the queue, the
    library, and every custom playlist. */
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[] }; }
 function genreState(v, hint){
   // hint routes a legacy single value into the bucket it actually came
   // from: the old feed sheet scoped its list by medium, the old playlists
@@ -431,6 +475,13 @@ function validateState(d){
   if(d.cplLast && typeof d.cplLast === 'object' && typeof d.cplLast.id === 'string'
      && typeof d.cplLast.at === 'number' && s.cpls.some(p => p.id === d.cplLast.id))
     s.cplLast = { id: d.cplLast.id, at: d.cplLast.at };
+  if(Array.isArray(d.recipes)){  // absent in older backups: they import with none, nothing else changes
+    const ids = new Set();
+    for(const x of d.recipes){
+      const rc = validRecipe(x, ids);
+      if(rc){ ids.add(rc.id); s.recipes.push(rc); }
+    }
+  }
   return s;
 }
 
@@ -624,7 +675,8 @@ function playlistRefIds(){
 function ensureViewTracks(){
   if(S.view !== 'library') return Promise.resolve();
   if(S.libView === 'songs') return loadTracks(likedIds());
-  if(S.libView === 'playlists') return loadTracks(playlistRefIds());
+  if(S.libView === 'playlists')  // the built-ins' albums plus the random mix's 30
+    return loadTracks(playlistRefIds().concat(recipeLoadIds(randomMixRecipe(), seedFor('random'))));
   return Promise.resolve();
 }
 function label(r){ return r.albumTitle || r.title; }
@@ -743,15 +795,207 @@ function plRated(){
   }
   return out;
 }
+/* ------------------------- recipe engine ----------------------------- */
+/* filter albums, pick tracks per album, order, cap: always in that order.
+   Counts come from row metadata (tracksN, hearts), so the sheet never has
+   to fetch a tracklist; only the albums that can make the cut are loaded,
+   and only when a card opens or an export runs. */
+const RECIPE_PLAYS_ALBUMS = 150;   // most played over a huge pool reads this many albums, by playsTotal
+function seedFor(key){
+  if(RSEED[key] == null) RSEED[key] = Math.floor(Math.random() * 0x7fffffff);
+  return RSEED[key];
+}
+function reseed(key){ RSEED[key] = Math.floor(Math.random() * 0x7fffffff); }
+function seededRng(seed){
+  // mulberry32: tiny, deterministic, plenty to deal a playlist
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6D2B79F5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function seededShuffle(list, seed){
+  const out = list.slice(), rnd = seededRng(seed);
+  for(let i = out.length - 1; i > 0; i--){
+    const j = Math.floor(rnd() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+function recipeById(id){ return S.recipes.find(p => p.id === id) || null; }
+function recipeMedium(rec){ return multiMedium() ? rec.medium : 'game'; }  // a games-only catalog behaves as games
+function recipeGenre(rec){
+  // the genre pick applies inside its medium, like the filters sheet; under all it is inert
+  const m = recipeMedium(rec);
+  if(m === 'game') return rec.genre.game !== 'all' ? rec.genre.game : '';
+  if(screenish(m)) return rec.genre.screen !== 'all' ? rec.genre.screen : '';
+  return '';
+}
+function recipeSourceRows(rec){
+  if(rec.source === 'queue') return queueRows();
+  if(rec.source === 'library') return sorted().filter(r => {
+    const e = S.entries[r.id];
+    return !!e && e.status !== 'hidden' && (e.status === 'listened' || e.rating != null || !!e.listenedOn);
+  });
+  return sorted().filter(r => !r.retired && E(r.id).status !== 'hidden');
+}
+function recipeAlbums(rec){
+  let rows = recipeSourceRows(rec);
+  const m = recipeMedium(rec);
+  if(m !== 'all') rows = rows.filter(r => mediumMatches(m, r));
+  const g = recipeGenre(rec);
+  if(g) rows = rows.filter(r => (r.genres || []).includes(g));
+  if(m === 'game'){  // scope and console live and die with the games medium, as in the feed
+    if(rec.co !== 'all') rows = rows.filter(r => coTier(r) === rec.co);
+    if(rec.console) rows = rows.filter(r => r.console === true);
+  }
+  if(rec.yearFrom || rec.yearTo) rows = rows.filter(r => {
+    const y = (r.date || '').slice(0, 4);
+    return /^\d{4}$/.test(y) && (!rec.yearFrom || y >= rec.yearFrom) && (!rec.yearTo || y <= rec.yearTo);
+  });
+  const comp = fold(rec.composer.trim());
+  if(comp) rows = rows.filter(r => fold((r.composers || []).join(' ')).includes(comp));
+  if(rec.rating !== 'any'){
+    const min = +rec.rating;
+    rows = rows.filter(r => { const e = S.entries[r.id]; return !!e && e.rating != null && e.rating >= min; });
+  }
+  if(rec.hearted) rows = rows.filter(r => (E(r.id).likedTracks || []).length > 0);
+  return rows;
+}
+function availTracks(r){
+  // how many tracks an album can offer: what is loaded, else what the row promises
+  const tt = tracksOf(r);
+  if(tt && tt.length) return tt.length;
+  return (r.tracksN || 0) > 0 ? r.tracksN : (r.topTracks || []).length;
+}
+function recipeAlbumCount(rec, r){
+  if(rec.pick === 'hearted') return (E(r.id).likedTracks || []).length;
+  const n = availTracks(r);
+  return rec.pick === 'top' ? Math.min(rec.topN, n) : n;
+}
+function recipeAlbumTracks(rec, r){
+  if(rec.pick === 'hearted'){
+    // rematch by folded title so refetched tracklists keep their videoIds
+    const tt = tracksOf(r) || [];
+    return (E(r.id).likedTracks || []).map(title => tt.find(x => fold(x.title) === fold(title)) || { title });
+  }
+  const tt = tracksOf(r) || r.topTracks || [];   // a missing tracklist falls back to the row's top tracks
+  return rec.pick === 'top' ? topNOf(tt, rec.topN) : tt;
+}
+function recipeOrdered(rec, rows, seed){
+  const out = rows.slice();
+  if(rec.order === 'shuffle') return seededShuffle(out, seed);
+  if(rec.order === 'newest') out.sort((a, b) => dcmp(b.date, a.date) || TRACKNO[b.id] - TRACKNO[a.id]);
+  else if(rec.order === 'album') out.sort((a, b) => label(a).toLowerCase().localeCompare(label(b).toLowerCase()) || TRACKNO[a.id] - TRACKNO[b.id]);
+  else out.sort((a, b) => ((b.playsTotal ?? -1) - (a.playsTotal ?? -1)) || (TRACKNO[b.id] - TRACKNO[a.id]));  // plays: albums by playsTotal decide what gets read
+  return out;
+}
+function recipeStats(rec){
+  let tracks = 0, albums = 0;
+  for(const r of recipeAlbums(rec)){
+    const n = recipeAlbumCount(rec, r);
+    if(n > 0){ tracks += n; albums++; }
+  }
+  return { tracks, albums, expected: Math.min(tracks, rec.limit), capped: tracks > rec.limit };
+}
+function recipeCountLine(st, rec){
+  return `${st.tracks} track${st.tracks === 1 ? '' : 's'} from ${st.albums} album${st.albums === 1 ? '' : 's'}` +
+    (st.capped ? ` · capped at ${rec.limit}` : '');
+}
+function recipeLoadIds(rec, seed){
+  // the albums whose tracklists the output can touch: walked in the recipe's
+  // order until the cap is met (plus a small margin), or the most-played
+  // albums when plays decide across the whole pool
+  const rows = recipeOrdered(rec, recipeAlbums(rec), seed);
+  const ids = [];
+  if(rec.order === 'plays'){
+    for(const r of rows){
+      if(ids.length >= RECIPE_PLAYS_ALBUMS) break;
+      if(recipeAlbumCount(rec, r) > 0) ids.push(r.id);
+    }
+    return ids;
+  }
+  let n = 0, extra = 0;
+  for(const r of rows){
+    const c = recipeAlbumCount(rec, r);
+    if(!c) continue;
+    if(n >= rec.limit && extra++ >= 3) break;
+    ids.push(r.id); n += c;
+  }
+  return ids;
+}
+function recipeLoad(rec, seed){ return loadTracks(recipeLoadIds(rec, seed)); }
+function recipeBuild(rec, seed){
+  const rows = recipeOrdered(rec, recipeAlbums(rec), seed);
+  let picked = [];
+  if(rec.order === 'plays'){
+    for(const r of rows) for(const t of recipeAlbumTracks(rec, r)) picked.push({ r, t, n: playsNum(t.plays) });
+    picked.sort((a, b) => (b.n ?? -1) - (a.n ?? -1));   // stable: ties keep album order
+  } else {
+    for(const r of rows){
+      if(picked.length >= rec.limit) break;
+      for(const t of recipeAlbumTracks(rec, r)) picked.push({ r, t });
+    }
+    if(rec.order === 'shuffle') picked = seededShuffle(picked, seed + 1);  // albums dealt, then the tracks
+  }
+  return picked.slice(0, rec.limit).map(x => plTrack(x.r, x.t));
+}
+function recipeName(rec){ return rec.name || recipeAutoName(rec); }
+function recipeAutoName(rec){
+  // a description of the rules, for example "4★+ film scores, top 2 each"
+  const m = recipeMedium(rec);
+  const bits = [];
+  if(rec.rating !== 'any') bits.push(rec.rating === '5' ? '5★' : rec.rating + '★+');
+  if(rec.hearted) bits.push('♥');
+  if(m === 'game'){
+    if(rec.co !== 'all') bits.push(rec.co === 'big' ? 'big studio' : 'indie');
+    if(rec.console) bits.push('console');
+  }
+  const g = recipeGenre(rec);
+  if(g) bits.push(g.toLowerCase());
+  bits.push({ all: 'soundtracks', game: 'game soundtracks', screen: 'film + tv scores', film: 'film scores', tv: 'tv scores' }[m]);
+  let s = bits.join(' ');
+  if(rec.composer.trim()) s += ' by ' + rec.composer.trim();
+  if(rec.yearFrom && rec.yearTo) s += rec.yearFrom === rec.yearTo ? ' from ' + rec.yearFrom : ' ' + rec.yearFrom + ' to ' + rec.yearTo;
+  else if(rec.yearFrom) s += ' since ' + rec.yearFrom;
+  else if(rec.yearTo) s += ' up to ' + rec.yearTo;
+  if(rec.source === 'library') s += ' from the library';
+  else if(rec.source === 'queue') s += ' from the queue';
+  if(rec.pick === 'top') s += rec.topN === 1 ? ', top track each' : ', top ' + rec.topN + ' each';
+  else if(rec.pick === 'hearted') s += ', ♥ tracks only';
+  if(rec.order === 'shuffle') s += ', shuffled';
+  return s.slice(0, 80);
+}
+function randomMixRecipe(){
+  // the fourth built-in: the feed's medium and hidden state, nothing else;
+  // one most-played track per album so no single game floods the mix
+  return Object.assign(recipeBlank(), { id: 'random', source: 'catalog', medium: feedMediumEff(),
+                                        pick: 'top', topN: 1, limit: 30, order: 'shuffle' });
+}
+function plLoad(key){
+  // what a card preview or an export needs in memory before it can be right
+  if(key === 'random') return recipeLoad(randomMixRecipe(), seedFor('random'));
+  if(key.slice(0, 2) === 'r:'){
+    const rc = recipeById(key.slice(2));
+    return rc ? recipeLoad(rc, seedFor(rc.id)) : Promise.resolve();
+  }
+  return loadTracks(playlistRefIds());
+}
 function playlistDefs(){
   const facet = [S.plYear !== 'all' ? S.plYear : '',
                  S.plGenre.game !== 'all' ? S.plGenre.game : '',
                  S.plGenre.screen !== 'all' ? S.plGenre.screen : ''].filter(Boolean).join(' ');
   const suff = facet ? ' — ' + facet : '';
+  const mix = randomMixRecipe();
   return [
     { key: 'liked', name: 'Scorekeep · Liked Songs' + suff, blurb: 'every ♥ track', tracks: plLiked() },
     { key: 'queue', name: 'Scorekeep · Queue' + suff, blurb: 'tracklists of queued albums', tracks: plQueue() },
     { key: 'rated', name: 'Scorekeep · 4★ Mix' + suff, blurb: 'top tracks of releases rated 4+', tracks: plRated() },
+    { key: 'random', name: 'Scorekeep · Random Mix', blurb: 'one top track per album, shuffled',
+      tracks: recipeBuild(mix, seedFor('random')), expected: recipeStats(mix).expected, replace: true },
   ];
 }
 function plExportObj(key){
@@ -759,12 +1003,20 @@ function plExportObj(key){
     const p = cplById(key.slice(2));
     return p ? { app: 'scorekeep-playlist', name: p.name, tracks: cplResolved(p) } : null;
   }
+  if(key.slice(0, 2) === 'r:'){
+    const rc = recipeById(key.slice(2));
+    return rc ? { app: 'scorekeep-playlist', name: 'Scorekeep · ' + recipeName(rc), tracks: recipeBuild(rc, seedFor(rc.id)) } : null;
+  }
   const p = playlistDefs().find(x => x.key === key);
-  return p ? { app: 'scorekeep-playlist', name: p.name, tracks: p.tracks } : null;
+  if(!p) return null;
+  const o = { app: 'scorekeep-playlist', name: p.name };
+  if(p.replace) o.replace = true;  // the random mix: a re-publish swaps the tracks instead of piling on
+  o.tracks = p.tracks;
+  return o;
 }
 function plSlug(name){ return fold(name).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'playlist'; }
 async function exportPlaylist(key){
-  await loadTracks(playlistRefIds());  // videoIds live in the track files now
+  await plLoad(key);  // videoIds live in the track files now
   const data = plExportObj(key);
   if(!data || !data.tracks.length) return;
   try{
@@ -835,6 +1087,61 @@ function cplResolved(p){
   }
   return out;
 }
+
+/* ======================= recipe sheet ========================= */
+/* the draft lives in RDRAFT until save; cancel drops it untouched */
+function recipeOpen(id){
+  const rc = id ? recipeById(id) : null;
+  RDRAFT = { id: rc ? rc.id : null, rec: rc ? JSON.parse(JSON.stringify(rc)) : recipeBlank() };
+  CSHEET = 'recipe'; renderSheet();
+}
+function recipeSet(field, v){
+  const rc = RDRAFT.rec;
+  if(field === 'source' && RECIPE_SOURCES.includes(v)) rc.source = v;
+  else if(field === 'medium' && MEDIUMS.includes(v)){
+    if(!(v === 'screen' && screenish(rc.medium))) rc.medium = v;  // the on film + tv segment keeps its sub-pick
+  }
+  else if(field === 'co' && ['all', 'big', 'indie'].includes(v)) rc.co = v;
+  else if(field === 'rating' && RECIPE_RATINGS.includes(v)) rc.rating = v;
+  else if(field === 'pick' && RECIPE_PICKS.includes(v)) rc.pick = v;
+  else if(field === 'topN' && +v >= 1 && +v <= 5) rc.topN = +v;
+  else if(field === 'limit' && RECIPE_LIMITS.includes(+v)) rc.limit = +v;
+  else if(field === 'order' && RECIPE_ORDERS.includes(v)) rc.order = v;
+  else if(field === 'hearted' || field === 'console') rc[field] = v === true;
+  else return;
+  renderSheet();
+}
+function recipeRefreshCount(){
+  // typed fields update the count and the suggested name in place; a
+  // re-render here would steal the caret mid-word
+  const rc = RDRAFT.rec;
+  const c = document.getElementById('rcount'); if(c) c.textContent = recipeCountLine(recipeStats(rc), rc);
+  const nm = document.getElementById('rc-name'); if(nm) nm.placeholder = recipeAutoName(rc);
+}
+function recipeSave(){
+  const rc = RDRAFT.rec;
+  rc.name = rc.name.trim().slice(0, 80);
+  if(RDRAFT.id){
+    rc.id = RDRAFT.id;
+    const i = S.recipes.findIndex(p => p.id === rc.id);
+    if(i >= 0) S.recipes[i] = rc; else S.recipes.push(rc);
+  } else {
+    rc.id = 'r' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    S.recipes.push(rc);
+  }
+  PLOPEN = 'r:' + rc.id;  // land on the card, preview loading
+  RDRAFT = null; CSHEET = null;
+  save();
+  plLoad(PLOPEN);
+  renderAll();
+}
+function recipeCancel(){ RDRAFT = null; CSHEET = null; renderSheet(); }
+function recipeDelete(id){
+  S.recipes = S.recipes.filter(p => p.id !== id);
+  if(PLOPEN === 'r:' + id) PLOPEN = null;
+  save(); renderList();
+}
+function reshuffleMix(){ reseed('random'); plLoad('random'); renderList(); }
 function toast(msg, song){
   TOAST = { msg, song };
   clearTimeout(TOAST_TIMER);
@@ -857,7 +1164,7 @@ function setPubToken(t){ try{ t ? localStorage.setItem(PUB_KEY, t) : localStorag
 async function publishPlaylist(key){
   const busy = PUBSTATE[key] === 'sending' || PUBSTATE[key] === 'watching';
   if(busy) return;
-  await loadTracks(playlistRefIds());  // videoIds live in the track files now
+  await plLoad(key);  // videoIds live in the track files now
   const tok = pubToken(), data = plExportObj(key);
   if(!tok || !data || !data.tracks.length) return;
   const body = JSON.stringify({ event_type: 'publish', client_payload: { playlist: data } });
@@ -921,13 +1228,24 @@ function playsNum(s){
   const n = parseFloat(m[1].replace(/,/g, ''));
   return isNaN(n) ? null : n * ({ K:1e3, M:1e6, B:1e9 }[(m[2] || '').toUpperCase()] || 1);
 }
+function playsRank(tt){
+  // track indexes by plays, most first; null when no play count is known
+  const scored = tt.map((t, i) => ({ i, n: playsNum(t.plays) }));
+  if(!scored.some(x => x.n != null)) return null;
+  scored.sort((a, b) => (b.n ?? -1) - (a.n ?? -1));
+  return scored.map(x => x.i);
+}
 function top3Of(r){
   const tt = tracksOf(r) || [];
-  const scored = tt.map((t, i) => ({ i, n: playsNum(t.plays) }));
-  if(!scored.some(x => x.n != null)) return { idx: new Set(), ranked: tt.slice(0, 3), byPlays: false };
-  scored.sort((a, b) => (b.n ?? -1) - (a.n ?? -1));
-  const top = scored.slice(0, 3);
-  return { idx: new Set(top.map(x => x.i)), ranked: top.map(x => tt[x.i]), byPlays: true };
+  const rank = playsRank(tt);
+  if(!rank) return { idx: new Set(), ranked: tt.slice(0, 3), byPlays: false };
+  const top = rank.slice(0, 3);
+  return { idx: new Set(top), ranked: top.map(i => tt[i]), byPlays: true };
+}
+function topNOf(tt, n){
+  // the same ranking for any N: by plays when known, else running order
+  const rank = playsRank(tt);
+  return rank ? rank.slice(0, n).map(i => tt[i]) : tt.slice(0, n);
 }
 function trackUrl(r, t){
   if(t.videoId) return 'https://music.youtube.com/watch?v=' + t.videoId +
@@ -1094,20 +1412,42 @@ function playlistsHtml(){
     </div>`;
   }).join('');
   const newBtn = `<button id="cplnew" class="plx">+ NEW PLAYLIST</button>`;
+  const busy = Object.keys(TPEND).length > 0;  // tracklists still arriving: an empty preview is not empty yet
+  const trackRows = tracks => tracks.map(t =>
+    `<div class="pltrack"><span class="g">${esc(t.game)}</span><span class="t">${esc(t.title)}</span></div>`).join('');
   const cards = playlistDefs().map(p => {
     const open = PLOPEN === p.key;
-    const n = p.tracks.length;
-    const preview = !open ? '' : `<div class="pltracks">` + (n
-      ? p.tracks.map(t => `<div class="pltrack"><span class="g">${esc(t.game)}</span><span class="t">${esc(t.title)}</span></div>`).join('')
-      : `<div class="pltrack"><span class="t">nothing here yet</span></div>`) + `</div>`;
+    const n = p.expected ?? p.tracks.length;  // the random mix counts from metadata, before its files land
+    const preview = !open ? '' : `<div class="pltracks">` + (p.tracks.length
+      ? trackRows(p.tracks)
+      : `<div class="pltrack"><span class="t">${busy && n ? 'loading tracklists…' : 'nothing here yet'}</span></div>`) + `</div>`;
     return `<div class="plcard" data-plc="${p.key}" role="button" tabindex="0" aria-expanded="${open}">
       <div class="plname">${esc(p.name)}</div>
       <div class="plmeta">${n} track${n === 1 ? '' : 's'} · ${esc(p.blurb)}</div>
       ${open ? pubBtnHtml(p.key, n, tok) : ''}
-      ${open ? `<button class="plx" data-plx="${p.key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button>` : ''}
+      ${open ? `<button class="plx" data-plx="${p.key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button> ` : ''}
+      ${open && p.key === 'random' ? `<button class="plx" id="reshuffle"${n ? '' : ' disabled'}>↻ RESHUFFLE</button>` : ''}
       ${preview}
     </div>`;
   }).join('');
+  const recipes = S.recipes.map(rc => {
+    const key = 'r:' + rc.id, open = PLOPEN === key;
+    const st = recipeStats(rc), n = st.expected;
+    const tracks = open ? recipeBuild(rc, seedFor(rc.id)) : [];
+    const preview = !open ? '' : `<div class="pltracks">` + (tracks.length
+      ? trackRows(tracks)
+      : `<div class="pltrack"><span class="t">${busy && n ? 'loading tracklists…' : 'nothing matches these rules yet'}</span></div>`) + `</div>`;
+    return `<div class="plcard" data-plc="${key}" role="button" tabindex="0" aria-expanded="${open}">
+      <div class="plname">${esc(recipeName(rc))}</div>
+      <div class="plmeta">${n} track${n === 1 ? '' : 's'} · ${esc(rc.name ? recipeAutoName(rc) : 'recipe')}</div>
+      ${open ? pubBtnHtml(key, n, tok) : ''}
+      ${open ? `<button class="plx" data-plx="${key}"${n ? '' : ' disabled'}>⇩ EXPORT JSON</button> ` : ''}
+      ${open ? `<button class="plx" data-rcpedit="${esc(rc.id)}">✎ EDIT</button> ` : ''}
+      ${open ? `<button class="plx" data-rcpdel="${esc(rc.id)}">${CPLDEL === key ? 'SURE? TAP AGAIN' : '✕ DELETE'}</button>` : ''}
+      ${preview}
+    </div>`;
+  }).join('');
+  const newRecipe = `<button id="rcpnew" class="plx">+ NEW RECIPE</button>`;
   const yours = `<div id="cplhead">YOUR PLAYLISTS</div>` + custom + newBtn +
     `<div id="cplhead2">RECIPES</div>`;
   const setup = tok
@@ -1118,7 +1458,7 @@ function playlistsHtml(){
        (the README’s “phone publish” section has the 2-minute setup):
        <span class="pubrow"><input id="pubtok" type="password" placeholder="github_pat_…" autocomplete="off">
        <button id="pubsave">connect</button></span>`;
-  return yours + cards + `<div class="plhint">${setup}
+  return yours + cards + recipes + newRecipe + `<div class="plhint">${setup}
     <br>PC fallback: ⇩ export the JSON, then <code>python companion/make_playlists.py playlist-*.json</code>.</div>`;
 }
 
@@ -1455,6 +1795,58 @@ function csheetHtml(){
     };
     body = group('game', 'Game genres', 'game') +
            (multiMedium() ? group('screen', 'Film + TV genres', 'screen') : '');
+  } else if(CSHEET === 'recipe'){
+    // every rule is a segment, a toggle row, or a typed field; the genre
+    // list gets its own sheet; the count at the top follows every change
+    label = RDRAFT.id ? 'Edit recipe' : 'New recipe';
+    const rc = RDRAFT.rec, m = recipeMedium(rc), st = recipeStats(rc);
+    const seg = (field, val, name, on) =>
+      `<button data-rc="${field}" data-v="${esc(String(val))}" class="${on ? 'on' : ''}">${name}</button>`;
+    const segs = (field, defs, cur) => `<div class="shseg">` +
+      defs.map(([v, name]) => seg(field, v, name, String(cur) === String(v))).join('') + `</div>`;
+    const toggle = (field, name, on) =>
+      `<button class="shrow" data-rct="${field}" aria-pressed="${on}"><span class="shl">${name}</span><span class="shr">${on ? '✓' : ''}</span></button>`;
+    const g = recipeGenre(rc);
+    body =
+      `<div class="rcount" id="rcount">${esc(recipeCountLine(st, rc))}</div>` +
+      `<input id="rc-name" placeholder="${esc(recipeAutoName(rc))}" value="${esc(rc.name)}" maxlength="80" autocomplete="off" aria-label="Recipe name">` +
+      `<div class="slab">Source</div>` + segs('source', [['catalog', 'catalog'], ['library', 'library'], ['queue', 'queue']], rc.source) +
+      (multiMedium()
+        ? `<div class="slab">Medium</div><div class="shseg">` +
+          seg('medium', 'all', 'all', m === 'all') +
+          seg('medium', 'game', 'games', m === 'game') +
+          seg('medium', 'screen', 'film + tv', screenish(m)) + `</div>` +
+          (screenish(m) ? segs('medium', [['screen', 'both'], ['film', 'film'], ['tv', 'tv']], m) : '')
+        : '') +
+      (m === 'game'
+        ? `<div class="slab">Scope</div>` + segs('co', [['all', 'all'], ['big', 'big studios'], ['indie', 'indie']], rc.co) +
+          toggle('console', 'console', rc.console)
+        : '') +
+      (m !== 'all'
+        ? `<div class="slab">Genre</div><button class="shrow" id="rc-genre">` +
+          `<span class="shl">${esc(g ? g.toLowerCase() : 'all')}</span><span class="shr">▸</span></button>`
+        : '') +
+      `<div class="slab">Years</div><div class="shyears">` +
+        `<input id="rc-from" inputmode="numeric" maxlength="4" placeholder="any" value="${esc(rc.yearFrom)}" autocomplete="off" aria-label="From year">` +
+        `<span>to</span>` +
+        `<input id="rc-to" inputmode="numeric" maxlength="4" placeholder="any" value="${esc(rc.yearTo)}" autocomplete="off" aria-label="To year"></div>` +
+      `<div class="slab">Composer</div>` +
+        `<input id="rc-composer" placeholder="any composer" maxlength="80" autocomplete="off" value="${esc(rc.composer)}" aria-label="Composer">` +
+      `<div class="slab">Rating</div>` + segs('rating', [['any', 'any'], ['3', '3★+'], ['4', '4★+'], ['5', '5★']], rc.rating) +
+      toggle('hearted', '♥ albums only', rc.hearted) +
+      `<div class="slab">Tracks per album</div>` + segs('pick', [['all', 'all'], ['top', 'top n'], ['hearted', '♥ only']], rc.pick) +
+      (rc.pick === 'top' ? segs('topN', [1, 2, 3, 4, 5].map(n => [n, String(n)]), rc.topN) : '') +
+      `<div class="slab">Limit</div>` + segs('limit', RECIPE_LIMITS.map(n => [n, String(n)]), rc.limit) +
+      `<div class="slab">Order</div>` +
+        segs('order', [['plays', 'most played'], ['album', 'album'], ['newest', 'newest'], ['shuffle', 'shuffle']], rc.order);
+    footer = `<div class="shfoot"><button id="rc-cancel">cancel</button><button id="rc-save">save</button></div>`;
+  } else if(CSHEET === 'rgenre'){
+    label = 'Genre';
+    const rc = RDRAFT.rec, m = recipeMedium(rc);
+    const sel = rc.genre[m === 'game' ? 'game' : 'screen'];
+    body = `<button class="shrow" id="shback"><span class="shl">‹ back to the recipe</span></button>` +
+      shPickRow('shrg', 'all', 'all', sel === 'all' ? '✓' : '') +
+      genreCounts(m, sel).map(([g, n]) => shPickRow('shrg', g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
   } else if(CSHEET === 'libfilters'){
     label = 'Filters';
     const seg = (attr, val, name, on) =>
@@ -1515,8 +1907,9 @@ function csheetHtml(){
     // mode all: the segment and the footer are the whole sheet
     footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
   }
+  const tall = CSHEET === 'recipe' || CSHEET === 'rgenre' ? ' tall' : '';  // the recipe sheet runs full height
   return `<div id="scrim"></div>` +
-    `<div id="sheet" class="ctrl" role="dialog" aria-modal="true" aria-label="${esc(label)}">` +
+    `<div id="sheet" class="ctrl${tall}" role="dialog" aria-modal="true" aria-label="${esc(label)}">` +
     `<div class="shbody">${body}</div>${footer}</div>`;
 }
 function renderSheet(){
@@ -1606,8 +1999,23 @@ document.getElementById('list').addEventListener('click', e => {
     return;
   }
   if(e.target.closest('#cplnew')){ CPICK = { create: true }; renderSheet(); return; }
+  if(e.target.closest('#rcpnew')){ recipeOpen(null); return; }
+  if(e.target.closest('#reshuffle')){ reshuffleMix(); return; }
+  const re = e.target.closest('[data-rcpedit]');
+  if(re){ recipeOpen(re.dataset.rcpedit); return; }
+  const rd = e.target.closest('[data-rcpdel]');
+  if(rd){
+    const key = 'r:' + rd.dataset.rcpdel;
+    if(CPLDEL === key){ CPLDEL = null; recipeDelete(rd.dataset.rcpdel); }
+    else { CPLDEL = key; renderList(); }
+    return;
+  }
   const pc = e.target.closest('[data-plc]');
-  if(pc){ PLOPEN = PLOPEN === pc.dataset.plc ? null : pc.dataset.plc; renderList(); return; }
+  if(pc){
+    PLOPEN = PLOPEN === pc.dataset.plc ? null : pc.dataset.plc;
+    if(PLOPEN) plLoad(PLOPEN);  // a recipe preview reads only the albums that can make its cut
+    renderList(); return;
+  }
   const btn = e.target.closest('[data-act]');
   const row = e.target.closest('.row');
   if(!row) return;
@@ -1687,6 +2095,23 @@ document.getElementById('qclear').addEventListener('click', () => {
 
 const sheetwrap = document.getElementById('sheetwrap');
 sheetwrap.addEventListener('click', e => {
+  if(CSHEET === 'rgenre'){
+    // a pick, the back row, or the scrim all return to the recipe sheet
+    const rg = e.target.closest('[data-shrg]');
+    if(rg) RDRAFT.rec.genre[recipeMedium(RDRAFT.rec) === 'game' ? 'game' : 'screen'] = rg.dataset.shrg;
+    if(rg || e.target.id === 'scrim' || e.target.closest('#shback')){ CSHEET = 'recipe'; renderSheet(); }
+    return;
+  }
+  if(CSHEET === 'recipe'){
+    if(e.target.id === 'scrim' || e.target.closest('#rc-cancel')){ recipeCancel(); return; }
+    if(e.target.closest('#rc-save')){ recipeSave(); return; }
+    if(e.target.closest('#rc-genre')){ CSHEET = 'rgenre'; renderSheet(); return; }
+    const sg = e.target.closest('[data-rc]');
+    if(sg){ recipeSet(sg.dataset.rc, sg.dataset.v); return; }
+    const tg = e.target.closest('[data-rct]');
+    if(tg) recipeSet(tg.dataset.rct, !RDRAFT.rec[tg.dataset.rct]);
+    return;
+  }
   if(CSHEET){
     if(e.target.id === 'scrim' || e.target.closest('#shdone')){ CSHEET = null; renderSheet(); return; }
     const fs = e.target.closest('[data-shsort]');
@@ -1766,6 +2191,17 @@ sheetwrap.addEventListener('click', e => {
   if(star){ SHEET.draft.rating = parseFloat(star.dataset.r); renderSheet(); }
 });
 sheetwrap.addEventListener('input', e => {
+  if(RDRAFT && CSHEET === 'recipe'){
+    const rc = RDRAFT.rec, id = e.target.id;
+    if(id === 'rc-name') rc.name = e.target.value.slice(0, 80);
+    else if(id === 'rc-composer') rc.composer = e.target.value.slice(0, 80);
+    else if(id === 'rc-from' || id === 'rc-to'){
+      const v = e.target.value.replace(/\D/g, '').slice(0, 4);
+      rc[id === 'rc-from' ? 'yearFrom' : 'yearTo'] = v.length === 4 ? v : '';  // a bound counts once it is a whole year
+    } else return;
+    recipeRefreshCount();
+    return;
+  }
   if(!SHEET) return;
   if(e.target.id === 'sh-note') SHEET.draft.note = e.target.value;
   if(e.target.id === 'sh-date') SHEET.draft.listenedOn = e.target.value;
@@ -1782,18 +2218,20 @@ document.getElementById('albumwrap').addEventListener('click', e => {
 });
 window.addEventListener('keydown', e => {
   if(e.key !== 'Escape') return;
-  if(CSHEET){ CSHEET = null; renderSheet(); }
+  if(CSHEET === 'rgenre'){ CSHEET = 'recipe'; renderSheet(); }
+  else if(CSHEET === 'recipe') recipeCancel();
+  else if(CSHEET){ CSHEET = null; renderSheet(); }
   else if(CPICK){ CPICK = null; renderSheet(); }
   else if(SHEET) closeLog();
   else if(ALBUM) closeAlbum();
 });
 let SHEET_Y0 = null;
 sheetwrap.addEventListener('touchstart', e => {
-  // control sheets and the picker dismiss on swipe; the logging sheet never
-  // does, because a stray drag there would discard the draft. A swipe that
-  // starts inside a scrolled list is a scroll, not a dismiss.
+  // control sheets and the picker dismiss on swipe; the logging sheet and
+  // the recipe sheet never do, because a stray drag there would discard the
+  // draft. A swipe that starts inside a scrolled list is a scroll, not a dismiss.
   const body = e.target.closest('.shbody');
-  SHEET_Y0 = (CSHEET || CPICK) && e.target.closest('#sheet') && !(body && body.scrollTop > 0)
+  SHEET_Y0 = (CSHEET || CPICK) && CSHEET !== 'recipe' && e.target.closest('#sheet') && !(body && body.scrollTop > 0)
     ? e.touches[0].clientY : null;
 }, { passive: true });
 sheetwrap.addEventListener('touchend', e => {
