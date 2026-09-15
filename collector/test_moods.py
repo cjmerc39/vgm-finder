@@ -69,6 +69,17 @@ def test_parse_rejects_off_list_tags_and_bad_shapes():
     assert moods.parse_reply(json.dumps([{"n": 1, "moods": []}]), 1, TERMS) is None
 
 
+def test_schema_pins_the_vocabulary_and_rejections_say_why():
+    assert moods.SCHEMA["properties"]["tracks"]["items"]["properties"]["moods"]["items"]["enum"] == TERMS
+    assert moods.parse_reply_why(reply([(1, ["spooky"])]), 1, TERMS) == (None, "track 1: 'spooky' is outside the vocabulary")
+    assert moods.parse_reply_why("nope", 1, TERMS) == (None, "not JSON")
+    assert moods.parse_reply_why(reply([(4, ["tense"])]), 2, TERMS) == (None, "track 4 not asked about")
+    assert moods.parse_reply_why(reply([(1, ["tense"])]), 1, TERMS) == ({1: ["tense"]}, "")
+    r, tracks = _row("x", "Twice Bad Soundtrack", 1), [{"title": "A"}]
+    res = moods.tag_album(None, r, tracks, VOCAB, call=FakeModel({"Twice Bad": [reply([(1, ["spooky"])]), "garbage"]}))
+    assert res["why"] == "not JSON" and res["reply"] == "garbage"
+
+
 def test_album_prompt_names_the_work_and_numbers_the_tracks():
     r = _row("hades", "Hades Soundtrack", 2, composers=["Darren Korb"], genres=["Role-playing (RPG)"])
     p = moods.album_prompt(r, [{"title": "No Escape"}, {"title": "The Painted World"}])
@@ -97,7 +108,7 @@ def test_tag_album_retries_a_bad_reply_once_then_gives_up():
     r2, tracks2 = _row("x", "Twice Bad Soundtrack", 1), [{"title": "A"}]
     fake = FakeModel({"Twice Bad": [reply([(1, ["spooky"])]), "still garbage"]})
     res = moods.tag_album(None, r2, tracks2, VOCAB, call=fake)
-    assert res == {"ok": False, "in": 1200, "out": 80, "tries": 2, "calls": 2}
+    assert res == {"ok": False, "in": 1200, "out": 80, "tries": 2, "calls": 2, "why": "not JSON", "reply": "still garbage"}
     assert "moods" not in r2 and "moods" not in tracks2[0]  # untouched, picked up next run
 
 
@@ -134,7 +145,8 @@ def test_a_chunked_album_is_tagged_whole_or_not_at_all(monkeypatch):
             return "garbage", 500, 5
         return reply([(n, ["sad"]) for n in range(first, min(first + 2, 6))]), 500, 30
     res = moods.tag_album(None, r2, tracks2, VOCAB, call=bad_middle)
-    assert res["ok"] is False and res["calls"] == 3 and "moods" not in r2 and not any("moods" in t for t in tracks2)
+    assert res["ok"] is False and res["calls"] == 3 and res["why"] == "not JSON"
+    assert "moods" not in r2 and not any("moods" in t for t in tracks2)
 
 
 def test_untagged_deals_the_mediums_in_turn_newest_first():

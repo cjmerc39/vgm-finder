@@ -93,56 +93,67 @@ def chunks(tracks, size=None):
     return out
 
 
-SCHEMA = {
-    "type": "object",
-    "properties": {
-        "tracks": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {"n": {"type": "integer"}, "moods": {"type": "array", "items": {"type": "string"}}},
-                "required": ["n", "moods"],
-                "additionalProperties": False,
-            },
-        }
-    },
-    "required": ["tracks"],
-    "additionalProperties": False,
-}
+def schema_for(vocab_terms):
+    """The reply's JSON schema: the mood words are an enum of the
+    vocabulary, so the model cannot emit a word outside it."""
+    return {
+        "type": "object",
+        "properties": {
+            "tracks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {"n": {"type": "integer"},
+                                   "moods": {"type": "array", "items": {"type": "string", "enum": list(vocab_terms)}}},
+                    "required": ["n", "moods"],
+                    "additionalProperties": False,
+                },
+            }
+        },
+        "required": ["tracks"],
+        "additionalProperties": False,
+    }
 
 
-def parse_reply(text, numbers, vocab_terms):
-    """The model's reply as {track number: [moods]}, or None when it is not
-    JSON, not the expected shape, names a track outside the numbers asked
-    about (an int means 1 to that many), or uses a mood outside the
-    vocabulary. Order is kept as given."""
+SCHEMA = schema_for([m["mood"] for m in json.loads(MOODS_PATH.read_text(encoding="utf-8"))["moods"]])
+
+
+def parse_reply_why(text, numbers, vocab_terms):
+    """The model's reply as ({track number: [moods]}, "") or (None, why) when
+    it is not JSON, not the expected shape, names a track outside the
+    numbers asked about (an int means 1 to that many), or uses a mood
+    outside the vocabulary. Order is kept as given."""
     valid = range(1, numbers + 1) if isinstance(numbers, int) else numbers
     try:
         data = json.loads(text)
     except (TypeError, ValueError):
-        return None
+        return None, "not JSON"
     items = data.get("tracks") if isinstance(data, dict) else None
     if not isinstance(items, list):
-        return None
+        return None, "no tracks list"
     allowed = set(vocab_terms)
     out = {}
     for item in items:
         if not isinstance(item, dict) or not isinstance(item.get("n"), int) or not isinstance(item.get("moods"), list):
-            return None
+            return None, f"bad entry {json.dumps(item)[:60]}"
         n, moods = item["n"], item["moods"]
         if n not in valid:
-            return None
+            return None, f"track {n} not asked about"
         kept = []
         for m in moods:
             if not isinstance(m, str):
-                return None
+                return None, f"track {n}: mood is not a string"
             m = m.strip().lower()
             if m not in allowed:
-                return None  # free text is rejected, the album stays untagged this run
+                return None, f"track {n}: '{m}' is outside the vocabulary"  # free text is rejected
             if m not in kept:
                 kept.append(m)
         out[n] = kept[:MAX_TAGS]
-    return out
+    return out, ""
+
+
+def parse_reply(text, numbers, vocab_terms):
+    return parse_reply_why(text, numbers, vocab_terms)[0]
 
 
 def make_client():
@@ -179,18 +190,19 @@ def tag_album(client, r, tracks, vocab, system=None, call=call_model):
     for start, part in chunks(tracks):
         prompt = album_prompt(r, part, start, len(tracks))
         numbers = range(start, start + len(part))
-        got = None
+        got, why, text = None, "", ""
         for attempt in (1, 2):
             text, tin, tout = call(client, system, prompt)
             used_in += tin
             used_out += tout
             calls += 1
-            got = parse_reply(text, numbers, terms)
+            got, why = parse_reply_why(text, numbers, terms)
             if got is not None:
                 break
             tries = 2
         if got is None:
-            return {"ok": False, "in": used_in, "out": used_out, "tries": 2, "calls": calls}
+            return {"ok": False, "in": used_in, "out": used_out, "tries": 2, "calls": calls,
+                    "why": why, "reply": (text or "")[:160]}
         tags.update(got)
     counts = {}
     for i, t in enumerate(tracks, 1):
@@ -290,7 +302,7 @@ def tag_rows(rows, tracks_dir, client, vocab, workers=1, log=print, call=call_mo
                 summary["tagged"] += 1
             else:
                 summary["skipped"] += 1
-                log(f"  skip {r['id']}: the reply was rejected twice")
+                log(f"  skip {r['id']}: rejected twice, last because {res.get('why')}: {res.get('reply')!r}")
     summary["cost"] = cost(summary["inputTokens"], summary["outputTokens"])
     return summary
 
