@@ -38,6 +38,7 @@ PRICE_IN, PRICE_OUT = 1.00, 5.00        # dollars per million tokens, Claude Hai
 DAILY_CAP = 40                          # albums a daily run may tag: a bad day cannot run up a bill
 DAILY_WINDOW_DAYS = 30                  # the daily step tags albums first seen this recently
 MAX_TAGS = 3
+CHUNK_TRACKS = 100                      # tracks per call: about 14 output tokens a track keeps a reply near 1,500
 RUNS_KEPT = 60
 
 
@@ -60,7 +61,9 @@ def system_prompt(vocab):
     )
 
 
-def album_prompt(r, tracks):
+def album_prompt(r, tracks, start=1, total=None):
+    """The album and its tracks, numbered from start. A chunk of a long
+    album says which stretch it is, so the numbers stay the album's own."""
     medium = {"game": "video game", "film": "film", "tv": "television series"}.get(r.get("medium") or "game", "work")
     lines = [f"Album: {r.get('albumTitle') or r.get('title')}",
              f"Work: {r.get('game') or r.get('title')} ({medium}, {(r.get('date') or '')[:4] or 'year unknown'})"]
@@ -68,10 +71,26 @@ def album_prompt(r, tracks):
         lines.append("Composers: " + ", ".join(r["composers"]))
     if r.get("genres"):
         lines.append("Genres: " + ", ".join(r["genres"]))
-    lines.append("Tracks:")
-    for i, t in enumerate(tracks, 1):
+    total = total or len(tracks)
+    end = start + len(tracks) - 1
+    lines.append(f"Tracks {start} to {end} of {total}:" if total > len(tracks) else "Tracks:")
+    for i, t in enumerate(tracks, start):
         lines.append(f"{i}. {t.get('title') or ''}")
     return "\n".join(lines)
+
+
+def chunks(tracks, size=None):
+    """(start, tracks) stretches of at most size tracks, evenly cut, so no
+    single reply has to carry more than about 1,500 output tokens."""
+    size = size or CHUNK_TRACKS
+    n = len(tracks)
+    parts = max(1, -(-n // size))
+    out, at = [], 0
+    for k in range(parts):
+        take = n // parts + (1 if k < n % parts else 0)
+        out.append((at + 1, tracks[at:at + take]))
+        at += take
+    return out
 
 
 SCHEMA = {
@@ -92,10 +111,12 @@ SCHEMA = {
 }
 
 
-def parse_reply(text, n_tracks, vocab_terms):
-    """The model's reply as {track index (1-based): [moods]}, or None when it
-    is not JSON, not the expected shape, names a track that does not exist,
-    or uses a mood outside the vocabulary. Order is kept as given."""
+def parse_reply(text, numbers, vocab_terms):
+    """The model's reply as {track number: [moods]}, or None when it is not
+    JSON, not the expected shape, names a track outside the numbers asked
+    about (an int means 1 to that many), or uses a mood outside the
+    vocabulary. Order is kept as given."""
+    valid = range(1, numbers + 1) if isinstance(numbers, int) else numbers
     try:
         data = json.loads(text)
     except (TypeError, ValueError):
@@ -109,7 +130,7 @@ def parse_reply(text, n_tracks, vocab_terms):
         if not isinstance(item, dict) or not isinstance(item.get("n"), int) or not isinstance(item.get("moods"), list):
             return None
         n, moods = item["n"], item["moods"]
-        if not 1 <= n <= n_tracks:
+        if n not in valid:
             return None
         kept = []
         for m in moods:
@@ -145,32 +166,43 @@ def call_model(client, system, prompt):
 
 def tag_album(client, r, tracks, vocab, system=None, call=call_model):
     """One album tagged in place: moods on its tracks, their union on the
-    row. -> {"ok": bool, "in": tokens, "out": tokens, "tries": n}. A reply the
-    parser rejects is tried once more; two rejections leave the album as it
-    was, to be picked up on a later run."""
+    row. -> {"ok": bool, "in": tokens, "out": tokens, "tries": n, "calls": n}.
+    Long albums go in chunks of CHUNK_TRACKS, each its own call with the
+    album's own track numbers. A reply the parser rejects is tried once
+    more; a chunk rejected twice leaves the whole album as it was, to be
+    picked up on a later run, so no album is ever half tagged."""
     system = system or system_prompt(vocab)
     terms = [m for m, _ in vocab]
-    prompt = album_prompt(r, tracks)
-    used_in = used_out = 0
-    for attempt in (1, 2):
-        text, tin, tout = call(client, system, prompt)
-        used_in += tin
-        used_out += tout
-        tags = parse_reply(text, len(tracks), terms)
-        if tags is None:
-            continue
-        counts = {}
-        for i, t in enumerate(tracks, 1):
-            moods = tags.get(i) or []
-            if moods:
-                t["moods"] = moods
-                for m in moods:
-                    counts[m] = counts.get(m, 0) + 1
-            else:
-                t.pop("moods", None)
-        r["moods"] = sorted(counts, key=lambda m: (-counts[m], terms.index(m)))  # commonest first, the list's order breaks ties
-        return {"ok": True, "in": used_in, "out": used_out, "tries": attempt}
-    return {"ok": False, "in": used_in, "out": used_out, "tries": 2}
+    used_in = used_out = calls = 0
+    tries = 1
+    tags = {}
+    for start, part in chunks(tracks):
+        prompt = album_prompt(r, part, start, len(tracks))
+        numbers = range(start, start + len(part))
+        got = None
+        for attempt in (1, 2):
+            text, tin, tout = call(client, system, prompt)
+            used_in += tin
+            used_out += tout
+            calls += 1
+            got = parse_reply(text, numbers, terms)
+            if got is not None:
+                break
+            tries = 2
+        if got is None:
+            return {"ok": False, "in": used_in, "out": used_out, "tries": 2, "calls": calls}
+        tags.update(got)
+    counts = {}
+    for i, t in enumerate(tracks, 1):
+        moods = tags.get(i) or []
+        if moods:
+            t["moods"] = moods
+            for m in moods:
+                counts[m] = counts.get(m, 0) + 1
+        else:
+            t.pop("moods", None)
+    r["moods"] = sorted(counts, key=lambda m: (-counts[m], terms.index(m)))  # commonest first, the list's order breaks ties
+    return {"ok": True, "in": used_in, "out": used_out, "tries": tries, "calls": calls}
 
 
 def first_seen(r):
@@ -178,8 +210,10 @@ def first_seen(r):
 
 
 def untagged(releases, tracks_dir, retag=False):
-    """Rows with a tracklist and no moods yet, newest first."""
-    out = []
+    """Rows with a tracklist and no moods yet: newest first within each
+    medium, the mediums dealt in turn (game, film, tv), so a capped run
+    spreads across all three and the backfill advances them together."""
+    by_medium = {"game": [], "film": [], "tv": []}
     for r in releases:
         if r.get("retired") or not (r.get("tracksN") or 0) > 0:
             continue
@@ -187,8 +221,15 @@ def untagged(releases, tracks_dir, retag=False):
             continue
         if not (Path(tracks_dir) / f"{r['id']}.json").exists():
             continue
-        out.append(r)
-    out.sort(key=lambda r: (r.get("date") or "", first_seen(r)), reverse=True)
+        by_medium.setdefault(r.get("medium") or "game", []).append(r)
+    for rows in by_medium.values():
+        rows.sort(key=lambda r: (r.get("date") or "", first_seen(r)), reverse=True)
+    out = []
+    lanes = [rows for rows in by_medium.values() if rows]
+    while lanes:
+        for rows in lanes:
+            out.append(rows.pop(0))
+        lanes = [rows for rows in lanes if rows]
     return out
 
 

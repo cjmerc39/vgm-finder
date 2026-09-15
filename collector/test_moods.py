@@ -83,7 +83,7 @@ def test_tag_album_writes_track_moods_and_the_union_commonest_first():
     tracks = [{"title": "A"}, {"title": "B"}, {"title": "C"}]
     fake = FakeModel({"Hades": [reply([(1, ["driving", "tense"]), (2, ["tense"]), (3, [])])]})
     res = moods.tag_album(None, r, tracks, VOCAB, call=fake)
-    assert res == {"ok": True, "in": 600, "out": 40, "tries": 1}
+    assert res == {"ok": True, "in": 600, "out": 40, "tries": 1, "calls": 1}
     assert tracks[0]["moods"] == ["driving", "tense"] and tracks[1]["moods"] == ["tense"] and "moods" not in tracks[2]
     assert r["moods"] == ["tense", "driving"]  # tense on two tracks outranks driving on one
 
@@ -97,8 +97,55 @@ def test_tag_album_retries_a_bad_reply_once_then_gives_up():
     r2, tracks2 = _row("x", "Twice Bad Soundtrack", 1), [{"title": "A"}]
     fake = FakeModel({"Twice Bad": [reply([(1, ["spooky"])]), "still garbage"]})
     res = moods.tag_album(None, r2, tracks2, VOCAB, call=fake)
-    assert res == {"ok": False, "in": 1200, "out": 80, "tries": 2}
+    assert res == {"ok": False, "in": 1200, "out": 80, "tries": 2, "calls": 2}
     assert "moods" not in r2 and "moods" not in tracks2[0]  # untouched, picked up next run
+
+
+def test_long_albums_go_in_even_chunks_with_the_albums_own_numbers():
+    assert [(s, len(p)) for s, p in moods.chunks(list(range(657)))] == [(1, 94), (95, 94), (189, 94), (283, 94), (377, 94), (471, 94), (565, 93)]
+    assert [(s, len(p)) for s, p in moods.chunks(list(range(100)))] == [(1, 100)]
+    assert [(s, len(p)) for s, p in moods.chunks(list(range(101)))] == [(1, 51), (52, 50)]
+    assert moods.chunks([]) == [(1, [])]
+    r = _row("big", "Big Soundtrack", 3)
+    p = moods.album_prompt(r, [{"title": "B"}, {"title": "C"}], start=2, total=3)
+    assert "Tracks 2 to 3 of 3:\n2. B\n3. C" in p
+    assert moods.parse_reply(reply([(2, ["tense"]), (3, [])]), range(2, 4), TERMS) == {2: ["tense"], 3: []}
+    assert moods.parse_reply(reply([(1, ["tense"])]), range(2, 4), TERMS) is None  # a number outside the chunk
+
+
+def test_a_chunked_album_is_tagged_whole_or_not_at_all(monkeypatch):
+    monkeypatch.setattr(moods, "CHUNK_TRACKS", 2)
+    r = _row("big", "Big Soundtrack", 5)
+    tracks = [{"title": f"T{i}"} for i in range(1, 6)]
+    seen = []
+    def call(client, system, prompt):
+        seen.append(next(line for line in prompt.splitlines() if line.startswith("Tracks ")))
+        first = int(prompt.split("Tracks ")[1].split(" ")[0])
+        return reply([(n, ["driving"] if n % 2 else []) for n in range(first, first + 2 if first < 5 else first + 1)]), 500, 30
+    res = moods.tag_album(None, r, tracks, VOCAB, call=call)
+    assert res == {"ok": True, "in": 1500, "out": 90, "tries": 1, "calls": 3}
+    assert [t.get("moods") for t in tracks] == [["driving"], None, ["driving"], None, ["driving"]] and r["moods"] == ["driving"]
+    assert seen == ["Tracks 1 to 2 of 5:", "Tracks 3 to 4 of 5:", "Tracks 5 to 5 of 5:"]
+    # the second chunk fails twice: nothing is written, the album waits for another run
+    r2, tracks2 = _row("big2", "Big Two Soundtrack", 5), [{"title": f"T{i}"} for i in range(1, 6)]
+    def bad_middle(client, system, prompt):
+        first = int(prompt.split("Tracks ")[1].split(" ")[0])
+        if first == 3:
+            return "garbage", 500, 5
+        return reply([(n, ["sad"]) for n in range(first, min(first + 2, 6))]), 500, 30
+    res = moods.tag_album(None, r2, tracks2, VOCAB, call=bad_middle)
+    assert res["ok"] is False and res["calls"] == 3 and "moods" not in r2 and not any("moods" in t for t in tracks2)
+
+
+def test_untagged_deals_the_mediums_in_turn_newest_first():
+    rows = [_row("g1", "G1 Soundtrack", 1, date="2020-01-01"), _row("g2", "G2 Soundtrack", 1, date="2024-01-01"),
+            _row("f1", "F1 Soundtrack", 1, medium="film", date="2023-01-01"), _row("f2", "F2 Soundtrack", 1, medium="film", date="2021-01-01"),
+            _row("t1", "T1 Soundtrack", 1, medium="tv", date="2022-01-01")]
+    import tempfile, pathlib
+    with tempfile.TemporaryDirectory() as d:
+        for r in rows:
+            (pathlib.Path(d) / f"{r['id']}.json").write_text("[]", encoding="utf-8")
+        assert [r["id"] for r in moods.untagged(rows, d)] == ["g2", "f1", "t1", "g1", "f2"]
 
 
 def test_an_album_the_model_leaves_bare_still_counts_as_tagged():
