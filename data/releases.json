@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T14:38:53Z",
+  "updatedAt": "2026-09-17T14:43:35Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -88087,7 +88087,25 @@
       "albumArtists": [
         "Daniel Pemberton"
       ],
-      "scoresN": 38
+      "scoresN": 38,
+      "moods": [
+        "joyful",
+        "tender",
+        "tense",
+        "playful",
+        "mysterious",
+        "wonder",
+        "peaceful",
+        "powerful",
+        "eerie",
+        "driving",
+        "nostalgic",
+        "heroic",
+        "romantic",
+        "transcendent",
+        "sad",
+        "mournful"
+      ]
     },
     {
       "id": "film-moonlight",
@@ -110781,7 +110799,23 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "playful",
+        "joyful",
+        "powerful",
+        "driving",
+        "wonder",
+        "heroic",
+        "tense",
+        "tender",
+        "peaceful",
+        "eerie",
+        "mysterious",
+        "transcendent",
+        "nostalgic",
+        "romantic"
+      ]
     },
     {
       "id": "film-monster-hunter",
@@ -123351,7 +123385,18 @@
       "albumArtists": [
         "Stephen McKeon"
       ],
-      "scoresN": 33
+      "scoresN": 33,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious",
+        "powerful",
+        "sad",
+        "driving",
+        "nostalgic",
+        "peaceful",
+        "mournful"
+      ]
     },
     {
       "id": "film-only-god-forgives",
@@ -126744,7 +126789,22 @@
       "albumArtists": [
         "Dmitri Golovko"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving",
+        "heroic",
+        "mysterious",
+        "sad",
+        "eerie",
+        "mournful",
+        "romantic",
+        "wonder",
+        "transcendent",
+        "tender",
+        "peaceful"
+      ]
     },
     {
       "id": "film-the-kid",
@@ -128649,7 +128709,22 @@
         "DEVO",
         "DEV-O "
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "powerful",
+        "driving",
+        "playful",
+        "joyful",
+        "tense",
+        "wonder",
+        "tender",
+        "heroic",
+        "nostalgic",
+        "peaceful",
+        "eerie",
+        "mysterious",
+        "romantic"
+      ]
     },
     {
       "id": "film-speak-no-evil",
@@ -141685,7 +141760,22 @@
       "albumArtists": [
         "Daniel Pemberton"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "playful",
+        "tense",
+        "mysterious",
+        "nostalgic",
+        "tender",
+        "peaceful",
+        "joyful",
+        "powerful",
+        "sad",
+        "heroic",
+        "driving",
+        "mournful",
+        "romantic"
+      ]
     },
     {
       "id": "film-philomena",
@@ -155098,7 +155188,22 @@
       "composerAliases": [
         "Blanck Mass"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful",
+        "mysterious",
+        "tender",
+        "heroic",
+        "wonder",
+        "transcendent",
+        "peaceful",
+        "sad",
+        "eerie",
+        "mournful",
+        "romantic"
+      ]
     },
     {
       "id": "film-the-grudge",
@@ -155421,7 +155526,25 @@
       "composerAliases": [
         "Anthony Willis"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "powerful",
+        "tense",
+        "romantic",
+        "tender",
+        "peaceful",
+        "heroic",
+        "mysterious",
+        "wonder",
+        "sad",
+        "eerie",
+        "driving",
+        "playful",
+        "transcendent",
+        "nostalgic",
+        "joyful",
+        "mournful"
+      ]
     },
     {
       "id": "film-mudbound",
@@ -158114,7 +158237,21 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving",
+        "eerie",
+        "mysterious",
+        "sad",
+        "nostalgic",
+        "tender",
+        "peaceful",
+        "heroic",
+        "playful",
+        "mournful"
+      ]
     },
     {
       "id": "film-antlers",
@@ -160234,7 +160371,24 @@
         "Martin Slattery",
         "The Immortal Man"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful",
+        "eerie",
+        "tender",
+        "driving",
+        "mournful",
+        "sad",
+        "heroic",
+        "romantic",
+        "wonder",
+        "transcendent",
+        "nostalgic",
+        "peaceful",
+        "playful"
+      ]
     },
     {
       "id": "film-disenchanted",
@@ -164344,7 +164498,19 @@
       "albumArtists": [
         "Carlos Rafael Rivera"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful",
+        "mysterious",
+        "driving",
+        "tender",
+        "playful",
+        "peaceful",
+        "joyful",
+        "heroic"
+      ]
     },
     {
       "id": "film-now-is-good",
@@ -166552,7 +166718,21 @@
       "composerAliases": [
         "Kristopher Bowers"
       ],
-      "scoresN": 45
+      "scoresN": 45,
+      "moods": [
+        "powerful",
+        "playful",
+        "joyful",
+        "driving",
+        "tender",
+        "tense",
+        "heroic",
+        "nostalgic",
+        "transcendent",
+        "peaceful",
+        "sad",
+        "mysterious"
+      ]
     },
     {
       "id": "film-a-classic-horror-story",
@@ -168046,7 +168226,24 @@
       "composerAliases": [
         "Chris Lennertz"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious",
+        "sad",
+        "heroic",
+        "driving",
+        "tender",
+        "eerie",
+        "mournful",
+        "joyful",
+        "playful",
+        "romantic",
+        "transcendent",
+        "nostalgic",
+        "peaceful"
+      ]
     },
     {
       "id": "tv-the-boys",
@@ -168706,7 +168903,24 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "tender",
+        "powerful",
+        "romantic",
+        "mysterious",
+        "wonder",
+        "transcendent",
+        "nostalgic",
+        "peaceful",
+        "joyful",
+        "sad",
+        "heroic",
+        "driving",
+        "playful",
+        "mournful"
+      ]
     },
     {
       "id": "tv-euphoria",
@@ -187153,7 +187367,23 @@
       "composerAliases": [
         "Matchbox Twenty"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving",
+        "sad",
+        "heroic",
+        "mysterious",
+        "tender",
+        "peaceful",
+        "joyful",
+        "mournful",
+        "wonder",
+        "transcendent",
+        "nostalgic",
+        "eerie"
+      ]
     },
     {
       "id": "tv-star-wars-rebels-season-1",
@@ -187451,7 +187681,23 @@
         "Finneas Baird O'Connell",
         "Finneas O'Connell"
       ],
-      "scoresN": 32
+      "scoresN": 32,
+      "moods": [
+        "tense",
+        "tender",
+        "peaceful",
+        "mysterious",
+        "powerful",
+        "joyful",
+        "driving",
+        "playful",
+        "wonder",
+        "transcendent",
+        "nostalgic",
+        "eerie",
+        "romantic",
+        "sad"
+      ]
     },
     {
       "id": "tv-beef",
@@ -191747,7 +191993,20 @@
         "Jina Hyojin An",
         "Shirley Song"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "playful",
+        "tender",
+        "tense",
+        "joyful",
+        "romantic",
+        "peaceful",
+        "driving",
+        "mysterious",
+        "sad",
+        "nostalgic",
+        "eerie"
+      ]
     },
     {
       "id": "tv-xo-kitty",
@@ -193119,7 +193378,22 @@
       "composerAliases": [
         "J Paul Garber"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "peaceful",
+        "joyful",
+        "tender",
+        "mysterious",
+        "wonder",
+        "powerful",
+        "heroic",
+        "nostalgic",
+        "sad",
+        "driving",
+        "playful",
+        "mournful"
+      ]
     },
     {
       "id": "tv-the-west-wing",
@@ -193588,7 +193862,24 @@
       "composerAliases": [
         "Alex Nelson Belcher"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "driving",
+        "tender",
+        "powerful",
+        "sad",
+        "mysterious",
+        "transcendent",
+        "nostalgic",
+        "peaceful",
+        "mournful",
+        "wonder",
+        "joyful",
+        "heroic",
+        "eerie",
+        "playful"
+      ]
     },
     {
       "id": "tv-citadel",
@@ -215991,7 +216282,22 @@
         "The Newton Brothers",
         "Andy Grush"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious",
+        "tender",
+        "eerie",
+        "mournful",
+        "heroic",
+        "driving",
+        "peaceful",
+        "transcendent",
+        "nostalgic",
+        "sad",
+        "romantic"
+      ]
     },
     {
       "id": "tv-daredevil-born-again-season-2-vol-2",
@@ -216037,7 +216343,22 @@
         "The Newton Brothers",
         "Andy Grush"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "powerful",
+        "tender",
+        "mysterious",
+        "sad",
+        "heroic",
+        "eerie",
+        "mournful",
+        "peaceful",
+        "driving",
+        "playful",
+        "nostalgic",
+        "joyful"
+      ]
     },
     {
       "id": "tv-american-primeval",
@@ -229098,7 +229419,23 @@
       "albumArtists": [
         "Geoff Zanelli"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "mysterious",
+        "tense",
+        "playful",
+        "eerie",
+        "nostalgic",
+        "joyful",
+        "powerful",
+        "heroic",
+        "driving",
+        "tender",
+        "peaceful",
+        "wonder",
+        "sad",
+        "mournful"
+      ]
     },
     {
       "id": "film-ice-road-vengeance",
@@ -230738,7 +231075,23 @@
       "composerAliases": [
         "Hildur Gudnadóttir"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "romantic",
+        "nostalgic",
+        "playful",
+        "mysterious",
+        "powerful",
+        "eerie",
+        "tender",
+        "peaceful",
+        "joyful",
+        "transcendent",
+        "driving",
+        "mournful",
+        "sad"
+      ]
     },
     {
       "id": "film-kill",
@@ -232465,7 +232818,18 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious",
+        "driving",
+        "nostalgic",
+        "tender",
+        "eerie",
+        "heroic",
+        "mournful"
+      ]
     },
     {
       "id": "film-highest-2-lowest",
@@ -249999,7 +250363,20 @@
       "albumArtists": [
         "Emile Mosseri"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender",
+        "powerful",
+        "driving",
+        "wonder",
+        "peaceful",
+        "joyful",
+        "eerie",
+        "playful",
+        "romantic"
+      ]
     },
     {
       "id": "film-in-the-heights",
@@ -271519,7 +271896,23 @@
         "Alex Seaver of Mako",
         "Alexander Seaver"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving",
+        "mysterious",
+        "heroic",
+        "eerie",
+        "mournful",
+        "joyful",
+        "sad",
+        "playful",
+        "romantic",
+        "transcendent",
+        "tender",
+        "peaceful"
+      ]
     },
     {
       "id": "tv-devil-may-cry",
@@ -272077,7 +272470,23 @@
       "composerAliases": [
         "Dave Fleming"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "mysterious",
+        "joyful",
+        "eerie",
+        "playful",
+        "peaceful",
+        "powerful",
+        "sad",
+        "driving",
+        "nostalgic",
+        "mournful",
+        "wonder",
+        "tender",
+        "romantic"
+      ]
     },
     {
       "id": "tv-marshals-season-1",
@@ -278583,6 +278992,802 @@
         "playful",
         "mournful",
         "romantic"
+      ]
+    },
+    {
+      "id": "vampire-savior-aka-darkstalkers-3-vinyl-soundtrack-up-for-preorder-via-mana-wave-media",
+      "title": "Vampire Savior (aka Darkstalkers 3) vinyl soundtrack up for preorder via Mana Wave Media",
+      "medium": "game",
+      "game": null,
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "blipblop",
+          "type": "editorial",
+          "url": "https://blipblop.net/vampire-savior-aka-darkstalkers-3-vinyl-soundtrack-up-for-preorder-via-mana-wave-media/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Vampire+Savior+%28aka+Darkstalkers+3%29+vinyl+soundtrack+up+for+preorder+via+Mana+Wave+Media",
+      "ytmAlbumUrl": null,
+      "art": null,
+      "notable": true,
+      "albumTitle": "Vampire Savior (aka Darkstalkers 3) vinyl soundtrack"
+    },
+    {
+      "id": "materia-collective-to-release-guild-wars-2-visions-of-eternity-vinyl",
+      "title": "Materia Collective to release Guild Wars 2: Visions Of Eternity vinyl soundtrack",
+      "medium": "game",
+      "game": null,
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "blipblop",
+          "type": "editorial",
+          "url": "https://blipblop.net/materia-collective-to-release-guild-wars-2-visions-of-eternity-vinyl-soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Materia+Collective+to+release+Guild+Wars+2%3A+Visions+Of+Eternity+vinyl+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": null,
+      "notable": true
+    },
+    {
+      "id": "flamecraft",
+      "title": "Flamecraft Soundtrack",
+      "medium": "game",
+      "game": "Flamecraft",
+      "composers": [],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5040860/Flamecraft_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Flamecraft+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5040860/ca94c590c69a795b93b31cbbf1c49fd5c4a4cefd/header.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "moods": [
+        "wonder",
+        "joyful"
+      ]
+    },
+    {
+      "id": "dead-weight",
+      "title": "Dead Weight Soundtrack",
+      "medium": "game",
+      "game": "Dead Weight",
+      "composers": [],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4943840/Dead_Weight_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dead+Weight+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4943840/5326337ef1d6ac6bf5d93849ca234deca0775c51/header.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "moods": [
+        "tense",
+        "eerie"
+      ]
+    },
+    {
+      "id": "shape-of-dreams",
+      "title": "Shape of Dreams - Original Soundtrack",
+      "medium": "game",
+      "game": "Shape of Dreams",
+      "composers": [],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3969650/Shape_of_Dreams__Original_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Shape+of+Dreams+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3969650/eb60774b5c319980c1c1c38e60864dbd2e048c7b/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "null",
+      "title": "NULL Soundtrack",
+      "medium": "game",
+      "game": "NULL",
+      "composers": [],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4998310/NULL_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=NULL+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4998310/5f3e586038d17ed151be9e800498715e3c772b9b/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "selection-kingdom-level-1",
+      "title": "Selection Kingdom: Level 1 - Soundtrack -",
+      "medium": "game",
+      "game": "Selection Kingdom: Level 1 - Soundtrack",
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3776740/Selection_Kingdom_Level_1__Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Selection+Kingdom%3A+Level+1+-+Soundtrack+-",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3776740/042aafab86abfc1c637db7cf14abe5e565db99b0/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "annaredux",
+      "title": "AnnaRedux Soundtrack",
+      "medium": "game",
+      "game": "AnnaRedux",
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4535140/AnnaRedux_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=AnnaRedux+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4535140/5d72bb4a9c30a144ef8f001ca78cfb4597e6cb18/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "the-plant-shop",
+      "title": "The Plant Shop Soundtrack",
+      "medium": "game",
+      "game": "The Plant Shop",
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4843970/The_Plant_Shop_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Plant+Shop+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4843970/ee8f5bed3282419807ee2f7c996726aa1cde052b/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "house-2",
+      "title": "House 2 Soundtrack",
+      "medium": "game",
+      "game": "House 2",
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5223780/House_2_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=House+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5223780/0488f5299fbd42c9a21bcd6b33552b3cdfa8ceda/header.jpg",
+      "notable": true,
+      "tracksN": 60,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tense",
+        "playful",
+        "peaceful",
+        "joyful",
+        "powerful",
+        "tender",
+        "sad",
+        "mournful",
+        "transcendent",
+        "nostalgic",
+        "driving",
+        "wonder"
+      ]
+    },
+    {
+      "id": "monowave",
+      "title": "MONOWAVE (Original Soundtrack)",
+      "medium": "game",
+      "game": "MONOWAVE",
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5234700/MONOWAVE_Original_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=MONOWAVE+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5234700/6b0d76069ee8aa8dc7464a9f6d4d7e4d283b8d89/header.jpg",
+      "notable": true,
+      "tracksN": 38,
+      "moods": [
+        "joyful",
+        "powerful",
+        "peaceful",
+        "tender",
+        "tense",
+        "sad",
+        "driving",
+        "heroic",
+        "eerie",
+        "playful",
+        "mysterious",
+        "wonder",
+        "mournful",
+        "transcendent",
+        "nostalgic",
+        "romantic"
+      ]
+    },
+    {
+      "id": "patlabor-the-case-files",
+      "title": "PATLABOR the Case Files Original Soundtrack",
+      "medium": "game",
+      "game": "PATLABOR the Case Files",
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4897160/PATLABOR_the_Case_Files_Original_Soundtrack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=PATLABOR+the+Case+Files+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4897160/ab56e49d52f75b76bb4ce422220e095a25c05e7e/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "woodo-soundtrack-pack",
+      "title": "Woodo - Soundtrack Pack",
+      "medium": "game",
+      "game": null,
+      "composers": [],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4795610/Woodo__Soundtrack_Pack/",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Woodo+-+Soundtrack+Pack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4795610/11dc6f4048f818b65994d237c04fbbaf99992707/header.jpg",
+      "notable": true
+    },
+    {
+      "id": "endless-legend-2",
+      "title": "Endless Legend 2 Soundtrack",
+      "medium": "game",
+      "game": "Endless Legend 2",
+      "composers": [
+        "Arnaud Roy"
+      ],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/endless-legend-2",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Endless+Legend+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HG2QhDvdwZK",
+      "art": "https://yt3.googleusercontent.com/xLKMFBjDDBMrysyWt_WSBZN1x5MbDlFOUOF5HjnK6B01uePtF6xj-4hZK0qc25epJp3Ekba0PZvRumob=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Endless Legend 2 (Original Game Soundtrack)",
+      "company": "Amplitude Studios",
+      "console": true,
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Turn-based strategy (TBS)"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nbmOQ0m9FRjGmLHP4-LHEQyqzqVrnLCT8",
+      "tracksN": 39,
+      "playsTotal": 136,
+      "moods": [
+        "mysterious",
+        "transcendent",
+        "peaceful",
+        "wonder",
+        "powerful",
+        "tense",
+        "eerie",
+        "tender",
+        "heroic",
+        "nostalgic",
+        "mournful",
+        "sad",
+        "driving",
+        "joyful"
+      ]
+    },
+    {
+      "id": "film-resident-evil",
+      "title": "Resident Evil Soundtrack",
+      "medium": "film",
+      "game": "Resident Evil",
+      "composers": [
+        "Hays Holladay",
+        "Ryan Holladay"
+      ],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1423191",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Resident+Evil+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qSo0qSjGgFT",
+      "art": "https://yt3.googleusercontent.com/OrAYU-PhypoQimBNsrwwT7LBM1UYUWwh2q0N8inQUSfneXa7rDff3yL0pF-ZwJ9O_EznRQdMjA40lA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Main Titles Extended / Skybridge Reprise from Resident Evil (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Horror",
+        "Science Fiction"
+      ],
+      "albumArtists": [
+        "Hays Holladay",
+        "Ryan Holladay"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lxH7CSVBG8xuiDfk9WBlNgKsSo_MNy67o",
+      "scoresN": 2,
+      "tracksN": 2,
+      "playsTotal": 12500,
+      "moods": [
+        "tense",
+        "eerie",
+        "mournful",
+        "mysterious"
+      ]
+    },
+    {
+      "id": "film-the-last-kiss-2026",
+      "title": "The Last Kiss Soundtrack",
+      "medium": "film",
+      "game": "The Last Kiss",
+      "composers": [
+        "Tangelene Bolton"
+      ],
+      "date": "2026-09-15",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1318467",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Last+Kiss+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_LfgamY0mwcm",
+      "art": "https://yt3.googleusercontent.com/lG1TebpBKplTvQ5ScrL-_9sSUVYLRFz7aUu6IYxae6QJQIgA3ZxKAQny0Fn8iJKp4Sn7zfradzDxTt7L=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Last Kiss (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "albumArtists": [
+        "Tangelene Bolton"
+      ],
+      "ytmPlaylistId": "OLAK5uy_noN7YCq63MhIjZL4aulGrpdFzQynHvNX0",
+      "scoresN": 25,
+      "tracksN": 25,
+      "playsTotal": 161,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie",
+        "driving",
+        "mournful",
+        "tender",
+        "powerful",
+        "sad",
+        "joyful",
+        "nostalgic",
+        "heroic",
+        "playful",
+        "romantic"
+      ]
+    },
+    {
+      "id": "tv-stranger-things-tales-from-85-season-2",
+      "title": "Stranger Things: Tales from '85 Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Stranger Things: Tales from '85",
+      "composers": [
+        "Brad Breeck",
+        "Jason NeSmith"
+      ],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/224263",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stranger+Things%3A+Tales+from+%2785+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_UmVS1lS9ypQ",
+      "art": "https://yt3.googleusercontent.com/k8ldGcFYpXKRKGpi9_097thlNHRlDaJDLiRY3kSdBOKw1g5gniRK_FLyqCvgIq85Tpb1FQBBuyaCkwo=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Stranger Things: Tales From '85: Season 2 (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Animation",
+        "Sci-Fi & Fantasy",
+        "Mystery"
+      ],
+      "composerAliases": [
+        "Brad Breeck"
+      ],
+      "albumArtists": [
+        "Brad Breeck"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lejqt74TfKGQZbSe30VWazTB-pY9u9Ra8",
+      "scoresN": 19,
+      "tracksN": 19,
+      "playsTotal": 85,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "powerful",
+        "tense",
+        "playful",
+        "wonder",
+        "nostalgic",
+        "tender",
+        "peaceful",
+        "sad",
+        "driving",
+        "joyful",
+        "mournful"
+      ]
+    },
+    {
+      "id": "tv-stranger-things-tales-from-85",
+      "title": "Stranger Things: Tales from '85 Soundtrack",
+      "medium": "tv",
+      "game": "Stranger Things: Tales from '85",
+      "composers": [
+        "Brad Breeck",
+        "Jason NeSmith"
+      ],
+      "date": "2026-04-23",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/224263",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stranger+Things%3A+Tales+from+%2785+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mAwQvmauVZA",
+      "art": "https://yt3.googleusercontent.com/AeNkTUxOWFRVadwodAueA7iQLHUKqBLpWyZdJG0UMY7vgjGAlLrl2MEVBhC7eNoO8LkIDLQrpphmHHT20g=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Stranger Things: Tales From '85 (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Animation",
+        "Sci-Fi & Fantasy",
+        "Mystery"
+      ],
+      "composerAliases": [
+        "Brad Breeck"
+      ],
+      "albumArtists": [
+        "Brad Breeck"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m9U9rWkJ-NgKho6eQ4fkujwddqdgIB5gk",
+      "scoresN": 22,
+      "tracksN": 22,
+      "playsTotal": 158100,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "playful",
+        "joyful",
+        "tense",
+        "nostalgic",
+        "powerful",
+        "driving",
+        "tender",
+        "heroic",
+        "wonder",
+        "transcendent",
+        "peaceful",
+        "romantic"
+      ]
+    },
+    {
+      "id": "tv-happy-kanako-s-killer-life",
+      "title": "Happy Kanako's Killer Life Soundtrack",
+      "medium": "tv",
+      "game": "Happy Kanako's Killer Life",
+      "composers": [],
+      "date": "2025-02-28",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/253797",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Happy+Kanako%27s+Killer+Life+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WnfCQUqhnub",
+      "art": "https://yt3.googleusercontent.com/nHrAOwijeYlOvtslvRIGpZ_OsZsFPbgQgNqs0KcYk4n-AyFxY_eoZhu94o5VUljrusUFRQQsNKNM9Ls=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Happy Kanako’s Killer Life (Original Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Action & Adventure",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lk3G09JLP3ruEZsphWNBiwIPSmLjru-Ng",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 41,
+      "playsTotal": 13194
+    },
+    {
+      "id": "tv-last-seen",
+      "title": "Last Seen Soundtrack",
+      "medium": "tv",
+      "game": "Last Seen",
+      "composers": [
+        "Isobel Waller-Bridge",
+        "Tara Nome Doyle"
+      ],
+      "date": "2026-09-09",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/258230",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Last+Seen+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_AgFYfpGJzT2",
+      "art": "https://yt3.googleusercontent.com/imnJB4c9v-m6tRoLYcTuENJHb0ol9hZ9epkAxnnzvoeQ7iqysi8jKH1BfJ9jqwHKpuwl7wdq6ponBLwt=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Last Seen (Apple Original Series Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "composerAliases": [
+        "Isabel Waller-Bridge",
+        "Isobel Noeline Waller-Bridge"
+      ],
+      "albumArtists": [
+        "Isobel Waller-Bridge"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lbrdMPNVGEufmQeKFgYLuM_WaJpc-ROoo",
+      "scoresN": 28,
+      "tracksN": 28,
+      "playsTotal": 1294,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving",
+        "powerful",
+        "sad",
+        "eerie",
+        "nostalgic",
+        "tender",
+        "peaceful",
+        "mournful",
+        "heroic"
+      ]
+    },
+    {
+      "id": "tv-operation-safed-sagar-the-untold-story-of-the-kargil-war",
+      "title": "Operation Safed Sagar: The Untold Story of the Kargil War Soundtrack",
+      "medium": "tv",
+      "game": "Operation Safed Sagar: The Untold Story of the Kargil War",
+      "composers": [
+        "Anurag Saikia"
+      ],
+      "date": "2026-08-07",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/284753",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Operation+Safed+Sagar%3A+The+Untold+Story+of+the+Kargil+War+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Tj9N8QgD9IP",
+      "art": "https://yt3.googleusercontent.com/iNY28ms-NV1tr8jFbHYXfPIF4ngxTkJTv2p8mbgsEEdYaeyn23UE50hs3mj_ZmWQRByFGmn9JunzdWHD=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Operation Safed Sagar : The Untold Story Of The Kargil War (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Anurag Saikia"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mX-8aF0yqT8UmYBTUm1636to_hSkmDhdE",
+      "scoresN": 22,
+      "tracksN": 22,
+      "playsTotal": 80679,
+      "moods": [
+        "heroic",
+        "powerful",
+        "tense",
+        "driving",
+        "tender",
+        "mysterious",
+        "nostalgic",
+        "eerie",
+        "mournful",
+        "romantic",
+        "peaceful",
+        "joyful",
+        "sad"
+      ]
+    },
+    {
+      "id": "tv-my-bias-my-boss",
+      "title": "My Bias, My Boss Soundtrack",
+      "medium": "tv",
+      "game": "My Bias, My Boss",
+      "composers": [],
+      "date": "2026-08-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/296140",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=My+Bias%2C+My+Boss+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YoiZQv3MNli",
+      "art": "https://yt3.googleusercontent.com/WLCf4sVsr9ZX9i_52e2hFUkaayjq1-FBjQpDFki8Ml5mCGRVc-xHCsQxVJWE-0CO1vb8pN7OWyfR7eZ2=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "My Bias, My Boss (Original Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ndAPrOUeeSyABb2rw_DxrkfS11COkDiIY",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 38,
+      "playsTotal": 884751,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender",
+        "peaceful",
+        "powerful",
+        "romantic",
+        "mysterious",
+        "nostalgic",
+        "sad",
+        "driving",
+        "wonder",
+        "heroic",
+        "eerie",
+        "mournful"
+      ]
+    },
+    {
+      "id": "tv-a-bona-fide-killer",
+      "title": "A Bona Fide Killer Soundtrack",
+      "medium": "tv",
+      "game": "A Bona Fide Killer",
+      "composers": [],
+      "date": "2026-07-31",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/294095",
+          "seenAt": "2026-09-17T14:38:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Bona+Fide+Killer+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_v4ZJoQ6fT0m",
+      "art": "https://yt3.googleusercontent.com/EXEH-EkjFH5UjXj0yUypupttrVF9lw8w7HcwoVDqhb7yk0P1PK5MzfUFSLWRmAyRHHrUbbgqqoWFzMSB=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "A Bona fide Killer (Original Soundtrack)",
+      "genres": [
+        "Drama",
+        "Action & Adventure",
+        "Mystery"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k_-7vfnN_JLh-OSb6An3iGlXSq76_hSl0",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 54,
+      "playsTotal": 649030,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender",
+        "powerful",
+        "driving",
+        "peaceful",
+        "romantic",
+        "nostalgic",
+        "joyful",
+        "sad",
+        "heroic",
+        "mournful",
+        "eerie"
       ]
     }
   ]
