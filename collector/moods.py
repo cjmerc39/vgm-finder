@@ -5,13 +5,16 @@ Actions secrets, never in the browser. The vocabulary lives in moods.json;
 the model may only choose from it, and a reply carrying anything else, or
 no parseable JSON, is retried once and then the album is left untagged for
 the run. Tags are written as a "moods" list on each track in
-data/tracks/<id>.json and as their union on the row in releases.json. A
-row with a "moods" key (even empty) is tagged and never touched again
-unless --retag is passed; a row without one is picked up next time.
+data/tracks/<id>.json, and the row in releases.json carries the album's top
+three moods by track count (ties by those tracks' plays) as "moods", with
+how many tracks carry each as "moodsN". A row with a "moods" key (even
+empty) is tagged and never touched again unless --retag is passed; a row
+without one is picked up next time.
 
   python collector/moods.py daily                        # new albums only, capped (the daily workflow)
   python collector/moods.py backfill --cap N --workers 4 # the one-time backfill, dispatched until "moods complete"
   python collector/moods.py backfill --retag --cap N     # tag again albums that already carry moods
+  python collector/moods.py derive                       # re-rank every tagged row's album moods, no API calls
 
 Every run appends its albums, tokens and dollar cost to moods-state.json,
 which the workflows commit, so the spend is on the record.
@@ -38,6 +41,7 @@ PRICE_IN, PRICE_OUT = 1.00, 5.00        # dollars per million tokens, Claude Hai
 DAILY_CAP = 40                          # albums a daily run may tag: a bad day cannot run up a bill
 DAILY_WINDOW_DAYS = 30                  # the daily step tags albums first seen this recently
 MAX_TAGS = 3
+ALBUM_MOODS = 3                         # the row carries its album's top three moods, not every mood a track has
 CHUNK_TRACKS = 100                      # tracks per call: about 14 output tokens a track keeps a reply near 1,500
 RUNS_KEPT = 60
 
@@ -175,9 +179,33 @@ def call_model(client, system, prompt):
     return text, response.usage.input_tokens, response.usage.output_tokens
 
 
+def album_moods(tracks, terms):
+    """The album's top ALBUM_MOODS moods: most tracks first, a tie going to
+    the mood whose tracks have more plays, then to the vocabulary's order.
+    -> (moods, counts), counts[i] being how many tracks carry moods[i]."""
+    rank = {m: i for i, m in enumerate(terms)}
+    counts, plays = {}, {}
+    for t in tracks:
+        n = collect._plays_num(t.get("plays")) or 0
+        for m in t.get("moods") or []:
+            if m in rank:
+                counts[m] = counts.get(m, 0) + 1
+                plays[m] = plays.get(m, 0) + n
+    top = sorted(counts, key=lambda m: (-counts[m], -plays[m], rank[m]))[:ALBUM_MOODS]
+    return top, [counts[m] for m in top]
+
+
+def set_album_moods(r, tracks, terms):
+    """The row's album-level moods from its tracks. -> True when they changed."""
+    top, n = album_moods(tracks, terms)
+    changed = r.get("moods") != top or r.get("moodsN") != n
+    r["moods"], r["moodsN"] = top, n
+    return changed
+
+
 def tag_album(client, r, tracks, vocab, system=None, call=call_model):
-    """One album tagged in place: moods on its tracks, their union on the
-    row. -> {"ok": bool, "in": tokens, "out": tokens, "tries": n, "calls": n}.
+    """One album tagged in place: moods on its tracks, the album's top three
+    on the row. -> {"ok": bool, "in": tokens, "out": tokens, "tries": n, "calls": n}.
     Long albums go in chunks of CHUNK_TRACKS, each its own call with the
     album's own track numbers. A reply the parser rejects is tried once
     more; a chunk rejected twice leaves the whole album as it was, to be
@@ -204,16 +232,13 @@ def tag_album(client, r, tracks, vocab, system=None, call=call_model):
             return {"ok": False, "in": used_in, "out": used_out, "tries": 2, "calls": calls,
                     "why": why, "reply": (text or "")[:160]}
         tags.update(got)
-    counts = {}
     for i, t in enumerate(tracks, 1):
         moods = tags.get(i) or []
         if moods:
             t["moods"] = moods
-            for m in moods:
-                counts[m] = counts.get(m, 0) + 1
         else:
             t.pop("moods", None)
-    r["moods"] = sorted(counts, key=lambda m: (-counts[m], terms.index(m)))  # commonest first, the list's order breaks ties
+    set_album_moods(r, tracks, terms)
     return {"ok": True, "in": used_in, "out": used_out, "tries": tries, "calls": calls}
 
 
@@ -320,6 +345,27 @@ def record_run(state, kind, summary, remaining, now=None):
     return state
 
 
+def derive(data_path=None, tracks_dir=None, vocab=None, log=print):
+    """Every tagged row's album moods ranked again from its tracks file, with
+    no API call, for when the album rule changes. Untagged rows stay as they
+    are. -> how many rows changed."""
+    data_path = Path(data_path or collect.DATA_PATH)
+    tracks_dir = Path(tracks_dir or TRACKS_DIR)
+    terms = [m for m, _ in (vocab or load_vocab())]
+    data = collect.load_data(data_path)
+    seen = changed = 0
+    for r in data["releases"]:
+        path = tracks_dir / f"{r['id']}.json"
+        if "moods" not in r or not path.exists():
+            continue
+        seen += 1
+        changed += set_album_moods(r, json.loads(path.read_text(encoding="utf-8")), terms)
+    if changed:
+        data_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    log(f"moods derive: {seen} tagged rows read, {changed} changed")
+    return changed
+
+
 def run(kind="daily", cap=DAILY_CAP, workers=1, retag=False, data_path=None, tracks_dir=None,
         state_path=None, client=None, vocab=None, now=None, log=print, call=call_model):
     """The daily step (kind daily: new albums only) or a backfill run (kind
@@ -355,10 +401,13 @@ def run(kind="daily", cap=DAILY_CAP, workers=1, retag=False, data_path=None, tra
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("kind", choices=["daily", "backfill"], nargs="?", default="daily")
+    ap.add_argument("kind", choices=["daily", "backfill", "derive"], nargs="?", default="daily")
     ap.add_argument("--cap", type=int, default=None)
     ap.add_argument("--workers", type=int, default=1)
     ap.add_argument("--retag", action="store_true", help="tag albums that already carry moods (backfill only)")
     args = ap.parse_args()
+    if args.kind == "derive":
+        derive()
+        sys.exit(0)
     cap = args.cap if args.cap is not None else (DAILY_CAP if args.kind == "daily" else 500)
     run(args.kind, cap=cap, workers=args.workers, retag=args.retag and args.kind == "backfill")

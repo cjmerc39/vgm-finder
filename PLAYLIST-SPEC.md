@@ -122,8 +122,13 @@ secrets. Missing key warns and skips, same as the Twitch and TMDb keys.
 - Tags are per track, generated one album at a time: one API call per
   album, the whole tracklist in the prompt, a tag list back per track.
   Albums are where mood varies least; tracks are where the playlists live.
-- Each track gets 1 to 3 tags. An album-level tag set is derived as the
-  union of its track tags, for filtering at album level.
+- Each track gets 1 to 3 tags. An album-level tag set is derived for
+  filtering at album level: the album's top three moods by how many tracks
+  carry them, a tie going to the mood whose tracks have more plays, then to
+  the vocabulary's order (CJ, 2026-09-17; it was the union of the track
+  tags, which gave 11 to 14 moods on a 20-track album). The row also carries
+  how many tracks hold each of the three (`moodsN`), so the recipe count
+  needs no tracklist reads.
 - Tracks with no confident tag get none. Untagged is a valid state and must
   not block anything.
 

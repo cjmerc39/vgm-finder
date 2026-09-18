@@ -89,7 +89,7 @@ def test_album_prompt_names_the_work_and_numbers_the_tracks():
 
 # ----------------------------------------------------------------- tag_album
 
-def test_tag_album_writes_track_moods_and_the_union_commonest_first():
+def test_tag_album_writes_track_moods_and_the_albums_top_moods_commonest_first():
     r = _row("hades", "Hades Soundtrack", 3)
     tracks = [{"title": "A"}, {"title": "B"}, {"title": "C"}]
     fake = FakeModel({"Hades": [reply([(1, ["driving", "tense"]), (2, ["tense"]), (3, [])])]})
@@ -97,6 +97,47 @@ def test_tag_album_writes_track_moods_and_the_union_commonest_first():
     assert res == {"ok": True, "in": 600, "out": 40, "tries": 1, "calls": 1}
     assert tracks[0]["moods"] == ["driving", "tense"] and tracks[1]["moods"] == ["tense"] and "moods" not in tracks[2]
     assert r["moods"] == ["tense", "driving"]  # tense on two tracks outranks driving on one
+    assert r["moodsN"] == [2, 1]
+
+
+def test_album_moods_keep_the_top_three_by_track_count():
+    tracks = [{"title": "A", "moods": ["eerie", "tense", "sad"]},
+              {"title": "B", "moods": ["eerie", "tense"]},
+              {"title": "C", "moods": ["eerie", "mysterious"]},
+              {"title": "D", "moods": ["sad", "peaceful"]},
+              {"title": "E", "moods": ["joyful"]}]
+    assert moods.album_moods(tracks, TERMS) == (["eerie", "tense", "sad"], [3, 2, 2])
+
+
+def test_album_moods_break_a_count_tie_by_plays_then_the_vocabulary():
+    tracks = [{"title": "A", "plays": "2K plays", "moods": ["sad"]},
+              {"title": "B", "plays": "1.5M plays", "moods": ["mysterious"]},
+              {"title": "C", "plays": "900 plays", "moods": ["tense", "sad"]},
+              {"title": "D", "plays": None, "moods": ["wonder"]},
+              {"title": "E", "moods": ["powerful"]}]
+    # sad has two tracks; mysterious beats tense on plays; wonder and
+    # powerful tie at nothing and fall to the vocabulary's order past three
+    assert moods.album_moods(tracks, TERMS) == (["sad", "mysterious", "tense"], [2, 1, 1])
+    bare = [{"title": "A", "moods": ["powerful"]}, {"title": "B", "moods": ["wonder"]}]
+    assert moods.album_moods(bare, TERMS) == (["wonder", "powerful"], [1, 1])  # wonder comes first in the list
+
+
+def test_derive_reranks_tagged_rows_from_their_tracks_without_the_api(tmp_path):
+    rows = [_row("a", "A Soundtrack", 3, moods=["tense", "eerie", "sad", "wonder"]),  # the old union
+            _row("b", "B Soundtrack", 1),                                              # untagged: left alone
+            _row("c", "C Soundtrack", 1, moods=["joyful"], moodsN=[1])]               # already right
+    data_path, tracks_dir, _ = _setup(tmp_path, rows, {
+        "a": [{"title": "1", "moods": ["eerie", "tense"]}, {"title": "2", "moods": ["eerie"]},
+              {"title": "3", "moods": ["sad", "wonder"], "plays": "10K plays"}],
+        "b": [{"title": "1"}],
+        "c": [{"title": "1", "moods": ["joyful"]}]})
+    logs = []
+    assert moods.derive(data_path, tracks_dir, log=logs.append) == 1
+    out = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
+    # tense loses its place on plays; sad and wonder tie on both, so the vocabulary puts wonder first
+    assert out["a"]["moods"] == ["eerie", "wonder", "sad"] and out["a"]["moodsN"] == [2, 1, 1]
+    assert "moods" not in out["b"] and out["c"]["moodsN"] == [1]
+    assert logs == ["moods derive: 2 tagged rows read, 1 changed"]
 
 
 def test_tag_album_retries_a_bad_reply_once_then_gives_up():
@@ -165,7 +206,7 @@ def test_an_album_the_model_leaves_bare_still_counts_as_tagged():
     tracks = [{"title": "A"}, {"title": "B"}]
     fake = FakeModel({"Bare": [reply([(1, []), (2, [])])]})
     assert moods.tag_album(None, r, tracks, VOCAB, call=fake)["ok"]
-    assert r["moods"] == [] and not any("moods" in t for t in tracks)
+    assert r["moods"] == [] and r["moodsN"] == [] and not any("moods" in t for t in tracks)
 
 
 # ----------------------------------------------------------------------- run
