@@ -6,7 +6,11 @@
     "artists": [
       "Ed Sheeran"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Let Me In (From The Fault in Our Stars Soundtrack)",
@@ -15,7 +19,11 @@
     "artists": [
       "GROUPLOVE"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Tee Shirt (Soundtrack Version)",
@@ -24,7 +32,11 @@
     "artists": [
       "Birdy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "joyful"
+    ]
   },
   {
     "title": "Boom Clap (From the Motion Picture Das Schicksal ist ein mieser Verräter)",
@@ -33,7 +45,11 @@
     "artists": [
       "Charli xcx"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Oblivion",
@@ -42,7 +58,11 @@
     "artists": [
       "Indians"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Not About Angels",
@@ -51,7 +71,11 @@
     "artists": [
       "Birdy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "powerful"
+    ]
   },
   {
     "title": "No One Ever Loved (From the Film \"The Fault in Our Stars\")",
@@ -60,7 +84,11 @@
     "artists": [
       "Lykke Li"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "sad"
+    ]
   },
   {
     "title": "Best Shot",
@@ -70,6 +98,10 @@
       "Birdy",
       "Jaymes Young"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   }
 ]

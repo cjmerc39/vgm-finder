@@ -7,7 +7,11 @@
       "Oscar Isaac",
       "Marcus Mumford"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "nostalgic"
+    ]
   },
   {
     "title": "The Last Thing on My Mind (with Punch Brothers) (feat. Punch Brothers)",
@@ -16,7 +20,11 @@
     "artists": [
       "Stark Sands"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Green, Green Rocky Road",
@@ -25,6 +33,10 @@
     "artists": [
       "Oscar Isaac"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   }
 ]

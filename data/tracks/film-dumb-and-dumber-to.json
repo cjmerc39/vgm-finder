@@ -5,6 +5,10 @@
     "videoId": null,
     "artists": [
       "Empire of the Sun"
+    ],
+    "moods": [
+      "joyful",
+      "powerful"
     ]
   },
   {
@@ -14,7 +18,11 @@
     "artists": [
       "Natural Child"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Right Action",
@@ -23,7 +31,11 @@
     "artists": [
       "Franz Ferdinand"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Mistakes of My Youth",
@@ -32,7 +44,11 @@
     "artists": [
       "Eels"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Cinderella",
@@ -41,7 +57,11 @@
     "artists": [
       "Firefall"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "wonder"
+    ]
   },
   {
     "title": "When I'm Alone",
@@ -50,7 +70,11 @@
     "artists": [
       "Lissie"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Me and You",
@@ -59,7 +83,11 @@
     "artists": [
       "Jake Bugg"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "On the Dark Side",
@@ -68,7 +96,11 @@
     "artists": [
       "John Cafferty & The Beaver Brown Band"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Wandering Star",
@@ -76,6 +108,10 @@
     "videoId": "KvuCinEJJHw",
     "artists": [
       "Empire of the Sun"
+    ],
+    "moods": [
+      "mysterious",
+      "nostalgic"
     ]
   },
   {
@@ -85,7 +121,11 @@
     "artists": [
       "The Dahls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "Tonight",
@@ -93,6 +133,10 @@
     "videoId": "_wXpJJ-VdM8",
     "artists": [
       "Empire of the Sun"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -102,6 +146,9 @@
     "artists": [
       "The Jane Carrey Band"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   }
 ]

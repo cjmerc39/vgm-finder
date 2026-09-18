@@ -6,7 +6,11 @@
     "artists": [
       "Lana Del Rey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "mysterious"
+    ]
   },
   {
     "title": "Bludan",
@@ -15,7 +19,11 @@
     "artists": [
       "Cast Of Big Eyes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Tropicville",
@@ -24,7 +32,11 @@
     "artists": [
       "Cast Of Big Eyes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "I Can Fly",
@@ -33,7 +45,11 @@
     "artists": [
       "Lana Del Rey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Opening",
@@ -41,6 +57,10 @@
     "videoId": "g0oOCP7okUs",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "mysterious",
+      "wonder"
     ]
   },
   {
@@ -49,6 +69,10 @@
     "videoId": "rEktjdSjfEI",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -57,6 +81,10 @@
     "videoId": "5MyogYdeQuM",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -65,6 +93,10 @@
     "videoId": "UC0Lo1zBIu8",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "powerful",
+      "tense"
     ]
   },
   {
@@ -73,6 +105,10 @@
     "videoId": "gyHvVRlheaM",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -81,6 +117,10 @@
     "videoId": "8KEyuOj89MY",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "romantic",
+      "peaceful"
     ]
   }
 ]

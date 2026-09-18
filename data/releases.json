@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T03:13:51Z",
+  "updatedAt": "2026-09-18T03:19:28Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -19699,7 +19699,17 @@
       "ytmPlaylistId": "OLAK5uy_mQbcDjzBLXA1coCWPmCXQ7KrWoF3DUtWQ",
       "medium": "game",
       "tracksN": 25,
-      "playsTotal": 3475000
+      "playsTotal": 3475000,
+      "moods": [
+        "joyful",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        5,
+        5
+      ]
     },
     {
       "id": "dark-souls-iii",
@@ -20486,7 +20496,17 @@
         "Platform"
       ],
       "medium": "game",
-      "tracksN": 4
+      "tracksN": 4,
+      "moods": [
+        "joyful",
+        "playful",
+        "peaceful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ]
     },
     {
       "id": "dragon-age-origins",
@@ -21652,7 +21672,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 14
+      "tracksN": 14,
+      "moods": [
+        "joyful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ]
     },
     {
       "id": "wolfenstein-the-new-order",
@@ -23999,7 +24029,17 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 15
+      "tracksN": 15,
+      "moods": [
+        "driving",
+        "powerful",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ]
     },
     {
       "id": "super-mario-galaxy-2",
@@ -25932,7 +25972,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 22
+      "tracksN": 22,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "heroic"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "metal-gear-solid-4-guns-of-the-patriots",
@@ -30873,7 +30923,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 3
+      "tracksN": 3,
+      "moods": [
+        "playful",
+        "mysterious",
+        "wonder"
+      ],
+      "moodsN": [
+        3,
+        2,
+        1
+      ]
     },
     {
       "id": "payday-2",
@@ -43852,7 +43912,17 @@
       "ytmPlaylistId": "OLAK5uy_nSP23ygzgk7xBOjp0W0TzTdsa8guScT3w",
       "medium": "game",
       "tracksN": 17,
-      "playsTotal": 211800
+      "playsTotal": 211800,
+      "moods": [
+        "driving",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "spyro-year-of-the-dragon",
@@ -51964,7 +52034,17 @@
       "ytmPlaylistId": "OLAK5uy_kIndpvJ79bhUDtOqyxq5kHz2UlxJL0UNY",
       "medium": "game",
       "tracksN": 20,
-      "playsTotal": 2649700
+      "playsTotal": 2649700,
+      "moods": [
+        "heroic",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "human-fall-flat",
@@ -53677,7 +53757,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 6
+      "tracksN": 6,
+      "moods": [
+        "joyful",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "pokémon-yellow-version-special-pikachu-edition",
@@ -53973,7 +54063,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 7
+      "tracksN": 7,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "world-of-warcraft-cataclysm",
@@ -55045,7 +55145,17 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 1
+      "tracksN": 1,
+      "moods": [
+        "powerful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "minecraft-dungeons",
@@ -55952,7 +56062,17 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 14
+      "tracksN": 14,
+      "moods": [
+        "joyful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "metroid-samus-returns",
@@ -56318,7 +56438,17 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 48
+      "tracksN": 48,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        26,
+        17,
+        13
+      ]
     },
     {
       "id": "pokémon-ranger",
@@ -56481,7 +56611,15 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 2
+      "tracksN": 2,
+      "moods": [
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        2,
+        2
+      ]
     },
     {
       "id": "metroid-ii-return-of-samus",
@@ -58098,7 +58236,17 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 96
+      "tracksN": 96,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        39,
+        28,
+        22
+      ]
     },
     {
       "id": "mortal-kombat-shaolin-monks",
@@ -88640,7 +88788,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "tense",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-inception",
@@ -88892,7 +89050,17 @@
       "albumArtists": [
         "Tyler Bates"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "powerful",
+        "heroic",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-the-matrix",
@@ -89135,7 +89303,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "driving",
+        "powerful",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-avengers-age-of-ultron",
@@ -89175,7 +89353,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "powerful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        8,
+        6
+      ]
     },
     {
       "id": "film-the-dark-knight-rises",
@@ -89258,7 +89446,17 @@
         "Junkie XL",
         "The Magnificent Six"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-captain-america-civil-war",
@@ -89571,7 +89769,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "joyful",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-iron-man-3",
@@ -89606,7 +89814,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-hunger-games",
@@ -90152,7 +90370,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "playful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        5,
+        5
+      ]
     },
     {
       "id": "film-the-martian",
@@ -90190,7 +90418,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "joyful",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-gladiator",
@@ -90358,7 +90596,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "driving",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-parasite",
@@ -90441,7 +90689,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        13,
+        10,
+        6
+      ]
     },
     {
       "id": "film-harry-potter-and-the-order-of-the-phoenix",
@@ -90854,7 +91112,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-gone-girl",
@@ -90900,7 +91168,17 @@
         "アティカス・ロス",
         "Nine Inch Noize"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        11,
+        9,
+        5
+      ]
     },
     {
       "id": "film-monsters-inc",
@@ -91633,7 +91911,17 @@
         "James Newton-Howard",
         "The Behemoth! Collective"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        7,
+        6
+      ]
     },
     {
       "id": "film-thor-the-dark-world",
@@ -91668,7 +91956,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        15,
+        11,
+        8
+      ]
     },
     {
       "id": "film-split",
@@ -91927,7 +92225,17 @@
         "Peter Anthony",
         "American Federation of Musicians"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        11,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-imitation-game",
@@ -91966,7 +92274,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "film-the-prestige",
@@ -92093,7 +92411,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "joyful",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        12,
+        10,
+        8
+      ]
     },
     {
       "id": "film-spider-man-into-the-spider-verse",
@@ -92500,7 +92828,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "mysterious",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "film-whiplash",
@@ -92538,7 +92876,17 @@
       "composerAliases": [
         " 저스틴 허위츠"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        8,
+        7
+      ]
     },
     {
       "id": "film-world-war-z",
@@ -92577,7 +92925,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-big-hero-6",
@@ -92616,7 +92974,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "joyful",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ]
     },
     {
       "id": "film-spider-man-2",
@@ -92793,7 +93161,17 @@
         "Stephen B. Price",
         "Steve Price"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "driving",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        4,
+        3
+      ]
     },
     {
       "id": "film-x-men-days-of-future-past",
@@ -92834,7 +93212,17 @@
       "composerAliases": [
         "John Verl Ottman"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-departed",
@@ -92915,7 +93303,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-grand-budapest-hotel",
@@ -92953,7 +93351,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "playful",
+        "mysterious",
+        "joyful"
+      ],
+      "moodsN": [
+        15,
+        7,
+        6
+      ]
     },
     {
       "id": "film-charlie-and-the-chocolate-factory",
@@ -93173,7 +93581,17 @@
       "composerAliases": [
         "Howard Leslie Shore"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        6,
+        4
+      ]
     },
     {
       "id": "film-a-quiet-place",
@@ -93403,7 +93821,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        9,
+        8,
+        6
+      ]
     },
     {
       "id": "film-blade-runner",
@@ -93899,7 +94327,17 @@
       "composerAliases": [
         "Portishead"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-hobbit-the-desolation-of-smaug",
@@ -93937,7 +94375,17 @@
       "composerAliases": [
         "Howard Leslie Shore"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-passengers",
@@ -94391,7 +94839,17 @@
         "James Newton-Howard",
         "The Behemoth! Collective"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "tense",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        7,
+        4
+      ]
     },
     {
       "id": "film-incredibles-2",
@@ -94571,7 +95029,17 @@
       "albumArtists": [
         "Ramin Djawadi"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        12,
+        8,
+        8
+      ]
     },
     {
       "id": "film-shrek-2",
@@ -94688,7 +95156,17 @@
         "Junkie XL",
         "The Magnificent Six"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-hunger-games-mockingjay-part-2",
@@ -94822,7 +95300,17 @@
         "Йохан Йоханссон",
         "Jóhann Gunnar Jóhannsson"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        11,
+        8,
+        5
+      ]
     },
     {
       "id": "film-zombieland",
@@ -95096,7 +95584,17 @@
         "Stephen B. Price",
         "Steve Price"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "film-the-shape-of-water",
@@ -95265,7 +95763,17 @@
       "composerAliases": [
         "Joe Bishara"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        19,
+        10,
+        10
+      ]
     },
     {
       "id": "film-jurassic-world-fallen-kingdom",
@@ -95815,7 +96323,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "romantic",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ]
     },
     {
       "id": "film-transformers",
@@ -95930,7 +96448,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-batman",
@@ -96233,7 +96761,17 @@
         "Heitor Teixeira Pereira",
         "Simply Red"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "playful",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        8,
+        5
+      ]
     },
     {
       "id": "film-nightcrawler",
@@ -96273,7 +96811,17 @@
         "James Newton-Howard",
         "The Behemoth! Collective"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "tense",
+        "eerie",
+        "driving"
+      ],
+      "moodsN": [
+        17,
+        8,
+        8
+      ]
     },
     {
       "id": "film-madagascar",
@@ -96434,7 +96982,17 @@
         "M83",
         "Joe Trapanese"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "mysterious",
+        "sad"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-now-you-see-me-2",
@@ -96797,7 +97355,17 @@
       "composerAliases": [
         "Nathaniel Walcott"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "romantic",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-fantastic-beasts-the-crimes-of-grindelwald",
@@ -97237,7 +97805,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        12,
+        11,
+        8
+      ]
     },
     {
       "id": "film-spectre",
@@ -97275,7 +97853,17 @@
       "composerAliases": [
         "Tom Newman"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        14,
+        9,
+        7
+      ]
     },
     {
       "id": "film-the-perks-of-being-a-wallflower",
@@ -97659,7 +98247,17 @@
         "Heitor Teixeira Pereira",
         "Simply Red"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        12,
+        10,
+        9
+      ]
     },
     {
       "id": "film-500-days-of-summer",
@@ -97776,7 +98374,17 @@
         "Йохан Йоханссон",
         "Jóhann Gunnar Jóhannsson"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "transcendent"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-21-jump-street",
@@ -97897,7 +98505,17 @@
       "albumArtists": [
         "John Paesano"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        4
+      ]
     },
     {
       "id": "film-men-in-black-3",
@@ -99119,7 +99737,17 @@
       "albumArtists": [
         "John Powell"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tender",
+        "joyful",
+        "heroic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-snowpiercer",
@@ -99158,7 +99786,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ]
     },
     {
       "id": "film-mulan",
@@ -99419,7 +100057,17 @@
       "composerAliases": [
         "Joe Trapanese"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-million-dollar-baby",
@@ -100199,7 +100847,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "film-free-guy",
@@ -100370,7 +101028,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        6,
+        5
+      ]
     },
     {
       "id": "film-ghostbusters",
@@ -100490,7 +101158,17 @@
       "albumArtists": [
         "Joe Kraemer"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "powerful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "film-the-good-the-bad-and-the-ugly",
@@ -100653,7 +101331,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        5,
+        5,
+        3
+      ]
     },
     {
       "id": "film-sicario",
@@ -100693,7 +101381,17 @@
         "Йохан Йоханссон",
         "Jóhann Gunnar Jóhannsson"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        10,
+        9,
+        4
+      ]
     },
     {
       "id": "film-it-chapter-two",
@@ -100773,7 +101471,17 @@
         "Stephen Rennicks",
         "Brie Larson"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tender",
+        "tense",
+        "sad"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-elysium",
@@ -100811,7 +101519,17 @@
       "composerAliases": [
         "Ruff Argonauts"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        7,
+        6
+      ]
     },
     {
       "id": "film-alien-covenant",
@@ -101959,7 +102677,17 @@
       "albumArtists": [
         "Andrew Lockington"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        8,
+        7
+      ]
     },
     {
       "id": "film-argo",
@@ -102081,7 +102809,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "film-groundhog-day",
@@ -102394,7 +103132,17 @@
       "albumArtists": [
         "Nathan Whitehead"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        12,
+        12,
+        8
+      ]
     },
     {
       "id": "film-spotlight",
@@ -102431,7 +103179,17 @@
       "composerAliases": [
         "Howard Leslie Shore"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-thor-love-and-thunder",
@@ -102792,7 +103550,17 @@
         "DEVO",
         "DEV-O "
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "playful",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        7,
+        5
+      ]
     },
     {
       "id": "film-nobody",
@@ -102970,7 +103738,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-jungle-book",
@@ -103493,7 +104271,17 @@
       "composerAliases": [
         "Teddy Shapiro"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "driving",
+        "tense",
+        "wonder"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-expendables",
@@ -103661,7 +104449,17 @@
       "composerAliases": [
         "DeVotchKa"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "driving",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-the-bourne-supremacy",
@@ -104235,7 +105033,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "film-ted-2",
@@ -104269,7 +105077,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "joyful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        6,
+        4
+      ]
     },
     {
       "id": "film-scary-movie",
@@ -104669,7 +105487,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        10,
+        9,
+        8
+      ]
     },
     {
       "id": "film-fifty-shades-darker",
@@ -104920,7 +105748,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "tense",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "film-bullet-train",
@@ -105804,7 +106642,17 @@
         "Alan Anthony Silvestri",
         "The Behemoth! Collective"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "wonder"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-there-will-be-blood",
@@ -106012,7 +106860,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "film-mystic-river",
@@ -106491,7 +107349,17 @@
       "composerAliases": [
         "Pat Doyle"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "joyful",
+        "playful",
+        "heroic"
+      ],
+      "moodsN": [
+        10,
+        8,
+        5
+      ]
     },
     {
       "id": "film-tomorrowland",
@@ -106530,7 +107398,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "joyful",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-angels-demons",
@@ -106644,7 +107522,17 @@
       "composerAliases": [
         "Teddy Shapiro"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tender",
+        "playful",
+        "romantic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-terminator-3-rise-of-the-machines",
@@ -106889,7 +107777,17 @@
       "composerAliases": [
         "Tom Newman"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        5,
+        3
+      ]
     },
     {
       "id": "film-ad-astra",
@@ -106972,7 +107870,17 @@
         "Elgin Park",
         "Mike Andrews"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "film-the-others",
@@ -107760,7 +108668,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-terminator-salvation",
@@ -107870,7 +108788,17 @@
       "albumArtists": [
         "Trevor Morris"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        9,
+        6
+      ]
     },
     {
       "id": "film-the-age-of-adaline",
@@ -107905,7 +108833,17 @@
       "albumArtists": [
         "Rob Simonsen"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tender",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "film-tropic-thunder",
@@ -108205,7 +109143,17 @@
         "Disasterpeace",
         "Rich Vreeland"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        10,
+        9,
+        7
+      ]
     },
     {
       "id": "film-gattaca",
@@ -108317,7 +109265,17 @@
         "Junkie XL",
         "The Magnificent Six"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "heroic",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-allegiant",
@@ -108560,7 +109518,17 @@
       "albumArtists": [
         "Daniel Pemberton"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-mortal-kombat",
@@ -108684,7 +109652,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        5,
+        2
+      ]
     },
     {
       "id": "film-little-women",
@@ -108974,7 +109952,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "wonder",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "film-ghostbusters-2016",
@@ -109436,7 +110424,17 @@
       "albumArtists": [
         "Nathan Whitehead"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        15,
+        8,
+        7
+      ]
     },
     {
       "id": "film-mrs-doubtfire",
@@ -109783,7 +110781,17 @@
       "composerAliases": [
         "Vestan Pance"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "tense",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-madagascar-3-europe-s-most-wanted",
@@ -110247,7 +111255,17 @@
       "composerAliases": [
         "Joe Bishara"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "eerie",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        19,
+        16,
+        10
+      ]
     },
     {
       "id": "film-ghost-rider",
@@ -110365,7 +111383,17 @@
       "albumArtists": [
         "Ramin Djawadi"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-red-notice",
@@ -110631,7 +111659,17 @@
       "composerAliases": [
         "Daniel Bensi"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        13,
+        11,
+        6
+      ]
     },
     {
       "id": "film-die-hard-2",
@@ -110791,7 +111829,17 @@
       "albumArtists": [
         "Ralf Wengenmayr"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "tender",
+        "romantic",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-what-happened-to-monday",
@@ -111080,7 +112128,17 @@
       "composerAliases": [
         "Teddy Shapiro"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-live-free-or-die-hard",
@@ -111654,7 +112712,17 @@
       "albumArtists": [
         "Steve Jablonsky"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-goonies",
@@ -111771,7 +112839,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "powerful",
+        "eerie"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-hitch",
@@ -112070,7 +113148,17 @@
         "Alan Anthony Silvestri",
         "The Behemoth! Collective"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "heroic",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-fantastic-mr-fox",
@@ -112246,7 +113334,17 @@
       "composerAliases": [
         "Nathaniel Mechaly"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-wizard-of-oz",
@@ -113186,7 +114284,17 @@
         "Stephen B. Price",
         "Steve Price"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "playful",
+        "tense",
+        "joyful"
+      ],
+      "moodsN": [
+        8,
+        6,
+        4
+      ]
     },
     {
       "id": "film-the-island",
@@ -113511,7 +114619,17 @@
       "albumArtists": [
         "Pedro Bromfman"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        10,
+        9
+      ]
     },
     {
       "id": "film-the-transporter",
@@ -113833,7 +114951,17 @@
       "composerAliases": [
         "Michael Danna"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "mysterious",
+        "transcendent"
+      ],
+      "moodsN": [
+        9,
+        6,
+        4
+      ]
     },
     {
       "id": "film-southpaw",
@@ -113870,7 +114998,17 @@
       "composerAliases": [
         "James Roy Horner"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "powerful",
+        "sad",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-creed-ii",
@@ -114074,7 +115212,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "powerful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        6
+      ]
     },
     {
       "id": "film-hook",
@@ -114877,7 +116025,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "sad",
+        "tender",
+        "driving"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ]
     },
     {
       "id": "film-bridget-jones-s-diary",
@@ -115904,7 +117062,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-american-pie-2",
@@ -116371,7 +117539,17 @@
       "composerAliases": [
         "Fernando Velazquez"
       ],
-      "scoresN": 36
+      "scoresN": 36,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        12,
+        12,
+        11
+      ]
     },
     {
       "id": "film-jack-the-giant-slayer",
@@ -116409,7 +117587,17 @@
       "composerAliases": [
         "John Verl Ottman"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "heroic",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-bloodshot",
@@ -116489,7 +117677,17 @@
       "albumArtists": [
         "Dario Marianelli"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "heroic",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-passion-of-the-christ",
@@ -116746,7 +117944,17 @@
       "composerAliases": [
         "Faith No More"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "tender",
+        "nostalgic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-6-underground",
@@ -117095,7 +118303,17 @@
       "composerAliases": [
         "Son Lux"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "mysterious",
+        "tender",
+        "wonder"
+      ],
+      "moodsN": [
+        6,
+        3,
+        3
+      ]
     },
     {
       "id": "film-upgrade",
@@ -117221,7 +118439,17 @@
       "composerAliases": [
         "Thomas Wanker"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        6,
+        6
+      ]
     },
     {
       "id": "film-kingdom-of-heaven",
@@ -119360,7 +120588,17 @@
       "albumArtists": [
         "Steve Jablonsky"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        11,
+        9,
+        7
+      ]
     },
     {
       "id": "film-sing-2",
@@ -119626,7 +120864,17 @@
         "Explosions in the Sky",
         "Steve Jablonsky"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        6,
+        6
+      ]
     },
     {
       "id": "film-the-karate-kid-1984",
@@ -120015,7 +121263,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "eerie"
+      ],
+      "moodsN": [
+        8,
+        7,
+        7
+      ]
     },
     {
       "id": "film-dances-with-wolves",
@@ -120137,7 +121395,17 @@
         "Furst Brothers",
         "The Furst Brothers"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        11,
+        5,
+        5
+      ]
     },
     {
       "id": "film-american-reunion",
@@ -120657,7 +121925,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-mortal-instruments-city-of-bones",
@@ -120695,7 +121973,17 @@
       "composerAliases": [
         "Atli Orvarsson"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-superman-returns",
@@ -120886,7 +122174,17 @@
       "composerAliases": [
         "Nathan Tyler Johnson"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tender",
+        "romantic",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-crow",
@@ -121349,7 +122647,17 @@
       "composerAliases": [
         "    Clint Shorter"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "driving",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-wrath-of-the-titans",
@@ -121502,7 +122810,17 @@
         "Johnny Williams",
         " John Williams Jr. "
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tender",
+        "tense",
+        "nostalgic"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-love-and-monsters",
@@ -121639,7 +122957,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "joyful",
+        "playful",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-stardust",
@@ -122008,7 +123336,17 @@
       "composerAliases": [
         "Tom Newman"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tender",
+        "nostalgic",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-identity",
@@ -122080,7 +123418,17 @@
       "albumArtists": [
         "Joel McNeely"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "playful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-venom-the-last-dance",
@@ -122361,7 +123709,17 @@
       "composerAliases": [
         "Chris Lennertz"
       ],
-      "scoresN": 3
+      "scoresN": 3,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        5,
+        4
+      ]
     },
     {
       "id": "film-into-the-woods",
@@ -122399,7 +123757,17 @@
       "composerAliases": [
         "Stephen Joshua Sondheim"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "tense",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-underworld-awakening",
@@ -122565,7 +123933,17 @@
       "albumArtists": [
         "Daniel Pemberton"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-monster-house",
@@ -122638,7 +124016,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ]
     },
     {
       "id": "film-fracture",
@@ -122971,7 +124359,17 @@
       "composerAliases": [
         "Fernando Velazquez"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "powerful",
+        "heroic",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-invictus",
@@ -123090,7 +124488,17 @@
         "Alan Anthony Silvestri",
         "The Behemoth! Collective"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "mysterious",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-sunshine",
@@ -123314,7 +124722,17 @@
       "composerAliases": [
         "Carter Benedict Burwell"
       ],
-      "scoresN": 2
+      "scoresN": 2,
+      "moods": [
+        "driving",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-chinatown",
@@ -123433,7 +124851,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-crank",
@@ -123553,7 +124981,17 @@
         "Simply Red"
       ],
       "scoresN": 0,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "tender",
+        "romantic",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-yesterday",
@@ -123734,7 +125172,17 @@
       "composerAliases": [
         "DeVotchKa"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tender",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        9,
+        8,
+        6
+      ]
     },
     {
       "id": "film-dear-john",
@@ -124177,7 +125625,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ]
     },
     {
       "id": "film-a-few-good-men",
@@ -124412,7 +125870,17 @@
       "composerAliases": [
         "Joe Trapanese"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-space-jam-a-new-legacy",
@@ -124722,7 +126190,17 @@
       "albumArtists": [
         "Ilan Eshkeri"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-smile",
@@ -126469,7 +127947,17 @@
         "DEVO",
         "DEV-O "
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "joyful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-goosebumps",
@@ -126507,7 +127995,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "playful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-13-hours-the-secret-soldiers-of-benghazi",
@@ -127907,7 +129405,17 @@
       "albumArtists": [
         "Steve Jablonsky"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-blue-velvet",
@@ -128069,7 +129577,17 @@
         "Micachu",
         "ミカチュー"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        5,
+        2
+      ]
     },
     {
       "id": "film-lightyear",
@@ -128639,7 +130157,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "romantic",
+        "playful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-monuments-men",
@@ -128678,7 +130206,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-teenage-mutant-ninja-turtles-out-of-the-shadows",
@@ -128967,7 +130505,17 @@
       "albumArtists": [
         "John Powell"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "joyful",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-rush-hour-3",
@@ -129600,7 +131148,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "joyful",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        11,
+        8,
+        7
+      ]
     },
     {
       "id": "film-shazam-fury-of-the-gods",
@@ -130674,7 +132232,17 @@
         "Junkie XL",
         "The Magnificent Six"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        6,
+        5
+      ]
     },
     {
       "id": "film-johnny-english-reborn",
@@ -130745,7 +132313,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 6
+      "scoresN": 6,
+      "moods": [
+        "joyful",
+        "wonder",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "film-army-of-darkness",
@@ -131146,7 +132724,17 @@
       "albumArtists": [
         "Rob Simonsen"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-predator-badlands",
@@ -131724,7 +133312,17 @@
       "albumArtists": [
         "Kristin Øhrn Dyrud"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        7,
+        7,
+        4
+      ]
     },
     {
       "id": "film-the-abyss",
@@ -131885,7 +133483,17 @@
       "composerAliases": [
         "Daniel Bensi"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        11,
+        11,
+        4
+      ]
     },
     {
       "id": "film-knock-knock",
@@ -132122,7 +133730,17 @@
       "composerAliases": [
         "Tom Newman"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "playful",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        12,
+        9,
+        7
+      ]
     },
     {
       "id": "film-gran-turismo",
@@ -132261,7 +133879,17 @@
         "Wills",
         "Fall On Your Sword"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-tag",
@@ -132802,7 +134430,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 3
+      "scoresN": 3,
+      "moods": [
+        "tender",
+        "romantic",
+        "joyful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "film-big-trouble-in-little-china",
@@ -133119,7 +134757,17 @@
         "久石穣",
         "久石 譲"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "tender",
+        "romantic",
+        "nostalgic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-reader",
@@ -133450,7 +135098,17 @@
       "composerAliases": [
         "    Clint Shorter"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "powerful",
+        "tender",
+        "sad"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-deep-impact",
@@ -133621,7 +135279,17 @@
         "Alan Anthony Silvestri",
         "The Behemoth! Collective"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tender",
+        "tense",
+        "transcendent"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-house-of-wax",
@@ -134575,7 +136243,17 @@
       "composerAliases": [
         "Mark Ware Isham"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "romantic",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        8,
+        8,
+        6
+      ]
     },
     {
       "id": "film-self-less",
@@ -134616,7 +136294,17 @@
         "Eduardo Aram",
         "Antonio Alves Pinto"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        4,
+        4
+      ]
     },
     {
       "id": "film-charlie-s-angels-full-throttle",
@@ -134776,7 +136464,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-world-is-not-enough",
@@ -134914,7 +136612,17 @@
       "albumArtists": [
         "Ilan Eshkeri"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "peaceful",
+        "tender",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-thing-2011",
@@ -135120,7 +136828,17 @@
       "albumArtists": [
         "Michael Brook"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tender",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-beetlejuice-beetlejuice",
@@ -136814,7 +138532,17 @@
         "Dan Lopatin",
         "Chuck Person"
       ],
-      "scoresN": 2
+      "scoresN": 2,
+      "moods": [
+        "driving",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-devil",
@@ -136928,7 +138656,17 @@
       "composerAliases": [
         "Pat Doyle"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        12,
+        9,
+        8
+      ]
     },
     {
       "id": "film-wallace-gromit-the-curse-of-the-were-rabbit",
@@ -137005,7 +138743,17 @@
         "Evgeniy Galperin",
         "Evgueni Gasperine"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "powerful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-30-days-of-night",
@@ -137205,7 +138953,17 @@
       "albumArtists": [
         "James L. Venable"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-red-one",
@@ -137424,7 +139182,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tender",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        9,
+        6
+      ]
     },
     {
       "id": "film-magic-mike",
@@ -137571,7 +139339,17 @@
       "albumArtists": [
         "John Debney"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "eerie",
+        "driving"
+      ],
+      "moodsN": [
+        14,
+        7,
+        5
+      ]
     },
     {
       "id": "film-bridget-jones-s-baby",
@@ -138123,7 +139901,17 @@
       "albumArtists": [
         "Carlos Rafael Rivera"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        5,
+        3
+      ]
     },
     {
       "id": "film-anna",
@@ -138244,7 +140032,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tender",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-don-t-worry-darling",
@@ -138947,7 +140745,17 @@
         "Junkie XL",
         "The Magnificent Six"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        4,
+        4
+      ]
     },
     {
       "id": "film-let-s-be-cops",
@@ -138984,7 +140792,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "heroic",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "film-the-housemaid",
@@ -139174,7 +140992,17 @@
       "composerAliases": [
         "Dickon Hinchcliffe"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-little-prince",
@@ -139219,7 +141047,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "tender",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "film-american-ultra",
@@ -139260,7 +141098,17 @@
         "Marcelo U. Zarvos",
         "Orbital "
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        7,
+        7
+      ]
     },
     {
       "id": "film-sunset-boulevard",
@@ -139443,7 +141291,17 @@
       "albumArtists": [
         "Gustavo Santaolalla"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tender",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        7,
+        7
+      ]
     },
     {
       "id": "film-epic",
@@ -139483,7 +141341,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "driving",
+        "wonder"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-tinker-tailor-soldier-spy",
@@ -139830,7 +141698,17 @@
         "thenewno2"
       ],
       "composersFrom": "album",
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "eerie"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "film-creed-iii",
@@ -141308,7 +143186,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "powerful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-anaconda",
@@ -141458,7 +143346,17 @@
       "albumArtists": [
         "John Powell"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "driving",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-death-wish",
@@ -142422,7 +144320,17 @@
       "albumArtists": [
         "Anton Sanko"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        4
+      ]
     },
     {
       "id": "film-alpha",
@@ -142548,7 +144456,17 @@
       "composerAliases": [
         "Mark Daniel Ronson"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "playful",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "film-elite-squad",
@@ -142718,7 +144636,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        13,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-ides-of-march",
@@ -142849,7 +144777,17 @@
         "Radiohead",
         "The Smile"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tender"
+      ],
+      "moodsN": [
+        10,
+        2,
+        2
+      ]
     },
     {
       "id": "film-after-we-fell",
@@ -143232,7 +145170,17 @@
       "albumArtists": [
         "David Torn"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "tender",
+        "joyful",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-hardcore-henry",
@@ -143279,7 +145227,17 @@
         "Дарья Симаненко",
         "Dasha Naishuller"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "powerful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        14,
+        10,
+        6
+      ]
     },
     {
       "id": "film-pandorum",
@@ -143836,7 +145794,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "peaceful",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-pearl",
@@ -144160,7 +146128,17 @@
       "composerAliases": [
         "Joe Trapanese"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        9,
+        8
+      ]
     },
     {
       "id": "film-it-comes-at-night",
@@ -144672,7 +146650,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-rings",
@@ -145076,7 +147064,17 @@
       "albumArtists": [
         "Cliff Martinez"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-juror-2",
@@ -145206,7 +147204,17 @@
         "Steven Craig Zahler",
         "Czar"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "tense",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-priest",
@@ -145689,7 +147697,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "playful",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-the-spongebob-movie-sponge-out-of-water",
@@ -145724,7 +147742,17 @@
       "albumArtists": [
         "John Debney"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "playful",
+        "joyful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ]
     },
     {
       "id": "film-the-space-between-us",
@@ -146987,7 +149015,17 @@
       "composerAliases": [
         "Antonio Alves Pinto"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        5,
+        4
+      ]
     },
     {
       "id": "film-doom",
@@ -147297,7 +149335,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tender",
+        "peaceful",
+        "romantic"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ]
     },
     {
       "id": "film-the-lego-movie-2-the-second-part",
@@ -147651,7 +149699,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "driving",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-stoker",
@@ -147689,7 +149747,17 @@
       "composerAliases": [
         "Vestan Pance"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "mysterious",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        6,
+        3
+      ]
     },
     {
       "id": "film-ghosts-of-girlfriends-past",
@@ -147866,7 +149934,17 @@
       "composerAliases": [
         "Chris Lennertz"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "powerful",
+        "playful"
+      ],
+      "moodsN": [
+        11,
+        7,
+        5
+      ]
     },
     {
       "id": "film-herbie-fully-loaded",
@@ -148445,7 +150523,17 @@
         "SQÜRL",
         "Jozef Van Wissem"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-spartacus",
@@ -148993,7 +151081,17 @@
         "たかなし やすはる",
         "刃-yaiba-"
       ],
-      "scoresN": 41
+      "scoresN": 41,
+      "moods": [
+        "peaceful",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        8,
+        8
+      ]
     },
     {
       "id": "film-the-snowman",
@@ -149121,7 +151219,17 @@
         "Heitor Teixeira Pereira",
         "Simply Red"
       ],
-      "scoresN": 41
+      "scoresN": 41,
+      "moods": [
+        "playful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        8,
+        8
+      ]
     },
     {
       "id": "film-burlesque",
@@ -150165,7 +152273,17 @@
         "Tom and Andy",
         "tomandandy"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        17,
+        15,
+        11
+      ]
     },
     {
       "id": "film-pride-and-prejudice-and-zombies",
@@ -151076,7 +153194,17 @@
         "DEVO",
         "DEV-O "
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "playful",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        10,
+        8,
+        5
+      ]
     },
     {
       "id": "film-migration",
@@ -152517,7 +154645,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 4
+      "scoresN": 4,
+      "moods": [
+        "peaceful",
+        "tender",
+        "romantic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-dragonball-evolution",
@@ -153227,7 +155365,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-abominable",
@@ -153942,7 +156090,17 @@
       "composerAliases": [
         "Matt Margeson"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-slender-man",
@@ -154340,7 +156498,17 @@
       "composerAliases": [
         "Dickon Hinchcliffe"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-swapped",
@@ -154762,7 +156930,17 @@
       "composerAliases": [
         "Teddy Shapiro"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tender",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-boy-next-door",
@@ -154797,7 +156975,17 @@
         "Randy Edelman",
         "Nathan Barr"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "romantic",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        4,
+        4
+      ]
     },
     {
       "id": "film-end-of-days",
@@ -155394,7 +157582,17 @@
         "Джонни Клаймек",
         "Johny Klimek"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        8,
+        8
+      ]
     },
     {
       "id": "film-luck",
@@ -155725,7 +157923,17 @@
         "Robert Anthony Rodriguez ",
         "Robert Anthony Rodríguez"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        7,
+        7
+      ]
     },
     {
       "id": "film-friday",
@@ -156976,7 +159184,17 @@
       "composerAliases": [
         "Nathaniel Walcott"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tender",
+        "playful",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-tale-of-the-princess-kaguya",
@@ -157019,7 +159237,17 @@
         "久石穣",
         "久石 譲"
       ],
-      "scoresN": 37
+      "scoresN": 37,
+      "moods": [
+        "tender",
+        "peaceful",
+        "transcendent"
+      ],
+      "moodsN": [
+        11,
+        9,
+        8
+      ]
     },
     {
       "id": "film-little-nicky",
@@ -157265,7 +159493,17 @@
       "albumArtists": [
         "Daniel Pemberton"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        7,
+        5
+      ]
     },
     {
       "id": "film-elle",
@@ -157473,7 +159711,17 @@
       "composerAliases": [
         "Joe Bishara"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        12,
+        7,
+        7
+      ]
     },
     {
       "id": "film-the-idea-of-you",
@@ -157562,7 +159810,17 @@
         "Jeffrey Cardoni",
         "Jeffrey E. Cardoni"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tender",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-miss-sloane",
@@ -157724,7 +159982,17 @@
       "albumArtists": [
         "Takatsugu Muramatsu"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "tender",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        14,
+        9,
+        8
+      ]
     },
     {
       "id": "film-justice-league-the-flashpoint-paradox",
@@ -157759,7 +160027,17 @@
       "albumArtists": [
         "Frederik Wiedmann"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "powerful",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "film-before-i-wake",
@@ -157900,7 +160178,17 @@
       "composerAliases": [
         "Mark Ware Isham"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "heroic",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-secretary",
@@ -158062,7 +160350,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 3
+      "scoresN": 3,
+      "moods": [
+        "powerful",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-reminiscence",
@@ -158177,7 +160475,17 @@
       "albumArtists": [
         "Rob Simonsen"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "joyful",
+        "tender",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-from-up-on-poppy-hill",
@@ -158843,7 +161151,17 @@
       "albumArtists": [
         "Mark Orton"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "mysterious",
+        "tender",
+        "nostalgic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-friday-the-13th-part-2",
@@ -159308,7 +161626,17 @@
       "albumArtists": [
         "Olivier Bernet"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-running-man-2025",
@@ -159874,7 +162202,17 @@
       "albumArtists": [
         "Dan Romer"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-boy-who-harnessed-the-wind",
@@ -160514,7 +162852,17 @@
       "albumArtists": [
         "Nima Fakhrara"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        8,
+        5
+      ]
     },
     {
       "id": "film-sphere",
@@ -160990,7 +163338,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-what-to-expect-when-you-re-expecting",
@@ -161176,7 +163534,17 @@
       "albumArtists": [
         "Mark Mancina"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "joyful",
+        "heroic",
+        "playful"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-ice-age-adventures-of-buck-wild",
@@ -161809,7 +164177,17 @@
       "albumArtists": [
         "Jon Ekstrand"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        11,
+        8,
+        4
+      ]
     },
     {
       "id": "film-the-boxtrolls",
@@ -161844,7 +164222,17 @@
       "albumArtists": [
         "Dario Marianelli"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "playful",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        11,
+        8,
+        5
+      ]
     },
     {
       "id": "film-driving-miss-daisy",
@@ -161919,7 +164307,17 @@
       "albumArtists": [
         "Zacarias M. de la Riva"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "mysterious",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-get-the-gringo",
@@ -162253,7 +164651,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "playful",
+        "eerie",
+        "driving"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-just-friends",
@@ -162382,7 +164790,17 @@
       "composerAliases": [
         "DeVotchKa"
       ],
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "playful",
+        "mysterious",
+        "joyful"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-duchess",
@@ -162582,7 +165000,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "joyful",
+        "playful",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-on-the-waterfront",
@@ -163312,7 +165740,17 @@
       "albumArtists": [
         "Alex Ebert"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "peaceful",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "film-beast",
@@ -164241,7 +166679,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "joyful",
+        "tender",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-super",
@@ -164347,7 +166795,17 @@
       "albumArtists": [
         "David Hirschfelder"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tender",
+        "playful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-sweet-home-alabama",
@@ -165287,7 +167745,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tender",
+        "peaceful",
+        "sad"
+      ],
+      "moodsN": [
+        8,
+        6,
+        4
+      ]
     },
     {
       "id": "film-hit-man-2024",
@@ -165475,7 +167943,17 @@
         "Joe Loduca",
         "Joseph Loduca"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        11,
+        7
+      ]
     },
     {
       "id": "film-mother",
@@ -165599,7 +168077,17 @@
       "albumArtists": [
         "Ramin Kousha"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ]
     },
     {
       "id": "film-the-possession",
@@ -165971,7 +168459,17 @@
       "composerAliases": [
         "Teddy Shapiro"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        8,
+        6
+      ]
     },
     {
       "id": "film-the-art-of-racing-in-the-rain",
@@ -166444,7 +168942,17 @@
       "albumArtists": [
         "David Wingo"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        6,
+        6
+      ]
     },
     {
       "id": "film-texas-chainsaw-massacre-2022",
@@ -166883,7 +169391,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-bewitched",
@@ -167160,7 +169678,17 @@
         "The Blair Brothers",
         "The Blair Brothers"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        13,
+        8,
+        6
+      ]
     },
     {
       "id": "film-a-nightmare-on-elm-street-4-the-dream-master",
@@ -167385,7 +169913,17 @@
       "composerAliases": [
         "たかなし やすはる"
       ],
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "powerful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        10,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-uninvited",
@@ -168381,7 +170919,17 @@
       "albumArtists": [
         "John Debney"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        16,
+        9,
+        8
+      ]
     },
     {
       "id": "film-shin-godzilla",
@@ -168553,7 +171101,17 @@
       "composerAliases": [
         "Masakatsu Takagi"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "tender",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        10,
+        7,
+        7
+      ]
     },
     {
       "id": "film-the-interpreter",
@@ -168628,7 +171186,17 @@
         "Alexandre Azaria"
       ],
       "composersFrom": "album",
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        11,
+        7,
+        7
+      ]
     },
     {
       "id": "film-alive",
@@ -168903,7 +171471,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        12,
+        4,
+        4
+      ]
     },
     {
       "id": "film-backdraft",
@@ -169236,7 +171814,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-august-osage-county",
@@ -169270,7 +171858,17 @@
       "albumArtists": [
         "Gustavo Santaolalla"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tender",
+        "peaceful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ]
     },
     {
       "id": "film-song-of-the-sea",
@@ -169305,7 +171903,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tender",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-centurion",
@@ -169796,7 +172404,17 @@
       "albumArtists": [
         "Bear McCreary"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "transcendent",
+        "wonder"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-broken-city",
@@ -169912,7 +172530,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "mysterious",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-strange-days",
@@ -170984,7 +173612,17 @@
         "ஏ. ஆர். ரகுமான்",
         "A. R. Rahman"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "romantic",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-out-of-africa",
@@ -171315,7 +173953,17 @@
       "albumArtists": [
         "Lyle Workman"
       ],
-      "scoresN": 32
+      "scoresN": 32,
+      "moods": [
+        "playful",
+        "joyful",
+        "wonder"
+      ],
+      "moodsN": [
+        11,
+        10,
+        5
+      ]
     },
     {
       "id": "film-halloween-ii",
@@ -171778,7 +174426,17 @@
       "albumArtists": [
         "Sarah Schachner"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-girl-in-the-spider-s-web",
@@ -171999,7 +174657,17 @@
       "albumArtists": [
         "David Sardy"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        15,
+        9,
+        6
+      ]
     },
     {
       "id": "film-jason-x",
@@ -172114,7 +174782,17 @@
       "albumArtists": [
         "Various"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "driving",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "film-friday-the-13th-the-final-chapter",
@@ -172185,7 +174863,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        16,
+        7,
+        7
+      ]
     },
     {
       "id": "film-star-trek-generations",
@@ -172457,7 +175145,17 @@
       "albumArtists": [
         "Jed Kurzel"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "eerie",
+        "tense",
+        "mournful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-awakening",
@@ -173044,7 +175742,17 @@
       "composerAliases": [
         "ヘルバート・グリューネマイヤー"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        14,
+        12,
+        3
+      ]
     },
     {
       "id": "film-haywire",
@@ -174323,7 +177031,17 @@
       "albumArtists": [
         "Warren Ellis"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "eerie",
+        "driving"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "film-greta",
@@ -174459,7 +177177,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tender",
+        "nostalgic",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-fruitvale-station",
@@ -174497,7 +177225,17 @@
         "Ludwig Emil Tomas Göransson",
         "לודוויג אמיל תומאס גורנסון"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tender",
+        "joyful",
+        "tense"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "film-the-unborn",
@@ -174909,7 +177647,17 @@
       "albumArtists": [
         "Emilio Kauderer"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        17,
+        7,
+        7
+      ]
     },
     {
       "id": "film-top-secret",
@@ -175433,7 +178181,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "film-superman-iv-the-quest-for-peace",
@@ -176285,7 +179043,17 @@
       "albumArtists": [
         "Andrew Kaiser"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "mysterious",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-legend-1985",
@@ -176444,7 +179212,17 @@
       "albumArtists": [
         "Gregory James Jenkins"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "playful",
+        "joyful",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-kill-your-darlings",
@@ -176479,7 +179257,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "tense",
+        "nostalgic",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ]
     },
     {
       "id": "film-the-upside",
@@ -176664,7 +179452,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "peaceful",
+        "tender",
+        "transcendent"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "film-materialists",
@@ -176937,7 +179735,17 @@
       "albumArtists": [
         "Tuomas Kantelinen"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "heroic",
+        "powerful",
+        "transcendent"
+      ],
+      "moodsN": [
+        5,
+        5,
+        2
+      ]
     },
     {
       "id": "film-fifty-shades-of-black",
@@ -178206,7 +181014,17 @@
       "albumArtists": [
         "Nils Frahm"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "tense",
+        "powerful",
+        "eerie"
+      ],
+      "moodsN": [
+        7,
+        3,
+        2
+      ]
     },
     {
       "id": "film-a-lot-like-love",
@@ -178402,7 +181220,17 @@
       "composerAliases": [
         "Greg Tripi"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        11,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-night-house",
@@ -178705,7 +181533,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "tender",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-wrong-turn-2021",
@@ -178877,7 +181715,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-art-of-getting-by",
@@ -180498,7 +183346,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        9,
+        7
+      ]
     },
     {
       "id": "film-no-exit",
@@ -180820,7 +183678,17 @@
       "composerAliases": [
         "Antonio Alves Pinto"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tender",
+        "mournful",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-bye-bye-man",
@@ -182421,7 +185289,17 @@
         "Elgin Park",
         "Mike Andrews"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-the-meyerowitz-stories-new-and-selected",
@@ -184612,7 +187490,17 @@
       "albumArtists": [
         "Max Richter"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "tender",
+        "peaceful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ]
     },
     {
       "id": "film-pretty-in-pink",
@@ -184682,7 +187570,17 @@
       "albumArtists": [
         "David Holmes"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "tense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "film-the-age-of-innocence",
@@ -184940,7 +187838,17 @@
       "albumArtists": [
         "Michael Wandmacher"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        14,
+        12,
+        7
+      ]
     },
     {
       "id": "film-the-omen-2006",
@@ -185873,7 +188781,17 @@
       "albumArtists": [
         "Ilan Eshkeri"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        10,
+        6,
+        6
+      ]
     },
     {
       "id": "film-blackfish",
@@ -185906,7 +188824,17 @@
       "albumArtists": [
         "Jeff Beal"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "mournful",
+        "sad"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-queen-of-the-damned",
@@ -186167,7 +189095,17 @@
       "composerAliases": [
         "Robert Kral"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        7,
+        7
+      ]
     },
     {
       "id": "film-stealth",
@@ -186509,7 +189447,17 @@
       "albumArtists": [
         "Kevin Kliesch"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "powerful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "film-freelance",
@@ -187250,7 +190198,17 @@
         "Ben Gibbard",
         "Death Cab for Cutie"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tender",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        5
+      ]
     },
     {
       "id": "film-creepshow",
@@ -187456,7 +190414,17 @@
       "albumArtists": [
         "Satnam Ramgotra & Martin Tillman"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-lakeview-terrace",
@@ -187531,7 +190499,17 @@
       "albumArtists": [
         "Josh Kramon"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        8,
+        6,
+        4
+      ]
     },
     {
       "id": "film-the-iceman",
@@ -187641,7 +190619,17 @@
       "albumArtists": [
         "Frederik Wiedmann"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "heroic",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-water-horse",
@@ -188758,7 +191746,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "romantic",
+        "tender"
+      ],
+      "moodsN": [
+        10,
+        4,
+        4
+      ]
     },
     {
       "id": "film-luther-the-fallen-sun",
@@ -189746,7 +192744,17 @@
       "albumArtists": [
         "Lucas Vidal"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-flash-gordon",
@@ -189863,7 +192871,17 @@
       "albumArtists": [
         "Craig Armstrong"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "romantic",
+        "peaceful",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-in-the-valley-of-elah",
@@ -190110,7 +193128,17 @@
       "albumArtists": [
         "Jess Stroup"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ]
     },
     {
       "id": "film-marry-me",
@@ -190395,7 +193423,17 @@
       "composerAliases": [
         "Matt Messina"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-hustler-1961",
@@ -190511,7 +193549,17 @@
       "composerAliases": [
         "Carter Benedict Burwell"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-brave-one",
@@ -190746,7 +193794,17 @@
         "Rayne Shockne",
         "Raney Shockney"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "playful",
+        "romantic",
+        "joyful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        3
+      ]
     },
     {
       "id": "film-the-double",
@@ -190780,7 +193838,17 @@
       "albumArtists": [
         "Andrew Hewitt"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        7,
+        4
+      ]
     },
     {
       "id": "film-beauty-and-the-beast-the-enchanted-christmas",
@@ -191357,7 +194425,17 @@
       "albumArtists": [
         "Patrick Cassidy"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "peaceful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ]
     },
     {
       "id": "film-tremors-2-aftershocks",
@@ -192094,7 +195172,17 @@
         "James Newton-Howard",
         "The Behemoth! Collective"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "tense",
+        "mysterious",
+        "joyful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "film-the-contractor",
@@ -192335,7 +195423,17 @@
       "composerAliases": [
         "Dickon Hinchcliffe"
       ],
-      "scoresN": 3
+      "scoresN": 3,
+      "moods": [
+        "joyful",
+        "romantic",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-dick-tracy",
@@ -192618,7 +195716,17 @@
         "Marco Edward Beltrami",
         "The Behemoth! Collective"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        7,
+        7,
+        7
+      ]
     },
     {
       "id": "film-my-octopus-teacher",
@@ -192908,7 +196016,17 @@
       "composerAliases": [
         "Bryan Mills"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tender",
+        "mysterious",
+        "nostalgic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "film-young-guns",
@@ -193325,7 +196443,17 @@
         "Richard Clayderman",
         "Michael Bolton"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tender",
+        "tense",
+        "sad"
+      ],
+      "moodsN": [
+        11,
+        7,
+        5
+      ]
     },
     {
       "id": "film-stripes",
@@ -193853,7 +196981,17 @@
         "Jeff McIlwain",
         "David Wingo"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "sad"
+      ],
+      "moodsN": [
+        8,
+        6,
+        4
+      ]
     },
     {
       "id": "film-a-cinderella-story-once-upon-a-song",
@@ -196806,7 +199944,17 @@
         "David Mackenzie"
       ],
       "composersFrom": "album",
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "sad",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        3,
+        3
+      ]
     },
     {
       "id": "film-i-am-not-an-easy-man",
@@ -197021,7 +200169,17 @@
       "albumArtists": [
         "John Debney"
       ],
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        14,
+        9,
+        5
+      ]
     },
     {
       "id": "film-the-hills-have-eyes",
@@ -197309,7 +200467,17 @@
       "albumArtists": [
         "Heather McIntosh"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "peaceful",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-enforcer",
@@ -197990,7 +201158,17 @@
       "albumArtists": [
         "Frederik Wiedmann"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-jeepers-creepers-3",
@@ -198313,7 +201491,17 @@
       "albumArtists": [
         "Andrew Hewitt"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "sad",
+        "eerie"
+      ],
+      "moodsN": [
+        17,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-33",
@@ -198350,7 +201538,17 @@
       "composerAliases": [
         "James Roy Horner"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "heroic",
+        "peaceful",
+        "tender"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-valiant",
@@ -229576,7 +232774,17 @@
         "Incubus",
         "The Magnificent Six"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ]
     },
     {
       "id": "film-there-s-still-tomorrow",
@@ -230039,7 +233247,17 @@
       "albumArtists": [
         "Alex Heffes"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-resident-evil-death-island",
@@ -231401,7 +234619,17 @@
         "Dog Blood",
         "From First to Last"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "mysterious",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-horton-hears-a-who",
@@ -231559,7 +234787,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 2
+      "scoresN": 2,
+      "moods": [
+        "tender",
+        "romantic",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        3
+      ]
     },
     {
       "id": "film-slumdog-millionaire",
@@ -231829,7 +235067,17 @@
         "James Newton-Howard",
         "The Behemoth! Collective"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        8,
+        7
+      ]
     },
     {
       "id": "film-tinker-bell",
@@ -231937,7 +235185,17 @@
       "albumArtists": [
         "Graham Reynolds"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "romantic",
+        "tender",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-o-brother-where-art-thou",
@@ -232452,7 +235710,17 @@
         "William Butler",
         "Arcade Fire"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tender",
+        "sad",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-pom-poko",
@@ -232643,7 +235911,17 @@
         "George Howe",
         "George Richard Ian Howe"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-maps-to-the-stars",
@@ -232679,7 +235957,17 @@
       "composerAliases": [
         "Howard Leslie Shore"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "film-a-goofy-movie",
@@ -233188,7 +236476,17 @@
         "Marco Edward Beltrami",
         "Philip Morris Glass"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "wonder",
+        "transcendent"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "film-return-to-never-land",
@@ -233375,7 +236673,17 @@
       "composerAliases": [
         "Joel P West"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tender",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        10,
+        6,
+        4
+      ]
     },
     {
       "id": "film-it-boy",
@@ -233408,7 +236716,17 @@
       "albumArtists": [
         "Guillaume Roussel"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "romantic",
+        "powerful",
+        "joyful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-star-trek-vi-the-undiscovered-country",
@@ -233481,7 +236799,17 @@
       "composerAliases": [
         "Philipp Fabian Kölmel "
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "mysterious",
+        "romantic",
+        "eerie"
+      ],
+      "moodsN": [
+        13,
+        6,
+        6
+      ]
     },
     {
       "id": "film-captain-america-the-first-avenger",
@@ -233789,7 +237117,17 @@
         "DEVO",
         "DEV-O "
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        6,
+        6
+      ]
     },
     {
       "id": "film-return-of-the-jedi",
@@ -234178,7 +237516,17 @@
       "albumArtists": [
         "Pierre Adenot"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "joyful",
+        "mysterious",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-fantastic-four-rise-of-the-silver-surfer",
@@ -234704,7 +238052,17 @@
         "Carl Newman",
         "AC Newman"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "playful",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        3
+      ]
     },
     {
       "id": "film-toy-story-of-terror",
@@ -234743,7 +238101,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        2
+      ]
     },
     {
       "id": "film-possession",
@@ -235055,7 +238423,17 @@
       "composerAliases": [
         "Luca Pasquale Medici"
       ],
-      "scoresN": 4
+      "scoresN": 4,
+      "moods": [
+        "joyful",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ]
     },
     {
       "id": "film-marshland",
@@ -235090,7 +238468,17 @@
       "albumArtists": [
         "Julio de la Rosa"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        12,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-mafia-kills-only-in-summer",
@@ -235125,7 +238513,17 @@
       "albumArtists": [
         "Santi Pulvirenti"
       ],
-      "scoresN": 41
+      "scoresN": 41,
+      "moods": [
+        "tense",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        12,
+        9,
+        9
+      ]
     },
     {
       "id": "film-the-chronicles-of-narnia-prince-caspian",
@@ -235197,7 +238595,17 @@
       "albumArtists": [
         "Klaus Badelt"
       ],
-      "scoresN": 51
+      "scoresN": 51,
+      "moods": [
+        "tender",
+        "tense",
+        "playful"
+      ],
+      "moodsN": [
+        15,
+        13,
+        10
+      ]
     },
     {
       "id": "film-the-princess-bride",
@@ -235386,7 +238794,17 @@
       "composerAliases": [
         "LCD Soundsystem"
       ],
-      "scoresN": 3
+      "scoresN": 3,
+      "moods": [
+        "joyful",
+        "nostalgic",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-king-kong-2005",
@@ -235466,7 +238884,17 @@
         "DEVO",
         "DEV-O "
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "joyful",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        10,
+        7
+      ]
     },
     {
       "id": "film-tinker-bell-and-the-lost-treasure",
@@ -235629,7 +239057,17 @@
         "David Nessim Lawrence",
         "David N. Lawrence"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "playful",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        3
+      ]
     },
     {
       "id": "film-the-shawshank-redemption",
@@ -235706,7 +239144,17 @@
         "Philipp Fabian Kölmel "
       ],
       "scoresN": 12,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "tender",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-terminator-2-judgment-day",
@@ -235781,7 +239229,17 @@
       "composerAliases": [
         "Joe Bishara"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        13,
+        11,
+        9
+      ]
     },
     {
       "id": "film-guardians-of-the-galaxy-vol-2",
@@ -235903,7 +239361,17 @@
         "Gerald Schönfeldinger",
         "Olga Neuwirth"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        9,
+        6
+      ]
     },
     {
       "id": "film-who-am-i",
@@ -235940,7 +239408,17 @@
         "Michi Kamm",
         "Pas de Deux"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        14,
+        9,
+        7
+      ]
     },
     {
       "id": "film-pirates-of-the-caribbean-at-world-s-end",
@@ -236117,7 +239595,17 @@
         "Ajay–Atul",
         "Ajay − Atul"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "playful",
+        "romantic",
+        "sad"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "film-tinker-bell-and-the-legend-of-the-neverbeast",
@@ -236152,7 +239640,17 @@
       "albumArtists": [
         "Joel McNeely"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "joyful",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-becoming-jane",
@@ -236263,7 +239761,17 @@
         "Evgeniy Galperin",
         "Evgueni Gasperine"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "joyful",
+        "playful",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-broken-flowers",
@@ -236372,7 +239880,17 @@
       "albumArtists": [
         "Enis Rotthoff"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "driving",
+        "tense",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-john-wick-chapter-2",
@@ -236897,7 +240415,17 @@
       "albumArtists": [
         "Paolo Vivaldi"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "mysterious",
+        "sad"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-i-know-what-you-did-last-summer",
@@ -241135,7 +244663,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "heroic",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "film-war-horse",
@@ -241497,7 +245035,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "driving",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-p-s-i-love-you",
@@ -241935,7 +245483,17 @@
       "composerAliases": [
         "Randall Stuart Newman"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "powerful",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ]
     },
     {
       "id": "film-easy-rider",
@@ -242378,7 +245936,17 @@
       "albumArtists": [
         "Craig Armstrong"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "romantic",
+        "nostalgic",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-take-shelter",
@@ -243364,7 +246932,17 @@
       "composerAliases": [
         "Antonio Alves Pinto"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "mysterious",
+        "peaceful",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-lincoln",
@@ -243813,7 +247391,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-percy-jackson-sea-of-monsters",
@@ -243848,7 +247436,17 @@
       "albumArtists": [
         "Andrew Lockington"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "joyful",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-paranorman",
@@ -244523,7 +248121,17 @@
         "James Newton-Howard",
         "The Behemoth! Collective"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        6,
+        6
+      ]
     },
     {
       "id": "film-american-wedding",
@@ -244599,7 +248207,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "driving",
+        "powerful",
+        "joyful"
+      ],
+      "moodsN": [
+        10,
+        3,
+        3
+      ]
     },
     {
       "id": "film-ice-age-dawn-of-the-dinosaurs",
@@ -244939,7 +248557,17 @@
       "composerAliases": [
         "Vestan Pance"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "film-toy-story-2",
@@ -245053,7 +248681,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "playful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "film-amour",
@@ -245721,7 +249359,17 @@
       "albumArtists": [
         "Steve Jablonsky"
       ],
-      "scoresN": 4
+      "scoresN": 4,
+      "moods": [
+        "powerful",
+        "heroic",
+        "nostalgic"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "film-insidious-chapter-2",
@@ -245758,7 +249406,17 @@
       "composerAliases": [
         "Joe Bishara"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        16,
+        14,
+        9
+      ]
     },
     {
       "id": "film-the-sting",
@@ -246783,7 +250441,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "playful",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-princess-diaries",
@@ -262575,7 +266243,17 @@
         "Javier Navarrete",
         "Simon Chamberlain"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "mysterious",
+        "tender",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-thinner",
@@ -262678,7 +266356,17 @@
       "albumArtists": [
         "David Wingo"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "driving",
+        "sad"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-people-we-meet-on-vacation",
@@ -263124,7 +266812,17 @@
         "David Lee Roth Band",
         "Mötley Crüe"
       ],
-      "scoresN": 6
+      "scoresN": 6,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        10,
+        5,
+        4
+      ]
     },
     {
       "id": "film-driven",
@@ -266313,7 +270011,17 @@
       "composerAliases": [
         "Chris Lennertz"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tender",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-in-the-grey",
@@ -267626,7 +271334,17 @@
         "Junkie XL",
         "The Magnificent Six"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "mysterious",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        3
+      ]
     },
     {
       "id": "film-death-of-a-unicorn",
@@ -271987,7 +275705,17 @@
       "albumArtists": [
         "Paul Haslinger"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "driving",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        4,
+        4
+      ]
     },
     {
       "id": "film-colony",
@@ -272873,7 +276601,17 @@
       "composerAliases": [
         "Stephen R. Schwartz"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "film-fireproof",
@@ -272983,7 +276721,17 @@
       "albumArtists": [
         "Alberto Iglesias"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "playful",
+        "peaceful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-from-beyond",
@@ -273055,7 +276803,17 @@
         "Shane Carruth"
       ],
       "composersFrom": "album",
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "powerful",
+        "tense",
+        "peaceful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-muppets-most-wanted",
@@ -273093,7 +276851,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "playful",
+        "joyful",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ]
     },
     {
       "id": "film-rudy",
@@ -273203,7 +276971,17 @@
       "albumArtists": [
         "Michael Wandmacher"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        10,
+        9
+      ]
     },
     {
       "id": "film-closed-circuit",
@@ -273238,7 +277016,17 @@
       "albumArtists": [
         "Joby Talbot"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        11,
+        5,
+        3
+      ]
     },
     {
       "id": "film-the-ultimate-gift",
@@ -273540,7 +277328,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "romantic",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-can-t-hardly-wait",
@@ -273689,7 +277487,17 @@
       "albumArtists": [
         "Max Richter"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tender",
+        "mysterious",
+        "nostalgic"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "film-underdogs",
@@ -273724,7 +277532,17 @@
       "albumArtists": [
         "Emilio Kauderer"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "powerful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-pathfinder",
@@ -274124,7 +277942,17 @@
       "composerAliases": [
         "Joe Bishara"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        10,
+        9
+      ]
     },
     {
       "id": "film-the-young-and-prodigious-t-s-spivet",
@@ -274159,7 +277987,17 @@
       "albumArtists": [
         "Denis Sanacore"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tender",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-miracle-in-cell-no-7-2013",
@@ -274274,7 +278112,17 @@
         "Philip Mossman",
         "Fall On Your Sword"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-double-life-of-véronique",
@@ -274462,7 +278310,17 @@
         "Cho Young-wook",
         "Cho Young-wuk"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        10,
+        7,
+        5
+      ]
     },
     {
       "id": "film-duplicity",
@@ -274690,7 +278548,17 @@
       "albumArtists": [
         "Dürbeck & Dohmen"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "tender",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ]
     },
     {
       "id": "film-lost-river",
@@ -274725,7 +278593,17 @@
       "albumArtists": [
         "Johnny Jewel"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "mysterious",
+        "tender",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        7,
+        7
+      ]
     },
     {
       "id": "film-departures",
@@ -274874,7 +278752,17 @@
         "David Wittman"
       ],
       "composersFrom": "album",
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        4,
+        3
+      ]
     },
     {
       "id": "film-black-christmas",
@@ -274993,7 +278881,17 @@
       "albumArtists": [
         "Mauro Pagani"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "mysterious",
+        "tense",
+        "peaceful"
+      ],
+      "moodsN": [
+        11,
+        5,
+        5
+      ]
     },
     {
       "id": "film-captain-corelli-s-mandolin",
@@ -275063,7 +278961,17 @@
       "albumArtists": [
         "Benjamin Wallfisch"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "tender",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-soloist",
@@ -275164,7 +279072,17 @@
       "albumArtists": [
         "Tom Raybould"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "film-jane-got-a-gun",
@@ -275286,7 +279204,17 @@
       "albumArtists": [
         "Dominic Lewis"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-naruto-shippuden-the-movie-bonds",
@@ -275404,7 +279332,17 @@
         "David Nessim Lawrence",
         "David N. Lawrence"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-reality",
@@ -275443,7 +279381,17 @@
         "昆汀·杜皮尔",
         "昆汀·杜皮约"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        3,
+        3
+      ]
     },
     {
       "id": "film-witching-bitching",
@@ -275477,7 +279425,17 @@
       "albumArtists": [
         "Joan Valent"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "eerie",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-secret-of-moonacre",
@@ -275580,7 +279538,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        3
+      ]
     },
     {
       "id": "film-bride-of-re-animator",
@@ -275995,7 +279963,17 @@
         "Maxime Nouchy"
       ],
       "scoresN": 9,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        8,
+        6,
+        4
+      ]
     },
     {
       "id": "film-jodorowsky-s-dune",
@@ -276028,7 +280006,17 @@
       "albumArtists": [
         "Kurt Stenzel"
       ],
-      "scoresN": 33
+      "scoresN": 33,
+      "moods": [
+        "transcendent",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-beyond",
@@ -276103,7 +280091,17 @@
         "Robert Coppola Schwartzman",
         "Rooney"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tender",
+        "peaceful",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-dom-hemingway",
@@ -276138,7 +280136,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "driving",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-mandela-long-walk-to-freedom",
@@ -276172,7 +280180,17 @@
       "albumArtists": [
         "Alex Heffes"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "sad"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-third-person",
@@ -276206,7 +280224,17 @@
       "albumArtists": [
         "Dario Marianelli"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tender",
+        "mysterious",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-two-faces-of-january",
@@ -276239,7 +280267,17 @@
       "albumArtists": [
         "Alberto Iglesias"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        11,
+        8,
+        4
+      ]
     },
     {
       "id": "film-santa-sangre",
@@ -276499,7 +280537,17 @@
         "Patrik Andrén",
         "Uno Helmersson"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-million-dollar-arm",
@@ -276544,7 +280592,17 @@
         "ஏ. ஆர். ரகுமான்",
         "A. R. Rahman"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "joyful",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-after-the-dark",
@@ -276588,7 +280646,17 @@
         "KoЯn",
         "Jonathan Howsmon Davis"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "mysterious",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        8,
+        6
+      ]
     },
     {
       "id": "film-wolf-creek-2",
@@ -276626,7 +280694,17 @@
         "Джонни Клаймек",
         "Johny Klimek"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        11,
+        6,
+        5
+      ]
     },
     {
       "id": "film-divorce-italian-style",
@@ -276700,7 +280778,17 @@
       "albumArtists": [
         "Garth Stevenson"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "peaceful",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-jessabelle",
@@ -276735,7 +280823,17 @@
         "Anton Sanko"
       ],
       "composersFrom": "album",
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        7,
+        4
+      ]
     },
     {
       "id": "film-contracted",
@@ -276769,7 +280867,17 @@
       "albumArtists": [
         "Kevin Riepl"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "eerie",
+        "playful"
+      ],
+      "moodsN": [
+        12,
+        10,
+        3
+      ]
     },
     {
       "id": "film-belle-and-sebastian",
@@ -276806,7 +280914,17 @@
         " Sixlei",
         "Vladi"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "tender",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-the-crucible",
@@ -276877,7 +280995,17 @@
       "albumArtists": [
         "Rachel Portman"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tender",
+        "tense",
+        "romantic"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-trash",
@@ -276915,7 +281043,17 @@
       "composerAliases": [
         "Antonio Alves Pinto"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "tender",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        6,
+        4
+      ]
     },
     {
       "id": "film-hardball",
@@ -276985,7 +281123,17 @@
       "albumArtists": [
         "Rolfe Kent"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "playful",
+        "driving",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-sacrament",
@@ -277019,7 +281167,17 @@
       "albumArtists": [
         "Tyler Bates"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        12,
+        6,
+        5
+      ]
     },
     {
       "id": "film-l-eclisse",
@@ -277089,7 +281247,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "romantic",
+        "tender",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ]
     },
     {
       "id": "film-nighthawks",
@@ -277200,7 +281368,17 @@
       "albumArtists": [
         "Mark Mancina"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        9,
+        8
+      ]
     },
     {
       "id": "film-like-mike",
@@ -277273,7 +281451,17 @@
       "albumArtists": [
         "Víctor Reyes"
       ],
-      "scoresN": 5
+      "scoresN": 5,
+      "moods": [
+        "powerful",
+        "playful",
+        "wonder"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ]
     },
     {
       "id": "film-blood-and-bone",
@@ -277343,7 +281531,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "romantic",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        8,
+        4
+      ]
     },
     {
       "id": "film-the-starving-games",
@@ -277381,7 +281579,17 @@
         " Timothy Michael Wynn ",
         "Timothy Wynn"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "driving",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-house-of-the-spirits",
@@ -277458,7 +281666,17 @@
       "albumArtists": [
         "Tony Morales"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tender",
+        "tense",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-the-last-mimzy",
@@ -277530,7 +281748,17 @@
       "albumArtists": [
         "G.V. Prakash Kumar"
       ],
-      "scoresN": 6
+      "scoresN": 6,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "film-whiteout",
@@ -277602,7 +281830,17 @@
       "composerAliases": [
         "Antonio Alves Pinto"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "joyful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-boondock-saints-ii-all-saints-day",
@@ -277707,7 +281945,17 @@
       "albumArtists": [
         "Lucas Vidal"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        5,
+        5
+      ]
     },
     {
       "id": "film-backcountry",
@@ -277742,7 +281990,17 @@
       "albumArtists": [
         "Frères Lumières"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-old-dogs",
@@ -277815,7 +282073,17 @@
       "composerAliases": [
         "David Louis Newman"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ]
     },
     {
       "id": "film-prime",
@@ -278003,7 +282271,17 @@
       "albumArtists": [
         "Nick Glennie-Smith"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tender",
+        "transcendent",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-last-night",
@@ -278078,7 +282356,17 @@
       "composerAliases": [
         "Joe Trapanese"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "mysterious",
+        "joyful",
+        "wonder"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "film-unfinished-business",
@@ -278111,7 +282399,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "film-pontypool",
@@ -278275,7 +282573,17 @@
       "albumArtists": [
         "Kreng"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "playful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-il-sorpasso",
@@ -278355,7 +282663,17 @@
       "composerAliases": [
         "Daniel Bensi"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-human-capital",
@@ -278391,7 +282709,17 @@
       "composerAliases": [
         "Snaporaz"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "mysterious",
+        "tense",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-cold-in-july",
@@ -278425,7 +282753,17 @@
       "albumArtists": [
         "Jeff Grace"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        11,
+        5,
+        4
+      ]
     },
     {
       "id": "film-mr-turner",
@@ -278462,7 +282800,17 @@
       "composerAliases": [
         "Gary Bernard Stewart Yershon"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "powerful",
+        "driving",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-yves-saint-laurent",
@@ -278495,7 +282843,17 @@
       "albumArtists": [
         "Ibrahim Maalouf"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tender",
+        "nostalgic",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-king-s-daughter",
@@ -278582,7 +282940,17 @@
       "composerAliases": [
         "Nathan Tyler Johnson"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-consequences-of-love",
@@ -278725,7 +283093,17 @@
         "クリストファー・カノ",
         "Chris Cano"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        7,
+        7
+      ]
     },
     {
       "id": "film-the-end-of-the-tour",
@@ -278761,7 +283139,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tender",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-the-good-lie",
@@ -278794,7 +283182,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 4
+      "scoresN": 4,
+      "moods": [
+        "tender",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "film-homeward-bound-ii-lost-in-san-francisco",
@@ -278913,7 +283311,17 @@
         "Qiong Lim",
         "Qiang Lin"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        3,
+        2
+      ]
     },
     {
       "id": "film-good-kill",
@@ -278951,7 +283359,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-caro-diario",
@@ -279023,7 +283441,17 @@
       "albumArtists": [
         "Sudip Chatterjee"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ]
     },
     {
       "id": "film-the-absent-one",
@@ -279060,7 +283488,17 @@
         "Patrik Andrén",
         "Uno Helmersson"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        3
+      ]
     },
     {
       "id": "film-hector-and-the-search-for-happiness",
@@ -279097,7 +283535,17 @@
         "Dan Mangan",
         "Jesse Zubot"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tender",
+        "mysterious",
+        "peaceful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-burying-the-ex",
@@ -279139,7 +283587,17 @@
         "Joe Loduca",
         "Joseph Loduca"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "playful",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        12,
+        8,
+        7
+      ]
     },
     {
       "id": "film-love-happens",
@@ -279218,7 +283676,17 @@
       "composerAliases": [
         "Mark Derek Foster"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "playful",
+        "wonder",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "film-holland",
@@ -279402,7 +283870,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-timbuktu",
@@ -279436,7 +283914,17 @@
       "albumArtists": [
         "Amine Bouhafa"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "mysterious",
+        "tense",
+        "romantic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-contempt",
@@ -279667,7 +284155,17 @@
       "composerAliases": [
         "Tom Newman"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        10,
+        8,
+        6
+      ]
     },
     {
       "id": "film-the-program",
@@ -279700,7 +284198,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-z",
@@ -279775,7 +284283,17 @@
       "albumArtists": [
         "Trevor Rabin"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "joyful",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ]
     },
     {
       "id": "film-phantom-of-the-paradise",
@@ -279849,7 +284367,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "powerful",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        3
+      ]
     },
     {
       "id": "film-greenberg",
@@ -280073,7 +284601,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "tender",
+        "peaceful",
+        "tense"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "film-halloweentown",
@@ -280146,7 +284684,17 @@
       "albumArtists": [
         "Peter Gregson"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "romantic",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-testament-of-youth",
@@ -280181,7 +284729,17 @@
       "albumArtists": [
         "Max Richter"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tender",
+        "transcendent",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-lost-weekend",
@@ -280290,7 +284848,17 @@
       "albumArtists": [
         "Guillaume Roussel"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-the-rewrite",
@@ -280324,7 +284892,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "joyful",
+        "tender",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-pay-the-ghost",
@@ -280366,7 +284944,17 @@
         "Joe Loduca",
         "Joseph Loduca"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-miss-you-already",
@@ -280404,7 +284992,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "joyful",
+        "tender",
+        "sad"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-we-are-still-here",
@@ -280438,7 +285036,17 @@
       "albumArtists": [
         "Wojciech Golczewski"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-in-a-valley-of-violence",
@@ -280517,7 +285125,17 @@
       "albumArtists": [
         "Dominic Lewis"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "mysterious",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "film-son-of-a-gun",
@@ -280552,7 +285170,17 @@
       "albumArtists": [
         "Jed Kurzel"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ]
     },
     {
       "id": "film-attack-on-titan",
@@ -280592,7 +285220,17 @@
         "Shirō Sagisu",
         "鷺巣 詩郎"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "driving",
+        "peaceful"
+      ],
+      "moodsN": [
+        9,
+        5,
+        4
+      ]
     },
     {
       "id": "film-love-friendship",
@@ -280714,7 +285352,17 @@
         "Henry Lai 黎允文"
       ],
       "composersFrom": "album",
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "heroic",
+        "powerful",
+        "mournful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-truth",
@@ -280747,7 +285395,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        6,
+        4
+      ]
     },
     {
       "id": "film-voice-from-the-stone",
@@ -280828,7 +285486,17 @@
       "composerAliases": [
         "Paul E. Francis"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-the-producers",
@@ -280904,7 +285572,17 @@
         "마리우스 드 브리스",
         "Marius De Vries"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "joyful",
+        "powerful",
+        "romantic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-remember",
@@ -280942,7 +285620,17 @@
       "composerAliases": [
         "Michael Danna"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "mysterious",
+        "tense",
+        "nostalgic"
+      ],
+      "moodsN": [
+        9,
+        8,
+        6
+      ]
     },
     {
       "id": "film-freeheld",
@@ -280989,7 +285677,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "tender",
+        "romantic",
+        "driving"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ]
     },
     {
       "id": "film-vice-2015",
@@ -281024,7 +285722,17 @@
       "albumArtists": [
         "Hybrid"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "mysterious",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        7,
+        5
+      ]
     },
     {
       "id": "film-tangerine",
@@ -281057,7 +285765,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "driving",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-mistress-america",
@@ -281097,7 +285815,17 @@
         "Luna",
         "Luna²"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tender",
+        "nostalgic",
+        "romantic"
+      ],
+      "moodsN": [
+        5,
+        3,
+        2
+      ]
     },
     {
       "id": "film-the-rich-the-pauper-and-the-butler",
@@ -281131,7 +285859,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        5,
+        3
+      ]
     },
     {
       "id": "film-cop-car",
@@ -281169,7 +285907,17 @@
         "Philip Mossman",
         "Fall On Your Sword"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "driving",
+        "eerie"
+      ],
+      "moodsN": [
+        10,
+        5,
+        4
+      ]
     },
     {
       "id": "film-turbo-kid",
@@ -281209,7 +285957,17 @@
         "Le Matos",
         "Le Matos"
       ],
-      "scoresN": 50
+      "scoresN": 50,
+      "moods": [
+        "tense",
+        "powerful",
+        "eerie"
+      ],
+      "moodsN": [
+        14,
+        11,
+        11
+      ]
     },
     {
       "id": "film-the-hallow",
@@ -281287,7 +286045,17 @@
       "albumArtists": [
         "Murray Gold"
       ],
-      "scoresN": 41
+      "scoresN": 41,
+      "moods": [
+        "mysterious",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        10,
+        10,
+        10
+      ]
     },
     {
       "id": "film-by-the-sea",
@@ -281414,7 +286182,17 @@
         "Wills",
         "Fall On Your Sword"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        10,
+        10,
+        7
+      ]
     },
     {
       "id": "film-a-perfect-man",
@@ -281448,7 +286226,17 @@
       "albumArtists": [
         "Cyrille Aufort"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "mysterious",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        9,
+        5
+      ]
     },
     {
       "id": "film-war-room",
@@ -281482,7 +286270,17 @@
         "Paul Mills"
       ],
       "composersFrom": "album",
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "tender",
+        "powerful",
+        "joyful"
+      ],
+      "moodsN": [
+        10,
+        8,
+        6
+      ]
     },
     {
       "id": "film-hangman",
@@ -281562,7 +286360,17 @@
       "albumArtists": [
         "Bruno Coulais"
       ],
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "tender",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        10,
+        8,
+        6
+      ]
     },
     {
       "id": "film-teen-beach-2",
@@ -281602,7 +286410,17 @@
         "David Nessim Lawrence",
         "David N. Lawrence"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "playful",
+        "romantic"
+      ],
+      "moodsN": [
+        10,
+        5,
+        5
+      ]
     },
     {
       "id": "film-superfast",
@@ -281641,7 +286459,17 @@
         " Timothy Michael Wynn ",
         "Timothy Wynn"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-barbershop-the-next-cut",
@@ -281723,7 +286551,17 @@
         "George Howe",
         "George Richard Ian Howe"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "peaceful",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-emelie",
@@ -281812,7 +286650,17 @@
         "クリストファー・カノ",
         "Chris Cano"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "driving",
+        "tense",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        3
+      ]
     },
     {
       "id": "film-i-am-wrath",
@@ -282119,7 +286967,17 @@
       "albumArtists": [
         "Nascuy Linares"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "transcendent"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "film-emerald-green",
@@ -282203,7 +287061,17 @@
       "composerAliases": [
         "Sergio Moure de Oteyza "
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        12,
+        5,
+        5
+      ]
     },
     {
       "id": "film-gotti",
@@ -282543,7 +287411,17 @@
       "albumArtists": [
         "Laurent Eyquem"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        14,
+        9,
+        8
+      ]
     },
     {
       "id": "film-a-united-kingdom",
@@ -282757,7 +287635,17 @@
         "Pritam",
         "JAM8"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "peaceful",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "film-xoxo",
@@ -282962,7 +287850,17 @@
         "The Gifted"
       ],
       "composersFrom": "album",
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        8,
+        6
+      ]
     },
     {
       "id": "film-guardians",
@@ -285693,7 +290591,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tender",
+        "playful",
+        "romantic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-breach",
@@ -298326,7 +303234,17 @@
       "albumArtists": [
         "Aaron Zigman"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-cosmic-sin",
@@ -300812,7 +305730,17 @@
         "Christopher Paul Leonard-Morgan",
         "Paul Leonard Morgan"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-belle-2021",
@@ -300953,7 +305881,17 @@
       "composerAliases": [
         "Stephen R. Schwartz"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "joyful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        8,
+        4
+      ]
     },
     {
       "id": "film-walking-with-dinosaurs",
@@ -300992,7 +305930,17 @@
         "Christopher Paul Leonard-Morgan",
         "Paul Leonard Morgan"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "powerful",
+        "joyful",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-first-slam-dunk",
@@ -304177,7 +309125,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "tender",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-cuckoo",
@@ -304432,7 +309390,17 @@
       "composerAliases": [
         "David Cauthery"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "film-ciao-alberto",
@@ -305563,7 +310531,17 @@
       "composerAliases": [
         "Adam Korzeniowski"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "romantic",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-jeanne-du-barry",
@@ -306066,7 +311044,17 @@
       "albumArtists": [
         "Harry Escott"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "mysterious",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-here",

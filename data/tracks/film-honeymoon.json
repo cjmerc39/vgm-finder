@@ -6,7 +6,11 @@
     "artists": [
       "Saptak"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Kono Ek Majh Rate",
@@ -16,7 +20,11 @@
       "Ipsita",
       "Saptak"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Kothai Kothai Rat",
@@ -25,7 +33,11 @@
     "artists": [
       "Anwesha"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Rater Akashe",
@@ -34,7 +46,11 @@
     "artists": [
       "Anwesha"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Tomar Chokhe",
@@ -44,6 +60,10 @@
       "Ipsita",
       "Saptak"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   }
 ]

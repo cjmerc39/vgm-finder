@@ -1,18 +1,34 @@
 [
   {
     "title": "Overworld Theme 1",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Overworld Theme 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Toad's Treasure Room Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Water Level Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "driving"
+    ]
   }
 ]

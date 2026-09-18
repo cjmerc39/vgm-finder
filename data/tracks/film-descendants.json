@@ -9,7 +9,11 @@
       "Booboo Stewart",
       "Sofia Carson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "powerful"
+    ]
   },
   {
     "title": "Evil Like Me",
@@ -20,7 +24,11 @@
       "Dove Cameron",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "eerie"
+    ]
   },
   {
     "title": "Did I Mention",
@@ -31,7 +39,11 @@
       "Mitchell Hope",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "If Only",
@@ -41,7 +53,11 @@
       "Dove Cameron",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "sad"
+    ]
   },
   {
     "title": "Be Our Guest",
@@ -53,7 +69,11 @@
       "Kala Balch",
       "Marco Marinangeli"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "If Only (Reprise)",
@@ -63,7 +83,10 @@
       "Dove Cameron",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Set it Off",
@@ -75,7 +98,11 @@
       "Cameron Boyce",
       "Booboo Stewart"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Believe",
@@ -84,7 +111,11 @@
     "artists": [
       "Shawn Mendes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Rotten to the Core (From \"Descendants: Wicked World\")",
@@ -94,7 +125,11 @@
       "Sofia Carson",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "powerful"
+    ]
   },
   {
     "title": "Night Is Young (From \"Descendants: Wicked World\")",
@@ -104,7 +139,11 @@
       "China Anne McClain",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Good Is the New Bad (From \"Descendants: Wicked World\")",
@@ -116,7 +155,11 @@
       "China Anne McClain",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "powerful"
+    ]
   },
   {
     "title": "I'm Your Girl (From \"Descendants: Wicked World\")",
@@ -126,7 +169,10 @@
       "Felicia Barton",
       "Disney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Descendants Score Suite",
@@ -135,6 +181,10 @@
     "artists": [
       "David Lawrence",
       "Disney"
+    ],
+    "moods": [
+      "wonder",
+      "heroic"
     ]
   }
 ]

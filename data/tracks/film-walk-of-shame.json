@@ -6,7 +6,11 @@
     "artists": [
       "Ashleigh Haney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Walk On",
@@ -16,7 +20,11 @@
       "Kirsten Proffit",
       "Manda Mosher"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Walk of Shame",
@@ -25,7 +33,11 @@
     "artists": [
       "Stuart Davis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Walking in L.A.",
@@ -35,6 +47,10 @@
       "Scott Spock",
       "Corky James"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   }
 ]

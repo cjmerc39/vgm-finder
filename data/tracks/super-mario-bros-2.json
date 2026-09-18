@@ -1,26 +1,49 @@
 [
   {
     "title": "Title Screen Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Character Select Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Overworld Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Underworld Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Boss Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Wart Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   }
 ]

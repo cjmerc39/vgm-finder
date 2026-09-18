@@ -6,7 +6,11 @@
     "artists": [
       "Duke Ellington"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Goodbye Yellow Brick Road",
@@ -15,7 +19,11 @@
     "artists": [
       "Elton John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "sad"
+    ]
   },
   {
     "title": "White Rabbit",
@@ -24,7 +32,11 @@
     "artists": [
       "Mayssa Karaa"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "10538 Overture",
@@ -33,7 +45,11 @@
     "artists": [
       "Electric Light Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Live and Let Die",
@@ -42,7 +58,11 @@
     "artists": [
       "Wings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "How Can You Mend a Broken Heart",
@@ -51,7 +71,11 @@
     "artists": [
       "Bee Gees"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "I Feel Love",
@@ -60,7 +84,11 @@
     "artists": [
       "Donna Summer"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Don't Leave Me This Way",
@@ -69,7 +97,11 @@
     "artists": [
       "Harold Melvin & The Blue Notes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Delilah",
@@ -78,7 +110,11 @@
     "artists": [
       "Tom Jones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "I've Got Your Number",
@@ -87,7 +123,11 @@
     "artists": [
       "Jack Jones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Long Black Road",
@@ -105,7 +145,11 @@
     "artists": [
       "America"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Stream of Stars",
@@ -114,7 +158,11 @@
     "artists": [
       "Jeff Lynne"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "transcendent"
+    ]
   },
   {
     "title": "Live to Live",
@@ -131,6 +179,10 @@
     "videoId": "uSbKRt0vvZ8",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   }
 ]
