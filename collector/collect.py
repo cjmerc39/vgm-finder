@@ -2172,9 +2172,11 @@ SOURCES = [
     # stays for the tests and in case the verdict ever reverses).
     # blipblop.net dropped 2026-09-18 at CJ's request for the same reason:
     # its 40 rows were vinyl and preorder headlines, none with a YT Music
-    # album; they were retired, not deleted, so every TRACK number holds
-    {"name": "vgmo", "type": "editorial",
-     "url": "https://www.vgmonline.net/feed/", "parse": parse_vgmo},
+    # album; they were retired, not deleted, so every TRACK number holds.
+    # vgmonline.net dropped the same day, also at CJ's request: four of its
+    # five rows had no album and were retired; Final Symphony II, which has
+    # one, stays. The r/gamemusic feed went on 2026-07-28 and its ten
+    # leftover post rows were retired with them.
     {"name": "steam", "type": "catalog",
      "url": "https://store.steampowered.com/search/results/"
             "?query&start=0&count=25&category1=990&sort_by=Released_DESC&infinite=1&l=english&cc=US",

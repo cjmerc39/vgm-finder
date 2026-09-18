@@ -25,16 +25,16 @@ plus a year-jump picker and a back-to-top control.
 
 | source | what it is | filter |
 | --- | --- | --- |
-| [VGMO](https://vgmonline.net) | editorial, long-form game music writing | `News` + `Album Reviews` |
 | Steam Soundtracks | catalog: every album shipped on Steam | newest 25, released only |
 | IGDB + YT Music | catalog: notable game releases that have a real album | last 14 days, hypes ≥ 5, strict album match |
 | TMDb film + YT Music | catalog: film scores with a real album | last 14 days, 5+ votes, composer-vouched match |
 | TMDb TV + YT Music | catalog: one row per season score album | last 60 days, 10+ votes, composer-vouched match |
 
-Two editorial feeds were dropped at CJ's request because their headline
-rows had no album to play: NOWPLAYING (2026-07-30, rows deleted) and Blip
-Blop (2026-09-18, its 40 rows retired so TRACK numbers hold). Their parsers
-stay for the tests.
+The editorial and community feeds were dropped at CJ's request because
+their headline rows had no album to play: r/gamemusic (2026-07-28),
+NOWPLAYING (2026-07-30, rows deleted), and Blip Blop and VGMO (2026-09-18,
+rows retired so TRACK numbers hold; VGMO's Final Symphony II, which has an
+album, stays). Their parsers stay for the tests.
 
 Film and TV rows follow the game rules with a screen-specific matcher:
 the album must carry soundtrack wording, tribute and karaoke acts are
