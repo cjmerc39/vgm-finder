@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T03:43:16Z",
+  "updatedAt": "2026-09-18T14:04:16Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -342901,7 +342901,7 @@
       "composers": [
         "Nathan Matthew David"
       ],
-      "date": "2026-09-14",
+      "date": "2026-09-10",
       "sources": [
         {
           "name": "tmdb-film",
@@ -344014,6 +344014,189 @@
         7,
         4
       ]
+    },
+    {
+      "id": "dokimon-quest",
+      "title": "Dokimon Quest Soundtrack",
+      "medium": "game",
+      "game": "Dokimon Quest",
+      "composers": [],
+      "date": "2026-09-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3314510/Dokimon_Quest_Soundtrack/",
+          "seenAt": "2026-09-18T14:04:16Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dokimon+Quest+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3314510/2023d086e04af0fdd6e422017e247e1c259ce72a/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "moshcave",
+      "title": "Moshcave Soundtrack",
+      "medium": "game",
+      "game": "Moshcave",
+      "composers": [],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4851840/Moshcave_Soundtrack/",
+          "seenAt": "2026-09-18T14:04:16Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Moshcave+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4851840/5e33ecb9260dd7bdfa52e09db113b2c903ea5a96/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "film-shaun-the-sheep-the-beast-of-mossy-bottom",
+      "title": "Shaun the Sheep: The Beast of Mossy Bottom Soundtrack",
+      "medium": "film",
+      "game": "Shaun the Sheep: The Beast of Mossy Bottom",
+      "composers": [
+        "Natalie Holt"
+      ],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1477104",
+          "seenAt": "2026-09-18T14:04:16Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Shaun+the+Sheep%3A+The+Beast+of+Mossy+Bottom+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qljV3Pw5tPM",
+      "art": "https://yt3.googleusercontent.com/D5x8BNqbbm29YJuh2h-ri_SVThE4AQiN2S9cwN0LZtuUN2H2IVnt1IAaEwT62uPGKwU7LgNeXZZRhLT1=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Shaun the Sheep: The Beast of Mossy Bottom (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "composerAliases": [
+        "Natalie Ann Holt"
+      ],
+      "albumArtists": [
+        "Natalie Holt"
+      ],
+      "ytmPlaylistId": "OLAK5uy_leImaT_gzXuD5uJi_MxHHPZGOm_NXr7_g",
+      "scoresN": 28,
+      "tracksN": 29,
+      "playsTotal": 1407
+    },
+    {
+      "id": "tv-outlander-blood-of-my-blood-season-1",
+      "title": "Outlander: Blood of My Blood Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Outlander: Blood of My Blood",
+      "composers": [
+        "Bear McCreary"
+      ],
+      "date": "2025-08-08",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/207484",
+          "seenAt": "2026-09-18T14:04:16Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Outlander%3A+Blood+of+My+Blood+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HJnTyhTyEYl",
+      "art": "https://yt3.googleusercontent.com/JVRg0uv4U7znIGAT4MVAQwEpvvaO56IUfSrmylJ-W_E5VGCCGRDYWWB2-zLml8JoJGzFW0AeNCbLpvvvGQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Outlander: Blood of my Blood (Season 1 Original Series Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Bear McCreary"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mCD23DzJbhToX0ZiY79KjrdUI-dsEiOdM",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 1237000
+    },
+    {
+      "id": "tv-outlander-blood-of-my-blood-season-2",
+      "title": "Outlander: Blood of My Blood Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Outlander: Blood of My Blood",
+      "composers": [
+        "Bear McCreary"
+      ],
+      "date": "2026-09-18",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/207484",
+          "seenAt": "2026-09-18T14:04:16Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Outlander%3A+Blood+of+My+Blood+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xGSQ3PwcP7p",
+      "art": "https://yt3.googleusercontent.com/cfhlzqcVtUAFk3Mzc5evXjBlsqQaW00PhAJ8JvJfonojcAIdIDfP7HUXusgcB5WgPfMem_J4MtDEraia=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Outlander: Blood of my Blood (Season 2 Original Series Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Bear McCreary"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ngT6NYfWAe604Rjj_IysboHEyP5WbJT64",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 681
+    },
+    {
+      "id": "tv-monster-the-lizzie-borden-story",
+      "title": "Monster: The Lizzie Borden Story Soundtrack",
+      "medium": "tv",
+      "game": "Monster: The Lizzie Borden Story",
+      "composers": [
+        "Bryce Dessner"
+      ],
+      "date": "2026-09-17",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/299939",
+          "seenAt": "2026-09-18T14:04:16Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Monster%3A+The+Lizzie+Borden+Story+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_jLVKrCZpC6q",
+      "art": "https://yt3.googleusercontent.com/KCbczLmJXZ9jrHi-XLS_dvBIiL-BjunHsdo0tuZi49LO-CyFMcUl7dlKALNbf4vZBdTmSkHLrouJy2k=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Monster: The Lizzie Borden Story (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "composerAliases": [
+        "The National"
+      ],
+      "albumArtists": [
+        "Bryce Dessner"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mhhseXY34-XybMovkHOakA-l4jKC9O5oo",
+      "scoresN": 23,
+      "tracksN": 23,
+      "playsTotal": 1484
     }
   ]
 }
