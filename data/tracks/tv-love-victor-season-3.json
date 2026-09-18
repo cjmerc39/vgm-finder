@@ -6,7 +6,10 @@
     "artists": [
       "VINCINT"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Armageddon",
@@ -15,7 +18,11 @@
     "artists": [
       "Black Polish"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Dinner",
@@ -24,7 +31,11 @@
     "artists": [
       "Grag Queen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Only You",
@@ -33,6 +44,10 @@
     "artists": [
       "Jonah Mutono"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   }
 ]

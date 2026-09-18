@@ -2,26 +2,49 @@
   {
     "title": "Main Theme",
     "plays": "1.2M plays",
-    "videoId": "b95P2VBGOMo"
+    "videoId": "b95P2VBGOMo",
+    "moods": [
+      "joyful",
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Shop Theme",
     "plays": "166K plays",
-    "videoId": "RJpc1iVNdgs"
+    "videoId": "RJpc1iVNdgs",
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Arcana Theme",
     "plays": "161K plays",
-    "videoId": "Je-i3aJDgpg"
+    "videoId": "Je-i3aJDgpg",
+    "moods": [
+      "mysterious",
+      "transcendent"
+    ]
   },
   {
     "title": "Celestial Theme",
     "plays": "141K plays",
-    "videoId": "U9BSbfuWgoE"
+    "videoId": "U9BSbfuWgoE",
+    "moods": [
+      "wonder",
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "Boss Theme",
     "plays": "135K plays",
-    "videoId": "jaaDyXngRic"
+    "videoId": "jaaDyXngRic",
+    "moods": [
+      "powerful",
+      "tense",
+      "heroic"
+    ]
   }
 ]
