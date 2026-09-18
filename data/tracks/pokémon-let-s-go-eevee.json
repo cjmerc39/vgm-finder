@@ -1,7 +1,11 @@
 [
   {
     "title": "Into the Game: Let's Go!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Choose Your Language",
@@ -9,15 +13,26 @@
   },
   {
     "title": "Title Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Pallet Town Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Professor Oak",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender"
+    ]
   },
   {
     "title": "Guide",
@@ -25,178 +40,335 @@
   },
   {
     "title": "Professor Oak's Laboratory",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Caught a Pokémon!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Road to Viridian City: Leaving Pallet Town",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Picked Up an Item!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Pokémon Center",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Pokémon Healed",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "A Trainer Appears (Boy Version)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Battle! (Trainer Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Victory! (Trainer Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Pokédex Evaluation... You're on Your Way!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Viridian Forest",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Catch! (Wild Pokémon)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Successful Catch! (Wild Pokémon)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Level Up!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "A Trainer Appears (Girl Version)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Pewter City Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Pokémon Gym",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Battle! (Gym Leader Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Victory! (Gym Leader Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic"
+    ]
   },
   {
     "title": "Obtained a Gym Badge!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Blue’s Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Road to Cerulean City: Leaving Mt. Moon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Jigglypuff's Song",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "tender"
+    ]
   },
   {
     "title": "Caves of Mt. Moon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "A Trainer Appears (Bad Guy Version)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Theme of Jessie and James",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mournful"
+    ]
   },
   {
     "title": "Evolution",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "powerful"
+    ]
   },
   {
     "title": "Congratulations! Your Pokémon Evolved!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Cerulean City Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "To Bill: Leaving Cerulean City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Vermilion City Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "The S.S. Anne",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "romantic"
+    ]
   },
   {
     "title": "Road to Lavender Town: Leaving Vermilion City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "driving"
+    ]
   },
   {
     "title": "Lavender Town Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mournful"
+    ]
   },
   {
     "title": "Pokémon Tower",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Celadon City Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Game Corner",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Rocket Hideout",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Obtained a Key Item!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Cubone's Mother",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "The Poké Flute",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Battle! (Wild Pokémon)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Caught a Pokémon! (Short Version)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Pokémon Road",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   }
 ]

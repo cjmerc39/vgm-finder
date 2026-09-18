@@ -6,7 +6,11 @@
     "artists": [
       "Vidhuprathap"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "Manju Pole",
@@ -16,7 +20,11 @@
       "Renjith",
       "Manjari"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Prince of Darkness",
@@ -26,7 +34,12 @@
       "Sandra",
       "Sunidhi Chauhan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "eerie",
+      "heroic"
+    ]
   },
   {
     "title": "Dance (Instrumental)",
@@ -35,6 +48,10 @@
     "artists": [
       "Instrumental"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   }
 ]

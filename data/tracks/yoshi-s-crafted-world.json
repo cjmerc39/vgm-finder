@@ -1,258 +1,497 @@
 [
   {
     "title": "Main Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Title Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Story Intro",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Opening (Part 1)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Opening (Part 2)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Baby Bowser and Kamek Appears!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "An Unfamiliar Forest",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "mysterious"
+    ]
   },
   {
     "title": "The Journey to Find the Gems Begins!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "World Map 01",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Main Theme Ver. 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Goal!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Results",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Find Poochy Pups",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Try Your Luck",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Water/Space Level",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "Fortress/Factory Level",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Mid-Boss Intro",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Mid-Boss Fight",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Go-Go Yoshi (Minigames)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Cave/Magma Level",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "powerful"
+    ]
   },
   {
     "title": "Whistlestop Rails",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Lobby",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "The Journey to Find the Gems Begins! Ver. 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Searching the Dream Gem",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   },
   {
     "title": "Tin-Can Condor (Boss Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Boss Fight",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Boss Clear!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "After Boss Fight",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "On the Way to the Dream Gem",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "You got a Dream Gem!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Returning the Gem to the Sundream Stone",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "transcendent"
+    ]
   },
   {
     "title": "World Map 02",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Skelosauros Wrecks (Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Skelosauros Wrecks",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Skelosauros Wrecks (Hurry Up!)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Skelosauros Wrecks (Outro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Soft/Jungle Level",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Spike the Piranha (Boss Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "World Map 03",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Spinwheel Shuffle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Scary Level",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Snow Level",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Burt the Ball (Boss Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "World Map 04",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Ninjarama",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Gator Train (Boss Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "World Map 05",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Special",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Moon Base Rocket",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "mysterious"
+    ]
   },
   {
     "title": "Mr. Geary Boss Intro",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Stolen Gem",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "The Great King Bowser (Boss Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "The Great King Bowser (Phase 1)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "The Great King Bowser (Phase 2)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "The Power of the Sundream Stone 1",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent"
+    ]
   },
   {
     "title": "The Power of the Sundream Stone 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "The Power of the Sundream Stone 3",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Mega Baby Bowser (Final Boss Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Mega Baby Bowser (Final Boss Fight)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Final Boss Defeated",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Sundream Stone Restored",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Ship",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Ending",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Yoshi's Island",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   }
 ]

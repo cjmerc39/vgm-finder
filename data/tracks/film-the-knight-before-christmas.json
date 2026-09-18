@@ -6,7 +6,11 @@
     "artists": [
       "Mary Wilson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Angels We Have Heard on High",
@@ -15,7 +19,11 @@
     "artists": [
       "Prague International Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "Auld Lang Syne (Kraft Music Hall Version)",
@@ -24,7 +32,11 @@
     "artists": [
       "Guy Lombardo & His Royal Candians"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "Away in a Manger",
@@ -33,7 +45,11 @@
     "artists": [
       "The London String Ensemble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Carol of the Bells",
@@ -42,7 +58,11 @@
     "artists": [
       "Los Angeles Philharmonic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Christmas Medley",
@@ -51,7 +71,10 @@
     "artists": [
       "The Cliff Adams Singers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Deck the Halls",
@@ -60,7 +83,11 @@
     "artists": [
       "The First Noel Singers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Good King Wenceslas",
@@ -69,7 +96,11 @@
     "artists": [
       "The London String Ensemble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Hark! The Herald Angels Sing",
@@ -78,7 +109,11 @@
     "artists": [
       "Yuletime Singers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "The Holly and the Ivy",
@@ -87,7 +122,11 @@
     "artists": [
       "Peter Noone & Natalie Noone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "I'll Be Home for Christmas",
@@ -96,7 +135,11 @@
     "artists": [
       "Santa's Holiday Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "White Christmas",
@@ -105,7 +148,11 @@
     "artists": [
       "City of Lights Holiday Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "We Wish You a Merry Christmas",
@@ -114,7 +161,10 @@
     "artists": [
       "The London String Ensemble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Sleigh Ride",
@@ -123,7 +173,11 @@
     "artists": [
       "Brussels Philharmonic Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "O Little Town of Bethlehem",
@@ -132,6 +186,10 @@
     "artists": [
       "The London String Ensemble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "transcendent"
+    ]
   }
 ]
