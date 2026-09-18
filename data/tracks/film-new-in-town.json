@@ -6,7 +6,11 @@
     "artists": [
       "Donavon Frankenreiter"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "20th Century Boy",
@@ -15,7 +19,11 @@
     "artists": [
       "T. Rex"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "I Will Survive",
@@ -24,7 +32,11 @@
     "artists": [
       "Gloria Gaynor"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Boss of Everything",
@@ -33,7 +45,11 @@
     "artists": [
       "Crit Harmon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "powerful"
+    ]
   },
   {
     "title": "Race You",
@@ -42,7 +58,11 @@
     "artists": [
       "Elizabeth & The Catapult"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Life Is Good",
@@ -51,7 +71,11 @@
     "artists": [
       "Brittini Black"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "On The Other Side",
@@ -60,7 +84,10 @@
     "artists": [
       "Cisco"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Another Country",
@@ -69,7 +96,11 @@
     "artists": [
       "Tift Merritt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Thick of It Now",
@@ -78,7 +109,11 @@
     "artists": [
       "Moot Davis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Hey You",
@@ -95,6 +130,10 @@
     "videoId": "PGtcytk-EpI",
     "artists": [
       "John Swihart"
+    ],
+    "moods": [
+      "joyful",
+      "romantic"
     ]
   }
 ]

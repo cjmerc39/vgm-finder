@@ -6,7 +6,11 @@
     "artists": [
       "Chris Pratt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "romantic"
+    ]
   },
   {
     "title": "Crazy Love",
@@ -15,7 +19,11 @@
     "artists": [
       "Audra Mae"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Into the Mystic",
@@ -24,7 +32,11 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "nostalgic"
+    ]
   },
   {
     "title": "When That Evening Sun Goes Down",
@@ -33,7 +45,11 @@
     "artists": [
       "Brett Dennen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "We're Married",
@@ -41,6 +57,10 @@
     "videoId": "52E-KmTUZS0",
     "artists": [
       "Michael Andrews"
+    ],
+    "moods": [
+      "joyful",
+      "romantic"
     ]
   }
 ]

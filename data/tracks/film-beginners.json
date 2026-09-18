@@ -6,7 +6,11 @@
     "artists": [
       "Hoagy Carmichael"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "romantic"
+    ]
   },
   {
     "title": "Everything's Made For Love",
@@ -15,7 +19,11 @@
     "artists": [
       "Gene Austin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Bach Suite",
@@ -25,6 +33,10 @@
       "Brian Reitzell",
       "Roger Neill",
       "Dave Palmer"
+    ],
+    "moods": [
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -35,6 +47,10 @@
       "Brian Reitzell",
       "Roger Neill",
       "Dave Palmer"
+    ],
+    "moods": [
+      "nostalgic",
+      "tender"
     ]
   },
   {
@@ -44,7 +60,11 @@
     "artists": [
       "Jelly Roll Morton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "That Da Da Strain",
@@ -53,7 +73,10 @@
     "artists": [
       "Mamie Smith"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Mamanita (Beginners Original Motion Picture Soundtrack)",
@@ -62,7 +85,11 @@
     "artists": [
       "Jelly Roll Morton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Moon Waltz",
@@ -72,6 +99,10 @@
       "Brian Reitzell",
       "Roger Neill",
       "Dave Palmer"
+    ],
+    "moods": [
+      "romantic",
+      "peaceful"
     ]
   },
   {
@@ -82,6 +113,10 @@
       "Brian Reitzell",
       "Roger Neill",
       "Dave Palmer"
+    ],
+    "moods": [
+      "sad",
+      "mournful"
     ]
   },
   {
@@ -91,7 +126,11 @@
     "artists": [
       "Josephine Baker"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Beginner's Theme Suite",
@@ -101,6 +140,10 @@
       "Brian Reitzell",
       "Roger Neill",
       "Dave Palmer"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -110,6 +153,10 @@
     "artists": [
       "Jelly Roll Morton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   }
 ]

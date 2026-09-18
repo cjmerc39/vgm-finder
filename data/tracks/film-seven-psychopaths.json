@@ -6,7 +6,11 @@
     "artists": [
       "Hank Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "eerie"
+    ]
   },
   {
     "title": "The First Cut Is The Deepest",
@@ -15,7 +19,11 @@
     "artists": [
       "P.P. Arnold"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "sad"
+    ]
   },
   {
     "title": "The Quaker",
@@ -23,6 +31,10 @@
     "videoId": "nhblUY2Jh8I",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -32,7 +44,11 @@
     "artists": [
       "The Monteverdi Choir, Jean-Paul Fouchécourt, John Eliot Gardiner, Catherine Robbin, and Orchestre Révolutionnaire et Romantique"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "transcendent"
+    ]
   },
   {
     "title": "Zachariah",
@@ -49,7 +65,10 @@
     "artists": [
       "The Walkmen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Billy's Diary",
@@ -57,6 +76,9 @@
     "videoId": "WAhgelYyYRQ",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "mysterious"
     ]
   },
   {
@@ -74,6 +96,10 @@
     "videoId": "D_kthF8vitE",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -100,6 +126,10 @@
     "videoId": "RfuLplmNzNI",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -108,6 +138,10 @@
     "videoId": "VvUgzn0MXR0",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   },
   {
@@ -117,7 +151,11 @@
     "artists": [
       "The Walkmen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Billy's Ending",
@@ -125,6 +163,10 @@
     "videoId": "pTNMC48Rml0",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -141,6 +183,10 @@
     "videoId": "j3bPHhpXsgs",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   },
   {
@@ -158,6 +204,10 @@
     "videoId": "_vrp4PYg5hc",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "Jerry Lee Lewis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Mr. Sandman",
@@ -15,7 +19,11 @@
     "artists": [
       "Dickie Valentine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Rocket 88",
@@ -24,7 +32,11 @@
     "artists": [
       "Jackie Brenston & His Delta Cats"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Shake, Rattle And Roll (2003 Sony Remaster)",
@@ -33,7 +45,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Hard Headed Woman",
@@ -42,7 +58,11 @@
     "artists": [
       "Wanda Jackson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "I Put a Spell on You",
@@ -51,7 +71,11 @@
     "artists": [
       "Screamin' Jay Hawkins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Maggie May",
@@ -59,6 +83,10 @@
     "videoId": null,
     "artists": [
       "The Nowhere Boys"
+    ],
+    "moods": [
+      "nostalgic",
+      "romantic"
     ]
   },
   {
@@ -67,6 +95,10 @@
     "videoId": null,
     "artists": [
       "The Nowhere Boys"
+    ],
+    "moods": [
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -77,7 +109,11 @@
       "Eddie Bond",
       "The Stompers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Twenty Flight Rock",
@@ -86,7 +122,11 @@
     "artists": [
       "Eddie Cochran"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "That's All Right",
@@ -94,6 +134,10 @@
     "videoId": null,
     "artists": [
       "The Nowhere Boys"
+    ],
+    "moods": [
+      "joyful",
+      "driving"
     ]
   },
   {
@@ -102,6 +146,10 @@
     "videoId": null,
     "artists": [
       "The Nowhere Boys"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -110,6 +158,10 @@
     "videoId": null,
     "artists": [
       "The Nowhere Boys"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -119,7 +171,11 @@
     "artists": [
       "Big Mama Thornton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Be-Bop-A-Lula",
@@ -128,7 +184,11 @@
     "artists": [
       "Gene Vincent"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Hello Little Girl",
@@ -137,7 +197,11 @@
     "artists": [
       "Aaron Johnson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "In Spite Of All The Danger",
@@ -145,6 +209,10 @@
     "videoId": null,
     "artists": [
       "The Nowhere Boys"
+    ],
+    "moods": [
+      "tender",
+      "nostalgic"
     ]
   },
   {
@@ -155,6 +223,10 @@
       "John Lennon",
       "The Plastic Ono Band"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "tender"
+    ]
   }
 ]

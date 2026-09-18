@@ -6,7 +6,11 @@
     "artists": [
       "Lou Reed"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "romantic"
+    ]
   },
   {
     "title": "Modern Love",
@@ -15,7 +19,11 @@
     "artists": [
       "David Bowie"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "I'm In Love With A Girl",
@@ -24,7 +32,11 @@
     "artists": [
       "Big Star"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Just Like Heaven",
@@ -33,7 +45,11 @@
     "artists": [
       "The Cure"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Rock Me Amadeus",
@@ -42,7 +58,11 @@
     "artists": [
       "Falco"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Don't Change",
@@ -51,7 +71,11 @@
     "artists": [
       "INXS"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Your Love",
@@ -60,7 +84,10 @@
     "artists": [
       "The Outfield"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic"
+    ]
   },
   {
     "title": "Don't Dream It's Over",
@@ -69,7 +96,11 @@
     "artists": [
       "Crowded House"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Looking For A Kiss",
@@ -78,7 +109,11 @@
     "artists": [
       "New York Dolls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Don't Want To Know If You Are Lonely",
@@ -96,7 +131,11 @@
     "artists": [
       "The Replacements"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tense"
+    ]
   },
   {
     "title": "Pale Blue Eyes",
@@ -105,7 +144,11 @@
     "artists": [
       "The Velvet Underground"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Farewell Adventureland",
@@ -113,6 +156,10 @@
     "videoId": "yXOUbsJ81O0",
     "artists": [
       "Yo La Tengo"
+    ],
+    "moods": [
+      "nostalgic",
+      "mournful"
     ]
   },
   {
@@ -122,6 +169,10 @@
     "artists": [
       "Brian Kenney & Ian Berkowitz"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "nostalgic"
+    ]
   }
 ]

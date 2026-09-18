@@ -6,7 +6,11 @@
     "artists": [
       "Night Ranger"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "playful"
+    ]
   },
   {
     "title": "Freak Your Loneliness",
@@ -24,7 +28,10 @@
     "artists": [
       "Classic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Post Millennium Extinction Blues",
@@ -60,7 +67,11 @@
     "artists": [
       "The Hives"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Doin' Things",
@@ -69,7 +80,10 @@
     "artists": [
       "Three AM"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "I Like It, I Love It",
@@ -78,7 +92,10 @@
     "artists": [
       "Lyrics Born"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Night Train",
@@ -87,7 +104,10 @@
     "artists": [
       "The Kills"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic"
+    ]
   },
   {
     "title": "No Way To Stop It",
@@ -96,7 +116,10 @@
     "artists": [
       "Jimmy Gresham"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Shove It",
@@ -105,7 +128,10 @@
     "artists": [
       "Santigold"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Friday The 13th Main Theme [From Friday The 13th] (feat. Jason Voorhees)",
@@ -113,6 +139,11 @@
     "videoId": "-z9PCJcYBtA",
     "artists": [
       "Steve Jablonsky"
+    ],
+    "moods": [
+      "eerie",
+      "tense",
+      "powerful"
     ]
   }
 ]

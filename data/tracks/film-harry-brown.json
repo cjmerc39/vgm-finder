@@ -6,6 +6,10 @@
     "artists": [
       "Martin Phipps",
       "Ruth Barrett"
+    ],
+    "moods": [
+      "tense",
+      "eerie"
     ]
   },
   {
@@ -16,7 +20,10 @@
       "Pete Tong",
       "Paul Rogers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Weed",
@@ -25,6 +32,10 @@
     "artists": [
       "Martin Phipps",
       "Ruth Barrett"
+    ],
+    "moods": [
+      "eerie",
+      "tense"
     ]
   },
   {
@@ -35,7 +46,11 @@
       "Pete Tong",
       "Paul Rogers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Box",
@@ -44,6 +59,10 @@
     "artists": [
       "Martin Phipps",
       "Ruth Barrett"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -54,7 +73,11 @@
       "Pete Tong",
       "Paul Rogers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Car Crash",
@@ -63,6 +86,10 @@
     "artists": [
       "Martin Phipps",
       "Ruth Barrett"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -72,7 +99,11 @@
     "artists": [
       "Crystal Fighters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Killing",
@@ -81,6 +112,10 @@
     "artists": [
       "Martin Phipps",
       "Ruth Barrett"
+    ],
+    "moods": [
+      "tense",
+      "powerful"
     ]
   },
   {
@@ -90,7 +125,10 @@
     "artists": [
       "Paul Rogers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Riot",
@@ -99,6 +137,10 @@
     "artists": [
       "Martin Phipps",
       "Ruth Barrett"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   }
 ]

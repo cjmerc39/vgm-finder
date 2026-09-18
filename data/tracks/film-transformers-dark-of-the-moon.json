@@ -6,7 +6,11 @@
     "artists": [
       "Linkin Park"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "powerful"
+    ]
   },
   {
     "title": "Monster (Transformers Soundtrack Version)",
@@ -15,7 +19,11 @@
     "artists": [
       "Paramore"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "The Only Hope for Me Is You",
@@ -24,7 +32,11 @@
     "artists": [
       "My Chemical Romance"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Faith (When I Let You Down)",
@@ -33,7 +45,11 @@
     "artists": [
       "Taking Back Sunday"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "romantic"
+    ]
   },
   {
     "title": "The Bottom (Transformers Soundtrack Version)",
@@ -42,7 +58,11 @@
     "artists": [
       "Staind"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Get Thru This",
@@ -51,7 +71,11 @@
     "artists": [
       "Art Of Dying"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "All That You Are",
@@ -60,7 +84,11 @@
     "artists": [
       "Goo Goo Dolls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Head Above Water",
@@ -69,7 +97,11 @@
     "artists": [
       "Theory Of A Deadman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Set The World On Fire",
@@ -78,7 +110,11 @@
     "artists": [
       "Black Veil Brides"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Awake and Alive (Rock Radio Mix)",
@@ -87,7 +123,11 @@
     "artists": [
       "Skillet"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Just Got Paid",
@@ -96,6 +136,10 @@
     "artists": [
       "Mastodon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   }
 ]

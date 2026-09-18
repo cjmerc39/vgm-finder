@@ -6,7 +6,12 @@
     "artists": [
       "Blake Shelton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Fake ID (feat. Gretchen Wilson)",
@@ -15,6 +20,10 @@
     "artists": [
       "Big & Rich"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   }
 ]

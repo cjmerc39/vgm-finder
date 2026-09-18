@@ -7,7 +7,12 @@
       "The Bootleggers",
       "Larry Sloman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "eerie",
+      "driving"
+    ]
   },
   {
     "title": "Burnin' Hell (feat. Nick Cave)",
@@ -16,7 +21,12 @@
     "artists": [
       "The Bootleggers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "powerful",
+      "sad"
+    ]
   },
   {
     "title": "Sure 'Nuff 'N Yes I Do",
@@ -25,7 +35,11 @@
     "artists": [
       "Ralph Stanley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Fire in the Blood (Version 1) (feat. Emmylou Harris)",
@@ -34,7 +48,12 @@
     "artists": [
       "The Bootleggers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "White Light / White Heat (feat. Mark Lanegan)",
@@ -43,7 +62,12 @@
     "artists": [
       "The Bootleggers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Cosmonaut (feat. Emmylou Harris)",
@@ -52,7 +76,11 @@
     "artists": [
       "The Bootleggers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Fire in the Blood / Snake Song (feat. Emmylou Harris & Ralph Stanley)",
@@ -64,7 +92,12 @@
       "Ralph Stanley",
       "James Shelton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "So You'll Aim Towards the Sky (feat. Emmylou Harris)",
@@ -73,7 +106,12 @@
     "artists": [
       "The Bootleggers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful",
+      "romantic"
+    ]
   },
   {
     "title": "Fire in the Blood (Version 2) (feat. Emmylou Harris)",
@@ -82,7 +120,11 @@
     "artists": [
       "The Bootleggers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "sad"
+    ]
   },
   {
     "title": "Fire and Brimstone",
@@ -92,7 +134,12 @@
       "Ralph Stanley",
       "James Shelton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "eerie",
+      "driving"
+    ]
   },
   {
     "title": "Sure 'Nuff 'N Yes I Do (feat. Mark Lanegan)",
@@ -101,7 +148,11 @@
     "artists": [
       "The Bootleggers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "White Light / White Heat",
@@ -111,7 +162,12 @@
       "Ralph Stanley",
       "James Shelton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "End Crawl",
@@ -120,6 +176,9 @@
     "artists": [
       "Nick Cave",
       "Warren Ellis"
+    ],
+    "moods": [
+      "mysterious"
     ]
   },
   {
@@ -129,6 +188,11 @@
     "artists": [
       "Willie Nelson",
       "Warren Ellis"
+    ],
+    "moods": [
+      "driving",
+      "tense",
+      "powerful"
     ]
   }
 ]

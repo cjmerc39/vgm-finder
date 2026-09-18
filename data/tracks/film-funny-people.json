@@ -6,7 +6,11 @@
     "artists": [
       "Paul McCartney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Wires",
@@ -15,7 +19,11 @@
     "artists": [
       "Coconut Records"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "All The King’s Horses",
@@ -33,7 +41,11 @@
     "artists": [
       "James Taylor"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "Keep Me In Your Heart",
@@ -42,7 +54,11 @@
     "artists": [
       "Warren Zevon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Real Love",
@@ -51,7 +67,11 @@
     "artists": [
       "Adam Sandler"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "We (Early Take)",
@@ -60,7 +80,10 @@
     "artists": [
       "Neil Diamond"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Jesus, Etc. (Live Summer '08)",
@@ -70,7 +93,11 @@
       "Wilco",
       "Andrew Bird"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "transcendent"
+    ]
   },
   {
     "title": "George Simmons Soon Will Be Gone",
@@ -79,7 +106,11 @@
     "artists": [
       "Adam Sandler"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "I Am Young",
@@ -88,7 +119,11 @@
     "artists": [
       "Coconut Records"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Memory (From \"Cats\")",
@@ -98,7 +133,11 @@
       "Maude Apatow",
       "Larry Goldings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Numb As A Statue",
@@ -107,7 +146,11 @@
     "artists": [
       "Warren Zevon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Photograph",
@@ -116,7 +159,11 @@
     "artists": [
       "Ringo Starr"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Watching The Wheels (Acoustic)",
@@ -125,6 +172,10 @@
     "artists": [
       "John Lennon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   }
 ]
