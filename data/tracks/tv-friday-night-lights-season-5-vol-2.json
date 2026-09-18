@@ -6,7 +6,11 @@
     "artists": [
       "White Rabbits"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Sway",
@@ -15,7 +19,11 @@
     "artists": [
       "Heartless Bastards"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Killed Myself When I Was Young",
@@ -24,7 +32,11 @@
     "artists": [
       "A.A. Bondy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "sad"
+    ]
   },
   {
     "title": "Fire",
@@ -33,7 +45,11 @@
     "artists": [
       "Augustana"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Something Good This Way Comes",
@@ -42,7 +58,11 @@
     "artists": [
       "Jakob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "I Know What I Am",
@@ -51,7 +71,11 @@
     "artists": [
       "Band of Skulls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Meanest Man In the World",
@@ -60,7 +84,11 @@
     "artists": [
       "John Doe"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "If It's the Beaches",
@@ -69,7 +97,11 @@
     "artists": [
       "The Avett Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "What You Hide",
@@ -78,7 +110,11 @@
     "artists": [
       "AM"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Come Thou Fount of Every Blessing",
@@ -87,7 +123,11 @@
     "artists": [
       "Sufjan Stevens"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "transcendent"
+    ]
   },
   {
     "title": "This Is the Thing",
@@ -96,7 +136,11 @@
     "artists": [
       "Fink"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Friday Night Lights Theme",
@@ -104,6 +148,10 @@
     "videoId": "7mjxzVLZAKY",
     "artists": [
       "W.G. Snuffy Walden"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   }
 ]

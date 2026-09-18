@@ -1,11 +1,19 @@
 [
   {
     "title": "Main Menu",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Fabletown",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Radio (Woodsman’s Place)",
@@ -13,75 +21,145 @@
   },
   {
     "title": "Vs Woodsman",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Faith",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad",
+      "nostalgic"
+    ]
   },
   {
     "title": "I’ll Be Fine",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Opening Credits",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Outside Luxury Apartments",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Inside Luxury Apartments",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Bigby’s Place",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "I Was Fine",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Relax",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Explanations",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Crane’s Business Office",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Daytime",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Escapee",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Bad Liar",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Feeling",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender"
+    ]
   },
   {
     "title": "Too Late",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "sad"
+    ]
   },
   {
     "title": "Prince Lawrence’s Home",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Chasing Dee",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Jukebox (The Trip Trap Bar)",
@@ -89,11 +167,19 @@
   },
   {
     "title": "The Wolf Inside Us",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Cliffhanger",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Credits",
@@ -101,11 +187,19 @@
   },
   {
     "title": "Nightmare",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Beast Inside",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "eerie"
+    ]
   },
   {
     "title": "Pudding & Pie",
@@ -113,158 +207,314 @@
   },
   {
     "title": "For My Arrival",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Interrogation",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Scared",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "sad"
+    ]
   },
   {
     "title": "Dark Thoughts",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Little Mermaid",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "One Of Us",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "The Big Bad Wolf",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Furious Hunt",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Funeral Crashers",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Calm",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Complications",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Secret Room",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Rachel",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Aunty Greenleaf",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Desperation",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Under Arrest",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Tables Turned",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Holly’s Thoughts",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "mysterious"
+    ]
   },
   {
     "title": "Let’s Talk",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "The Church",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful",
+      "peaceful"
+    ]
   },
   {
     "title": "Inside Luxury Apartments (Fast Ver.)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Healing Wounds",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Worried",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "tender"
+    ]
   },
   {
     "title": "Ribbon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Just Like Home",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "A Reminder",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "mysterious"
+    ]
   },
   {
     "title": "Alchemy Lab",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Memory Spell",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "transcendent"
+    ]
   },
   {
     "title": "VS Jersey Devil",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Crooked Thoughts",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "A Fabletown Chase",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "The Girl With the Ribbon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "Sheppard Metalworks",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Behind You",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "The True Wolf",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Brought to the Community",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Finished",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Farewells",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Happily Ever After",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "Jimmy Buffett"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "playful"
+    ]
   },
   {
     "title": "Key Largo (Live at the Schooner Wharf Bar)",
@@ -15,7 +19,11 @@
     "artists": [
       "Bertie Higgins & Moondog"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Right Down the Line",
@@ -24,7 +32,11 @@
     "artists": [
       "Gerry Rafferty"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Luckenbach, Texas (Back to the Basics of Love) (feat. Willie Nelson)",
@@ -33,7 +45,11 @@
     "artists": [
       "Waylon Jennings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Two Tickets To Paradise",
@@ -42,7 +58,11 @@
     "artists": [
       "Eddie Money"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Sundown",
@@ -51,7 +71,11 @@
     "artists": [
       "Gordon Lightfoot"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "On and On",
@@ -60,7 +84,10 @@
     "artists": [
       "Stephen Bishop"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Into the Mystic",
@@ -69,7 +96,11 @@
     "artists": [
       "Van Morrison"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "mysterious"
+    ]
   },
   {
     "title": "Moonfog",
@@ -78,7 +109,11 @@
     "artists": [
       "Jimmy Buffett"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Poem for a White Cat",
@@ -86,6 +121,10 @@
     "videoId": "XN1z0sla-oA",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -94,6 +133,9 @@
     "videoId": "RIZuNE2TZKQ",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -102,6 +144,10 @@
     "videoId": "bVh39MQfiog",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -110,6 +156,10 @@
     "videoId": "JNQGHFnB3eo",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "mournful",
+      "sad"
     ]
   },
   {
@@ -118,6 +168,10 @@
     "videoId": "_4M26-aZ55I",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   }
 ]

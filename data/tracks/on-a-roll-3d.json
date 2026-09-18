@@ -1,46 +1,89 @@
 [
   {
     "title": "Boss",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "End Sequence",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Game Over",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "Level 1 - Garden Trail",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Level 2 - Marble Ruins",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   },
   {
     "title": "Level 3 - Frozen Wilderness",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "eerie"
+    ]
   },
   {
     "title": "Level 4 - Industrial Highway",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Level 5 - Moonlight Meadow",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Level 6 - Concrete City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Level End",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Title Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "wonder"
+    ]
   }
 ]

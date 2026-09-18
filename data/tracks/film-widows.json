@@ -5,6 +5,10 @@
     "videoId": "zOOjaD8xwf4",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "powerful",
+      "mysterious"
     ]
   },
   {
@@ -13,6 +17,10 @@
     "videoId": "Q2d-G6k7GvA",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -21,6 +29,10 @@
     "videoId": "_GyO3UjL13k",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "tense",
+      "mysterious"
     ]
   },
   {
@@ -29,6 +41,10 @@
     "videoId": "p85kgHlxDfE",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -37,6 +53,10 @@
     "videoId": "FSjEoD6N0wk",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "peaceful",
+      "mysterious"
     ]
   },
   {
@@ -45,6 +65,10 @@
     "videoId": "YeMQBfXL1Cw",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "driving",
+      "powerful"
     ]
   },
   {
@@ -53,6 +77,10 @@
     "videoId": "uRUaX6G4K3s",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -61,6 +89,10 @@
     "videoId": "0uuMRZC30-E",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "sad",
+      "tender"
     ]
   },
   {
@@ -70,7 +102,11 @@
     "artists": [
       "Nina Simone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Dice Game",
@@ -79,7 +115,11 @@
     "artists": [
       "The Cool Kids"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "The Big Unknown",
@@ -88,6 +128,10 @@
     "artists": [
       "Sade"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "mysterious"
+    ]
   }
 ]
