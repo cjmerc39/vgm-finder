@@ -1,355 +1,707 @@
 [
   {
     "title": "Opening Movie",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Introduction",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Special Report: ''Search for the Red Gyarados!''",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Twinleaf Town (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Rival",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Route 201 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Lake",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "A Surprise at the Lake!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "tense"
+    ]
   },
   {
     "title": "Battle! (Wild Pokémon)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Victory! (Wild Pokémon)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Dawn",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Obtained an Item!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Sandgem Town (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "The Pokémon Lab",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Hurry Along",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Pokémon Center (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Pokémon Healed",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Youngster)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Lass)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Battle! (Trainer Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Victory! (Trainer Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Jubilife City (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Obtained a Key Item!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Poké Mart",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "peaceful"
+    ]
   },
   {
     "title": "Route 203 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Battle! (Rival)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Oreburgh Gate",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Obtained a TM!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Oreburgh City (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "mysterious"
+    ]
   },
   {
     "title": "Oreburgh Mine",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Pokémon Gym",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "powerful"
+    ]
   },
   {
     "title": "Battle! (Gym Leader)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Victory! (Gym Leader)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Obtained a Badge!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Twins)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Level Up!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Floaroma Town (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Obtained a Berry!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Route 205 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Team Galactic Appears!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Battle! (Team Galactic)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Eterna Forest",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Let's Go Together!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Eterna City (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Galactic Eterna Building",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Battle! (Team Galactic Commander)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Victory! (Team Galactic)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Evolution",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "wonder"
+    ]
   },
   {
     "title": "Congratulations! Your Pokémon Evolved!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Bicycle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Cyclist)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Route 206 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Hearthome City (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Route 209 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Hiker)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Solaceon Town (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Obtained a Pokétch App!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Route 210",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Veilstone City (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Valor Lakefront (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "romantic"
+    ]
   },
   {
     "title": "Canalave City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Route 216 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "eerie"
+    ]
   },
   {
     "title": "Snowpoint City (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "eerie"
+    ]
   },
   {
     "title": "Team Galactic HQ",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Battle! (Team Galactic Boss)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Deep Within Team Galactic HQ",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Mt. Coronet",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "powerful"
+    ]
   },
   {
     "title": "Spear Pillar",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "powerful"
+    ]
   },
   {
     "title": "The Legendary Pokémon Appears!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "tense"
+    ]
   },
   {
     "title": "Catastrophe!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Battle! (Dialga/Palkia)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Sunyshore City (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Victory Road",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Ace Trainer)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "heroic"
+    ]
   },
   {
     "title": "Pokémon League (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Fight Area (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Route 225 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Route 228 (Day)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "eerie"
+    ]
   },
   {
     "title": "Twinleaf Town (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Route 201 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Pokémon Center (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Sandgem Town (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Lucas",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Jubilife City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "TV Station",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Gts",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Surf",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Canalave City (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Move Deleted",
@@ -357,271 +709,535 @@
   },
   {
     "title": "Route 203 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Black Belt)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Oreburgh City (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Route 205 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Sailor)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Eterna City (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "The Underground",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Aroma Lady)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Floaroma Town (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Old Chateau",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Solaceon Town (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Great Marsh",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "peaceful"
+    ]
   },
   {
     "title": "Route 206 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Collector)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Veilstone City (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Game Corner",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (PI)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Route 209 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Snowpoint City (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tense"
+    ]
   },
   {
     "title": "Route 216 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tense"
+    ]
   },
   {
     "title": "Lake Caverns",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Battle! (Azelf/Mesprit/Uxie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Route 210 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "A Poké Radar Hit!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Sunyshore City (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Trainers' Eyes Meet (Artist)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Amity Square",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Got an Accessory",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Hearthome City (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Contest Hall",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Poffins",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Contest: Title",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Contest: Dress",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Dance: Easy",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Dance: Difficult",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Contest 1",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Contest 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Contest 3",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Contest 4",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Contest 5",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Contest: Results Announcement",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Contest: Winner",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Route 228 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Valor Lakefront (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Fight Area (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Battle Tower",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Route 225 (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Stark Mountain",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "Battle! (Legendary Pokémon)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Mystery Gift",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Pokémon League (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Decisive Battle! (Pokémon League)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "The Elite Four Appear!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Battle! (Elite Four)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Victory! (Elite Four)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Champion Cynthia",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "transcendent"
+    ]
   },
   {
     "title": "Battle! (Champion)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Victory! (Champion)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Hall of Fame",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Congratulations on Entering the Hall of Fame!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "transcendent"
+    ]
   },
   {
     "title": "Ending Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Battle! (Giratina)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "eerie"
+    ]
   },
   {
     "title": "Battle! (Arceus)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "transcendent"
+    ]
   },
   {
     "title": "Ramanas Park?",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Battle! (Raikou/Entei/Suicune)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Battle! (Articuno/Zapdos/Moltres)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Battle! (Wild Pokémon) (alt.)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Unknown Track",
@@ -629,58 +1245,114 @@
   },
   {
     "title": "Battle! (Trainer Battle) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Battle! (Rival) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Battle! (Gym Leader) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Battle! (Team Galactic) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Battle! (Team Galactic Commander) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Battle! (Team Galactic Boss) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Battle! (Dialga/Palkia) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "Battle! (Azelf/Mesprit/Uxie) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Battle! (Legendary Pokémon) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Battle! (Elite Four) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Battle! (Champion) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Ending Theme [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Battle! (Giratina) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "eerie"
+    ]
   },
   {
     "title": "Battle! (Arceus) [Ver 1.0]",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "transcendent"
+    ]
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T02:27:11Z",
+  "updatedAt": "2026-09-18T02:39:57Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -273,7 +273,17 @@
       "ytmPlaylistId": "OLAK5uy_m_lkIbIlDgJJmPL9sYhssZAfY26kGPbn0",
       "medium": "game",
       "tracksN": 8,
-      "playsTotal": 66000
+      "playsTotal": 66000,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "tender"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "the-primals-zepp-tour-2018-trial-by-shadow",
@@ -1459,7 +1469,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1986830/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 43
+      "tracksN": 43,
+      "moods": [
+        "peaceful",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        10,
+        9
+      ]
     },
     {
       "id": "hollow-knight-silksong",
@@ -1798,7 +1818,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2175430/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 50
+      "tracksN": 50,
+      "moods": [
+        "playful",
+        "mysterious",
+        "joyful"
+      ],
+      "moodsN": [
+        18,
+        16,
+        14
+      ]
     },
     {
       "id": "the-forever-winter",
@@ -1918,7 +1948,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2054540/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 18
+      "tracksN": 18,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "atri-my-dear-moments",
@@ -2173,7 +2213,17 @@
       "ytmPlaylistId": "OLAK5uy_kiaWXRzSXDzUPxIpt37N8g_mRPxSiMMTA",
       "medium": "game",
       "tracksN": 56,
-      "playsTotal": 59448600
+      "playsTotal": 59448600,
+      "moods": [
+        "peaceful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        19,
+        17,
+        12
+      ]
     },
     {
       "id": "paper-lily-chapter-1",
@@ -2219,7 +2269,17 @@
       "ytmPlaylistId": "OLAK5uy_n8msgMHDzEO2k3a9pNiLtXnLjsW1wJjRk",
       "medium": "game",
       "tracksN": 31,
-      "playsTotal": 163100
+      "playsTotal": 163100,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        10,
+        10
+      ]
     },
     {
       "id": "opus-echo-of-starsong-arrangements-forgotten-sounds",
@@ -2428,7 +2488,15 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2344510/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 1
+      "tracksN": 1,
+      "moods": [
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        1,
+        1
+      ]
     },
     {
       "id": "lies-of-p",
@@ -2963,7 +3031,17 @@
       "ytmPlaylistId": "OLAK5uy_lx11c4pJU6laEh6gkyG3UpHltL4Kkvsa8",
       "medium": "game",
       "tracksN": 12,
-      "playsTotal": 4263000
+      "playsTotal": 4263000,
+      "moods": [
+        "tender",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "04-42-still-free-from-haven",
@@ -3043,7 +3121,17 @@
       "ytmPlaylistId": "OLAK5uy_n-KMLUDSf1Dw9h6sd53FJtis-gJDLRi2E",
       "medium": "game",
       "tracksN": 29,
-      "playsTotal": 3329000
+      "playsTotal": 3329000,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        6,
+        6
+      ]
     },
     {
       "id": "madness-project-nexus",
@@ -3114,7 +3202,17 @@
       "ytmPlaylistId": "OLAK5uy_m5VxWeSgS-_khcX4vbt4d7ExWAOkyNMgY",
       "medium": "game",
       "tracksN": 17,
-      "playsTotal": 26950
+      "playsTotal": 26950,
+      "moods": [
+        "playful",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ]
     },
     {
       "id": "touhou-mystia-s-izakaya-soundtrack-1",
@@ -3434,7 +3532,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1905390/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 9
+      "tracksN": 9,
+      "moods": [
+        "mysterious",
+        "transcendent",
+        "peaceful"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ]
     },
     {
       "id": "noctuary",
@@ -3539,7 +3647,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2105100/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 88
+      "tracksN": 88,
+      "moods": [
+        "powerful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        20,
+        17,
+        17
+      ]
     },
     {
       "id": "narcissu-1st-2nd",
@@ -3643,7 +3761,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2259020/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 50
+      "tracksN": 50,
+      "moods": [
+        "peaceful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        21,
+        20,
+        13
+      ]
     },
     {
       "id": "savant-ascent-remix",
@@ -3664,7 +3792,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2543430/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 38
+      "tracksN": 38,
+      "moods": [
+        "powerful",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        18,
+        12,
+        10
+      ]
     },
     {
       "id": "kinoko",
@@ -3800,7 +3938,17 @@
       "ytmPlaylistId": "OLAK5uy_kcMdl9HDdxJTPJH7ZuZ8yNdv48amnFIxw",
       "medium": "game",
       "tracksN": 18,
-      "playsTotal": 6091000
+      "playsTotal": 6091000,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "the-crown-of-leaves",
@@ -4102,7 +4250,17 @@
       "ytmPlaylistId": "OLAK5uy_nTgwYeO9MA4fC_cqC_mR9fbCN_E82bWMI",
       "medium": "game",
       "tracksN": 26,
-      "playsTotal": 955300
+      "playsTotal": 955300,
+      "moods": [
+        "mysterious",
+        "peaceful",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        7,
+        5
+      ]
     },
     {
       "id": "changed",
@@ -4148,7 +4306,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1986820/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 43
+      "tracksN": 43,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        18,
+        11,
+        10
+      ]
     },
     {
       "id": "hades",
@@ -4207,7 +4375,17 @@
       "ytmPlaylistId": "OLAK5uy_nIvQHyF-rAbmWFOWT3yuu6X-q3qI476SA",
       "medium": "game",
       "tracksN": 22,
-      "playsTotal": 21967000
+      "playsTotal": 21967000,
+      "moods": [
+        "driving",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "clair-obscur-expedition-33-verso-s-drafts",
@@ -4328,7 +4506,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1475230/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 34
+      "tracksN": 34,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "transcendent"
+      ],
+      "moodsN": [
+        8,
+        8,
+        6
+      ]
     },
     {
       "id": "zombie-panic-source",
@@ -4524,7 +4712,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2537200/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 31
+      "tracksN": 31,
+      "moods": [
+        "joyful",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        9,
+        8,
+        7
+      ]
     },
     {
       "id": "oneshot-solstice",
@@ -4939,7 +5137,17 @@
       "ytmPlaylistId": "OLAK5uy_k_Jx1qDYO3PxToREZ8LF-K4CdamCpU7Xc",
       "medium": "game",
       "tracksN": 23,
-      "playsTotal": 540500
+      "playsTotal": 540500,
+      "moods": [
+        "mysterious",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "ori-and-the-will-of-the-wisps",
@@ -5124,7 +5332,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 59
+      "tracksN": 59,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        36,
+        16,
+        10
+      ]
     },
     {
       "id": "machinarium-soundtrack-art-book",
@@ -5246,7 +5464,17 @@
       "ytmPlaylistId": "OLAK5uy_l16sEv-pcWbaHAKmrFaWRUaBTUOs2XqPQ",
       "medium": "game",
       "tracksN": 20,
-      "playsTotal": 406960
+      "playsTotal": 406960,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        8,
+        5
+      ]
     },
     {
       "id": "the-werecleaner",
@@ -5340,7 +5568,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2213630/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 40
+      "tracksN": 40,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        10,
+        10
+      ]
     },
     {
       "id": "devil-may-cry-5-vergil-s-rebirth-sound-selection",
@@ -5724,7 +5962,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2015890/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 42
+      "tracksN": 42,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        26,
+        22,
+        13
+      ]
     },
     {
       "id": "sword-and-fairy-original-soundtrack-collection",
@@ -5906,7 +6154,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2016160/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 15
+      "tracksN": 15,
+      "moods": [
+        "mysterious",
+        "tense",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "world-of-warships-composer-s-choice",
@@ -5984,7 +6242,17 @@
       "ytmPlaylistId": "OLAK5uy_nBHgqqZ183JBw9_VrlJGQGs1IctCDCm74",
       "medium": "game",
       "tracksN": 73,
-      "playsTotal": 68791000
+      "playsTotal": 68791000,
+      "moods": [
+        "playful",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        23,
+        18,
+        17
+      ]
     },
     {
       "id": "beholder",
@@ -6143,7 +6411,17 @@
       "ytmPlaylistId": "OLAK5uy_k-ppA7w2OTBPkkcrK2QeoY0WoiRp10_gQ",
       "medium": "game",
       "tracksN": 16,
-      "playsTotal": 51826
+      "playsTotal": 51826,
+      "moods": [
+        "joyful",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "monster-hunter-world",
@@ -6599,7 +6877,17 @@
       "ytmPlaylistId": "OLAK5uy_ncI1vgYczG-0UJQkHcNwtVWQgx5xtQAu4",
       "medium": "game",
       "tracksN": 17,
-      "playsTotal": 9670
+      "playsTotal": 9670,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "green-hell",
@@ -6624,7 +6912,17 @@
       "ytmPlaylistId": "OLAK5uy_kC1yeJfC_mBtqwWu3gd-9RFITqQK8PMx8",
       "medium": "game",
       "tracksN": 25,
-      "playsTotal": 55501
+      "playsTotal": 55501,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "incredibox-tracks",
@@ -7207,7 +7505,17 @@
       "ytmPlaylistId": "OLAK5uy_l4F8Fbowy9QMSR_uxBP_S3rdM2tBJyey4",
       "medium": "game",
       "tracksN": 16,
-      "playsTotal": 66880000
+      "playsTotal": 66880000,
+      "moods": [
+        "mysterious",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "bloodstained-ritual-of-the-night",
@@ -7714,7 +8022,17 @@
       "ytmPlaylistId": "OLAK5uy_mZJDKfhalXPuC5elU_eDxilr0Vfy8u3zw",
       "medium": "game",
       "tracksN": 30,
-      "playsTotal": 4308000
+      "playsTotal": 4308000,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        13,
+        11,
+        7
+      ]
     },
     {
       "id": "not-for-broadcast",
@@ -8117,7 +8435,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1786560/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 28
+      "tracksN": 28,
+      "moods": [
+        "joyful",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        10,
+        6
+      ]
     },
     {
       "id": "noita",
@@ -8303,7 +8631,17 @@
       "ytmPlaylistId": "OLAK5uy_k8pqm2LsiPda7phgNAuzszYkIexMAquOg",
       "medium": "game",
       "tracksN": 48,
-      "playsTotal": 54937000
+      "playsTotal": 54937000,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        20,
+        16,
+        13
+      ]
     },
     {
       "id": "just-shapes-beats-monstercat-track-selection",
@@ -9291,7 +9629,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1856390/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 27
+      "tracksN": 27,
+      "moods": [
+        "tender",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "aokana-drama-cd-vol-1",
@@ -9800,7 +10148,17 @@
       "ytmPlaylistId": "OLAK5uy_k15RtXysMQflfBtaR29BVwhIg8TeXotSo",
       "medium": "game",
       "tracksN": 23,
-      "playsTotal": 477600
+      "playsTotal": 477600,
+      "moods": [
+        "eerie",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "dungreed",
@@ -10042,7 +10400,17 @@
       "ytmPlaylistId": "OLAK5uy_m096L5mM4593TIE_RfidAHO6HPbDCmSmc",
       "medium": "game",
       "tracksN": 20,
-      "playsTotal": 5548
+      "playsTotal": 5548,
+      "moods": [
+        "peaceful",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "kujlevka",
@@ -10168,7 +10536,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1782140/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 7
+      "tracksN": 7,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "lacuna-lo-fi",
@@ -10189,7 +10567,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2434030/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 7
+      "tracksN": 7,
+      "moods": [
+        "tender",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "spooky-s-jump-scare-mansion",
@@ -10413,7 +10801,17 @@
       "ytmPlaylistId": "OLAK5uy_n4MM3AZJb84UE1nq2hfIm54OcrTanTHXc",
       "medium": "game",
       "tracksN": 55,
-      "playsTotal": 12152000
+      "playsTotal": 12152000,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        17,
+        11,
+        11
+      ]
     },
     {
       "id": "lovechoice-original-sound-tracks-3",
@@ -10533,7 +10931,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2573830/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 5
+      "tracksN": 5,
+      "moods": [
+        "peaceful",
+        "tender",
+        "wonder"
+      ],
+      "moodsN": [
+        5,
+        2,
+        1
+      ]
     },
     {
       "id": "unexplored",
@@ -10554,7 +10962,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1232020/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 15
+      "tracksN": 15,
+      "moods": [
+        "mysterious",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "the-chrono-jotter",
@@ -10613,7 +11031,17 @@
       "ytmPlaylistId": "OLAK5uy_kCiNACxHt0GDWbKLktqLYNAjkcV0DeA2E",
       "medium": "game",
       "tracksN": 31,
-      "playsTotal": 9966000
+      "playsTotal": 9966000,
+      "moods": [
+        "transcendent",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        8,
+        8
+      ]
     },
     {
       "id": "othercide",
@@ -10834,7 +11262,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2564030/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 34
+      "tracksN": 34,
+      "moods": [
+        "playful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        9,
+        9
+      ]
     },
     {
       "id": "blasphemous-2-mea-culpa",
@@ -11319,7 +11757,17 @@
       "ytmPlaylistId": "OLAK5uy_kweEP5GkwXZgWGFzeAqolTzqdcDeepJeg",
       "medium": "game",
       "tracksN": 32,
-      "playsTotal": 71776
+      "playsTotal": 71776,
+      "moods": [
+        "joyful",
+        "playful",
+        "peaceful"
+      ],
+      "moodsN": [
+        10,
+        10,
+        7
+      ]
     },
     {
       "id": "frostpunk-2",
@@ -11822,7 +12270,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2128650/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 10
+      "tracksN": 10,
+      "moods": [
+        "peaceful",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "everglow-lost-days",
@@ -11958,7 +12416,17 @@
       "ytmPlaylistId": "OLAK5uy_nafYeJZnohKGswUJF0FEf8KEbEQB7nlyw",
       "medium": "game",
       "tracksN": 31,
-      "playsTotal": 368300
+      "playsTotal": 368300,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        17,
+        16,
+        13
+      ]
     },
     {
       "id": "return-to-shironagasu-island",
@@ -12051,7 +12519,17 @@
       "ytmPlaylistId": "OLAK5uy_kUGuiEJM1Jb-KdFg8l1PXCMlCCtNSau8o",
       "medium": "game",
       "tracksN": 57,
-      "playsTotal": 3860
+      "playsTotal": 3860,
+      "moods": [
+        "peaceful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        18,
+        16,
+        12
+      ]
     },
     {
       "id": "sunset-mall",
@@ -12229,7 +12707,17 @@
       "ytmPlaylistId": "OLAK5uy_lzFcBQi0NTUWG26VvpQ-JordR9d4uSQq0",
       "medium": "game",
       "tracksN": 19,
-      "playsTotal": 313700
+      "playsTotal": 313700,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        9,
+        9,
+        6
+      ]
     },
     {
       "id": "at-winter-s-end",
@@ -12431,7 +12919,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1702570/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 17
+      "tracksN": 17,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "晴末置雨",
@@ -12490,7 +12988,17 @@
       "ytmPlaylistId": "OLAK5uy_lDRdgJyIorACwjBeBPaAvlFkuz3ybskuM",
       "medium": "game",
       "tracksN": 10,
-      "playsTotal": 559
+      "playsTotal": 559,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "no-i-m-not-a-human",
@@ -12844,7 +13352,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1788010/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 28
+      "tracksN": 28,
+      "moods": [
+        "tense",
+        "mysterious",
+        "sad"
+      ],
+      "moodsN": [
+        12,
+        8,
+        7
+      ]
     },
     {
       "id": "shootout-on-cash-island",
@@ -12927,7 +13445,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2420940/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 24
+      "tracksN": 24,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "last-broadcast",
@@ -12952,7 +13480,17 @@
       "ytmPlaylistId": "OLAK5uy_mox5dtm75XO9RTzc6YanP_Oy49Do8gL_M",
       "medium": "game",
       "tracksN": 17,
-      "playsTotal": 221
+      "playsTotal": 221,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        4,
+        4,
+        4
+      ]
     },
     {
       "id": "tokyo-xtreme-racer",
@@ -13045,7 +13583,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1814840/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 31
+      "tracksN": 31,
+      "moods": [
+        "mournful",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ]
     },
     {
       "id": "sani-yang-s-laboratory",
@@ -13118,7 +13666,17 @@
       "ytmPlaylistId": "OLAK5uy_kZx5nTReBh05qZdXil-QRAB7D-XDb3bK4",
       "medium": "game",
       "tracksN": 48,
-      "playsTotal": 1305200
+      "playsTotal": 1305200,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "transcendent"
+      ],
+      "moodsN": [
+        12,
+        11,
+        8
+      ]
     },
     {
       "id": "million-depth",
@@ -13524,7 +14082,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1747620/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 101
+      "tracksN": 101,
+      "moods": [
+        "joyful",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        25,
+        16,
+        15
+      ]
     },
     {
       "id": "stirring-abyss",
@@ -13545,7 +14113,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1747990/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 10
+      "tracksN": 10,
+      "moods": [
+        "tense",
+        "powerful",
+        "eerie"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "bunhouse",
@@ -13566,7 +14144,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1801380/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 9
+      "tracksN": 9,
+      "moods": [
+        "joyful",
+        "playful",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "colorblend-fx-desaturated-jukebox",
@@ -13628,7 +14216,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1816840/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 9
+      "tracksN": 9,
+      "moods": [
+        "mysterious",
+        "peaceful",
+        "eerie"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "decorporation",
@@ -13649,7 +14247,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1969730/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 5
+      "tracksN": 5,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "an-opportunity",
@@ -13670,7 +14278,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2090710/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 6
+      "tracksN": 6,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "tender"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ]
     },
     {
       "id": "jones",
@@ -13712,7 +14330,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2095590/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 7
+      "tracksN": 7,
+      "moods": [
+        "peaceful",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "prime-of-flames",
@@ -13758,7 +14386,17 @@
       "ytmPlaylistId": "OLAK5uy_lGRcC0fZNh3l4B51u1ce6zirRwhio9tBk",
       "medium": "game",
       "tracksN": 55,
-      "playsTotal": 16
+      "playsTotal": 16,
+      "moods": [
+        "powerful",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        16,
+        13,
+        13
+      ]
     },
     {
       "id": "unholy",
@@ -13779,7 +14417,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2515720/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 8
+      "tracksN": 8,
+      "moods": [
+        "powerful",
+        "eerie",
+        "playful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "my-time-at-sandrock",
@@ -13800,7 +14448,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1720400/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 35
+      "tracksN": 35,
+      "moods": [
+        "tender",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        10,
+        10,
+        9
+      ]
     },
     {
       "id": "our-life-beginnings-always",
@@ -13981,7 +14639,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2050790/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 23
+      "tracksN": 23,
+      "moods": [
+        "tense",
+        "powerful",
+        "sad"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "sumire",
@@ -14738,7 +15406,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1885270/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 28
+      "tracksN": 28,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        14,
+        13,
+        10
+      ]
     },
     {
       "id": "shadows-on-the-vatican-act-i-greed",
@@ -14763,7 +15441,17 @@
       "ytmPlaylistId": "OLAK5uy_liWrYXGbNU4vgj7qGZrsVFISpHN8Ni448",
       "medium": "game",
       "tracksN": 11,
-      "playsTotal": 429
+      "playsTotal": 429,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "datajack",
@@ -14851,7 +15539,17 @@
       "ytmPlaylistId": "OLAK5uy_kQ9uc_6K1E8_g2wBq2oqK7CxrK_HI15TU",
       "medium": "game",
       "tracksN": 22,
-      "playsTotal": 312
+      "playsTotal": 312,
+      "moods": [
+        "wonder",
+        "mysterious",
+        "transcendent"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ]
     },
     {
       "id": "grandma-badass",
@@ -14893,7 +15591,9 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2181310/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 1
+      "tracksN": 1,
+      "moods": [],
+      "moodsN": []
     },
     {
       "id": "solar-showdown",
@@ -14974,7 +15674,17 @@
       "ytmPlaylistId": "OLAK5uy_nGxOPth7tfioTBxSgVGQGOh1ttHJRk42U",
       "medium": "game",
       "tracksN": 60,
-      "playsTotal": 8220000
+      "playsTotal": 8220000,
+      "moods": [
+        "mysterious",
+        "peaceful",
+        "tense"
+      ],
+      "moodsN": [
+        22,
+        14,
+        10
+      ]
     },
     {
       "id": "brigador-vol-i",
@@ -15294,7 +16004,17 @@
       "ytmPlaylistId": "OLAK5uy_nBEHOW0lV2pWrywXH0bcFmB-qxLtRlhtE",
       "medium": "game",
       "tracksN": 3,
-      "playsTotal": 28400
+      "playsTotal": 28400,
+      "moods": [
+        "powerful",
+        "heroic",
+        "transcendent"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "鈴集無名の丘-little-doll-queen",
@@ -16398,7 +17118,17 @@
       "ytmPlaylistId": "OLAK5uy_nknhosHLMTS4b8qzeQNc2QuMdpxAPcwNA",
       "medium": "game",
       "tracksN": 67,
-      "playsTotal": 22237000
+      "playsTotal": 22237000,
+      "moods": [
+        "powerful",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        25,
+        25,
+        24
+      ]
     },
     {
       "id": "uncharted-2-among-thieves",
@@ -17661,7 +18391,17 @@
       "ytmPlaylistId": "OLAK5uy_lck6NkHK40W9gymyy3k3TVkXnqkwGyn4w",
       "medium": "game",
       "tracksN": 43,
-      "playsTotal": 77037000
+      "playsTotal": 77037000,
+      "moods": [
+        "powerful",
+        "transcendent",
+        "heroic"
+      ],
+      "moodsN": [
+        13,
+        9,
+        8
+      ]
     },
     {
       "id": "nier-automata",
@@ -18926,7 +19666,17 @@
       "ytmPlaylistId": "OLAK5uy_koQAB9JzJw49W-QCvP5RGSh3I_FCTuLsw",
       "medium": "game",
       "tracksN": 28,
-      "playsTotal": 77149000
+      "playsTotal": 77149000,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        12,
+        10,
+        8
+      ]
     },
     {
       "id": "it-takes-two",
@@ -20165,7 +20915,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 1
+      "tracksN": 1,
+      "moods": [
+        "wonder",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "battlefield-4",
@@ -22194,7 +22954,17 @@
       "ytmPlaylistId": "OLAK5uy_lF2wschaf8QrPVT4dAZ4HUYZEdN3f9-OA",
       "medium": "game",
       "tracksN": 34,
-      "playsTotal": 4279000
+      "playsTotal": 4279000,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "joyful"
+      ],
+      "moodsN": [
+        9,
+        7,
+        7
+      ]
     },
     {
       "id": "resident-evil-4-2023",
@@ -22222,7 +22992,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 50
+      "tracksN": 50,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        23,
+        23,
+        13
+      ]
     },
     {
       "id": "soma",
@@ -26798,7 +27578,17 @@
         "Shooter"
       ],
       "medium": "game",
-      "tracksN": 18
+      "tracksN": 18,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        8,
+        8
+      ]
     },
     {
       "id": "dead-by-daylight",
@@ -27632,7 +28422,17 @@
       "ytmPlaylistId": "OLAK5uy_nHC7-54eNa8MP9ewrs5r20J7WXF27CBKM",
       "medium": "game",
       "tracksN": 34,
-      "playsTotal": 471700
+      "playsTotal": 471700,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        8,
+        7
+      ]
     },
     {
       "id": "quantum-break",
@@ -27695,7 +28495,17 @@
       "ytmPlaylistId": "OLAK5uy_m-X1Gv6xFj_NVXMZm8IwEooL58owHygPA",
       "medium": "game",
       "tracksN": 47,
-      "playsTotal": 584000
+      "playsTotal": 584000,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        26,
+        18,
+        17
+      ]
     },
     {
       "id": "broforce",
@@ -27791,7 +28601,17 @@
       "ytmPlaylistId": "OLAK5uy_kJHg4qAc-5YkOr0LjZmFty2fZG8Oh1zkw",
       "medium": "game",
       "tracksN": 21,
-      "playsTotal": 26181000
+      "playsTotal": 26181000,
+      "moods": [
+        "driving",
+        "powerful",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "danganronpa-trigger-happy-havoc",
@@ -28293,7 +29113,17 @@
       "ytmPlaylistId": "OLAK5uy_nJab_c9tZFCC1jf1XDTTvxzGcURm7iM0k",
       "medium": "game",
       "tracksN": 44,
-      "playsTotal": 1392000
+      "playsTotal": 1392000,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        10,
+        9
+      ]
     },
     {
       "id": "tom-clancy-s-the-division-2",
@@ -28464,7 +29294,17 @@
       "ytmPlaylistId": "OLAK5uy_kOggZLOP5wrxyr8yC2xTRg_90W62D97fQ",
       "medium": "game",
       "tracksN": 48,
-      "playsTotal": 6026000
+      "playsTotal": 6026000,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        14,
+        12,
+        12
+      ]
     },
     {
       "id": "darksiders-ii",
@@ -28567,7 +29407,17 @@
       "ytmPlaylistId": "OLAK5uy_nh_j9w1Nwfb86whvjybLWq22MehkG6a18",
       "medium": "game",
       "tracksN": 34,
-      "playsTotal": 4612000
+      "playsTotal": 4612000,
+      "moods": [
+        "tender",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        10,
+        9,
+        8
+      ]
     },
     {
       "id": "the-dark-pictures-anthology-man-of-medan",
@@ -29183,7 +30033,17 @@
       "ytmPlaylistId": "OLAK5uy_lNEK6SjVmt3rEW5Z9qlDGoFIGhVx0JH-w",
       "medium": "game",
       "tracksN": 21,
-      "playsTotal": 1543000
+      "playsTotal": 1543000,
+      "moods": [
+        "powerful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "prototype-2",
@@ -29374,7 +30234,17 @@
       "ytmPlaylistId": "OLAK5uy_knWKNwPw_neJTDbsLbnBLTRezgR-rh9GQ",
       "medium": "game",
       "tracksN": 23,
-      "playsTotal": 803000
+      "playsTotal": 803000,
+      "moods": [
+        "peaceful",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "need-for-speed-heat",
@@ -29470,7 +30340,17 @@
       "ytmPlaylistId": "OLAK5uy_nncSUB5LrT9VRgvGgs0wT7Svlf3kqOvkc",
       "medium": "game",
       "tracksN": 30,
-      "playsTotal": 256400
+      "playsTotal": 256400,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        8,
+        6
+      ]
     },
     {
       "id": "need-for-speed-payback",
@@ -29566,7 +30446,17 @@
       "ytmPlaylistId": "OLAK5uy_lIDW4dtBRuncj9pb0C_lWSXZ1VxwgRpow",
       "medium": "game",
       "tracksN": 17,
-      "playsTotal": 633000
+      "playsTotal": 633000,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        14,
+        12,
+        8
+      ]
     },
     {
       "id": "dante-s-inferno",
@@ -29803,7 +30693,17 @@
       "ytmPlaylistId": "OLAK5uy_m7ooZtWp9dUJZHfRpOUy69BasDl7LKD8A",
       "medium": "game",
       "tracksN": 33,
-      "playsTotal": 8185000
+      "playsTotal": 8185000,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        11,
+        9,
+        9
+      ]
     },
     {
       "id": "donut-county",
@@ -30005,7 +30905,17 @@
       "ytmPlaylistId": "OLAK5uy_l9wUo-mOe2H1Yx5gTbdVwr3OpjDZ7cL8k",
       "medium": "game",
       "tracksN": 181,
-      "playsTotal": 78316000
+      "playsTotal": 78316000,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        40,
+        39,
+        36
+      ]
     },
     {
       "id": "command-conquer-3-tiberium-wars",
@@ -30069,7 +30979,17 @@
       "ytmPlaylistId": "OLAK5uy_nM5L11mb3ZaNRZ6KA9rMz9ioLczEHTlW8",
       "medium": "game",
       "tracksN": 49,
-      "playsTotal": 8921000
+      "playsTotal": 8921000,
+      "moods": [
+        "mysterious",
+        "tense",
+        "peaceful"
+      ],
+      "moodsN": [
+        15,
+        13,
+        9
+      ]
     },
     {
       "id": "call-of-duty-black-ops-6",
@@ -30302,7 +31222,17 @@
       "ytmPlaylistId": "OLAK5uy_l7RcbUUGMOBqZnSLUfTpcB0rDqbNi9So4",
       "medium": "game",
       "tracksN": 12,
-      "playsTotal": 12740
+      "playsTotal": 12740,
+      "moods": [
+        "mysterious",
+        "peaceful",
+        "transcendent"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "final-fantasy-vii-rebirth",
@@ -30840,7 +31770,17 @@
       "ytmPlaylistId": "OLAK5uy_mxEMFGcNHVyyyePvd3jG08b6-cAL8ThN0",
       "medium": "game",
       "tracksN": 15,
-      "playsTotal": 195400
+      "playsTotal": 195400,
+      "moods": [
+        "tender",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "elden-ring-nightreign",
@@ -31203,7 +32143,17 @@
       "ytmPlaylistId": "OLAK5uy_kvCkGtsg05T67NwhuRiQ_7slaJMHhsL4Y",
       "medium": "game",
       "tracksN": 36,
-      "playsTotal": 383900
+      "playsTotal": 383900,
+      "moods": [
+        "powerful",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        17,
+        10,
+        9
+      ]
     },
     {
       "id": "the-alters",
@@ -31772,7 +32722,17 @@
       "ytmPlaylistId": "OLAK5uy_lA_U6lR8JnqTUNhHhxosYIh90TV3szdU8",
       "medium": "game",
       "tracksN": 25,
-      "playsTotal": 23598
+      "playsTotal": 23598,
+      "moods": [
+        "tender",
+        "playful",
+        "peaceful"
+      ],
+      "moodsN": [
+        9,
+        8,
+        8
+      ]
     },
     {
       "id": "another-crab-s-treasure",
@@ -32385,7 +33345,17 @@
       "ytmPlaylistId": "OLAK5uy_mUVj3row39iocwUmh5gCDSbjMJLwmvQvw",
       "medium": "game",
       "tracksN": 28,
-      "playsTotal": 817400
+      "playsTotal": 817400,
+      "moods": [
+        "driving",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        11,
+        7,
+        6
+      ]
     },
     {
       "id": "skull-and-bones",
@@ -32623,7 +33593,17 @@
       "ytmPlaylistId": "OLAK5uy_lRNBg0RqKg-02QayTPo_dAZ8uyruO2zF0",
       "medium": "game",
       "tracksN": 25,
-      "playsTotal": 565300
+      "playsTotal": 565300,
+      "moods": [
+        "joyful",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        14,
+        8,
+        4
+      ]
     },
     {
       "id": "gray-zone-warfare",
@@ -32821,7 +33801,17 @@
       "ytmPlaylistId": "OLAK5uy_krzxSBKN-s0Fz9mDXy1CBMxQxluZBpG34",
       "medium": "game",
       "tracksN": 13,
-      "playsTotal": 26394
+      "playsTotal": 26394,
+      "moods": [
+        "tense",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "mullet-madjack",
@@ -33061,7 +34051,17 @@
       "ytmPlaylistId": "OLAK5uy_kHWX52B2DgBHAEyiWQ3ssL0eBoAJU_vDw",
       "medium": "game",
       "tracksN": 10,
-      "playsTotal": 103900
+      "playsTotal": 103900,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        7,
+        4
+      ]
     },
     {
       "id": "anomaly-agent",
@@ -33301,7 +34301,17 @@
       "ytmPlaylistId": "OLAK5uy_kjbxXiggtopwkim72899aG8KJ0hDqn9f8",
       "medium": "game",
       "tracksN": 43,
-      "playsTotal": 10126
+      "playsTotal": 10126,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        10,
+        9
+      ]
     },
     {
       "id": "lego-horizon-adventures",
@@ -33628,7 +34638,17 @@
       "ytmPlaylistId": "OLAK5uy_nTKNO-NVijQb5F6jr8tkoxKobwgYiPHPs",
       "medium": "game",
       "tracksN": 38,
-      "playsTotal": 399100
+      "playsTotal": 399100,
+      "moods": [
+        "mysterious",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        15,
+        9,
+        8
+      ]
     },
     {
       "id": "pepper-grinder",
@@ -34833,7 +35853,17 @@
       "ytmPlaylistId": "OLAK5uy_n-zYqnlMra63xF_G0MT6JSRQWg9MTGeGE",
       "medium": "game",
       "tracksN": 37,
-      "playsTotal": 99600
+      "playsTotal": 99600,
+      "moods": [
+        "joyful",
+        "peaceful",
+        "playful"
+      ],
+      "moodsN": [
+        16,
+        14,
+        9
+      ]
     },
     {
       "id": "under-the-waves",
@@ -34864,7 +35894,17 @@
       "ytmPlaylistId": "OLAK5uy_kSCom4qGnfOtrsqUNXmH2Dt27own80_Ns",
       "medium": "game",
       "tracksN": 21,
-      "playsTotal": 47100
+      "playsTotal": 47100,
+      "moods": [
+        "peaceful",
+        "tender",
+        "wonder"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "karma-the-dark-world",
@@ -34938,7 +35978,17 @@
       "ytmPlaylistId": "OLAK5uy_nyXHo1oFCYP-97EaZqMFPa5aJOOoIST8k",
       "medium": "game",
       "tracksN": 21,
-      "playsTotal": 2475000
+      "playsTotal": 2475000,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "sad"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "caravan-sandwitch",
@@ -35754,7 +36804,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 16
+      "tracksN": 16,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "nostalgic"
+      ],
+      "moodsN": [
+        10,
+        4,
+        3
+      ]
     },
     {
       "id": "donkey-kong-country-returns",
@@ -35862,7 +36922,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 1
+      "tracksN": 1,
+      "moods": [
+        "wonder",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "kirby-and-the-forgotten-land",
@@ -35889,7 +36959,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 5
+      "tracksN": 5,
+      "moods": [
+        "joyful",
+        "wonder",
+        "playful"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ]
     },
     {
       "id": "donkey-kong-bananza",
@@ -36062,7 +37142,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 171
+      "tracksN": 171,
+      "moods": [
+        "peaceful",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        53,
+        52,
+        37
+      ]
     },
     {
       "id": "pokémon-legends-z-a",
@@ -37072,7 +38162,17 @@
       "ytmPlaylistId": "OLAK5uy_kMW7zfDrtqM41VxYFH3tB5hhR2fQ9HlPk",
       "medium": "game",
       "tracksN": 23,
-      "playsTotal": 4520000
+      "playsTotal": 4520000,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "persona-4",
@@ -37215,7 +38315,17 @@
       "ytmPlaylistId": "OLAK5uy_k4JfXvHHD5s5_IUB2Jm01PiTwWzmdnNTE",
       "medium": "game",
       "tracksN": 66,
-      "playsTotal": 866400
+      "playsTotal": 866400,
+      "moods": [
+        "powerful",
+        "tense",
+        "joyful"
+      ],
+      "moodsN": [
+        18,
+        17,
+        13
+      ]
     },
     {
       "id": "tony-hawk-s-underground",
@@ -38212,7 +39322,17 @@
       "ytmPlaylistId": "OLAK5uy_mBputpXAdpmA60vLHVa4HW-38ENdgUD1M",
       "medium": "game",
       "tracksN": 82,
-      "playsTotal": 812479
+      "playsTotal": 812479,
+      "moods": [
+        "playful",
+        "tense",
+        "joyful"
+      ],
+      "moodsN": [
+        65,
+        31,
+        17
+      ]
     },
     {
       "id": "the-jackbox-party-pack-9",
@@ -38245,7 +39365,17 @@
       "ytmPlaylistId": "OLAK5uy_nVupKTRMWcUlrm902qQGXvQ4CE53A2p2o",
       "medium": "game",
       "tracksN": 18,
-      "playsTotal": 116100
+      "playsTotal": 116100,
+      "moods": [
+        "playful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        18,
+        6,
+        5
+      ]
     },
     {
       "id": "madden-nfl-26",
@@ -38306,7 +39436,17 @@
       "ytmPlaylistId": "OLAK5uy_nhqCFXSOqwoIKeApFcVRRV_3FDCFgjixo",
       "medium": "game",
       "tracksN": 12,
-      "playsTotal": 12328
+      "playsTotal": 12328,
+      "moods": [
+        "playful",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        3,
+        3
+      ]
     },
     {
       "id": "custom-robo",
@@ -39190,7 +40330,17 @@
         "Arcade"
       ],
       "medium": "game",
-      "tracksN": 50
+      "tracksN": 50,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        32,
+        20,
+        18
+      ]
     },
     {
       "id": "ultra-street-fighter-iv",
@@ -39616,7 +40766,17 @@
       "ytmPlaylistId": "OLAK5uy_kB4tZjm8J7cXslJ8gcyiCcCDl0M2jI7XA",
       "medium": "game",
       "tracksN": 31,
-      "playsTotal": 2341000
+      "playsTotal": 2341000,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "heroic"
+      ],
+      "moodsN": [
+        15,
+        12,
+        7
+      ]
     },
     {
       "id": "bayonetta-2",
@@ -39712,7 +40872,17 @@
       "ytmPlaylistId": "OLAK5uy_n6nl4BZTYi50vQ9MvTHtiEukWDGNpfuLk",
       "medium": "game",
       "tracksN": 33,
-      "playsTotal": 170575
+      "playsTotal": 170575,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        14,
+        11,
+        10
+      ]
     },
     {
       "id": "bayonetta-origins-cereza-and-the-lost-demon",
@@ -39744,7 +40914,17 @@
       "ytmPlaylistId": "OLAK5uy_k43FbGW_eyCxNrddVwFVpMA5qNY2350Pw",
       "medium": "game",
       "tracksN": 150,
-      "playsTotal": 526489
+      "playsTotal": 526489,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        49,
+        35,
+        27
+      ]
     },
     {
       "id": "the-music-of-grand-theft-auto-v-vol-1-original-music",
@@ -39843,7 +41023,17 @@
       "ytmPlaylistId": "OLAK5uy_nkqvFS-bJ-ShcGbdCN9Jc4P8SP3Ek6cHQ",
       "medium": "game",
       "tracksN": 11,
-      "playsTotal": 167300
+      "playsTotal": 167300,
+      "moods": [
+        "playful",
+        "wonder",
+        "transcendent"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "marvel-snap-vol-3",
@@ -39903,7 +41093,17 @@
       "ytmPlaylistId": "OLAK5uy_n913n98346gWC80J2SsiNrgxyLGIYEU8c",
       "medium": "game",
       "tracksN": 9,
-      "playsTotal": 69000
+      "playsTotal": 69000,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "heroic"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ]
     },
     {
       "id": "hearthstone-music-from-the-tavern-volume-1",
@@ -40200,7 +41400,17 @@
       "ytmPlaylistId": "OLAK5uy_lutKn3g_d3BDNsGE4YN4yd9X3X5spNHtY",
       "medium": "game",
       "tracksN": 100,
-      "playsTotal": 29618000
+      "playsTotal": 29618000,
+      "moods": [
+        "peaceful",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        44,
+        32,
+        23
+      ]
     },
     {
       "id": "genshin-impact-the-shimmering-voyage-vol-2",
@@ -40225,7 +41435,17 @@
       "ytmPlaylistId": "OLAK5uy_mJhAoURKrIE81ub_qI-fAJp8AaZr-fvlo",
       "medium": "game",
       "tracksN": 57,
-      "playsTotal": 16181000
+      "playsTotal": 16181000,
+      "moods": [
+        "joyful",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        15,
+        13,
+        11
+      ]
     },
     {
       "id": "genshin-impact-jade-moon-upon-a-sea-of-clouds",
@@ -40547,7 +41767,17 @@
       "ytmPlaylistId": "OLAK5uy_llP7Es8O3BaJC1rqnGTfqpBUaKcADr61k",
       "medium": "game",
       "tracksN": 15,
-      "playsTotal": 2466000
+      "playsTotal": 2466000,
+      "moods": [
+        "joyful",
+        "peaceful",
+        "wonder"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "genshin-impact-realm-of-tranquil-eternity",
@@ -40806,7 +42036,17 @@
       "ytmPlaylistId": "OLAK5uy_nMktvxtXm6K_qhzhGKL2AIPOKdnQNpDzI",
       "medium": "game",
       "tracksN": 9,
-      "playsTotal": 2518000
+      "playsTotal": 2518000,
+      "moods": [
+        "powerful",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "genshin-impact-the-stellar-moments-vol-5-character-theme",
@@ -40936,7 +42176,17 @@
       "ytmPlaylistId": "OLAK5uy_nV8dMTT_wA3WsK1NAOhUKlJgVj72sNtY8",
       "medium": "game",
       "tracksN": 40,
-      "playsTotal": 6523000
+      "playsTotal": 6523000,
+      "moods": [
+        "eerie",
+        "peaceful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        10,
+        9,
+        8
+      ]
     },
     {
       "id": "genshin-impact-la-vaguelette",
@@ -40961,7 +42211,17 @@
       "ytmPlaylistId": "OLAK5uy_n4rKwOKHVeg_qOP1lHi_hQA56kT4i1-TI",
       "medium": "game",
       "tracksN": 2,
-      "playsTotal": 17351000
+      "playsTotal": 17351000,
+      "moods": [
+        "tender",
+        "peaceful",
+        "romantic"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "genshin-impact-re-arrangement",
@@ -40986,7 +42246,17 @@
       "ytmPlaylistId": "OLAK5uy_mXJ7b-zRT462rUVZM-4TbfCOSuuKsJUcY",
       "medium": "game",
       "tracksN": 11,
-      "playsTotal": 5648
+      "playsTotal": 5648,
+      "moods": [
+        "powerful",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ]
     },
     {
       "id": "genshin-impact-the-shimmering-voyage-vol-5",
@@ -41081,7 +42351,17 @@
       "ytmPlaylistId": "OLAK5uy_nxfkVnCtP6kRPRlSx2FxlxRxx9ykounLE",
       "medium": "game",
       "tracksN": 3,
-      "playsTotal": 19886
+      "playsTotal": 19886,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "transcendent"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "genshin-impact-fleeting-colors-in-flight-ep",
@@ -41106,7 +42386,17 @@
       "ytmPlaylistId": "OLAK5uy_mIfygEKZrLfzWq30FsKQDwTyFGUGnfScs",
       "medium": "game",
       "tracksN": 3,
-      "playsTotal": 3276000
+      "playsTotal": 3276000,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "furina-alive-genshin-impact-musical-series",
@@ -41234,7 +42524,17 @@
       "ytmPlaylistId": "OLAK5uy_k3eD3tVWjy6TjKBD9KExN3ZyV3E9psoFg",
       "medium": "game",
       "tracksN": 4,
-      "playsTotal": 21204
+      "playsTotal": 21204,
+      "moods": [
+        "mysterious",
+        "nostalgic",
+        "peaceful"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ]
     },
     {
       "id": "genshin-impact-the-stellar-moments-vol-2",
@@ -41259,7 +42559,17 @@
       "ytmPlaylistId": "OLAK5uy_lKd5_ShlSWC-giCJIh8j9x6dpZsIoL_KY",
       "medium": "game",
       "tracksN": 21,
-      "playsTotal": 22427000
+      "playsTotal": 22427000,
+      "moods": [
+        "tender",
+        "heroic",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "genshin-impact-fountain-of-belleau",
@@ -41284,7 +42594,17 @@
       "ytmPlaylistId": "OLAK5uy_lf8ZuhoICESI_ZXxd8eWu5tkIegnQG6Jo",
       "medium": "game",
       "tracksN": 96,
-      "playsTotal": 38805000
+      "playsTotal": 38805000,
+      "moods": [
+        "peaceful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        29,
+        26,
+        20
+      ]
     },
     {
       "id": "genshin-impact-the-unfathomable-sand-dunes",
@@ -41309,7 +42629,17 @@
       "ytmPlaylistId": "OLAK5uy_mN_EVThNxjuff1jfpbKpuhm5zuIPT2oaM",
       "medium": "game",
       "tracksN": 108,
-      "playsTotal": 23917000
+      "playsTotal": 23917000,
+      "moods": [
+        "peaceful",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        26,
+        21,
+        18
+      ]
     },
     {
       "id": "genshin-impact-vortex-of-legends",
@@ -41412,7 +42742,17 @@
       "ytmPlaylistId": "OLAK5uy_kZ2SAX1x6Nlf1qj_Z-RHB2he9uXXiuuNs",
       "medium": "game",
       "tracksN": 4,
-      "playsTotal": 8895000
+      "playsTotal": 8895000,
+      "moods": [
+        "peaceful",
+        "mysterious",
+        "wonder"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ]
     },
     {
       "id": "minecraft-caves-cliffs",
@@ -41547,7 +42887,17 @@
       "ytmPlaylistId": "OLAK5uy_ndBvKcfM3752V7mihFSwOaeJtw69wHuvM",
       "medium": "game",
       "tracksN": 11,
-      "playsTotal": 226000
+      "playsTotal": 226000,
+      "moods": [
+        "joyful",
+        "driving",
+        "wonder"
+      ],
+      "moodsN": [
+        5,
+        3,
+        2
+      ]
     },
     {
       "id": "minecraft-dungeons-flames-of-the-nether",
@@ -41661,7 +43011,17 @@
       "ytmPlaylistId": "OLAK5uy_mSphMxX1XVzllplrh-R7MS9cEohpprpgA",
       "medium": "game",
       "tracksN": 5,
-      "playsTotal": 7966000
+      "playsTotal": 7966000,
+      "moods": [
+        "wonder",
+        "mysterious",
+        "peaceful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "minecraft-chinese-mythology",
@@ -41798,7 +43158,17 @@
       "ytmPlaylistId": "OLAK5uy_nJFlMXoPhUxjboZcJaznamfw6LjG3kcIY",
       "medium": "game",
       "tracksN": 44,
-      "playsTotal": 1140300
+      "playsTotal": 1140300,
+      "moods": [
+        "powerful",
+        "tense",
+        "peaceful"
+      ],
+      "moodsN": [
+        13,
+        12,
+        10
+      ]
     },
     {
       "id": "minecraft-movie-unofficial-motion-picture",
@@ -43866,7 +45236,17 @@
       "ytmPlaylistId": "OLAK5uy_mfDxRr3hVIdQU5jZxY6GuWjnCJG_yMbv0",
       "medium": "game",
       "tracksN": 15,
-      "playsTotal": 726000
+      "playsTotal": 726000,
+      "moods": [
+        "driving",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "tainted-grail-fall-of-avalon",
@@ -43975,7 +45355,17 @@
         "Simulator"
       ],
       "medium": "game",
-      "tracksN": 1
+      "tracksN": 1,
+      "moods": [
+        "joyful",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "warhammer-40-000-rogue-trader",
@@ -44086,7 +45476,17 @@
       "ytmPlaylistId": "OLAK5uy_krzfjM21rJzftGKEa-SN9lf8-KsOLNqCc",
       "medium": "game",
       "tracksN": 14,
-      "playsTotal": 1263000
+      "playsTotal": 1263000,
+      "moods": [
+        "powerful",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "mina-the-hollower-original-soundtrack-vol-1",
@@ -47241,7 +48641,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 60
+      "tracksN": 60,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        24,
+        16,
+        13
+      ]
     },
     {
       "id": "super-mario-bros-1993",
@@ -47349,7 +48759,17 @@
       "ytmPlaylistId": "OLAK5uy_nPRBQBBXwukxqQmxOwHLUi2KaXmvsrT8A",
       "medium": "game",
       "tracksN": 142,
-      "playsTotal": 10308200
+      "playsTotal": 10308200,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        37,
+        34,
+        30
+      ]
     },
     {
       "id": "overcooked",
@@ -47743,7 +49163,17 @@
         "Turn-based strategy (TBS)"
       ],
       "medium": "game",
-      "tracksN": 657
+      "tracksN": 657,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        157,
+        110,
+        83
+      ]
     },
     {
       "id": "valkyria-chronicles-4",
@@ -48109,7 +49539,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 29
+      "tracksN": 29,
+      "moods": [
+        "mysterious",
+        "tender",
+        "transcendent"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "fire-emblem-radiant-dawn",
@@ -48934,7 +50374,17 @@
       "ytmPlaylistId": "OLAK5uy_lmde5QJ7r_ioBrsgxnPt0iFKwO0PfUwK4",
       "medium": "game",
       "tracksN": 18,
-      "playsTotal": 285000
+      "playsTotal": 285000,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "the-legend-of-zelda-skyward-sword-hd",
@@ -49588,7 +51038,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 13
+      "tracksN": 13,
+      "moods": [
+        "powerful",
+        "tense",
+        "nostalgic"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "bowser-s-fury",
@@ -50718,7 +52178,17 @@
       "ytmPlaylistId": "OLAK5uy_k8gN7ztR3uSM1OAtay5ZgqY12E2aji0_I",
       "medium": "game",
       "tracksN": 24,
-      "playsTotal": 494400
+      "playsTotal": 494400,
+      "moods": [
+        "powerful",
+        "tense",
+        "transcendent"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "mass-effect-bring-down-the-sky",
@@ -51226,7 +52696,17 @@
       "ytmPlaylistId": "OLAK5uy_mWtX7mX-Armwr2k5aJaEdZD9Km2qBD148",
       "medium": "game",
       "tracksN": 10,
-      "playsTotal": 16108000
+      "playsTotal": 16108000,
+      "moods": [
+        "powerful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "valkyria-chronicles-2",
@@ -51469,7 +52949,17 @@
       "ytmPlaylistId": "OLAK5uy_nADgSVXDZjTI3gPjwKwpX9bAzevhXyz9k",
       "medium": "game",
       "tracksN": 41,
-      "playsTotal": 96319
+      "playsTotal": 96319,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        13,
+        12,
+        9
+      ]
     },
     {
       "id": "归拾-philodeka",
@@ -52162,7 +53652,17 @@
       "ytmPlaylistId": "OLAK5uy_lOAxYeEvS5RGiRcq6BFGvBE2AUZcEMhwE",
       "medium": "game",
       "tracksN": 150,
-      "playsTotal": 191467000
+      "playsTotal": 191467000,
+      "moods": [
+        "powerful",
+        "tense",
+        "joyful"
+      ],
+      "moodsN": [
+        39,
+        32,
+        29
+      ]
     },
     {
       "id": "sonic-r",
@@ -52332,7 +53832,17 @@
       "ytmPlaylistId": "OLAK5uy_lEMG5QvOw67OAR9yZhFmLydbiIznfyWZo",
       "medium": "game",
       "tracksN": 60,
-      "playsTotal": 4212800
+      "playsTotal": 4212800,
+      "moods": [
+        "driving",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        22,
+        22,
+        21
+      ]
     },
     {
       "id": "sonic-rush-adventure",
@@ -52730,7 +54240,17 @@
         "Indie"
       ],
       "medium": "game",
-      "tracksN": 2
+      "tracksN": 2,
+      "moods": [
+        "nostalgic",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "rollercoaster-tycoon-3",
@@ -52954,7 +54474,17 @@
       "ytmPlaylistId": "OLAK5uy_lM8ZZsN0Maf9IIqNXIiObscjBpJvhtAZ0",
       "medium": "game",
       "tracksN": 15,
-      "playsTotal": 132900
+      "playsTotal": 132900,
+      "moods": [
+        "peaceful",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        7,
+        5
+      ]
     },
     {
       "id": "jurassic-world-evolution-2",
@@ -53332,7 +54862,17 @@
       "ytmPlaylistId": "OLAK5uy_kEg6kQnGZcL07SFDPV2s16P1_6AzgVrJ0",
       "medium": "game",
       "tracksN": 23,
-      "playsTotal": 224200
+      "playsTotal": 224200,
+      "moods": [
+        "playful",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "the-sims-4-take-the-reins-sounds-of-the-season",
@@ -53355,7 +54895,17 @@
       "ytmPlaylistId": "OLAK5uy_kIKfHps0H4KNquNH-toCK1C1nQo7Lh1R4",
       "medium": "game",
       "tracksN": 22,
-      "playsTotal": 59049
+      "playsTotal": 59049,
+      "moods": [
+        "playful",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "the-sims-4-take-me-home-sounds-of-the-season",
@@ -53378,7 +54928,17 @@
       "ytmPlaylistId": "OLAK5uy_mE7wmmXgOPKo2JnK-kxocVCOWfg_JU5E4",
       "medium": "game",
       "tracksN": 22,
-      "playsTotal": 52747
+      "playsTotal": 52747,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "the-sims-4-hustle-and-bustle-sounds-of-the-season",
@@ -53401,7 +54961,17 @@
       "ytmPlaylistId": "OLAK5uy_lmY5qjt_gJ-URM6bH2yDlVP_tRooMpewE",
       "medium": "game",
       "tracksN": 24,
-      "playsTotal": 43577
+      "playsTotal": 43577,
+      "moods": [
+        "playful",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        6
+      ]
     },
     {
       "id": "dynasty-warriors",
@@ -64198,7 +65768,17 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 1
+      "tracksN": 1,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ]
     },
     {
       "id": "pirates-vikings-and-knights-ii",
@@ -64521,7 +66101,17 @@
       ],
       "medium": "game",
       "tracksN": 9,
-      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6z2p.jpg"
+      "art": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6z2p.jpg",
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "gotham-knights",
@@ -64555,7 +66145,17 @@
       "ytmPlaylistId": "OLAK5uy_nbM2SJS4kXuf5anP9AXgIRDmlmj0CB154",
       "medium": "game",
       "tracksN": 54,
-      "playsTotal": 1070000
+      "playsTotal": 1070000,
+      "moods": [
+        "mysterious",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        21,
+        18,
+        15
+      ]
     },
     {
       "id": "marvel-s-midnight-suns",
@@ -64589,7 +66189,17 @@
       "ytmPlaylistId": "OLAK5uy_nrGSpj6IiEapuJYRKp47eYMXTYFRFRxlA",
       "medium": "game",
       "tracksN": 27,
-      "playsTotal": 157200
+      "playsTotal": 157200,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "bugsnax",
@@ -64715,7 +66325,17 @@
       "albumTitle": "CATAN - Console Edition: Cities & Knights (Original Game Soundtrack)",
       "ytmPlaylistId": "OLAK5uy_mEpIN6gOGVYyCalzpHtWfqlXnNA7Icsw4",
       "tracksN": 3,
-      "playsTotal": 538
+      "playsTotal": 538,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ]
     },
     {
       "id": "star-wars-squadrons",
@@ -66534,7 +68154,17 @@
       "ytmPlaylistId": "OLAK5uy_kEYGQNfq0lfyKl7iMW5dy6KjGnggKwWXc",
       "medium": "game",
       "tracksN": 68,
-      "playsTotal": 13786000
+      "playsTotal": 13786000,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        24,
+        16,
+        14
+      ]
     },
     {
       "id": "minecraft-hello-kitty-and-friends",
@@ -70317,7 +71947,17 @@
       "ytmPlaylistId": "OLAK5uy_nhrOt-oZWB7SCpQ23lemHAK8zzprsxBdM",
       "medium": "game",
       "tracksN": 26,
-      "playsTotal": 19411000
+      "playsTotal": 19411000,
+      "moods": [
+        "joyful",
+        "mysterious",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "genshin-impact-when-lanterns-echo-the-moon",
@@ -72220,7 +73860,17 @@
       "ytmPlaylistId": "OLAK5uy_magmz6bRESpc9ejnv8NfZLHOFQBK4rVEM",
       "medium": "game",
       "tracksN": 20,
-      "playsTotal": 21526
+      "playsTotal": 21526,
+      "moods": [
+        "powerful",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "music-from-blippo-is-now-available-to-preorder-on-vinyl-via-hologram-opera",
@@ -76206,7 +77856,17 @@
         "Tactical",
         "Adventure"
       ],
-      "tracksN": 50
+      "tracksN": 50,
+      "moods": [
+        "mysterious",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        27,
+        21,
+        16
+      ]
     },
     {
       "id": "naruto-ultimate-ninja",
@@ -78213,7 +79873,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        9,
+        6
+      ]
     },
     {
       "id": "film-star-wars",
@@ -81428,7 +83098,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-cars",
@@ -83879,7 +85559,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "mysterious",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        11,
+        8,
+        4
+      ]
     },
     {
       "id": "film-the-big-lebowski",
@@ -84882,7 +86572,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "heroic",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-x-men-origins-wolverine",
@@ -85262,7 +86962,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "eerie",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-a-beautiful-mind",
@@ -86558,7 +88268,17 @@
       "composerAliases": [
         "Daniel Robert Elfman"
       ],
-      "scoresN": 35
+      "scoresN": 35,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        12,
+        8,
+        7
+      ]
     },
     {
       "id": "film-independence-day",
@@ -86666,7 +88386,17 @@
       "composerAliases": [
         "Joel P West"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "powerful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-star-trek",
@@ -87394,7 +89124,17 @@
         "Germaine Franco",
         "Encanto - Cast"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "joyful",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        12,
+        11,
+        8
+      ]
     },
     {
       "id": "film-the-bourne-identity",
@@ -88400,7 +90140,17 @@
       "albumArtists": [
         "Nicholas Britell"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tense",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "film-mean-girls",
@@ -88821,7 +90571,17 @@
       "albumArtists": [
         "Ramin Djawadi"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "powerful",
+        "wonder",
+        "transcendent"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-conjuring-2",
@@ -89872,7 +91632,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "powerful",
+        "playful",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-rocky",
@@ -91047,7 +92817,17 @@
         "Son Lux",
         "Son Lux"
       ],
-      "scoresN": 49
+      "scoresN": 49,
+      "moods": [
+        "playful",
+        "tender",
+        "driving"
+      ],
+      "moodsN": [
+        14,
+        12,
+        11
+      ]
     },
     {
       "id": "film-the-meg",
@@ -92105,7 +93885,17 @@
       "albumArtists": [
         "Dominic Lewis"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "driving",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-midnight-in-paris",
@@ -94067,7 +95857,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-rio",
@@ -94476,7 +96276,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 32
+      "scoresN": 32,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        10,
+        8
+      ]
     },
     {
       "id": "film-super-8",
@@ -95024,7 +96834,17 @@
       "albumArtists": [
         "Ramin Djawadi"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-gremlins",
@@ -96653,7 +98473,17 @@
         "Джонни Клаймек",
         "Johny Klimek"
       ],
-      "scoresN": 35
+      "scoresN": 35,
+      "moods": [
+        "powerful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        9,
+        9
+      ]
     },
     {
       "id": "film-the-karate-kid",
@@ -97110,7 +98940,17 @@
       "albumArtists": [
         "Steve Jablonsky"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "powerful",
+        "playful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        5
+      ]
     },
     {
       "id": "film-the-legend-of-tarzan",
@@ -99646,7 +101486,17 @@
       "albumArtists": [
         "Mark Korven"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-world-s-end",
@@ -99763,7 +101613,17 @@
         "Ludwig Emil Tomas Göransson",
         "לודוויג אמיל תומאס גורנסון"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tender",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        10,
+        9,
+        7
+      ]
     },
     {
       "id": "film-the-favourite",
@@ -99837,7 +101697,17 @@
         "Junkie XL",
         "The Magnificent Six"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-chronicles-of-narnia-the-voyage-of-the-dawn-treader",
@@ -102909,7 +104779,17 @@
       "albumArtists": [
         "Rob Simonsen"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "powerful",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-the-place-beyond-the-pines",
@@ -103094,7 +104974,17 @@
         "Robin Carolan",
         "Sebastian Gainsborough"
       ],
-      "scoresN": 43
+      "scoresN": 43,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "heroic"
+      ],
+      "moodsN": [
+        13,
+        13,
+        9
+      ]
     },
     {
       "id": "film-the-predator",
@@ -103172,7 +105062,17 @@
         "James Newton-Howard",
         "The Behemoth! Collective"
       ],
-      "scoresN": 38
+      "scoresN": 38,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        7,
+        7
+      ]
     },
     {
       "id": "film-the-flash",
@@ -103449,7 +105349,17 @@
       "composerAliases": [
         "Matt Margeson"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "powerful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-london-has-fallen",
@@ -103657,7 +105567,17 @@
       "composerAliases": [
         "The Behemoth! Collective"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        13,
+        11,
+        11
+      ]
     },
     {
       "id": "film-escape-room",
@@ -103872,7 +105792,17 @@
       "albumArtists": [
         "Rob Simonsen"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "playful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-21",
@@ -104765,7 +106695,17 @@
       "albumArtists": [
         "Jon Ekstrand"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        9,
+        8
+      ]
     },
     {
       "id": "film-a-christmas-carol",
@@ -105375,7 +107315,17 @@
       "albumArtists": [
         "Joby Talbot"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "joyful",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        11,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-whale",
@@ -105684,7 +107634,17 @@
       "albumArtists": [
         "Tim Despic"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        5,
+        3
+      ]
     },
     {
       "id": "film-red-dragon",
@@ -108361,7 +110321,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-steve-jobs",
@@ -108663,7 +110633,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        12,
+        9,
+        8
+      ]
     },
     {
       "id": "film-the-mask-of-zorro",
@@ -109427,7 +111407,17 @@
       "composerAliases": [
         "Pat Doyle"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "mysterious",
+        "sad"
+      ],
+      "moodsN": [
+        12,
+        11,
+        4
+      ]
     },
     {
       "id": "film-indiana-jones-and-the-dial-of-destiny",
@@ -110984,7 +112974,17 @@
       "albumArtists": [
         "Gustavo Santaolalla"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "tender",
+        "nostalgic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-ghost-rider-spirit-of-vengeance",
@@ -111574,7 +113574,17 @@
         "Tyler Bates",
         "Chelsea Wolfe"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-lost-city",
@@ -111612,7 +113622,17 @@
       "composerAliases": [
         "Pinar Ozlem Toprak"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "playful",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-vicky-cristina-barcelona",
@@ -112646,7 +114666,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        9,
+        9
+      ]
     },
     {
       "id": "film-the-call-of-the-wild",
@@ -112757,7 +114787,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        10,
+        10
+      ]
     },
     {
       "id": "film-cape-fear",
@@ -112839,7 +114879,17 @@
         "Stephen B. Price",
         "Steve Price"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        8,
+        8
+      ]
     },
     {
       "id": "film-get-smart",
@@ -112942,7 +114992,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-serenity",
@@ -113568,7 +115628,17 @@
         "マイケル・ジアッキーノ",
         "The Behemoth! Collective"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "tense",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-return",
@@ -114846,7 +116916,17 @@
       "composerAliases": [
         "Thomas Wanker"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        7,
+        4
+      ]
     },
     {
       "id": "film-forgetting-sarah-marshall",
@@ -118049,7 +120129,17 @@
       "composerAliases": [
         "Nathan Tyler Johnson"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        8,
+        7
+      ]
     },
     {
       "id": "film-barbarian",
@@ -122908,7 +124998,17 @@
         "DEVO",
         "DEV-O "
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "driving",
+        "tense",
+        "playful"
+      ],
+      "moodsN": [
+        8,
+        8,
+        6
+      ]
     },
     {
       "id": "film-a-walk-among-the-tombstones",
@@ -123615,7 +125715,17 @@
         "Radiohead",
         "The Smile"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tender",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-flow",
@@ -124424,7 +126534,17 @@
         "존 카펜터",
         "约翰·卡朋特"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        9,
+        8
+      ]
     },
     {
       "id": "film-a-nightmare-on-elm-street",
@@ -125317,7 +127437,17 @@
       "composerAliases": [
         "Kristopher Bowers"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-sound-of-metal",
@@ -125391,7 +127521,17 @@
       "composerAliases": [
         "No Doubt"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "sad"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-friday-the-13th-2009",
@@ -125696,7 +127836,17 @@
       "albumArtists": [
         "Dan Deacon"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-carry-on",
@@ -127383,7 +129533,17 @@
       "albumArtists": [
         "George Kallis"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "sad",
+        "romantic"
+      ],
+      "moodsN": [
+        8,
+        4,
+        3
+      ]
     },
     {
       "id": "film-resident-evil-welcome-to-raccoon-city",
@@ -127418,7 +129578,17 @@
       "albumArtists": [
         "Mark Korven"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-time-traveler-s-wife",
@@ -127536,7 +129706,17 @@
         "Radiohead",
         "The Smile"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "romantic",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-concussion",
@@ -128048,7 +130228,17 @@
       "composerAliases": [
         "Joe Bishara"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        14,
+        14,
+        11
+      ]
     },
     {
       "id": "film-the-forever-purge",
@@ -128803,7 +130993,17 @@
       "albumArtists": [
         "Daniel Pemberton"
       ],
-      "scoresN": 32
+      "scoresN": 32,
+      "moods": [
+        "playful",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        10,
+        9
+      ]
     },
     {
       "id": "film-hairspray",
@@ -129891,7 +132091,17 @@
       "composerAliases": [
         "Mark Ware Isham"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-mr-peabody-sherman",
@@ -130772,7 +132982,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-wayne-s-world",
@@ -133537,7 +135757,17 @@
       "composerAliases": [
         "Michael Danna"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "joyful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-premium-rush",
@@ -134391,7 +136621,17 @@
         "Bleeding Fingers",
         "The Magnificent Six"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "driving",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "film-eddie-the-eagle",
@@ -134811,7 +137051,17 @@
       "composerAliases": [
         "Daniel Bensi"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-wall-street",
@@ -135892,7 +138142,17 @@
       "albumArtists": [
         "Tyler Bates"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "driving",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-send-help",
@@ -137170,7 +139430,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-state-of-play",
@@ -138689,7 +140959,17 @@
         "Hans Florian Zimmer",
         "Bleeding Fingers"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "powerful",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-mirrors",
@@ -139029,7 +141309,17 @@
       "albumArtists": [
         "John Debney"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "joyful",
+        "playful",
+        "wonder"
+      ],
+      "moodsN": [
+        9,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-conversation",
@@ -139992,7 +142282,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        11,
+        8,
+        6
+      ]
     },
     {
       "id": "film-where-the-wild-things-are",
@@ -141577,7 +143877,17 @@
       "albumArtists": [
         "Ramin Djawadi"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tender",
+        "tense",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-son-of-the-mask",
@@ -143102,7 +145412,17 @@
         "Alex Kendall Somers",
         "Алекс Сомерс"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-cannibal-holocaust",
@@ -144491,7 +146811,17 @@
       "albumArtists": [
         "Batu Sener"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "playful",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-anomalisa",
@@ -144925,7 +147255,17 @@
         "Radiohead",
         "The Smile"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-mid90s",
@@ -145224,7 +147564,17 @@
       "albumArtists": [
         "John Debney"
       ],
-      "scoresN": 38
+      "scoresN": 38,
+      "moods": [
+        "joyful",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        11,
+        9,
+        7
+      ]
     },
     {
       "id": "film-hereafter",
@@ -145851,7 +148201,17 @@
         "Louis Bernstein"
       ],
       "scoresN": 8,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "joyful",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-suzume",
@@ -146213,7 +148573,17 @@
         "Robert Lowe",
         "Lichens"
       ],
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        24,
+        16,
+        12
+      ]
     },
     {
       "id": "film-something-s-gotta-give",
@@ -146492,7 +148862,17 @@
         "Stephen B. Price",
         "Steve Price"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "powerful",
+        "sad"
+      ],
+      "moodsN": [
+        11,
+        5,
+        5
+      ]
     },
     {
       "id": "film-the-man-who-wasn-t-there",
@@ -146726,7 +149106,17 @@
       "composerAliases": [
         "Joe Trapanese"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "mysterious",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        7,
+        4
+      ]
     },
     {
       "id": "film-the-ladykillers",
@@ -147601,7 +149991,17 @@
       "albumArtists": [
         "Steve Jablonsky"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "joyful",
+        "playful",
+        "heroic"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-pinocchio",
@@ -147793,7 +150193,17 @@
       "albumArtists": [
         "Mark Mancina"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-amateur",
@@ -149309,7 +151719,17 @@
       "composerAliases": [
         "Rupert Parkes"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        14,
+        11,
+        8
+      ]
     },
     {
       "id": "film-maggie",
@@ -149379,7 +151799,17 @@
       "albumArtists": [
         "Colin Stetson"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "powerful",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-a-single-man",
@@ -149715,7 +152145,17 @@
         "Koduri Marakathamani Keeravani",
         "Maragatha Mani"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "powerful",
+        "driving",
+        "tender"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "film-suffragette",
@@ -153777,7 +156217,17 @@
       "albumArtists": [
         "Benjamin Wallfisch"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-2-22",
@@ -154446,7 +156896,17 @@
       "albumArtists": [
         "Eiko Ishibashi"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "tender",
+        "peaceful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "film-wish-dragon",
@@ -155468,7 +157928,17 @@
         "Disasterpeace",
         "Rich Vreeland"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-a-most-wanted-man",
@@ -156576,7 +159046,17 @@
         "Michael Danna",
         "Jessica Weiss"
       ],
-      "scoresN": 1
+      "scoresN": 1,
+      "moods": [
+        "joyful",
+        "romantic",
+        "driving"
+      ],
+      "moodsN": [
+        13,
+        8,
+        3
+      ]
     },
     {
       "id": "film-the-void",
@@ -158863,7 +161343,17 @@
       "composerAliases": [
         "Michael Danna"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "eerie",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ]
     },
     {
       "id": "film-jolt",
@@ -159029,7 +161519,17 @@
         "Alexandre Desplats",
         "Alexandre Michel Gérard Desplat"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        10,
+        7,
+        3
+      ]
     },
     {
       "id": "film-american-fiction",
@@ -159458,7 +161958,17 @@
       "albumArtists": [
         "Brian Tyler"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "playful",
+        "joyful",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        7
+      ]
     },
     {
       "id": "film-cherry",
@@ -159966,7 +162476,17 @@
       "composerAliases": [
         "Portishead"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-leo",
@@ -162548,7 +165068,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        4,
+        4
+      ]
     },
     {
       "id": "film-wuthering-heights",
@@ -163103,7 +165633,17 @@
       "composerAliases": [
         "Howard Leslie Shore"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        12,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-exorcist-believer",
@@ -163538,7 +166078,17 @@
         "Stephen B. Price",
         "Steve Price"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "tender",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-the-professor-and-the-madman",
@@ -164326,7 +166876,17 @@
       "composerAliases": [
         "Mark Ware Isham"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        8,
+        5
+      ]
     },
     {
       "id": "film-lake-placid",
@@ -165468,7 +168028,17 @@
       "albumArtists": [
         "Javier Navarrete"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        13,
+        8,
+        6
+      ]
     },
     {
       "id": "film-the-tall-man",
@@ -165896,7 +168466,17 @@
       "composerAliases": [
         "Spencer Hutchings"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-home-again",
@@ -166446,7 +169026,17 @@
         "Jeymes Samuel"
       ],
       "composersFrom": "album",
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "tense",
+        "heroic"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "film-goal",
@@ -167408,7 +169998,17 @@
       "albumArtists": [
         "Nathan Halpern"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        11,
+        9
+      ]
     },
     {
       "id": "film-black-sea",
@@ -168797,7 +171397,17 @@
       "composerAliases": [
         "Rupert Parkes"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        14,
+        8,
+        8
+      ]
     },
     {
       "id": "film-willy-s-wonderland",
@@ -169206,7 +171816,17 @@
       "composerAliases": [
         "Elik Álvarez"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-derailed",
@@ -169719,7 +172339,17 @@
       "albumArtists": [
         "Gustavo Santaolalla"
       ],
-      "scoresN": 38
+      "scoresN": 38,
+      "moods": [
+        "playful",
+        "mysterious",
+        "joyful"
+      ],
+      "moodsN": [
+        13,
+        9,
+        8
+      ]
     },
     {
       "id": "film-chemical-hearts",
@@ -170183,7 +172813,17 @@
       "composerAliases": [
         "Dickon Hinchcliffe"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tender",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ]
     },
     {
       "id": "film-a-walk-in-the-clouds",
@@ -170657,7 +173297,17 @@
       "albumArtists": [
         "Mark Mancina"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "peaceful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        9,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-wife",
@@ -171186,7 +173836,17 @@
       "albumArtists": [
         "Brian d'Oliveira"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        12,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-woman-in-cabin-10",
@@ -171377,7 +174037,17 @@
         "Jennifer Lopez",
         "Maluma"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "romantic",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        7,
+        4
+      ]
     },
     {
       "id": "film-the-weather-man",
@@ -172166,7 +174836,17 @@
       "albumArtists": [
         "Sam Ewing"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-vault",
@@ -173211,7 +175891,17 @@
       "composerAliases": [
         "Alex Nelson Belcher"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-war-with-grandpa",
@@ -174668,7 +177358,17 @@
       "albumArtists": [
         "Nathan Halpern"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "mysterious",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-our-idiot-brother",
@@ -174779,7 +177479,17 @@
       "albumArtists": [
         "Alberto Iglesias"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tender",
+        "tense",
+        "nostalgic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-joe",
@@ -175499,7 +178209,17 @@
         "Blake Neely",
         "Sherri Chung"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "tender",
+        "mournful"
+      ],
+      "moodsN": [
+        8,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-the-boys-season-2",
@@ -175537,7 +178257,17 @@
       "composerAliases": [
         "Chris Lennertz"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        7,
+        7
+      ]
     },
     {
       "id": "tv-the-boys-season-3",
@@ -175764,7 +178494,17 @@
       "composerAliases": [
         "Jean-Christophe Beck"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "joyful",
+        "playful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ]
     },
     {
       "id": "tv-loki-season-1-vol-1",
@@ -176071,7 +178811,17 @@
         "Blake Neely",
         "Nathaniel Blume"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-the-flash",
@@ -176293,7 +179043,17 @@
         "Ludwig Emil Tomas Göransson",
         "לודוויג אמיל תומאס גורנסון"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "driving",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-euphoria-season-2",
@@ -178466,7 +181226,17 @@
       "albumArtists": [
         "Cliff Martinez"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-rental",
@@ -179572,7 +182342,17 @@
         "Jeff Russo",
         "Perrine Virgile"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "powerful",
+        "tender",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-the-umbrella-academy",
@@ -179646,7 +182426,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        13,
+        9,
+        7
+      ]
     },
     {
       "id": "tv-the-falcon-and-the-winter-soldier-season-1-vol-2",
@@ -179684,7 +182474,17 @@
         "Henry Pryce Jackman",
         "The Behemoth! Collective"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "heroic",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-supernatural",
@@ -180283,7 +183083,17 @@
         "80sDAD",
         "Zachary Robinson"
       ],
-      "scoresN": 37
+      "scoresN": 37,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        11,
+        8,
+        8
+      ]
     },
     {
       "id": "tv-cobra-kai-season-4-vol-1",
@@ -180612,7 +183422,17 @@
       "composerAliases": [
         "Joe Trapanese"
       ],
-      "scoresN": 55
+      "scoresN": 55,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        15,
+        14,
+        12
+      ]
     },
     {
       "id": "tv-better-call-saul-vol-1",
@@ -181240,7 +184060,17 @@
         "Blake Neely",
         "Nathaniel Blume"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "heroic",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        5,
+        3
+      ]
     },
     {
       "id": "tv-westworld-season-1",
@@ -181342,7 +184172,17 @@
       "albumArtists": [
         "Ramin Djawadi"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-westworld-season-4",
@@ -181461,7 +184301,17 @@
       "albumArtists": [
         "John Paesano"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "tv-the-queen-s-gambit",
@@ -181494,7 +184344,17 @@
       "albumArtists": [
         "Carlos Rafael Rivera"
       ],
-      "scoresN": 38
+      "scoresN": 38,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        11,
+        9
+      ]
     },
     {
       "id": "tv-mr-robot-vol-1",
@@ -181815,7 +184675,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-my-hero-academia-season-6",
@@ -182596,7 +185466,17 @@
         "Arisa Fukami",
         "堤 博明"
       ],
-      "scoresN": 45
+      "scoresN": 45,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        19,
+        16,
+        14
+      ]
     },
     {
       "id": "tv-smallville",
@@ -182818,7 +185698,17 @@
         "Blake Neely",
         "Daniel James Chan"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "joyful",
+        "heroic"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-true-detective",
@@ -182929,7 +185819,17 @@
       "albumArtists": [
         "Blake Neely"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        5,
+        3
+      ]
     },
     {
       "id": "tv-the-lord-of-the-rings-the-rings-of-power-season-2",
@@ -184090,7 +186990,17 @@
       "composerAliases": [
         "Kristopher Bowers"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "joyful",
+        "tender",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-yellowstone-season-2",
@@ -184161,7 +187071,17 @@
         "Brian Tyler",
         "Breton Vivian"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "driving",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "tv-yellowstone-season-4",
@@ -185235,7 +188155,17 @@
       "albumArtists": [
         "Bear McCreary"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "powerful",
+        "tender",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-outlander-season-6",
@@ -185548,7 +188478,17 @@
       "albumArtists": [
         "Bear McCreary"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-see-season-2",
@@ -185707,7 +188647,17 @@
       "composerAliases": [
         "    Clint Shorter"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ]
     },
     {
       "id": "tv-fringe-season-1",
@@ -185903,7 +188853,17 @@
       "albumArtists": [
         "Dan Romer"
       ],
-      "scoresN": 33
+      "scoresN": 33,
+      "moods": [
+        "tender",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        10,
+        7
+      ]
     },
     {
       "id": "tv-the-sandman-season-1",
@@ -186064,7 +189024,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "playful",
+        "romantic"
+      ],
+      "moodsN": [
+        13,
+        9,
+        7
+      ]
     },
     {
       "id": "tv-twin-peaks",
@@ -186170,7 +189140,17 @@
       "albumArtists": [
         "Mathieu Lamboley"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "mysterious",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-silo-season-1",
@@ -186450,7 +189430,17 @@
         "Marcus Oliver Johnstone Mumford",
         "Mumford & Sons"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tender",
+        "joyful",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-the-pacific",
@@ -186922,7 +189912,17 @@
         "Blake Neely",
         "Daniel James Chan"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "playful",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-dc-s-legends-of-tomorrow-season-6",
@@ -188523,7 +191523,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 35
+      "scoresN": 35,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        9,
+        9,
+        7
+      ]
     },
     {
       "id": "tv-his-dark-materials-season-3",
@@ -188611,7 +191621,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 33
+      "scoresN": 33,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "tv-star-trek-picard-season-1",
@@ -188648,7 +191668,17 @@
       "albumArtists": [
         "Jeff Russo"
       ],
-      "scoresN": 55
+      "scoresN": 55,
+      "moods": [
+        "tender",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        16,
+        13,
+        11
+      ]
     },
     {
       "id": "tv-star-trek-picard-season-2",
@@ -188828,7 +191858,17 @@
       "composerAliases": [
         "Chris Lennertz"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        8,
+        7
+      ]
     },
     {
       "id": "tv-lost-in-space-season-3",
@@ -189158,7 +192198,17 @@
       "albumArtists": [
         "Ramin Djawadi"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-tom-clancy-s-jack-ryan",
@@ -189366,7 +192416,17 @@
         "Marc Streitenfeld",
         "Ben Frost"
       ],
-      "scoresN": 41
+      "scoresN": 41,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        17,
+        14,
+        11
+      ]
     },
     {
       "id": "tv-raised-by-wolves-season-2",
@@ -190141,7 +193201,17 @@
         "Alan Anthony Silvestri",
         "The Behemoth! Collective"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "wonder",
+        "powerful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-cosmos-season-1-vol-4",
@@ -190261,7 +193331,17 @@
         "Erwann Kermorvant"
       ],
       "composersFrom": "album",
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        17,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-dexter-new-blood",
@@ -190351,7 +193431,17 @@
         "アティカス・ロス",
         "Nine Inch Noize"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-watchmen-season-1-vol-2",
@@ -190397,7 +193487,17 @@
         "アティカス・ロス",
         "Nine Inch Noize"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-watchmen-season-1-vol-3",
@@ -190443,7 +193543,17 @@
         "アティカス・ロス",
         "Nine Inch Noize"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "nostalgic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        2
+      ]
     },
     {
       "id": "tv-seal-team-vol-2",
@@ -190722,7 +193832,17 @@
         "Sid Khosla",
         "Siddhartha Dinesh Khosla"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tender",
+        "peaceful",
+        "romantic"
+      ],
+      "moodsN": [
+        9,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-this-is-us",
@@ -191263,7 +194383,17 @@
         "Tyler Bates",
         "Joanne Higginbottom"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "tense",
+        "driving",
+        "mournful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-primal-season-2",
@@ -191499,7 +194629,17 @@
         "Нам Хе Сын",
         "Нам Хе-син"
       ],
-      "scoresN": 5
+      "scoresN": 5,
+      "moods": [
+        "tense",
+        "eerie",
+        "tender"
+      ],
+      "moodsN": [
+        11,
+        6,
+        5
+      ]
     },
     {
       "id": "tv-defending-jacob",
@@ -191540,7 +194680,17 @@
         "Kiasmos",
         "Atli Orvarsson"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "sad",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-gen-v-season-2",
@@ -191676,7 +194826,17 @@
         "Blake Neely",
         "Sherri Chung"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-batwoman-season-2",
@@ -191712,7 +194872,17 @@
         "Blake Neely",
         "Sherri Chung"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-castlevania-season-2",
@@ -192401,7 +195571,17 @@
       "albumArtists": [
         "Torin Borrowdale"
       ],
-      "scoresN": 33
+      "scoresN": 33,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tender"
+      ],
+      "moodsN": [
+        10,
+        10,
+        8
+      ]
     },
     {
       "id": "tv-doom-patrol-season-2",
@@ -192440,7 +195620,17 @@
       "composerAliases": [
         "Vestan Pance"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-doom-patrol-season-3",
@@ -193233,7 +196423,17 @@
       "albumArtists": [
         "Stephen Rennicks"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tender",
+        "romantic",
+        "joyful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ]
     },
     {
       "id": "tv-the-night-manager-season-2",
@@ -193721,7 +196921,17 @@
         "こうさきさとる",
         "神前 暁"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        13,
+        10,
+        6
+      ]
     },
     {
       "id": "tv-beastars-season-3-vol-2",
@@ -193764,7 +196974,17 @@
         "こうさきさとる",
         "神前 暁"
       ],
-      "scoresN": 37
+      "scoresN": 37,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        13,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-tokyo-revengers",
@@ -195012,7 +198232,17 @@
       "albumArtists": [
         "Nathan Barr"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "joyful",
+        "mysterious",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "tv-merlin",
@@ -195190,7 +198420,17 @@
       "albumArtists": [
         "Jefferson Friedman"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "playful",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        9,
+        6
+      ]
     },
     {
       "id": "tv-harley-quinn-season-2",
@@ -195225,7 +198465,17 @@
       "albumArtists": [
         "Jefferson Friedman"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "playful",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        6,
+        6
+      ]
     },
     {
       "id": "tv-harley-quinn",
@@ -195416,7 +198666,17 @@
         " August Fenger Janson",
         "ELOQ"
       ],
-      "scoresN": 35
+      "scoresN": 35,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "transcendent"
+      ],
+      "moodsN": [
+        10,
+        8,
+        7
+      ]
     },
     {
       "id": "tv-alien-earth",
@@ -195736,7 +198996,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "playful",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        18,
+        12,
+        11
+      ]
     },
     {
       "id": "tv-vikings-valhalla",
@@ -196033,7 +199303,17 @@
         "Aytekin Ataş"
       ],
       "composersFrom": "album",
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tense",
+        "powerful",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-mucize-doktor",
@@ -196322,7 +199602,17 @@
       "composerAliases": [
         "Matchbox Twenty"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        12,
+        6,
+        5
+      ]
     },
     {
       "id": "tv-for-all-mankind-season-2",
@@ -196361,7 +199651,17 @@
       "composerAliases": [
         "Matchbox Twenty"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "powerful",
+        "heroic",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-for-all-mankind-season-3",
@@ -197019,7 +200319,17 @@
       "composerAliases": [
         "Drum & Lace"
       ],
-      "scoresN": 32
+      "scoresN": 32,
+      "moods": [
+        "playful",
+        "joyful",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        7,
+        7
+      ]
     },
     {
       "id": "tv-final-space-season-1",
@@ -197547,7 +200857,17 @@
       "albumArtists": [
         "Joe Wong"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "playful",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-servant-season-1",
@@ -197581,7 +200901,17 @@
       "albumArtists": [
         "Trevor Gureckis"
       ],
-      "scoresN": 47
+      "scoresN": 47,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        23,
+        21,
+        17
+      ]
     },
     {
       "id": "tv-servant-season-2",
@@ -197615,7 +200945,17 @@
       "albumArtists": [
         "Trevor Gureckis"
       ],
-      "scoresN": 50
+      "scoresN": 50,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        33,
+        19,
+        11
+      ]
     },
     {
       "id": "tv-servant-season-3",
@@ -197950,7 +201290,17 @@
       "composerAliases": [
         "Carter Benedict Burwell"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        4
+      ]
     },
     {
       "id": "tv-the-morning-show-season-2",
@@ -198279,7 +201629,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        9,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-baby",
@@ -198553,7 +201913,17 @@
         "Evgeniy Galperin",
         "Evgueni Gasperine"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        8,
+        5,
+        3
+      ]
     },
     {
       "id": "tv-dark-matter",
@@ -198696,7 +202066,17 @@
         "The Insects",
         "Startled Insects"
       ],
-      "scoresN": 37
+      "scoresN": 37,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        11,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-the-mist",
@@ -198810,7 +202190,17 @@
         "David Arnold",
         "Michael Price"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "eerie",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-berserk",
@@ -199762,7 +203152,17 @@
       ],
       "composersFrom": "album",
       "scoresN": 0,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "tender",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        18,
+        18,
+        13
+      ]
     },
     {
       "id": "tv-jupiter-s-legacy",
@@ -200049,7 +203449,17 @@
         "aivi & surasshu"
       ],
       "composersFrom": "album",
-      "scoresN": 48
+      "scoresN": 48,
+      "moods": [
+        "joyful",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        25,
+        20,
+        20
+      ]
     },
     {
       "id": "tv-godfather-of-harlem",
@@ -200086,7 +203496,17 @@
       "composerAliases": [
         "Mark Ware Isham"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tender",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-dark-matter-season-1",
@@ -200346,7 +203766,17 @@
         "Alisa Fukami",
         "Arisa Fukami"
       ],
-      "scoresN": 55
+      "scoresN": 55,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        17,
+        14,
+        14
+      ]
     },
     {
       "id": "tv-archive-81",
@@ -200427,7 +203857,17 @@
         "W.G. Snuffy Walden"
       ],
       "composersFrom": "album",
-      "scoresN": 33
+      "scoresN": 33,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        8,
+        6
+      ]
     },
     {
       "id": "tv-godless",
@@ -200778,7 +204218,17 @@
         "Frederik Wiedmann"
       ],
       "composersFrom": "album",
-      "scoresN": 45
+      "scoresN": 45,
+      "moods": [
+        "powerful",
+        "tense",
+        "tender"
+      ],
+      "moodsN": [
+        12,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-da-vinci-s-demons-season-2",
@@ -201294,7 +204744,17 @@
         "Fajar Yuskemal"
       ],
       "composersFrom": "album",
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        16,
+        10,
+        9
+      ]
     },
     {
       "id": "tv-the-continental-from-the-world-of-john-wick",
@@ -201663,7 +205123,17 @@
         "HWANG SANG JUN"
       ],
       "composersFrom": "album",
-      "scoresN": 4
+      "scoresN": 4,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ]
     },
     {
       "id": "tv-my-demon",
@@ -201884,7 +205354,17 @@
       "composerAliases": [
         "Christopher Westlake"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "joyful",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-charlotte",
@@ -202046,7 +205526,17 @@
       "albumArtists": [
         "Blake Neely"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "playful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-the-flight-attendant-season-2",
@@ -202354,7 +205844,17 @@
       "composerAliases": [
         "Paul E. Francis"
       ],
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        10,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-the-apothecary-diaries-season-2",
@@ -202507,7 +206007,17 @@
         "Sid Khosla",
         "Siddhartha Dinesh Khosla"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "mysterious",
+        "sad",
+        "mournful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-nine-perfect-strangers-season-2",
@@ -203245,7 +206755,17 @@
         "Kim Joon-suk",
         "Kim Joon-seok"
       ],
-      "scoresN": 5
+      "scoresN": 5,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        25,
+        19,
+        15
+      ]
     },
     {
       "id": "tv-the-cartel",
@@ -203371,7 +206891,17 @@
         "Thomas C. Ruegger",
         "Steve Bernstein"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "playful",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        9,
+        4
+      ]
     },
     {
       "id": "tv-animaniacs-season-2",
@@ -204151,7 +207681,17 @@
         "Brandon Roberts"
       ],
       "composersFrom": "album",
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "tv-manhunt",
@@ -204884,7 +208424,17 @@
       "albumArtists": [
         "Kevin Penkin"
       ],
-      "scoresN": 44
+      "scoresN": 44,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        14,
+        11,
+        8
+      ]
     },
     {
       "id": "tv-the-stand-1994",
@@ -205238,7 +208788,17 @@
         "Нам Хе Сын",
         "Нам Хе-син"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        12,
+        11,
+        11
+      ]
     },
     {
       "id": "tv-prehistoric-planet-season-1",
@@ -205454,7 +209014,17 @@
         "Christopher Paul Leonard-Morgan",
         "Paul Leonard Morgan"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "mysterious",
+        "peaceful",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        7,
+        7
+      ]
     },
     {
       "id": "tv-hell-s-paradise-season-1",
@@ -205693,7 +209263,17 @@
       "albumArtists": [
         "Cliff Martinez"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "sad",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-kaleidoscope",
@@ -213750,7 +217330,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "romantic",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        9,
+        8,
+        4
+      ]
     },
     {
       "id": "film-alien",
@@ -215419,7 +219009,17 @@
         "Heitor Teixeira Pereira",
         "Simply Red"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "driving",
+        "playful",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        9,
+        9
+      ]
     },
     {
       "id": "film-127-hours",
@@ -217393,7 +220993,17 @@
         "The Cast of Netflix's Film tick, tick... BOOM!"
       ],
       "composersFrom": "album",
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "playful",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-on-my-skin",
@@ -218745,7 +222355,17 @@
       "albumArtists": [
         "Guillaume Roussel"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ]
     },
     {
       "id": "film-miracle-in-cell-no-7",
@@ -218899,7 +222519,17 @@
         "Black Rebel Motorcycle Club",
         "The Beggars"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-dr-no",
@@ -221957,7 +225587,17 @@
         "Synchron Stage Orchestra",
         "Wizarding World"
       ],
-      "scoresN": 2
+      "scoresN": 2,
+      "moods": [
+        "wonder",
+        "heroic",
+        "joyful"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ]
     },
     {
       "id": "film-beverly-hills-cop",
@@ -222036,7 +225676,17 @@
         "中田康貴",
         "中田 康貴"
       ],
-      "scoresN": 45
+      "scoresN": 45,
+      "moods": [
+        "joyful",
+        "heroic",
+        "powerful"
+      ],
+      "moodsN": [
+        15,
+        14,
+        14
+      ]
     },
     {
       "id": "film-dark-water",
@@ -223584,7 +227234,17 @@
         "Emilio Acevedo Pomar"
       ],
       "composersFrom": "album",
-      "scoresN": 34
+      "scoresN": 34,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        13,
+        11,
+        6
+      ]
     },
     {
       "id": "tv-love-is-in-the-air",
@@ -223618,7 +227278,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "romantic",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        27,
+        16,
+        12
+      ]
     },
     {
       "id": "tv-true-blood-season-2",
@@ -223897,7 +227567,17 @@
         "David N. Lawrence"
       ],
       "scoresN": 0,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "joyful",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        9,
+        6,
+        3
+      ]
     },
     {
       "id": "tv-animaniacs-season-3",
@@ -223984,7 +227664,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "playful",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-resident-evil",
@@ -224085,7 +227775,17 @@
         "Taylor Newton Stuart",
         "Taylor Newton Stewart"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tense",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "tv-alice-in-borderland",
@@ -224123,7 +227823,17 @@
       "composerAliases": [
         "やまだ豊"
       ],
-      "scoresN": 37
+      "scoresN": 37,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        11,
+        9,
+        8
+      ]
     },
     {
       "id": "tv-my-name",
@@ -224402,7 +228112,17 @@
         "Ben Bromfield"
       ],
       "composersFrom": "album",
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "powerful",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-ginny-georgia-season-2",
@@ -224695,7 +228415,17 @@
         "David Murillo R."
       ],
       "composersFrom": "album",
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        7,
+        6,
+        4
+      ]
     },
     {
       "id": "tv-young-royals-season-2",
@@ -228474,7 +232204,17 @@
         "Tree Adams"
       ],
       "composersFrom": "album",
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ]
     },
     {
       "id": "tv-mom",
@@ -230127,7 +233867,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tender",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-the-crown-season-4",
@@ -230176,7 +233926,17 @@
         "Oswin Mackintosh",
         "Лорн Бэлф"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tender",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-the-crown-season-5",
@@ -230781,7 +234541,17 @@
         "Jeff Russo"
       ],
       "composersFrom": "album",
-      "scoresN": 40
+      "scoresN": 40,
+      "moods": [
+        "tense",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        14,
+        11,
+        10
+      ]
     },
     {
       "id": "tv-star-trek-discovery-season-4",
@@ -231017,7 +234787,17 @@
         "Riverdale Cast"
       ],
       "scoresN": 0,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "tender",
+        "sad",
+        "romantic"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "tv-riverdale-season-6",
@@ -231319,7 +235099,17 @@
       "composerAliases": [
         "The Section Quartet"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "joyful",
+        "nostalgic",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-the-marvelous-mrs-maisel-season-4",
@@ -232588,7 +236378,17 @@
       "composerAliases": [
         "Christopher Alan Lee"
       ],
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "joyful",
+        "romantic",
+        "peaceful"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-that-time-i-got-reincarnated-as-a-slime-season-3",
@@ -232719,7 +236519,17 @@
         "The Ummah",
         "Charles Ray Wiggins"
       ],
-      "scoresN": 52
+      "scoresN": 52,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        25,
+        18,
+        14
+      ]
     },
     {
       "id": "tv-the-mandalorian-season-2-vol-1",
@@ -232759,7 +236569,17 @@
         "Ludwig Emil Tomas Göransson",
         "לודוויג אמיל תומאס גורנסון"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "powerful",
+        "eerie",
+        "heroic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-the-mandalorian-season-2-vol-2",
@@ -232799,7 +236619,17 @@
         "Ludwig Emil Tomas Göransson",
         "לודוויג אמיל תומאס גורנסון"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-the-mandalorian-season-3-vol-1",
@@ -233360,7 +237190,17 @@
         "Matthew S. Nelson",
         "Dan Haseltine"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tense",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-the-chosen-season-3",
@@ -233639,7 +237479,17 @@
         "Joseph Stephens"
       ],
       "composersFrom": "album",
-      "scoresN": 68
+      "scoresN": 68,
+      "moods": [
+        "mysterious",
+        "tense",
+        "playful"
+      ],
+      "moodsN": [
+        17,
+        16,
+        15
+      ]
     },
     {
       "id": "tv-war-of-the-worlds",
@@ -233673,7 +237523,17 @@
       "albumArtists": [
         "David Martijn"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "tense",
+        "mysterious",
+        "joyful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-your-honor-season-1",
@@ -233708,7 +237568,17 @@
         "Volker Bertelmann"
       ],
       "composersFrom": "album",
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        16,
+        8,
+        5
+      ]
     },
     {
       "id": "tv-love-death-robots-season-3",
@@ -233891,7 +237761,17 @@
       "composerAliases": [
         "J Paul Garber"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tender",
+        "romantic",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-alrawabi-school-for-girls-season-2",
@@ -234054,7 +237934,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tender",
+        "romantic",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-love-alarm",
@@ -234126,7 +238016,17 @@
       "composerAliases": [
         "Drum & Lace"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "joyful",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-dickinson-season-3",
@@ -234246,7 +238146,17 @@
         "Bloodwitch"
       ],
       "composersFrom": "album",
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "joyful",
+        "mysterious",
+        "romantic"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "tv-kengan-ashura-season-2",
@@ -234374,7 +238284,17 @@
         "こうさきさとる",
         "神前 暁"
       ],
-      "scoresN": 46
+      "scoresN": 46,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        11,
+        10,
+        10
+      ]
     },
     {
       "id": "tv-bridgerton-season-2",
@@ -234601,7 +238521,17 @@
         "Mogwai",
         "Mogwai"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        12,
+        7,
+        5
+      ]
     },
     {
       "id": "tv-squid-game",
@@ -234824,7 +238754,17 @@
         "Maurus Ronner"
       ],
       "composersFrom": "album",
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-barbarians-season-2",
@@ -234907,7 +238847,17 @@
       "composerAliases": [
         "藤澤 慶昌"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "tender",
+        "playful",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "tv-hazbin-hotel-season-2",
@@ -235038,7 +238988,17 @@
         "Xavier Capellas"
       ],
       "composersFrom": "album",
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "mysterious",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-my-holo-love",
@@ -235073,7 +239033,17 @@
         "Ji Pyeong Kwon"
       ],
       "composersFrom": "album",
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tender",
+        "romantic",
+        "joyful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "tv-it-s-okay-to-not-be-okay",
@@ -235106,7 +239076,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tender",
+        "mysterious",
+        "romantic"
+      ],
+      "moodsN": [
+        11,
+        8,
+        7
+      ]
     },
     {
       "id": "dadi-kingdom",
@@ -235257,7 +239237,17 @@
         "Джонни Клаймек",
         "Johny Klimek"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "mysterious",
+        "romantic",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-babylon-berlin-season-4-vol-3",
@@ -253274,7 +257264,17 @@
         "John Coda",
         "Grant Kirkhope"
       ],
-      "scoresN": 45
+      "scoresN": 45,
+      "moods": [
+        "joyful",
+        "tense",
+        "wonder"
+      ],
+      "moodsN": [
+        11,
+        10,
+        8
+      ]
     },
     {
       "id": "film-kill-the-messenger",
@@ -264110,7 +268110,17 @@
       "composerAliases": [
         "Zack Dawes"
       ],
-      "scoresN": 29
+      "scoresN": 29,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        16,
+        8,
+        8
+      ]
     },
     {
       "id": "film-honey-boy",
@@ -264342,7 +268352,17 @@
       "albumArtists": [
         "Daniel Pemberton"
       ],
-      "scoresN": 31
+      "scoresN": 31,
+      "moods": [
+        "joyful",
+        "tense",
+        "powerful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        7
+      ]
     },
     {
       "id": "film-matthias-maxime",
@@ -264634,7 +268654,17 @@
       "composerAliases": [
         "Joe Trapanese"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "eerie",
+        "powerful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-next-gen",
@@ -265051,7 +269081,17 @@
         "존 카펜터",
         "约翰·卡朋特"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "powerful",
+        "driving"
+      ],
+      "moodsN": [
+        8,
+        6,
+        6
+      ]
     },
     {
       "id": "film-blinded-by-the-light",
@@ -266482,7 +270522,17 @@
       "composerAliases": [
         "ASKA"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tender",
+        "mysterious",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-10-years",
@@ -266702,7 +270752,17 @@
       "composerAliases": [
         "Carter Benedict Burwell"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-pleasure",
@@ -266738,7 +270798,15 @@
       "composerAliases": [
         "Frid & Frid"
       ],
-      "scoresN": 2
+      "scoresN": 2,
+      "moods": [
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        2,
+        2
+      ]
     },
     {
       "id": "film-the-way",
@@ -267196,7 +271264,17 @@
       "composerAliases": [
         "Teddy Shapiro"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tense",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ]
     },
     {
       "id": "film-becky",
@@ -268033,7 +272111,17 @@
       "albumArtists": [
         "Dario Marianelli"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "joyful",
+        "wonder",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        5,
+        5
+      ]
     },
     {
       "id": "film-armageddon-time",
@@ -268145,7 +272233,17 @@
       "albumArtists": [
         "Arthur Sharpe"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "film-superman-man-of-tomorrow",
@@ -268621,7 +272719,17 @@
         "Sid Khosla",
         "Siddhartha Dinesh Khosla"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "playful",
+        "tense",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        3
+      ]
     },
     {
       "id": "film-an-american-pickle",
@@ -268773,7 +272881,17 @@
         "The National",
         "Big Red Machine"
       ],
-      "scoresN": 13
+      "scoresN": 13,
+      "moods": [
+        "tender",
+        "sad",
+        "nostalgic"
+      ],
+      "moodsN": [
+        6,
+        3,
+        3
+      ]
     },
     {
       "id": "film-spirited",
@@ -269370,7 +273488,17 @@
       "albumArtists": [
         "John Debney"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-the-woman",
@@ -269586,7 +273714,17 @@
       "albumArtists": [
         "Pessi Levanto"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "eerie",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-american-pie-presents-girls-rules",
@@ -269662,7 +273800,17 @@
       "composerAliases": [
         "Tom Newman"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "mysterious",
+        "tense",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ]
     },
     {
       "id": "film-one-night-in-miami",
@@ -269888,7 +274036,17 @@
         "Марко Белтрами",
         "Marco Edward Beltrami"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tender",
+        "peaceful",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        5,
+        3
+      ]
     },
     {
       "id": "film-the-man-from-toronto",
@@ -270096,7 +274254,17 @@
         "Drum & Lace",
         "Ian Hultquist"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "mysterious",
+        "playful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-rurouni-kenshin-the-beginning",
@@ -270605,7 +274773,17 @@
         "Brian Tyler",
         "Breton Vivian"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tender",
+        "romantic",
+        "peaceful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        5
+      ]
     },
     {
       "id": "film-rising-sun",
@@ -271336,7 +275514,17 @@
       "albumArtists": [
         "Jung Jaeil"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tender",
+        "peaceful",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-they-cloned-tyrone",
@@ -271420,7 +275608,17 @@
       "composerAliases": [
         "    Clint Shorter"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        13,
+        7,
+        5
+      ]
     },
     {
       "id": "film-albert-nobbs",
@@ -271524,7 +275722,17 @@
       "albumArtists": [
         "Mark Korven"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ]
     },
     {
       "id": "film-my-policeman",
@@ -271793,7 +276001,17 @@
       "albumArtists": [
         "Rael Jones"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ]
     },
     {
       "id": "film-the-libertine",
@@ -271980,7 +276198,17 @@
       "albumArtists": [
         "Stephen Rennicks"
       ],
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tender",
+        "romantic",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-mothers-instinct",
@@ -272059,7 +276287,17 @@
         "Stephen McKeon"
       ],
       "composersFrom": "album",
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        12,
+        8,
+        8
+      ]
     },
     {
       "id": "film-the-princess",
@@ -272096,7 +276334,17 @@
       "composerAliases": [
         "Natalie Ann Holt"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ]
     },
     {
       "id": "film-living",
@@ -272222,7 +276470,17 @@
         "Isabel Waller-Bridge",
         "Isobel Noeline Waller-Bridge"
       ],
-      "scoresN": 25
+      "scoresN": 25,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        14,
+        9,
+        5
+      ]
     },
     {
       "id": "film-the-trip",
@@ -272338,7 +276596,17 @@
         "Dead People"
       ],
       "composersFrom": "album",
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        7,
+        7,
+        4
+      ]
     },
     {
       "id": "film-gold-2022",
@@ -272374,7 +276642,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "powerful",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "film-aftermath-2021",
@@ -272488,7 +276766,17 @@
       "albumArtists": [
         "Jay Wadley"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "tender",
+        "tense",
+        "mysterious"
+      ],
+      "moodsN": [
+        10,
+        7,
+        5
+      ]
     },
     {
       "id": "film-my-hero-academia-world-heroes-mission",
@@ -272568,7 +276856,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "joyful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ]
     },
     {
       "id": "film-the-numbers-station",
@@ -272862,7 +277160,17 @@
       "albumArtists": [
         "Jordan Lehning"
       ],
-      "scoresN": 27
+      "scoresN": 27,
+      "moods": [
+        "tense",
+        "driving",
+        "powerful"
+      ],
+      "moodsN": [
+        10,
+        9,
+        7
+      ]
     },
     {
       "id": "film-the-takedown",
@@ -272897,7 +277205,17 @@
         "Guillaume Roussel"
       ],
       "composersFrom": "album",
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "film-shine",
@@ -273257,7 +277575,17 @@
       "albumArtists": [
         "Jermaine Stegall"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "joyful",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        10,
+        9,
+        6
+      ]
     },
     {
       "id": "film-bird-box-barcelona",
@@ -273342,7 +277670,17 @@
       "composerAliases": [
         "Drum & Lace"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "joyful",
+        "tender",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        5
+      ]
     },
     {
       "id": "film-the-son",
@@ -273501,7 +277839,17 @@
       "composerAliases": [
         "Dickon Hinchcliffe"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tender",
+        "powerful",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "film-cleopatra",
@@ -273578,7 +277926,17 @@
         "Heitor Teixeira Pereira",
         "Simply Red"
       ],
-      "scoresN": 23
+      "scoresN": 23,
+      "moods": [
+        "joyful",
+        "romantic",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ]
     },
     {
       "id": "film-silent-running",
@@ -273651,7 +278009,17 @@
       "albumArtists": [
         "Austin Wintory"
       ],
-      "scoresN": 10
+      "scoresN": 10,
+      "moods": [
+        "tense",
+        "powerful",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "film-a-lonely-place-to-die",
@@ -273972,7 +278340,17 @@
       "albumArtists": [
         "J.J. Pfeifer"
       ],
-      "scoresN": 24
+      "scoresN": 24,
+      "moods": [
+        "romantic",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ]
     },
     {
       "id": "film-downton-abbey-a-new-era",
@@ -274006,7 +278384,17 @@
       "albumArtists": [
         "John Lunn"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "joyful",
+        "romantic",
+        "playful"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ]
     },
     {
       "id": "film-persuasion",
@@ -274041,7 +278429,17 @@
       "albumArtists": [
         "Birdy & Stuart Earl"
       ],
-      "scoresN": 5
+      "scoresN": 5,
+      "moods": [
+        "tender",
+        "romantic",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        3,
+        1
+      ]
     },
     {
       "id": "film-the-swimmers",
@@ -274284,7 +278682,17 @@
       "albumArtists": [
         "Michael Lira"
       ],
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ]
     },
     {
       "id": "film-lee",
@@ -274417,7 +278825,17 @@
       "composerAliases": [
         "Hauschka"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ]
     },
     {
       "id": "film-on-the-road",
@@ -274583,7 +279001,17 @@
         "Pilou",
         "Peter Henry Phillips"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "film-the-lord-of-the-rings-the-war-of-the-rohirrim",
@@ -275013,7 +279441,17 @@
       "composerAliases": [
         "Pray for Rain"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "mysterious",
+        "eerie",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-role-play",
@@ -275094,7 +279532,17 @@
         "Olivier Arson"
       ],
       "composersFrom": "album",
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "film-windfall",
@@ -275133,7 +279581,17 @@
       "composerAliases": [
         "Daniel Bensi"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "tense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        6,
+        4
+      ]
     },
     {
       "id": "film-athena",
@@ -275357,7 +279815,17 @@
         "Daniela Bojorges-Giraldo"
       ],
       "scoresN": 0,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "joyful",
+        "playful",
+        "romantic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "film-the-whisper-man",
@@ -275825,7 +280293,17 @@
         "Disasterpeace",
         "Rich Vreeland"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "tender",
+        "peaceful",
+        "joyful"
+      ],
+      "moodsN": [
+        9,
+        8,
+        6
+      ]
     },
     {
       "id": "film-my-name-is-vendetta",
@@ -276021,7 +280499,17 @@
       "albumArtists": [
         "Dan Romer"
       ],
-      "scoresN": 6
+      "scoresN": 6,
+      "moods": [
+        "tender",
+        "joyful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        3,
+        2,
+        1
+      ]
     },
     {
       "id": "film-boston-strangler",
@@ -276274,7 +280762,17 @@
       "composerAliases": [
         "Martin Juel Dirkov"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        13,
+        9,
+        9
+      ]
     },
     {
       "id": "film-the-oranges",
@@ -277050,7 +281548,17 @@
       "albumArtists": [
         "Stephen Rennicks"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "tender",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ]
     },
     {
       "id": "film-romeo-juliet",
@@ -278074,7 +282582,17 @@
       "composerAliases": [
         "The Gregson-Williams Brothers"
       ],
-      "scoresN": 36
+      "scoresN": 36,
+      "moods": [
+        "tense",
+        "joyful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        10,
+        8
+      ]
     },
     {
       "id": "film-menace-ii-society",
@@ -279245,7 +283763,17 @@
         "Dan Levy (II)",
         "The Dø"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "tense",
+        "mysterious",
+        "wonder"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "film-canary-black",
@@ -280350,7 +284878,17 @@
         "Giorgio Poti"
       ],
       "scoresN": 0,
-      "songsAlbum": true
+      "songsAlbum": true,
+      "moods": [
+        "joyful",
+        "peaceful",
+        "playful"
+      ],
+      "moodsN": [
+        10,
+        8,
+        6
+      ]
     },
     {
       "id": "tv-kaos",
@@ -280567,7 +285105,17 @@
         "Remy Bourgeois"
       ],
       "composersFrom": "album",
-      "scoresN": 9
+      "scoresN": 9,
+      "moods": [
+        "wonder",
+        "powerful",
+        "peaceful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "tv-tehran",
@@ -280601,7 +285149,17 @@
         "Mark Eliyahu"
       ],
       "composersFrom": "album",
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-a-teacher",
@@ -280634,7 +285192,17 @@
       "albumArtists": [
         "Keegan DeWitt"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "mysterious",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-katla",
@@ -280722,7 +285290,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "heroic",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        2
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-10",
@@ -280764,7 +285342,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "playful",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-2",
@@ -280806,7 +285394,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "tense",
+        "mysterious",
+        "playful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-3",
@@ -280848,7 +285446,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "tense"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-4",
@@ -280890,7 +285498,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "powerful",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-5",
@@ -280932,7 +285550,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-6",
@@ -280974,7 +285602,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 8
+      "scoresN": 8,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "heroic"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-7",
@@ -281016,7 +285654,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "powerful",
+        "transcendent",
+        "heroic"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-8",
@@ -281058,7 +285706,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "powerful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "tv-shaman-king-season-1-vol-9",
@@ -281100,7 +285758,17 @@
         "Yuuki Hayashi",
         "はやし ゆうき"
       ],
-      "scoresN": 7
+      "scoresN": 7,
+      "moods": [
+        "powerful",
+        "mysterious",
+        "wonder"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ]
     },
     {
       "id": "tv-law-order-organized-crime-season-1",
@@ -281135,7 +285803,17 @@
       "albumArtists": [
         "Ruth Barrett"
       ],
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "powerful",
+        "sad"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-law-order-organized-crime-season-2",
@@ -281215,7 +285893,17 @@
       "albumArtists": [
         "Ruth Barrett"
       ],
-      "scoresN": 20
+      "scoresN": 20,
+      "moods": [
+        "powerful",
+        "driving",
+        "tense"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ]
     },
     {
       "id": "tv-tale-of-the-nine-tailed",
@@ -281249,7 +285937,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tender",
+        "mysterious",
+        "romantic"
+      ],
+      "moodsN": [
+        22,
+        15,
+        12
+      ]
     },
     {
       "id": "tv-snowdrop",
@@ -281682,7 +286380,17 @@
       "albumArtists": [
         "Brandon Campbell"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-ranking-of-kings",
@@ -281768,7 +286476,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "mysterious",
+        "tender",
+        "powerful"
+      ],
+      "moodsN": [
+        8,
+        7,
+        7
+      ]
     },
     {
       "id": "tv-outer-range-season-2",
@@ -281910,7 +286628,17 @@
         "Sherri Chung"
       ],
       "composersFrom": "album",
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "mysterious",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-zootopia",
@@ -282392,7 +287120,17 @@
         "The Blair Brothers",
         "The Blair Brothers"
       ],
-      "scoresN": 16
+      "scoresN": 16,
+      "moods": [
+        "tense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ]
     },
     {
       "id": "tv-pam-tommy",
@@ -282515,7 +287253,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "mysterious",
+        "tense",
+        "eerie"
+      ],
+      "moodsN": [
+        20,
+        19,
+        13
+      ]
     },
     {
       "id": "tv-mr-mrs-smith",
@@ -282650,7 +287398,17 @@
         "Mark Korven"
       ],
       "composersFrom": "album",
-      "scoresN": 14
+      "scoresN": 14,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        10,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-mieruko-chan",
@@ -289515,7 +294273,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "powerful",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ]
     },
     {
       "id": "tv-all-american-season-3",
@@ -289549,7 +294317,17 @@
         "Blake Neely"
       ],
       "composersFrom": "album",
-      "scoresN": 15
+      "scoresN": 15,
+      "moods": [
+        "powerful",
+        "heroic",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-catch-22",
@@ -289789,7 +294567,17 @@
         "Andrew Lockington"
       ],
       "composersFrom": "album",
-      "scoresN": 33
+      "scoresN": 33,
+      "moods": [
+        "powerful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        8,
+        6
+      ]
     },
     {
       "id": "tv-penny-dreadful-city-of-angels",
@@ -289824,7 +294612,17 @@
       "albumArtists": [
         "John Paesano"
       ],
-      "scoresN": 28
+      "scoresN": 28,
+      "moods": [
+        "mysterious",
+        "tender",
+        "tense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ]
     },
     {
       "id": "tv-our-planet",
@@ -289899,7 +294697,17 @@
       "albumArtists": [
         "Russ Davies"
       ],
-      "scoresN": 26
+      "scoresN": 26,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        7,
+        6
+      ]
     },
     {
       "id": "tv-cowboy-bebop-2021",
@@ -289987,7 +294795,17 @@
       "albumArtists": [
         "Terence Blanchard"
       ],
-      "scoresN": 66
+      "scoresN": 66,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        34,
+        26,
+        17
+      ]
     },
     {
       "id": "tv-perry-mason-season-2",
@@ -290113,7 +294931,17 @@
       "albumArtists": [
         "Amie Doherty"
       ],
-      "scoresN": 18
+      "scoresN": 18,
+      "moods": [
+        "mysterious",
+        "tense",
+        "playful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-the-spanish-princess-season-1",
@@ -290270,7 +295098,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tender",
+        "mysterious",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ]
     },
     {
       "id": "tv-bonding",
@@ -290343,7 +295181,17 @@
         "Blood Orange",
         "David Joseph Michael Hynes"
       ],
-      "scoresN": 12
+      "scoresN": 12,
+      "moods": [
+        "driving",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-away",
@@ -290378,7 +295226,17 @@
         "Will Bates"
       ],
       "composersFrom": "album",
-      "scoresN": 22
+      "scoresN": 22,
+      "moods": [
+        "tender",
+        "wonder",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-little-fires-everywhere",
@@ -290417,7 +295275,17 @@
         "The Machine",
         "Mark Ware Isham"
       ],
-      "scoresN": 11
+      "scoresN": 11,
+      "moods": [
+        "tense",
+        "powerful",
+        "tender"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-tokyo-vice-season-2",
@@ -290552,7 +295420,17 @@
       "composerAliases": [
         "Adem"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "playful",
+        "peaceful",
+        "tense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-station-eleven",
@@ -290668,7 +295546,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "mysterious",
+        "tender",
+        "wonder"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ]
     },
     {
       "id": "tv-modern-love-season-2",
@@ -290778,7 +295666,17 @@
       "albumArtists": [
         "Nathaniel Blume"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "tense",
+        "mysterious",
+        "eerie"
+      ],
+      "moodsN": [
+        14,
+        9,
+        6
+      ]
     },
     {
       "id": "tv-prodigal-son-season-2",
@@ -290813,7 +295711,17 @@
       "albumArtists": [
         "Nathaniel Blume"
       ],
-      "scoresN": 30
+      "scoresN": 30,
+      "moods": [
+        "tense",
+        "mysterious",
+        "powerful"
+      ],
+      "moodsN": [
+        15,
+        10,
+        6
+      ]
     },
     {
       "id": "tv-the-capture-season-2",
@@ -290984,7 +295892,17 @@
       "composerAliases": [
         "도미니크 셰러"
       ],
-      "scoresN": 19
+      "scoresN": 19,
+      "moods": [
+        "mysterious",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        10,
+        4
+      ]
     },
     {
       "id": "tv-ripley",
@@ -291067,7 +295985,17 @@
         "ushio kensuke",
         "牛尾 憲輔"
       ],
-      "scoresN": 41
+      "scoresN": 41,
+      "moods": [
+        "tender",
+        "sad",
+        "powerful"
+      ],
+      "moodsN": [
+        12,
+        8,
+        8
+      ]
     },
     {
       "id": "tv-mythic-quest",
@@ -291100,7 +296028,17 @@
       "albumArtists": [
         "Takeshi Furukawa"
       ],
-      "scoresN": 17
+      "scoresN": 17,
+      "moods": [
+        "powerful",
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ]
     },
     {
       "id": "tv-reservation-dogs-season-2",
@@ -291274,7 +296212,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tense",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        18,
+        15,
+        13
+      ]
     },
     {
       "id": "tv-masters-of-the-universe-revelation-season-1-vol-1",
@@ -291402,7 +296350,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tender",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        7,
+        3,
+        3
+      ]
     },
     {
       "id": "tv-start-up",
@@ -291435,7 +296393,17 @@
       "albumArtists": [
         "Various Artists"
       ],
-      "scoresN": 0
+      "scoresN": 0,
+      "moods": [
+        "tender",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        33,
+        27,
+        17
+      ]
     },
     {
       "id": "tv-alex-rider",
@@ -291472,7 +296440,17 @@
       "composerAliases": [
         "Benjamin Stefanski"
       ],
-      "scoresN": 21
+      "scoresN": 21,
+      "moods": [
+        "mysterious",
+        "tense",
+        "driving"
+      ],
+      "moodsN": [
+        10,
+        7,
+        4
+      ]
     },
     {
       "id": "tv-the-chelsea-detective",
@@ -292680,7 +297658,17 @@
       "ytmPlaylistId": "OLAK5uy_lHyt95fZo5S0sBjtIfmsff-TfA1ilhZ_U",
       "scoresN": 19,
       "tracksN": 19,
-      "playsTotal": 160400
+      "playsTotal": 160400,
+      "moods": [
+        "peaceful",
+        "joyful",
+        "wonder"
+      ],
+      "moodsN": [
+        10,
+        6,
+        4
+      ]
     },
     {
       "id": "tv-super-wings",
