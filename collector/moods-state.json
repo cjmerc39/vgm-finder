@@ -212,6 +212,17 @@
    "outputTokens": 135792,
    "cost": 1.1411,
    "remaining": 449
+  },
+  {
+   "at": "2026-09-18T03:44:41Z",
+   "kind": "backfill",
+   "tagged": 0,
+   "skipped": 0,
+   "failed": 449,
+   "inputTokens": 0,
+   "outputTokens": 0,
+   "cost": 0.0,
+   "remaining": 449
   }
  ]
 }
