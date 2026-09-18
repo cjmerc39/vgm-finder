@@ -1,47 +1,90 @@
 [
   {
     "title": "Title Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "mysterious"
+    ]
   },
   {
     "title": "Menu Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Dam",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Facility",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Runway",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Surface (Morning)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "Bunker",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Silo",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Frigate",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Surface (Night)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Bunker 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Pause Menu",
@@ -49,46 +92,90 @@
   },
   {
     "title": "Statue",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Archives",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Streets",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Depot",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Train",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Control",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Caverns",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Cradle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Aztec",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Egyptian",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   },
   {
     "title": "End Credits",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   }
 ]

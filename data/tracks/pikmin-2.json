@@ -1,31 +1,58 @@
 [
   {
     "title": "Channel Intro (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Pikmin Greet (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Pikmin Greet (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Title Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Title Screen (Secret Song)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Game Demo (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Game Demo (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Choose a Ship's Log (File Select)",
@@ -37,47 +64,89 @@
   },
   {
     "title": "Highscore",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Opening Cinema (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "tender"
+    ]
   },
   {
     "title": "Opening Cinema (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "tender"
+    ]
   },
   {
     "title": "The Crash Landing",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Olimar Meets Pikmin Again",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Explaining Whistling",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Louie Awakens",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Louie Finds the Red Onion",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "The First Pikmin Seeds",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Valley of Repose (Day 1)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "Find New Treasure",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Explanation",
@@ -85,51 +154,97 @@
   },
   {
     "title": "Olimar and Louie Reunited",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Valley of Repose (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Treasure Get",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "End of Day 1",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "End of Day (Normal)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Results of the Day",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Complete Overview (Area Select)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Piklopedia",
@@ -137,1527 +252,2947 @@
   },
   {
     "title": "Start of Day 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Valley of Repose (Olimar, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Valley of Repose (Louie, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Destroyed First Fence",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Something Peculiar...",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Enter Cave",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Enter Cave Floor",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Entered Emergence Cave / Challenge Mode Introduction",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "mysterious"
+    ]
   },
   {
     "title": "Emergence Cave (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Emergence Cave (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Emergence Cave (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Emergence Cave (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Emergence Cave (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Emergence Cave (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Emergence Cave (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Emergence Cave (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Enter Next Cave Floor",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Final Cave Floor",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Cold Chasm (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Cold Chasm (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Cold Chasm (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Cold Chasm (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Cold Chasm (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Cold Chasm (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Cold Chasm (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Cold Chasm (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Cold Chasm (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Cold Chasm (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Discover New Pikmin Colour",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Get Treasure",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Exit Cave",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Treasure Salvation Results",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Totaka's Song (Secret Song)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Returned on the Surface",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Returned on the Surface (Extended)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "End of Day (Great)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "New Area Unlocked",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Landing In New Area",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Awakening Wood (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Awakening Woods (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Awakening Woods (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "X% Of Debt Paid",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Awakening Woods (Olimar, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "Awakening Woods (Louie, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Pikmin Nectar",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Ultra Spicy Pikmin",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Hole of Beasts/Cautious Cavern (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Rest Area",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Burnt Burrow (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Burnt Burrow (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "eerie"
+    ]
   },
   {
     "title": "Burnt Burrow (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Burnt Burrow (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Burnt Burrow (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Burnt Burrow (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Burnt Burrow (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Burnt Burrow (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Burnt Burrow (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Burnt Burrow (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Pikmin Are Suffering!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "sad"
+    ]
   },
   {
     "title": "Hot House (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Hot House (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Hot House (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Hot House (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Hot House (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Hot House (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Hot House (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Hot House (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Hot House (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Hot House (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Boss Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Boss Battle (Preparing an Attack)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Boss Theme (Attacking)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Boss Theme (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Boss Defeated",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Get Prototype Detector",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Awakening Wood (Olimar, Near Sundown, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Awakening Wood (Louie, Near Sundown, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "tender"
+    ]
   },
   {
     "title": "Complex Cavern (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Complex Cavern (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Complex Cavern (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Complex Cavern (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Complex Cavern (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Complex Cavern (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Complex Cavern (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Complex Cavern (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Complex Cavern (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Complex Cavern (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Graphite Gulch (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Graphite Gulch (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Graphite Gulch (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Graphite Gulch (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Graphite Gulch (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Graphite Gulch (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Graphite Gulch (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Graphite Gulch (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Graphite Gulch (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Graphite Gulch (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Rest Area (Working or Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Gassy Grotto (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Gassy Grotto (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "eerie"
+    ]
   },
   {
     "title": "Gassy Grotto (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Gassy Grotto (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Gassy Grotto (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Gassy Grotto (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Gassy Grotto (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Gassy Grotto (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Gassy Grotto (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Gassy Grotto (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Boss Battle (Attack 1)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Boss Battle (Attack 2)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Boss Battle (Attack 3)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Boss Battle (Attack 4)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Boss Battle (Defense)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Citadel of Spiders (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Citadel of Spiders (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Citadel of Spiders (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Citadel of Spiders (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Citadel of Spiders (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Citadel of Spiders (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Citadel of Spiders (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Citadel of Spiders (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Citadel of Spiders (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Citadel of Spiders (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Dweevil's Dugout (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Red Chasm/Hangout Hole (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Obtaining \"The Key\"",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Olimar, Near Sundown, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "tense"
+    ]
   },
   {
     "title": "Perplexing Pool (Louie, Near Sundown, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "tense"
+    ]
   },
   {
     "title": "Blue Pikmin",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "powerful"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "powerful"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Bulblax Kingdom (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "50% of Debt Paid",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Snagret Hole (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Snagret Hole (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Snagret Hole (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Snagret Hole (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Snagret Hole (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Snagret Hole (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Snagret Hole (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Snagret Hole (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Snagret Hole (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Snagret Hole (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Green Yards (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Green Yards (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Green Yards (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Green Yards (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Green Yards (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Green Yards (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Green Yards (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Green Yards (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Green Yards (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Green Yards (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Subterranean Complex (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Subterranean Complex (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Subterranean Complex (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Subterranean Complex (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Subterranean Complex (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Subterranean Complex (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Subterranean Complex (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Subterranean Complex (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Subterranean Complex (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Subterranean Complex (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Frontier Cavern (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   },
   {
     "title": "Frontier Cavern (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Frontier Cavern (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Frontier Cavern (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Frontier Cavern (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Frontier Cavern (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Frontier Cavern (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Frontier Cavern (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Frontier Cavern (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Frontier Cavern (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Get Brute Knuckles",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Shower Room (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "peaceful"
+    ]
   },
   {
     "title": "Shower Room (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "playful"
+    ]
   },
   {
     "title": "Shower Room (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Shower Room (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "playful"
+    ]
   },
   {
     "title": "Shower Room (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Shower Room (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Shower Room (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "wonder"
+    ]
   },
   {
     "title": "Shower Room (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "wonder"
+    ]
   },
   {
     "title": "Shower Room (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Shower Room (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "tender"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "playful"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "playful"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "wonder"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "wonder"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Jellyfloat Pool (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Got a Boss's Treasure!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Louie, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Glutton's Kitchen (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Railroad Room (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Railroad Room (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Railroad Room (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Railroad Room (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Railroad Room (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Railroad Room (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Railroad Room (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Railroad Room (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Ramp Room (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Ramp Room (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Ramp Room (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Ramp Room (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Ramp Room (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Ramp Room (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Ramp Room (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Ramp Room (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Giant Breadbug (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "powerful"
+    ]
   },
   {
     "title": "Giant Breadbug (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Giant Breadbug (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "Giant Breadbug (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "playful"
+    ]
   },
   {
     "title": "Giant Breadbug (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Giant Breadbug (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Giant Breadbug (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Giant Breadbug (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Submerged Castle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Waterwraith Appearance",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Waterwraith Attack",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Waterwraith Pathetic Escape",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Waterwraith Pathetic Escape (Defense)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "100% of Debt Recovered",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Debt Repayment Cinema (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Debt Repayment Cinema (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Staff Credits Cinema (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Staff Credits Cinema (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Records of Pikmin Bred and Lost",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful",
+      "sad"
+    ]
   },
   {
     "title": "Goal Completion Cinema (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Goal Completion Cinema (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "wonder"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "playful"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "playful"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Near Sundown)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Near Sundown, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Near Sundown, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "nostalgic"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Near Sundown, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Near Sundown, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Wistful Wild (Olimar, Near Sundown, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Wistful Wild (President Shacho, Near Sundown, Berry Flower)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Mystic Marsh (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Mystic Marsh (President Shacho)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Mystic Marsh (Olimar, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Mystic Marsh (President Shacho, Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Mystic Marsh (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Mystic Marsh (President Shacho, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Mystic Marsh (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Mystic Marsh (President Shacho, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Mystic Marsh (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Mystic Marsh (President Shacho, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Titan Dweevil (4 Weapons)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Titan Dweevil (About To Attack)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Titan Dweevil (Monster Pump Attack)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Titan Dweevil (Shock Therapist Attack)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Titan Dweevil (Flare Cannon Attack)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Titan Dweevil (Comedy Bomb Attack)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "powerful"
+    ]
   },
   {
     "title": "Titan Dweevil (3 Weapons)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Titan Dweevil (2 Weapons)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Titan Dweevil (1 Weapons)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Titan Dweevil (No Weapons)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Titan Dweevil (No Weapons, Attack)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Titan Dweevil Defeated",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Treasure Complete",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Treasure Completion Cinema (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Treasure Completion Cinema (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Treasure Complete Results",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Player Down",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "End of Day (Bad)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Pikmin Extinction",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful",
+      "sad"
+    ]
   },
   {
     "title": "End of Day (Pikmin Extinction)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful",
+      "sad"
+    ]
   },
   {
     "title": "2-Player Mode Battle Menu",
@@ -1669,75 +3204,137 @@
   },
   {
     "title": "2-Player Mode Battle Start",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful"
+    ]
   },
   {
     "title": "2-Player Mode Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Olimar Carrying Cherry (2-Player Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Louie Carrying Cherry (2-Player Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Pikmin Attack Player (2-Player Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Olimar One Marble Left (2-Player Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Louie One Marble Left (2-Player Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Olimar Wins",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Olimar Wins (Alternate)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Louie Wins",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Louie Wins (Alternate)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Marble Draw",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Olimar Down",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Louie Down",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Players Down Draw",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Olimar Pikmin Extinction",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful"
+    ]
   },
   {
     "title": "Louie Pikmin Extinction",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful"
+    ]
   },
   {
     "title": "Pikmin Extinction Draw",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful"
+    ]
   },
   {
     "title": "Challenge Mode Menu",
@@ -1745,95 +3342,182 @@
   },
   {
     "title": "Floor Intro (Challenge Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Challenge Mode Start",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Got Key",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Got Key (Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Got Key (Working)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Got Key (Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Got Key (Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Time Up",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "Captain Down (Challenge Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Pikmin Exctinction (Challenge Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful",
+      "sad"
+    ]
   },
   {
     "title": "Results (Challenge Mode)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Pink Flower Get",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Secret Testing Range (Olimar)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Secret Testing Range (Louie)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Secret Testing Range (Olimar, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Secret Testing Range (Louie, Carrying)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Secret Testing Range (Olimar, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Secret Testing Range (Louie, Near Enemy)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Secret Testing Range (Olimar, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Secret Testing Range (Louie, Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Cinema",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Louie's Dark Secret (GCN)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Louie's Dark Secret (WII)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Captain Roll Call (Olimar, Louie, President Shacho Voices)",
@@ -1841,19 +3525,33 @@
   },
   {
     "title": "Pikmin Singing \"Pikmin 2 Main Theme\"",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Pikmin Singing \"Ai no Uta\"",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Olimar Wins (Unused)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic"
+    ]
   },
   {
     "title": "Louie Wins (Unused)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic"
+    ]
   },
   {
     "title": "Draw (Unused)",

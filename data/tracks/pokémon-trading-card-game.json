@@ -1,11 +1,17 @@
 [
   {
     "title": "Title",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Continue Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Pause Menu",
@@ -13,7 +19,11 @@
   },
   {
     "title": "World Map and Mason Lab",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "peaceful"
+    ]
   },
   {
     "title": "Autodeck Machines",
@@ -21,51 +31,97 @@
   },
   {
     "title": "Grass & Lightning Clubs",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Fire, Fighting & Science Clubs",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Water, Rock & Psychic Clubs",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Normal Duel",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Club Leader Duel",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Ronald's Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Imakuni's Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "eerie"
+    ]
   },
   {
     "title": "Challenge Hall",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Pokemon Dome's Great Hall",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Grandmaster Duel",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Hall of Honour",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Credits",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Duel Win SFX",

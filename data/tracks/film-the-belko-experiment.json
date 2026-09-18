@@ -6,7 +6,11 @@
     "artists": [
       "José Prieto"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Security",
@@ -14,6 +18,10 @@
     "videoId": "pcyBHxdUI2M",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "tense",
+      "mysterious"
     ]
   },
   {
@@ -22,6 +30,10 @@
     "videoId": "zBqhEaKqPEE",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "tense",
+      "eerie"
     ]
   },
   {
@@ -30,6 +42,10 @@
     "videoId": "T4QbkPAsegE",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -38,6 +54,10 @@
     "videoId": "MrrJXmnE_lk",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "eerie",
+      "tense"
     ]
   },
   {
@@ -46,6 +66,10 @@
     "videoId": "Zs0BN1iz-IM",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "eerie",
+      "powerful"
     ]
   },
   {
@@ -54,6 +78,10 @@
     "videoId": "Vz6FkVIGykU",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "tense",
+      "powerful"
     ]
   },
   {
@@ -63,7 +91,11 @@
     "artists": [
       "Gabriela Terán"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Panic!",
@@ -71,6 +103,10 @@
     "videoId": "OpwJwn4gqYo",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -79,6 +115,11 @@
     "videoId": "vN6xkcYfqbQ",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "driving",
+      "powerful",
+      "tense"
     ]
   },
   {
@@ -87,6 +128,10 @@
     "videoId": "_25E2vCY3ng",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "mournful",
+      "sad"
     ]
   },
   {
@@ -95,6 +140,11 @@
     "videoId": "Jt-XCfk8l4k",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "powerful",
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -103,6 +153,10 @@
     "videoId": "KPSQXBF1b18",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   },
   {
@@ -111,6 +165,10 @@
     "videoId": "XHZgzggULpo",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -119,6 +177,10 @@
     "videoId": "XmxoBfmuwjo",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "mournful",
+      "sad"
     ]
   },
   {
@@ -127,6 +189,10 @@
     "videoId": "DWAwOLr5974",
     "artists": [
       "Tyler Bates"
+    ],
+    "moods": [
+      "driving",
+      "powerful"
     ]
   },
   {
@@ -146,6 +212,10 @@
       "Tyler Bates",
       "Dave Lombardo",
       "Rani Sharone"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   }
 ]

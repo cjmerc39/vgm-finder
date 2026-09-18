@@ -1,11 +1,19 @@
 [
   {
     "title": "Opening",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Menu",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "peaceful"
+    ]
   },
   {
     "title": "Play Methods",
@@ -13,211 +21,415 @@
   },
   {
     "title": "FANTASY MEADOWS",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "CELESTIAL VALLEY",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "wonder"
+    ]
   },
   {
     "title": "SKY SANDS",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "FROZEN HILLSIDE",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "MAGMA FLOWS",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "BEANSTALK PARK",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "MACHINE PASSAGE",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "CHECKER KNIGHTS",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "NEBULA BELT",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "wonder"
+    ]
   },
   {
     "title": "Spring Breeze",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Forest Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "The Arena",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Rainbow Resort",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "transcendent"
+    ]
   },
   {
     "title": "Revenge of Meta Knight 1",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "The Beginner's Room",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Revenge of Meta Knight 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "driving"
+    ]
   },
   {
     "title": "Green Greens",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Dream Land",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Winner's Finish",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Second Place or Worse",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "CPU Finish",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Results Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Ending",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "GRASS",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "SAND",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "SKY",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "wonder"
+    ]
   },
   {
     "title": "FIRE",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "LIGHT",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "WATER",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "METAL",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "The Mountain",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Rock Star",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Revenge of Meta Knight (Map)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Versus King Dedede",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Mid-Boss Room",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Float Islands",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "peaceful"
+    ]
   },
   {
     "title": "Shooting",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Results Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Not Much Time Left",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "City (Backside)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Dyna Blade (intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Tac Challenge",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Flying Meteor",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Huge Pillar",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Station Fire",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "What's in the Box?",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "The Lighthouse Light Burns",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Rowdy Charge Tank",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Item Bounce",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Dense Fog Today",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Legendary Air Ride Machine",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "transcendent"
+    ]
   },
   {
     "title": "Properties Graph",
@@ -225,34 +437,64 @@
   },
   {
     "title": "Title",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   },
   {
     "title": "DRAG RACE",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "AIR GLIDER",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "TARGET FLIGHT",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "KIRBY MELEE",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Ending",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Retire",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Checklist Completed",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   }
 ]

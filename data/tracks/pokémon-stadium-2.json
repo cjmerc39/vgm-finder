@@ -1,59 +1,111 @@
 [
   {
     "title": "Title Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Demonstration Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "White City (Menu Theme)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Options Menu",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Mystery Gift",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Event Battle Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Earl's Pokemon Academy",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Academy Quiz",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "tender"
+    ]
   },
   {
     "title": "Earl's Test Pass",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Earl's Test Fail",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Academy Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "My Room",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Prof. Oak's Lab",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Stadium",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Beta Theme",
@@ -61,307 +113,595 @@
   },
   {
     "title": "Minigames",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Minigame Complete",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Minigame Championship",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Minigame Champion",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Minigame Champion Prize",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Minigame Lost",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Minigame Won",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Select the Winner",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Single Minigame Won",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Barrier Ball",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Clear Cut Begin",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Clear Cut End",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Delibird's Delivery",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Eager Eevee",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Egg Emergency",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Furret's Frolic",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Gutsy Golbat",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Quiz Introduction",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Quiz",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Rampage Rollout",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Streaming Stampede",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Topsy-Turvy",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Tumbling Togepi",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Pokemon Select",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Battle Preparation",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Versus Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Little Cup Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Little Cup Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Little Cup Final Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Little Cup Final Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Poke Cup Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Poke Cup Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Poke Cup Final Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Poke Cup Final Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Prime Cup Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Prime Cup Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Prime Cup Final Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Prime Cup Final Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Challenge Cup Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Challenge Cup Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Challenge Cup Final Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Challenge Cup Final Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Defeated!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "Victory!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Cup Victory",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Stadium Cup Final Winner Fanfare",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "transcendent"
+    ]
   },
   {
     "title": "Johto Castle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Kanto Castle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Kanto Leader Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Pichu's Power Plant",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Team Rocket's Castle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Team Rocket Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Gym Beta Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Gym Leader Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Castle Clear",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Castle Clear (Short)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Elite 4 Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Elite 4 Battle 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Lance's Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "transcendent"
+    ]
   },
   {
     "title": "Lance Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Lance Defeated",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Rival Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Rival Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Rival Defeated",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Ash Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Free Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Battle End",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Clear!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Evolution",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "wonder"
+    ]
   },
   {
     "title": "Evolution Complete",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "transcendent"
+    ]
   },
   {
     "title": "Trade Complete",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Got a Rare Pokemon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Relearn TM",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Relearning Move",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Move Relearned",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Champion Whistle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Beep (Drum)",

@@ -1,31 +1,59 @@
 [
   {
     "title": "Wonder of the World (Cave)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "peaceful"
+    ]
   },
   {
     "title": "Battle of Kadesh (Battle)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Caesar’s Revenge (Gamelan)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Caravan (Party)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Holy Man (Hunt)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Battle of Tunis (Thunder)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Canyon of Death (Death)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mournful"
+    ]
   },
   {
     "title": "Release Trailer",
@@ -33,7 +61,11 @@
   },
   {
     "title": "Splash (Introduction)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "30sec Trailer, Ver. 1",

@@ -1,18 +1,38 @@
 [
   {
     "title": "Poseidon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic",
+      "mysterious"
+    ]
   },
   {
     "title": "Hades",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mournful",
+      "tense"
+    ]
   },
   {
     "title": "Kronos",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Apollon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "transcendent",
+      "joyful"
+    ]
   }
 ]

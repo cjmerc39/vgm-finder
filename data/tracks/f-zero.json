@@ -1,7 +1,12 @@
 [
   {
     "title": "F-Zero Title Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Silence",
@@ -9,15 +14,27 @@
   },
   {
     "title": "Sand Ocean",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Fire Field",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Port Town",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Records Screen",
@@ -25,26 +42,50 @@
   },
   {
     "title": "Big Blue",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Death Wind",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "eerie"
+    ]
   },
   {
     "title": "White Land 1",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "peaceful"
+    ]
   },
   {
     "title": "Red Canyon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Mute City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "heroic"
+    ]
   },
   {
     "title": "Ending Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "transcendent"
+    ]
   }
 ]

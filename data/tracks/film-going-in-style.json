@@ -6,7 +6,11 @@
     "artists": [
       "Dean Martin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "St. Thomas",
@@ -15,7 +19,10 @@
     "artists": [
       "Sonny Rollins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Feel Right",
@@ -24,7 +31,11 @@
     "artists": [
       "Mark Ronson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Hard to Handle",
@@ -33,7 +44,11 @@
     "artists": [
       "Otis Redding"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Can I Kick It?",
@@ -42,7 +57,11 @@
     "artists": [
       "A Tribe Called Quest"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Hey, Look Me Over",
@@ -51,7 +70,11 @@
     "artists": [
       "Jamie Cullum"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Hallelujah I Love Her So",
@@ -61,7 +84,11 @@
       "Alan Arkin",
       "Ann-Margret"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Mean Old World",
@@ -70,7 +97,11 @@
     "artists": [
       "Sam Cooke"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "What A Diff'rence A Day Makes",
@@ -79,7 +110,11 @@
     "artists": [
       "Dinah Washington"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Opening",
@@ -87,6 +122,10 @@
     "videoId": "h2ZjMZd5ckI",
     "artists": [
       "Rob Simonsen"
+    ],
+    "moods": [
+      "mysterious",
+      "driving"
     ]
   },
   {
@@ -95,6 +134,10 @@
     "videoId": "gddL2PTEWtU",
     "artists": [
       "Rob Simonsen"
+    ],
+    "moods": [
+      "tense",
+      "sad"
     ]
   },
   {
@@ -103,6 +146,9 @@
     "videoId": "wLclWn2gwsU",
     "artists": [
       "Rob Simonsen"
+    ],
+    "moods": [
+      "tender"
     ]
   },
   {
@@ -111,6 +157,10 @@
     "videoId": "KdS3lwVYlm0",
     "artists": [
       "Rob Simonsen"
+    ],
+    "moods": [
+      "driving",
+      "powerful"
     ]
   },
   {
@@ -119,6 +169,10 @@
     "videoId": "A-Er_MDXd70",
     "artists": [
       "Rob Simonsen"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -127,6 +181,10 @@
     "videoId": "M4o-O9fyWKE",
     "artists": [
       "Rob Simonsen"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -135,6 +193,10 @@
     "videoId": "iU-2tYiWuTA",
     "artists": [
       "Rob Simonsen"
+    ],
+    "moods": [
+      "joyful",
+      "romantic"
     ]
   }
 ]

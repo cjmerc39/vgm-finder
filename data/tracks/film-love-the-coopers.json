@@ -7,7 +7,12 @@
       "Robert Plant",
       "Alison Krauss"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "White Winter Hymnal",
@@ -16,7 +21,11 @@
     "artists": [
       "Fleet Foxes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "Merry Christmas Baby (From \"Love The Coopers\" Soundtrack)",
@@ -25,7 +34,11 @@
     "artists": [
       "Otis Redding"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Girl From The North Country",
@@ -34,7 +47,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Soul Cake (From \"Love The Coopers\" Soundtrack)",
@@ -43,7 +60,11 @@
     "artists": [
       "Sting"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "To Love Somebody",
@@ -52,7 +73,11 @@
     "artists": [
       "Nina Simone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "If Not For You",
@@ -61,7 +86,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Little Drummer Boy (From \"Love The Coopers\" Soundtrack)",
@@ -71,7 +100,11 @@
       "Molly June",
       "Wes Hutchinson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Carol Of The Bells",
@@ -80,7 +113,11 @@
     "artists": [
       "Sixpence None The Richer"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Companions (From \"Love The Coopers\" Soundtrack)",
@@ -89,7 +126,11 @@
     "artists": [
       "The Dodos"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Ring Them Bells (From \"Love The Coopers\" Soundtrack)",
@@ -98,7 +139,11 @@
     "artists": [
       "Sarah Jarosz"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "O Holy Night (From \"Love The Coopers\" Soundtrack)",
@@ -109,7 +154,11 @@
       "Molly June",
       "Wes Hutchinson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "Fear Of Silence (From \"Love The Coopers\" Soundtrack)",
@@ -117,6 +166,10 @@
     "videoId": null,
     "artists": [
       "Nick Urata"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   }
 ]

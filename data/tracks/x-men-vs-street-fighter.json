@@ -1,95 +1,186 @@
 [
   {
     "title": "Opening & Title",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Wolverine Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Cyclops Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Storm Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "Rogue Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Gambit Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Sabretooth Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Juggernaut Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Magneto Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "Player Select",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Vs",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Win",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Ryu Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Ken Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Chun-Li Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Dhalsim Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "mysterious"
+    ]
   },
   {
     "title": "Zangief Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Vega Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "Gouki Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Nash Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Cammy Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Introduction",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Apocalypse Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "Continue",
@@ -97,66 +188,129 @@
   },
   {
     "title": "Game Over",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad",
+      "tense"
+    ]
   },
   {
     "title": "Break Out",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Ending~Silence~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Ending~Spirits~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "transcendent"
+    ]
   },
   {
     "title": "Ending~Moonlight~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Ending~Fight!!~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Ending~Temptation Of Evil~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Ending~Friends~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "joyful"
+    ]
   },
   {
     "title": "Ending~Meditation~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "transcendent"
+    ]
   },
   {
     "title": "Ending~Peace~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Ending~Loving You~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Ending~A Scolding~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Ending~Ambition~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "Ending~True Love~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "romantic",
+      "transcendent"
+    ]
   },
   {
     "title": "Ending~Wondering~",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "tender"
+    ]
   },
   {
     "title": "Staff Roll",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   }
 ]

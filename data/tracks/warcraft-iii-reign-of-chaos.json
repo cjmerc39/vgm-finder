@@ -1,18 +1,38 @@
 [
   {
     "title": "Lordaeron Fall",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic",
+      "mournful"
+    ]
   },
   {
     "title": "Bloodlust",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Return to Kalimdor",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Blight",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense",
+      "mysterious"
+    ]
   }
 ]

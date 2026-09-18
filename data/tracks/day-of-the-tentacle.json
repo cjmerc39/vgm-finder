@@ -1,14 +1,26 @@
 [
   {
     "title": "I Ate Babel Fish",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Clowns On Parade",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "eerie"
+    ]
   },
   {
     "title": "Silence (I Kill You)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   }
 ]

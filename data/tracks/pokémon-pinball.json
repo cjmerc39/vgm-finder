@@ -1,7 +1,11 @@
 [
   {
     "title": "Title Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Options",
@@ -17,55 +21,105 @@
   },
   {
     "title": "Red Field Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Catch'em & Evolution Mode in Red Field",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Pokémon Caught",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Evolution Completed",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Go to Bonus Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Diglett Stage ~ Whack the Digletts",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Diglett Stage ~ Whack Dugtrio",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "End of Bonus Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Gengar Stage ~ Gastly in the Graveyard",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Gengar Stage ~ Haunter in the Graveyard",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Gengar Stage ~ Gengar in the Graveyard",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "powerful"
+    ]
   },
   {
     "title": "Blue Field Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Catch'em & Evolution Mode in Blue Field",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Map Mode",
@@ -73,27 +127,48 @@
   },
   {
     "title": "Moved to Another Area",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Meowth Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Seel Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "MewTwo Stage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "End of Ball",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Game Over",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Name Entry",
@@ -105,6 +180,10 @@
   },
   {
     "title": "End Credits",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   }
 ]

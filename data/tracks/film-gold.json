@@ -6,7 +6,12 @@
     "artists": [
       "Iggy Pop"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic",
+      "driving"
+    ]
   },
   {
     "title": "Ron Klaus Wrecked His House",
@@ -15,7 +20,11 @@
     "artists": [
       "Big Dipper"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "This Must Be The Place (Naïve Melody)",
@@ -24,7 +33,11 @@
     "artists": [
       "Kishi Bashi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Spill The Wine",
@@ -33,7 +46,11 @@
     "artists": [
       "The Isley Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "I Want To See The Bright Lights Tonight",
@@ -42,7 +59,11 @@
     "artists": [
       "Richard & Linda Thompson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "romantic"
+    ]
   },
   {
     "title": "Rip It Up",
@@ -51,7 +72,11 @@
     "artists": [
       "Orange Juice"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Temptation",
@@ -60,7 +85,11 @@
     "artists": [
       "New Order"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Hey",
@@ -78,7 +107,11 @@
     "artists": [
       "Joy Division"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "mysterious"
+    ]
   },
   {
     "title": "1880 Or So",
@@ -87,6 +120,10 @@
     "artists": [
       "Television"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "wonder"
+    ]
   }
 ]

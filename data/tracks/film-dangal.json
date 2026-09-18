@@ -7,7 +7,11 @@
       "Sarwar Khan",
       "Sartaz Khan Barna"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Dhaakad",
@@ -16,7 +20,12 @@
     "artists": [
       "Raftaar"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic",
+      "driving"
+    ]
   },
   {
     "title": "Gilehriyaan",
@@ -25,7 +34,11 @@
     "artists": [
       "Jonita Gandhi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Dangal",
@@ -34,7 +47,11 @@
     "artists": [
       "Daler Mehndi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Naina",
@@ -43,7 +60,11 @@
     "artists": [
       "Arijit Singh"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Dhaakad - Aamir Khan Version",
@@ -52,7 +73,12 @@
     "artists": [
       "Aamir Khan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic",
+      "driving"
+    ]
   },
   {
     "title": "Idiot Banna",
@@ -62,6 +88,9 @@
       "Jyoti Nooran",
       "Sultana Nooran"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   }
 ]

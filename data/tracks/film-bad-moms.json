@@ -6,7 +6,11 @@
     "artists": [
       "Sophie Beem"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "I Want to Know What Love Is",
@@ -15,7 +19,11 @@
     "artists": [
       "Foreigner"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "powerful"
+    ]
   },
   {
     "title": "Shut Up and Dance",
@@ -24,7 +32,11 @@
     "artists": [
       "WALK THE MOON"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Bad Moms (Suite)",
@@ -33,6 +45,10 @@
     "artists": [
       "Christopher Lennertz",
       "KT Tunstall"
+    ],
+    "moods": [
+      "playful",
+      "powerful"
     ]
   },
   {
@@ -42,6 +58,10 @@
     "artists": [
       "Christopher Lennertz",
       "KT Tunstall"
+    ],
+    "moods": [
+      "powerful",
+      "joyful"
     ]
   },
   {
@@ -51,6 +71,10 @@
     "artists": [
       "Christopher Lennertz",
       "KT Tunstall"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   }
 ]

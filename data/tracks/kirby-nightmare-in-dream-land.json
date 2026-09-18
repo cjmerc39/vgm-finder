@@ -1,214 +1,410 @@
 [
   {
     "title": "Main Title",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Main Menu",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Map – Vegetable Valley",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Vegetable Valley",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Map – Ice Cream Island",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Ice Cream Island",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Map – Butter Buildings",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Butter Buildings",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Map – Grape Garden",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Grape Garden",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "romantic"
+    ]
   },
   {
     "title": "Map – Yogurt Yard",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Yogurt Yard",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "joyful"
+    ]
   },
   {
     "title": "Map – Orange Ocean",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Orange Ocean",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Map – Rainbow Resort",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Rainbow Resort",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Field Stages",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Forest Stages",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Sky Stages",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "peaceful"
+    ]
   },
   {
     "title": "Boss Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Coliseum Duel",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Kirby Wins! (Long)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Kirby Wins! (Short)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Dedede Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Nightmare Transforms",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Nightmare Battle (Part 1)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Nightmare Battle (Part 2)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Ending",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Meta Knight’s Forces",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "powerful"
+    ]
   },
   {
     "title": "Meta Knight Battle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "heroic",
+      "driving"
+    ]
   },
   {
     "title": "Bomb Rally",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Fountain of Dreams",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "Kirby’s Air Grind Intro",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Kirby’s Air Grind",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Kirby’s Air Grind Finish",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Samurai Kirby",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Warp Star Express",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Bonus Clear",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Bonus Clear (Best!)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Bonus Clear (Failure)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Goal",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Miss!",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Game Over",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful"
+    ]
   },
   {
     "title": "Invincibility Lollipop",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Vegetable Valley (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Ice Cream Island (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "playful"
+    ]
   },
   {
     "title": "Butter Buildings (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Grape Garden (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "romantic"
+    ]
   },
   {
     "title": "Yogurt Yard (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tender",
+      "joyful"
+    ]
   },
   {
     "title": "Orange Ocean (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Rainbow Resort (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Field Stages (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Forest Stages (No Intro)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   }
 ]

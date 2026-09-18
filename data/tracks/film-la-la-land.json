@@ -6,7 +6,11 @@
     "artists": [
       "La La Land Cast"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Someone In The Crowd",
@@ -18,7 +22,11 @@
       "Sonoya Mizuno",
       "Jessica Rothe"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Mia & Sebastian’s Theme",
@@ -26,6 +34,10 @@
     "videoId": "D3ovuBdbUqk",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -36,7 +48,11 @@
       "Ryan Gosling",
       "Emma Stone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "playful"
+    ]
   },
   {
     "title": "Herman’s Habit",
@@ -44,6 +60,9 @@
     "videoId": "1V5l_LbmWlQ",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -53,7 +72,11 @@
     "artists": [
       "Ryan Gosling"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Planetarium",
@@ -61,6 +84,10 @@
     "videoId": "i0hcq522FFE",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "wonder",
+      "transcendent"
     ]
   },
   {
@@ -69,6 +96,10 @@
     "videoId": "Lft6Eyh0cng",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "joyful",
+      "romantic"
     ]
   },
   {
@@ -79,7 +110,11 @@
       "Ryan Gosling",
       "Emma Stone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Start A Fire",
@@ -88,7 +123,11 @@
     "artists": [
       "John Legend"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Engagement Party",
@@ -96,6 +135,9 @@
     "videoId": "qzspvUBLoOY",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "tender"
     ]
   },
   {
@@ -105,7 +147,11 @@
     "artists": [
       "Emma Stone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "transcendent"
+    ]
   },
   {
     "title": "Epilogue",
@@ -113,6 +159,10 @@
     "videoId": "L16vTRw9mDQ",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "romantic",
+      "mournful"
     ]
   },
   {
@@ -121,6 +171,9 @@
     "videoId": "L8Q5g483gD0",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "peaceful"
     ]
   },
   {
@@ -129,6 +182,10 @@
     "videoId": "WPEVYK6ijhw",
     "artists": [
       "Justin Hurwitz"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   }
 ]
