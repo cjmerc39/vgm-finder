@@ -7,7 +7,11 @@
       "Wicked Movie Cast",
       "Ariana Grande"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "mysterious"
+    ]
   },
   {
     "title": "Dear Old Shiz (feat. Ariana Grande)",
@@ -17,7 +21,11 @@
       "Wicked Movie Cast",
       "Shiz University Choir"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "The Wizard And I (feat. Michelle Yeoh)",
@@ -26,7 +34,11 @@
     "artists": [
       "Cynthia Erivo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "transcendent"
+    ]
   },
   {
     "title": "What Is This Feeling?",
@@ -36,7 +48,11 @@
       "Ariana Grande",
       "Cynthia Erivo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Something Bad (feat. Cynthia Erivo)",
@@ -45,7 +61,11 @@
     "artists": [
       "Peter Dinklage"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Dancing Through Life (feat. Ariana Grande, Ethan Slater, Marissa Bode & Cynthia Erivo)",
@@ -54,7 +74,11 @@
     "artists": [
       "Jonathan Bailey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Popular",
@@ -63,7 +87,11 @@
     "artists": [
       "Ariana Grande"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "I’m Not That Girl",
@@ -72,7 +100,11 @@
     "artists": [
       "Cynthia Erivo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "One Short Day (feat. Michael McCorry Rose)",
@@ -84,7 +116,11 @@
       "Kristin Chenoweth",
       "Idina Menzel"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "A Sentimental Man",
@@ -93,7 +129,10 @@
     "artists": [
       "Jeff Goldblum"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Defying Gravity (feat. Ariana Grande)",
@@ -102,7 +141,11 @@
     "artists": [
       "Cynthia Erivo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Ozdust Duet (Bonus Track)",
@@ -111,6 +154,10 @@
     "artists": [
       "The Wicked Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "romantic"
+    ]
   }
 ]
