@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -65,6 +66,12 @@ def system_prompt(vocab):
     )
 
 
+# a title that opens with its own track number ("8 - Mission Mode" on
+# Pikmin's five-track selection): the model keyed replies by that number
+# instead of the list's, so the prompt shows the title without it
+_OWN_NUMBER = re.compile(r"^\s*\d{1,3}\s*[-.):]\s+")
+
+
 def album_prompt(r, tracks, start=1, total=None):
     """The album and its tracks, numbered from start. A chunk of a long
     album says which stretch it is, so the numbers stay the album's own."""
@@ -79,7 +86,7 @@ def album_prompt(r, tracks, start=1, total=None):
     end = start + len(tracks) - 1
     lines.append(f"Tracks {start} to {end} of {total}:" if total > len(tracks) else "Tracks:")
     for i, t in enumerate(tracks, start):
-        lines.append(f"{i}. {t.get('title') or ''}")
+        lines.append(f"{i}. {_OWN_NUMBER.sub('', t.get('title') or '')}")
     return "\n".join(lines)
 
 

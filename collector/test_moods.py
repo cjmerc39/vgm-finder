@@ -87,6 +87,17 @@ def test_album_prompt_names_the_work_and_numbers_the_tracks():
     assert p.endswith("Tracks:\n1. No Escape\n2. The Painted World")
 
 
+def test_album_prompt_drops_a_title_s_own_track_number():
+    # Pikmin's selection is tracks 1, 2, 4, 5 and 8 of a longer album
+    r = _row("pikmin", "Pikmin Soundtrack", 3)
+    tracks = [{"title": "1 - S.S. Drake (Ballad/Waltz)"}, {"title": "4 - Pikmin Discovery Theme"},
+              {"title": "8 - Mission Mode (Reggae)"}, {"title": "1999 (Remix)"}, {"title": "2. Ending"}]
+    p = moods.album_prompt(r, tracks)
+    assert p.endswith("Tracks:\n1. S.S. Drake (Ballad/Waltz)\n2. Pikmin Discovery Theme\n3. Mission Mode (Reggae)"
+                      "\n4. 1999 (Remix)\n5. Ending")
+    assert tracks[2]["title"] == "8 - Mission Mode (Reggae)"  # the stored title is left alone
+
+
 # ----------------------------------------------------------------- tag_album
 
 def test_tag_album_writes_track_moods_and_the_albums_top_moods_commonest_first():
