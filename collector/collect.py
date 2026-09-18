@@ -2169,9 +2169,10 @@ def parse_tmdb_tv_window(raw, resolve, album_fn=None, date_fn=None, state=None, 
 SOURCES = [
     # nowplaying.cool dropped 2026-07-30 at CJ's request: headline rows with
     # no art or game anchor read as noise next to catalog rows (the parser
-    # stays for the tests and in case the verdict ever reverses)
-    {"name": "blipblop", "type": "editorial",
-     "url": "https://blipblop.net/feed/", "parse": parse_blipblop},
+    # stays for the tests and in case the verdict ever reverses).
+    # blipblop.net dropped 2026-09-18 at CJ's request for the same reason:
+    # its 40 rows were vinyl and preorder headlines, none with a YT Music
+    # album; they were retired, not deleted, so every TRACK number holds
     {"name": "vgmo", "type": "editorial",
      "url": "https://www.vgmonline.net/feed/", "parse": parse_vgmo},
     {"name": "steam", "type": "catalog",

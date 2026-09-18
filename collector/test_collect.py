@@ -775,7 +775,7 @@ def test_run_collects_all_sources_and_is_stable(tmp_path, monkeypatch):
                        data_path=data_path, now=NOW) == 0
     data = json.loads(data_path.read_text(encoding="utf-8"))
     assert data["updatedAt"] == SEEN
-    assert len(data["releases"]) == 42  # 9 + 5 + 25 + 3 igdb, no cross-source collisions (nowplaying dropped)
+    assert len(data["releases"]) == 33  # 5 vgmo + 25 steam + 3 igdb, no cross-source collisions (nowplaying and blipblop dropped)
     igdb_rows = [r for r in data["releases"] if r["sources"][0]["name"] == "igdb"]
     assert len(igdb_rows) == 3
     assert all(r["ytmAlbumUrl"] and r["game"] and r["composers"] and r["art"] for r in igdb_rows)
@@ -792,15 +792,15 @@ def test_run_collects_all_sources_and_is_stable(tmp_path, monkeypatch):
 
 def test_run_survives_one_source_failing(tmp_path, capsys):
     def flaky(url):
-        if "blipblop" in url:
+        if "vgmonline" in url:
             raise OSError("simulated network failure")
         return fixture_fetch(url)
     data_path = tmp_path / "releases.json"
     assert collect.run(fetch_fn=flaky, resolve_fn=fake_resolve, album_fn=no_album, itunes_fn=no_itunes,
                        data_path=data_path, now=NOW) == 0
     out = capsys.readouterr().out
-    assert "::warning::blipblop failed" in out
-    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 33
+    assert "::warning::vgmo failed" in out
+    assert len(json.loads(data_path.read_text(encoding="utf-8"))["releases"]) == 28
 
 
 def test_run_fails_red_when_every_source_fails(tmp_path, capsys):
