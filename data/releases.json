@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T02:26:30Z",
+  "updatedAt": "2026-09-18T02:27:11Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -294013,6 +294013,41 @@
         18,
         12
       ]
+    },
+    {
+      "id": "tv-money-heist",
+      "title": "Money Heist Soundtrack",
+      "medium": "tv",
+      "game": "Money Heist",
+      "composers": [
+        "Iván M. Lacámara",
+        "Manel Santisteban"
+      ],
+      "date": "2017-05-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/71446",
+          "seenAt": "2026-09-18T02:27:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Money+Heist+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_pMtHh3VC5p7",
+      "art": "https://yt3.googleusercontent.com/4S04NEWLACLMfSaOtvGRqg46BXp1_SNxx5Zz1vuxykrmU3XZrudEM4v08iI04U2lphrxKcCSo47aO04=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Ciao Bella: La Casa de Papel Symphonic (Original Motion Picture Soundtrack) (Extended Versions)",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Iván M. Lacámara"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kMhRVPnV09IWU7PkW9CYKKhDcU8aHM0jg",
+      "scoresN": 16,
+      "tracksN": 16,
+      "playsTotal": 184800
     }
   ]
 }

@@ -71,7 +71,10 @@
      "why": "plays floor: a niche Argentine series score by Juan Ignacio Bouscayrol, few plays but real"},
     {"tmdb": 67166, "season": 1, "volume": 2, "name": "El marginal", "album": "MPREb_f1MSVLhqZp3",
      "albumTitle": "El Marginal (Music from the Original TV Series), Vol. 2",
-     "why": "plays floor: the same score's second volume"}
+     "why": "plays floor: the same score's second volume"},
+    {"tmdb": 71446, "season": null, "name": "Money Heist", "album": "MPREb_pMtHh3VC5p7",
+     "albumTitle": "Ciao Bella: La Casa de Papel Symphonic (Original Motion Picture Soundtrack) (Extended Versions)",
+     "why": "title gate and film wording: the series score by its credited composer, re-recorded with the Budapest Symphony Orchestra across every part; YTM has no per-season albums (CJ, 2026-09-17)"}
   ],
   "exclude": [
     {"medium": "film", "tmdb": 615658, "name": "Awake", "album": "MPREb_RZKYAffmAup", "albumTitle": "AWAKE (Original Soundtrack)", "why": "a different work named Awake (Nozomu Sato)"},
