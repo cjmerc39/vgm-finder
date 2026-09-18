@@ -1,0 +1,36 @@
+name: Pinned titles
+# Rows for screen-overrides.json pins whose title no leg will revisit.
+# collector/apply_pins.py looks up on TMDb any pinned title the re-walk
+# never evaluated, adds the rows, and fill_tracklists.py reads their albums.
+# Dispatch by hand after adding a pin; blank ids means every pin with no row.
+on:
+  workflow_dispatch:
+    inputs:
+      tmdb:
+        description: TMDb ids to limit it to, space separated (blank for every pin with no row)
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: pins
+  cancel-in-progress: false
+jobs:
+  pins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: python collector/apply_pins.py ${TMDB_IDS:+--tmdb $TMDB_IDS}
+        env:
+          TMDB_IDS: ${{ inputs.tmdb }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      - run: python collector/fill_tracklists.py
+      - run: |
+          git config user.name vgm-bot
+          git config user.email actions@users.noreply.github.com
+          git add data collector/rewalk/eval-pins.json 2>/dev/null || git add data
+          git diff --cached --quiet || (git commit -m "pinned titles" && git pull --rebase && git push)

@@ -1,5 +1,7 @@
 """Pins for titles no leg will revisit: the row is built from the stored
 record like a re-walk addition, once, and never over an album in use."""
+import json
+
 import apply_pins
 import collect
 
@@ -43,6 +45,30 @@ def test_a_second_run_adds_nothing_and_a_worn_album_is_never_taken():
     worn[0]["ytmAlbumUrl"] = "https://music.youtube.com/browse/MPREb_ciao"
     assert apply_pins.apply_pins(worn, OVERRIDES, {("tv", "71446"): HEIST}, SEEN, log=lambda *_: None) == []
     assert len(worn) == 1
+
+
+def test_a_title_with_no_stored_record_is_looked_up_once_and_kept(tmp_path):
+    bake = dict(HEIST, id="34549", name="The Great British Bake Off", original="The Great British Bake Off",
+                date="2010-08-17", composers=[], genres=["Reality"],
+                results=[dict(HEIST["results"][0], browseId="MPREb_bake", title="Great British Bake Off",
+                              artists=[{"name": "Tom Howe"}])])
+    overrides = {"tv": OVERRIDES["tv"][:1] + [{"tmdb": 34549, "season": None, "name": "The Great British Bake Off",
+                                                "album": "MPREb_bake", "albumTitle": "Great British Bake Off", "why": "x"}]}
+    calls = []
+    def fetch(medium, tid, releases):
+        calls.append((medium, tid))
+        return bake
+    shard = tmp_path / "eval-pins.json"
+    releases, evaluations = _existing(), {("tv", "71446"): HEIST}
+    assert apply_pins.fetch_records(releases, overrides, evaluations, fetch=fetch, shard=shard, log=lambda *_: None) == 1
+    assert calls == [("tv", "34549")]  # Money Heist has its stored record: never looked up
+    assert json.loads(shard.read_text(encoding="utf-8"))[0]["id"] == "34549"
+    added = apply_pins.apply_pins(releases, overrides, evaluations, SEEN, log=lambda *_: None)
+    assert added == ["tv-money-heist", "tv-the-great-british-bake-off"]
+    bake_row = releases[-1]
+    assert bake_row["composers"] == ["Tom Howe"] and bake_row["date"] == "2010-08-17"  # no TMDb composer: the album's act
+    assert apply_pins.fetch_records(releases, overrides, evaluations, fetch=fetch, shard=shard, log=lambda *_: None) == 0
+    assert calls == [("tv", "34549")]  # its row exists now: nothing looked up again
 
 
 def test_only_limits_the_run_to_the_named_titles():

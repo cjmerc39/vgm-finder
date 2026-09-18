@@ -8,15 +8,21 @@ the pinned row now, from the title's stored re-walk record, exactly as a
 re-walk addition is built and merged. It never touches a row that exists and
 never takes an album another row wears.
 
+A title the re-walk never evaluated (under its vote bar, like The Great
+British Bake Off) has no stored record. With TMDB_API_KEY set, such a title
+is looked up and searched exactly as the re-walk's evaluate step does, and
+the record is kept in collector/rewalk/eval-pins.json so later runs and the
+re-walk read it too. Without the key it is listed and skipped. The pins.yml
+workflow runs this with the key, then fill_tracklists.py.
+
   python collector/apply_pins.py --dry-run         # list what would be added
   python collector/apply_pins.py [--tmdb 71446]    # add, then fill_tracklists.py reads the new albums
-
-Titles with no stored record are listed and skipped.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,6 +30,37 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import collect
 import rewalk
+
+
+PINS_SHARD = rewalk.REWALK_DIR / "eval-pins.json"   # sorts after eval-NNNN, so its records win
+
+
+def evaluate_pinned(medium, tid, releases):
+    """One title looked up on TMDb and searched as the re-walk does."""
+    return rewalk.evaluate_title(medium, rewalk.details_entry(medium, tid), rewalk._worn(releases),
+                                 collect.ytm_resolve, collect.ytm_album)
+
+
+def fetch_records(releases, overrides, evaluations, only=None, fetch=evaluate_pinned, shard=PINS_SHARD,
+                  log=print):
+    """Records for pinned titles with no row and no stored record, fetched
+    and added to evaluations and to the pins shard. -> how many."""
+    sets = collect.screen_override_sets(overrides)
+    worn = collect.claimed_albums(releases)
+    kept = json.loads(Path(shard).read_text(encoding="utf-8")) if Path(shard).exists() else []
+    fetched = 0
+    for slot, p in sets["pins"].items():
+        medium, tid = slot[0], slot[1]
+        if (only and tid not in only) or (medium, tid) in evaluations or collect.YTM_BROWSE + p["album"] in worn:
+            continue
+        rec = fetch(medium, tid, releases)
+        evaluations[(medium, tid)] = rec
+        kept = [x for x in kept if (x["medium"], x["id"]) != (medium, tid)] + [rec]
+        fetched += 1
+        log(f"  looked up {p.get('name')} ({medium} {tid}) on TMDb: {rec.get('name')}, first aired {rec.get('date')}")
+    if fetched:
+        Path(shard).write_text(json.dumps(kept, ensure_ascii=False) + "\n", encoding="utf-8")
+    return fetched
 
 
 def apply_pins(releases, overrides, evaluations, seen_at, only=None, log=print):
@@ -62,8 +99,11 @@ def main(argv=None):
     args = ap.parse_args(argv)
     data = collect.load_data(collect.DATA_PATH)
     seen_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    added = apply_pins(data["releases"], collect.load_screen_overrides(), rewalk.load_evaluations(),
-                       seen_at, only=set(args.tmdb) if args.tmdb else None)
+    overrides, evaluations = collect.load_screen_overrides(), rewalk.load_evaluations()
+    only = set(args.tmdb) if args.tmdb else None
+    if os.environ.get("TMDB_API_KEY") and not args.dry_run:
+        fetch_records(data["releases"], overrides, evaluations, only=only)
+    added = apply_pins(data["releases"], overrides, evaluations, seen_at, only=only)
     print(f"pins: {len(added)} row(s) {'would be ' if args.dry_run else ''}added")
     if added and not args.dry_run:
         collect.DATA_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
