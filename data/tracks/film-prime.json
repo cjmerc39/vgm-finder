@@ -6,7 +6,11 @@
     "artists": [
       "RJD2"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "In A Sentimental Mood",
@@ -16,7 +20,11 @@
       "Duke Ellington",
       "John Coltrane"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Peach Trees",
@@ -25,7 +33,11 @@
     "artists": [
       "Rufus Wainwright"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Rafi And David",
@@ -33,6 +45,10 @@
     "videoId": "9gc9l0h1mYA",
     "artists": [
       "Ryan Shore"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -42,7 +58,10 @@
     "artists": [
       "Le Tigre"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Isn't This A Lovely Day",
@@ -51,7 +70,11 @@
     "artists": [
       "Stacey Kent"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Still Got Me",
@@ -60,7 +83,11 @@
     "artists": [
       "Daniel Merriweather"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Shelter",
@@ -69,7 +96,11 @@
     "artists": [
       "Ray Lamontagne"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Laylo",
@@ -88,7 +119,11 @@
       "Bugge Wesseltoft",
       "Sidsel Endresen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "joyful"
+    ]
   },
   {
     "title": "I Wish You Love",
@@ -97,7 +132,11 @@
     "artists": [
       "Rachael Yamagata"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Prime Suite",
@@ -105,6 +144,10 @@
     "videoId": "uRj9lrjeUd4",
     "artists": [
       "Ryan Shore"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   }
 ]

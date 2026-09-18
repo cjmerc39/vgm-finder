@@ -5,6 +5,10 @@
     "videoId": "KgPbGPnoJRI",
     "artists": [
       "Randy Newman"
+    ],
+    "moods": [
+      "joyful",
+      "romantic"
     ]
   },
   {
@@ -13,6 +17,10 @@
     "videoId": "bNxTxWtK5I4",
     "artists": [
       "Randy Newman"
+    ],
+    "moods": [
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -22,6 +30,10 @@
     "artists": [
       "Randy Newman",
       "Hollywood Studio Symphony"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -31,6 +43,10 @@
     "artists": [
       "Randy Newman",
       "Hollywood Studio Symphony"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -40,6 +56,10 @@
     "artists": [
       "Randy Newman",
       "Hollywood Studio Symphony"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -49,6 +69,10 @@
     "artists": [
       "Randy Newman",
       "Hollywood Studio Symphony"
+    ],
+    "moods": [
+      "tense",
+      "mysterious"
     ]
   },
   {
@@ -58,6 +82,10 @@
     "artists": [
       "Randy Newman",
       "Hollywood Studio Symphony"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -67,6 +95,10 @@
     "artists": [
       "Randy Newman",
       "Hollywood Studio Symphony"
+    ],
+    "moods": [
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -76,7 +108,11 @@
     "artists": [
       "Canned Heat"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "If I Were A Carpenter",
@@ -85,7 +121,11 @@
     "artists": [
       "Tim Hardin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Wilderness (Dub) (Dub)",
@@ -94,7 +134,10 @@
     "artists": [
       "HeadBone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Dancing",
@@ -103,6 +146,10 @@
     "artists": [
       "HeadBone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   }
 ]

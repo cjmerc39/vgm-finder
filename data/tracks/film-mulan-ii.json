@@ -7,7 +7,11 @@
       "Chorus - Mulan",
       "Lea Salonga"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Main Title (From \"Mulan II\"/Score)",
@@ -15,6 +19,10 @@
     "videoId": "HokgA-n3OPA",
     "artists": [
       "Joel McNeely"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -26,7 +34,11 @@
       "Beth Blankenship",
       "Mandy Gonzalez"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "A Girl Worth Fighting For (Redux) (From \"Mulan II\"/Soundtrack Version)",
@@ -38,7 +50,11 @@
       "Jerry Tondo",
       "Gedde Watanabe"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Here Beside Me (From \"Mulan II\"/Soundtrack Version)",
@@ -47,7 +63,11 @@
     "artists": [
       "Hayley Westenra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "(I Wanna Be) Like Other Girls (From \"Mulan II\"/Soundtrack Version)",
@@ -56,7 +76,11 @@
     "artists": [
       "Atomic Kitten"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "The Journey Begins (From \"Mulan II\"/Score)",
@@ -64,6 +88,10 @@
     "videoId": "uCLWpYiJrT0",
     "artists": [
       "Joel McNeely"
+    ],
+    "moods": [
+      "wonder",
+      "driving"
     ]
   },
   {
@@ -72,6 +100,10 @@
     "videoId": "BoPq6oqSA10",
     "artists": [
       "Joel McNeely"
+    ],
+    "moods": [
+      "tense",
+      "mysterious"
     ]
   },
   {
@@ -80,6 +112,10 @@
     "videoId": "e3CHiTAxP3g",
     "artists": [
       "Joel McNeely"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -88,6 +124,10 @@
     "videoId": "WnhccF0AIto",
     "artists": [
       "Joel McNeely"
+    ],
+    "moods": [
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -96,6 +136,10 @@
     "videoId": "dI7SYPKOlt4",
     "artists": [
       "Joel McNeely"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   }
 ]

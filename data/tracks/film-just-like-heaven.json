@@ -6,7 +6,11 @@
     "artists": [
       "Katie Melua"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Just My Imagination (Running Away With Me)",
@@ -15,7 +19,11 @@
     "artists": [
       "Pete Yorn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "playful"
+    ]
   },
   {
     "title": "Lust For Life",
@@ -24,7 +32,11 @@
     "artists": [
       "Kay Hanley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Good Times Roll",
@@ -33,7 +45,11 @@
     "artists": [
       "The Cars"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Ghostbusters",
@@ -42,7 +58,11 @@
     "artists": [
       "Bowling For Soup"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Brass In Pocket",
@@ -51,7 +71,11 @@
     "artists": [
       "Kelis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "I Put a Spell On You",
@@ -60,7 +84,11 @@
     "artists": [
       "Screamin' Jay Hawkins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Strange Invitation",
@@ -69,7 +97,11 @@
     "artists": [
       "Beck Hansen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Spooky",
@@ -78,7 +110,11 @@
     "artists": [
       "Imogen Heap"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "eerie"
+    ]
   },
   {
     "title": "Jungle Fever",
@@ -87,7 +123,11 @@
     "artists": [
       "The Chakachas"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Bad Case Of Lovin' You",
@@ -96,7 +136,11 @@
     "artists": [
       "Emerson Hart"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Colors (Acoustic Version)",
@@ -105,7 +149,11 @@
     "artists": [
       "Amos Lee"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Just Like Heaven",
@@ -114,7 +162,11 @@
     "artists": [
       "The Cure"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Her Picture",
@@ -122,6 +174,10 @@
     "videoId": null,
     "artists": [
       "Rolfe Kent"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -130,6 +186,10 @@
     "videoId": null,
     "artists": [
       "Rolfe Kent"
+    ],
+    "moods": [
+      "mysterious",
+      "tender"
     ]
   },
   {
@@ -138,6 +198,9 @@
     "videoId": null,
     "artists": [
       "Rolfe Kent"
+    ],
+    "moods": [
+      "tender"
     ]
   },
   {
@@ -146,6 +209,10 @@
     "videoId": null,
     "artists": [
       "Rolfe Kent"
+    ],
+    "moods": [
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -154,6 +221,10 @@
     "videoId": null,
     "artists": [
       "Rolfe Kent"
+    ],
+    "moods": [
+      "nostalgic",
+      "tender"
     ]
   }
 ]

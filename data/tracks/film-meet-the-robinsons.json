@@ -6,7 +6,11 @@
     "artists": [
       "Rufus Wainwright"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Little Wonders",
@@ -15,7 +19,11 @@
     "artists": [
       "Rob Thomas"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "The Future Has Arrived",
@@ -24,7 +32,11 @@
     "artists": [
       "The All-American Rejects"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "heroic"
+    ]
   },
   {
     "title": "Where is Your Heart At?",
@@ -33,7 +45,11 @@
     "artists": [
       "Jamie Cullum"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "The Motion Waltz (Emotional Commotion)",
@@ -42,7 +58,11 @@
     "artists": [
       "Rufus Wainwright"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Give Me The Simple Life",
@@ -51,7 +71,11 @@
     "artists": [
       "Jamie Cullum"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "The Prologue",
@@ -59,6 +83,10 @@
     "videoId": "qd2lLEPTeBw",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -67,6 +95,10 @@
     "videoId": "Qa2_ZSnCd9A",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   },
   {
@@ -75,6 +107,10 @@
     "videoId": "IFr-my0878s",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "joyful",
+      "wonder"
     ]
   },
   {
@@ -83,6 +119,10 @@
     "videoId": "Mbtc_yaZk3Q",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -91,6 +131,10 @@
     "videoId": "_8z8rll9za4",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "sad",
+      "mournful"
     ]
   },
   {
@@ -99,6 +143,10 @@
     "videoId": "676My4nPxXM",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "joyful",
+      "transcendent"
     ]
   },
   {
@@ -107,6 +155,10 @@
     "videoId": "Z5mtA9ruTPk",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -115,6 +167,10 @@
     "videoId": "f9QscC-XgnQ",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "tense",
+      "powerful"
     ]
   },
   {
@@ -123,6 +179,10 @@
     "videoId": "fyR_d3OIfMA",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "playful",
+      "mournful"
     ]
   },
   {
@@ -131,6 +191,10 @@
     "videoId": "x6HZMG53ikI",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -140,7 +204,11 @@
     "artists": [
       "They Might Be Giants"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "transcendent"
+    ]
   },
   {
     "title": "Kids of the Future",
@@ -149,6 +217,10 @@
     "artists": [
       "Jonas Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   }
 ]

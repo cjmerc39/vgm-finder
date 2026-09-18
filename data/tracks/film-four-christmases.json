@@ -6,7 +6,11 @@
     "artists": [
       "Dean Martin & Martina McBride"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "playful"
+    ]
   },
   {
     "title": "(There's No Place Like) Home For The Holidays",
@@ -15,7 +19,11 @@
     "artists": [
       "Perry Como"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "Sleigh Ride",
@@ -24,7 +32,11 @@
     "artists": [
       "Ferrante & Teicher"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Christmas All Over Again",
@@ -33,7 +45,10 @@
     "artists": [
       "Tom Petty & The Heartbreakers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Season's Greetings",
@@ -42,7 +57,11 @@
     "artists": [
       "Robbers On High Street"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Jingle Bell Rock (with The Anita Kerr Singers)",
@@ -51,7 +70,11 @@
     "artists": [
       "Bobby Helms"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "The Christmas Song (Chestnuts Roasting On An Open Fire)",
@@ -60,7 +83,11 @@
     "artists": [
       "Gavin DeGraw"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Cool Yule",
@@ -69,7 +96,11 @@
     "artists": [
       "Louis Armstrong & The Commanders"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "I'll Be Home For Christmas",
@@ -78,7 +109,11 @@
     "artists": [
       "Dean Martin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "White Christmas",
@@ -87,7 +122,11 @@
     "artists": [
       "Bing Crosby"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "O Little Town Of Bethlehem",
@@ -96,6 +135,10 @@
     "artists": [
       "Sarah McLachlan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "transcendent"
+    ]
   }
 ]

@@ -6,7 +6,12 @@
     "artists": [
       "Ophelia of the Spirits"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "The Drover's Ballad (Soundtrack Version)",
@@ -15,7 +20,12 @@
     "artists": [
       "Elton John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "driving",
+      "romantic"
+    ]
   },
   {
     "title": "You Ride Your Way, I'll Ride Mine (EP Version)",
@@ -24,7 +34,11 @@
     "artists": [
       "Rolf Harris"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "All Night Long (Soundtrack Version)",
@@ -33,7 +47,11 @@
     "artists": [
       "John Butler Trio"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Waltzing Matilda (Soundtrack Version)",
@@ -42,6 +60,10 @@
     "artists": [
       "Ophelia of the Spirits"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "heroic"
+    ]
   }
 ]

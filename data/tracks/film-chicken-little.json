@@ -6,7 +6,11 @@
     "artists": [
       "Joss Stone & Patti LaBelle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "One Little Slip (From \"Chicken Little\"/Soundtrack Version)",
@@ -15,7 +19,11 @@
     "artists": [
       "Barenaked Ladies"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Shake a Tail Feather (From \"Chicken Little\"/Soundtrack Version)",
@@ -24,7 +32,11 @@
     "artists": [
       "The Cheetah Girls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "All I Know (From \"Chicken Little\"/Soundtrack Version)",
@@ -33,7 +45,11 @@
     "artists": [
       "Five For Fighting"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Ain't No Mountain High Enough",
@@ -42,7 +58,11 @@
     "artists": [
       "Diana Ross"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "It's The End Of The World As We Know It (And I Feel Fine)",
@@ -51,7 +71,11 @@
     "artists": [
       "R.E.M."
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "We Are the Champions (From \"Chicken Little\"/Soundtrack Version)",
@@ -60,7 +84,11 @@
     "artists": [
       "Chicken Little"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Wannabe (From \"Chicken Little\"/Soundtrack Version)",
@@ -70,7 +98,11 @@
       "Runt of the Litter",
       "Abby Mallard"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Don't Go Breaking My Heart (From \"Chicken Little\"/Soundtrack Version)",
@@ -82,7 +114,11 @@
       "Chicken Little",
       "Buck Cluck"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "The Sky is Falling (From \"Chicken Little\"/Score)",
@@ -90,6 +126,10 @@
     "videoId": "fcVnq76XBWg",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "tense",
+      "eerie"
     ]
   },
   {
@@ -98,6 +138,10 @@
     "videoId": "AwhfKaaCeLY",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -106,6 +150,10 @@
     "videoId": "EilriYq4nfQ",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -114,6 +162,10 @@
     "videoId": "ttoZeOCeTOM",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -122,6 +174,10 @@
     "videoId": "e4EIBZ9dE3A",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -130,6 +186,10 @@
     "videoId": "W80j475isQs",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "tender",
+      "nostalgic"
     ]
   }
 ]

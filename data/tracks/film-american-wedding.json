@@ -6,7 +6,11 @@
     "artists": [
       "Foo Fighters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "The Anthem",
@@ -15,7 +19,11 @@
     "artists": [
       "Good Charlotte"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Forget Everything",
@@ -24,7 +32,10 @@
     "artists": [
       "New Found Glory"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "The Hell Song",
@@ -33,7 +44,11 @@
     "artists": [
       "Sum 41"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Swing, Swing",
@@ -42,7 +57,11 @@
     "artists": [
       "The All-American Rejects"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "I Don't Give",
@@ -51,7 +70,11 @@
     "artists": [
       "Avril Lavigne"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Laid",
@@ -60,7 +83,11 @@
     "artists": [
       "Matt Nathanson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "The Art Of Losing",
@@ -69,7 +96,10 @@
     "artists": [
       "American Hi-Fi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Fever For The Flava",
@@ -78,7 +108,11 @@
     "artists": [
       "Hot Action Cop"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Give Up The Grudge",
@@ -87,7 +121,11 @@
     "artists": [
       "Gob"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Bouncing Off The Walls",
@@ -96,7 +134,11 @@
     "artists": [
       "Sugarcult"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Come Back Around",
@@ -105,7 +147,11 @@
     "artists": [
       "Feeder"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Any Other Girl",
@@ -114,7 +160,10 @@
     "artists": [
       "Nu"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic"
+    ]
   },
   {
     "title": "Beloved",
@@ -123,7 +172,11 @@
     "artists": [
       "The Working Title"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Calling You (Edit)",
@@ -132,7 +185,11 @@
     "artists": [
       "Blue October"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Honey And The Moon",
@@ -141,7 +198,11 @@
     "artists": [
       "Joseph Arthur"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Into The Mystic",
@@ -150,6 +211,10 @@
     "artists": [
       "The Wallflowers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "mysterious"
+    ]
   }
 ]

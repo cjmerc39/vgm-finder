@@ -6,7 +6,11 @@
     "artists": [
       "Moya Brennan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "Woad To Ruin",
@@ -14,6 +18,10 @@
     "videoId": "RfEEMsfQkUg",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "driving",
+      "powerful"
     ]
   },
   {
@@ -22,6 +30,9 @@
     "videoId": "1mQq8WYK4KQ",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -30,6 +41,10 @@
     "videoId": "GoDXsd8uvqQ",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -38,6 +53,10 @@
     "videoId": "pDB4MvybG_U",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -54,6 +73,11 @@
     "videoId": "JO-heYGcVXU",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "heroic",
+      "powerful",
+      "driving"
     ]
   }
 ]

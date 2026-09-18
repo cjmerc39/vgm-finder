@@ -6,7 +6,12 @@
     "artists": [
       "Louis Armstrong"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "I've Got a Crush On You",
@@ -15,7 +20,12 @@
     "artists": [
       "Steve Tyrell"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "I Only Have Eyes for You",
@@ -24,7 +34,11 @@
     "artists": [
       "The Flamingos"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "So Nice (Summer Samba)",
@@ -33,7 +47,11 @@
     "artists": [
       "Astrud Gilberto"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Remember Me",
@@ -42,7 +60,11 @@
     "artists": [
       "Heitor Pereira"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Samba de Mon Coeur Qui Bat",
@@ -51,7 +73,11 @@
     "artists": [
       "Coralie Clément"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Que reste-t'iI de nos amour",
@@ -60,7 +86,11 @@
     "artists": [
       "Charles Trenet"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Assedic",
@@ -78,7 +108,11 @@
     "artists": [
       "Eartha Kitt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "C'est Si Bon",
@@ -87,7 +121,11 @@
     "artists": [
       "Eartha Kitt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Brazil",
@@ -96,7 +134,11 @@
     "artists": [
       "Django Reinhardt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Sweet Lorraine (EPK Excerpt )",
@@ -105,7 +147,11 @@
     "artists": [
       "Stéphane Grappelli"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Love Makes the World Go Round",
@@ -114,7 +160,11 @@
     "artists": [
       "Deon Jackson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "La Vie En Rose",
@@ -123,6 +173,11 @@
     "artists": [
       "Jack Nicholson",
       "Something's Gotta Give (Motion Picture Soundtrack)"
+    ],
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "tender"
     ]
   }
 ]

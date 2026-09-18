@@ -5,6 +5,10 @@
     "videoId": "plF-0DBZ9jw",
     "artists": [
       "Mark Isham"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -13,6 +17,10 @@
     "videoId": "5QfIXvwCVHE",
     "artists": [
       "Mark Isham"
+    ],
+    "moods": [
+      "driving",
+      "powerful"
     ]
   },
   {
@@ -21,6 +29,10 @@
     "videoId": "TgsB1B822GY",
     "artists": [
       "Mark Isham"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -29,6 +41,10 @@
     "videoId": "q5-8JdcybZ0",
     "artists": [
       "Mark Isham"
+    ],
+    "moods": [
+      "transcendent",
+      "heroic"
     ]
   },
   {
@@ -38,7 +54,11 @@
     "artists": [
       "Blue Öyster Cult"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Musta Got Lost",
@@ -47,7 +67,11 @@
     "artists": [
       "The J. Geils Band"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Thunder Island",
@@ -56,6 +80,10 @@
     "artists": [
       "Jay Ferguson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   }
 ]

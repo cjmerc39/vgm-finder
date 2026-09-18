@@ -6,7 +6,12 @@
     "artists": [
       "Everlife"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Good Enough",
@@ -15,7 +20,11 @@
     "artists": [
       "Lifehouse"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Big Time Boppin' (Go Man Go)",
@@ -24,7 +33,11 @@
     "artists": [
       "Big Bad Voodoo Daddy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Really Nice Day (Soundtrack)",
@@ -34,7 +47,11 @@
       "Eric Idle",
       "John du Prez"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Tales From The Wild",
@@ -42,6 +59,10 @@
     "videoId": "gMsS9lLnwZc",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "wonder",
+      "mysterious"
     ]
   },
   {
@@ -50,6 +71,10 @@
     "videoId": "R9OUhuWkcDo",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "playful",
+      "tender"
     ]
   },
   {
@@ -58,6 +83,10 @@
     "videoId": "DsXmCq50pQ4",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "tense",
+      "mysterious"
     ]
   },
   {
@@ -66,6 +95,11 @@
     "videoId": "wehtp3aPzpg",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "heroic",
+      "powerful",
+      "joyful"
     ]
   },
   {
@@ -74,6 +108,10 @@
     "videoId": "Y1bgeHfK7o8",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "wonder",
+      "eerie"
     ]
   },
   {
@@ -82,6 +120,11 @@
     "videoId": "kkIbwPxrh5c",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "heroic",
+      "powerful",
+      "driving"
     ]
   },
   {
@@ -90,6 +133,10 @@
     "videoId": "4whnvuYSqts",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "playful",
+      "mysterious"
     ]
   },
   {
@@ -98,6 +145,10 @@
     "videoId": "0QoNsG0gWu4",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -106,6 +157,11 @@
     "videoId": "NlfCivXjVHg",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "heroic",
+      "joyful",
+      "powerful"
     ]
   },
   {
@@ -116,6 +172,11 @@
       "John du Prez",
       "Eric Idle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful",
+      "tender"
+    ]
   }
 ]

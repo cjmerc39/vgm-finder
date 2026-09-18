@@ -7,6 +7,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "mysterious",
+      "wonder"
     ]
   },
   {
@@ -17,6 +21,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -27,6 +35,9 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -37,6 +48,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "peaceful",
+      "mysterious"
     ]
   },
   {
@@ -47,6 +62,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "transcendent",
+      "wonder"
     ]
   },
   {
@@ -57,6 +76,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -67,6 +90,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -77,6 +104,9 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -87,6 +117,9 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "mysterious"
     ]
   },
   {
@@ -97,6 +130,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "transcendent",
+      "peaceful"
     ]
   },
   {
@@ -107,6 +144,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -117,6 +158,10 @@
       "James Newton Howard",
       "The Hollywood Studio Orchestra",
       "Pete Anthony"
+    ],
+    "moods": [
+      "transcendent",
+      "wonder"
     ]
   },
   {
@@ -126,7 +171,10 @@
     "artists": [
       "A Whisper In The Noise"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic"
+    ]
   },
   {
     "title": "Every Grain Of Sand",
@@ -135,7 +183,11 @@
     "artists": [
       "Amanda Ghost"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "It Ain't Me Babe",
@@ -153,6 +205,10 @@
     "artists": [
       "Silvertide"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   }
 ]

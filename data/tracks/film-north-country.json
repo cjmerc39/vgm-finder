@@ -5,6 +5,10 @@
     "videoId": null,
     "artists": [
       "Gustavo Santaolalla"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   },
   {
@@ -14,7 +18,11 @@
     "artists": [
       "Leo Kottke"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Tell Ol' Bill",
@@ -59,7 +67,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "peaceful"
+    ]
   },
   {
     "title": "A Saturday In My Classroom",
@@ -67,6 +79,10 @@
     "videoId": null,
     "artists": [
       "Gustavo Santaolalla"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -102,6 +118,10 @@
     "videoId": null,
     "artists": [
       "Gustavo Santaolalla"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   },
   {
@@ -111,6 +131,10 @@
     "artists": [
       "Cat Power"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "Pearl Jam"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Dinah",
@@ -15,7 +19,11 @@
     "artists": [
       "Bing Crosby"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Everyday",
@@ -24,7 +32,11 @@
     "artists": [
       "Buddy Holly"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "All Shook Up",
@@ -33,7 +45,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Five O'Clock World",
@@ -42,7 +58,11 @@
     "artists": [
       "The Vogues"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Ramblin' Man",
@@ -51,7 +71,11 @@
     "artists": [
       "The Allman Brothers Band"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "heroic"
+    ]
   },
   {
     "title": "Let's Work Together",
@@ -60,7 +84,11 @@
     "artists": [
       "Canned Heat"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Pictures (From \"Big Fish\" Soundtrack)",
@@ -68,6 +96,10 @@
     "videoId": "Ok4R0ABEQao",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "tender",
+      "nostalgic"
     ]
   },
   {
@@ -76,6 +108,10 @@
     "videoId": "__1JdQQ0Zso",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "wonder",
+      "heroic"
     ]
   },
   {
@@ -84,6 +120,10 @@
     "videoId": "ioVJvkWKDLg",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "playful",
+      "mysterious"
     ]
   },
   {
@@ -92,6 +132,10 @@
     "videoId": "_byg1OKS5aE",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "mysterious",
+      "peaceful"
     ]
   },
   {
@@ -100,6 +144,10 @@
     "videoId": null,
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -108,6 +156,10 @@
     "videoId": "JJcPrCme-Ko",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "joyful",
+      "wonder"
     ]
   },
   {
@@ -116,6 +168,10 @@
     "videoId": "Sm86PkpHpxM",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -124,6 +180,10 @@
     "videoId": "IobyoDqoB4I",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "wonder",
+      "mysterious"
     ]
   },
   {
@@ -132,6 +192,10 @@
     "videoId": "EjU7Dfi4F7w",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -140,6 +204,10 @@
     "videoId": "MG858L6Oy6c",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -148,6 +216,10 @@
     "videoId": "N1biZyBgf38",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -156,6 +228,10 @@
     "videoId": "TIJdiELLuKc",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "mournful",
+      "tender"
     ]
   },
   {
@@ -164,6 +240,10 @@
     "videoId": "-KFY8uDHMpI",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "transcendent",
+      "heroic"
     ]
   },
   {
@@ -172,6 +252,10 @@
     "videoId": "WjBuCf26qao",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "transcendent",
+      "nostalgic"
     ]
   },
   {
@@ -180,6 +264,10 @@
     "videoId": "M2Hfyvln8aE",
     "artists": [
       "Danny Elfman"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -190,6 +278,10 @@
       "Danny Elfman",
       "Bobbi Page",
       "Candice Rumph"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "The Refreshments"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "The Most Wonderful Time Of The Year",
@@ -15,7 +19,11 @@
     "artists": [
       "The Kids Picks Singers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Santa Drives A Hot Rod",
@@ -24,7 +32,11 @@
     "artists": [
       "The Brian Setzer Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "White Christmas",
@@ -33,7 +45,11 @@
     "artists": [
       "Andy Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "New York, New York",
@@ -42,7 +58,11 @@
     "artists": [
       "Martin Short"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "It's The Most Wonderful Time Of The Year",
@@ -51,7 +71,11 @@
     "artists": [
       "Andy Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Come Meet Santa",
@@ -60,7 +84,11 @@
     "artists": [
       "Martin Short"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "The Christmas Sweet",
@@ -68,6 +96,10 @@
     "videoId": "Slk0kjAavHQ",
     "artists": [
       "George S. Clinton"
+    ],
+    "moods": [
+      "joyful",
+      "tender"
     ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "David Byrne"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Sister Surround",
@@ -15,7 +19,11 @@
     "artists": [
       "The Soundtrack of Our Lives"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Naked As We Came",
@@ -24,7 +32,11 @@
     "artists": [
       "Iron & Wine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Chain Of Fools",
@@ -33,7 +45,10 @@
     "artists": [
       "Aretha Franklin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Sunset Soon Forgotten",
@@ -42,7 +57,11 @@
     "artists": [
       "Iron & Wine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "The Chase (Score)",
@@ -50,6 +69,10 @@
     "videoId": "_FcwYqepaiw",
     "artists": [
       "Stephen Trask"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -59,7 +82,11 @@
     "artists": [
       "Diana Krall"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Ten Years Ahead",
@@ -68,7 +95,11 @@
     "artists": [
       "The Soundtrack Of Our Lives"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "The Arrival (Score)",
@@ -76,6 +107,9 @@
     "videoId": "wjyUgWhSIDs",
     "artists": [
       "Stephen Trask"
+    ],
+    "moods": [
+      "wonder"
     ]
   },
   {
@@ -85,7 +119,11 @@
     "artists": [
       "Steely Dan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Solsbury Hill (Remastered 2002)",
@@ -94,7 +132,11 @@
     "artists": [
       "Peter Gabriel"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "transcendent"
+    ]
   },
   {
     "title": "The Trapeze Swinger",
@@ -103,7 +145,11 @@
     "artists": [
       "Iron & Wine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "romantic"
+    ]
   },
   {
     "title": "Accidentals (Score)",
@@ -111,6 +157,10 @@
     "videoId": "PTE8EsWNOkM",
     "artists": [
       "Stephen Trask"
+    ],
+    "moods": [
+      "playful",
+      "mysterious"
     ]
   },
   {
@@ -119,6 +169,10 @@
     "videoId": "lj-czMetGYQ",
     "artists": [
       "Stephen Trask"
+    ],
+    "moods": [
+      "joyful",
+      "playful"
     ]
   }
 ]

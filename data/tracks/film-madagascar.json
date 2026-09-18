@@ -5,6 +5,10 @@
     "videoId": null,
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "joyful",
+      "tender"
     ]
   },
   {
@@ -14,7 +18,11 @@
     "artists": [
       "Erick Morillo & Sacha Baron Cohen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "ハワイ・ファイヴ・オー - Hawaii Five-O",
@@ -23,7 +31,11 @@
     "artists": [
       "The Ventures"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Boogie Wonderland",
@@ -32,7 +44,11 @@
     "artists": [
       "Earth, Wind & Fire"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Whacked Out Conspiracy",
@@ -41,7 +57,11 @@
     "artists": [
       "James Dooley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Chariots Of Fire",
@@ -50,7 +70,11 @@
     "artists": [
       "Vangelis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Stayin' Alive",
@@ -59,7 +83,11 @@
     "artists": [
       "Bee Gees"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Zoosters Breakout",
@@ -67,6 +95,10 @@
     "videoId": null,
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -75,6 +107,10 @@
     "videoId": null,
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "heroic",
+      "transcendent"
     ]
   },
   {
@@ -84,7 +120,11 @@
     "artists": [
       "Heitor Pereira"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Beacon Of Liberty",
@@ -92,6 +132,10 @@
     "videoId": null,
     "artists": [
       "Hans Zimmer & James S. Levine"
+    ],
+    "moods": [
+      "peaceful",
+      "wonder"
     ]
   },
   {
@@ -101,6 +145,10 @@
     "artists": [
       "Louis Armstrong"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   }
 ]

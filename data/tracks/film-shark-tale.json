@@ -7,7 +7,11 @@
       "Sean Paul",
       "Ziggy Marley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Car Wash (Shark Tale Mix)",
@@ -16,7 +20,11 @@
     "artists": [
       "Christina Aguilera"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Good Foot",
@@ -26,7 +34,11 @@
       "Justin Timberlake",
       "Timbaland"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Secret Love",
@@ -35,7 +47,11 @@
     "artists": [
       "JoJo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Lies & Rumors",
@@ -44,7 +60,11 @@
     "artists": [
       "D12"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Got To Be Real",
@@ -53,7 +73,11 @@
     "artists": [
       "Mary J. Blige"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Can't Wait",
@@ -62,7 +86,10 @@
     "artists": [
       "Avant"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Gold Digger",
@@ -73,7 +100,11 @@
       "Lil Fate",
       "Bobby V."
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Get It Together",
@@ -82,7 +113,11 @@
     "artists": [
       "India.Arie"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "We Went As Far As We Felt Like Going",
@@ -91,7 +126,11 @@
     "artists": [
       "The Pussycat Dolls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Digits",
@@ -100,7 +139,11 @@
     "artists": [
       "Fan 3"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Sweet Kind Of Life",
@@ -109,7 +152,11 @@
     "artists": [
       "Cheryl Lynn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "joyful"
+    ]
   },
   {
     "title": "Some Of My Best Friends Are Sharks",
@@ -117,6 +164,10 @@
     "videoId": null,
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   }
 ]

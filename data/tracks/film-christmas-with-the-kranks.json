@@ -6,7 +6,11 @@
     "artists": [
       "Ramones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Frosty The Snowman",
@@ -15,7 +19,11 @@
     "artists": [
       "The Charms"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "The Christmas Song",
@@ -24,7 +32,11 @@
     "artists": [
       "The Raveonettes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "White Christmas",
@@ -33,7 +45,11 @@
     "artists": [
       "Tina Sugandh"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Merry Christmas To All Of The World",
@@ -42,7 +58,10 @@
     "artists": [
       "Jean Beauvoir"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Navidad",
@@ -51,7 +70,11 @@
     "artists": [
       "Austin Pendleton & Rene Lavan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Feliz Navidad",
@@ -60,7 +83,11 @@
     "artists": [
       "Davie Allan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Hey Santa Claus",
@@ -69,7 +96,11 @@
     "artists": [
       "The Chesterfield Kings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Jingle Bell Rock",
@@ -78,7 +109,11 @@
     "artists": [
       "Brenda Lee"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Joy To The World",
@@ -87,7 +122,11 @@
     "artists": [
       "The Butties"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Nutscracker Suite",
@@ -96,7 +135,10 @@
     "artists": [
       "The Brian Setzer Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Blue Christmas",
@@ -105,6 +147,10 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "nostalgic"
+    ]
   }
 ]

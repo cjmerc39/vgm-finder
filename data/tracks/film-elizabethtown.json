@@ -5,6 +5,10 @@
     "videoId": null,
     "artists": [
       "Nancy Wilson"
+    ],
+    "moods": [
+      "wonder",
+      "joyful"
     ]
   },
   {
@@ -13,6 +17,10 @@
     "videoId": null,
     "artists": [
       "Tom Petty & The Heartbreakers"
+    ],
+    "moods": [
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -22,7 +30,11 @@
     "artists": [
       "Elton John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mournful",
+      "nostalgic"
+    ]
   },
   {
     "title": "io (This Time Around)",
@@ -31,7 +43,11 @@
     "artists": [
       "Helen Stellar"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Come Pick Me Up",
@@ -40,7 +56,11 @@
     "artists": [
       "Ryan Adams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Where To Begin",
@@ -58,7 +78,11 @@
     "artists": [
       "Patty Griffin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Sugar Blue",
@@ -67,7 +91,11 @@
     "artists": [
       "Jeff Finlin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Don't I Hold You",
@@ -76,7 +104,11 @@
     "artists": [
       "Wheat"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Shut Us Down",
@@ -85,7 +117,11 @@
     "artists": [
       "Lindsey Buckingham"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Let It Out (Let It All Hang Out)",
@@ -94,7 +130,11 @@
     "artists": [
       "The Hombres"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Hard Times",
@@ -103,7 +143,11 @@
     "artists": [
       "Eastmountainsouth"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "Jesus Was A Crossmaker",
@@ -112,7 +156,11 @@
     "artists": [
       "The Hollies"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "Square One",
@@ -121,7 +169,11 @@
     "artists": [
       "Tom Petty"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Same In Any Language",
@@ -130,6 +182,10 @@
     "artists": [
       "I Nine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "transcendent"
+    ]
   }
 ]

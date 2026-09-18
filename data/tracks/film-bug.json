@@ -6,7 +6,11 @@
     "artists": [
       "Scott Weiland"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "No Way to Live",
@@ -16,7 +20,11 @@
       "Sean Watkins",
       "Sara Watkins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "sad"
+    ]
   },
   {
     "title": "She Gets",
@@ -25,7 +33,11 @@
     "artists": [
       "Chainsaw Kittens"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Cowboy Boots",
@@ -34,7 +46,10 @@
     "artists": [
       "The Backsliders"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "I Fell in Love",
@@ -43,7 +58,11 @@
     "artists": [
       "Susan Tedeschi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Shake 'em up and Let 'em Roll",
@@ -53,7 +72,11 @@
       "Jerry Leiber",
       "The Coasters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Searchin'",
@@ -62,7 +85,11 @@
     "artists": [
       "Alvin Robinson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Viva Mi Sinaloa",
@@ -71,7 +98,10 @@
     "artists": [
       "Los Tigres del Norte"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "This Masquerade",
@@ -80,7 +110,11 @@
     "artists": [
       "Leon Russell"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "romantic"
+    ]
   },
   {
     "title": "Drug",
@@ -88,6 +122,10 @@
     "videoId": "skFIbGflPzs",
     "artists": [
       "Brian Tyler"
+    ],
+    "moods": [
+      "eerie",
+      "tense"
     ]
   },
   {
@@ -96,6 +134,10 @@
     "videoId": "iM1eTS_MjeE",
     "artists": [
       "Brian Tyler"
+    ],
+    "moods": [
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -105,6 +147,11 @@
     "artists": [
       "Serj Tankian"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense",
+      "mysterious"
+    ]
   }
 ]
