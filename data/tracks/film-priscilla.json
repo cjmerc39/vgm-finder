@@ -6,7 +6,11 @@
     "artists": [
       "Alice Coltrane"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Baby, I Love You",
@@ -15,7 +19,11 @@
     "artists": [
       "Ramones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Venus",
@@ -24,7 +32,11 @@
     "artists": [
       "Frankie Avalon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Sweet Nothin's (Single Version)",
@@ -33,7 +45,11 @@
     "artists": [
       "Brenda Lee"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Crimson & Clover",
@@ -42,7 +58,11 @@
     "artists": [
       "Tommy James & The Shondells"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "(I Love You) For Sentimental Reasons (Single Version)",
@@ -51,7 +71,11 @@
     "artists": [
       "The Righteous Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "How You Satisfy Me",
@@ -60,7 +84,11 @@
     "artists": [
       "Spectrum"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Country",
@@ -69,7 +97,11 @@
     "artists": [
       "Porches"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "The Crystal Cat",
@@ -78,7 +110,11 @@
     "artists": [
       "Dan Deacon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Forever",
@@ -87,7 +123,11 @@
     "artists": [
       "The Little Dippers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Wade In The Water",
@@ -96,7 +136,11 @@
     "artists": [
       "The Soul Stirrers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "transcendent"
+    ]
   },
   {
     "title": "Goin' Places",
@@ -105,7 +149,11 @@
     "artists": [
       "The Orlons"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Stratus",
@@ -114,7 +162,11 @@
     "artists": [
       "Kaitlyn Aurelia Smith"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "Nobody Knows",
@@ -123,7 +175,11 @@
     "artists": [
       "Pastor T.L. Barrett and the Youth for Christ Choir"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "mysterious"
+    ]
   },
   {
     "title": "Gassenhauer",
@@ -132,7 +188,10 @@
     "artists": [
       "Erik Charlston"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Rippling Waters",
@@ -141,7 +200,11 @@
     "artists": [
       "Speedy West"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "My Elixir",
@@ -150,6 +213,10 @@
     "artists": [
       "Sons of Raphael"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "romantic"
+    ]
   }
 ]
