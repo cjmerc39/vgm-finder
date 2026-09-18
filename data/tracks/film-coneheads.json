@@ -7,7 +7,11 @@
       "Slash",
       "Michael Monroe"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Tainted Love",
@@ -16,7 +20,11 @@
     "artists": [
       "Soft Cell"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tense"
+    ]
   },
   {
     "title": "No More Tears (Enough Is Enough)",
@@ -26,7 +34,11 @@
       "k.d. lang",
       "Andy Bell"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Kodachrome",
@@ -35,7 +47,11 @@
     "artists": [
       "Paul Simon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Can't Take My Eyes off You",
@@ -44,7 +60,11 @@
     "artists": [
       "Morten Harket"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "It's a Free World Baby",
@@ -53,7 +73,11 @@
     "artists": [
       "R.E.M."
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Soul to Squeeze",
@@ -62,7 +86,11 @@
     "artists": [
       "Red Hot Chili Peppers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Fight the Power",
@@ -71,7 +99,11 @@
     "artists": [
       "Barenaked Ladies"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Little Renee",
@@ -99,6 +131,10 @@
       "Beldar",
       "Prymaat"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   }
 ]

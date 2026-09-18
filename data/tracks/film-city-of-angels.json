@@ -6,7 +6,11 @@
     "artists": [
       "U2"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "wonder"
+    ]
   },
   {
     "title": "Uninvited",
@@ -15,7 +19,11 @@
     "artists": [
       "Alanis Morissette"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Red House",
@@ -24,7 +32,11 @@
     "artists": [
       "Jimi Hendrix"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Feelin' Love",
@@ -33,7 +45,11 @@
     "artists": [
       "Paula Cole"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Mama, You Got a Daughter",
@@ -42,7 +58,11 @@
     "artists": [
       "John Lee Hooker"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "Angel",
@@ -51,7 +71,11 @@
     "artists": [
       "Sarah McLachlan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Iris",
@@ -60,7 +84,11 @@
     "artists": [
       "Goo Goo Dolls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "transcendent"
+    ]
   },
   {
     "title": "I Grieve",
@@ -69,7 +97,11 @@
     "artists": [
       "Peter Gabriel"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "I Know",
@@ -78,7 +110,11 @@
     "artists": [
       "Jude"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Further on up the Road",
@@ -87,7 +123,11 @@
     "artists": [
       "Eric Clapton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "An Angel Falls (Remix)",
@@ -95,6 +135,10 @@
     "videoId": "4y-6xUUlaCg",
     "artists": [
       "Gabriel Yared"
+    ],
+    "moods": [
+      "transcendent",
+      "joyful"
     ]
   },
   {
@@ -103,6 +147,10 @@
     "videoId": "NEsu44akhhc",
     "artists": [
       "Gabriel Yared"
+    ],
+    "moods": [
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -111,6 +159,10 @@
     "videoId": "swy62EL8UlM",
     "artists": [
       "Gabriel Yared"
+    ],
+    "moods": [
+      "transcendent",
+      "wonder"
     ]
   },
   {
@@ -119,6 +171,10 @@
     "videoId": "YvGTMNKie0c",
     "artists": [
       "Gabriel Yared"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   }
 ]

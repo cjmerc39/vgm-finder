@@ -6,7 +6,11 @@
     "artists": [
       "The Who"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Sitting Still Moving Still Staring Outlooking",
@@ -15,7 +19,11 @@
     "artists": [
       "His Name Is Alive"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "mysterious"
+    ]
   },
   {
     "title": "Gettin' In Tune",
@@ -24,7 +32,11 @@
     "artists": [
       "The Who"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Pocketful Of Rainbows (Alt. Take 29)",
@@ -33,7 +45,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "World On A String",
@@ -42,7 +58,11 @@
     "artists": [
       "Neil Young"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "We Meet Again (Theme from \"Jerry McGuire\")",
@@ -50,6 +70,10 @@
     "videoId": "MTgV3wdwTP0",
     "artists": [
       "Nancy Wilson"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -59,7 +83,11 @@
     "artists": [
       "Rickie Lee Jones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Secret Garden",
@@ -68,7 +96,11 @@
     "artists": [
       "Bruce Springsteen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Singalong Junk",
@@ -77,7 +109,10 @@
     "artists": [
       "Paul McCartney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Wise Up",
@@ -95,7 +130,11 @@
     "artists": [
       "Paul McCartney"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Sandy",
@@ -103,6 +142,10 @@
     "videoId": "pHNds9B2WZE",
     "artists": [
       "Nancy Wilson"
+    ],
+    "moods": [
+      "nostalgic",
+      "peaceful"
     ]
   },
   {
@@ -112,6 +155,10 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   }
 ]

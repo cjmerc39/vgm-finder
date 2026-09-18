@@ -7,7 +7,11 @@
       "Tevin Campbell",
       "Rosie Gaines"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "After Today",
@@ -16,7 +20,11 @@
     "artists": [
       "Aaron Lohr & Chorus - After Today"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Stand Out",
@@ -25,7 +33,11 @@
     "artists": [
       "Tevin Campbell"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "On The Open Road",
@@ -34,7 +46,11 @@
     "artists": [
       "Aaron Lohr, Bill Farmer, & Chorus - On The Open Road"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Lester's Possum Park",
@@ -43,7 +59,11 @@
     "artists": [
       "Chorus - Lester's Possum Park & Kevin Quinn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Nobody Else But You",
@@ -53,7 +73,11 @@
       "Bill Farmer",
       "Aaron Lohr"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Opening Fanfare / Max's Dream",
@@ -62,6 +86,10 @@
     "artists": [
       "Carter Burwell",
       "Don Davis"
+    ],
+    "moods": [
+      "wonder",
+      "heroic"
     ]
   },
   {
@@ -71,6 +99,10 @@
     "artists": [
       "Carter Burwell",
       "Don Davis"
+    ],
+    "moods": [
+      "eerie",
+      "tense"
     ]
   },
   {
@@ -80,6 +112,10 @@
     "artists": [
       "Carter Burwell",
       "Don Davis"
+    ],
+    "moods": [
+      "tense",
+      "mysterious"
     ]
   },
   {
@@ -89,6 +125,9 @@
     "artists": [
       "Carter Burwell",
       "Don Davis"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -98,6 +137,10 @@
     "artists": [
       "Carter Burwell",
       "Don Davis"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -116,6 +159,10 @@
     "artists": [
       "Carter Burwell",
       "Don Davis"
+    ],
+    "moods": [
+      "powerful",
+      "joyful"
     ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "The Wallflowers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Come with Me",
@@ -15,7 +19,11 @@
     "artists": [
       "Puff Daddy & Jimmy Page"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Deeper Underground",
@@ -24,7 +32,11 @@
     "artists": [
       "Jamiroquai"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "No Shelter",
@@ -33,7 +45,11 @@
     "artists": [
       "Rage Against The Machine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Air",
@@ -51,7 +67,11 @@
     "artists": [
       "Days Of The New"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Macy Day Parade",
@@ -60,7 +80,11 @@
     "artists": [
       "Michael Penn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Walk the Sky",
@@ -69,7 +93,10 @@
     "artists": [
       "Fuel"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "A320",
@@ -78,7 +105,11 @@
     "artists": [
       "Foo Fighters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Brain Stew (The Godzilla Remix)",
@@ -87,7 +118,11 @@
     "artists": [
       "Green Day"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Untitled",
@@ -105,7 +140,11 @@
     "artists": [
       "FuzzBubble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Undercover",
@@ -122,6 +161,10 @@
     "videoId": "59OBKJZup_U",
     "artists": [
       "David Arnold"
+    ],
+    "moods": [
+      "powerful",
+      "tense"
     ]
   },
   {
@@ -130,6 +173,10 @@
     "videoId": "XV7xwfMbb7Y",
     "artists": [
       "David Arnold"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   }
 ]

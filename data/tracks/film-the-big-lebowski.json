@@ -6,7 +6,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Her Eyes Are A Blue Million Miles",
@@ -15,7 +19,11 @@
     "artists": [
       "Captain Beefheart"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "My Mood Swings",
@@ -24,7 +32,10 @@
     "artists": [
       "Elvis Costello"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Ataypura!",
@@ -33,7 +44,11 @@
     "artists": [
       "Yma Sumac"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Traffic Boom",
@@ -42,7 +57,11 @@
     "artists": [
       "Piero Piccioni"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "I Got It Bad And That Ain't Good",
@@ -51,7 +70,11 @@
     "artists": [
       "Nina Simone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "romantic"
+    ]
   },
   {
     "title": "Stamping Ground",
@@ -69,7 +92,11 @@
     "artists": [
       "Kenny Rogers & The First Edition"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Volcano Songs: Duets: Walking Song",
@@ -78,7 +105,11 @@
     "artists": [
       "Meredith Monk"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Gluck Das Mir Verblieb",
@@ -87,7 +118,11 @@
     "artists": [
       "Ilona Steingruber & Anton Dermota"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Lujon",
@@ -96,7 +131,11 @@
     "artists": [
       "Henry Mancini"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Hotel California",
@@ -105,7 +144,11 @@
     "artists": [
       "Gipsy Kings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "romantic"
+    ]
   },
   {
     "title": "Technopop",
@@ -113,6 +156,10 @@
     "videoId": "L53RHEfZjJ4",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "driving",
+      "playful"
     ]
   },
   {
@@ -122,6 +169,10 @@
     "artists": [
       "Townes Van Zandt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "mournful"
+    ]
   }
 ]

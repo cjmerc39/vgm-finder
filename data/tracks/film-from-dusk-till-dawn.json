@@ -6,7 +6,11 @@
     "artists": [
       "Jimmie Vaughan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "She's Just Killing Me",
@@ -15,7 +19,11 @@
     "artists": [
       "ZZ Top"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Mary Had a Little Lamb",
@@ -24,7 +32,11 @@
     "artists": [
       "Stevie Ray Vaughan & Double Trouble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "playful"
+    ]
   },
   {
     "title": "Willie the Wimp (And His Cadillac Coffin)",
@@ -33,7 +45,11 @@
     "artists": [
       "Stevie Ray Vaughan & Double Trouble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "Mexican Standoff",
@@ -41,6 +57,10 @@
     "videoId": "yEY9bQ2OQ3U",
     "artists": [
       "Graeme Revell"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -49,6 +69,10 @@
     "videoId": "PPVKqlRsnnU",
     "artists": [
       "Graeme Revell"
+    ],
+    "moods": [
+      "powerful",
+      "tense"
     ]
   }
 ]

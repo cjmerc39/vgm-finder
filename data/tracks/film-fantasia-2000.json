@@ -6,7 +6,12 @@
     "artists": [
       "Chicago Symphony Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic",
+      "transcendent"
+    ]
   },
   {
     "title": "Pines Of Rome",
@@ -15,7 +20,12 @@
     "artists": [
       "Chicago Symphony Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "powerful",
+      "transcendent"
+    ]
   },
   {
     "title": "Rhapsody In Blue",
@@ -24,7 +34,12 @@
     "artists": [
       "Philharmonia Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Piano Concerto No. 2, Allegro,Opus 102",
@@ -33,7 +48,12 @@
     "artists": [
       "Chicago Symphony Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender",
+      "transcendent"
+    ]
   },
   {
     "title": "Carnival Of The Animals, Finale",
@@ -42,7 +62,11 @@
     "artists": [
       "Chicago Symphony Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "The Sorcerer's Apprentice",
@@ -51,7 +75,12 @@
     "artists": [
       "Philharmonia Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense",
+      "playful"
+    ]
   },
   {
     "title": "Pomp & Circumstance, Marches #1,2,3, & 4",
@@ -60,7 +89,12 @@
     "artists": [
       "Chicago Symphony Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Firebird Suite (1919 Version)",
@@ -69,6 +103,11 @@
     "artists": [
       "Chicago Symphony Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic",
+      "transcendent"
+    ]
   }
 ]

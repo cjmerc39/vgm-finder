@@ -7,7 +7,11 @@
       "Tony Bennett",
       "Shawn Colvin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "They Can't Take That Away From Me",
@@ -16,7 +20,11 @@
     "artists": [
       "Billie Holiday"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Now It Can Be Told",
@@ -25,7 +33,11 @@
     "artists": [
       "Tony Bennett"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Swingdown, Swingtown",
@@ -34,7 +46,11 @@
     "artists": [
       "Wynton Marsalis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "She's No Lady",
@@ -43,7 +59,10 @@
     "artists": [
       "Lyle Lovett"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Always",
@@ -52,7 +71,11 @@
     "artists": [
       "Tony Bennett"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Overture",
@@ -60,6 +83,10 @@
     "videoId": "CsOw2P1GuU4",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "joyful",
+      "romantic"
     ]
   },
   {
@@ -69,7 +96,11 @@
     "artists": [
       "Mary-Chapin Carpenter"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Round Of Blues",
@@ -78,7 +109,11 @@
     "artists": [
       "Shawn Colvin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "The Search",
@@ -86,6 +121,10 @@
     "videoId": "M4WgJ3z1-cI",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "mysterious",
+      "tender"
     ]
   },
   {
@@ -95,6 +134,10 @@
     "artists": [
       "Frank Sinatra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   }
 ]

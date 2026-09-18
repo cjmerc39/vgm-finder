@@ -6,7 +6,11 @@
     "artists": [
       "The Paul Butterfield Blues Band"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "The Blues Don't Bother Me",
@@ -15,7 +19,11 @@
     "artists": [
       "Matt \"Guitar\" Murphy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Harmonica Musing",
@@ -24,7 +32,11 @@
     "artists": [
       "John Popper"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "Cheaper To Keep Her",
@@ -36,7 +48,11 @@
       "Dan Aykroyd",
       "Lonnie Brooks"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Perry Mason Theme",
@@ -45,7 +61,11 @@
     "artists": [
       "The Blues Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "powerful"
+    ]
   },
   {
     "title": "Looking For A Fox",
@@ -56,7 +76,11 @@
       "Dan Aykroyd",
       "The Blues Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Can't Turn You Loose",
@@ -65,7 +89,11 @@
     "artists": [
       "The Blues Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "R.E.S.P.E.C.T.",
@@ -75,7 +103,11 @@
       "The Blues Brothers",
       "Aretha Franklin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "634-5789",
@@ -87,7 +119,11 @@
       "Jonny Lang",
       "The Blues Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Maybe I'm Wrong",
@@ -96,7 +132,11 @@
     "artists": [
       "Blues Traveler"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "(Ghost) Riders In The Sky",
@@ -107,7 +147,11 @@
       "Dan Aykroyd",
       "The Blues Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "John The Revelator",
@@ -119,7 +163,11 @@
       "Taj Mahal",
       "Sam Moore"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "powerful"
+    ]
   },
   {
     "title": "Let There Be Drums",
@@ -128,7 +176,11 @@
     "artists": [
       "The Carl Lafong Trio"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Season Of The Witch",
@@ -138,7 +190,11 @@
       "The Blues Brothers",
       "Dr. John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Funky Nassau",
@@ -149,6 +205,10 @@
       "John Goodman",
       "Paul Shaffer",
       "Dan Aykroyd"
+    ],
+    "moods": [
+      "driving",
+      "joyful"
     ]
   },
   {
@@ -158,7 +218,11 @@
     "artists": [
       "Louisiana Gator Boys"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "powerful"
+    ]
   },
   {
     "title": "Turn On Your Love Light",
@@ -170,7 +234,11 @@
       "John Goodman",
       "Dan Aykroyd"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "New Orleans",
@@ -180,6 +248,10 @@
       "The Blues Brothers",
       "Louisiana Gator Boys"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   }
 ]

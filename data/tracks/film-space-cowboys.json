@@ -6,7 +6,11 @@
     "artists": [
       "Willie Nelson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "I Only Have Eyes for You",
@@ -15,7 +19,11 @@
     "artists": [
       "Mandy Barnett"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "The Best Is yet to Come",
@@ -24,7 +32,11 @@
     "artists": [
       "Joshua Redman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Take It to the Limit",
@@ -33,7 +45,11 @@
     "artists": [
       "Chad Brock"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Young at Heart",
@@ -42,7 +58,11 @@
     "artists": [
       "Willie Nelson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Hit the Road Jack",
@@ -51,7 +71,11 @@
     "artists": [
       "Joshua Redman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Old Man",
@@ -60,7 +84,11 @@
     "artists": [
       "Brad Mehldau"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "mournful"
+    ]
   },
   {
     "title": "The Second Time Around",
@@ -69,7 +97,11 @@
     "artists": [
       "Joshua Redman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Last Night",
@@ -87,7 +119,11 @@
     "artists": [
       "Brad Mehldau Trio"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "Fly Me to the Moon (In Other Words)",
@@ -96,6 +132,10 @@
     "artists": [
       "Frank Sinatra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   }
 ]

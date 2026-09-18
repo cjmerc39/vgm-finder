@@ -9,7 +9,11 @@
       "Mrs. Potts",
       "Angelique"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Stories",
@@ -18,7 +22,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "As Long As There's Christmas",
@@ -30,7 +38,11 @@
       "Cogsworth",
       "Fi-Fi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Don't Fall In Love",
@@ -39,7 +51,11 @@
     "artists": [
       "Forte"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "As Long As There's Christmas (Reprise)",
@@ -49,7 +65,11 @@
       "Angelique",
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "A Cut Above The Rest",
@@ -60,7 +80,11 @@
       "Lumiere",
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "As Long As There's Christmas (End Title)",
@@ -70,7 +94,11 @@
       "Peabo Bryson",
       "Roberta Flack"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "We Wish You a Merry Christmas",
@@ -79,7 +107,10 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Do You Hear What I Hear",
@@ -88,7 +119,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "O Come, O Come Emmanuel / Joy To The World",
@@ -97,7 +132,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "O Christmas Tree",
@@ -106,7 +145,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "The First Noel",
@@ -115,7 +158,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "What Child Is This?",
@@ -124,7 +171,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "The Twelve Days of Christmas",
@@ -133,7 +184,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Silent Night",
@@ -142,7 +197,11 @@
     "artists": [
       "Belle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Belle's Magical Gift",
@@ -150,6 +209,10 @@
     "videoId": "pAMDPYVFFm4",
     "artists": [
       "Rachel Portman"
+    ],
+    "moods": [
+      "wonder",
+      "transcendent"
     ]
   },
   {
@@ -158,6 +221,10 @@
     "videoId": "bhHfbRd1nWw",
     "artists": [
       "Rachel Portman"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -166,6 +233,10 @@
     "videoId": "nos41GJWGfg",
     "artists": [
       "Rachel Portman"
+    ],
+    "moods": [
+      "joyful",
+      "heroic"
     ]
   }
 ]

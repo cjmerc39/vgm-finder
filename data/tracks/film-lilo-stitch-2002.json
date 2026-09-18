@@ -7,7 +7,11 @@
       "Mark Keali'i Ho'omalu",
       "Kamehameha Schools Children's Chorus"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Stuck on You",
@@ -16,7 +20,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Burning Love",
@@ -25,7 +33,11 @@
     "artists": [
       "Wynonna"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Suspicious Minds",
@@ -34,7 +46,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Heartbreak Hotel",
@@ -43,7 +59,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "(You're The) Devil in Disguise",
@@ -52,7 +72,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "He Mele No Lilo",
@@ -62,7 +86,11 @@
       "Mark Keali'i Ho'omalu",
       "Kamehameha Schools Children's Chorus"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Hound Dog",
@@ -71,7 +99,11 @@
     "artists": [
       "Elvis Presley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Can't Help Falling In Love",
@@ -80,7 +112,11 @@
     "artists": [
       "A*Teens"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Stitch to the Rescue",
@@ -88,6 +124,10 @@
     "videoId": "VaVQDSGJ67o",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "heroic",
+      "driving"
     ]
   },
   {
@@ -96,6 +136,10 @@
     "videoId": "wUL9DcwWY-o",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "sad",
+      "tender"
     ]
   },
   {
@@ -104,6 +148,10 @@
     "videoId": "bvcMSkwI8Co",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "tense",
+      "eerie"
     ]
   }
 ]

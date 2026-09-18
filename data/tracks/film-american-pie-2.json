@@ -6,7 +6,11 @@
     "artists": [
       "blink-182"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Scumbag",
@@ -15,7 +19,11 @@
     "artists": [
       "Green Day"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Bring You Down",
@@ -24,7 +32,11 @@
     "artists": [
       "Left Front Tire"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Vertigo",
@@ -33,7 +45,11 @@
     "artists": [
       "American Hi-Fi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "I'm Gonna Split This Room In Half",
@@ -42,7 +58,11 @@
     "artists": [
       "Uncle Kracker"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Be Like That",
@@ -51,7 +71,11 @@
     "artists": [
       "3 Doors Down"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Good (For A Woman)",
@@ -60,7 +84,10 @@
     "artists": [
       "Alien Ant Farm"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Always Getting Over You",
@@ -69,7 +96,11 @@
     "artists": [
       "Angela Ammons"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Cheating",
@@ -78,7 +109,11 @@
     "artists": [
       "Jettingham"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Smokescreen",
@@ -87,7 +122,11 @@
     "artists": [
       "Flying Blind"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Phoebe Cates",
@@ -96,7 +135,11 @@
     "artists": [
       "Fenix TX"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "playful"
+    ]
   },
   {
     "title": "Susan",
@@ -105,7 +148,11 @@
     "artists": [
       "The Exit"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Fat Lip",
@@ -114,7 +161,11 @@
     "artists": [
       "Sum 41"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "I Will",
@@ -123,7 +174,11 @@
     "artists": [
       "Lucia Cifarelli"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Halo",
@@ -132,7 +187,11 @@
     "artists": [
       "Oleander"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   },
   {
     "title": "Here's One For You",
@@ -141,6 +200,10 @@
     "artists": [
       "Witness"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   }
 ]

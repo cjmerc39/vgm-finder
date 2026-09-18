@@ -6,7 +6,11 @@
     "artists": [
       "Dean Martin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "It's A Man's, Man's, Man's World",
@@ -15,7 +19,11 @@
     "artists": [
       "James Brown"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "The Thrill Is Gone",
@@ -24,7 +32,11 @@
     "artists": [
       "B.B. King"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "Smoke Gets In Your Eyes",
@@ -33,7 +45,11 @@
     "artists": [
       "Vic Damone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "If I Had My Life To Live Over",
@@ -42,7 +58,11 @@
     "artists": [
       "Lou Rawls"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Luck Be A Lady",
@@ -51,7 +71,11 @@
     "artists": [
       "Michael Civisca"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "You're Nobody Till Somebody Loves You",
@@ -60,7 +84,11 @@
     "artists": [
       "Dean Martin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Main Title",
@@ -68,6 +96,11 @@
     "videoId": "gFW64QrTPMo",
     "artists": [
       "Chris Boardman"
+    ],
+    "moods": [
+      "powerful",
+      "heroic",
+      "driving"
     ]
   },
   {
@@ -76,6 +109,10 @@
     "videoId": "C_W1qUcjnjs",
     "artists": [
       "Chris Boardman"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -84,6 +121,10 @@
     "videoId": "KbjSPBYKtC0",
     "artists": [
       "Chris Boardman"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   },
   {
@@ -92,6 +133,10 @@
     "videoId": "-e-q38LtWs0",
     "artists": [
       "Chris Boardman"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   }
 ]

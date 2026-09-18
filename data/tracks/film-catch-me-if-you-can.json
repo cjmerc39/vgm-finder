@@ -5,6 +5,11 @@
     "videoId": "SJKEvEdPtqw",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "driving",
+      "mysterious",
+      "playful"
     ]
   },
   {
@@ -13,6 +18,10 @@
     "videoId": "wrRqPMNcDIU",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -22,7 +31,11 @@
     "artists": [
       "Frank Sinatra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Recollections (The Father's Theme) (From \"Catch Me If You Can\" Soundtrack)",
@@ -30,6 +43,10 @@
     "videoId": "VZKmNOGpKJY",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "nostalgic",
+      "tender"
     ]
   },
   {
@@ -38,6 +55,10 @@
     "videoId": "d6mZSfqE9d8",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -47,7 +68,11 @@
     "artists": [
       "Stan Getz"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Learning The Ropes (From \"Catch Me If You Can\" Soundtrack)",
@@ -55,6 +80,10 @@
     "videoId": "lJIpG8ntjNI",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -63,6 +92,10 @@
     "videoId": "JEmwVRB0K0c",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -73,7 +106,11 @@
       "Judy Garland",
       "Victor Young & His Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "The Flash Comics Clue (From \"Catch Me If You Can\" Soundtrack)",
@@ -81,6 +118,10 @@
     "videoId": "yTrhrudIUlA",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "mysterious",
+      "playful"
     ]
   },
   {
@@ -89,6 +130,10 @@
     "videoId": "6nSdZPVtU5k",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "driving",
+      "playful"
     ]
   },
   {
@@ -98,7 +143,11 @@
     "artists": [
       "Nat King Cole"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "A Broken Home (From \"Catch Me If You Can\" Soundtrack)",
@@ -106,6 +155,10 @@
     "videoId": "M4QZm5EQ8hs",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "sad",
+      "mournful"
     ]
   },
   {
@@ -114,6 +167,9 @@
     "videoId": "ToAweq_9Lyk",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -123,7 +179,11 @@
     "artists": [
       "Dusty Springfield"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Catch Me If You Can (Reprise and End Credits) (From \"Catch Me If You Can\" Soundtrack)",
@@ -131,6 +191,10 @@
     "videoId": "zB9sSi0aIi4",
     "artists": [
       "John Williams"
+    ],
+    "moods": [
+      "joyful",
+      "heroic"
     ]
   }
 ]

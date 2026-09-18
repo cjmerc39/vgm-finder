@@ -7,7 +7,11 @@
       "Mark Wahlberg",
       "John C. Reilly"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Best Of My Love",
@@ -16,7 +20,11 @@
     "artists": [
       "The Emotions"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Jungle Fever",
@@ -25,7 +33,11 @@
     "artists": [
       "The Chakachas"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Brand New Key",
@@ -34,7 +46,11 @@
     "artists": [
       "Melanie"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Spill The Wine",
@@ -44,7 +60,11 @@
       "Eric Burdon",
       "War"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Got To Give It Up (Pt. 1)",
@@ -53,7 +73,11 @@
     "artists": [
       "Marvin Gaye"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Machine Gun",
@@ -62,7 +86,11 @@
     "artists": [
       "Commodores"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Magnet & Steel",
@@ -71,7 +99,11 @@
     "artists": [
       "Walter Egan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Ain't No Stoppin' Us Now",
@@ -80,7 +112,11 @@
     "artists": [
       "McFadden & Whitehead"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Sister Christian",
@@ -89,7 +125,11 @@
     "artists": [
       "Night Ranger"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Livin' Thing",
@@ -98,7 +138,11 @@
     "artists": [
       "Electric Light Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "God Only Knows",
@@ -107,7 +151,11 @@
     "artists": [
       "The Beach Boys"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "The Big Top (Theme From \"Boogie Nights\")/The Touch",
@@ -115,6 +163,10 @@
     "videoId": null,
     "artists": [
       "Michael Penn"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "Pocahontas"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "What a Day in London",
@@ -15,7 +19,11 @@
     "artists": [
       "Judy Kuhn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Wait 'Til He Sees You",
@@ -24,7 +32,11 @@
     "artists": [
       "Billy Zane & Jean Stapleton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Things Are Not What They Appear",
@@ -33,7 +45,11 @@
     "artists": [
       "David Ogden Stiers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Between Two Worlds (End Title)",
@@ -42,6 +58,10 @@
     "artists": [
       "Judy Kuhn & Billy Zane"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "peaceful"
+    ]
   }
 ]

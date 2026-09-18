@@ -7,7 +7,12 @@
       "Carmen Twillie",
       "Lebo M."
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "I Just Can't Wait to Be King",
@@ -18,7 +23,11 @@
       "Rowan Atkinson",
       "Laura Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Be Prepared",
@@ -30,7 +39,12 @@
       "Cheech Marin",
       "Jim Cummings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Hakuna Matata",
@@ -42,7 +56,11 @@
       "Jason Weaver",
       "Joseph Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Can You Feel the Love Tonight",
@@ -54,7 +72,11 @@
       "Nathan Lane",
       "Ernie Sabella"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "This Land",
@@ -63,6 +85,10 @@
     "artists": [
       "Hans Zimmer",
       "Lebo M."
+    ],
+    "moods": [
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
@@ -71,6 +97,10 @@
     "videoId": "nKSsLEYc1xs",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "tense",
+      "mournful"
     ]
   },
   {
@@ -80,6 +110,11 @@
     "artists": [
       "Hans Zimmer",
       "Lebo M."
+    ],
+    "moods": [
+      "peaceful",
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -89,6 +124,11 @@
     "artists": [
       "Hans Zimmer",
       "Lebo M."
+    ],
+    "moods": [
+      "heroic",
+      "powerful",
+      "transcendent"
     ]
   },
   {
@@ -98,7 +138,12 @@
     "artists": [
       "Elton John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "I Just Can't Wait to Be King",
@@ -107,7 +152,11 @@
     "artists": [
       "Elton John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Can You Feel the Love Tonight (End Title)",
@@ -116,6 +165,11 @@
     "artists": [
       "Elton John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful",
+      "transcendent"
+    ]
   }
 ]

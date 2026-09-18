@@ -6,7 +6,11 @@
     "artists": [
       "Johnny Adams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "You're A Wonderful One",
@@ -15,7 +19,11 @@
     "artists": [
       "Marvin Gaye"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "And I Love You So",
@@ -24,7 +32,11 @@
     "artists": [
       "Perry Como"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Mambo U.K.",
@@ -33,7 +45,11 @@
     "artists": [
       "!Cubanismo!"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Super Bad, Super Slick",
@@ -42,7 +58,11 @@
     "artists": [
       "James Brown"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Secret Agent Man (From \"Secret Agent\" CBS TV Show)",
@@ -51,7 +71,11 @@
     "artists": [
       "Johnny Rivers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "heroic"
+    ]
   },
   {
     "title": "Betsy Chases Kit / The First Shot / A Short Ride / Dave Makes A Call / Dave Returns Camera",
@@ -59,6 +83,10 @@
     "videoId": "-mzxPhYyorM",
     "artists": [
       "David Newman"
+    ],
+    "moods": [
+      "playful",
+      "driving"
     ]
   },
   {
@@ -67,6 +95,10 @@
     "videoId": "pIcfmcyVnLk",
     "artists": [
       "David Newman"
+    ],
+    "moods": [
+      "playful",
+      "tense"
     ]
   },
   {
@@ -75,6 +107,10 @@
     "videoId": "0SjsgNDQLaE",
     "artists": [
       "David Newman"
+    ],
+    "moods": [
+      "joyful",
+      "powerful"
     ]
   },
   {
@@ -83,6 +119,10 @@
     "videoId": "bl3V7N2TrZw",
     "artists": [
       "David Newman"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -91,6 +131,10 @@
     "videoId": "aEGIAiwaqv8",
     "artists": [
       "David Newman"
+    ],
+    "moods": [
+      "mysterious",
+      "wonder"
     ]
   },
   {
@@ -99,6 +143,10 @@
     "videoId": "q1Ly7B39EIE",
     "artists": [
       "David Newman"
+    ],
+    "moods": [
+      "joyful",
+      "heroic"
     ]
   }
 ]

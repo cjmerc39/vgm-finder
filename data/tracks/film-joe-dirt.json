@@ -6,7 +6,11 @@
     "artists": [
       "Lynyrd Skynyrd"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "Walk On Water",
@@ -15,7 +19,11 @@
     "artists": [
       "Eddie Money"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Hold Your Head Up",
@@ -24,7 +32,11 @@
     "artists": [
       "Argent"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "You Ain't Seen Nothing Yet",
@@ -33,7 +45,11 @@
     "artists": [
       "Bachman-Turner Overdrive"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "When I'm With You",
@@ -42,7 +58,11 @@
     "artists": [
       "Sheriff"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Cat Scratch Fever",
@@ -51,7 +71,11 @@
     "artists": [
       "Ted Nugent"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Who Do You Love",
@@ -60,7 +84,11 @@
     "artists": [
       "George Thorogood & The Destroyers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "China Grove",
@@ -69,7 +97,11 @@
     "artists": [
       "The Doobie Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Rocky Mountain Way",
@@ -78,7 +110,11 @@
     "artists": [
       "Joe Walsh"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Roller",
@@ -96,7 +132,11 @@
     "artists": [
       "Blue Oyster Cult"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "If You Want My Love",
@@ -105,6 +145,9 @@
     "artists": [
       "Cheap Trick"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic"
+    ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "Jimmy Page"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Tweedle Dee & Tweedle Dum",
@@ -15,7 +19,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Holding Out For A Hero",
@@ -24,7 +32,11 @@
     "artists": [
       "Bonnie Tyler"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Twist In My Sobriety",
@@ -33,7 +45,11 @@
     "artists": [
       "Tanita Tikaram"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Rudiger",
@@ -42,7 +58,11 @@
     "artists": [
       "Mark Knopfler"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Just Another",
@@ -60,7 +80,11 @@
     "artists": [
       "Aretha Franklin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Superman (It's Not Easy)",
@@ -69,7 +93,11 @@
     "artists": [
       "Five for Fighting"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Crazy 'Lil Mouse",
@@ -78,7 +106,11 @@
     "artists": [
       "In Bloom"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Just the Two of Us (Edit)",
@@ -87,7 +119,11 @@
     "artists": [
       "Grover Washington, Jr."
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Wildfire",
@@ -96,7 +132,11 @@
     "artists": [
       "Michael Martin Murphey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Total Eclipse of the Heart",
@@ -105,7 +145,11 @@
     "artists": [
       "Bonnie Tyler"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "powerful"
+    ]
   },
   {
     "title": "Bandits Suite",
@@ -113,6 +157,10 @@
     "videoId": null,
     "artists": [
       "Chris Young"
+    ],
+    "moods": [
+      "mysterious",
+      "playful"
     ]
   }
 ]

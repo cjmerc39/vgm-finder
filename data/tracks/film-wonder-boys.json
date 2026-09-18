@@ -6,7 +6,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "A Child's Claim To Fame",
@@ -15,7 +19,11 @@
     "artists": [
       "Buffalo Springfield"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "playful"
+    ]
   },
   {
     "title": "No Regrets",
@@ -24,7 +32,11 @@
     "artists": [
       "Tom Rush"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Old Man",
@@ -33,7 +45,11 @@
     "artists": [
       "Neil Young (Additional Vocals by James Taylor and Linda Ronstadt)"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "mournful"
+    ]
   },
   {
     "title": "Shooting Star",
@@ -42,7 +58,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Reason To Believe",
@@ -51,7 +71,11 @@
     "artists": [
       "Tim Hardin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "romantic"
+    ]
   },
   {
     "title": "Need Your Love So Bad",
@@ -60,7 +84,11 @@
     "artists": [
       "Little Willie John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Not Dark Yet",
@@ -69,7 +97,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Slip Away",
@@ -78,7 +110,11 @@
     "artists": [
       "Clarence Carter"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Waiting for the Miracle",
@@ -87,7 +123,11 @@
     "artists": [
       "Leonard Cohen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "romantic"
+    ]
   },
   {
     "title": "Buckets of Rain",
@@ -96,7 +136,11 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Watching The Wheels",
@@ -105,7 +149,11 @@
     "artists": [
       "John Lennon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Philosopher's Stone",
@@ -114,6 +162,10 @@
     "artists": [
       "Van Morrison"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
   }
 ]

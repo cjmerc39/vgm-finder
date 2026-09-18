@@ -6,7 +6,11 @@
     "artists": [
       "Kula Shaker"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Summer Breeze",
@@ -15,7 +19,11 @@
     "artists": [
       "Type O Negative"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "D.U.I.",
@@ -42,7 +50,10 @@
     "artists": [
       "L7"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Losin' It",
@@ -60,7 +71,10 @@
     "artists": [
       "Toad The Wet Sprocket"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "My Baby's Got The Strangest Ways",
@@ -78,7 +92,10 @@
     "artists": [
       "The Din Pedals"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Clumsy",
@@ -105,7 +122,10 @@
     "artists": [
       "Goat"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "2 Wicky",
@@ -132,6 +152,10 @@
     "artists": [
       "Korn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   }
 ]

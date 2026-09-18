@@ -6,7 +6,11 @@
     "artists": [
       "Salt-N-Pepa"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Free Yourself",
@@ -15,7 +19,11 @@
     "artists": [
       "Chaka Khan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Turn It Out",
@@ -26,7 +34,11 @@
       "Sarah Dash",
       "Patti LaBelle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Who Taught You How",
@@ -35,7 +47,10 @@
     "artists": [
       "Crystal Waters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "She's A Lady",
@@ -44,7 +59,11 @@
     "artists": [
       "Tom Jones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Brick House",
@@ -53,7 +72,11 @@
     "artists": [
       "Commodores"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Nobody's Body",
@@ -62,7 +85,10 @@
     "artists": [
       "Monifah"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Do What You Wanna Do",
@@ -71,7 +97,11 @@
     "artists": [
       "Charisse Arrington"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Hey Now (Girls Just Want to Have Fun)",
@@ -80,7 +110,11 @@
     "artists": [
       "Cyndi Lauper"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Over The Rainbow (Live)",
@@ -89,7 +123,11 @@
     "artists": [
       "Patti LaBelle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "tender"
+    ]
   },
   {
     "title": "To Wong Foo Suite: A. When I Get To Hollywood / B. A Day With The Girls / C. Moms Mabley / D. Stand Up",
@@ -97,6 +135,10 @@
     "videoId": "QgJBDhPud8A",
     "artists": [
       "Rachel Portman"
+    ],
+    "moods": [
+      "joyful",
+      "tender"
     ]
   }
 ]

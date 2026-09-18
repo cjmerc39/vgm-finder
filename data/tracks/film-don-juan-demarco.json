@@ -6,7 +6,11 @@
     "artists": [
       "Bryan Adams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Habanera",
@@ -15,6 +19,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "playful",
+      "mysterious"
     ]
   },
   {
@@ -24,6 +32,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "heroic",
+      "romantic"
     ]
   },
   {
@@ -33,6 +45,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "nostalgic",
+      "tender"
     ]
   },
   {
@@ -43,6 +59,10 @@
       "Michael Kamen",
       "jose hernandez",
       "Nydia"
+    ],
+    "moods": [
+      "romantic",
+      "transcendent"
     ]
   },
   {
@@ -52,6 +72,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -61,6 +85,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "mysterious",
+      "playful"
     ]
   },
   {
@@ -70,6 +98,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "wonder",
+      "transcendent"
     ]
   },
   {
@@ -79,6 +111,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -88,6 +124,10 @@
     "artists": [
       "Michael Kamen",
       "The London Metropolitan Orchestra"
+    ],
+    "moods": [
+      "romantic",
+      "peaceful"
     ]
   }
 ]

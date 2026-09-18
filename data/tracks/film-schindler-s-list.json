@@ -7,6 +7,11 @@
       "John Williams",
       "Itzhak Perlman",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "tender",
+      "mournful",
+      "transcendent"
     ]
   },
   {
@@ -17,6 +22,11 @@
       "John Williams",
       "Itzhak Perlman",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "sad",
+      "eerie",
+      "mournful"
     ]
   },
   {
@@ -26,6 +36,11 @@
     "artists": [
       "John Williams",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "transcendent",
+      "powerful",
+      "heroic"
     ]
   },
   {
@@ -35,6 +50,11 @@
     "artists": [
       "John Williams",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "nostalgic",
+      "tender",
+      "mournful"
     ]
   },
   {
@@ -44,6 +64,10 @@
     "artists": [
       "John Williams",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "mysterious",
+      "driving"
     ]
   },
   {
@@ -55,6 +79,11 @@
       "Ronit Shapira",
       "Giora Feidman",
       "The Li-Ron Herzeliya Children's Choir"
+    ],
+    "moods": [
+      "eerie",
+      "tense",
+      "sad"
     ]
   },
   {
@@ -65,6 +94,11 @@
       "John Williams",
       "Itzhak Perlman",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "mournful",
+      "sad",
+      "tender"
     ]
   },
   {
@@ -75,6 +109,11 @@
       "John Williams",
       "Itzhak Perlman",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "eerie",
+      "tense",
+      "mournful"
     ]
   },
   {
@@ -84,6 +123,11 @@
     "artists": [
       "John Williams",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "nostalgic",
+      "sad",
+      "tender"
     ]
   },
   {
@@ -94,6 +138,10 @@
       "John Williams",
       "Itzhak Perlman",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -103,6 +151,10 @@
     "artists": [
       "John Williams",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "tender",
+      "sad"
     ]
   },
   {
@@ -113,7 +165,12 @@
       "Hana Tzur",
       "The Ramat Gan Chamber Choir, Tel-Aviv"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "transcendent",
+      "heroic"
+    ]
   },
   {
     "title": "Remembrances",
@@ -123,6 +180,11 @@
       "John Williams",
       "Itzhak Perlman",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "nostalgic",
+      "tender",
+      "mournful"
     ]
   },
   {
@@ -133,6 +195,11 @@
       "John Williams",
       "Itzhak Perlman",
       "Boston Symphony Orchestra"
+    ],
+    "moods": [
+      "tender",
+      "mournful",
+      "transcendent"
     ]
   }
 ]

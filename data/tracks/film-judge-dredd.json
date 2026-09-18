@@ -6,7 +6,11 @@
     "artists": [
       "The Cure"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Darkness Falls",
@@ -15,7 +19,11 @@
     "artists": [
       "The The"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Super-Charger Heaven",
@@ -24,7 +32,11 @@
     "artists": [
       "White Zombie"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Need-Fire",
@@ -33,7 +45,11 @@
     "artists": [
       "Cocteau Twins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Release the Pressure",
@@ -42,7 +58,11 @@
     "artists": [
       "Leftfield"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Judge Dredd Main Theme",
@@ -50,6 +70,10 @@
     "videoId": "2o4MlsShhGk",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -58,6 +82,10 @@
     "videoId": "GMEUP0Nl5W0",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "tense",
+      "powerful"
     ]
   },
   {
@@ -66,6 +94,10 @@
     "videoId": "ds6vfwRcuS0",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   },
   {
@@ -74,6 +106,10 @@
     "videoId": "JG3HfD-zMrA",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -82,6 +118,10 @@
     "videoId": "jKE1FB0HWSM",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -90,6 +130,10 @@
     "videoId": "D0LnhFN4geQ",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "tender",
+      "mysterious"
     ]
   },
   {
@@ -98,6 +142,10 @@
     "videoId": "GIjRTEhseOs",
     "artists": [
       "Alan Silvestri"
+    ],
+    "moods": [
+      "wonder",
+      "transcendent"
     ]
   }
 ]

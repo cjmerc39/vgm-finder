@@ -6,7 +6,11 @@
     "artists": [
       "Tom Jones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "My Funny Friend and Me (From \"The Emperor's New Groove\"/Soundtrack Version)",
@@ -15,7 +19,11 @@
     "artists": [
       "Sting"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "playful"
+    ]
   },
   {
     "title": "Snuff Out the Light (Yzma's Song)",
@@ -24,7 +32,11 @@
     "artists": [
       "Eartha Kitt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Walk The Llama Llama (From \"The Emperor's New Groove\"/Soundtrack Version)",
@@ -33,7 +45,11 @@
     "artists": [
       "Rascal Flatts"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Perfect World (Reprise) (From \"The Emperor's New Groove\"/Soundtrack Version)",
@@ -42,7 +58,11 @@
     "artists": [
       "Tom Jones"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Run Llama Run (From \"The Emperor's New Groove\"/Score)",
@@ -50,6 +70,10 @@
     "videoId": "5xizMobXNgo",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "driving",
+      "playful"
     ]
   },
   {
@@ -60,7 +84,11 @@
       "Sting",
       "Shawn Colvin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "sad"
+    ]
   },
   {
     "title": "A New Hope (From \"The Emperor's New Groove\"/Score)",
@@ -68,6 +96,10 @@
     "videoId": "8qrRKNfY6iE",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "wonder",
+      "joyful"
     ]
   },
   {
@@ -76,6 +108,10 @@
     "videoId": "wSwlcRxDUw8",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "eerie",
+      "tense"
     ]
   },
   {
@@ -84,6 +120,10 @@
     "videoId": "LDk_HDygyNM",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "driving",
+      "heroic"
     ]
   },
   {
@@ -92,6 +132,10 @@
     "videoId": "WibYbIZ4NNw",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "peaceful",
+      "joyful"
     ]
   },
   {
@@ -100,6 +144,10 @@
     "videoId": "g3saMMVXzO8",
     "artists": [
       "John Debney"
+    ],
+    "moods": [
+      "powerful",
+      "heroic"
     ]
   }
 ]
