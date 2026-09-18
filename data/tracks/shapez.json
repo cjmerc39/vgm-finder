@@ -1,26 +1,50 @@
 [
   {
     "title": "Circle (Menu)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "wonder"
+    ]
   },
   {
     "title": "Square",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Rhombus",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Rectangle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Heptagon",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Semicircle",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   }
 ]

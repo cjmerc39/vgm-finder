@@ -1,14 +1,26 @@
 [
   {
     "title": "Welcome to Neon City",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Harry's Garage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "SynthSky ThunderDrive",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   }
 ]

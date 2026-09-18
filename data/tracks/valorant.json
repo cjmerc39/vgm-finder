@@ -1,39 +1,73 @@
 [
   {
     "title": "Home",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Collection",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Career",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Shop",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Character Select",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Match Loading",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Start Match",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Defeat",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mournful",
+      "sad"
+    ]
   },
   {
     "title": "Victory",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Connection Error",
@@ -41,6 +75,10 @@
   },
   {
     "title": "Home (alternate)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "nostalgic"
+    ]
   }
 ]

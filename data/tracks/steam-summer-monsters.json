@@ -1,18 +1,33 @@
 [
   {
     "title": "OK Hotel",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Slippers",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "tender"
+    ]
   },
   {
     "title": "Squint",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Breaks and Sauce",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   }
 ]
