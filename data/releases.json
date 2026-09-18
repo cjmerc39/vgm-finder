@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T14:04:16Z",
+  "updatedAt": "2026-09-18T18:01:57Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -344197,6 +344197,75 @@
       "scoresN": 23,
       "tracksN": 23,
       "playsTotal": 1484
+    },
+    {
+      "id": "tv-gilmore-girls",
+      "title": "Gilmore Girls Soundtrack",
+      "medium": "tv",
+      "game": "Gilmore Girls",
+      "composers": [
+        "Sam Phillips"
+      ],
+      "date": "2000-10-05",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/4586",
+          "seenAt": "2026-09-18T18:01:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gilmore+Girls+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YzXU1zOfI15",
+      "art": "https://yt3.googleusercontent.com/4B7VfLoNJFeng8hWYAP6hDAVMiJC4Sjl1XeQ2L1IoK2s4-AS-RzqHBBpN973p_yFTfRH_stkCBo6irBO=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Gilmore Girls (Soundtrack from the Original Series)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Sam Phillips"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lHYZfCuBKDIbRQpo7CmxrZd19ssR_nW44",
+      "scoresN": 18,
+      "tracksN": 18,
+      "playsTotal": 5570600
+    },
+    {
+      "id": "tv-the-great-british-bake-off",
+      "title": "The Great British Bake Off Soundtrack",
+      "medium": "tv",
+      "game": "The Great British Bake Off",
+      "composers": [
+        "Tom Howe"
+      ],
+      "date": "2010-08-17",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/34549",
+          "seenAt": "2026-09-18T18:01:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Great+British+Bake+Off+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Svvjdud08bN",
+      "art": "https://yt3.googleusercontent.com/T1SiBDzTY7dXIWcaQ5doTxApUlkbXuyMJIa2xAA3BG4s7e9wke64smhy7uJZHmXdLLuGtEjnRKgkJHAP=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Great British Bake Off",
+      "genres": [
+        "Reality"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Tom Howe"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kQr1zwH3Tiqf1eGbszhSamFEZIlZT3ExY",
+      "scoresN": 18,
+      "tracksN": 18,
+      "playsTotal": 2470
     }
   ]
 }
