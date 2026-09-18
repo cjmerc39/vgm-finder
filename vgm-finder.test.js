@@ -1656,5 +1656,142 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'backups carry the toggles and a bad limit falls to 30');
   assert(rc.errors.length === 0, 'the filters and limits stay clean');
 
+  // ---------- moods: the recipe row, the chips, the feed filtered to a mood ----------
+  rc.w.eval(`recipeOpen(null)`);
+  assert(rq('#sheetwrap #rc-mood') === null, 'no album carries moods: the recipe sheet shows no mood row');
+  rc.w.eval(`recipeCancel()`);
+  const mdRow = (id, medium, game, extra) => Object.assign({ id, title: game + ' Soundtrack', medium, game, composers: [], date: '2025-01-01',
+    sources: [{ name: 'x', type: 'catalog', url: 'https://x/' + id, seenAt: '2026-08-25T10:00:00Z' }],
+    ytmSearchUrl: 'https://music.youtube.com/search?q=' + id, notable: true, ytmAlbumUrl: null, art: null }, extra);
+  const MD_ROWS = [
+    mdRow('m-silent', 'game', 'Silent Town', { tracksN: 4, playsTotal: 8000000, moods: ['eerie', 'tense', 'sad'], moodsN: [3, 2, 1] }),
+    mdRow('m-hero', 'film', 'Hero Rising', { tracksN: 3, scoresN: 2, playsTotal: 8000000, moods: ['powerful', 'heroic', 'tense'], moodsN: [2, 2, 1] }),
+    mdRow('m-calm', 'tv', 'Calm Waters', { tracksN: 3, playsTotal: 30000, moods: ['peaceful', 'tender', 'nostalgic'], moodsN: [2, 1, 1] }),
+    mdRow('m-untagged', 'game', 'Not Yet', { tracksN: 2, playsTotal: 9000 }),
+    mdRow('m-bare', 'game', 'Bare Bones', { tracksN: 1, playsTotal: 10, moods: [], moodsN: [] }),
+  ];
+  const MD_TRACKS = {
+    // a partly tagged album: its most played track carries no mood
+    'm-silent': [{ title: 'S1', plays: '1M plays', videoId: 'vS1', moods: ['eerie', 'tense'] },
+                 { title: 'S2', plays: '2M plays', videoId: 'vS2', moods: ['eerie'] },
+                 { title: 'S3', plays: '10K plays', videoId: 'vS3', moods: ['eerie', 'sad'] },
+                 { title: 'S4', plays: '5M plays', videoId: 'vS4' }],
+    'm-hero': [{ title: 'H1', plays: '3M plays', videoId: 'vH1', moods: ['heroic', 'powerful'] },
+               { title: 'H2', plays: '1M plays', videoId: 'vH2', moods: ['heroic', 'tense'] },
+               { title: 'H3', plays: '4M plays', videoId: 'vH3', moods: ['powerful'], song: true }],
+    // eerie is on a track here but not in the album's top three
+    'm-calm': [{ title: 'C1', plays: '20K plays', videoId: 'vC1', moods: ['peaceful', 'tender'] },
+               { title: 'C2', plays: '9K plays', videoId: 'vC2', moods: ['peaceful', 'nostalgic'] },
+               { title: 'C3', plays: '1K plays', videoId: 'vC3', moods: ['eerie'] }],
+    'm-untagged': [{ title: 'U1', plays: '8K plays', videoId: 'vU1' }, { title: 'U2', plays: '1K plays', videoId: 'vU2' }],
+    'm-bare': [{ title: 'B1', plays: '10 plays', videoId: 'vB1' }],
+  };
+  const mdHits = {};
+  const md = makeDom(async (url) => {
+    mdHits[url] = (mdHits[url] || 0) + 1;
+    if (url === 'data/releases.json') return { ok: true, status: 200, json: async () => ({ updatedAt: '2026-09-01T10:00:00Z', releases: MD_ROWS }) };
+    const m = /^data\/tracks\/(.+)\.json$/.exec(url);
+    const list = m && MD_TRACKS[decodeURIComponent(m[1])];
+    return list ? { ok: true, status: 200, json: async () => JSON.parse(JSON.stringify(list)) } : { ok: false, status: 404, json: async () => ({}) };
+  }, { v: 3, entries: { 'm-silent': { status: 'listened', listenedOn: '2026-08-01', likedTracks: ['S4', 'S2'] } }, lastSeen: T('2026-08-20T00:00:00Z') });
+  await sleep(120);
+  const mq = (sel) => md.d.querySelector(sel);
+  const mdStored = () => JSON.parse(md.w.localStorage.getItem('vgm-v1'));
+  const mStats = (o) => JSON.parse(md.w.eval(`JSON.stringify(recipeStats(${rules(o)}))`));
+  const mPool = (o) => { const s = mStats(o); return s.tracks + '/' + s.albums; };
+  const mTitles = (o) => JSON.parse(md.w.eval(`JSON.stringify(recipeBuild(${rules(o)}, 1).map(t => t.title))`));
+  const mBuild = async (o) => { await md.w.eval(`recipeLoad(${rules(o)}, 1)`); return mTitles(o); };
+  const mLine = (o) => md.w.eval(`recipeCountLine(recipeStats(${rules(o)}), ${rules(o)})`);
+  assert(md.errors.length === 0, 'the mood fixture boots clean');
+  assert(md.w.eval(`JSON.stringify(MOODS)`) === JSON.stringify(JSON.parse(fs.readFileSync('collector/moods.json', 'utf8')).moods.map(m => m.mood)),
+    'the app\'s mood list is the collector\'s vocabulary, in its order');
+
+  // counting before any tracklist is read: albums join on their top three, tracks come from moodsN
+  assert(mPool({ moods: ['eerie'] }) === '3/1' && Object.keys(mdHits).length === 1, 'one mood counts from the row, no tracklist fetched');
+  assert(mPool({ moods: ['tense'] }) === '3/2' && mPool({ moods: ['tense'], medium: 'film' }) === '1/1', 'a mood ANDs with the medium');
+  assert(mPool({ moods: ['nostalgic'] }) === '1/1' && mPool({ moods: ['mournful'] }) === '0/0', 'a mood no album carries empties the pool');
+  assert(mLine({ moods: ['eerie', 'heroic'] }) === 'at least 5 tracks from 2 albums' && mLine({ moods: ['eerie'] }) === '3 tracks from 1 album',
+    'several moods on unread albums count a floor and say so; one mood is exact');
+  assert(mLine({ moods: ['eerie', 'heroic'], pick: 'top', topN: 1 }) === '2 tracks from 2 albums', 'a full top pick is exact even with several moods');
+
+  // building: OR within moods, the untagged track stays out, the top three decide which albums join
+  assert(same(await mBuild({ moods: ['eerie'] }), ['S2', 'S1', 'S3']), 'a partly tagged album gives only its tagged tracks, most played first');
+  assert(same(await mBuild({ moods: ['eerie', 'heroic'], pick: 'top', topN: 1 }), ['H1', 'S2']), 'top 1 per album picks among the mood\'s tracks');
+  assert(same(await mBuild({ moods: ['eerie', 'heroic'] }), ['H1', 'S2', 'H2', 'S1', 'S3']), 'several moods: any of them, across albums, a plays tie kept in album order');
+  assert(mLine({ moods: ['eerie', 'heroic'] }) === '5 tracks from 2 albums' && mPool({ moods: ['eerie', 'tense'] }) === '4/2',
+    'once read, the count is exact and a track with two chosen moods counts once');
+  assert(!mTitles({ moods: ['eerie'] }).includes('C3'), 'eerie outside an album\'s top three does not bring that album in');
+  assert(same(await mBuild({ moods: ['powerful'], scores: true }), ['H1']) && same(await mBuild({ moods: ['powerful'] }), ['H3', 'H1']),
+    'scores only still drops a song that carries the mood');
+  assert(same(await mBuild({ moods: ['eerie'], pick: 'hearted' }), ['S2']), 'a hearted track without the mood stays out of a ♥ pick');
+  assert(mPool({}) === '13/5' && same(await mBuild({ medium: 'game', order: 'album' }), ['B1', 'U1', 'U2', 'S1', 'S2', 'S3', 'S4']),
+    'no moods chosen: untagged albums and tracks are in, as before');
+
+  // names and backups
+  const mName = (o) => md.w.eval(`recipeAutoName(${rules(o)})`);
+  assert(mName({ moods: ['eerie'] }) === 'eerie soundtracks' && mName({ moods: ['tense', 'sad', 'eerie'], medium: 'film', rating: '4' }) === '4★+ tense, sad or eerie film scores',
+    'the chosen moods read out in the name');
+  assert(md.w.eval(`applyImport('{"v":3,"entries":{},"recipes":[{"id":"mx","moods":["eerie","bogus","tense","eerie"]},{"id":"my","moods":"eerie"}]}')`) === true
+    && same(mdStored().recipes.map(r => r.moods), [['tense', 'eerie'], []]), 'import keeps known moods in vocabulary order and drops the rest');
+  md.w.eval(`applyImport('{"v":3,"entries":{"m-silent":{"status":"listened","listenedOn":"2026-08-01","likedTracks":["S4","S2"]}}}')`);
+
+  // the sheet: a mood row, a picker that toggles several, the count following
+  md.w.eval(`setView('library')`); mq('#libpl').click(); await sleep(60);
+  mq('#rcpnew').click(); await sleep(10);
+  assert(mq('#sheetwrap #rc-mood .shl').textContent === 'any', 'the recipe sheet has a mood row, any by default');
+  mq('#sheetwrap #rc-mood').click(); await sleep(10);
+  const mPick = (m) => mq(`#sheetwrap [data-shrm="${m}"]`);
+  assert(mPick('eerie') !== null && md.d.querySelectorAll('#sheetwrap [data-shrm]').length === 17 && mq('#sheetwrap #sheet').classList.contains('tall'),
+    'the mood picker lists any plus the sixteen moods');
+  assert(mPick('tense').querySelector('.shr').textContent === '2' && mPick('mournful').querySelector('.shr').textContent === '0',
+    'each mood shows how many albums have it in their top three');
+  mPick('heroic').click(); await sleep(10);
+  mPick('eerie').click(); await sleep(10);
+  assert(mq('#sheetwrap [data-shrm="heroic"] .shr').textContent === '1 ✓' && mq('#sheetwrap [data-shrm="eerie"] .shr').textContent === '1 ✓'
+    && mq('#sheetwrap [data-shrm="any"] .shr').textContent === '' && mq('#sheetwrap #rcount').textContent === '5 tracks from 2 albums',
+    'picks toggle in place, several at once, with the count shown');
+  mPick('heroic').click(); await sleep(10);
+  assert(mq('#sheetwrap [data-shrm="heroic"] .shr').textContent === '1' && mq('#sheetwrap #rcount').textContent === '3 tracks from 1 album', 'a second tap takes a mood off');
+  mPick('heroic').click(); await sleep(10);
+  md.w.dispatchEvent(new md.w.KeyboardEvent('keydown', { key: 'Escape' }));
+  assert(mq('#sheetwrap #rc-mood .shl').textContent === 'heroic, eerie' && mq('#sheetwrap #rc-name').placeholder === 'heroic or eerie soundtracks',
+    'escape returns to the recipe, which names the picks');
+  mq('#sheetwrap #rc-save').click(); await sleep(120);
+  assert(same(mdStored().recipes[0].moods, ['heroic', 'eerie']), 'the saved recipe carries its moods');
+
+  // chips: the expanded row and the album page, each opening the feed on that mood
+  md.w.eval(`setView('feed')`); await sleep(10);
+  const newBadge = () => (mq('#tabbar .nb') || { textContent: '' }).textContent;
+  const badge0 = newBadge();
+  const feedIds = () => [...md.d.querySelectorAll('#list .row')].map(x => x.dataset.id);
+  const qIn = mq('#q'); qIn.value = 'silent'; qIn.dispatchEvent(new md.w.Event('input', { bubbles: true }));
+  assert(same(feedIds(), ['m-silent']), 'a search narrows the feed first');
+  mq('#list .row[data-id="m-silent"]').click(); await sleep(60);
+  const chips = [...md.d.querySelectorAll('#list .row[data-id="m-silent"] .mchip')].map(x => x.textContent);
+  assert(same(chips, ['eerie', 'tense', 'sad']), 'the expanded row shows the album\'s three moods');
+  assert(mq('#list .row[data-id="m-untagged"]') === null || !mq('#list .row[data-id="m-untagged"] .mchip'), 'an untagged album shows no mood chips');
+  mq('#list .row[data-id="m-silent"] .mchip[data-mood="tense"]').click(); await sleep(10);
+  assert(mq('#moodbar .mlabel').textContent === 'MOOD · TENSE' && mq('#moodbar .mn').textContent === '2 albums'
+    && same(feedIds().sort(), ['m-hero', 'm-silent']) && md.w.eval('Q') === '' && mq('#q').value === '',
+    'a chip opens the feed on that mood and clears the search');
+  assert(newBadge() === badge0 && mq('#c-filters').textContent === 'filters', 'the NEW badge and the filters chip ignore the mood');
+  assert(mdStored().feedMood === undefined, 'the mood is not saved: it lasts the session, like a search');
+  mq('#moodclear').click(); await sleep(10);
+  assert(mq('#moodbar') === null && feedIds().length === 5, 'clear brings the whole feed back');
+  md.w.eval(`openAlbum('m-hero')`); await sleep(60);
+  assert(same([...md.d.querySelectorAll('#album .amoods .mchip')].map(x => x.textContent), ['powerful', 'heroic', 'tense']), 'the album page shows the moods');
+  mq('#album .mchip[data-mood="powerful"]').click(); await sleep(10);
+  assert(mq('#album') === null && mq('#moodbar .mlabel').textContent === 'MOOD · POWERFUL' && same(feedIds(), ['m-hero']),
+    'a chip on the album page closes it and opens the feed on that mood');
+  md.w.eval(`setFeedMedium('tv')`);
+  assert(mq('#moodbar .mn').textContent === '0 albums' && mq('#list .state .big').textContent === 'NO MATCHES' && mq('#moodclear') !== null,
+    'the mood ANDs with the feed filters and an empty result keeps the way out');
+  md.w.eval(`setFeedMedium('all'); clearFeedMood()`);
+  md.w.eval(`setView('library'); setLibView('albums')`); await sleep(10);
+  md.w.eval(`EXPANDED = null; toggleExpand('m-silent')`); await sleep(60);
+  mq('#list .row[data-id="m-silent"] .mchip[data-mood="sad"]').click(); await sleep(10);
+  assert(mdStored().view === 'feed' && same(feedIds(), ['m-silent']), 'a chip in the library opens the feed');
+  assert(md.errors.length === 0, 'the mood flow stays clean');
+
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

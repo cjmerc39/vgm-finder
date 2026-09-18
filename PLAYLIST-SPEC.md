@@ -154,6 +154,14 @@ secrets. Missing key warns and skips, same as the Twitch and TMDb keys.
   feed filtered to that mood.
 - No mood row in the main filters sheet until the catalog is mostly
   tagged; the recipe sheet is enough at first.
+- As built (2026-09-17): a recipe's moods act at both levels. An album
+  joins when one of the chosen moods is in its top three, and gives only
+  its tracks tagged with any chosen mood (an untagged track never joins a
+  mood recipe). Before a tracklist is read the count uses `moodsN`, exact
+  for one mood and shown as "at least" for several. A tapped chip filters
+  the feed for the session only (like the search, never saved) and shows
+  a mood strip with its album count and a clear button above the list;
+  the NEW badge and the filters chip ignore it.
 
 ### 2.6 Tests
 - Vocabulary enforcement: a response with an off-list tag is rejected.

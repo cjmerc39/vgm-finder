@@ -115,6 +115,13 @@ main{position:relative;z-index:1;width:100%;max-width:560px;margin:0 auto;flex:1
 }
 .xlinks{display:flex;gap:6px;flex-wrap:wrap}
 a.xsrc{text-decoration:none}
+.mchip{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;font-size:11px;color:var(--amber2);border-color:var(--amberdim)}
+.mchip:active{background:var(--bg3)}
+.xmoods{display:flex;gap:6px;flex-wrap:wrap}
+#moodbar{display:flex;align-items:center;gap:10px;padding:10px 8px;border-bottom:1px solid var(--line)}
+#moodbar .mlabel{font-family:var(--disp);font-size:10.5px;letter-spacing:1px;color:var(--amber)}
+#moodbar .mn{color:var(--dim);font-size:11px}
+#moodclear{margin-left:auto;color:var(--amber);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;border:1px solid var(--amberdim);border-radius:9px;padding:7px 12px}
 .state{padding:48px 16px;text-align:center;color:var(--mut)}
 .state .big{font-family:var(--disp);font-size:13px;letter-spacing:1px;color:var(--amber);margin-bottom:12px}
 .state p{max-width:34ch;margin:0 auto;line-height:1.6}
@@ -158,6 +165,7 @@ a.xsrc{text-decoration:none}
 #album .asub{margin-top:5px;text-align:center;color:var(--mut);font-size:13px;overflow-wrap:anywhere}
 #album .ameta{margin-top:3px;text-align:center;color:var(--dim);font-size:11.5px;letter-spacing:.5px}
 #album .alist{margin-top:22px}
+#album .amoods{margin-top:12px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
 .atrack{display:flex;align-items:center;gap:10px;padding:6px 4px;border-bottom:1px solid var(--line);cursor:pointer}
 .atrack:active{background:var(--bg2)}
 .atrack .tix{font-family:var(--disp);font-size:10px;color:var(--dim);min-width:22px}
@@ -306,10 +314,13 @@ const RECIPE_PICKS = ['all', 'top', 'hearted'];           // every track | top N
 const RECIPE_ORDERS = ['plays', 'album', 'newest', 'shuffle'];
 const RECIPE_LIMITS = [20, 50, 100, 200];
 const RECIPE_MAX = 200;
+// the mood vocabulary in collector/moods.json's order (a test holds the two together)
+const MOODS = ['wonder', 'transcendent', 'nostalgic', 'tender', 'peaceful', 'joyful', 'powerful', 'tense',
+               'sad', 'heroic', 'eerie', 'driving', 'playful', 'mournful', 'romantic', 'mysterious'];
 function recipeBlank(){
   return { id: '', name: '', source: 'catalog', medium: 'all', genre: { game: 'all', screen: 'all' },
            yearFrom: '', yearTo: '', composer: '', rating: 'any', hearted: false, co: 'all', console: false,
-           scores: false, pick: 'all', topN: 3, limit: 50, order: 'plays' };  // scores: skip songsAlbum rows
+           scores: false, moods: [], pick: 'all', topN: 3, limit: 50, order: 'plays' };  // scores: skip songsAlbum rows; moods: any of these
 }
 function validRecipe(x, ids){
   if(!x || typeof x !== 'object' || typeof x.id !== 'string' || !x.id || ids.has(x.id)) return null;
@@ -327,6 +338,7 @@ function validRecipe(x, ids){
   b.co = ['all', 'big', 'indie'].includes(x.co) ? x.co : 'all';
   b.console = x.console === true;
   b.scores = x.scores === true;
+  b.moods = Array.isArray(x.moods) ? MOODS.filter(m => x.moods.includes(m)) : [];  // vocabulary order, unknown words dropped
   b.pick = RECIPE_PICKS.includes(x.pick) ? x.pick : 'all';
   b.topN = Number.isInteger(x.topN) && x.topN >= 1 && x.topN <= 5 ? x.topN : 3;
   b.limit = Number.isInteger(x.limit) && x.limit >= 1 && x.limit <= RECIPE_MAX ? x.limit : 50;
@@ -338,6 +350,7 @@ let LOADSTATE = 'loading';                    // loading | ok | empty | error
 let LOADERR = '';
 let TRACKNO = {};                             // id -> position in the append-only history
 let Q = '';                                   // search text, deliberately not persisted
+let FMOOD = '';                               // the feed's mood from a tapped chip: session only, like the search
 let SHEET = null;                             // {id, draft} while the logging sheet is open
 let CPICK = null;                             // {rid, t, from?} save-to-playlist picker, or {create:true} from the library
 let CSHEET = null;                            // which control sheet is open: feedsort | filters | year | libsort | plyear | plgenre | recipe | rgenre
@@ -549,7 +562,7 @@ function setMixLimit(n){
 }
 function randomListen(){
   if(S.view !== 'feed'){ S.view = 'feed'; save(); renderAll(); }  // random always picks from the feed
-  const rows = searched(feedRows());
+  const rows = feedView();
   if(!rows.length) return;
   const i = Math.floor(Math.random() * rows.length);
   const pick = rows[i];
@@ -667,6 +680,10 @@ function needsTrackLoad(r){
 function scoreTracks(r, tt){ return mediumOf(r) === 'game' ? tt : tt.filter(t => !t.song); }
 function viewScores(){ return S.view === 'feed' ? S.feedScores : S.view === 'library' ? S.libScores : false; }
 function shownTracks(r){ const tt = tracksOf(r) || []; return viewScores() ? scoreTracks(r, tt) : tt; }
+function albumMoods(r){ return Array.isArray(r.moods) ? r.moods.filter(m => MOODS.includes(m)) : []; }  // the album's top three, commonest first
+function moodTracks(tt, moods){ return tt.filter(t => (t.moods || []).some(m => moods.includes(m))); }
+function anyMoods(){ return R.releases.some(r => albumMoods(r).length > 0); }
+function moodList(ms){ return ms.length < 2 ? ms.join('') : ms.slice(0, -1).join(', ') + ' or ' + ms[ms.length - 1]; }
 function loadTracks(ids){
   const ps = [];
   for(const id of [...new Set(ids)]){
@@ -714,6 +731,12 @@ function matches(r, q){
   return fold(hay).includes(fold(q));
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
+function feedView(){
+  // what the feed shows: its filters, then a tapped mood and the search; the
+  // NEW badge counts the filters alone, as it has always ignored the search
+  const rows = feedRows();
+  return searched(FMOOD ? rows.filter(r => albumMoods(r).includes(FMOOD)) : rows);
+}
 function feedMediumEff(){
   // a games-only catalog behaves as if games were selected, whatever a
   // previous session stored, so no orphan screen controls can render
@@ -890,6 +913,7 @@ function recipeAlbums(rec){
     rows = rows.filter(r => { const e = S.entries[r.id]; return !!e && e.rating != null && e.rating >= min; });
   }
   if(rec.hearted) rows = rows.filter(r => (E(r.id).likedTracks || []).length > 0);
+  if(rec.moods.length) rows = rows.filter(r => albumMoods(r).some(m => rec.moods.includes(m)));  // an album joins on its top three
   return rows;  // scores only never drops an album here: its songs leave track by track
 }
 function availTracks(r, scores){
@@ -899,23 +923,40 @@ function availTracks(r, scores){
   if((r.tracksN || 0) > 0) return scores && mediumOf(r) !== 'game' && r.scoresN != null ? r.scoresN : r.tracksN;
   return (r.topTracks || []).length;
 }
+function moodAvail(r, rec){
+  // tracks carrying a chosen mood: counted once the tracklist is loaded, else
+  // the row's count for the chosen mood it has most of, a floor when several
+  // are chosen because a track can carry more than one
+  const tt = tracksOf(r);
+  if(tt && tt.length){ const m = moodTracks(tt, rec.moods); return (rec.scores ? scoreTracks(r, m) : m).length; }
+  const ns = r.moodsN || [];
+  const n = Math.max(0, ...albumMoods(r).map((m, i) => rec.moods.includes(m) ? ns[i] || 1 : 0));
+  return rec.scores && mediumOf(r) !== 'game' && r.scoresN != null ? Math.min(n, r.scoresN) : n;
+}
 function recipeAlbumCount(rec, r){
   if(rec.pick === 'hearted'){
     const hearts = E(r.id).likedTracks || [], tt = tracksOf(r);
-    if(!rec.scores || mediumOf(r) === 'game' || !tt) return hearts.length;  // unloaded: a heart cannot be told from a song yet
-    return hearts.filter(title => { const t = tt.find(x => fold(x.title) === fold(title)); return !(t && t.song); }).length;
+    const songsOut = rec.scores && mediumOf(r) !== 'game';
+    if(!tt || !(songsOut || rec.moods.length)) return hearts.length;  // unloaded: a heart cannot be told from a song, or read for mood, yet
+    return hearts.filter(title => {
+      const t = tt.find(x => fold(x.title) === fold(title));
+      if(songsOut && t && t.song) return false;
+      return !rec.moods.length || (!!t && moodTracks([t], rec.moods).length > 0);
+    }).length;
   }
-  const n = availTracks(r, rec.scores);
+  const n = rec.moods.length ? moodAvail(r, rec) : availTracks(r, rec.scores);
   return rec.pick === 'top' ? Math.min(rec.topN, n) : n;
 }
 function recipeAlbumTracks(rec, r){
   if(rec.pick === 'hearted'){
     // rematch by folded title so refetched tracklists keep their videoIds
     const tt = tracksOf(r) || [];
-    const hearts = (E(r.id).likedTracks || []).map(title => tt.find(x => fold(x.title) === fold(title)) || { title });
+    let hearts = (E(r.id).likedTracks || []).map(title => tt.find(x => fold(x.title) === fold(title)) || { title });
+    if(rec.moods.length) hearts = moodTracks(hearts, rec.moods);
     return rec.scores ? scoreTracks(r, hearts) : hearts;
   }
   let tt = tracksOf(r) || r.topTracks || [];   // a missing tracklist falls back to the row's top tracks
+  if(rec.moods.length) tt = moodTracks(tt, rec.moods);  // any chosen mood, AND with every other rule
   if(rec.scores) tt = scoreTracks(r, tt);
   return rec.pick === 'top' ? topNOf(tt, rec.topN) : tt;
 }
@@ -928,15 +969,19 @@ function recipeOrdered(rec, rows, seed){
   return out;
 }
 function recipeStats(rec){
-  let tracks = 0, albums = 0;
+  let tracks = 0, albums = 0, floor = false;
   for(const r of recipeAlbums(rec)){
     const n = recipeAlbumCount(rec, r);
-    if(n > 0){ tracks += n; albums++; }
+    if(n > 0){
+      tracks += n; albums++;
+      // several moods on an unread album: its count is a floor, unless the pick is already full
+      if(rec.moods.length > 1 && rec.pick !== 'hearted' && !(tracksOf(r) || []).length && !(rec.pick === 'top' && n >= rec.topN)) floor = true;
+    }
   }
-  return { tracks, albums, expected: Math.min(tracks, rec.limit), capped: tracks > rec.limit };
+  return { tracks, albums, floor, expected: Math.min(tracks, rec.limit), capped: tracks > rec.limit };
 }
 function recipeCountLine(st, rec){
-  return `${st.tracks} track${st.tracks === 1 ? '' : 's'} from ${st.albums} album${st.albums === 1 ? '' : 's'}` +
+  return `${st.floor ? 'at least ' : ''}${st.tracks} track${st.tracks === 1 ? '' : 's'} from ${st.albums} album${st.albums === 1 ? '' : 's'}` +
     (st.capped ? ` · capped at ${rec.limit}` : '');
 }
 function recipeLoadIds(rec, seed){
@@ -988,6 +1033,7 @@ function recipeAutoName(rec){
     if(rec.co !== 'all') bits.push(rec.co === 'big' ? 'big studio' : 'indie');
     if(rec.console) bits.push('console');
   }
+  if(rec.moods.length) bits.push(moodList(rec.moods));
   const g = recipeGenre(rec);
   if(g) bits.push(g.toLowerCase());
   bits.push(rec.scores
@@ -1151,6 +1197,12 @@ function recipeSet(field, v){
   else if(field === 'order' && RECIPE_ORDERS.includes(v)) rc.order = v;
   else if(field === 'hearted' || field === 'console' || field === 'scores') rc[field] = v === true;
   else return;
+  renderSheet();
+}
+function recipeToggleMood(m){
+  const rc = RDRAFT.rec;
+  if(m === 'any') rc.moods = [];
+  else if(MOODS.includes(m)) rc.moods = MOODS.filter(x => x === m ? !rc.moods.includes(m) : rc.moods.includes(x));
   renderSheet();
 }
 function recipeRefreshCount(){
@@ -1419,7 +1471,7 @@ function plYearList(){
 function yearCounts(){
   // years present in the current filtered feed, newest first, undated last
   const counts = {};
-  for(const r of searched(feedRows())){
+  for(const r of feedView()){
     const y = (r.date || '').slice(0, 4) || '····';
     counts[y] = (counts[y] || 0) + 1;
   }
@@ -1571,6 +1623,23 @@ function xtrackHtml(r, t, i){
     `<span class="xend">${t.plays ? `<span class="xplays">${esc(t.plays)}</span>` : ''}${taddHtml(r, t)}${tlikeHtml(r, t)}</span></div>`;
 }
 
+function moodChipsHtml(r){
+  return albumMoods(r).map(m => `<button class="chip mchip" data-act="mood" data-mood="${m}" aria-label="Feed filtered to ${m}">${m}</button>`).join('');
+}
+function openMoodFeed(m){
+  // a tapped mood chip: the feed, showing albums with that mood in their top three
+  if(!MOODS.includes(m)) return;
+  FMOOD = m; ALBUM = null; EXPANDED = null; CSHEET = null;
+  if(Q){
+    Q = '';
+    document.getElementById('q').value = '';
+    document.getElementById('qwrap').classList.remove('has');
+  }
+  S.view = 'feed'; save();
+  renderAll();
+  document.querySelector('main').scrollTop = 0;
+}
+function clearFeedMood(){ FMOOD = ''; renderAll(); }
 function mediumNoun(r){ return { game: 'game', film: 'film', tv: 'show' }[mediumOf(r)] || 'game'; }
 function expandedHtml(r, e){
   const info = [];
@@ -1579,6 +1648,9 @@ function expandedHtml(r, e){
   if(r.company) info.push(['studio', r.company]);
   if(r.date) info.push(['released', fmtDate(r.date)]);
   if(e.listenedOn) info.push(['heard on', fmtDate(e.listenedOn)]);
+  const moods = moodChipsHtml(r);
+  const infoHtml = info.map(([k, v]) => `<span class="xk">${k}</span><span class="xv">${esc(v)}</span>`).join('') +
+    (moods ? `<span class="xk">mood</span><span class="xv xmoods">${moods}</span>` : '');
   let tracks = '';
   const tt = shownTracks(r);
   if(tt.length){
@@ -1600,7 +1672,7 @@ function expandedHtml(r, e){
     `<a class="chip xsrc" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(SRC_LABEL[s.name] || s.name)} ↗</a>`).join('');
   return `<div class="rx">
     <button class="xlisten" data-act="listen">▶ &nbsp;LISTEN ON YT MUSIC</button>
-    ${info.length ? `<div class="xinfo">${info.map(([k, v]) => `<span class="xk">${k}</span><span class="xv">${esc(v)}</span>`).join('')}</div>` : ''}
+    ${infoHtml ? `<div class="xinfo">${infoHtml}</div>` : ''}
     ${tracks}
     ${links ? `<div class="xh">COVERAGE</div><div class="xlinks">${links}</div>` : ''}
   </div>`;
@@ -1653,6 +1725,7 @@ function renderAlbum(){
       ${[r.game, (r.composers || []).join(', ')].filter(Boolean).length ? `<div class="asub">${esc([r.game, (r.composers || []).join(', ')].filter(Boolean).join(' · '))}</div>` : ''}
       ${meta ? `<div class="ameta">${esc(meta)}</div>` : ''}
       ${e.rating != null ? `<div class="ameta"><span class="minis">${minis(e.rating)}</span></div>` : ''}
+      ${moodChipsHtml(r) ? `<div class="amoods">${moodChipsHtml(r)}</div>` : ''}
       <div class="alist">${rows}</div>
     </div>
   </div>`;
@@ -1665,6 +1738,7 @@ function stateHtml(big, body){ return `<div class="state"><div class="big">${big
 function emptyHtml(){
   const q = Q.trim();
   if(q) return stateHtml('NO MATCHES', `Nothing matches “${esc(q)}” here.`);
+  if(S.view === 'feed' && FMOOD) return stateHtml('NO MATCHES', `No album in this feed has ${esc(FMOOD)} among its top moods.`);
   if(S.view === 'queue') return stateHtml('QUEUE EMPTY', 'Tap + on anything in the feed worth hearing and it lands here.');
   if(S.view === 'library'){
     if(S.libView === 'songs')
@@ -1681,7 +1755,7 @@ function pageKey(){
   // reset paging or throw the scroll position back to the top
   return [S.view, S.libView, S.feedSort, S.feedCo, S.feedConsole,
           S.feedGenre.game, S.feedGenre.screen, S.feedMedium,
-          S.libSort, S.libLiked, S.libMedium, Q.trim()].join('\n');
+          S.libSort, S.libLiked, S.libMedium, Q.trim(), FMOOD].join('\n');
 }
 function pageSlice(list){
   // a new list identity starts back at page one; actions on rows (expand,
@@ -1711,7 +1785,8 @@ function rowsHtml(rows, from, to, view){
 function pagedRows(){
   if(S.view === 'library' && S.libView === 'songs')
     return likedSongRows(S.libScores).filter(s => songMatches(s, Q.trim()));
-  return searched(S.view === 'queue' ? queueRows() : S.view === 'library' ? libraryRows() : feedRows());
+  if(S.view === 'feed') return feedView();
+  return searched(S.view === 'queue' ? queueRows() : libraryRows());
 }
 function morePage(){
   const btn = document.getElementById('more');
@@ -1739,7 +1814,7 @@ function observeMore(){
   MORE_IO.observe(btn);
 }
 function jumpToYear(y){
-  const rows = searched(feedRows());
+  const rows = feedView();
   const idx = rows.findIndex(r => ((r.date || '').slice(0, 4) || '····') === y);
   if(idx < 0) return;
   pageSlice(rows);  // sync PAGE_KEY first so the bump below survives the render
@@ -1771,7 +1846,12 @@ function renderList(){
   if(S.view === 'library' && S.libView === 'playlists'){ el.innerHTML = playlistsHtml(); return; }
   const rows = pagedRows();
   const { left } = pageSlice(rows);
-  let html = rows.length ? rowsHtml(rows, 0, PAGE_N * PAGE, S.view) : emptyHtml();
+  let html = S.view === 'feed' && FMOOD
+    ? `<div id="moodbar"><span class="mlabel">MOOD · ${esc(FMOOD.toUpperCase())}</span>` +
+      `<span class="mn">${rows.length} album${rows.length === 1 ? '' : 's'}</span>` +
+      `<button id="moodclear">✕ clear</button></div>`
+    : '';
+  html += rows.length ? rowsHtml(rows, 0, PAGE_N * PAGE, S.view) : emptyHtml();
   html += moreHtml(left);
   if(S.showHidden && hiddenRows().length){
     html += `<div id="hidhead">HIDDEN (${hiddenRows().length})</div>` +
@@ -1887,6 +1967,10 @@ function csheetHtml(){
         ? `<div class="slab">Genre</div><button class="shrow" id="rc-genre">` +
           `<span class="shl">${esc(g ? g.toLowerCase() : 'all')}</span><span class="shr">▸</span></button>`
         : '') +
+      (anyMoods() || rc.moods.length
+        ? `<div class="slab">Mood</div><button class="shrow" id="rc-mood">` +
+          `<span class="shl">${esc(rc.moods.length ? rc.moods.join(', ') : 'any')}</span><span class="shr">▸</span></button>`
+        : '') +
       toggle('scores', 'scores only', rc.scores) +
       `<div class="slab">Years</div><div class="shyears">` +
         `<input id="rc-from" inputmode="numeric" maxlength="4" placeholder="any" value="${esc(rc.yearFrom)}" autocomplete="off" aria-label="From year">` +
@@ -1911,6 +1995,16 @@ function csheetHtml(){
     body = `<button class="shrow" id="shback"><span class="shl">‹ back to the recipe</span></button>` +
       shPickRow('shrg', 'all', 'all', sel === 'all' ? '✓' : '') +
       genreCounts(m, sel).map(([g, n]) => shPickRow('shrg', g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
+  } else if(CSHEET === 'rmood'){
+    // several at once: an album joins when one of them is in its top three,
+    // and brings the tracks tagged with any of them; the counts are albums
+    label = 'Mood';
+    const rc = RDRAFT.rec, base = recipeAlbums(Object.assign({}, rc, { moods: [] }));
+    const albumsWith = m => base.filter(r => albumMoods(r).includes(m)).length;
+    body = `<button class="shrow" id="shback"><span class="shl">‹ back to the recipe</span></button>` +
+      `<div class="rcount" id="rcount">${esc(recipeCountLine(recipeStats(rc), rc))}</div>` +
+      shPickRow('shrm', 'any', 'any', rc.moods.length ? '' : '✓') +
+      MOODS.map(m => shPickRow('shrm', m, m, `${albumsWith(m)}${rc.moods.includes(m) ? ' ✓' : ''}`)).join('');
   } else if(CSHEET === 'libfilters'){
     label = 'Filters';
     const seg = (attr, val, name, on) =>
@@ -1975,7 +2069,7 @@ function csheetHtml(){
     }
     footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
   }
-  const tall = CSHEET === 'recipe' || CSHEET === 'rgenre' ? ' tall' : '';  // the recipe sheet runs full height
+  const tall = CSHEET === 'recipe' || CSHEET === 'rgenre' || CSHEET === 'rmood' ? ' tall' : '';  // the recipe sheet runs full height
   return `<div id="scrim"></div>` +
     `<div id="sheet" class="ctrl${tall}" role="dialog" aria-modal="true" aria-label="${esc(label)}">` +
     `<div class="shbody">${body}</div>${footer}</div>`;
@@ -2048,6 +2142,7 @@ document.addEventListener('visibilitychange', () => {
 document.getElementById('list').addEventListener('click', e => {
   if(e.target.closest('a')) return;  // article links navigate normally
   if(e.target.closest('#more')){ morePage(); return; }
+  if(e.target.closest('#moodclear')){ clearFeedMood(); return; }
   const pp = e.target.closest('[data-plp]');
   if(pp){ publishPlaylist(pp.dataset.plp); return; }
   const px = e.target.closest('[data-plx]');
@@ -2104,6 +2199,7 @@ document.getElementById('list').addEventListener('click', e => {
     else if(btn.dataset.act === 'restore') unhideTrack(id);
     else if(btn.dataset.act === 'listen') openTrack(byId(id));
     else if(btn.dataset.act === 'album') openAlbum(id);
+    else if(btn.dataset.act === 'mood') openMoodFeed(btn.dataset.mood);
     return;
   }
   if(row.classList.contains('song')){
@@ -2186,10 +2282,18 @@ sheetwrap.addEventListener('click', e => {
     if(rg || e.target.id === 'scrim' || e.target.closest('#shback')){ CSHEET = 'recipe'; renderSheet(); }
     return;
   }
+  if(CSHEET === 'rmood'){
+    // a pick toggles in place; the back row or the scrim return to the recipe
+    const rm = e.target.closest('[data-shrm]');
+    if(rm){ recipeToggleMood(rm.dataset.shrm); return; }
+    if(e.target.id === 'scrim' || e.target.closest('#shback')){ CSHEET = 'recipe'; renderSheet(); }
+    return;
+  }
   if(CSHEET === 'recipe'){
     if(e.target.id === 'scrim' || e.target.closest('#rc-cancel')){ recipeCancel(); return; }
     if(e.target.closest('#rc-save')){ recipeSave(); return; }
     if(e.target.closest('#rc-genre')){ CSHEET = 'rgenre'; renderSheet(); return; }
+    if(e.target.closest('#rc-mood')){ CSHEET = 'rmood'; renderSheet(); return; }
     const sg = e.target.closest('[data-rc]');
     if(sg){ recipeSet(sg.dataset.rc, sg.dataset.v); return; }
     const tg = e.target.closest('[data-rct]');
@@ -2307,6 +2411,8 @@ sheetwrap.addEventListener('input', e => {
 });
 document.getElementById('albumwrap').addEventListener('click', e => {
   if(e.target.closest('.aclose')){ closeAlbum(); return; }
+  const mc = e.target.closest('[data-mood]');
+  if(mc){ openMoodFeed(mc.dataset.mood); return; }
   const r = ALBUM && byId(ALBUM);
   const lk = e.target.closest('[data-act="tlike"]');
   if(lk && r){ toggleTrackLike(r.id, lk.dataset.t); return; }  // heart, not play
@@ -2317,7 +2423,7 @@ document.getElementById('albumwrap').addEventListener('click', e => {
 });
 window.addEventListener('keydown', e => {
   if(e.key !== 'Escape') return;
-  if(CSHEET === 'rgenre'){ CSHEET = 'recipe'; renderSheet(); }
+  if(CSHEET === 'rgenre' || CSHEET === 'rmood'){ CSHEET = 'recipe'; renderSheet(); }
   else if(CSHEET === 'recipe') recipeCancel();
   else if(CSHEET === 'fgenre'){ CSHEET = 'filters'; renderSheet(); }
   else if(CSHEET === 'plgpick'){ CSHEET = 'plgenre'; renderSheet(); }
@@ -2329,10 +2435,11 @@ window.addEventListener('keydown', e => {
 let SHEET_Y0 = null;
 sheetwrap.addEventListener('touchstart', e => {
   // control sheets and the picker dismiss on swipe; the logging sheet and
-  // the recipe sheet never do, because a stray drag there would discard the
-  // draft. A swipe that starts inside a scrolled list is a scroll, not a dismiss.
+  // the recipe sheet (with its genre and mood pickers) never do, because a
+  // stray drag there would discard the draft. A swipe that starts inside a
+  // scrolled list is a scroll, not a dismiss.
   const body = e.target.closest('.shbody');
-  SHEET_Y0 = (CSHEET || CPICK) && CSHEET !== 'recipe' && e.target.closest('#sheet') && !(body && body.scrollTop > 0)
+  SHEET_Y0 = (CSHEET || CPICK) && !['recipe', 'rgenre', 'rmood'].includes(CSHEET) && e.target.closest('#sheet') && !(body && body.scrollTop > 0)
     ? e.touches[0].clientY : null;
 }, { passive: true });
 sheetwrap.addEventListener('touchend', e => {
