@@ -8,7 +8,11 @@
       "Kiki Dee",
       "PNAU"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Philadelphia Freedom",
@@ -18,7 +22,11 @@
       "Elton John",
       "PNAU"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Boogie Pilgrim",
@@ -28,7 +36,11 @@
       "Elton John",
       "PNAU"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Stronger Than I Ever Was",
@@ -37,7 +49,11 @@
     "artists": [
       "Mary J. Blige"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "The One (feat. Vera Blue)",
@@ -47,7 +63,11 @@
       "Elton John",
       "PNAU"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Better Together",
@@ -56,6 +76,10 @@
     "artists": [
       "Jessie Ware"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   }
 ]

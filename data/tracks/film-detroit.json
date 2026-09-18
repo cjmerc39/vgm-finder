@@ -6,7 +6,11 @@
     "artists": [
       "The Dramatics"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Jimmy Mack",
@@ -15,7 +19,11 @@
     "artists": [
       "Martha Reeves & The Vandellas"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Baby, Bunny (Sugar Honey)",
@@ -24,7 +32,11 @@
     "artists": [
       "Jerry Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Your Precious Love",
@@ -34,7 +46,11 @@
       "Tammi Terrell",
       "Marvin Gaye"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Till Johnny Comes",
@@ -51,6 +67,10 @@
     "videoId": "aOM3JpiqR2s",
     "artists": [
       "James Newton Howard"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -60,7 +80,11 @@
     "artists": [
       "The Roots"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Devil's Gotten Into My Baby",
@@ -69,7 +93,11 @@
     "artists": [
       "Devotions"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "You're The Cream Of The Crop",
@@ -78,7 +106,11 @@
     "artists": [
       "Lee Rogers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "All Because Of You",
@@ -87,7 +119,10 @@
     "artists": [
       "The Dramatics"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic"
+    ]
   },
   {
     "title": "Alone",
@@ -95,6 +130,10 @@
     "videoId": "IU0J5orlizE",
     "artists": [
       "James Newton Howard"
+    ],
+    "moods": [
+      "sad",
+      "mournful"
     ]
   },
   {
@@ -104,7 +143,11 @@
     "artists": [
       "Algee Smith"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "Heaven Must Have Sent You",
@@ -113,7 +156,11 @@
     "artists": [
       "THE ELGINS"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "I Want To Talk About You",
@@ -122,6 +169,10 @@
     "artists": [
       "John Coltrane"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   }
 ]

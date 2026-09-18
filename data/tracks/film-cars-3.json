@@ -6,7 +6,12 @@
     "artists": [
       "Dan Auerbach"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "Kings Highway",
@@ -15,7 +20,11 @@
     "artists": [
       "James Bay"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Truckaroo",
@@ -24,7 +33,11 @@
     "artists": [
       "Brad Paisley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Thunder Hollow Breakdown",
@@ -33,7 +46,11 @@
     "artists": [
       "Brad Paisley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Glory Days",
@@ -42,7 +59,11 @@
     "artists": [
       "Andra Day"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "nostalgic"
+    ]
   },
   {
     "title": "Ride (feat. Gary Clark Jr.)",
@@ -51,7 +72,11 @@
     "artists": [
       "ZZ Ward"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Drive My Car",
@@ -60,7 +85,11 @@
     "artists": [
       "Jorge Blanco"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Freeway of Love",
@@ -69,6 +98,10 @@
     "artists": [
       "Lea Delaria"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   }
 ]

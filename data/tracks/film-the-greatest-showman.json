@@ -9,7 +9,12 @@
       "Zac Efron",
       "Zendaya"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "A Million Dreams",
@@ -20,7 +25,12 @@
       "Hugh Jackman",
       "Michelle Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "A Million Dreams (Reprise)",
@@ -31,7 +41,11 @@
       "Cameron Seely",
       "Hugh Jackman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Come Alive",
@@ -43,7 +57,12 @@
       "Daniel Everidge",
       "Zendaya"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "The Other Side",
@@ -53,7 +72,12 @@
       "Hugh Jackman",
       "Zac Efron"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Never Enough",
@@ -62,7 +86,12 @@
     "artists": [
       "Loren Allred"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "powerful",
+      "transcendent"
+    ]
   },
   {
     "title": "This Is Me",
@@ -72,7 +101,12 @@
       "Keala Settle",
       "The Greatest Showman Ensemble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic",
+      "joyful"
+    ]
   },
   {
     "title": "Rewrite The Stars",
@@ -82,7 +116,12 @@
       "Zac Efron",
       "Zendaya"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender",
+      "joyful"
+    ]
   },
   {
     "title": "Tightrope",
@@ -91,7 +130,12 @@
     "artists": [
       "Michelle Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving",
+      "mysterious"
+    ]
   },
   {
     "title": "Never Enough (Reprise)",
@@ -100,7 +144,11 @@
     "artists": [
       "Loren Allred"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "From Now On",
@@ -110,6 +158,11 @@
       "Hugh Jackman",
       "The Greatest Showman Ensemble"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "heroic",
+      "powerful"
+    ]
   }
 ]

@@ -1,26 +1,52 @@
 [
   {
     "title": "The Coup",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving",
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "War Pig",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "driving",
+      "heroic"
+    ]
   },
   {
     "title": "Cobra Down",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Shockwave and Aftermath",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "Zakhaev's Exchange",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "We'll Be Dead in Ten",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "Maroon 5"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Thinning",
@@ -15,7 +19,10 @@
     "artists": [
       "Snail Mail"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense"
+    ]
   },
   {
     "title": "What's Cool ((From \"I Feel Pretty\" Soundtrack))",
@@ -24,7 +31,11 @@
     "artists": [
       "Marieme"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Who's Up?",
@@ -33,7 +44,10 @@
     "artists": [
       "LunchMoney Lewis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Dare You (Tiësto vs Twoloud Remix)",
@@ -42,7 +56,11 @@
     "artists": [
       "Hardwell"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Me Too",
@@ -51,7 +69,11 @@
     "artists": [
       "Meghan Trainor"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Perfect Day",
@@ -60,7 +82,11 @@
     "artists": [
       "Paris 96"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "romantic"
+    ]
   },
   {
     "title": "Congratulations (feat. Suzy Shinn)",
@@ -69,7 +95,11 @@
     "artists": [
       "1985"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Can't Get Enough of Myself",
@@ -78,7 +108,11 @@
     "artists": [
       "Santigold"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Downtown",
@@ -87,7 +121,11 @@
     "artists": [
       "Majical Cloudz"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Don't Let It Get to You (Reprise)",
@@ -96,7 +134,10 @@
     "artists": [
       "Rostam"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "I Feel Pretty",
@@ -104,6 +145,10 @@
     "videoId": "AZgfeBePHfk",
     "artists": [
       "Michael Andrews"
+    ],
+    "moods": [
+      "joyful",
+      "powerful"
     ]
   },
   {
@@ -112,6 +157,10 @@
     "videoId": "Kn7v2cdpxVk",
     "artists": [
       "Michael Andrews"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -120,6 +169,10 @@
     "videoId": "9DV5f9d7NKc",
     "artists": [
       "Michael Andrews"
+    ],
+    "moods": [
+      "joyful",
+      "transcendent"
     ]
   }
 ]

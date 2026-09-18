@@ -6,7 +6,11 @@
     "artists": [
       "The Big Apple Band & Walter Murphy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "One Way Out (Live At The Final Fillmore East Concert, 1971)",
@@ -15,7 +19,11 @@
     "artists": [
       "The Allman Brothers Band"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Blue Bayou",
@@ -24,7 +32,11 @@
     "artists": [
       "Linda Ronstadt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "romantic"
+    ]
   },
   {
     "title": "Seguro Lo Hara Otro",
@@ -33,7 +45,11 @@
     "artists": [
       "John Ever Villa"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Black Widow Blues",
@@ -42,7 +58,11 @@
     "artists": [
       "Townes Van Zandt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Hooked On Classics (Part 1 & 2)",
@@ -51,7 +71,11 @@
     "artists": [
       "Royal Philharmonic Orchestra & Louis Clark"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "I Don't Need You",
@@ -60,7 +84,11 @@
     "artists": [
       "The Troyes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Loud N' Restless",
@@ -69,7 +97,11 @@
     "artists": [
       "Loosely Tight"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "What Makes A Good Man",
@@ -94,6 +126,10 @@
     "videoId": "35vwTIQYerc",
     "artists": [
       "Christophe Beck"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -102,6 +138,10 @@
     "videoId": "QqkOyi9G2Hk",
     "artists": [
       "Christophe Beck"
+    ],
+    "moods": [
+      "driving",
+      "tense"
     ]
   }
 ]

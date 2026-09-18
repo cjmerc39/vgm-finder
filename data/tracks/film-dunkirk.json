@@ -5,6 +5,10 @@
     "videoId": "JEc1uhdKRko",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -13,6 +17,10 @@
     "videoId": "3aBdxfjYfoo",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   },
   {
@@ -21,6 +29,10 @@
     "videoId": "VUqhhF583F8",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "eerie",
+      "sad"
     ]
   },
   {
@@ -29,6 +41,10 @@
     "videoId": "4FgHkfi-9Cs",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -37,6 +53,10 @@
     "videoId": "CUK2BEtTgyo",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -46,6 +66,10 @@
     "artists": [
       "Hans Zimmer",
       "Lorne Balfe"
+    ],
+    "moods": [
+      "heroic",
+      "tender"
     ]
   },
   {
@@ -54,6 +78,10 @@
     "videoId": "xztKH2C9X9Y",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "tense",
+      "driving"
     ]
   },
   {
@@ -63,6 +91,10 @@
     "artists": [
       "Hans Zimmer",
       "Benjamin Wallfisch"
+    ],
+    "moods": [
+      "nostalgic",
+      "tender"
     ]
   },
   {
@@ -71,6 +103,10 @@
     "videoId": "OLalhHBn7PY",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "tense",
+      "powerful"
     ]
   },
   {
@@ -81,7 +117,10 @@
       "Benjamin Wallfisch",
       "Sir Edward Elgar"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "End Titles (Dunkirk)",
@@ -92,6 +131,10 @@
       "Sir Edward Elgar",
       "Lorne Balfe",
       "Hans Zimmer"
+    ],
+    "moods": [
+      "mournful",
+      "heroic"
     ]
   }
 ]

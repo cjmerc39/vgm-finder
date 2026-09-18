@@ -7,7 +7,11 @@
       "Logic",
       "Rag'n'Bone Man"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "powerful"
+    ]
   },
   {
     "title": "World Gone Mad",
@@ -16,7 +20,11 @@
     "artists": [
       "Bastille"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Home",
@@ -27,7 +35,11 @@
       "X Ambassadors",
       "Bebe Rexha"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Crown",
@@ -37,7 +49,11 @@
       "Camila Cabello",
       "Grey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Darkside (feat. Kiiara)",
@@ -47,7 +63,11 @@
       "Ty Dolla $ign",
       "Future"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Danger",
@@ -57,7 +77,11 @@
       "Migos",
       "Marshmello"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "That's My N****",
@@ -97,7 +121,11 @@
     "artists": [
       "Portugal. The Man"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Hares on the Mountain",
@@ -106,7 +134,11 @@
     "artists": [
       "alt-J"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Campfire",
@@ -116,7 +148,11 @@
       "Shelley FKA DRAM",
       "Neil Young"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "This Land Is Your Land",
@@ -125,6 +161,10 @@
     "artists": [
       "Sam Hunt"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   }
 ]
