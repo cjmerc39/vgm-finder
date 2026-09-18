@@ -304,3 +304,18 @@ def test_expand_args_globs_for_windows_shells(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     assert mp.expand_args(["playlist-*.json"]) == ["playlist-a.json", "playlist-b.json"]
     assert mp.expand_args(["missing.json"]) == ["missing.json"]
+
+
+def test_pick_auth_prefers_the_app_sign_in_only_when_it_is_complete(tmp_path):
+    browser, oauth = tmp_path / "browser.json", tmp_path / "oauth.json"
+    keys = {"YTM_CLIENT_ID": "id.apps.googleusercontent.com", "YTM_CLIENT_SECRET": "s3cret"}
+    assert mp.pick_auth(browser, oauth, keys) is None  # neither file: nothing to sign in with
+    browser.write_text("{}", encoding="utf-8")
+    assert mp.pick_auth(browser, oauth, keys) == ("browser", browser)  # no oauth.json yet
+    oauth.write_text("", encoding="utf-8")
+    assert mp.pick_auth(browser, oauth, keys)[0] == "browser"  # an empty file (an unset secret) is not a sign-in
+    oauth.write_text('{"refresh_token": "r"}', encoding="utf-8")
+    assert mp.pick_auth(browser, oauth, keys) == ("oauth", oauth, keys["YTM_CLIENT_ID"], "s3cret")
+    assert mp.pick_auth(browser, oauth, {"YTM_CLIENT_ID": "id"})[0] == "browser"  # the secret missing
+    browser.unlink()
+    assert mp.pick_auth(browser, oauth, keys)[0] == "oauth"  # the app sign-in alone is enough

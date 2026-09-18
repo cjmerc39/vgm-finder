@@ -10,6 +10,13 @@ browser.json lives next to this script (or pass --auth PATH). It is
 gitignored and must never be committed or shared; the phone exports, the
 PC publishes.
 
+The app sign-in is preferred when it is there: oauth.json next to this
+script (or --oauth PATH), made by YT Music's device sign-in with CJ's own
+Google Cloud client, plus YTM_CLIENT_ID and YTM_CLIENT_SECRET in the
+environment. A copied browser login is ended by Google within hours when
+it is used from GitHub's runners; the app sign-in is not tied to a browser.
+Without all three, the browser login is used as before.
+
 Re-runs are idempotent: playlists this script created carry a
 "# scorekeep" marker in their description, and a matching one is topped
 up with missing tracks instead of duplicated. A same-named playlist
@@ -28,6 +35,7 @@ without the flag behaves as it always has.
 import argparse
 import glob
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -195,6 +203,18 @@ def expand_args(patterns):
     return out
 
 
+def pick_auth(auth, oauth, env):
+    """Which sign-in to use: ("oauth", path, client id, client secret) when
+    the app sign-in file and both client values are there, else ("browser",
+    path) when the browser login file is, else None."""
+    cid, secret = (env.get("YTM_CLIENT_ID") or "").strip(), (env.get("YTM_CLIENT_SECRET") or "").strip()
+    if oauth and Path(oauth).exists() and Path(oauth).stat().st_size and cid and secret:
+        return ("oauth", Path(oauth), cid, secret)
+    if Path(auth).exists():
+        return ("browser", Path(auth))
+    return None
+
+
 def main(argv=None):
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
@@ -204,17 +224,26 @@ def main(argv=None):
     ap.add_argument("files", nargs="+", help="playlist-*.json exports from the app")
     ap.add_argument("--auth", default=str(Path(__file__).resolve().parent / "browser.json"),
                     help="ytmusicapi browser-auth file (default: companion/browser.json)")
+    ap.add_argument("--oauth", default=str(Path(__file__).resolve().parent / "oauth.json"),
+                    help="ytmusicapi app sign-in file, used with YTM_CLIENT_ID and YTM_CLIENT_SECRET "
+                         "(default: companion/oauth.json)")
     args = ap.parse_args(argv)
 
-    auth = Path(args.auth)
-    if not auth.exists():
-        print(f"no auth file at {auth}", file=sys.stderr)
+    pick = pick_auth(args.auth, args.oauth, os.environ)
+    if pick is None:
+        print(f"no auth file at {args.auth}", file=sys.stderr)
         print("one-time setup:  pip install ytmusicapi  then  ytmusicapi browser", file=sys.stderr)
-        print(f"and move the generated browser.json to {auth}", file=sys.stderr)
+        print(f"and move the generated browser.json to {args.auth}", file=sys.stderr)
         return 2
 
     from ytmusicapi import YTMusic  # lazy: tests drive sync_playlist with a fake
-    yt = YTMusic(str(auth))
+    if pick[0] == "oauth":
+        from ytmusicapi import OAuthCredentials
+        yt = YTMusic(str(pick[1]), oauth_credentials=OAuthCredentials(client_id=pick[2], client_secret=pick[3]))
+        print("signed in with the app sign-in (oauth.json)")
+    else:
+        yt = YTMusic(str(pick[1]))
+        print("signed in with the browser login (browser.json)")
 
     failures = 0
     for path in expand_args(args.files):
