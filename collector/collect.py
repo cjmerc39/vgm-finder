@@ -539,7 +539,8 @@ def _numfold(norm):
 _COVERS_ARTISTS = {"london music works", "city of prague philharmonic orchestra",
                    "vitamin string quartet", "geek music", "l'orchestra cinematique",
                    "rmaster", "video game players", "8-bit arcade", "piano tribute players",
-                   "the marcus hedges trend orchestra", "magnus deus", "sheet music boss"}
+                   "the marcus hedges trend orchestra", "magnus deus", "sheet music boss",
+                   "music lah"}  # its 2-track "Hades II OST: Coral Crown" sat on hades-ii; YTM has no Hades II OST
 
 # publisher wording that marks an album as the official release
 _OFFICIAL_WORDING = re.compile(

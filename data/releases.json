@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T13:43:05Z",
+  "updatedAt": "2026-09-19T16:33:41Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -4351,7 +4351,7 @@
       "title": "Hades II Original Soundtrack",
       "game": "Hades II",
       "composers": [
-        "Music Lah"
+        "Darren Korb"
       ],
       "date": "2024-05-06",
       "sources": [
@@ -4369,7 +4369,6 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Hades+II+Original+Soundtrack",
-      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5NkFvbSuyvi",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2950840/2929a094502c3eb005e2c6793e1ede1ce7c3b67d/header.jpg",
       "notable": true,
       "company": "Supergiant Games",
@@ -4379,21 +4378,7 @@
         "Hack and slash/Beat 'em up",
         "Adventure"
       ],
-      "albumTitle": "Hades II OST: Coral Crown",
-      "ytmPlaylistId": "OLAK5uy_mtRsq5DnZHYPkRJ5FCXHM2EATXNciE8vs",
       "medium": "game",
-      "tracksN": 2,
-      "playsTotal": 641,
-      "moods": [
-        "mysterious",
-        "tense",
-        "eerie"
-      ],
-      "moodsN": [
-        2,
-        1,
-        1
-      ],
       "themes": [
         "Action",
         "Fantasy"
@@ -5674,7 +5659,9 @@
       "id": "hades",
       "title": "Hades Original Soundtrack",
       "game": "Hades",
-      "composers": [],
+      "composers": [
+        "Darren Korb"
+      ],
       "date": "2019-12-10",
       "sources": [
         {
@@ -5691,8 +5678,8 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Hades+Original+Soundtrack",
-      "ytmAlbumUrl": null,
-      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1206340/header.jpg",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_sfzdCLEKV37",
+      "art": "https://yt3.googleusercontent.com/Bmi8gGULQRIrIq4ksmTRLGeMX0FjvZJ0Fd4nPPH0XhF9GD0Qm-hy7ktA9kizs8Et1knFlRnj4Jd36jsS=w544-h544-l90-rj",
       "notable": true,
       "company": "Supergiant Games",
       "console": true,
@@ -5702,12 +5689,15 @@
         "Adventure"
       ],
       "medium": "game",
-      "tracksN": 0,
+      "tracksN": 23,
       "themes": [
         "Action",
         "Fantasy",
         "Drama"
-      ]
+      ],
+      "ytmPlaylistId": "OLAK5uy_kjxEGAEQktN4lDarnp1XXNKOxBq95iFQ0",
+      "playsTotal": 5267000,
+      "albumTitle": "Hades: Original Soundtrack"
     },
     {
       "id": "needy-streamer-overload",
