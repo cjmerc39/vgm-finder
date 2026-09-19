@@ -66,7 +66,7 @@ def _igdb_query(where, offset, typed=True, sort="rating_count desc"):
     # by release date (its where guarantees one); hype-only games have no
     # rating_count and would vanish under the default sort
     query = (f"fields name, slug, first_release_date, rating_count, cover.image_id, platforms, collections, "
-             f"genres.name, involved_companies.company.name, involved_companies.developer; "
+             f"genres.name, themes.name, involved_companies.company.name, involved_companies.developer; "
              f"where {where}{type_clause}; "
              f"sort {sort}; limit {IGDB_PAGE}; offset {offset};")
     resp = requests.post("https://api.igdb.com/v4/games", data=query.encode(), timeout=30,
@@ -218,7 +218,7 @@ def seeds_leg(releases, fetch_fn, resolve_fn, seen_at):
         cover_url = (f"https://images.igdb.com/igdb/image/upload/t_cover_big/{cover}.jpg"
                      if cover else None)
         item = {"game": name, "company": collect.company_of(g), "console": collect.is_console(g),
-                "genres": collect.genres_of(g),
+                "genres": collect.genres_of(g), "themes": collect.themes_of(g),
                 "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
                 "date": when.strftime("%Y-%m-%d"),
                 "title": f"{name} Soundtrack", "composers": []}  # stable slug: upgrades the existing row
@@ -294,7 +294,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                 # real name shows via albumTitle
                 item = {"title": f"{name} Soundtrack", "albumTitle": hit["title"],
                         "game": name, "composers": hit["composers"],
-                        "company": company, "console": console, "genres": collect.genres_of(g),
+                        "company": company, "console": console, "genres": collect.genres_of(g), "themes": collect.themes_of(g),
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"),
                         "ytmAlbumUrl": hit["url"], "art": hit["art"] or cover_url}
@@ -303,7 +303,7 @@ def igdb_leg(releases, state, fetch_fn, resolve_fn, seen_at,
                 # compilations): a search row beats absence, and it upgrades
                 # itself by slug collision if a real album ever appears
                 item = {"title": f"{name} Soundtrack", "game": name, "composers": [],
-                        "company": company, "console": console, "genres": collect.genres_of(g),
+                        "company": company, "console": console, "genres": collect.genres_of(g), "themes": collect.themes_of(g),
                         "url": f"https://www.igdb.com/games/{g.get('slug') or gid}",
                         "date": when.strftime("%Y-%m-%d"), "art": cover_url}
             else:

@@ -39,7 +39,8 @@ def fetch_feed(url):
     return resp.content  # bytes: feedparser sniffs the declared encoding itself
 
 
-def igdb_fetch():
+def igdb_auth():
+    """(client id, bearer token) for IGDB from the Twitch app credentials."""
     cid = os.environ.get("TWITCH_CLIENT_ID")
     secret = os.environ.get("TWITCH_CLIENT_SECRET")
     if not cid or not secret:
@@ -47,11 +48,16 @@ def igdb_fetch():
     tok = requests.post("https://id.twitch.tv/oauth2/token", timeout=30, params={
         "client_id": cid, "client_secret": secret,
         "grant_type": "client_credentials"}).json()["access_token"]
+    return cid, tok
+
+
+def igdb_fetch():
+    cid, tok = igdb_auth()
     now = int(time.time())
     start = now - IGDB_WINDOW_DAYS * 86400
     # game_type replaced the old (now dead) category field; 0/4/8/9 = main/expansion/remake/remaster
     query = (f"fields name, slug, first_release_date, hypes, game_type, cover.image_id, platforms, "
-             f"genres.name, involved_companies.company.name, involved_companies.developer; "
+             f"genres.name, themes.name, involved_companies.company.name, involved_companies.developer; "
              f"where first_release_date >= {start} & first_release_date <= {now} "
              f"& game_type = (0,4,8,9) & hypes >= {IGDB_HYPES_MIN}; "
              f"sort hypes desc; limit {IGDB_LIMIT};")
@@ -771,6 +777,13 @@ def genres_of(game):
     return [n for n in names if n][:3] or None
 
 
+def themes_of(game):
+    """IGDB's themes (Horror, Fantasy, Science fiction...), all of them: they
+    say how a game feels, where its genres say how it plays."""
+    names = [(t.get("name") or "").strip() for t in game.get("themes") or []]
+    return [n for n in names if n]
+
+
 def parse_igdb(raw, resolve):
     games = json.loads(raw)
     if not isinstance(games, list):
@@ -793,7 +806,7 @@ def parse_igdb(raw, resolve):
         items.append({
             "title": f"{name} Soundtrack", "albumTitle": hit["title"],
             "game": name, "composers": hit["composers"],
-            "company": company_of(g), "console": is_console(g), "genres": genres_of(g),
+            "company": company_of(g), "console": is_console(g), "genres": genres_of(g), "themes": themes_of(g),
             "url": f"https://www.igdb.com/games/{g.get('slug') or g.get('id')}",
             "date": when.strftime("%Y-%m-%d"),
             "ytmAlbumUrl": hit["url"],
@@ -1894,9 +1907,22 @@ def tmdb_tv_fetch(now=None):
                        "composers": {}, "aliases": {}, "discovered": len(found), "since": since}).encode()
 
 
+ANIME = "Anime"   # derived: TMDb files anime under Animation, and anime is Animation made in Japanese
+
+
+def is_anime(genre_names, original_language):
+    return "Animation" in genre_names and original_language == "ja"
+
+
 def _tmdb_genres(entry, gmap):
-    names = [gmap.get(str(g)) or gmap.get(g) for g in entry.get("genre_ids") or []]
-    return [n for n in names if n][:3] or None
+    """A title's first three TMDb genres, plus Anime when its full list has
+    Animation and its original language is Japanese (Animation itself may be
+    past the three)."""
+    names = [n for n in (gmap.get(str(g)) or gmap.get(g) for g in entry.get("genre_ids") or []) if n]
+    out = names[:3]
+    if is_anime(names, entry.get("original_language")):
+        out.append(ANIME)
+    return out or None
 
 
 def film_info(entry, data):
@@ -2351,6 +2377,8 @@ def merge(releases, items, source, seen_at):
                 target["console"] = it["console"]
             if not target.get("genres") and it.get("genres"):
                 target["genres"] = list(it["genres"])
+            if target.get("themes") is None and it.get("themes") is not None:
+                target["themes"] = list(it["themes"])
             if not target.get("game") and it.get("game"):
                 target["game"] = it["game"]
             if not target.get("composers") and it.get("composers"):
@@ -2393,6 +2421,8 @@ def merge(releases, items, source, seen_at):
                 entry["console"] = it["console"]
             if it.get("genres"):
                 entry["genres"] = list(it["genres"])
+            if it.get("themes") is not None:
+                entry["themes"] = list(it["themes"])  # a game's IGDB themes; present, even empty, once looked up
             if it.get("weakMatch"):
                 entry["weakMatch"] = True  # rule 2 by plays alone: auditable later
             if it.get("songsAlbum"):

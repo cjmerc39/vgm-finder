@@ -1,0 +1,30 @@
+name: Genre fill
+# The one-time genre fill for rows that already exist (collector/fill_genres.py):
+# Anime on film and TV rows from TMDb, IGDB themes and missing genres on game
+# rows. New rows get both as they arrive; dispatch this by hand.
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: genres
+  cancel-in-progress: false
+jobs:
+  genres:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: python collector/fill_genres.py --anime --games
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+      - run: |
+          git config user.name vgm-bot
+          git config user.email actions@users.noreply.github.com
+          git add data
+          git diff --cached --quiet || (git commit -m "genre fill" && git pull --rebase && git push)
