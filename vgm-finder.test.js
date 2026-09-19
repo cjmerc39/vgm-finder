@@ -1391,8 +1391,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     && rq('#sheetwrap [data-rct="scores"]').getAttribute('aria-pressed') === 'true', 'the toggle drops the songs and names itself');
   rq('#sheetwrap [data-rct="scores"]').click(); await sleep(10);
   assert(rCount() === '48 tracks from 42 albums' && rq('#rc-name').placeholder === 'soundtracks', 'and comes back off');
-  assert(rq('#sheetwrap [data-rc="medium"]') !== null && rq('#sheetwrap #rc-genre') === null && rq('#sheetwrap [data-rc="co"]') === null,
-    'under all mediums the sheet shows no genre, scope, or console rows');
+  assert(rq('#sheetwrap [data-rc="medium"]') !== null && rq('#sheetwrap #rc-genre') !== null && rq('#sheetwrap [data-rc="co"]') === null,
+    'under all mediums the sheet shows the all-mediums genre row but no scope or console rows');
   await tapRule('source', 'library');
   assert(rCount() === '7 tracks from 3 albums' && rq('#rc-name').placeholder === 'soundtracks from the library', 'the count and the name follow the source');
   await tapRule('rating', '4');
@@ -1556,7 +1556,7 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   rc.d.querySelector('#tabbar button[data-v="feed"]').click(); await sleep(20);
   rq('#c-filters').click(); await sleep(10);
   assert(rq('#sheetwrap #shscores') !== null && rq('#sheetwrap #shscores').getAttribute('aria-pressed') === 'false'
-    && rq('#sheetwrap #shgenrerow') === null, 'under all mediums the feed sheet offers scores only and no genre row');
+    && rq('#sheetwrap #shgenrerow') !== null, 'under all mediums the feed sheet offers scores only and the all-mediums genre row');
   rq('#sheetwrap #shscores').click(); await sleep(20);
   assert(rStored().feedScores === true && rq('#c-filters').textContent === 'filters · scores only', 'scores only persists and names itself on the chip');
   rq('#sheetwrap [data-shmed="screen"]').click(); await sleep(20);
@@ -1792,6 +1792,72 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   mq('#list .row[data-id="m-silent"] .mchip[data-mood="sad"]').click(); await sleep(10);
   assert(mdStored().view === 'feed' && same(feedIds(), ['m-silent']), 'a chip in the library opens the feed');
   assert(md.errors.length === 0, 'the mood flow stays clean');
+
+  // ---------- genres: one vocabulary across mediums, Anime, game themes, an all-mediums pick ----------
+  const gnRow = (id, medium, game, extra) => Object.assign({ id, title: game + ' Soundtrack', medium, game, composers: [], date: '2024-01-01',
+    sources: [{ name: 'x', type: 'catalog', url: 'https://x/' + id, seenAt: '2026-08-25T10:00:00Z' }],
+    ytmSearchUrl: 'https://music.youtube.com/search?q=' + id, notable: true, ytmAlbumUrl: null, art: null, tracksN: 1 }, extra);
+  const GN_ROWS = [
+    gnRow('film-arrival', 'film', 'Arrival', { genres: ['Drama', 'Science Fiction', 'Mystery'] }),
+    gnRow('tv-expanse', 'tv', 'The Expanse', { genres: ['Sci-Fi & Fantasy', 'Drama'] }),
+    gnRow('tv-band', 'tv', 'Band of Brothers', { genres: ['War & Politics', 'Action & Adventure', 'Drama'] }),
+    gnRow('film-hereditary', 'film', 'Hereditary', { genres: ['Horror', 'Mystery', 'Thriller'] }),
+    gnRow('film-totoro', 'film', 'My Neighbor Totoro', { genres: ['Fantasy', 'Animation', 'Family', 'Anime'] }),
+    gnRow('dead-space', 'game', 'Dead Space', { genres: ['Shooter'], themes: ['Action', 'Horror', 'Science fiction'] }),
+    gnRow('valiant', 'game', 'Valiant Hearts', { genres: ['Adventure', 'Puzzle'], themes: ['Historical', 'Warfare'] }),
+    gnRow('no-themes', 'game', 'Plain Game', { genres: ['Platform'] }),
+  ];
+  const gn = makeDom(okFetch({ updatedAt: '2026-09-01T10:00:00Z', releases: GN_ROWS }),
+    { v: 3, entries: {}, lastSeen: T('2026-08-20T00:00:00Z'), feedMedium: 'screen',
+      feedGenre: { game: 'all', screen: 'Sci-Fi & Fantasy' },   // a pick saved before the vocabulary joined up
+      recipes: [{ id: 'old', medium: 'tv', genre: { game: 'all', screen: 'War & Politics' } }] });
+  await sleep(120);
+  const gq = (sel) => gn.d.querySelector(sel);
+  const gIds = () => [...gn.d.querySelectorAll('#list .row')].map(x => x.dataset.id).sort();
+  const gState = () => JSON.parse(gn.w.localStorage.getItem('vgm-v1'));
+  const gOf = (id) => JSON.parse(gn.w.eval(`JSON.stringify(genresOf(byId('${id}')))`));
+  assert(gn.errors.length === 0, 'the genre fixture boots clean');
+  assert(same(gOf('tv-expanse'), ['Science Fiction', 'Fantasy', 'Drama'])
+    && same(gOf('tv-band'), ['War', 'Politics', 'Action', 'Adventure', 'Drama']),
+    'TV\'s paired genres read as the film names');
+  assert(same(gOf('dead-space'), ['Shooter', 'Action', 'Horror', 'Science Fiction']) && same(gOf('valiant'), ['Adventure', 'Puzzle', 'History', 'War'])
+    && same(gOf('no-themes'), ['Platform']), 'a game\'s IGDB themes join its genres under the shared names');
+  assert(gState().feedGenre.screen === 'Science Fiction' && same(gIds(), ['film-arrival', 'tv-expanse']),
+    'a saved "Sci-Fi & Fantasy" pick carries over as Science Fiction and now reaches both the film and the show');
+  assert(gState().recipes[0].genre.screen === 'War', 'a recipe\'s old TV pick carries over too');
+  const screenList = JSON.parse(gn.w.eval(`JSON.stringify(genreCounts('screen', 'all').map(x => x[0]))`));
+  assert(screenList.includes('Anime') && screenList.includes('Science Fiction') && !screenList.includes('Sci-Fi & Fantasy')
+    && !screenList.includes('Shooter'), 'the film + tv list is one vocabulary, Anime included, no game genres');
+  gn.w.eval(`setFeedGenre('screen', 'Anime')`);
+  assert(same(gIds(), ['film-totoro']), 'Anime filters film and TV');
+  gn.w.eval(`setFeedMedium('game')`);
+  const gameList = JSON.parse(gn.w.eval(`JSON.stringify(genreCounts('game', 'all').map(x => x[0]))`));
+  assert(gameList.includes('Horror') && gameList.includes('Shooter') && gameList.includes('History'), 'the games list carries themes beside genres');
+  gn.w.eval(`setFeedGenre('game', 'Horror')`);
+  assert(same(gIds(), ['dead-space']), 'a theme filters games');
+
+  // one genre across every medium
+  gn.w.eval(`setFeedMedium('all')`);
+  assert(same(gIds().length, 8), 'under all mediums the game and screen picks stay inert');
+  gq('#c-filters').click(); await sleep(10);
+  gq('#sheetwrap #shgenrerow').click(); await sleep(10);
+  const allPick = (g) => gq(`#sheetwrap [data-shgenre="${g}"]`);
+  assert(allPick('Horror') !== null && allPick('Horror').querySelector('.shr').textContent === '2'
+    && allPick('War').querySelector('.shr').textContent === '2', 'the all-mediums list counts across games, films and shows');
+  allPick('Horror').click(); await sleep(10);
+  assert(gState().feedGenre.all === 'Horror' && same(gIds(), ['dead-space', 'film-hereditary']),
+    'Horror under all mediums: the horror game and the horror film together');
+  gq('#sheetwrap #shdone').click(); await sleep(10);
+  assert(gq('#c-filters').textContent === 'filters · horror', 'the filters chip names the all-mediums genre');
+  gn.w.eval(`clearFeedFilters()`);
+  assert(gState().feedGenre.all === 'all' && gIds().length === 8, 'clear resets it');
+  const gPool = (o) => { const s = JSON.parse(gn.w.eval(`JSON.stringify(recipeStats(Object.assign(recipeBlank(), ${JSON.stringify(o)})))`)); return s.albums; };
+  assert(gPool({ medium: 'all', genre: { game: 'all', screen: 'all', all: 'War' } }) === 2
+    && gPool({ medium: 'screen', genre: { game: 'all', screen: 'Science Fiction', all: 'all' } }) === 2,
+    'recipes take the all-mediums genre and the joined film + tv names');
+  assert(gn.w.eval(`recipeAutoName(Object.assign(recipeBlank(), { genre: { game: 'all', screen: 'all', all: 'Horror' } }))`) === 'horror soundtracks',
+    'an all-mediums genre reads out in a recipe name');
+  assert(gn.errors.length === 0, 'the genre flow stays clean');
 
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

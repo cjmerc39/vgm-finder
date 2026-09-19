@@ -318,7 +318,7 @@ const RECIPE_MAX = 200;
 const MOODS = ['wonder', 'transcendent', 'nostalgic', 'tender', 'peaceful', 'joyful', 'powerful', 'tense',
                'sad', 'heroic', 'eerie', 'driving', 'playful', 'mournful', 'romantic', 'mysterious'];
 function recipeBlank(){
-  return { id: '', name: '', source: 'catalog', medium: 'all', genre: { game: 'all', screen: 'all' },
+  return { id: '', name: '', source: 'catalog', medium: 'all', genre: { game: 'all', screen: 'all', all: 'all' },
            yearFrom: '', yearTo: '', composer: '', rating: 'any', hearted: false, co: 'all', console: false,
            scores: false, moods: [], pick: 'all', topN: 3, limit: 50, order: 'plays' };  // scores: skip songsAlbum rows; moods: any of these
 }
@@ -406,20 +406,41 @@ function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.tes
    diary entry. Bumping would make a briefly-cached v3 page reject this
    state and overwrite it with a blank one, which costs the queue, the
    library, and every custom playlist. */
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all', all:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all', all:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false }; }
+/* one genre vocabulary across mediums: TMDb's paired TV genres split into
+   the film names, and a game's IGDB themes (Horror, Fantasy...) join its
+   genres under the shared names, so a film + tv or all-mediums pick
+   reaches every row it should. The data keeps the sources' own names. */
+const TV_GENRES = { 'Sci-Fi & Fantasy': ['Science Fiction', 'Fantasy'], 'Action & Adventure': ['Action', 'Adventure'],
+                    'War & Politics': ['War', 'Politics'] };
+const THEME_NAMES = { 'Science fiction': 'Science Fiction', 'Historical': 'History', 'Warfare': 'War' };
+const LEGACY_GENRES = { 'Sci-Fi & Fantasy': 'Science Fiction', 'Action & Adventure': 'Action', 'War & Politics': 'War' };
+const GENRE_CACHE = new WeakMap();
+function genresOf(r){
+  let out = GENRE_CACHE.get(r);
+  if(out) return out;
+  out = [];
+  const add = g => { if(g && !out.includes(g)) out.push(g); };
+  for(const g of r.genres || []) (TV_GENRES[g] || [g]).forEach(add);
+  for(const t of r.themes || []) add(THEME_NAMES[t] || t);
+  GENRE_CACHE.set(r, out);
+  return out;
+}
+function genreBucket(medium){ return medium === 'game' ? 'game' : medium === 'all' ? 'all' : 'screen'; }
+function genrePick(v){ const g = typeof v === 'string' && v ? v : 'all'; return LEGACY_GENRES[g] || g; }  // an old TV pick reads as its first film name
 function genreState(v, hint){
   // hint routes a legacy single value into the bucket it actually came
   // from: the old feed sheet scoped its list by medium, the old playlists
-  // sheet merged both vocabularies, so that one lands in both buckets
+  // sheet merged both vocabularies, so that one lands in both buckets.
+  // `all` is the all-mediums pick.
   if(v && typeof v === 'object' && !Array.isArray(v)){
-    return { game: typeof v.game === 'string' && v.game ? v.game : 'all',
-             screen: typeof v.screen === 'string' && v.screen ? v.screen : 'all' };
+    return { game: genrePick(v.game), screen: genrePick(v.screen), all: genrePick(v.all) };
   }
-  const one = typeof v === 'string' && v ? v : 'all';
-  if(one === 'all') return { game: 'all', screen: 'all' };
-  if(hint === 'screen') return { game: 'all', screen: one };
-  if(hint === 'both') return { game: one, screen: one };
-  return { game: one, screen: 'all' };
+  const one = genrePick(v);
+  if(one === 'all') return { game: 'all', screen: 'all', all: 'all' };
+  if(hint === 'screen') return { game: 'all', screen: one, all: 'all' };
+  if(hint === 'both') return { game: one, screen: one, all: 'all' };
+  return { game: one, screen: 'all', all: 'all' };
 }
 
 function migrateV1(d){
@@ -544,13 +565,13 @@ function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); ren
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
 function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(); }
 function setFeedGenre(bucket, g){
-  if(bucket !== 'game' && bucket !== 'screen') return;
+  if(bucket !== 'game' && bucket !== 'screen' && bucket !== 'all') return;
   S.feedGenre[bucket] = g || 'all';
   save(); renderAll();
 }
 function clearFeedFilters(){
   S.feedCo = 'all'; S.feedConsole = false;
-  S.feedGenre = { game: 'all', screen: 'all' };
+  S.feedGenre = { game: 'all', screen: 'all', all: 'all' };
   S.feedMedium = 'all'; S.feedScores = false;
   save(); renderAll();
 }
@@ -753,11 +774,12 @@ function feedRows(){
     // scope, console, and the game genre live and die with the games medium
     if(S.feedCo !== 'all') rows = rows.filter(r => coTier(r) === S.feedCo);
     if(S.feedConsole) rows = rows.filter(r => r.console === true);
-    if(S.feedGenre.game !== 'all') rows = rows.filter(r => (r.genres || []).includes(S.feedGenre.game));
+    if(S.feedGenre.game !== 'all') rows = rows.filter(r => genresOf(r).includes(S.feedGenre.game));
   } else if(screenish(m) && S.feedGenre.screen !== 'all'){
-    rows = rows.filter(r => (r.genres || []).includes(S.feedGenre.screen));
+    rows = rows.filter(r => genresOf(r).includes(S.feedGenre.screen));
+  } else if(m === 'all' && S.feedGenre.all !== 'all'){
+    rows = rows.filter(r => genresOf(r).includes(S.feedGenre.all));  // one genre across games, films and shows
   }
-  // under all, only search and the hidden state apply
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
   else if(S.feedSort === 'az')
@@ -812,7 +834,7 @@ function plFacetRows(rows){
   if(S.plGenre.game !== 'all' || S.plGenre.screen !== 'all'){
     out = out.filter(r => {
       const g = mediumOf(r) === 'game' ? S.plGenre.game : S.plGenre.screen;
-      return g !== 'all' && (r.genres || []).includes(g);
+      return g !== 'all' && genresOf(r).includes(g);
     });
   }
   return out;
@@ -878,11 +900,9 @@ function seededShuffle(list, seed){
 function recipeById(id){ return S.recipes.find(p => p.id === id) || null; }
 function recipeMedium(rec){ return multiMedium() ? rec.medium : 'game'; }  // a games-only catalog behaves as games
 function recipeGenre(rec){
-  // the genre pick applies inside its medium, like the filters sheet; under all it is inert
-  const m = recipeMedium(rec);
-  if(m === 'game') return rec.genre.game !== 'all' ? rec.genre.game : '';
-  if(screenish(m)) return rec.genre.screen !== 'all' ? rec.genre.screen : '';
-  return '';
+  // the genre pick applies inside its medium, like the filters sheet; under all, the all-mediums pick
+  const g = rec.genre[genreBucket(recipeMedium(rec))];
+  return g && g !== 'all' ? g : '';
 }
 function recipeSourceRows(rec){
   if(rec.source === 'queue') return queueRows();
@@ -897,7 +917,7 @@ function recipeAlbums(rec){
   const m = recipeMedium(rec);
   if(m !== 'all') rows = rows.filter(r => mediumMatches(m, r));
   const g = recipeGenre(rec);
-  if(g) rows = rows.filter(r => (r.genres || []).includes(g));
+  if(g) rows = rows.filter(r => genresOf(r).includes(g));
   if(m === 'game'){  // scope and console live and die with the games medium, as in the feed
     if(rec.co !== 'all') rows = rows.filter(r => coTier(r) === rec.co);
     if(rec.console) rows = rows.filter(r => r.console === true);
@@ -1381,6 +1401,8 @@ function feedFilterBits(){
     if(S.feedGenre.game !== 'all') bits.push(S.feedGenre.game.toLowerCase());
   } else if(screenish(m) && S.feedGenre.screen !== 'all'){
     bits.push(S.feedGenre.screen.toLowerCase());
+  } else if(m === 'all' && S.feedGenre.all !== 'all'){
+    bits.push(S.feedGenre.all.toLowerCase());
   }
   return bits;
 }
@@ -1450,9 +1472,9 @@ function genreCounts(medium, sel){
   const counts = {};
   for(const r of R.releases){
     if(r.retired || !mediumMatches(medium, r)) continue;
-    for(const g of r.genres || []) counts[g] = (counts[g] || 0) + 1;
+    for(const g of genresOf(r)) counts[g] = (counts[g] || 0) + 1;
   }
-  const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 24);
+  const names = Object.keys(counts).sort((a, b) => counts[b] - counts[a]).slice(0, 40);
   if(sel && sel !== 'all' && !names.includes(sel)) names.push(sel);
   return names.map(n => [n, counts[n] || 0]);
 }
@@ -1754,7 +1776,7 @@ function pageKey(){
   // showHidden stays out on purpose: revealing the hidden shelf must not
   // reset paging or throw the scroll position back to the top
   return [S.view, S.libView, S.feedSort, S.feedCo, S.feedConsole,
-          S.feedGenre.game, S.feedGenre.screen, S.feedMedium,
+          S.feedGenre.game, S.feedGenre.screen, S.feedGenre.all, S.feedMedium,
           S.libSort, S.libLiked, S.libMedium, Q.trim(), FMOOD].join('\n');
 }
 function pageSlice(list){
@@ -1932,7 +1954,7 @@ function csheetHtml(){
   } else if(CSHEET === 'fgenre'){
     // the feed's genre picker: counts from the selected medium, back to the filters on a pick
     label = 'Genre';
-    const mode = feedMediumEff(), sel = S.feedGenre[mode === 'game' ? 'game' : 'screen'];
+    const mode = feedMediumEff(), sel = S.feedGenre[genreBucket(mode)];
     body = `<button class="shrow" id="shback"><span class="shl">‹ filters</span></button>` +
       shPickRow('shgenre', 'all', 'all', sel === 'all' ? '✓' : '') +
       genreCounts(mode, sel).map(([g, n]) => shPickRow('shgenre', g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
@@ -1963,10 +1985,8 @@ function csheetHtml(){
         ? `<div class="slab">Scope</div>` + segs('co', [['all', 'all'], ['big', 'big studios'], ['indie', 'indie']], rc.co) +
           toggle('console', 'console', rc.console)
         : '') +
-      (m !== 'all'
-        ? `<div class="slab">Genre</div><button class="shrow" id="rc-genre">` +
-          `<span class="shl">${esc(g ? g.toLowerCase() : 'all')}</span><span class="shr">▸</span></button>`
-        : '') +
+      `<div class="slab">Genre</div><button class="shrow" id="rc-genre">` +
+        `<span class="shl">${esc(g ? g.toLowerCase() : 'all')}</span><span class="shr">▸</span></button>` +
       (anyMoods() || rc.moods.length
         ? `<div class="slab">Mood</div><button class="shrow" id="rc-mood">` +
           `<span class="shl">${esc(rc.moods.length ? rc.moods.join(', ') : 'any')}</span><span class="shr">▸</span></button>`
@@ -1991,7 +2011,7 @@ function csheetHtml(){
   } else if(CSHEET === 'rgenre'){
     label = 'Genre';
     const rc = RDRAFT.rec, m = recipeMedium(rc);
-    const sel = rc.genre[m === 'game' ? 'game' : 'screen'];
+    const sel = rc.genre[genreBucket(m)];
     body = `<button class="shrow" id="shback"><span class="shl">‹ back to the recipe</span></button>` +
       shPickRow('shrg', 'all', 'all', sel === 'all' ? '✓' : '') +
       genreCounts(m, sel).map(([g, n]) => shPickRow('shrg', g, g.toLowerCase(), `${n}${sel === g ? ' ✓' : ''}`)).join('');
@@ -2065,7 +2085,7 @@ function csheetHtml(){
           seg('shsub', 'tv', 'tv', mode === 'tv') + `</div>` +
         scoresRow + genreRow(S.feedGenre.screen);
     } else {
-      body += scoresRow;  // mode all: songs still leave film and tv tracklists; games are untouched
+      body += scoresRow + genreRow(S.feedGenre.all);  // mode all: scores only touches film and tv; the genre spans every medium
     }
     footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
   }
@@ -2278,7 +2298,7 @@ sheetwrap.addEventListener('click', e => {
   if(CSHEET === 'rgenre'){
     // a pick, the back row, or the scrim all return to the recipe sheet
     const rg = e.target.closest('[data-shrg]');
-    if(rg) RDRAFT.rec.genre[recipeMedium(RDRAFT.rec) === 'game' ? 'game' : 'screen'] = rg.dataset.shrg;
+    if(rg) RDRAFT.rec.genre[genreBucket(recipeMedium(RDRAFT.rec))] = rg.dataset.shrg;
     if(rg || e.target.id === 'scrim' || e.target.closest('#shback')){ CSHEET = 'recipe'; renderSheet(); }
     return;
   }
@@ -2321,7 +2341,7 @@ sheetwrap.addEventListener('click', e => {
     if(co){ setFeedCo(co.dataset.shco); return; }        // filters apply live; the sheet stays open
     if(e.target.closest('#shconsole')){ toggleFeedConsole(); return; }
     const g = e.target.closest('[data-shgenre]');
-    if(g){ CSHEET = 'filters'; setFeedGenre(feedMediumEff() === 'game' ? 'game' : 'screen', g.dataset.shgenre); return; }  // a pick returns to the filters
+    if(g){ CSHEET = 'filters'; setFeedGenre(genreBucket(feedMediumEff()), g.dataset.shgenre); return; }  // a pick returns to the filters
     const m = e.target.closest('[data-shmed]');
     if(m){
       // tapping the already-on film + tv segment keeps the sub-selection
@@ -2348,7 +2368,7 @@ sheetwrap.addEventListener('click', e => {
       if(CSHEET === 'libfilters'){
         S.libMedium = 'all'; S.libLiked = false; S.libScores = false; save(); renderAll();
       } else if(CSHEET === 'plgenre'){
-        S.plGenre = { game: 'all', screen: 'all' }; save(); renderAll();
+        S.plGenre = { game: 'all', screen: 'all', all: 'all' }; save(); renderAll();
       } else clearFeedFilters();
       return;
     }
