@@ -6,7 +6,12 @@
     "artists": [
       "Gladys Knight"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Wedding Party",
@@ -15,7 +20,11 @@
     "artists": [
       "Ivory"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Dirty Love",
@@ -24,7 +33,11 @@
     "artists": [
       "Tim Feehan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Pam",
@@ -33,7 +46,11 @@
     "artists": [
       "National Philharmonic Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "If You Asked Me To",
@@ -42,7 +59,11 @@
     "artists": [
       "Patti LaBelle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "James & Felix On Their Way To Church",
@@ -51,7 +72,11 @@
     "artists": [
       "National Philharmonic Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "His Funny Valentine",
@@ -60,7 +85,12 @@
     "artists": [
       "National Philharmonic Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Sanchez Is In The Bahamas / Shark Fishing",
@@ -69,7 +99,11 @@
     "artists": [
       "National Philharmonic Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Ninja",
@@ -78,7 +112,12 @@
     "artists": [
       "National Philharmonic Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "Licence Revoked",
@@ -87,6 +126,10 @@
     "artists": [
       "National Philharmonic Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   }
 ]

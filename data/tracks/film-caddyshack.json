@@ -6,7 +6,11 @@
     "artists": [
       "Kenny Loggins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Lead The Way",
@@ -15,7 +19,11 @@
     "artists": [
       "Kenny Loggins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "heroic"
+    ]
   },
   {
     "title": "Make The Move",
@@ -24,7 +32,11 @@
     "artists": [
       "Kenny Loggins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Mr. Night",
@@ -33,7 +45,11 @@
     "artists": [
       "Kenny Loggins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Any Way You Want It",
@@ -42,7 +58,11 @@
     "artists": [
       "Journey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "There She Goes",
@@ -52,7 +72,11 @@
       "Paul Collins",
       "The Beat"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Divine Intervention",
@@ -68,6 +92,10 @@
     "videoId": "w2TXgzjMY2I",
     "artists": [
       "Johnny Mandel"
+    ],
+    "moods": [
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -77,7 +105,10 @@
     "artists": [
       "Hilly Michaels"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "The Big Bang",
@@ -85,6 +116,10 @@
     "videoId": "yWlGOzfvIJw",
     "artists": [
       "Johnny Mandel"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   }
 ]

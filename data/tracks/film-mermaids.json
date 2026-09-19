@@ -6,7 +6,11 @@
     "artists": [
       "Cher"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Big Girls Don't Cry",
@@ -15,7 +19,11 @@
     "artists": [
       "Frankie Valli And The Four Seasons"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "You've Really Got A Hold On Me",
@@ -24,7 +32,11 @@
     "artists": [
       "Smokey Robinson & The Miracles"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "It's My Party",
@@ -33,7 +45,11 @@
     "artists": [
       "Lesley Gore"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "powerful"
+    ]
   },
   {
     "title": "Johnny Angel",
@@ -42,7 +58,11 @@
     "artists": [
       "Shelley Fabares"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Baby I'm Yours",
@@ -51,7 +71,11 @@
     "artists": [
       "Cher"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Just One Look",
@@ -60,7 +84,11 @@
     "artists": [
       "Doris Troy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Love Is Strange",
@@ -69,7 +97,11 @@
     "artists": [
       "Mickey And Sylvia"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "playful"
+    ]
   },
   {
     "title": "Sleepwalk",
@@ -78,7 +110,11 @@
     "artists": [
       "Santo & Johnny"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "If You Wanna Be Happy",
@@ -87,6 +123,10 @@
     "artists": [
       "Jimmy Soul"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   }
 ]

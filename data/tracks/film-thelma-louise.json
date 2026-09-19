@@ -6,7 +6,11 @@
     "artists": [
       "Glenn Frey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Badlands",
@@ -15,7 +19,11 @@
     "artists": [
       "Charlie Sexton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "House Of Hope",
@@ -24,7 +32,11 @@
     "artists": [
       "Toni Childs"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "I Can't Untie You From Me",
@@ -33,7 +45,11 @@
     "artists": [
       "Grayson Hugh"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "sad"
+    ]
   },
   {
     "title": "Better Not Look Down",
@@ -42,7 +58,11 @@
     "artists": [
       "B.B. King"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Little Honey",
@@ -51,7 +71,11 @@
     "artists": [
       "Kelly Willis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Kick The Stones",
@@ -60,7 +84,11 @@
     "artists": [
       "Chris Whitley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Wild Night",
@@ -69,7 +97,11 @@
     "artists": [
       "Martha Reeves"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Tennessee Plates",
@@ -78,7 +110,11 @@
     "artists": [
       "Charlie Sexton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "mysterious"
+    ]
   },
   {
     "title": "The Ballad Of Lucy Jordan",
@@ -87,7 +123,11 @@
     "artists": [
       "Marianne Faithfull"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "Thunderbird (feat. Pete Haycock)",
@@ -95,6 +135,10 @@
     "videoId": "dZoKcqGDJZA",
     "artists": [
       "Hans Zimmer"
+    ],
+    "moods": [
+      "driving",
+      "powerful"
     ]
   }
 ]

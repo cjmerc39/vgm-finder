@@ -6,7 +6,11 @@
     "artists": [
       "Steppenwolf"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Born To Be Wild",
@@ -15,7 +19,12 @@
     "artists": [
       "Steppenwolf"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving",
+      "heroic"
+    ]
   },
   {
     "title": "The Weight",
@@ -24,7 +33,11 @@
     "artists": [
       "Smith"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Wasn't Born To Follow",
@@ -33,7 +46,11 @@
     "artists": [
       "The Byrds"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "If You Want To Be A Bird (Bird Song)",
@@ -42,7 +59,11 @@
     "artists": [
       "The Holy Modal Rounders"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Don't Bogart Me (aka Don't Bogart That Joint)",
@@ -51,7 +72,10 @@
     "artists": [
       "The Fraternity Of Man"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "If 6 Was 9",
@@ -60,7 +84,11 @@
     "artists": [
       "Jimi Hendrix Experience"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Kyrie Ellison Mardi Gras",
@@ -69,7 +97,10 @@
     "artists": [
       "The Electric Prunes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "It's Alright Ma (I'm Only Bleeding)",
@@ -78,7 +109,11 @@
     "artists": [
       "Roger McGuinn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "Ballad Of Easy Rider",
@@ -87,6 +122,10 @@
     "artists": [
       "Roger McGuinn"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "sad"
+    ]
   }
 ]

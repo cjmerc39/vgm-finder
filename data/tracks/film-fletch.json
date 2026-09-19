@@ -6,7 +6,11 @@
     "artists": [
       "Stephanie Mills"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Fletch, Get Outta Town",
@@ -15,7 +19,11 @@
     "artists": [
       "Dan Hartman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Running For Love",
@@ -24,7 +32,11 @@
     "artists": [
       "John Farnham"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Name Of The Game",
@@ -33,7 +45,10 @@
     "artists": [
       "Dan Hartman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Fletch Theme",
@@ -41,6 +56,10 @@
     "videoId": "r-lu0vjHSO0",
     "artists": [
       "Harold Faltermeyer"
+    ],
+    "moods": [
+      "driving",
+      "playful"
     ]
   },
   {
@@ -67,6 +86,9 @@
     "videoId": "dXHT3_GKVuE",
     "artists": [
       "Harold Faltermeyer"
+    ],
+    "moods": [
+      "driving"
     ]
   },
   {
@@ -75,6 +97,10 @@
     "videoId": "aIlWY_tk53s",
     "artists": [
       "Harold Faltermeyer"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -83,6 +109,10 @@
     "videoId": "HC2-slEyuVk",
     "artists": [
       "Harold Faltermeyer"
+    ],
+    "moods": [
+      "driving",
+      "joyful"
     ]
   }
 ]

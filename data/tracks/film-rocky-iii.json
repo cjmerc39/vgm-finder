@@ -6,7 +6,11 @@
     "artists": [
       "Frank Stallone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Pushin'",
@@ -15,7 +19,11 @@
     "artists": [
       "Frank Stallone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Decision",
@@ -23,6 +31,10 @@
     "videoId": "bI98nBRpvgg",
     "artists": [
       "Bill Conti"
+    ],
+    "moods": [
+      "tense",
+      "mysterious"
     ]
   },
   {
@@ -33,6 +45,10 @@
       "Bill Conti",
       "Vincent DeRosa",
       "Mike Lang"
+    ],
+    "moods": [
+      "tender",
+      "nostalgic"
     ]
   },
   {
@@ -42,7 +58,11 @@
     "artists": [
       "Frank Stallone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Reflections",
@@ -50,6 +70,10 @@
     "videoId": "QahjVMeGZXw",
     "artists": [
       "Bill Conti"
+    ],
+    "moods": [
+      "sad",
+      "nostalgic"
     ]
   },
   {
@@ -58,6 +82,10 @@
     "videoId": "fnBrM27ZU3k",
     "artists": [
       "Bill Conti"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -66,6 +94,10 @@
     "videoId": "sfDuSOPRZak",
     "artists": [
       "Bill Conti"
+    ],
+    "moods": [
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -74,6 +106,10 @@
     "videoId": "RAbeT3ojOUg",
     "artists": [
       "Bill Conti"
+    ],
+    "moods": [
+      "eerie",
+      "tense"
     ]
   }
 ]

@@ -6,7 +6,11 @@
     "artists": [
       "Beat Goes Bang"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Perfect World",
@@ -15,7 +19,11 @@
     "artists": [
       "Alias"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Chains",
@@ -24,7 +32,11 @@
     "artists": [
       "Lorraine Lewis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "tense"
+    ]
   },
   {
     "title": "The Best Thing",
@@ -33,7 +45,10 @@
     "artists": [
       "Boom Crash Opera"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "What She Don't Know",
@@ -42,7 +57,10 @@
     "artists": [
       "Flame"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "I Only Have Eyes for You",
@@ -51,7 +69,11 @@
     "artists": [
       "Timothy B. Schmit"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Life's Rich Tapestry",
@@ -69,7 +91,11 @@
     "artists": [
       "Army Of Lovers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Bitter",
@@ -78,7 +104,10 @@
     "artists": [
       "Terrell"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Keep the Faith",
@@ -87,6 +116,10 @@
     "artists": [
       "Valentine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   }
 ]

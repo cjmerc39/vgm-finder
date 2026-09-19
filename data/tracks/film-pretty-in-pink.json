@@ -6,7 +6,12 @@
     "artists": [
       "Orchestral Manoeuvres In The Dark"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Left Of Center (feat. Joe Jackson)",
@@ -15,7 +20,11 @@
     "artists": [
       "Suzanne Vega"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Get To Know Ya",
@@ -24,7 +33,11 @@
     "artists": [
       "Jesse Johnson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Do Wot You Do",
@@ -33,7 +46,11 @@
     "artists": [
       "INXS"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Pretty In Pink",
@@ -42,7 +59,11 @@
     "artists": [
       "The Psychedelic Furs"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Shellshock",
@@ -51,7 +72,11 @@
     "artists": [
       "New Order"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "tense"
+    ]
   },
   {
     "title": "Round, Round",
@@ -60,7 +85,11 @@
     "artists": [
       "Belouis Some"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Wouldn't It Be Good",
@@ -69,7 +98,11 @@
     "artists": [
       "Danny Hutton Hitters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Bring On The Dancing Horses",
@@ -78,7 +111,11 @@
     "artists": [
       "Echo & The Bunnymen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Please Please Please Let Me Get What I Want",
@@ -87,6 +124,11 @@
     "artists": [
       "The Smiths"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender",
+      "mournful"
+    ]
   }
 ]

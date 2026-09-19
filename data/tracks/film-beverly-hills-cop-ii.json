@@ -6,7 +6,12 @@
     "artists": [
       "Bob Seger"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Be There",
@@ -15,7 +20,11 @@
     "artists": [
       "The Pointer Sisters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "In Deep",
@@ -24,7 +33,11 @@
     "artists": [
       "Charlie Sexton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "mysterious"
+    ]
   },
   {
     "title": "Hold On",
@@ -33,7 +46,11 @@
     "artists": [
       "Corey Hart"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "I Want Your Sex",
@@ -42,7 +59,11 @@
     "artists": [
       "George Michael"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Better Way",
@@ -51,7 +72,11 @@
     "artists": [
       "James Ingram"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Love/Hate (From \"Beverly Hills Cop II\")",
@@ -60,7 +85,11 @@
     "artists": [
       "Pebbles"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "sad"
+    ]
   },
   {
     "title": "Cross My Broken Heart",
@@ -69,7 +98,11 @@
     "artists": [
       "The Jets"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "36 Lovers",
@@ -78,7 +111,10 @@
     "artists": [
       "Ready For The World"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "I Can't Stand It",
@@ -87,7 +123,11 @@
     "artists": [
       "Sue Ann"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "powerful"
+    ]
   },
   {
     "title": "All Revved Up",
@@ -96,6 +136,10 @@
     "artists": [
       "Jermaine Jackson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   }
 ]

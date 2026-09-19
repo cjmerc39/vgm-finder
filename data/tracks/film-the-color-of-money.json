@@ -6,7 +6,11 @@
     "artists": [
       "Don Henley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "It's In The Way You Use It (The Color Of Money/Soundtrack Version)",
@@ -15,7 +19,11 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Let Yourself In For It (The Color Of Money/Soundtrack Version)",
@@ -24,7 +32,11 @@
     "artists": [
       "Robert Palmer"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Don't Tell Me Nothin' (The Color Of Money/Soundtrack Version)",
@@ -33,7 +45,11 @@
     "artists": [
       "Willie Dixon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "eerie"
+    ]
   },
   {
     "title": "Two Brothers And A Stranger (The Color Of Money/Soundtrack Version)",
@@ -42,7 +58,11 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "driving"
+    ]
   },
   {
     "title": "Standing On The Edge Of Love (The Color Of Money/Soundtrack Version)",
@@ -51,7 +71,11 @@
     "artists": [
       "B.B. King"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Modern Blues (The Color Of Money/Soundtrack Version)",
@@ -60,6 +84,10 @@
     "artists": [
       "The Gil Evans Orchestra",
       "Robbie Robertson"
+    ],
+    "moods": [
+      "powerful",
+      "driving"
     ]
   },
   {
@@ -69,7 +97,11 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "driving"
+    ]
   },
   {
     "title": "My Baby's In Love With Another Guy (The Color Of Money/Soundtrack Version)",
@@ -78,7 +110,11 @@
     "artists": [
       "Robert Palmer"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "The Main Title (The Color Of Money/Soundtrack Version)",
@@ -87,6 +123,10 @@
     "artists": [
       "The Gil Evans Orchestra",
       "Robbie Robertson"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   }
 ]

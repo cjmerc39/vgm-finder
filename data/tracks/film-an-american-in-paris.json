@@ -7,7 +7,11 @@
       "Johnny Green",
       "MGM Studio Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
   },
   {
     "title": "By Strauss",
@@ -16,7 +20,11 @@
     "artists": [
       "Gene Kelly, Georges Guétary, Mac MacLain, Grace Stark, and Pete Roberts"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "romantic"
+    ]
   },
   {
     "title": "I Got Rhythm",
@@ -26,7 +34,11 @@
       "Gene Kelly",
       "MGM Children's Chorus"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Tra-La-La",
@@ -36,7 +48,11 @@
       "Gene Kelly",
       "Oscar Levant"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Love Is Here To Stay",
@@ -45,7 +61,11 @@
     "artists": [
       "Gene Kelly"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "(I'll Build A) Stairway To Paradise",
@@ -54,7 +74,11 @@
     "artists": [
       "Georges Guetary"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Concerto In F (3rd Movement)",
@@ -64,7 +88,11 @@
       "MGM Studio Orchestra",
       "Oscar Levant"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "powerful"
+    ]
   },
   {
     "title": "'S Wonderful",
@@ -74,7 +102,11 @@
       "Gene Kelly",
       "Georges Guétary"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "An American In Paris Ballet",
@@ -84,7 +116,11 @@
       "Johnny Green",
       "MGM Studio Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Finale (An American In Paris)",
@@ -94,6 +130,10 @@
       "Johnny Green",
       "MGM Studio Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   }
 ]

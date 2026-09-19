@@ -6,7 +6,12 @@
     "artists": [
       "John Parr"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic",
+      "driving"
+    ]
   },
   {
     "title": "Shake Down",
@@ -15,7 +20,11 @@
     "artists": [
       "Billy Squier"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Young and Innocent",
@@ -24,7 +33,11 @@
     "artists": [
       "Elefante"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "tender"
+    ]
   },
   {
     "title": "This Time It Was Really Right",
@@ -33,7 +46,11 @@
     "artists": [
       "Jon Anderson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Saved My Life",
@@ -42,7 +59,11 @@
     "artists": [
       "Fee Waybill"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Love Theme from St. Elmo's Fire (Instrumental)",
@@ -50,6 +71,10 @@
     "videoId": "ZEQKIXmU404",
     "artists": [
       "David Foster"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -59,7 +84,11 @@
     "artists": [
       "Vikki Moss"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Stressed Out (Close to the Edge)",
@@ -68,7 +97,11 @@
     "artists": [
       "Airplay"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Georgetown",
@@ -76,6 +109,10 @@
     "videoId": "sVmELjXqtug",
     "artists": [
       "David Foster"
+    ],
+    "moods": [
+      "nostalgic",
+      "peaceful"
     ]
   },
   {
@@ -84,6 +121,10 @@
     "videoId": "Cjg3T_M_zr8",
     "artists": [
       "David Foster"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   }
 ]

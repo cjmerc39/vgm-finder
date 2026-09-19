@@ -6,7 +6,12 @@
     "artists": [
       "The Disney Afternoon Studio Chorus"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "nostalgic",
+      "wonder"
+    ]
   },
   {
     "title": "Hail To the Princess Aroura",
@@ -15,7 +20,11 @@
     "artists": [
       "The Disney Afternoon Studio Chorus"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "heroic"
+    ]
   },
   {
     "title": "The Gifts of Beauty and Song / Maleficent Appears / True Love Conquers All",
@@ -24,6 +33,11 @@
     "artists": [
       "George Bruns",
       "The Disney Afternoon Studio Chorus"
+    ],
+    "moods": [
+      "tender",
+      "powerful",
+      "mournful"
     ]
   },
   {
@@ -33,7 +47,11 @@
     "artists": [
       "Mary Costa"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "wonder"
+    ]
   },
   {
     "title": "Woodland Symphony / Once Upon a Dream",
@@ -42,7 +60,11 @@
     "artists": [
       "Bill Lee & Mary Costa"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "The Three Good Fairies (Sing a Smiling Song)",
@@ -50,6 +72,10 @@
     "videoId": "KwCISRNpNUY",
     "artists": [
       "George Bruns & Tom Adair"
+    ],
+    "moods": [
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -60,7 +86,10 @@
       "Bill Thompson",
       "Taylor Holmes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Maleficent's Evil Spell",
@@ -68,6 +97,11 @@
     "videoId": "am-0gXBHgc0",
     "artists": [
       "George Bruns"
+    ],
+    "moods": [
+      "eerie",
+      "tense",
+      "powerful"
     ]
   },
   {
@@ -77,7 +111,11 @@
     "artists": [
       "The Disney Afternoon Studio Chorus"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Fairies To the Rescue / Bacchanal",
@@ -85,6 +123,11 @@
     "videoId": "1m8BThKpzis",
     "artists": [
       "George Bruns"
+    ],
+    "moods": [
+      "heroic",
+      "powerful",
+      "joyful"
     ]
   },
   {
@@ -94,7 +137,11 @@
     "artists": [
       "The Disney Afternoon Studio Chorus"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Battle with the Forces of Evil / Awakening / Finale",
@@ -103,6 +150,11 @@
     "artists": [
       "George Bruns",
       "The Disney Afternoon Studio Chorus"
+    ],
+    "moods": [
+      "heroic",
+      "powerful",
+      "transcendent"
     ]
   }
 ]

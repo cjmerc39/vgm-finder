@@ -6,7 +6,11 @@
     "artists": [
       "The Juicy Fruits"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Faust",
@@ -15,7 +19,11 @@
     "artists": [
       "Bill Finley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Upholstery",
@@ -24,7 +32,10 @@
     "artists": [
       "The Beach Bums"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Special To Me (Phoenix Audition Song)",
@@ -33,7 +44,11 @@
     "artists": [
       "Jessica Harper"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Phantom's Theme (Beauty And The Beast)",
@@ -41,6 +56,10 @@
     "videoId": "R1CGMLMZEzc",
     "artists": [
       "Paul Williams"
+    ],
+    "moods": [
+      "mysterious",
+      "powerful"
     ]
   },
   {
@@ -50,7 +69,11 @@
     "artists": [
       "The Undead"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Life At Last",
@@ -59,7 +82,11 @@
     "artists": [
       "Ray Kennedy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "joyful"
+    ]
   },
   {
     "title": "Old Souls",
@@ -68,7 +95,11 @@
     "artists": [
       "Jessica Harper"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Faust",
@@ -76,6 +107,10 @@
     "videoId": "RfnthfR8qHk",
     "artists": [
       "Paul Williams"
+    ],
+    "moods": [
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -84,6 +119,10 @@
     "videoId": "U6rzVVwvlLU",
     "artists": [
       "Paul Williams"
+    ],
+    "moods": [
+      "tense",
+      "mournful"
     ]
   }
 ]

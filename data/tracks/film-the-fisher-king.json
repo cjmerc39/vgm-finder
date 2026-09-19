@@ -15,7 +15,11 @@
     "artists": [
       "Trip"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Pet Peeves (Dialogue)",
@@ -34,7 +38,11 @@
     "artists": [
       "Brenda Lee"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Sunrise Confession (Dialogue)",
@@ -54,7 +62,11 @@
       "Chill Rob G",
       "Jeff Bridges"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "I Wish I Knew",
@@ -63,7 +75,11 @@
     "artists": [
       "John Coltrane Quartet"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "romantic"
+    ]
   },
   {
     "title": "How About You",
@@ -72,7 +88,11 @@
     "artists": [
       "Harry Nilsson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "The Grand Central Waltz",
@@ -80,6 +100,10 @@
     "videoId": "QwjKVK1fiWA",
     "artists": [
       "George Fenton"
+    ],
+    "moods": [
+      "wonder",
+      "romantic"
     ]
   },
   {
@@ -88,6 +112,10 @@
     "videoId": "BnvOPxiTUdU",
     "artists": [
       "George Fenton"
+    ],
+    "moods": [
+      "mysterious",
+      "tender"
     ]
   },
   {
@@ -96,6 +124,10 @@
     "videoId": "XGTh2qxtEak",
     "artists": [
       "George Fenton"
+    ],
+    "moods": [
+      "mysterious",
+      "tense"
     ]
   },
   {
@@ -105,7 +137,11 @@
     "artists": [
       "Michael Jeter"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "An Evening Out (Includes \"Lydia The Tattooed Lady\")",
@@ -114,7 +150,11 @@
     "artists": [
       "Robin Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Quest For The Grail",
@@ -122,6 +162,10 @@
     "videoId": "-l-4gXlMvp0",
     "artists": [
       "George Fenton"
+    ],
+    "moods": [
+      "heroic",
+      "powerful"
     ]
   },
   {
@@ -130,6 +174,10 @@
     "videoId": "tz44HFkjXRI",
     "artists": [
       "George Fenton"
+    ],
+    "moods": [
+      "eerie",
+      "tense"
     ]
   },
   {
@@ -138,6 +186,10 @@
     "videoId": "Hs3AWK7WTKM",
     "artists": [
       "George Fenton"
+    ],
+    "moods": [
+      "joyful",
+      "nostalgic"
     ]
   }
 ]

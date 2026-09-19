@@ -6,7 +6,11 @@
     "artists": [
       "Patti LaBelle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Don't Get Stopped In Beverly Hills",
@@ -15,7 +19,11 @@
     "artists": [
       "Shalamar"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Do You Really (Want My Love?)",
@@ -24,7 +32,10 @@
     "artists": [
       "Junior"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic"
+    ]
   },
   {
     "title": "Emergency",
@@ -33,7 +44,11 @@
     "artists": [
       "Rockie Robbins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tense",
+      "driving"
+    ]
   },
   {
     "title": "Neutron Dance",
@@ -42,7 +57,11 @@
     "artists": [
       "The Pointer Sisters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "The Heat Is On (From \"Beverly Hills Cop\" Soundtrack)",
@@ -51,7 +70,11 @@
     "artists": [
       "Glenn Frey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "Gratitude",
@@ -60,7 +83,10 @@
     "artists": [
       "Danny Elfman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Stir It Up (From \"Beverly Hills Cop\" Soundtrack)",
@@ -69,7 +95,11 @@
     "artists": [
       "Patti LaBelle"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Rock 'N Roll Me Again",
@@ -78,7 +108,10 @@
     "artists": [
       "The System"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Axel F (From \"Beverly Hills Cop\" Soundtrack)",
@@ -86,6 +119,10 @@
     "videoId": "i3z6K3cx8x4",
     "artists": [
       "Harold Faltermeyer"
+    ],
+    "moods": [
+      "driving",
+      "playful"
     ]
   }
 ]

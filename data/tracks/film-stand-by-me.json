@@ -6,7 +6,11 @@
     "artists": [
       "Buddy Holly"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "nostalgic"
+    ]
   },
   {
     "title": "Let the Good Times Roll",
@@ -15,7 +19,11 @@
     "artists": [
       "Shirley and Lee"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Come Go with Me",
@@ -24,7 +32,11 @@
     "artists": [
       "Del Vikings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "Whispering Bells",
@@ -33,7 +45,11 @@
     "artists": [
       "The Del Vikings"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Get a Job",
@@ -42,7 +58,11 @@
     "artists": [
       "The Silhouettes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Lollipop",
@@ -51,7 +71,11 @@
     "artists": [
       "The Chordettes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Yakety Yak",
@@ -60,7 +84,11 @@
     "artists": [
       "The Coasters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Great Balls of Fire",
@@ -69,7 +97,11 @@
     "artists": [
       "Jerry Lee Lewis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Mr. Lee",
@@ -78,7 +110,11 @@
     "artists": [
       "The Bobbettes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Stand By Me",
@@ -87,6 +123,10 @@
     "artists": [
       "Ben E. King"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   }
 ]

@@ -6,7 +6,12 @@
     "artists": [
       "Irene Cara"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful",
+      "romantic"
+    ]
   },
   {
     "title": "He's A Dream",
@@ -15,7 +20,11 @@
     "artists": [
       "Shandi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Love Theme From Flashdance",
@@ -24,7 +33,11 @@
     "artists": [
       "Helen St. John"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Manhunt",
@@ -33,7 +46,11 @@
     "artists": [
       "Karen Kamon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense"
+    ]
   },
   {
     "title": "Lady, Lady, Lady",
@@ -42,7 +59,11 @@
     "artists": [
       "Joe \"Bean\" Esposito"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "romantic"
+    ]
   },
   {
     "title": "Imagination",
@@ -51,7 +72,11 @@
     "artists": [
       "Laura Branigan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
   },
   {
     "title": "Romeo",
@@ -60,7 +85,11 @@
     "artists": [
       "Donna Summer"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "playful"
+    ]
   },
   {
     "title": "Seduce Me Tonight",
@@ -69,7 +98,11 @@
     "artists": [
       "Cycle V"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "driving"
+    ]
   },
   {
     "title": "I'll Be Here Where The Heart Is",
@@ -78,7 +111,11 @@
     "artists": [
       "Kim Carnes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   },
   {
     "title": "Maniac",
@@ -87,6 +124,11 @@
     "artists": [
       "Michael Sembello"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "tense",
+      "eerie"
+    ]
   }
 ]

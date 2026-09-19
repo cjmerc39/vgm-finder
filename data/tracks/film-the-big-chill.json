@@ -6,7 +6,11 @@
     "artists": [
       "Marvin Gaye"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "joyful"
+    ]
   },
   {
     "title": "My Girl",
@@ -15,7 +19,11 @@
     "artists": [
       "The Temptations"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Good Lovin'",
@@ -24,7 +32,11 @@
     "artists": [
       "The Rascals"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "The Tracks Of My Tears",
@@ -33,7 +45,11 @@
     "artists": [
       "Smokey Robinson & The Miracles"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mournful"
+    ]
   },
   {
     "title": "Joy To The World",
@@ -42,7 +58,11 @@
     "artists": [
       "Three Dog Night"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Ain't Too Proud To Beg",
@@ -51,7 +71,11 @@
     "artists": [
       "The Temptations"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "(You Make Me Feel Like A) Natural Woman",
@@ -60,7 +84,11 @@
     "artists": [
       "Aretha Franklin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "romantic"
+    ]
   },
   {
     "title": "I Second That Emotion",
@@ -69,7 +97,11 @@
     "artists": [
       "Smokey Robinson & The Miracles"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "tender"
+    ]
   },
   {
     "title": "A Whiter Shade Of Pale",
@@ -78,7 +110,11 @@
     "artists": [
       "Procol Harum"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "transcendent",
+      "mysterious"
+    ]
   },
   {
     "title": "Tell Him",
@@ -87,6 +123,10 @@
     "artists": [
       "The Exciters"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   }
 ]

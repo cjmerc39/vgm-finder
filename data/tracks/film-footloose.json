@@ -6,7 +6,12 @@
     "artists": [
       "Kenny Loggins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving",
+      "playful"
+    ]
   },
   {
     "title": "Let's Hear It for the Boy (From \"Footloose\" Soundtrack)",
@@ -15,7 +20,11 @@
     "artists": [
       "Deniece Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Almost Paradise (Love Theme from \"Footloose\") (feat. Ann Wilson)",
@@ -24,7 +33,11 @@
     "artists": [
       "Mike Reno"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Holding out for a Hero (from \"Footloose\")",
@@ -33,7 +46,11 @@
     "artists": [
       "Bonnie Tyler"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "heroic",
+      "powerful"
+    ]
   },
   {
     "title": "Dancing In the Sheets (From \"Footloose\" Soundtrack)",
@@ -42,7 +59,11 @@
     "artists": [
       "Shalamar"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "I'm Free (Heaven Helps the Man) (From \"Footloose\" Soundtrack)",
@@ -51,7 +72,11 @@
     "artists": [
       "Kenny Loggins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Somebody's Eyes (From \"Footloose\" Soundtrack)",
@@ -60,7 +85,11 @@
     "artists": [
       "Karla Bonoff"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "The Girl Gets Around",
@@ -78,6 +107,10 @@
     "artists": [
       "Moving Pictures"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   }
 ]

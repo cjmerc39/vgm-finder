@@ -6,7 +6,12 @@
     "artists": [
       "Ice T"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful",
+      "mysterious"
+    ]
   },
   {
     "title": "I'm Dreamin'",
@@ -15,7 +20,11 @@
     "artists": [
       "Christopher Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "New Jack City",
@@ -24,7 +33,11 @@
     "artists": [
       "Guy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "driving"
+    ]
   },
   {
     "title": "I'm Still Waiting",
@@ -33,7 +46,11 @@
     "artists": [
       "Johnny Gill"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "(There You Go) Tellin' Me No Again",
@@ -42,7 +59,10 @@
     "artists": [
       "Keith Sweat"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic"
+    ]
   },
   {
     "title": "Facts of Life (Dancin' Danny D's Radio Edit)",
@@ -51,7 +71,11 @@
     "artists": [
       "Danny Madden"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "For the Love of Money / Living for the City (feat. Queen Latifah)",
@@ -61,7 +85,11 @@
       "Troop",
       "LeVert"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "I Wanna Sex You Up (Single Mix)",
@@ -70,7 +98,11 @@
     "artists": [
       "Color Me Badd"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Lyrics 2 the Rhythm",
@@ -79,7 +111,11 @@
     "artists": [
       "Essence"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "joyful"
+    ]
   },
   {
     "title": "Get It Together (Black Is a Force)",
@@ -88,7 +124,11 @@
     "artists": [
       "F.S. Effect"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "In the Dust",
@@ -97,6 +137,10 @@
     "artists": [
       "2 Live Crew"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tense"
+    ]
   }
 ]

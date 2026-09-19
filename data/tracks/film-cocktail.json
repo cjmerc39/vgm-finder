@@ -6,7 +6,11 @@
     "artists": [
       "Starship"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "Powerful Stuff",
@@ -15,7 +19,11 @@
     "artists": [
       "The Fabulous Thunderbirds"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "heroic"
+    ]
   },
   {
     "title": "Since When",
@@ -24,7 +32,11 @@
     "artists": [
       "Robbie Nevil"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Don't Worry, Be Happy",
@@ -33,7 +45,11 @@
     "artists": [
       "Bobby McFerrin"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "peaceful"
+    ]
   },
   {
     "title": "Hippy Hippy Shake",
@@ -42,7 +58,11 @@
     "artists": [
       "Georgia Satellites"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Kokomo (1995 Remaster)",
@@ -51,7 +71,11 @@
     "artists": [
       "The Beach Boys"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "romantic"
+    ]
   },
   {
     "title": "Rave On",
@@ -60,7 +84,11 @@
     "artists": [
       "John Cougar Mellencamp"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "driving"
+    ]
   },
   {
     "title": "All Shook Up",
@@ -69,7 +97,11 @@
     "artists": [
       "Ry Cooder"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Oh, I Love You So",
@@ -78,7 +110,11 @@
     "artists": [
       "Preston Smith"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Tutti Frutti",
@@ -87,6 +123,10 @@
     "artists": [
       "Little Richard"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   }
 ]

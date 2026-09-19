@@ -7,7 +7,12 @@
       "Bill Medley",
       "Jennifer Warnes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic",
+      "powerful"
+    ]
   },
   {
     "title": "Be My Baby",
@@ -16,7 +21,11 @@
     "artists": [
       "The Ronettes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "She's Like the Wind (From \"Dirty Dancing\" Soundtrack) (feat. Wendy Fraser)",
@@ -25,7 +34,11 @@
     "artists": [
       "Patrick Swayze"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Hungry Eyes (From \"Dirty Dancing\" Soundtrack)",
@@ -34,7 +47,11 @@
     "artists": [
       "Eric Carmen"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Stay",
@@ -44,7 +61,11 @@
       "Maurice Williams",
       "The Zodiacs"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Yes (From \"Dirty Dancing\" Soundtrack)",
@@ -53,7 +74,11 @@
     "artists": [
       "Merry Clayton"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "You Don't Own Me",
@@ -62,7 +87,11 @@
     "artists": [
       "The Blow Monkeys"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "powerful",
+      "joyful"
+    ]
   },
   {
     "title": "Hey Baby",
@@ -71,7 +100,11 @@
     "artists": [
       "Bruce Channel"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Overload (From \"Dirty Dancing\" Soundtrack)",
@@ -80,7 +113,11 @@
     "artists": [
       "Zappacosta"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "Love Is Strange",
@@ -89,7 +126,11 @@
     "artists": [
       "Mickey & Sylvia"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Where Are You Tonight (From \"Dirty Dancing\" Soundtrack)",
@@ -98,7 +139,11 @@
     "artists": [
       "Tom Johnston"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "(I'll Remember) In The Still Of The Night",
@@ -107,6 +152,10 @@
     "artists": [
       "The Five Satins"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "romantic"
+    ]
   }
 ]

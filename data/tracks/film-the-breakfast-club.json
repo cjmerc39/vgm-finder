@@ -6,7 +6,11 @@
     "artists": [
       "Simple Minds"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "powerful"
+    ]
   },
   {
     "title": "Waiting",
@@ -15,7 +19,11 @@
     "artists": [
       "Elizabeth Daily"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tense"
+    ]
   },
   {
     "title": "Fire In The Twilight",
@@ -24,7 +32,11 @@
     "artists": [
       "Wang Chung"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "powerful"
+    ]
   },
   {
     "title": "I'm The Dude",
@@ -32,6 +44,9 @@
     "videoId": "ottvALZ7UoY",
     "artists": [
       "Keith Forsey"
+    ],
+    "moods": [
+      "playful"
     ]
   },
   {
@@ -42,7 +57,11 @@
       "Jesse Johnson",
       "Stephanie Spruill"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "joyful"
+    ]
   },
   {
     "title": "Dream Montage",
@@ -51,7 +70,11 @@
     "artists": [
       "Gary Chang"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "We Are Not Alone",
@@ -60,7 +83,11 @@
     "artists": [
       "Karla Devito"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "The Reggae",
@@ -68,6 +95,10 @@
     "videoId": "0fhnhpUBYcc",
     "artists": [
       "Keith Forsey"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -77,7 +108,10 @@
     "artists": [
       "Joyce Kennedy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Love Theme",
@@ -85,6 +119,10 @@
     "videoId": "0YLGmr86h7s",
     "artists": [
       "Keith Forsey"
+    ],
+    "moods": [
+      "romantic",
+      "tender"
     ]
   }
 ]
