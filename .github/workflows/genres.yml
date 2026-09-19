@@ -3,7 +3,17 @@ name: Genre fill
 # Anime on film and TV rows from TMDb, IGDB themes and missing genres on game
 # rows. New rows get both as they arrive; dispatch this by hand.
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: which fills to run
+        required: true
+        default: "--anime --games"
+        type: choice
+        options:
+          - "--anime --games"
+          - "--games"
+          - "--anime"
 permissions:
   contents: write
 concurrency:
@@ -18,8 +28,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r collector/requirements.txt
-      - run: python collector/fill_genres.py --anime --games
+      - run: python collector/fill_genres.py $STEPS
         env:
+          STEPS: ${{ inputs.steps }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}

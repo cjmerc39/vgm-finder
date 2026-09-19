@@ -65,38 +65,47 @@ class FakeIGDB:
             return [{"slug": "hades", "name": "Hades", "genres": [{"name": "Role-playing (RPG)"}],
                      "themes": [{"name": "Action"}, {"name": "Fantasy"}]}]
         if endpoint == "external_games":
-            return [{"uid": "1145360", "url": "https://store.steampowered.com/app/1145360",
+            return [{"uid": "1092790", "url": "https://store.steampowered.com/app/1092790",
                      "game": {"name": "Inscryption", "genres": [{"name": "Card & Board Game"}], "themes": [{"name": "Horror"}]}},
                     {"uid": "999", "url": "https://www.gog.com/game/other",   # another store's id 999: not ours
                      "game": {"name": "Wrong", "themes": [{"name": "Comedy"}]}}]
         if endpoint == "games" and body.startswith('search "Celeste"'):
             return [{"name": "Celeste", "first_release_date": _t(2018), "themes": [{"name": "Drama"}], "genres": [{"name": "Platform"}]},
                     {"name": "Celeste Classic", "first_release_date": _t(2015)}]
+        if endpoint == "games" and body.startswith('search "Tiny Quest"'):
+            return [{"name": "Tiny Quest", "first_release_date": _t(2021), "themes": [{"name": "Fantasy"}], "genres": [{"name": "Adventure"}]}]
         if endpoint == "games" and body.startswith('search "Doom"'):
             return [{"name": "Doom", "first_release_date": _t(2016)}, {"name": "DOOM", "first_release_date": _t(2016)}]
         return []
 
 
-def test_games_are_found_by_igdb_link_steam_id_or_exact_name_and_year():
+STEAM_PARENTS = {"1520900": ("1092790", "Inscryption"),   # the soundtrack app names the game app
+                 "999": ("999000", "Other Store Game"),
+                 "4000001": ("4000000", "Tiny Quest")}        # a game IGDB does not link: found by name
+
+
+def test_games_are_found_by_igdb_link_steam_game_or_exact_name_and_year():
     rows = [_game("hades", "https://www.igdb.com/games/hades", genres=["Indie"]),
-            _game("inscryption", "https://store.steampowered.com/app/1145360/Inscryption/"),
+            _game("inscryption", "https://store.steampowered.com/app/1520900/Inscryption_Soundtrack/"),
             _game("gog-game", "https://store.steampowered.com/app/999/"),
+            _game("tiny-quest", "https://store.steampowered.com/app/4000001/", game="Tiny Quest Soundtrack"),
             _game("celeste", date="2018-01-25", game="Celeste"),
             _game("doom", date="2016-05-13", game="Doom"),
             _game("old-row", "https://www.igdb.com/games/old-row"),
             dict(_game("done", "https://www.igdb.com/games/done"), themes=[])]
     logs = []
-    found = fill_genres.games_fill(rows, FakeIGDB(), log=logs.append)
-    assert found == {"IGDB link": 1, "Steam id": 1, "name": 1}
+    found = fill_genres.games_fill(rows, FakeIGDB(), steam_parent=STEAM_PARENTS.get, log=logs.append)
+    assert found == {"IGDB link": 1, "Steam id": 1, "name": 2}
     by = {r["id"]: r for r in rows}
     assert by["hades"]["themes"] == ["Action", "Fantasy"] and by["hades"]["genres"] == ["Indie"]  # genres kept as they were
     assert by["inscryption"]["themes"] == ["Horror"] and by["inscryption"]["genres"] == ["Card & Board Game"]
     assert "themes" not in by["gog-game"]            # another store's uid is never taken
+    assert by["tiny-quest"]["themes"] == ["Fantasy"]   # searched by the game's name from Steam, not the soundtrack's
     assert by["celeste"]["themes"] == ["Drama"] and by["celeste"]["genres"] == ["Platform"]
     assert "themes" not in by["doom"]                # two games of one name and year: left for a person
     assert "themes" not in by["old-row"]             # not found: tried again next run
-    assert logs == ["game genres: 6 rows looked up, 3 found (1 by IGDB link, 1 by Steam id, 1 by name), "
-                    "genres filled on 2, 3 not found"]
+    assert logs == ["game genres: 7 rows looked up, 4 found (1 by IGDB link, 1 by Steam id, 2 by name), "
+                    "genres filled on 3, 3 not found"]
 
 
 def test_the_daily_step_looks_only_at_recent_rows():
