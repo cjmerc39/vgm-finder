@@ -25,9 +25,10 @@ def _err(status, reason, message="nope"):
 
 class FakeYouTube:
     """Playlists and their items, paged two at a time so paging is exercised."""
-    def __init__(self, playlists=None, refuse=(), quota_after=None):
+    def __init__(self, playlists=None, refuse=(), quota_after=None, abort=None):
         self.playlists = {}       # pid -> {title, description, privacy, items: [(item id, videoId)]}
         self.refuse, self.quota_after = set(refuse), quota_after
+        self.abort = dict(abort or {})   # videoId -> how many inserts of it YouTube aborts with a 409
         self.calls, self.tokens, self._n = [], 0, 0
         self.expire_next = False
         for pid, p in (playlists or {}).items():
@@ -73,6 +74,9 @@ class FakeYouTube:
             return Resp(200, {"id": pid})
         if (method, path) == ("POST", "playlistItems"):
             v = json["snippet"]["resourceId"]["videoId"]
+            if self.abort.get(v):
+                self.abort[v] -= 1
+                return _err(409, "SERVICE_UNAVAILABLE", "The operation was aborted.")
             if v in self.refuse:
                 return _err(404, "videoNotFound", "Video not found.")
             self.playlists[json["snippet"]["playlistId"]]["items"].append((self._item(), v))
@@ -102,7 +106,7 @@ class FakeYouTube:
 def _api(tmp_path, fake):
     tok = tmp_path / "oauth.json"
     tok.write_text(json.dumps({"refresh_token": "r1", "access_token": "stale"}), encoding="utf-8")
-    return ya.YouTubeApi(tok, "cid", "secret", session=fake, searcher=object())
+    return ya.YouTubeApi(tok, "cid", "secret", session=fake, searcher=object(), sleep=lambda s: None)
 
 
 TRACKS = [{"game": "Hades", "title": "No Escape", "videoId": "v1"},
@@ -148,6 +152,16 @@ def test_a_refused_track_is_reported_and_the_rest_are_added(tmp_path):
     fake = FakeYouTube(refuse={"v2"})
     rep = mp.sync_playlist(_api(tmp_path, fake), "Scorekeep · Liked Songs", TRACKS)
     assert rep["added"] == 2 and len(rep["unresolved"]) == 1 and "v2" in rep["unresolved"][0]
+
+
+def test_an_aborted_insert_is_tried_again_and_a_stubborn_one_reported(tmp_path):
+    # the live check met this: the first insert into a playlist a second old came back 409
+    fake = FakeYouTube(abort={"v1": 2, "v3": 9})
+    rep = mp.sync_playlist(_api(tmp_path, fake), "Scorekeep · Liked Songs", TRACKS)
+    pid = next(iter(fake.playlists))
+    assert fake.videos(pid) == ["v1", "v2"] and rep["added"] == 2
+    assert len(rep["unresolved"]) == 1 and "v3" in rep["unresolved"][0] and "409" in rep["unresolved"][0]
+    assert sum(1 for m, p in fake.calls if (m, p) == ("POST", "playlistItems")) == 3 + 1 + 4  # v1 thrice, v2 once, v3 four times
 
 
 def test_the_daily_limit_stops_the_run_with_a_plain_message(tmp_path):

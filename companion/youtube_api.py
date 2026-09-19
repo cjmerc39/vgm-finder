@@ -15,11 +15,14 @@ track changes. A run that meets the limit stops with QuotaExceeded; what it
 already did stays, and the next run tops up the rest.
 """
 import json
+import re
+import time
 from pathlib import Path
 
 API = "https://www.googleapis.com/youtube/v3"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 LIST, WRITE = 1, 50   # quota units per call
+RETRY_WAITS = (2, 5, 10)   # seconds before trying an aborted insert again
 
 
 class QuotaExceeded(RuntimeError):
@@ -27,7 +30,7 @@ class QuotaExceeded(RuntimeError):
 
 
 class YouTubeApi:
-    def __init__(self, token_path, client_id, client_secret, session=None, searcher=None):
+    def __init__(self, token_path, client_id, client_secret, session=None, searcher=None, sleep=time.sleep):
         token = json.loads(Path(token_path).read_text(encoding="utf-8"))
         self.refresh_token = token["refresh_token"]
         self.client_id, self.client_secret = client_id, client_secret
@@ -36,6 +39,7 @@ class YouTubeApi:
             session = requests.Session()
         self.http = session
         self._searcher = searcher
+        self._sleep = sleep
         self._access = None
         self._descriptions = {}
         self.units = 0
@@ -113,18 +117,25 @@ class YouTubeApi:
         return d["id"]
 
     def add_playlist_items(self, pid, video_ids, duplicates=False):
-        """One insert per track. A track YouTube will not add (removed,
-        private, blocked) is reported and the rest carry on; the daily limit
-        stops the run."""
+        """One insert per track. YouTube aborts some inserts with a 409 (a
+        playlist made a second ago, inserts close together) or a 5xx; those
+        are tried again after RETRY_WAITS. A track YouTube still will not add
+        (removed, private, blocked) is reported and the rest carry on; the
+        daily limit stops the run."""
         failed = []
         for v in video_ids:
-            try:
-                self._call("POST", "playlistItems", WRITE, {"part": "snippet"},
-                           {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": v}}})
-            except QuotaExceeded:
-                raise
-            except RuntimeError as e:
-                failed.append((v, str(e)))
+            for wait in RETRY_WAITS + (None,):
+                try:
+                    self._call("POST", "playlistItems", WRITE, {"part": "snippet"},
+                               {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": v}}})
+                    break
+                except QuotaExceeded:
+                    raise
+                except RuntimeError as e:
+                    if wait is None or not re.search(r"HTTP (409|5\d\d)\b", str(e)):
+                        failed.append((v, str(e)))
+                        break
+                    self._sleep(wait)
         return {"status": "STATUS_SUCCEEDED", "failed": failed}
 
     def remove_playlist_items(self, pid, videos):
