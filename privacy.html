@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scorekeep · Privacy</title>
+<style>
+  :root{ --bg:#0b0e14; --ink:#f0e9d6; --mut:#8e97a8; --line:#212837; --amber:#f5a83c; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main{ max-width:640px; margin:0 auto; padding:40px 20px 60px; }
+  h1{ font-size:20px; letter-spacing:.5px; color:var(--amber); margin:0 0 4px; }
+  .when{ color:var(--mut); font-size:13px; margin:0 0 28px; }
+  h2{ font-size:15px; margin:28px 0 6px; }
+  p, li{ color:var(--ink); }
+  ul{ padding-left:20px; }
+  a{ color:var(--amber); }
+  footer{ margin-top:36px; padding-top:16px; border-top:1px solid var(--line); color:var(--mut); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Scorekeep privacy policy</h1>
+  <p class="when">Last updated 18 September 2026</p>
+
+  <p>Scorekeep is a personal soundtrack tracker. Its playlist publisher, "Scorekeep publisher", is a private tool used only by
+     the person who runs this site, to put playlists they built in Scorekeep into their own YouTube Music account.</p>
+
+  <h2>What the publisher does with YouTube access</h2>
+  <ul>
+    <li>It creates private playlists in the owner's YouTube Music account and adds, removes, and renames tracks in the playlists it made.</li>
+    <li>It reads the owner's library only to find the playlists it made before, so a playlist is updated instead of duplicated.</li>
+    <li>It never deletes, edits, or reads anything else, and never posts, comments, likes, or subscribes.</li>
+  </ul>
+
+  <h2>What is stored, and where</h2>
+  <ul>
+    <li>The sign-in token that lets the publisher act for the owner is kept as an encrypted secret in the owner's private GitHub repository and used only by its automated publish runs.</li>
+    <li>No YouTube data is collected, kept, sold, or shared with anyone. Nothing about the account leaves the owner's own YouTube Music, GitHub, and devices.</li>
+    <li>The Scorekeep app itself keeps its diary, ratings, and playlists in the browser's own storage on the owner's device. It uses no analytics, ads, or tracking.</li>
+  </ul>
+
+  <h2>Removing access</h2>
+  <p>The access can be removed at any time from the Google account's <a href="https://myaccount.google.com/permissions">third-party connections page</a>.
+     Once removed, the publisher can no longer do anything in the account.</p>
+
+  <footer>Scorekeep · <a href="./">back to the app</a></footer>
+</main>
+</body>
+</html>
