@@ -15,7 +15,7 @@ without one is picked up next time.
   python collector/moods.py backfill --cap N --workers 4 # the one-time backfill, dispatched until "moods complete"
   python collector/moods.py backfill --retag --cap N     # tag again albums that already carry moods
   python collector/moods.py derive                       # re-rank every tagged row's album moods, no API calls
-  python collector/moods.py sample --vocab collector/moods-v2.json --cap 14   # a review file, catalog untouched
+  python collector/moods.py sample --vocab NEW.json --cap 14   # try a new vocabulary: a review file, catalog untouched
   python collector/moods.py batch-submit                  # a full retag in one Message Batch, at half price
   python collector/moods.py batch-collect                 # waits for it, applies it, records the spend
 

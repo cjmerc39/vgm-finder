@@ -5,7 +5,10 @@ import json
 
 import moods
 
-VOCAB = moods.load_vocab()
+from pathlib import Path
+
+V1_PATH = Path(moods.__file__).resolve().parent / "moods-v1.json"   # the first vocabulary: most tests here were written on it
+VOCAB = moods.load_vocab(V1_PATH)
 TERMS = [m for m, _ in VOCAB]
 
 
@@ -70,7 +73,7 @@ def test_parse_rejects_off_list_tags_and_bad_shapes():
 
 
 def test_schema_pins_the_vocabulary_and_rejections_say_why():
-    assert moods.SCHEMA["properties"]["tracks"]["items"]["properties"]["moods"]["items"]["enum"] == TERMS
+    assert moods.SCHEMA["properties"]["tracks"]["items"]["properties"]["moods"]["items"]["enum"] == [m for m, _ in moods.load_vocab()]
     assert moods.parse_reply_why(reply([(1, ["spooky"])]), 1, TERMS) == (None, "track 1: 'spooky' is outside the vocabulary")
     assert moods.parse_reply_why("nope", 1, TERMS) == (None, "not JSON")
     assert moods.parse_reply_why(reply([(4, ["tense"])]), 2, TERMS) == (None, "track 4 not asked about")
@@ -143,7 +146,7 @@ def test_derive_reranks_tagged_rows_from_their_tracks_without_the_api(tmp_path):
         "b": [{"title": "1"}],
         "c": [{"title": "1", "moods": ["joyful"]}]})
     logs = []
-    assert moods.derive(data_path, tracks_dir, log=logs.append) == 1
+    assert moods.derive(data_path, tracks_dir, vocab=VOCAB, log=logs.append) == 1
     out = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
     # tense loses its place on plays; sad and wonder tie on both, so the vocabulary puts wonder first
     assert out["a"]["moods"] == ["eerie", "wonder", "sad"] and out["a"]["moodsN"] == [2, 1, 1]
@@ -233,7 +236,7 @@ def test_daily_run_tags_new_albums_only_under_the_cap_and_never_retags(tmp_path)
     fake = FakeModel({"New A": [reply([(1, ["joyful"])])], "New B": [reply([(1, ["sad"])])], "Old": [reply([(1, ["eerie"])])]})
     from datetime import datetime, timezone
     now = datetime(2026, 9, 14, tzinfo=timezone.utc)
-    out = moods.run("daily", cap=1, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
+    out = moods.run("daily", vocab_path=V1_PATH, cap=1, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
                     client=object(), vocab=VOCAB, now=now, log=lambda s: None, call=fake)
     assert out["tagged"] == 1 and out["remaining"] == 1 and len(fake.calls) == 1 and "New" in fake.calls[0]
     saved = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
@@ -242,10 +245,10 @@ def test_daily_run_tags_new_albums_only_under_the_cap_and_never_retags(tmp_path)
     assert json.loads((tracks_dir / f"{tagged_new[0]}.json").read_text(encoding="utf-8"))[0]["moods"] in (["joyful"], ["sad"])
     state = json.loads(state_path.read_text(encoding="utf-8"))
     assert state["tagged"] == 1 and state["inputTokens"] == 600 and state["runs"][0]["kind"] == "daily" and state["cost"] > 0
-    out = moods.run("daily", cap=10, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
+    out = moods.run("daily", vocab_path=V1_PATH, cap=10, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
                     client=object(), vocab=VOCAB, now=now, log=lambda s: None, call=fake)
     assert out["tagged"] == 1 and out["remaining"] == 0 and len(fake.calls) == 2  # only the other new album; nothing retagged
-    out = moods.run("daily", cap=10, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
+    out = moods.run("daily", vocab_path=V1_PATH, cap=10, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
                     client=object(), vocab=VOCAB, now=now, log=lambda s: None, call=fake)
     assert out["tagged"] == 0 and len(fake.calls) == 2
     assert json.loads(state_path.read_text(encoding="utf-8"))["tagged"] == 2
@@ -256,18 +259,18 @@ def test_backfill_walks_the_untagged_set_and_reports_complete(tmp_path):
     data_path, tracks_dir, state_path = _setup(tmp_path, rows, {rid: [{"title": "T"}] for rid in "abc"})
     fake = FakeModel({"A Sound": [reply([(1, ["wonder"])])], "B Sound": ["nope", "still nope"]})
     logs = []
-    out = moods.run("backfill", cap=5, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
+    out = moods.run("backfill", vocab_path=V1_PATH, cap=5, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
                     client=object(), vocab=VOCAB, log=logs.append, call=fake)
     assert out["tagged"] == 1 and out["skipped"] == 1 and out["remaining"] == 1 and logs[-1].startswith("moods in progress")
     fake.scripts["B Sound"] = [reply([(1, ["peaceful"])])]
-    out = moods.run("backfill", cap=5, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
+    out = moods.run("backfill", vocab_path=V1_PATH, cap=5, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
                     client=object(), vocab=VOCAB, log=logs.append, call=fake)
     assert out["tagged"] == 1 and out["remaining"] == 0 and logs[-1] == "moods complete"
     saved = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
     assert saved["a"]["moods"] == ["wonder"] and saved["b"]["moods"] == ["peaceful"] and saved["c"]["moods"] == []
     # --retag reaches albums that already carry moods
     fake.scripts.update({"A Sound": [reply([(1, ["sad"])])], "C Sound": [reply([(1, ["eerie"])])]})
-    out = moods.run("backfill", cap=5, retag=True, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
+    out = moods.run("backfill", vocab_path=V1_PATH, cap=5, retag=True, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
                     client=object(), vocab=VOCAB, log=logs.append, call=fake)
     assert out["tagged"] == 3
     saved = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
@@ -279,7 +282,7 @@ def test_a_missing_key_skips_tagging_without_failing(tmp_path, monkeypatch):
     rows = [_row("a", "A Soundtrack", 1)]
     data_path, tracks_dir, state_path = _setup(tmp_path, rows, {"a": [{"title": "T"}]})
     logs = []
-    assert moods.run("daily", data_path=data_path, tracks_dir=tracks_dir, state_path=state_path, log=logs.append) is None
+    assert moods.run("daily", vocab_path=V1_PATH, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path, log=logs.append) is None
     assert logs == ["moods: ANTHROPIC_API_KEY not set, tagging skipped"]
     assert "moods" not in json.loads(data_path.read_text(encoding="utf-8"))["releases"][0] and not state_path.exists()
 
@@ -289,7 +292,7 @@ def test_a_transport_failure_leaves_the_row_for_next_time(tmp_path):
     data_path, tracks_dir, state_path = _setup(tmp_path, rows, {"a": [{"title": "T"}]})
     def boom(client, system, prompt):
         raise RuntimeError("503")
-    out = moods.run("daily", data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
+    out = moods.run("daily", vocab_path=V1_PATH, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
                     client=object(), vocab=VOCAB, log=lambda s: None, call=boom)
     assert out["failed"] == 1 and out["tagged"] == 0 and out["remaining"] == 1
     assert "moods" not in json.loads(data_path.read_text(encoding="utf-8"))["releases"][0]
@@ -303,13 +306,13 @@ def test_cost_matches_haiku_pricing():
 from pathlib import Path
 from types import SimpleNamespace
 
-V2 = moods.load_vocab(Path(moods.__file__).resolve().parent / "moods-v2.json")
-V2_PATH = Path(moods.__file__).resolve().parent / "moods-v2.json"
+V2_PATH = moods.MOODS_PATH   # moods.json is v2 since the switch
+V2 = moods.load_vocab(V2_PATH)
 
 
 def test_v2_is_the_twenty_checked_moods_and_a_new_vocabulary_retags_the_old():
     terms = [m for m, _ in V2]
-    assert len(terms) == 20 and moods.vocab_version(V2_PATH) == 2 and moods.vocab_version() == 1
+    assert len(terms) == 20 and moods.vocab_version(V2_PATH) == 2 and moods.vocab_version(V1_PATH) == 1
     assert {"suspenseful", "ominous", "intense", "epic", "dreamy", "hopeful", "laid-back"} <= set(terms)
     assert not {"tense", "mournful", "powerful"} & set(terms)
     rows = [_row("old", "Old Soundtrack", 2, moods=["tense"]), _row("new", "New Soundtrack", 2, moods=["epic"], moodsV=2),

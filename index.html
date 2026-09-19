@@ -315,8 +315,10 @@ const RECIPE_ORDERS = ['plays', 'album', 'newest', 'shuffle'];
 const RECIPE_LIMITS = [20, 50, 100, 200];
 const RECIPE_MAX = 200;
 // the mood vocabulary in collector/moods.json's order (a test holds the two together)
-const MOODS = ['wonder', 'transcendent', 'nostalgic', 'tender', 'peaceful', 'joyful', 'powerful', 'tense',
-               'sad', 'heroic', 'eerie', 'driving', 'playful', 'mournful', 'romantic', 'mysterious'];
+const MOODS = ['suspenseful', 'ominous', 'intense', 'eerie', 'mysterious', 'sad', 'epic', 'heroic', 'driving', 'joyful',
+               'playful', 'hopeful', 'wonder', 'transcendent', 'dreamy', 'peaceful', 'laid-back', 'tender', 'nostalgic', 'romantic'];
+// words from the first vocabulary, as a saved recipe may still hold them: tense split three ways
+const LEGACY_MOODS = { tense: ['suspenseful', 'ominous', 'intense'], mournful: ['sad'], powerful: ['epic'] };
 function recipeBlank(){
   return { id: '', name: '', source: 'catalog', medium: 'all', genre: { game: 'all', screen: 'all', all: 'all' },
            yearFrom: '', yearTo: '', composer: '', rating: 'any', hearted: false, co: 'all', console: false,
@@ -338,7 +340,8 @@ function validRecipe(x, ids){
   b.co = ['all', 'big', 'indie'].includes(x.co) ? x.co : 'all';
   b.console = x.console === true;
   b.scores = x.scores === true;
-  b.moods = Array.isArray(x.moods) ? MOODS.filter(m => x.moods.includes(m)) : [];  // vocabulary order, unknown words dropped
+  const picked = Array.isArray(x.moods) ? x.moods.flatMap(m => LEGACY_MOODS[m] || [m]) : [];
+  b.moods = MOODS.filter(m => picked.includes(m));  // vocabulary order; old words read as the new ones, unknown words dropped
   b.pick = RECIPE_PICKS.includes(x.pick) ? x.pick : 'all';
   b.topN = Number.isInteger(x.topN) && x.topN >= 1 && x.topN <= 5 ? x.topN : 3;
   b.limit = Number.isInteger(x.limit) && x.limit >= 1 && x.limit <= RECIPE_MAX ? x.limit : 50;

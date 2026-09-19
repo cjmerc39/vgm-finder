@@ -1664,21 +1664,21 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     sources: [{ name: 'x', type: 'catalog', url: 'https://x/' + id, seenAt: '2026-08-25T10:00:00Z' }],
     ytmSearchUrl: 'https://music.youtube.com/search?q=' + id, notable: true, ytmAlbumUrl: null, art: null }, extra);
   const MD_ROWS = [
-    mdRow('m-silent', 'game', 'Silent Town', { tracksN: 4, playsTotal: 8000000, moods: ['eerie', 'tense', 'sad'], moodsN: [3, 2, 1] }),
-    mdRow('m-hero', 'film', 'Hero Rising', { tracksN: 3, scoresN: 2, playsTotal: 8000000, moods: ['powerful', 'heroic', 'tense'], moodsN: [2, 2, 1] }),
+    mdRow('m-silent', 'game', 'Silent Town', { tracksN: 4, playsTotal: 8000000, moods: ['eerie', 'suspenseful', 'sad'], moodsN: [3, 2, 1] }),
+    mdRow('m-hero', 'film', 'Hero Rising', { tracksN: 3, scoresN: 2, playsTotal: 8000000, moods: ['epic', 'heroic', 'suspenseful'], moodsN: [2, 2, 1] }),
     mdRow('m-calm', 'tv', 'Calm Waters', { tracksN: 3, playsTotal: 30000, moods: ['peaceful', 'tender', 'nostalgic'], moodsN: [2, 1, 1] }),
     mdRow('m-untagged', 'game', 'Not Yet', { tracksN: 2, playsTotal: 9000 }),
     mdRow('m-bare', 'game', 'Bare Bones', { tracksN: 1, playsTotal: 10, moods: [], moodsN: [] }),
   ];
   const MD_TRACKS = {
     // a partly tagged album: its most played track carries no mood
-    'm-silent': [{ title: 'S1', plays: '1M plays', videoId: 'vS1', moods: ['eerie', 'tense'] },
+    'm-silent': [{ title: 'S1', plays: '1M plays', videoId: 'vS1', moods: ['eerie', 'suspenseful'] },
                  { title: 'S2', plays: '2M plays', videoId: 'vS2', moods: ['eerie'] },
                  { title: 'S3', plays: '10K plays', videoId: 'vS3', moods: ['eerie', 'sad'] },
                  { title: 'S4', plays: '5M plays', videoId: 'vS4' }],
-    'm-hero': [{ title: 'H1', plays: '3M plays', videoId: 'vH1', moods: ['heroic', 'powerful'] },
-               { title: 'H2', plays: '1M plays', videoId: 'vH2', moods: ['heroic', 'tense'] },
-               { title: 'H3', plays: '4M plays', videoId: 'vH3', moods: ['powerful'], song: true }],
+    'm-hero': [{ title: 'H1', plays: '3M plays', videoId: 'vH1', moods: ['heroic', 'epic'] },
+               { title: 'H2', plays: '1M plays', videoId: 'vH2', moods: ['heroic', 'suspenseful'] },
+               { title: 'H3', plays: '4M plays', videoId: 'vH3', moods: ['epic'], song: true }],
     // eerie is on a track here but not in the album's top three
     'm-calm': [{ title: 'C1', plays: '20K plays', videoId: 'vC1', moods: ['peaceful', 'tender'] },
                { title: 'C2', plays: '9K plays', videoId: 'vC2', moods: ['peaceful', 'nostalgic'] },
@@ -1708,8 +1708,8 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
 
   // counting before any tracklist is read: albums join on their top three, tracks come from moodsN
   assert(mPool({ moods: ['eerie'] }) === '3/1' && Object.keys(mdHits).length === 1, 'one mood counts from the row, no tracklist fetched');
-  assert(mPool({ moods: ['tense'] }) === '3/2' && mPool({ moods: ['tense'], medium: 'film' }) === '1/1', 'a mood ANDs with the medium');
-  assert(mPool({ moods: ['nostalgic'] }) === '1/1' && mPool({ moods: ['mournful'] }) === '0/0', 'a mood no album carries empties the pool');
+  assert(mPool({ moods: ['suspenseful'] }) === '3/2' && mPool({ moods: ['suspenseful'], medium: 'film' }) === '1/1', 'a mood ANDs with the medium');
+  assert(mPool({ moods: ['nostalgic'] }) === '1/1' && mPool({ moods: ['dreamy'] }) === '0/0', 'a mood no album carries empties the pool');
   assert(mLine({ moods: ['eerie', 'heroic'] }) === 'at least 5 tracks from 2 albums' && mLine({ moods: ['eerie'] }) === '3 tracks from 1 album',
     'several moods on unread albums count a floor and say so; one mood is exact');
   assert(mLine({ moods: ['eerie', 'heroic'], pick: 'top', topN: 1 }) === '2 tracks from 2 albums', 'a full top pick is exact even with several moods');
@@ -1718,10 +1718,10 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(same(await mBuild({ moods: ['eerie'] }), ['S2', 'S1', 'S3']), 'a partly tagged album gives only its tagged tracks, most played first');
   assert(same(await mBuild({ moods: ['eerie', 'heroic'], pick: 'top', topN: 1 }), ['H1', 'S2']), 'top 1 per album picks among the mood\'s tracks');
   assert(same(await mBuild({ moods: ['eerie', 'heroic'] }), ['H1', 'S2', 'H2', 'S1', 'S3']), 'several moods: any of them, across albums, a plays tie kept in album order');
-  assert(mLine({ moods: ['eerie', 'heroic'] }) === '5 tracks from 2 albums' && mPool({ moods: ['eerie', 'tense'] }) === '4/2',
+  assert(mLine({ moods: ['eerie', 'heroic'] }) === '5 tracks from 2 albums' && mPool({ moods: ['eerie', 'suspenseful'] }) === '4/2',
     'once read, the count is exact and a track with two chosen moods counts once');
   assert(!mTitles({ moods: ['eerie'] }).includes('C3'), 'eerie outside an album\'s top three does not bring that album in');
-  assert(same(await mBuild({ moods: ['powerful'], scores: true }), ['H1']) && same(await mBuild({ moods: ['powerful'] }), ['H3', 'H1']),
+  assert(same(await mBuild({ moods: ['epic'], scores: true }), ['H1']) && same(await mBuild({ moods: ['epic'] }), ['H3', 'H1']),
     'scores only still drops a song that carries the mood');
   assert(same(await mBuild({ moods: ['eerie'], pick: 'hearted' }), ['S2']), 'a hearted track without the mood stays out of a ♥ pick');
   assert(mPool({}) === '13/5' && same(await mBuild({ medium: 'game', order: 'album' }), ['B1', 'U1', 'U2', 'S1', 'S2', 'S3', 'S4']),
@@ -1729,10 +1729,11 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
 
   // names and backups
   const mName = (o) => md.w.eval(`recipeAutoName(${rules(o)})`);
-  assert(mName({ moods: ['eerie'] }) === 'eerie soundtracks' && mName({ moods: ['tense', 'sad', 'eerie'], medium: 'film', rating: '4' }) === '4★+ tense, sad or eerie film scores',
+  assert(mName({ moods: ['eerie'] }) === 'eerie soundtracks' && mName({ moods: ['suspenseful', 'sad', 'eerie'], medium: 'film', rating: '4' }) === '4★+ suspenseful, sad or eerie film scores',
     'the chosen moods read out in the name');
-  assert(md.w.eval(`applyImport('{"v":3,"entries":{},"recipes":[{"id":"mx","moods":["eerie","bogus","tense","eerie"]},{"id":"my","moods":"eerie"}]}')`) === true
-    && same(mdStored().recipes.map(r => r.moods), [['tense', 'eerie'], []]), 'import keeps known moods in vocabulary order and drops the rest');
+  assert(md.w.eval(`applyImport('{"v":3,"entries":{},"recipes":[{"id":"mx","moods":["eerie","bogus","tense","eerie"]},{"id":"my","moods":"eerie"},{"id":"mz","moods":["mournful","powerful"]}]}')`) === true
+    && same(mdStored().recipes.map(r => r.moods), [['suspenseful', 'ominous', 'intense', 'eerie'], [], ['sad', 'epic']]),
+    'import reads an old tense as its three new moods, mournful as sad, powerful as epic, in vocabulary order, and drops the rest');
   md.w.eval(`applyImport('{"v":3,"entries":{"m-silent":{"status":"listened","listenedOn":"2026-08-01","likedTracks":["S4","S2"]}}}')`);
 
   // the sheet: a mood row, a picker that toggles several, the count following
@@ -1741,9 +1742,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(mq('#sheetwrap #rc-mood .shl').textContent === 'any', 'the recipe sheet has a mood row, any by default');
   mq('#sheetwrap #rc-mood').click(); await sleep(10);
   const mPick = (m) => mq(`#sheetwrap [data-shrm="${m}"]`);
-  assert(mPick('eerie') !== null && md.d.querySelectorAll('#sheetwrap [data-shrm]').length === 17 && mq('#sheetwrap #sheet').classList.contains('tall'),
-    'the mood picker lists any plus the sixteen moods');
-  assert(mPick('tense').querySelector('.shr').textContent === '2' && mPick('mournful').querySelector('.shr').textContent === '0',
+  assert(mPick('eerie') !== null && md.d.querySelectorAll('#sheetwrap [data-shrm]').length === 21 && mq('#sheetwrap #sheet').classList.contains('tall'),
+    'the mood picker lists any plus the twenty moods');
+  assert(mPick('suspenseful').querySelector('.shr').textContent === '2' && mPick('dreamy').querySelector('.shr').textContent === '0',
     'each mood shows how many albums have it in their top three');
   mPick('heroic').click(); await sleep(10);
   mPick('eerie').click(); await sleep(10);
@@ -1754,10 +1755,10 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(mq('#sheetwrap [data-shrm="heroic"] .shr').textContent === '1' && mq('#sheetwrap #rcount').textContent === '3 tracks from 1 album', 'a second tap takes a mood off');
   mPick('heroic').click(); await sleep(10);
   md.w.dispatchEvent(new md.w.KeyboardEvent('keydown', { key: 'Escape' }));
-  assert(mq('#sheetwrap #rc-mood .shl').textContent === 'heroic, eerie' && mq('#sheetwrap #rc-name').placeholder === 'heroic or eerie soundtracks',
+  assert(mq('#sheetwrap #rc-mood .shl').textContent === 'eerie, heroic' && mq('#sheetwrap #rc-name').placeholder === 'eerie or heroic soundtracks',
     'escape returns to the recipe, which names the picks');
   mq('#sheetwrap #rc-save').click(); await sleep(120);
-  assert(same(mdStored().recipes[0].moods, ['heroic', 'eerie']), 'the saved recipe carries its moods');
+  assert(same(mdStored().recipes[0].moods, ['eerie', 'heroic']), 'the saved recipe carries its moods');
 
   // chips: the expanded row and the album page, each opening the feed on that mood
   md.w.eval(`setView('feed')`); await sleep(10);
@@ -1768,10 +1769,10 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(same(feedIds(), ['m-silent']), 'a search narrows the feed first');
   mq('#list .row[data-id="m-silent"]').click(); await sleep(60);
   const chips = [...md.d.querySelectorAll('#list .row[data-id="m-silent"] .mchip')].map(x => x.textContent);
-  assert(same(chips, ['eerie', 'tense', 'sad']), 'the expanded row shows the album\'s three moods');
+  assert(same(chips, ['eerie', 'suspenseful', 'sad']), 'the expanded row shows the album\'s three moods');
   assert(mq('#list .row[data-id="m-untagged"]') === null || !mq('#list .row[data-id="m-untagged"] .mchip'), 'an untagged album shows no mood chips');
-  mq('#list .row[data-id="m-silent"] .mchip[data-mood="tense"]').click(); await sleep(10);
-  assert(mq('#moodbar .mlabel').textContent === 'MOOD · TENSE' && mq('#moodbar .mn').textContent === '2 albums'
+  mq('#list .row[data-id="m-silent"] .mchip[data-mood="suspenseful"]').click(); await sleep(10);
+  assert(mq('#moodbar .mlabel').textContent === 'MOOD · SUSPENSEFUL' && mq('#moodbar .mn').textContent === '2 albums'
     && same(feedIds().sort(), ['m-hero', 'm-silent']) && md.w.eval('Q') === '' && mq('#q').value === '',
     'a chip opens the feed on that mood and clears the search');
   assert(newBadge() === badge0 && mq('#c-filters').textContent === 'filters', 'the NEW badge and the filters chip ignore the mood');
@@ -1779,9 +1780,9 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   mq('#moodclear').click(); await sleep(10);
   assert(mq('#moodbar') === null && feedIds().length === 5, 'clear brings the whole feed back');
   md.w.eval(`openAlbum('m-hero')`); await sleep(60);
-  assert(same([...md.d.querySelectorAll('#album .amoods .mchip')].map(x => x.textContent), ['powerful', 'heroic', 'tense']), 'the album page shows the moods');
-  mq('#album .mchip[data-mood="powerful"]').click(); await sleep(10);
-  assert(mq('#album') === null && mq('#moodbar .mlabel').textContent === 'MOOD · POWERFUL' && same(feedIds(), ['m-hero']),
+  assert(same([...md.d.querySelectorAll('#album .amoods .mchip')].map(x => x.textContent), ['epic', 'heroic', 'suspenseful']), 'the album page shows the moods');
+  mq('#album .mchip[data-mood="epic"]').click(); await sleep(10);
+  assert(mq('#album') === null && mq('#moodbar .mlabel').textContent === 'MOOD · EPIC' && same(feedIds(), ['m-hero']),
     'a chip on the album page closes it and opens the feed on that mood');
   md.w.eval(`setFeedMedium('tv')`);
   assert(mq('#moodbar .mn').textContent === '0 albums' && mq('#list .state .big').textContent === 'NO MATCHES' && mq('#moodclear') !== null,

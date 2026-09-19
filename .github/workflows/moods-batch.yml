@@ -18,7 +18,7 @@ on:
       vocab:
         description: the vocabulary file
         required: true
-        default: collector/moods-v2.json
+        default: collector/moods.json
 permissions:
   contents: write
 concurrency:
