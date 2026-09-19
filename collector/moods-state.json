@@ -1,8 +1,8 @@
 {
  "tagged": 7132,
- "inputTokens": 7162690,
- "outputTokens": 2793927,
- "cost": 21.1323,
+ "inputTokens": 7216502,
+ "outputTokens": 2816174,
+ "cost": 21.2973,
  "runs": [
   {
    "at": "2026-09-14T16:14:17Z",
@@ -265,6 +265,15 @@
    "inputTokens": 53152,
    "outputTokens": 22630,
    "cost": 0.1663
+  },
+  {
+   "at": "2026-09-19T16:57:45Z",
+   "kind": "sample",
+   "tagged": 0,
+   "sampled": 42,
+   "inputTokens": 53812,
+   "outputTokens": 22247,
+   "cost": 0.165
   }
  ]
 }
