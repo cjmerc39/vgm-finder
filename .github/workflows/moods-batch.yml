@@ -1,0 +1,49 @@
+name: Mood vocabulary switch
+# A new mood vocabulary, in three dispatches: sample (a review file, the
+# catalog untouched), then batch-submit (every album not yet on the new
+# vocabulary, one Message Batch at half price), then batch-collect (waits
+# for the batch, applies it, records the spend). collector/moods.py.
+on:
+  workflow_dispatch:
+    inputs:
+      step:
+        description: which step
+        required: true
+        default: sample
+        type: choice
+        options:
+          - sample
+          - batch-submit
+          - batch-collect
+      vocab:
+        description: the vocabulary file
+        required: true
+        default: collector/moods-v2.json
+permissions:
+  contents: write
+concurrency:
+  group: moods
+  cancel-in-progress: false
+jobs:
+  moods:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350   # batch-collect waits for the batch, usually well under an hour
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: python collector/moods.py "$STEP" --vocab "$VOCAB"
+        env:
+          STEP: ${{ inputs.step }}
+          VOCAB: ${{ inputs.vocab }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - run: |
+          git config user.name vgm-bot
+          git config user.email actions@users.noreply.github.com
+          git add data collector/moods-state.json
+          for f in collector/moods-batch.json collector/moods-sample.json; do [ -e "$f" ] && git add "$f"; done
+          git diff --cached --quiet || (git commit -m "moods $STEP" && git pull --rebase && git push)
+        env:
+          STEP: ${{ inputs.step }}

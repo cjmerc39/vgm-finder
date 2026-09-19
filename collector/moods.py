@@ -15,6 +15,14 @@ without one is picked up next time.
   python collector/moods.py backfill --cap N --workers 4 # the one-time backfill, dispatched until "moods complete"
   python collector/moods.py backfill --retag --cap N     # tag again albums that already carry moods
   python collector/moods.py derive                       # re-rank every tagged row's album moods, no API calls
+  python collector/moods.py sample --vocab collector/moods-v2.json --cap 14   # a review file, catalog untouched
+  python collector/moods.py batch-submit                  # a full retag in one Message Batch, at half price
+  python collector/moods.py batch-collect                 # waits for it, applies it, records the spend
+
+A vocabulary file carries a version. A row tagged by a vocabulary past the
+first records it as "moodsV"; a row tagged by an older version counts as
+untagged, so a new vocabulary retags the catalog without --retag and a
+partly finished switch picks up where it stopped.
 
 Every run appends its albums, tokens and dollar cost to moods-state.json,
 which the workflows commit, so the spend is on the record.
@@ -22,12 +30,15 @@ which the workflows commit, so the spend is on the record.
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import os
 import re
 import sys
 import time
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
+from functools import partial
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -36,6 +47,9 @@ import collect
 
 MOODS_PATH = Path(__file__).resolve().parent / "moods.json"
 STATE_PATH = Path(__file__).resolve().parent / "moods-state.json"
+BATCH_PATH = Path(__file__).resolve().parent / "moods-batch.json"
+SAMPLE_PATH = Path(__file__).resolve().parent / "moods-sample.json"
+BATCH_DISCOUNT = 0.5                    # Message Batches bill half the standard token price
 TRACKS_DIR = collect.DATA_PATH.parent / "tracks"
 MODEL = "claude-haiku-4-5"
 PRICE_IN, PRICE_OUT = 1.00, 5.00        # dollars per million tokens, Claude Haiku 4.5
@@ -50,6 +64,11 @@ RUNS_KEPT = 60
 def load_vocab(path=MOODS_PATH):
     d = json.loads(Path(path).read_text(encoding="utf-8"))
     return [(m["mood"], m.get("gloss", "")) for m in d["moods"]]
+
+
+def vocab_version(path=MOODS_PATH):
+    """The vocabulary's version; the first vocabulary carries none."""
+    return int(json.loads(Path(path).read_text(encoding="utf-8")).get("version") or 1)
 
 
 def system_prompt(vocab):
@@ -175,12 +194,12 @@ def make_client():
     return anthropic.Anthropic(max_retries=3)
 
 
-def call_model(client, system, prompt):
+def call_model(client, system, prompt, schema=None):
     """-> (reply text, input tokens, output tokens)."""
     response = client.messages.create(
         model=MODEL, max_tokens=16000, system=system,
         messages=[{"role": "user", "content": prompt}],
-        output_config={"format": {"type": "json_schema", "schema": SCHEMA}},
+        output_config={"format": {"type": "json_schema", "schema": schema or SCHEMA}},
     )
     text = next((b.text for b in response.content if b.type == "text"), "")
     return text, response.usage.input_tokens, response.usage.output_tokens
@@ -202,15 +221,18 @@ def album_moods(tracks, terms):
     return top, [counts[m] for m in top]
 
 
-def set_album_moods(r, tracks, terms):
-    """The row's album-level moods from its tracks. -> True when they changed."""
+def set_album_moods(r, tracks, terms, version=None):
+    """The row's album-level moods from its tracks, and the vocabulary
+    version that tagged them past the first. -> True when they changed."""
     top, n = album_moods(tracks, terms)
     changed = r.get("moods") != top or r.get("moodsN") != n
     r["moods"], r["moodsN"] = top, n
+    if version and version > 1:
+        r["moodsV"] = version
     return changed
 
 
-def tag_album(client, r, tracks, vocab, system=None, call=call_model):
+def tag_album(client, r, tracks, vocab, system=None, call=call_model, version=None):
     """One album tagged in place: moods on its tracks, the album's top three
     on the row. -> {"ok": bool, "in": tokens, "out": tokens, "tries": n, "calls": n}.
     Long albums go in chunks of CHUNK_TRACKS, each its own call with the
@@ -219,6 +241,8 @@ def tag_album(client, r, tracks, vocab, system=None, call=call_model):
     picked up on a later run, so no album is ever half tagged."""
     system = system or system_prompt(vocab)
     terms = [m for m, _ in vocab]
+    if call is call_model:
+        call = partial(call_model, schema=schema_for(terms))  # the reply's enum is this vocabulary
     used_in = used_out = calls = 0
     tries = 1
     tags = {}
@@ -245,7 +269,7 @@ def tag_album(client, r, tracks, vocab, system=None, call=call_model):
             t["moods"] = moods
         else:
             t.pop("moods", None)
-    set_album_moods(r, tracks, terms)
+    set_album_moods(r, tracks, terms, version)
     return {"ok": True, "in": used_in, "out": used_out, "tries": tries, "calls": calls}
 
 
@@ -253,15 +277,16 @@ def first_seen(r):
     return min((s.get("seenAt") or "9999") for s in r.get("sources") or []) if r.get("sources") else "9999"
 
 
-def untagged(releases, tracks_dir, retag=False):
-    """Rows with a tracklist and no moods yet: newest first within each
-    medium, the mediums dealt in turn (game, film, tv), so a capped run
-    spreads across all three and the backfill advances them together."""
+def untagged(releases, tracks_dir, retag=False, version=1):
+    """Rows with a tracklist and no moods yet, or moods from an older
+    vocabulary: newest first within each medium, the mediums dealt in turn
+    (game, film, tv), so a capped run spreads across all three and the
+    backfill advances them together."""
     by_medium = {"game": [], "film": [], "tv": []}
     for r in releases:
         if r.get("retired") or not (r.get("tracksN") or 0) > 0:
             continue
-        if "moods" in r and not retag:
+        if "moods" in r and (r.get("moodsV") or 1) >= version and not retag:
             continue
         if not (Path(tracks_dir) / f"{r['id']}.json").exists():
             continue
@@ -277,11 +302,11 @@ def untagged(releases, tracks_dir, retag=False):
     return out
 
 
-def new_albums(releases, tracks_dir, now=None, days=DAILY_WINDOW_DAYS):
+def new_albums(releases, tracks_dir, now=None, days=DAILY_WINDOW_DAYS, version=1):
     """The daily step's set: untagged rows first seen within the window."""
     now = now or datetime.now(timezone.utc)
     since = (now - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    return [r for r in untagged(releases, tracks_dir) if first_seen(r) >= since]
+    return [r for r in untagged(releases, tracks_dir, version=version) if first_seen(r) >= since]
 
 
 def cost(tin, tout):
@@ -304,7 +329,7 @@ def save_state(state, path=STATE_PATH):
     Path(path).write_text(json.dumps(state, indent=1) + "\n", encoding="utf-8")
 
 
-def tag_rows(rows, tracks_dir, client, vocab, workers=1, log=print, call=call_model):
+def tag_rows(rows, tracks_dir, client, vocab, workers=1, log=print, call=call_model, version=None):
     """Tag each row, writing its tracks file as it lands. -> summary."""
     tracks_dir = Path(tracks_dir)
     system = system_prompt(vocab)
@@ -314,7 +339,7 @@ def tag_rows(rows, tracks_dir, client, vocab, workers=1, log=print, call=call_mo
         path = tracks_dir / f"{r['id']}.json"
         tracks = json.loads(path.read_text(encoding="utf-8"))
         try:
-            res = tag_album(client, r, tracks, vocab, system, call)
+            res = tag_album(client, r, tracks, vocab, system, call, version=version)
         except Exception as e:  # a transport failure: the row stays for a later run
             log(f"  fail {r['id']}: {e}")
             return r, None, None
@@ -374,7 +399,7 @@ def derive(data_path=None, tracks_dir=None, vocab=None, log=print):
 
 
 def run(kind="daily", cap=DAILY_CAP, workers=1, retag=False, data_path=None, tracks_dir=None,
-        state_path=None, client=None, vocab=None, now=None, log=print, call=call_model):
+        state_path=None, client=None, vocab=None, now=None, log=print, call=call_model, vocab_path=None):
     """The daily step (kind daily: new albums only) or a backfill run (kind
     backfill: any untagged album), both capped. -> summary or None when the
     key is missing."""
@@ -385,13 +410,16 @@ def run(kind="daily", cap=DAILY_CAP, workers=1, retag=False, data_path=None, tra
     if client is None:
         log("moods: ANTHROPIC_API_KEY not set, tagging skipped")
         return None
-    vocab = vocab or load_vocab()
+    vocab = vocab or load_vocab(vocab_path or MOODS_PATH)
+    version = vocab_version(vocab_path or MOODS_PATH)
     data = collect.load_data(data_path)
     releases = data["releases"]
-    pool = new_albums(releases, tracks_dir, now) if kind == "daily" else untagged(releases, tracks_dir, retag)
+    pool = (new_albums(releases, tracks_dir, now, version=version) if kind == "daily"
+            else untagged(releases, tracks_dir, retag, version=version))
     rows = pool[:cap]
-    summary = tag_rows(rows, tracks_dir, client, vocab, workers=workers, log=log, call=call)
-    remaining = len(untagged(releases, tracks_dir)) if kind == "backfill" else len(pool) - summary["tagged"]
+    summary = tag_rows(rows, tracks_dir, client, vocab, workers=workers, log=log, call=call, version=version)
+    remaining = (len(untagged(releases, tracks_dir, version=version)) if kind == "backfill"
+                 else len(pool) - summary["tagged"])
     summary["remaining"] = remaining
     if summary["tagged"]:
         data["updatedAt"] = (now or datetime.now(timezone.utc)).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -406,9 +434,199 @@ def run(kind="daily", cap=DAILY_CAP, workers=1, retag=False, data_path=None, tra
     return summary
 
 
+def sample_rows(releases, tracks_dir, per_medium):
+    """Albums people know, spread through each medium: every k-th of the 200
+    most played with at least four tracks."""
+    picks = []
+    for med in ("game", "film", "tv"):
+        rows = [r for r in releases if not r.get("retired") and (r.get("medium") or "game") == med
+                and (r.get("tracksN") or 0) >= 4 and (Path(tracks_dir) / f"{r['id']}.json").exists()]
+        rows.sort(key=lambda r: -(r.get("playsTotal") or 0))
+        top = rows[:200]
+        step = max(1, len(top) // max(1, per_medium))
+        picks += top[::step][:per_medium]
+    return picks
+
+
+def run_sample(per_medium=14, vocab_path=MOODS_PATH, data_path=None, tracks_dir=None, out_path=None,
+               state_path=None, client=None, workers=4, log=print, call=call_model):
+    """A vocabulary tried on a few albums into a review file (each album's
+    old and new moods, track by track), the catalog left exactly as it is."""
+    data_path, tracks_dir = Path(data_path or collect.DATA_PATH), Path(tracks_dir or TRACKS_DIR)
+    client = client if client is not None else make_client()
+    if client is None:
+        log("moods: ANTHROPIC_API_KEY not set, sample skipped")
+        return None
+    vocab, version = load_vocab(vocab_path), vocab_version(vocab_path)
+    system = system_prompt(vocab)
+    picks = sample_rows(collect.load_data(data_path)["releases"], tracks_dir, per_medium)
+
+    def one(r):
+        old_tracks = json.loads((tracks_dir / f"{r['id']}.json").read_text(encoding="utf-8"))
+        row, tracks = copy.deepcopy(r), copy.deepcopy(old_tracks)
+        try:
+            res = tag_album(client, row, tracks, vocab, system, call, version=version)
+        except Exception as e:
+            res = {"ok": False, "in": 0, "out": 0, "why": str(e)}
+        return r, row, old_tracks, tracks, res
+
+    entries, tin, tout = [], 0, 0
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        for r, row, old_tracks, tracks, res in pool.map(one, picks):
+            tin, tout = tin + res["in"], tout + res["out"]
+            entries.append({"id": r["id"], "album": r.get("albumTitle") or r["title"], "work": r.get("game"),
+                            "medium": r.get("medium") or "game", "ok": res["ok"], "why": res.get("why"),
+                            "old": r.get("moods"), "new": row.get("moods") if res["ok"] else None,
+                            "newN": row.get("moodsN") if res["ok"] else None,
+                            "tracks": [{"title": o.get("title"), "old": o.get("moods") or [], "new": n.get("moods") or []}
+                                       for o, n in zip(old_tracks, tracks)]})
+    spent = cost(tin, tout)
+    Path(out_path or SAMPLE_PATH).write_text(json.dumps({"vocabVersion": version, "albums": entries}, indent=1,
+                                                        ensure_ascii=False) + "\n", encoding="utf-8")
+    state = load_state(state_path or STATE_PATH)
+    state["inputTokens"] += tin
+    state["outputTokens"] += tout
+    state["cost"] = round(state["cost"] + spent, 4)
+    state["runs"] = (state["runs"] + [{"at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "kind": "sample",
+                                       "tagged": 0, "sampled": len(entries), "inputTokens": tin, "outputTokens": tout,
+                                       "cost": round(spent, 4)}])[-RUNS_KEPT:]
+    save_state(state, state_path or STATE_PATH)
+    ok = sum(1 for e in entries if e["ok"])
+    log(f"moods sample (vocabulary v{version}): {ok} of {len(entries)} albums tagged into the review file, "
+        f"${spent:.4f}; the catalog is unchanged")
+    return entries
+
+
+def batch_requests(rows, tracks_dir, vocab):
+    """One request per album, or per chunk of a long album. Custom ids stay
+    short and plain (row ids can be Japanese); the index maps them back."""
+    terms = [m for m, _ in vocab]
+    system, schema = system_prompt(vocab), schema_for(terms)
+    requests, index = [], {}
+    for i, r in enumerate(rows):
+        tracks = json.loads((Path(tracks_dir) / f"{r['id']}.json").read_text(encoding="utf-8"))
+        for start, part in chunks(tracks):
+            cid = f"a{i}-t{start}"
+            index[cid] = [r["id"], start, len(part)]
+            requests.append({"custom_id": cid, "params": {
+                "model": MODEL, "max_tokens": 16000, "system": system,
+                "messages": [{"role": "user", "content": album_prompt(r, part, start, len(tracks))}],
+                "output_config": {"format": {"type": "json_schema", "schema": schema}}}})
+    return requests, index
+
+
+def batch_submit(vocab_path=MOODS_PATH, data_path=None, tracks_dir=None, batch_path=None, client=None,
+                 cap=None, log=print):
+    """Every album not yet tagged by this vocabulary, in one Message Batch."""
+    data_path, tracks_dir = Path(data_path or collect.DATA_PATH), Path(tracks_dir or TRACKS_DIR)
+    batch_path = Path(batch_path or BATCH_PATH)
+    if batch_path.exists() and not json.loads(batch_path.read_text(encoding="utf-8")).get("applied"):
+        log("moods batch: one is already submitted and not yet applied; collect it first")
+        return None
+    client = client if client is not None else make_client()
+    if client is None:
+        log("moods: ANTHROPIC_API_KEY not set, batch skipped")
+        return None
+    vocab, version = load_vocab(vocab_path), vocab_version(vocab_path)
+    rows = untagged(collect.load_data(data_path)["releases"], tracks_dir, version=version)
+    rows = rows[:cap] if cap else rows
+    requests, index = batch_requests(rows, tracks_dir, vocab)
+    batch = client.messages.batches.create(requests=requests)
+    record = {"id": batch.id, "vocab": Path(vocab_path).name, "version": version,
+              "submitted": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "albums": len(rows), "requests": len(requests), "applied": False, "index": index}
+    batch_path.write_text(json.dumps(record, ensure_ascii=False) + "\n", encoding="utf-8")
+    log(f"moods batch {batch.id}: {len(rows)} albums in {len(requests)} requests submitted (vocabulary v{version})")
+    return record
+
+
+def batch_collect(data_path=None, tracks_dir=None, batch_path=None, state_path=None, client=None,
+                  max_wait=5.5 * 3600, poll=60, log=print, sleep=time.sleep):
+    """Wait for the submitted batch, then apply it: an album is tagged only
+    when every one of its chunks came back and parsed; the rest keep their
+    old moods and a later run tags them. The spend is recorded at batch price."""
+    data_path, tracks_dir = Path(data_path or collect.DATA_PATH), Path(tracks_dir or TRACKS_DIR)
+    batch_path = Path(batch_path or BATCH_PATH)
+    if not batch_path.exists():
+        log("moods batch: nothing submitted")
+        return None
+    record = json.loads(batch_path.read_text(encoding="utf-8"))
+    if record.get("applied"):
+        log(f"moods batch {record['id']}: already applied")
+        return None
+    client = client if client is not None else make_client()
+    if client is None:
+        log("moods: ANTHROPIC_API_KEY not set, collect skipped")
+        return None
+    waited = 0
+    batch = client.messages.batches.retrieve(record["id"])
+    while batch.processing_status != "ended":
+        if waited >= max_wait:
+            log(f"moods batch {record['id']}: still {batch.processing_status} after {waited // 60} minutes; collect again later")
+            return None
+        sleep(poll)
+        waited += poll
+        batch = client.messages.batches.retrieve(record["id"])
+    vocab_path = Path(__file__).resolve().parent / record["vocab"]
+    vocab, version = load_vocab(vocab_path), record["version"]
+    terms = [m for m, _ in vocab]
+    replies, tin, tout, lost = {}, 0, 0, Counter()
+    for res in client.messages.batches.results(record["id"]):
+        if res.result.type == "succeeded":
+            msg = res.result.message
+            replies[res.custom_id] = next((b.text for b in msg.content if b.type == "text"), "")
+            tin += msg.usage.input_tokens
+            tout += msg.usage.output_tokens
+        else:
+            lost[res.result.type] += 1
+    by_row = {}
+    for cid, (rid, start, n) in record["index"].items():
+        by_row.setdefault(rid, []).append((cid, start, n))
+    data = collect.load_data(data_path)
+    rows = {r["id"]: r for r in data["releases"]}
+    tagged = unparsed = 0
+    for rid, parts in by_row.items():
+        r, tags = rows.get(rid), {}
+        for cid, start, n in parts:
+            got = parse_reply(replies.get(cid), range(start, start + n), terms) if cid in replies else None
+            if got is None:
+                tags = None
+                break
+            tags.update(got)
+        if r is None or tags is None:
+            unparsed += r is not None and all(c in replies for c, _, _ in parts)
+            continue
+        path = tracks_dir / f"{rid}.json"
+        tracks = json.loads(path.read_text(encoding="utf-8"))
+        for i, t in enumerate(tracks, 1):
+            if tags.get(i):
+                t["moods"] = tags[i]
+            else:
+                t.pop("moods", None)
+        set_album_moods(r, tracks, terms, version)
+        path.write_text(json.dumps(tracks, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        tagged += 1
+    spent = cost(tin, tout) * BATCH_DISCOUNT
+    remaining = len(untagged(data["releases"], tracks_dir, version=version))
+    if tagged:
+        data["updatedAt"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        data_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    summary = {"tagged": tagged, "skipped": unparsed, "failed": sum(lost.values()), "inputTokens": tin,
+               "outputTokens": tout, "cost": spent}
+    save_state(record_run(load_state(state_path or STATE_PATH), "batch", summary, remaining), state_path or STATE_PATH)
+    record.update(applied=True, tagged=tagged, unparsed=unparsed, lost=dict(lost), cost=round(spent, 4))
+    batch_path.write_text(json.dumps(record, ensure_ascii=False) + "\n", encoding="utf-8")
+    log(f"moods batch {record['id']}: {tagged} of {len(by_row)} albums tagged (vocabulary v{version}), "
+        f"{unparsed} replies rejected, {sum(lost.values())} requests lost {dict(lost)}; "
+        f"{tin} in / {tout} out tokens, ${spent:.4f} at batch price; {remaining} not yet on v{version}")
+    return summary
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("kind", choices=["daily", "backfill", "derive"], nargs="?", default="daily")
+    ap.add_argument("kind", choices=["daily", "backfill", "derive", "sample", "batch-submit", "batch-collect"],
+                    nargs="?", default="daily")
+    ap.add_argument("--vocab", default=str(MOODS_PATH), help="the vocabulary file (sample, batch-submit, backfill)")
     ap.add_argument("--cap", type=int, default=None)
     ap.add_argument("--workers", type=int, default=1)
     ap.add_argument("--retag", action="store_true", help="tag albums that already carry moods (backfill only)")
@@ -416,5 +634,14 @@ if __name__ == "__main__":
     if args.kind == "derive":
         derive()
         sys.exit(0)
+    if args.kind == "sample":
+        run_sample(per_medium=args.cap or 14, vocab_path=args.vocab, workers=max(args.workers, 4))
+        sys.exit(0)
+    if args.kind == "batch-submit":
+        batch_submit(vocab_path=args.vocab, cap=args.cap)
+        sys.exit(0)
+    if args.kind == "batch-collect":
+        batch_collect()
+        sys.exit(0)
     cap = args.cap if args.cap is not None else (DAILY_CAP if args.kind == "daily" else 500)
-    run(args.kind, cap=cap, workers=args.workers, retag=args.retag and args.kind == "backfill")
+    run(args.kind, cap=cap, workers=args.workers, retag=args.retag and args.kind == "backfill", vocab_path=args.vocab)

@@ -297,3 +297,118 @@ def test_a_transport_failure_leaves_the_row_for_next_time(tmp_path):
 
 def test_cost_matches_haiku_pricing():
     assert abs(moods.cost(1_000_000, 0) - 1.00) < 1e-9 and abs(moods.cost(0, 1_000_000) - 5.00) < 1e-9
+
+
+# ------------------------------------------------ vocabulary v2, sample, batch
+from pathlib import Path
+from types import SimpleNamespace
+
+V2 = moods.load_vocab(Path(moods.__file__).resolve().parent / "moods-v2.json")
+V2_PATH = Path(moods.__file__).resolve().parent / "moods-v2.json"
+
+
+def test_v2_is_the_twenty_checked_moods_and_a_new_vocabulary_retags_the_old():
+    terms = [m for m, _ in V2]
+    assert len(terms) == 20 and moods.vocab_version(V2_PATH) == 2 and moods.vocab_version() == 1
+    assert {"suspenseful", "ominous", "intense", "epic", "dreamy", "hopeful", "laid-back"} <= set(terms)
+    assert not {"tense", "mournful", "powerful"} & set(terms)
+    rows = [_row("old", "Old Soundtrack", 2, moods=["tense"]), _row("new", "New Soundtrack", 2, moods=["epic"], moodsV=2),
+            _row("none", "None Soundtrack", 2)]
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        for r in rows:
+            (Path(d) / f"{r['id']}.json").write_text("[]", encoding="utf-8")
+        assert [r["id"] for r in moods.untagged(rows, d, version=1)] == ["none"]
+        assert sorted(r["id"] for r in moods.untagged(rows, d, version=2)) == ["none", "old"]
+
+
+def test_tagging_with_v2_stamps_the_version_and_uses_its_enum():
+    r = _row("zelda", "Zelda Soundtrack", 2)
+    tracks = [{"title": "A"}, {"title": "B"}]
+    seen = []
+
+    def fake(client, system, prompt):
+        seen.append(system)
+        return reply([(1, ["epic", "heroic"]), (2, ["dreamy"])]), 500, 30
+    assert moods.tag_album(None, r, tracks, V2, call=fake, version=2)["ok"]
+    assert r["moods"] == ["epic", "heroic", "dreamy"] and r["moodsV"] == 2 and "- dreamy:" in seen[0]  # one track each: list order
+    assert moods.parse_reply(reply([(1, ["tense"])]), 1, [m for m, _ in V2]) is None  # the old word is off the list
+
+
+def test_the_sample_writes_a_review_file_and_leaves_the_catalog_alone(tmp_path):
+    rows = [_row(f"g{i}", f"Game {i} Soundtrack", 4, playsTotal=1000 - i, moods=["tense"]) for i in range(3)]
+    rows += [dict(_row("f1", "Film One Soundtrack", 4, playsTotal=50, moods=["sad"]), medium="film")]
+    tracks = {r["id"]: [{"title": f"T{k}", "moods": ["tense"]} for k in range(4)] for r in rows}
+    data_path, tracks_dir, state_path = _setup(tmp_path, rows, tracks)
+    before = data_path.read_text(encoding="utf-8"), {p.name: p.read_text(encoding="utf-8") for p in tracks_dir.iterdir()}
+    fake = FakeModel({"Soundtrack": [reply([(1, ["suspenseful"]), (2, ["ominous"]), (3, ["intense"]), (4, ["epic"])])]})
+    out = tmp_path / "sample.json"
+    entries = moods.run_sample(per_medium=2, vocab_path=V2_PATH, data_path=data_path, tracks_dir=tracks_dir,
+                               out_path=out, state_path=state_path, client=object(), workers=1, log=lambda *_: None, call=fake)
+    assert [e["id"] for e in entries] == ["g0", "g1", "f1"]  # the most played of each medium
+    review = json.loads(out.read_text(encoding="utf-8"))
+    assert review["vocabVersion"] == 2 and review["albums"][0]["old"] == ["tense"]
+    assert review["albums"][0]["new"] == ["suspenseful", "ominous", "intense"]
+    assert review["albums"][0]["tracks"][0] == {"title": "T0", "old": ["tense"], "new": ["suspenseful"]}
+    assert (data_path.read_text(encoding="utf-8"), {p.name: p.read_text(encoding="utf-8") for p in tracks_dir.iterdir()}) == before
+    assert json.loads(state_path.read_text(encoding="utf-8"))["runs"][-1]["kind"] == "sample"
+
+
+class FakeBatches:
+    """messages.batches: create, retrieve (processing then ended), results."""
+    def __init__(self, outcomes):
+        self.outcomes, self.created, self.polls = outcomes, None, 0
+
+    def create(self, requests):
+        self.created = requests
+        return SimpleNamespace(id="msgbatch_1")
+
+    def retrieve(self, bid):
+        self.polls += 1
+        return SimpleNamespace(processing_status="ended" if self.polls > 1 else "in_progress")
+
+    def results(self, bid):
+        for req in self.created:
+            kind, text = self.outcomes(req)
+            msg = SimpleNamespace(content=[SimpleNamespace(type="text", text=text)],
+                                  usage=SimpleNamespace(input_tokens=1000, output_tokens=200))
+            yield SimpleNamespace(custom_id=req["custom_id"], result=SimpleNamespace(type=kind, message=msg))
+
+
+def test_the_batch_retags_every_album_whose_chunks_all_came_back(tmp_path, monkeypatch):
+    monkeypatch.setattr(moods, "CHUNK_TRACKS", 2)
+    rows = [_row("whole", "Whole Soundtrack", 3, moods=["tense"]), _row("split", "Split Soundtrack", 4, moods=["sad"]),
+            _row("bad", "Bad Soundtrack", 2, moods=["joyful"]), _row("done", "Done Soundtrack", 1, moods=["epic"], moodsV=2)]
+    tracks = {"whole": [{"title": "W1"}, {"title": "W2"}, {"title": "W3"}], "split": [{"title": f"S{i}"} for i in range(4)],
+              "bad": [{"title": "B1", "moods": ["joyful"]}, {"title": "B2"}], "done": [{"title": "D1"}]}
+    data_path, tracks_dir, state_path = _setup(tmp_path, rows, tracks)
+
+    def outcomes(req):
+        prompt = req["params"]["messages"][0]["content"]
+        nums = [int(x.split(".")[0]) for x in prompt.splitlines() if x[:1].isdigit() and ". " in x]
+        if "Bad" in prompt:
+            return "succeeded", reply([(1, ["tense"])])            # an old word: the album keeps its moods
+        if "Split" in prompt and 3 in nums:
+            return "errored", ""                                   # one chunk lost: the whole album waits
+        return "succeeded", reply([(n, ["dreamy"]) for n in nums])
+    fake = FakeBatches(outcomes)
+    client = SimpleNamespace(messages=SimpleNamespace(batches=fake))
+    batch_path = tmp_path / "batch.json"
+    rec = moods.batch_submit(vocab_path=V2_PATH, data_path=data_path, tracks_dir=tracks_dir, batch_path=batch_path,
+                             client=client, log=lambda *_: None)
+    assert rec["albums"] == 3 and rec["requests"] == 5 and all(len(r["custom_id"]) < 64 for r in fake.created)
+    assert fake.created[0]["params"]["output_config"]["format"]["schema"]["properties"]["tracks"]["items"]["properties"]["moods"]["items"]["enum"][0] == "suspenseful"
+    assert moods.batch_submit(vocab_path=V2_PATH, data_path=data_path, tracks_dir=tracks_dir, batch_path=batch_path,
+                              client=client, log=lambda *_: None) is None  # one batch at a time
+    logs = []
+    summary = moods.batch_collect(data_path=data_path, tracks_dir=tracks_dir, batch_path=batch_path, state_path=state_path,
+                                  client=client, poll=0, log=logs.append, sleep=lambda s: None)
+    out = {r["id"]: r for r in json.loads(data_path.read_text(encoding="utf-8"))["releases"]}
+    assert out["whole"]["moods"] == ["dreamy"] and out["whole"]["moodsV"] == 2
+    assert out["split"]["moods"] == ["sad"] and "moodsV" not in out["split"]
+    assert out["bad"]["moods"] == ["joyful"] and "moodsV" not in out["bad"]
+    assert json.loads((tracks_dir / "whole.json").read_text(encoding="utf-8"))[2]["moods"] == ["dreamy"]
+    assert summary["tagged"] == 1 and summary["failed"] == 1 and summary["skipped"] == 1
+    assert abs(summary["cost"] - moods.cost(4000, 800) * 0.5) < 1e-9     # four replies came back, billed at half price
+    assert json.loads(batch_path.read_text(encoding="utf-8"))["applied"] is True
+    assert "2 not yet on v2" in logs[0]

@@ -1,0 +1,26 @@
+{
+  "_about": "Mood vocabulary v2 (CJ, 2026-09-19), checked against GEMS-9, the MIREX mood clusters, Epidemic Sound's moods, MTG-Jamendo's mood tags, and the YM2413-MDB game-music tags. From v1: tense splits into suspenseful, ominous and intense; mournful folds into sad; powerful becomes epic; hopeful, laid-back and dreamy are new. The glosses steer the model and never reach the app. Not active until moods.json is switched to it.",
+  "version": 2,
+  "moods": [
+    {"mood": "suspenseful", "gloss": "dread building, stealth, something about to happen"},
+    {"mood": "ominous", "gloss": "dark and menacing, a looming threat"},
+    {"mood": "intense", "gloss": "fierce and urgent, a fight, a boss battle"},
+    {"mood": "eerie", "gloss": "unsettling, haunted, creepy, not quite right"},
+    {"mood": "mysterious", "gloss": "enigmatic, curious, secrets kept"},
+    {"mood": "sad", "gloss": "sorrow, loss, grief, a lament"},
+    {"mood": "epic", "gloss": "grand and sweeping, larger than life, a wall of sound"},
+    {"mood": "heroic", "gloss": "noble, rousing, triumphant, a hero's theme or a march"},
+    {"mood": "driving", "gloss": "propulsive rhythm and momentum, a chase or a race"},
+    {"mood": "joyful", "gloss": "bright, cheerful, celebratory"},
+    {"mood": "playful", "gloss": "light, mischievous, quirky, comic"},
+    {"mood": "hopeful", "gloss": "uplifting, rising, light after the dark"},
+    {"mood": "wonder", "gloss": "awe, discovery, a vista opening up"},
+    {"mood": "transcendent", "gloss": "soaring, sacred, beyond the everyday"},
+    {"mood": "dreamy", "gloss": "hazy, floating, ethereal"},
+    {"mood": "peaceful", "gloss": "calm, still, at rest"},
+    {"mood": "laid-back", "gloss": "a relaxed groove: a shop, a cafe, a lounge"},
+    {"mood": "tender", "gloss": "gentle and intimate, touching, a quiet closeness"},
+    {"mood": "nostalgic", "gloss": "looking back with warmth, wistful, bittersweet"},
+    {"mood": "romantic", "gloss": "love, longing, a swell of feeling"}
+  ]
+}
