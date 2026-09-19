@@ -10,12 +10,14 @@ browser.json lives next to this script (or pass --auth PATH). It is
 gitignored and must never be committed or shared; the phone exports, the
 PC publishes.
 
-The app sign-in is preferred when it is there: oauth.json next to this
-script (or --oauth PATH), made by YT Music's device sign-in with CJ's own
-Google Cloud client, plus YTM_CLIENT_ID and YTM_CLIENT_SECRET in the
-environment. A copied browser login is ended by Google within hours when
-it is used from GitHub's runners; the app sign-in is not tied to a browser.
-Without all three, the browser login is used as before.
+The YouTube API sign-in is preferred when it is there: oauth.json next to
+this script (or --oauth PATH), made by Google's device sign-in with CJ's
+own Google Cloud client, plus YTM_CLIENT_ID and YTM_CLIENT_SECRET in the
+environment. With it, playlists are made and edited through YouTube's
+official Data API (youtube_api.py): YouTube Music refuses app sign-ins on
+its own API, and a copied browser login is ended by Google within hours
+when it is used from GitHub's runners. Without all three, the browser
+login is used as before. --check signs in and lists the library only.
 
 Re-runs are idempotent: playlists this script created carry a
 "# scorekeep" marker in their description, and a matching one is topped
@@ -185,8 +187,10 @@ def sync_playlist(yt, name, tracks, replace=False):
     to_add = [v for v in ids if v not in have]
     rep["already"] = len(ids) - len(to_add)
     if to_add:
-        _add_items(yt, pid, to_add)
-        rep["added"] = len(to_add)
+        res = _add_items(yt, pid, to_add)
+        failed = (res.get("failed") or []) if isinstance(res, dict) else []  # the YouTube API reports refusals
+        rep["added"] = len(to_add) - len(failed)
+        rep["unresolved"] += [f"YouTube would not add {v}: {why}" for v, why in failed]
     if found and (found["title"] != name or MARKER not in found["description"]):
         # a playlist from before the rename: same playlist, new label and marker
         yt.edit_playlist(pid, title=name, description=DESCRIPTION)
@@ -204,12 +208,12 @@ def expand_args(patterns):
 
 
 def pick_auth(auth, oauth, env):
-    """Which sign-in to use: ("oauth", path, client id, client secret) when
-    the app sign-in file and both client values are there, else ("browser",
-    path) when the browser login file is, else None."""
+    """Which sign-in to use: ("youtube-api", path, client id, client secret)
+    when the YouTube API sign-in file and both client values are there, else
+    ("browser", path) when the browser login file is, else None."""
     cid, secret = (env.get("YTM_CLIENT_ID") or "").strip(), (env.get("YTM_CLIENT_SECRET") or "").strip()
     if oauth and Path(oauth).exists() and Path(oauth).stat().st_size and cid and secret:
-        return ("oauth", Path(oauth), cid, secret)
+        return ("youtube-api", Path(oauth), cid, secret)
     if Path(auth).exists():
         return ("browser", Path(auth))
     return None
@@ -221,13 +225,16 @@ def main(argv=None):
             stream.reconfigure(errors="replace")  # cp1252 consoles must not crash on ♥ or ★
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("files", nargs="+", help="playlist-*.json exports from the app")
+    ap.add_argument("files", nargs="*", help="playlist-*.json exports from the app")
+    ap.add_argument("--check", action="store_true", help="sign in and list the library only; changes nothing")
     ap.add_argument("--auth", default=str(Path(__file__).resolve().parent / "browser.json"),
                     help="ytmusicapi browser-auth file (default: companion/browser.json)")
     ap.add_argument("--oauth", default=str(Path(__file__).resolve().parent / "oauth.json"),
                     help="ytmusicapi app sign-in file, used with YTM_CLIENT_ID and YTM_CLIENT_SECRET "
                          "(default: companion/oauth.json)")
     args = ap.parse_args(argv)
+    if not args.files and not args.check:
+        ap.error("give playlist-*.json files, or --check")
 
     pick = pick_auth(args.auth, args.oauth, os.environ)
     if pick is None:
@@ -236,14 +243,23 @@ def main(argv=None):
         print(f"and move the generated browser.json to {args.auth}", file=sys.stderr)
         return 2
 
-    from ytmusicapi import YTMusic  # lazy: tests drive sync_playlist with a fake
-    if pick[0] == "oauth":
-        from ytmusicapi import OAuthCredentials
-        yt = YTMusic(str(pick[1]), oauth_credentials=OAuthCredentials(client_id=pick[2], client_secret=pick[3]))
-        print("signed in with the app sign-in (oauth.json)")
+    if pick[0] == "youtube-api":
+        from youtube_api import YouTubeApi
+        yt, how = YouTubeApi(pick[1], pick[2], pick[3]), "YouTube API sign-in"
     else:
-        yt = YTMusic(str(pick[1]))
-        print("signed in with the browser login (browser.json)")
+        from ytmusicapi import YTMusic  # lazy: tests drive sync_playlist with a fake
+        yt, how = YTMusic(str(pick[1])), "browser login"
+    print(f"signed in with the {how}")
+
+    if args.check:
+        pls = yt.get_library_playlists(limit=None) or []
+        if not pls:
+            print(f"EMPTY LIBRARY -- the {how} got a signed-out session", file=sys.stderr)
+            return 1
+        ours = sum(1 for p in pls if (p.get("title") or "").startswith((PREFIX, LEGACY_PREFIX)))
+        channel = f", channel {yt.channel_title()}" if hasattr(yt, "channel_title") else ""
+        print(f"AUTH OK ({how}{channel}): {len(pls)} playlists visible, {ours} of them Scorekeep's")
+        return 0
 
     failures = 0
     for path in expand_args(args.files):
@@ -266,6 +282,8 @@ def main(argv=None):
         print(f"{verb} “{name}”: {rep['added']} added, {rep['already']} already there{removed}{renamed}")
         for miss in rep["unresolved"]:
             print(f"  couldn't confidently place: {miss}")
+    if hasattr(yt, "units"):
+        print(f"YouTube API units used this run: {yt.units} of the 10,000 a day")
     return 1 if failures else 0
 
 

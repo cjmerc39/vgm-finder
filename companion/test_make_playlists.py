@@ -315,7 +315,7 @@ def test_pick_auth_prefers_the_app_sign_in_only_when_it_is_complete(tmp_path):
     oauth.write_text("", encoding="utf-8")
     assert mp.pick_auth(browser, oauth, keys)[0] == "browser"  # an empty file (an unset secret) is not a sign-in
     oauth.write_text('{"refresh_token": "r"}', encoding="utf-8")
-    assert mp.pick_auth(browser, oauth, keys) == ("oauth", oauth, keys["YTM_CLIENT_ID"], "s3cret")
+    assert mp.pick_auth(browser, oauth, keys) == ("youtube-api", oauth, keys["YTM_CLIENT_ID"], "s3cret")
     assert mp.pick_auth(browser, oauth, {"YTM_CLIENT_ID": "id"})[0] == "browser"  # the secret missing
     browser.unlink()
-    assert mp.pick_auth(browser, oauth, keys)[0] == "oauth"  # the app sign-in alone is enough
+    assert mp.pick_auth(browser, oauth, keys)[0] == "youtube-api"  # the API sign-in alone is enough
