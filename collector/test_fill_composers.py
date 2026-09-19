@@ -103,3 +103,10 @@ def test_a_slow_wikidata_batch_is_retried_and_never_sinks_the_rest(monkeypatch):
     slugs = [f"slow-{i}" for i in range(25)] + [f"dead-{i}" for i in range(25)] + [f"fine-{i}" for i in range(25)]
     out = fill_composers.wikidata_composers(slugs, post=post)
     assert out == {"slow-0": ["Composer slow-0"], "fine-0": ["Composer fine-0"]}  # the dead batch alone is lost
+
+
+def test_a_shared_track_credit_counts_for_each_name_in_it():
+    album = {"artists": [{"name": "Various Artists"}],
+             "tracks": [{"artists": [{"name": "Nobuko Toda/Shuichi Kobori"}]}, {"artists": [{"name": "Nobuko Toda/Shuichi Kobori"}]},
+                        {"artists": [{"name": "Mick Gordon & Martin Stig Andersen"}]}, {"artists": [{"name": "Mick Gordon & Martin Stig Andersen"}]}]}
+    assert fill_composers.album_artists("x", album_fn=lambda b: album) == ["Nobuko Toda", "Shuichi Kobori", "Mick Gordon", "Martin Stig Andersen"]

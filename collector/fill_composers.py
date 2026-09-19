@@ -100,7 +100,11 @@ def album_artists(browse_id, album_fn=None):
                     if isinstance(a, dict) and (a.get("name") or "").strip()
                     and not a["name"].lower().startswith(("various", "varios")))
     need = 1 if len(tracks) <= 3 else 2
-    return [n for n, c in tally.most_common(4) if c >= need]
+    out = []
+    for n, c in tally.most_common(4):  # a shared credit ("A & B", "A/B/C") counts for each name in it
+        if c >= need:
+            out += [x for x in _names(n) if x not in out]
+    return out
 
 
 def wikidata_composers(slugs, post=None):
