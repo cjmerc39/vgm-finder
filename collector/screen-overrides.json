@@ -24,7 +24,10 @@
      "why": "weak guard: credited to the fictional band Spinal Tap, not the title"},
     {"tmdb": 37247, "name": "The Graduate", "album": "MPREb_T8mixJd08SB",
      "albumTitle": "The Graduate",
-     "why": "weak guard: credited to Simon & Garfunkel and Dave Grusin, and TMDb names no composer"}
+     "why": "weak guard: credited to Simon & Garfunkel and Dave Grusin, and TMDb names no composer"},
+    {"tmdb": 671, "season": null, "name": "Harry Potter and the Philosopher's Stone", "album": "MPREb_rGH1DfISvgh",
+     "albumTitle": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
+     "why": "title gate: TMDb titles the film Philosopher's Stone while John Williams' album is the US Sorcerer's Stone (CJ, 2026-09-19)"}
   ],
   "tv": [
     {"tmdb": 4608, "season": null, "name": "30 Rock", "album": "MPREb_5FuG5LzEEeL",
@@ -78,6 +81,21 @@
     {"tmdb": 4586, "season": null, "name": "Gilmore Girls", "album": "MPREb_YzXU1zOfI15",
      "albumTitle": "Gilmore Girls (Soundtrack from the Original Series)",
      "why": "no TMDb composer to vouch for it: Sam Phillips' own score album (18 cues, Luke's Window, If I Could Write); the other hit, Soundtrack Inspired by Gilmore Girls, is a covers compilation (CJ, 2026-09-18)"},
+    {"tmdb": 5920, "season": null, "name": "The Mentalist", "album": "MPREb_52jjXhKiuiK",
+     "albumTitle": "The Mentalist: Seasons 1-2 (Original Television Soundtrack)",
+     "why": "rule 3 year window: Blake Neely's score for the 2008-2015 show carries a 2019 release year, which retired the row (CJ, 2026-09-19)"},
+    {"tmdb": 4194, "season": null, "name": "Star Wars: The Clone Wars", "album": "MPREb_HcGC0gkNPmb",
+     "albumTitle": "Star Wars: The Clone Wars (Seasons One Through Six/Original Soundtrack)",
+     "why": "one album per slot: the show has four Kiner albums, and this one covers seasons one to six, so it takes the season-less row (CJ, 2026-09-19)"},
+    {"tmdb": 4194, "season": 7, "volume": 1, "name": "Star Wars: The Clone Wars", "album": "MPREb_kSwcSijvj89",
+     "albumTitle": "Star Wars: The Clone Wars - The Final Season (Episodes 1-4) (Original Soundtrack)",
+     "why": "the final season came in three parts named by episode range, which the volume rule reads only from Vol. markers"},
+    {"tmdb": 4194, "season": 7, "volume": 2, "name": "Star Wars: The Clone Wars", "album": "MPREb_x0vjxhtnXsk",
+     "albumTitle": "Star Wars: The Clone Wars - The Final Season (Episodes 5-8) (Original Soundtrack)",
+     "why": "the final season's second part"},
+    {"tmdb": 4194, "season": 7, "volume": 3, "name": "Star Wars: The Clone Wars", "album": "MPREb_bKIqx2PSF7J",
+     "albumTitle": "Star Wars: The Clone Wars - The Final Season (Episodes 9-12) (Original Soundtrack)",
+     "why": "the final season's third part, the one album the show's row wore until now"},
     {"tmdb": 34549, "season": null, "name": "The Great British Bake Off", "album": "MPREb_Svvjdud08bN",
      "albumTitle": "Great British Bake Off",
      "why": "never evaluated (under the TV vote bar) and no TMDb composer: Tom Howe's 2012 album of the show's cues and theme, the BBC run's era; Jack Hallam's Music from the Great British Bake Off covers the same cues and is left out (CJ, 2026-09-18)"}

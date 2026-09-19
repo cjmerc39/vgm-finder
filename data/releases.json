@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T17:46:51Z",
+  "updatedAt": "2026-09-19T23:49:50Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -238297,8 +238297,7 @@
       ],
       "ytmPlaylistId": "OLAK5uy_lqLZBmMgb0qr6Hg7gIMBuCxI8G4xoHaFM",
       "tracksN": 27,
-      "playsTotal": 6162000,
-      "retired": true
+      "playsTotal": 6162000
     },
     {
       "id": "tv-13-reasons-why-season-2",
@@ -292335,8 +292334,8 @@
       "moodsV": 2
     },
     {
-      "id": "tv-star-wars-the-clone-wars",
-      "title": "Star Wars: The Clone Wars Soundtrack",
+      "id": "tv-star-wars-the-clone-wars-season-7-vol-3",
+      "title": "Star Wars: The Clone Wars Season 7 Vol. 3 Soundtrack",
       "medium": "tv",
       "game": "Star Wars: The Clone Wars",
       "composers": [
@@ -373467,6 +373466,150 @@
         3
       ],
       "moodsV": 2
+    },
+    {
+      "id": "film-harry-potter-and-the-philosopher-s-stone",
+      "title": "Harry Potter and the Philosopher's Stone Soundtrack",
+      "medium": "film",
+      "game": "Harry Potter and the Philosopher's Stone",
+      "composers": [
+        "John Williams"
+      ],
+      "date": "2001-11-16",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/671",
+          "seenAt": "2026-09-19T23:49:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Harry+Potter+and+the+Philosopher%27s+Stone+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_rGH1DfISvgh",
+      "art": "https://yt3.googleusercontent.com/rOZrFwl2BV0Xm7XldRb-R5yTho6J8uP5WrClrbnprXHFMk9h-4Z1CB0oC2nbmsBmK2gynXP28UglyeI=w544-h544-s-l90-rj",
+      "notable": true,
+      "albumTitle": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "composerAliases": [
+        "John Towner Williams",
+        "Johnny Williams",
+        " John Williams Jr. "
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kM3OV5L7OwxtQ4iIsHL1Pq-jPSzGQOv1U",
+      "scoresN": 19,
+      "tracksN": 19,
+      "playsTotal": 125000000
+    },
+    {
+      "id": "tv-star-wars-the-clone-wars",
+      "title": "Star Wars: The Clone Wars Soundtrack",
+      "medium": "tv",
+      "game": "Star Wars: The Clone Wars",
+      "composers": [
+        "Kevin Kiner"
+      ],
+      "date": "2008-10-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/4194",
+          "seenAt": "2026-09-19T23:49:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+The+Clone+Wars+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HcGC0gkNPmb",
+      "art": "https://yt3.googleusercontent.com/VSl2emHcUWkNTtKZP0uY2eB2NnXGTXGMDs7_K1CZh7PccTn6CoxAs7EKs3X-BXsV5Wy3blyyZM_r2Yy9=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Star Wars: The Clone Wars (Seasons One Through Six/Original Soundtrack)",
+      "genres": [
+        "Action & Adventure",
+        "Sci-Fi & Fantasy",
+        "Animation"
+      ],
+      "albumArtists": [
+        "Kevin Kiner"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lgguMA6d5Aaa9dOMjEckdLVI5NcpkSZRE",
+      "scoresN": 28,
+      "tracksN": 28,
+      "playsTotal": 4651000
+    },
+    {
+      "id": "tv-star-wars-the-clone-wars-season-7-vol-1",
+      "title": "Star Wars: The Clone Wars Season 7 Vol. 1 Soundtrack",
+      "medium": "tv",
+      "game": "Star Wars: The Clone Wars",
+      "composers": [
+        "Kevin Kiner"
+      ],
+      "date": "2020-02-21",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/4194",
+          "seenAt": "2026-09-19T23:49:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+The+Clone+Wars+Season+7+Vol.+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_kSwcSijvj89",
+      "art": "https://yt3.googleusercontent.com/EfbDj9QrHSVDIqN6f4gPoCp4aPyV3Byw_tcn_dtHWNqpJeuFXhDKwvczRKV0HZPdpsZjYT_jX9ZocJw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Star Wars: The Clone Wars - The Final Season (Episodes 1-4) (Original Soundtrack)",
+      "genres": [
+        "Action & Adventure",
+        "Sci-Fi & Fantasy",
+        "Animation"
+      ],
+      "albumArtists": [
+        "Kevin Kiner"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kn-mcWpc5yw5VGfP_ajt9h41gr-s28stk",
+      "scoresN": 14,
+      "tracksN": 14,
+      "playsTotal": 4059000
+    },
+    {
+      "id": "tv-star-wars-the-clone-wars-season-7-vol-2",
+      "title": "Star Wars: The Clone Wars Season 7 Vol. 2 Soundtrack",
+      "medium": "tv",
+      "game": "Star Wars: The Clone Wars",
+      "composers": [
+        "Kevin Kiner"
+      ],
+      "date": "2020-02-21",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/4194",
+          "seenAt": "2026-09-19T23:49:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+The+Clone+Wars+Season+7+Vol.+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_x0vjxhtnXsk",
+      "art": "https://yt3.googleusercontent.com/QI2DhSsa7ZfODc_MvyPcrU0jEeoIer3PDosDpd54ia96jjrn83Mql88B7MNLZzxBHdArHYMPC4UHYvly=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Star Wars: The Clone Wars - The Final Season (Episodes 5-8) (Original Soundtrack)",
+      "genres": [
+        "Action & Adventure",
+        "Sci-Fi & Fantasy",
+        "Animation"
+      ],
+      "albumArtists": [
+        "Kevin Kiner"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nlA2YAm28fZlM_kqrrnMgGvnUtHJG7Jxc",
+      "scoresN": 14,
+      "tracksN": 14,
+      "playsTotal": 164800
     }
   ]
 }
