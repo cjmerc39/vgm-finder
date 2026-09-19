@@ -3,12 +3,15 @@
     "title": "Menus",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Paused",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Training",
@@ -21,7 +24,7 @@
     "title": "Machine (Battle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -29,7 +32,7 @@
     "title": "Wave (Battle)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -37,16 +40,15 @@
     "title": "Pulse (Battle)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense"
     ]
   },
   {
     "title": "Alien (Battle)",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -54,7 +56,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -62,14 +64,14 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "Thumper (Battle)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -77,37 +79,39 @@
     "title": "Trailer",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Credits",
     "plays": null,
     "moods": [
-      "peaceful"
+      "hopeful"
     ]
   },
   {
     "title": "Boss Fight",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Discovery",
     "plays": null,
     "moods": [
-      "wonder"
+      "wonder",
+      "dreamy"
     ]
   },
   {
     "title": "Heavy",
     "plays": null,
     "moods": [
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -129,8 +133,7 @@
     "title": "Searching",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "suspenseful"
     ]
   },
   {
@@ -153,31 +156,31 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Chillz",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
     "title": "Top Cop",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "heroic"
     ]
   },
   {
     "title": "Timing",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -185,15 +188,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "romantic"
+      "laid-back"
     ]
   },
   {
     "title": "Amped Synthwave",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -201,7 +204,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   }
 ]

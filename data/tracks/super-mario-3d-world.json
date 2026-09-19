@@ -3,8 +3,8 @@
     "title": "タイトル",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "playful",
+      "wonder"
     ]
   },
   {
@@ -20,15 +20,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "地下洞窟",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -36,22 +36,23 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "wonder"
     ]
   },
   {
     "title": "コースクリア",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
     "title": "WORLD 2",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "hopeful",
+      "playful"
     ]
   },
   {
@@ -66,8 +67,8 @@
     "title": "全力! ミステリーハウス",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -83,21 +84,22 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "hopeful"
     ]
   },
   {
     "title": "とおせんぼ!",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "WORLD 3",
     "plays": null,
     "moods": [
+      "playful",
       "joyful"
     ]
   },
@@ -106,7 +108,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -114,7 +116,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "wonder"
     ]
   },
   {
@@ -129,48 +131,48 @@
     "title": "対決前",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "ヘビースネーク",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "ワールドクリア",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "WORLD 4",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "ワイルドサバンナ",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "playful",
+      "wonder"
     ]
   },
   {
     "title": "チカチカブロック",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
@@ -178,7 +180,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "mysterious"
+      "driving"
     ]
   },
   {
@@ -193,16 +195,16 @@
     "title": "ファイアブロスの砦",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "ハイウェイ・バトル",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -217,7 +219,7 @@
     "title": "ダブルチェリー岬",
     "plays": null,
     "moods": [
-      "joyful",
+      "wonder",
       "playful"
     ]
   },
@@ -226,31 +228,31 @@
     "plays": null,
     "moods": [
       "joyful",
-      "driving"
+      "heroic"
     ]
   },
   {
     "title": "イルミネーションロード",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "dreamy",
+      "romantic"
     ]
   },
   {
     "title": "キラーエクスプレス",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "スーパータワーへの道",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "hopeful",
+      "driving"
     ]
   },
   {
@@ -265,24 +267,24 @@
     "title": "スーパータワーの決戦1",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "スーパータワーの決戦2",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "ネコクッパの最期",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
@@ -290,30 +292,27 @@
     "plays": null,
     "moods": [
       "joyful",
-      "transcendent"
+      "epic"
     ]
   },
   {
     "title": "スタッフロール",
     "plays": null,
     "moods": [
-      "joyful",
+      "playful",
       "nostalgic"
     ]
   },
   {
     "title": "ジュンビチュウ⋯",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "ようせいの国へ",
     "plays": null,
     "moods": [
       "wonder",
-      "peaceful"
+      "transcendent"
     ]
   },
   {
@@ -329,23 +328,23 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "次のワールドへ",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "hopeful",
+      "playful"
     ]
   },
   {
     "title": "WORLD 6",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -361,7 +360,7 @@
     "plays": null,
     "moods": [
       "tender",
-      "peaceful"
+      "laid-back"
     ]
   },
   {
@@ -369,15 +368,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "eerie"
     ]
   },
   {
     "title": "キノピオ隊長とオバケ屋敷",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "playful"
     ]
   },
   {
@@ -392,39 +391,40 @@
     "title": "サンサンビーチ～水中",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "playful",
+      "dreamy"
     ]
   },
   {
     "title": "クッパランドのテーマ",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "WORLD 7",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "キラー戦車",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "プンプン",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "intense"
     ]
   },
   {
@@ -439,8 +439,8 @@
     "title": "巨大マリオ",
     "plays": null,
     "moods": [
-      "powerful",
-      "joyful"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -448,15 +448,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "mysterious"
+      "wonder"
     ]
   },
   {
     "title": "溶岩湖",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -464,62 +464,63 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "WORLD 8",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "クッパの溶岩城",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "ブンブン",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "intense",
+      "playful"
     ]
   },
   {
     "title": "プレッシー",
     "plays": null,
     "moods": [
-      "powerful",
-      "playful"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "ザブンリバー",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "ミス",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "mysterious"
     ]
   },
   {
     "title": "ボスブンレツ",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -527,26 +528,11 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "epic"
     ]
   },
   {
     "title": "コースクリア（short Ver.）",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
-  },
-  {
-    "title": "いざ! 空の彼方へ",
-    "plays": null,
-    "moods": [
-      "transcendent",
-      "wonder"
-    ]
-  },
-  {
-    "title": "WORLD スター",
     "plays": null,
     "moods": [
       "joyful",
@@ -554,11 +540,27 @@
     ]
   },
   {
-    "title": "レインボーパーク",
+    "title": "いざ! 空の彼方へ",
+    "plays": null,
+    "moods": [
+      "epic",
+      "hopeful"
+    ]
+  },
+  {
+    "title": "WORLD スター",
     "plays": null,
     "moods": [
       "joyful",
-      "wonder"
+      "playful"
+    ]
+  },
+  {
+    "title": "レインボーパーク",
+    "plays": null,
+    "moods": [
+      "wonder",
+      "transcendent"
     ]
   },
   {
@@ -574,15 +576,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "intense"
     ]
   },
   {
     "title": "WORLD キノコ～フラワー",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -590,23 +592,23 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "hopeful"
     ]
   },
   {
     "title": "チャンピオンシップロード",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "スーパーマリオ 3Dワールドのテーマ",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "heroic",
+      "epic"
     ]
   }
 ]

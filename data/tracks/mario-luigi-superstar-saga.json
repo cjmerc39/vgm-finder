@@ -3,22 +3,23 @@
     "title": "A New Adventure Begins",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "We're Off Again!",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "joyful"
     ]
   },
   {
     "title": "Royal Welcome",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -26,23 +27,24 @@
     "title": "Danger Abounds!",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Touch of Evil",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Peach's Castle",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -50,7 +52,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "eerie"
+      "mysterious"
     ]
   },
   {
@@ -58,7 +60,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -73,7 +75,8 @@
     "title": "Item Obtained",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -88,16 +91,16 @@
     "title": "Stardust Fields Area 64",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
     "title": "Let's Go!",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "joyful"
     ]
   },
   {
@@ -112,7 +115,7 @@
     "title": "Climbing",
     "plays": null,
     "moods": [
-      "tense",
+      "hopeful",
       "driving"
     ]
   },
@@ -120,8 +123,8 @@
     "title": "We Can't Lose!",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "epic"
     ]
   },
   {
@@ -129,7 +132,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "peaceful"
+      "laid-back"
     ]
   },
   {
@@ -145,7 +148,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "romantic"
+      "heroic"
     ]
   },
   {
@@ -160,8 +163,8 @@
     "title": "Castle of Beans",
     "plays": null,
     "moods": [
-      "powerful",
-      "mysterious"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -169,15 +172,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "playful"
     ]
   },
   {
     "title": "The Marvelous Duo",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -193,50 +196,11 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
-    ]
-  },
-  {
-    "title": "Professor E. Gadd",
-    "plays": null,
-    "moods": [
-      "playful",
-      "tender"
-    ]
-  },
-  {
-    "title": "Woohoo Hooniversity",
-    "plays": null,
-    "moods": [
-      "joyful",
-      "playful"
-    ]
-  },
-  {
-    "title": "Fawful and Cackletta",
-    "plays": null,
-    "moods": [
-      "eerie",
       "mysterious"
     ]
   },
   {
-    "title": "Sweet Surfin'",
-    "plays": null,
-    "moods": [
-      "joyful",
-      "peaceful"
-    ]
-  },
-  {
-    "title": "Hold the Corny Jokes, Please!",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
-  },
-  {
-    "title": "Sea... Sea... Sea...",
+    "title": "Professor E. Gadd",
     "plays": null,
     "moods": [
       "peaceful",
@@ -244,67 +208,107 @@
     ]
   },
   {
+    "title": "Woohoo Hooniversity",
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
+  },
+  {
+    "title": "Fawful and Cackletta",
+    "plays": null,
+    "moods": [
+      "ominous",
+      "intense"
+    ]
+  },
+  {
+    "title": "Sweet Surfin'",
+    "plays": null,
+    "moods": [
+      "laid-back",
+      "joyful"
+    ]
+  },
+  {
+    "title": "Hold the Corny Jokes, Please!",
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
+  },
+  {
+    "title": "Sea... Sea... Sea...",
+    "plays": null,
+    "moods": [
+      "peaceful",
+      "dreamy"
+    ]
+  },
+  {
     "title": "Don't Dwell on Danger",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Another Sky for Toads",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
     "title": "It's My Turn",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "To Challenge!",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Cackletta, the Fiercest Foe",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Decisive Battleground",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Time to Settle This!",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Showdown with Cackletta!",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -319,7 +323,7 @@
     "title": "Going Home",
     "plays": null,
     "moods": [
-      "peaceful",
+      "hopeful",
       "tender"
     ]
   },

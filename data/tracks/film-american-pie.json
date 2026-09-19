@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -47,7 +47,7 @@
     "song": true,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -59,7 +59,8 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "driving",
+      "laid-back"
     ]
   },
   {
@@ -71,8 +72,7 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "peaceful"
+      "hopeful"
     ]
   },
   {
@@ -112,7 +112,7 @@
     "song": true,
     "moods": [
       "nostalgic",
-      "peaceful"
+      "laid-back"
     ]
   },
   {
@@ -124,8 +124,7 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -138,7 +137,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "tender"
+      "dreamy"
     ]
   },
   {
@@ -148,10 +147,7 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true,
-    "moods": [
-      "tender"
-    ]
+    "song": true
   },
   {
     "title": "Man With The Hex",
@@ -162,8 +158,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   }
 ]

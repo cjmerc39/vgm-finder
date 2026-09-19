@@ -8,7 +8,7 @@
     ],
     "moods": [
       "playful",
-      "tense"
+      "mysterious"
     ]
   },
   {
@@ -32,7 +32,7 @@
     ],
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
@@ -44,7 +44,7 @@
     ],
     "moods": [
       "eerie",
-      "mysterious"
+      "suspenseful"
     ]
   },
   {
@@ -55,8 +55,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -80,7 +80,7 @@
     ],
     "moods": [
       "eerie",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -91,8 +91,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "playful",
-      "eerie"
+      "suspenseful",
+      "playful"
     ]
   },
   {
@@ -103,8 +103,7 @@
       "James L. Venable"
     ],
     "moods": [
-      "tense",
-      "mysterious"
+      "intense"
     ]
   },
   {
@@ -115,8 +114,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -139,8 +138,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -174,7 +173,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -186,7 +186,7 @@
     ],
     "moods": [
       "mysterious",
-      "tense"
+      "playful"
     ]
   },
   {
@@ -198,7 +198,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "playful"
     ]
   },
   {
@@ -209,8 +209,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "playful",
-      "tender"
+      "mysterious",
+      "nostalgic"
     ]
   },
   {
@@ -221,8 +221,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "powerful",
-      "driving"
+      "heroic",
+      "epic"
     ]
   },
   {
@@ -234,7 +234,7 @@
     ],
     "moods": [
       "heroic",
-      "powerful"
+      "driving"
     ]
   },
   {
@@ -245,8 +245,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "mysterious",
-      "eerie"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -257,8 +257,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "eerie"
     ]
   },
   {
@@ -269,8 +269,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -281,8 +281,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "mysterious",
+      "intense"
     ]
   },
   {
@@ -293,8 +293,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "mysterious",
-      "playful"
+      "playful",
+      "intense"
     ]
   },
   {
@@ -305,8 +305,8 @@
       "James L. Venable"
     ],
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -318,7 +318,7 @@
     ],
     "moods": [
       "romantic",
-      "tender"
+      "hopeful"
     ]
   },
   {
@@ -328,6 +328,9 @@
     "artists": [
       "Young Huss"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   }
 ]

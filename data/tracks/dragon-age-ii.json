@@ -3,34 +3,36 @@
     "title": "Dragon Age 2 Main Theme",
     "plays": null,
     "moods": [
+      "epic",
       "heroic",
-      "powerful",
-      "wonder"
+      "intense"
     ]
   },
   {
     "title": "Hawke Family Theme",
     "plays": null,
     "moods": [
+      "nostalgic",
       "tender",
-      "nostalgic"
+      "romantic"
     ]
   },
   {
     "title": "Qunari on the Rise",
     "plays": null,
     "moods": [
-      "tense",
+      "ominous",
       "driving",
-      "mysterious"
+      "intense"
     ]
   },
   {
     "title": "Templars",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "heroic",
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -38,39 +40,41 @@
     "plays": null,
     "moods": [
       "romantic",
-      "tender"
+      "tender",
+      "dreamy"
     ]
   },
   {
     "title": "Arishok",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious",
-      "tense"
+      "ominous",
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Tavern Music",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
     "title": "Viscount",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "mysterious",
+      "epic"
     ]
   },
   {
     "title": "Mages",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
+      "ominous",
       "mysterious"
     ]
   },
@@ -78,9 +82,9 @@
     "title": "Fenris Theme",
     "plays": null,
     "moods": [
+      "sad",
       "mysterious",
-      "eerie",
-      "powerful"
+      "eerie"
     ]
   },
   {
@@ -88,7 +92,8 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "nostalgic",
+      "dreamy"
     ]
   },
   {
@@ -96,6 +101,7 @@
     "plays": null,
     "moods": [
       "driving",
+      "intense",
       "playful"
     ]
   }

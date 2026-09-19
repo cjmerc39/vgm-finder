@@ -1,16 +1,12 @@
 [
   {
     "title": "Wii Menu Banner",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Intro Cutscene",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -18,18 +14,12 @@
     "title": "Title Screen (International)",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Title Screen (Japanese)",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
-  },
-  {
-    "title": "Main Menu",
     "plays": null,
     "moods": [
       "joyful",
@@ -37,18 +27,22 @@
     ]
   },
   {
-    "title": "Level Select",
+    "title": "Main Menu",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
+  },
+  {
+    "title": "Level Select",
+    "plays": null
   },
   {
     "title": "Temple of Form",
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "eerie"
     ]
   },
   {
@@ -60,10 +54,7 @@
   },
   {
     "title": "Sound Studio",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Sound Studio - Sound Effects (Track 1)",
@@ -81,31 +72,31 @@
     "title": "Form Baton (International)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Form Baton (Japan Version)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Form Baton (Korea Version)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Mysterious Form Baton Found! ~ Wario - Opening Cutscene",
     "plays": null,
     "moods": [
-      "joyful",
+      "mysterious",
       "playful"
     ]
   },
@@ -121,7 +112,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "heroic"
     ]
   },
   {
@@ -129,7 +120,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "heroic"
     ]
   },
   {
@@ -143,23 +134,23 @@
     "title": "Evil Attacks Diamond Dojo! ~ Kat & Ana - Intro Cutscene",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Evil Attacks Diamond Dojo! ~ Kat & Ana - Opening Cutscene",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Evil Attacks Diamond Dojo! ~ Kat & Ana - Epilogue Cutscene",
     "plays": null,
     "moods": [
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -167,15 +158,14 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "joyful"
     ]
   },
   {
     "title": "Enter Young Cricket - Opening Cutscene",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "heroic"
     ]
   },
   {
@@ -228,30 +218,29 @@
     "title": "The Loquacious Spell Book ~ Ashley - Epilogue Cutscene",
     "plays": null,
     "moods": [
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Tomorrow Hill ~ Dribble & Spitz - Intro Cutscene",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
     "title": "Tomorrow Hill ~ Dribble & Spitz - Opening Cutscene",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "laid-back"
     ]
   },
   {
     "title": "Tomorrow Hill ~ Dribble & Spitz - Epilogue Cutscene",
     "plays": null,
     "moods": [
-      "tender"
+      "joyful"
     ]
   },
   {
@@ -303,16 +292,16 @@
     "title": "Canine Crazed ~ Jimmy P - Intro Cutscene",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Canine Crazed ~ Jimmy P - Opening Cutscene",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -326,14 +315,15 @@
     "title": "Forever Form Baton ~ Tiny Wario - Opening Cutscene",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Forever Form Baton ~ Tiny Wario - Epilogue Cutscene",
     "plays": null,
     "moods": [
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -348,14 +338,15 @@
     "title": "The Secret of the Balance Stone ~ Orbulon - Epilogue Cutscene",
     "plays": null,
     "moods": [
-      "wonder"
+      "hopeful",
+      "joyful"
     ]
   },
   {
     "title": "Kelorometer ~ Crygor - Opening Cutscene",
     "plays": null,
     "moods": [
-      "mysterious"
+      "playful"
     ]
   },
   {
@@ -366,6 +357,7 @@
     "title": "Ending Cutscene",
     "plays": null,
     "moods": [
+      "epic",
       "joyful"
     ]
   },
@@ -374,7 +366,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "heroic"
     ]
   },
   {
@@ -382,7 +374,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "heroic"
     ]
   },
   {
@@ -390,7 +382,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "heroic"
     ]
   },
   {
@@ -398,7 +390,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "heroic"
     ]
   },
   {
@@ -420,7 +412,7 @@
     "title": "Attack of the Warios",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -428,16 +420,16 @@
     "title": "Attack of Robo-Wario!",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Mona Album",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -445,7 +437,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -460,39 +452,36 @@
     "title": "Drive Safely",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "The Cricket Album",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "heroic",
+      "peaceful"
     ]
   },
   {
     "title": "Steady Now",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "peaceful"
     ]
   },
   {
     "title": "The Ashley Album",
     "plays": null,
     "moods": [
-      "playful",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Behemoth Burger",
     "plays": null,
     "moods": [
-      "powerful",
       "playful"
     ]
   },
@@ -500,39 +489,38 @@
     "title": "The Dribble Album",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "The Evil Nose",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Final Nose Battle",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "The Penny Album",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Serious Battle",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -541,7 +529,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "romantic"
+      "playful"
     ]
   },
   {
@@ -555,32 +543,32 @@
     "title": "Star Fox Corneria",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Star Fox Sector X",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Star Fox Titania",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Star Fox Boss",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -603,16 +591,16 @@
     "title": "The Orbulon Album",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "playful",
+      "dreamy"
     ]
   },
   {
     "title": "I'm a Boxer!",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "playful"
     ]
   },
   {
@@ -626,7 +614,7 @@
     "title": "Gray Smell ~ Darts - Main Theme",
     "plays": null,
     "moods": [
-      "playful"
+      "mysterious"
     ]
   },
   {
@@ -649,22 +637,19 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "Dingle Dangle ~ Block Star - Stage Select",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Dingle Dangle ~ Block Star - Main Theme",
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "joyful"
     ]
   },
   {
@@ -685,15 +670,15 @@
     "title": "I Love Cake ~ Bungee Buddies - Tutorial",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Friends' March ~ Bungee Buddies - Main Theme",
     "plays": null,
     "moods": [
-      "playful",
+      "heroic",
       "joyful"
     ]
   },
@@ -702,7 +687,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -725,31 +710,31 @@
     "title": "Pyoro S",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Pyoro S--Item Time!",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Pyoro S Eyeball Boss",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Tower Tennis Terror",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -757,16 +742,16 @@
     "title": "Tomorrow Hill (International)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "Tomorrow Hill (Japanese)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
@@ -774,7 +759,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "intense"
     ]
   },
   {
@@ -782,13 +767,14 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "intense"
     ]
   },
   {
     "title": "Yellow Murmur ~ Kelorometer",
     "plays": null,
     "moods": [
+      "mysterious",
       "playful"
     ]
   },
@@ -809,10 +795,7 @@
   },
   {
     "title": "Wario - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Mona - Intermissions",
@@ -823,10 +806,7 @@
   },
   {
     "title": "Mona - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Kat & Ana - Intermissions",
@@ -837,10 +817,7 @@
   },
   {
     "title": "Kat & Ana - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Cricket - Intermissions",
@@ -851,53 +828,43 @@
   },
   {
     "title": "Cricket - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Jimmy T - Intermissions",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Jimmy T - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Ashley - Intermissions",
     "plays": null,
     "moods": [
-      "playful",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Ashley - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Dribble & Spitz - Intermissions",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Dribble & Spitz - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Penny - Intermissions",
@@ -908,25 +875,18 @@
   },
   {
     "title": "Penny - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "9-Volt - Intermissions",
     "plays": null,
     "moods": [
-      "playful",
-      "nostalgic"
+      "playful"
     ]
   },
   {
     "title": "9-Volt - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Jimmy P - Intermissions",
@@ -937,10 +897,7 @@
   },
   {
     "title": "Jimmy P - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Tiny Wario - Intermissions",
@@ -958,31 +915,23 @@
   },
   {
     "title": "Tiny Wario - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Orbulon - Intermissions",
     "plays": null,
     "moods": [
-      "playful",
       "mysterious"
     ]
   },
   {
     "title": "Orbulon - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Temple of Form - Intermissions",
     "plays": null,
     "moods": [
-      "playful",
       "mysterious"
     ]
   },
@@ -990,21 +939,18 @@
     "title": "Elevator - Intermissions",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "Elevator - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Kelorometer - Intro",
     "plays": null,
     "moods": [
-      "playful"
+      "mysterious"
     ]
   },
   {
@@ -1016,10 +962,7 @@
   },
   {
     "title": "Kelorometer - Results",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Lifeline - Intermissions",
@@ -1032,22 +975,22 @@
     "title": "Lifeline - Jungle",
     "plays": null,
     "moods": [
-      "playful",
-      "mysterious"
+      "wonder",
+      "peaceful"
     ]
   },
   {
     "title": "Lifeline - Outro",
     "plays": null,
     "moods": [
-      "playful"
+      "hopeful"
     ]
   },
   {
     "title": "Survival - Intro",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
@@ -1068,7 +1011,7 @@
     "title": "Bomb - Start",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
@@ -1082,29 +1025,30 @@
     "title": "Bomb - Lose",
     "plays": null,
     "moods": [
-      "playful"
+      "sad"
     ]
   },
   {
     "title": "Game Clear Multiplayer",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
     "title": "Game Over Multiplayer",
     "plays": null,
     "moods": [
-      "playful"
+      "sad"
     ]
   },
   {
     "title": "(Bonus) Star Fox Corneria In-Game",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -1112,61 +1056,61 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "(Bonus) Star Fox Titania In-Game",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "(Bonus) Star Fox Boss In-Game",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "(Bonus) Star Fox Clear",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
     "title": "(Bonus) Star Fox Game Over",
     "plays": null,
     "moods": [
-      "playful"
+      "sad"
     ]
   },
   {
     "title": "(Bonus) Star Fox Clear In-Game",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "(Bonus) Star Fox Game Over In-Game",
     "plays": null,
     "moods": [
-      "playful"
+      "sad"
     ]
   },
   {
     "title": "(Bonus) Tomorrow Hill - Instrumental",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
@@ -1174,23 +1118,23 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "intense"
     ]
   },
   {
     "title": "(Bonus) Tomorrow Hill - Vocals (International)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "(Bonus) Tomorrow Hill - Vocals (Japanese)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
@@ -1198,7 +1142,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "intense"
     ]
   },
   {
@@ -1206,15 +1150,15 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "intense"
     ]
   },
   {
     "title": "(Bonus) Yellow Murmur ~ Main Theme (Speed Up)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
@@ -1228,15 +1172,16 @@
     "title": "(Jingle) Speed Up",
     "plays": null,
     "moods": [
-      "joyful"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "(Jingle) Boss Stage",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -1250,14 +1195,15 @@
     "title": "(Jingle) Game Clear",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
     "title": "(Jingle) Game Over",
     "plays": null,
     "moods": [
-      "playful"
+      "sad"
     ]
   },
   {
@@ -1314,6 +1260,7 @@
     "title": "(Unused) Title Screen",
     "plays": null,
     "moods": [
+      "mysterious",
       "playful"
     ]
   },
@@ -1321,7 +1268,7 @@
     "title": "(Unused) Elevator - Intermissions",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -1335,8 +1282,8 @@
     "title": "(Unused) Star Fox Corneria",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -1344,31 +1291,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "(Unused) Star Fox Titania",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "(Unused) Star Fox Boss",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "(Unused) Wii Dancing - Short Version",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {

@@ -3,8 +3,8 @@
     "title": "Metroid Title Theme",
     "plays": null,
     "moods": [
+      "epic",
       "heroic",
-      "powerful",
       "mysterious"
     ]
   },
@@ -14,34 +14,34 @@
     "moods": [
       "mysterious",
       "eerie",
-      "tense"
+      "wonder"
     ]
   },
   {
     "title": "Norfair",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense",
-      "driving"
+      "ominous",
+      "intense",
+      "eerie"
     ]
   },
   {
     "title": "Kraid's Lair",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie",
-      "mysterious"
+      "suspenseful",
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Ridley's Lair",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic",
-      "tense"
+      "epic",
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -49,17 +49,17 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense",
-      "powerful"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Metroid Ending Theme",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic",
-      "joyful"
+      "epic",
+      "hopeful",
+      "heroic"
     ]
   }
 ]

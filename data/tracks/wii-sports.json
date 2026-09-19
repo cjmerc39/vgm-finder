@@ -3,32 +3,31 @@
     "title": "Disc Channel",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Title Screen",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "hopeful",
+      "joyful"
     ]
   },
   {
     "title": "Wii Sports Menu",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
     "title": "How to Play",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "playful"
     ]
   },
   {
@@ -36,7 +35,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -67,7 +66,10 @@
   },
   {
     "title": "Tennis (Replay)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Tennis (Results)",
@@ -87,22 +89,24 @@
     "title": "Baseball (Single)",
     "plays": null,
     "moods": [
-      "joyful"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Baseball (Double)",
     "plays": null,
     "moods": [
-      "joyful"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Baseball (Triple)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -110,15 +114,15 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Baseball (It's Out of the Park)",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -132,15 +136,15 @@
     "title": "Bowling (Intro)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Bowling",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "driving"
     ]
   },
   {
@@ -154,15 +158,15 @@
     "title": "Bowling (Strike)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Bowling (Close Jingle)",
     "plays": null,
     "moods": [
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -176,15 +180,15 @@
     "title": "Golf (Course Select)",
     "plays": null,
     "moods": [
-      "peaceful"
+      "playful"
     ]
   },
   {
     "title": "Golf (Presentation)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "wonder",
+      "hopeful"
     ]
   },
   {
@@ -198,8 +202,8 @@
     "title": "Golf (In Hole)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -213,21 +217,24 @@
     "title": "Boxing (Round 1)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Boxing (Last Round)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Boxing (Replay)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Boxing (Results)",
@@ -247,6 +254,7 @@
     "title": "Tennis (Set)",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -254,14 +262,15 @@
     "title": "Tennis (Training)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Baseball (Training)",
     "plays": null,
     "moods": [
-      "playful"
+      "driving"
     ]
   },
   {
@@ -275,7 +284,7 @@
     "title": "Bowling (Training)",
     "plays": null,
     "moods": [
-      "playful"
+      "driving"
     ]
   },
   {
@@ -289,6 +298,7 @@
     "title": "Boxing (Training)",
     "plays": null,
     "moods": [
+      "intense",
       "driving"
     ]
   },
@@ -303,15 +313,15 @@
     "title": "Get Medal",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Platinum Medal",
     "plays": null,
     "moods": [
-      "joyful",
+      "epic",
       "heroic"
     ]
   },
@@ -324,7 +334,10 @@
   },
   {
     "title": "Wii Fitness (Test Menu)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Wii Fitness (Results Processing)",
@@ -334,7 +347,7 @@
     "title": "Wii Fitness (Results Shown 1)",
     "plays": null,
     "moods": [
-      "joyful"
+      "hopeful"
     ]
   },
   {

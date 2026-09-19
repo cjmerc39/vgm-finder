@@ -8,7 +8,7 @@
     ],
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -20,7 +20,7 @@
     ],
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -31,7 +31,7 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -44,7 +44,7 @@
     ],
     "moods": [
       "tender",
-      "peaceful"
+      "nostalgic"
     ]
   },
   {
@@ -55,8 +55,8 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -79,7 +79,7 @@
     ],
     "moods": [
       "joyful",
-      "peaceful"
+      "playful"
     ]
   },
   {
@@ -102,8 +102,8 @@
       "Tom Howe"
     ],
     "moods": [
-      "heroic",
-      "joyful"
+      "hopeful",
+      "heroic"
     ]
   },
   {
@@ -114,8 +114,8 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -127,7 +127,7 @@
     ],
     "moods": [
       "tender",
-      "peaceful"
+      "mysterious"
     ]
   },
   {
@@ -138,8 +138,8 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -150,7 +150,7 @@
       "Tom Howe"
     ],
     "moods": [
-      "joyful",
+      "peaceful",
       "tender"
     ]
   },
@@ -186,8 +186,8 @@
       "Tom Howe"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -198,7 +198,7 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
       "driving"
     ]
   },
@@ -211,7 +211,7 @@
     ],
     "moods": [
       "mysterious",
-      "tense"
+      "playful"
     ]
   },
   {
@@ -222,7 +222,7 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
@@ -233,7 +233,7 @@
       "Tom Howe"
     ],
     "moods": [
-      "mysterious",
+      "wonder",
       "playful"
     ]
   },
@@ -245,7 +245,7 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense",
+      "mysterious",
       "sad"
     ]
   },
@@ -257,8 +257,8 @@
       "Tom Howe"
     ],
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -269,7 +269,7 @@
       "Tom Howe"
     ],
     "moods": [
-      "powerful",
+      "intense",
       "playful"
     ]
   },
@@ -282,7 +282,7 @@
     ],
     "moods": [
       "joyful",
-      "tender"
+      "hopeful"
     ]
   },
   {
@@ -305,8 +305,8 @@
       "Tom Howe"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -328,7 +328,11 @@
     "artists": [
       "Asa Taccone"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "driving"
+    ]
   },
   {
     "title": "Flames of Disaster (feat. Michael Bolton)",
@@ -340,7 +344,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful"
+      "epic",
+      "intense"
     ]
   }
 ]

@@ -8,7 +8,6 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
       "romantic"
     ]
   },
@@ -21,8 +20,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -34,7 +33,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "suspenseful",
       "eerie"
     ]
   },
@@ -60,7 +59,6 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
       "romantic"
     ]
   },
@@ -74,7 +72,7 @@
     "song": true,
     "moods": [
       "heroic",
-      "powerful"
+      "driving"
     ]
   },
   {
@@ -86,8 +84,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -126,7 +124,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "playful"
+      "suspenseful"
     ]
   },
   {
@@ -136,7 +134,11 @@
     "artists": [
       "Shirley Walker"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back",
+      "playful"
+    ]
   },
   {
     "title": "Caught In The Act (Album Version)",
@@ -147,8 +149,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -160,8 +162,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "tender"
+      "mysterious",
+      "romantic"
     ]
   },
   {
@@ -173,8 +175,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "wonder"
+      "wonder",
+      "peaceful"
     ]
   },
   {
@@ -186,8 +188,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -199,7 +201,7 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
+      "heroic",
       "joyful"
     ]
   },
@@ -212,8 +214,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   }
 ]

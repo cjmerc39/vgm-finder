@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
@@ -47,7 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -72,8 +73,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "tender"
+      "sad",
+      "nostalgic"
     ]
   },
   {
@@ -85,7 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic"
+      "romantic",
+      "hopeful"
     ]
   },
   {
@@ -97,8 +99,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "tender"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
@@ -110,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "mournful"
+      "mysterious",
+      "tender"
     ]
   },
   {
@@ -123,8 +125,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "joyful"
+      "sad",
+      "nostalgic"
     ]
   },
   {
@@ -137,7 +139,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -147,7 +149,11 @@
     "artists": [
       "Stereolab"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   },
   {
     "title": "Inside Game",
@@ -181,7 +187,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "transcendent"
+      "hopeful"
     ]
   }
 ]

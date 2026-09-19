@@ -8,9 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving",
-      "heroic"
+      "heroic",
+      "driving"
     ]
   },
   {
@@ -22,7 +21,7 @@
     ],
     "moods": [
       "tender",
-      "nostalgic"
+      "peaceful"
     ]
   },
   {
@@ -34,8 +33,7 @@
     ],
     "song": true,
     "moods": [
-      "sad",
-      "mournful"
+      "sad"
     ]
   },
   {
@@ -59,8 +57,7 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "joyful"
+      "romantic"
     ]
   },
   {
@@ -72,8 +69,7 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "tense"
+      "hopeful"
     ]
   },
   {
@@ -84,8 +80,8 @@
       "Tyler Bates"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -97,7 +93,7 @@
     ],
     "moods": [
       "playful",
-      "mysterious"
+      "epic"
     ]
   },
   {
@@ -120,11 +116,7 @@
     "artists": [
       "Aceyalone"
     ],
-    "song": true,
-    "moods": [
-      "mysterious",
-      "tense"
-    ]
+    "song": true
   },
   {
     "title": "The Second Prayer",
@@ -134,8 +126,8 @@
       "Tyler Bates"
     ],
     "moods": [
-      "transcendent",
-      "peaceful"
+      "peaceful",
+      "transcendent"
     ]
   },
   {
@@ -148,7 +140,7 @@
     "song": true,
     "moods": [
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
@@ -160,7 +152,6 @@
     ],
     "song": true,
     "moods": [
-      "driving",
       "playful"
     ]
   },
@@ -172,8 +163,8 @@
       "Tyler Bates"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -184,8 +175,8 @@
       "Tyler Bates"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "hopeful"
     ]
   },
   {
@@ -197,7 +188,7 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
+      "nostalgic",
       "tender"
     ]
   }

@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -59,7 +59,11 @@
     "artists": [
       "Brenda Holloway"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Rescue",
@@ -69,8 +73,8 @@
       "James Newton Howard"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -82,8 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "tense"
+      "sad",
+      "intense"
     ]
   },
   {
@@ -95,8 +99,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -121,6 +125,7 @@
     ],
     "song": true,
     "moods": [
+      "joyful",
       "romantic"
     ]
   },
@@ -133,7 +138,7 @@
     ],
     "moods": [
       "sad",
-      "mournful"
+      "eerie"
     ]
   },
   {
@@ -145,8 +150,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "tender"
+      "hopeful",
+      "transcendent"
     ]
   },
   {
@@ -158,8 +163,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "joyful"
+      "joyful",
+      "tender"
     ]
   },
   {
@@ -171,8 +176,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "romantic"
+      "romantic",
+      "tender"
     ]
   }
 ]

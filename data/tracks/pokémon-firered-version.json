@@ -1,33 +1,30 @@
 [
   {
     "title": "Game Freak Logo",
-    "plays": null,
-    "moods": [
-      "wonder"
-    ]
+    "plays": null
   },
   {
     "title": "Opening Movie",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "wonder",
+      "epic"
     ]
   },
   {
     "title": "Title Screen",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "hopeful",
+      "joyful"
     ]
   },
   {
     "title": "Game Tutorial",
     "plays": null,
     "moods": [
-      "tender",
-      "joyful"
+      "playful",
+      "wonder"
     ]
   },
   {
@@ -35,21 +32,22 @@
     "plays": null,
     "moods": [
       "joyful",
-      "wonder"
+      "hopeful"
     ]
   },
   {
     "title": "Pallet Town Theme",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Professor Oak",
     "plays": null,
     "moods": [
+      "mysterious",
       "tender"
     ]
   },
@@ -58,30 +56,31 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "wonder"
+      "playful"
     ]
   },
   {
     "title": "Fanfare: Pokémon Obtained",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "A Rival Appears",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Battle! (Trainer Battle)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -96,7 +95,7 @@
     "title": "Road to Viridian City: Leaving Pallet Town)",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "driving"
     ]
   },
@@ -104,56 +103,64 @@
     "title": "Fanfare: Item Obtained (Version 1)",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Pewter City Theme",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Teachy TV Menu",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   },
   {
     "title": "Viridian Forest",
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "eerie"
     ]
   },
   {
     "title": "Battle! (Wild Pokémon)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "suspenseful",
+      "driving"
     ]
   },
   {
     "title": "Victory! (Wild Pokémon)",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "A Trainer Appears (Boy Version)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Pokémon Center",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -161,42 +168,47 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "dreamy"
     ]
   },
   {
     "title": "Pokémon Healed",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "Guide",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "hopeful",
+      "tender"
+    ]
   },
   {
     "title": "Pokémon Gym",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Tense Battle!",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Battle! (Gym Leader Battle)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -219,8 +231,8 @@
     "title": "Evolution",
     "plays": null,
     "moods": [
-      "transcendent",
-      "wonder"
+      "wonder",
+      "transcendent"
     ]
   },
   {
@@ -228,21 +240,23 @@
     "plays": null,
     "moods": [
       "joyful",
-      "heroic"
+      "epic"
     ]
   },
   {
     "title": "Road to Cerulean City: Leaving Mt. Moon",
     "plays": null,
     "moods": [
-      "joyful"
+      "hopeful",
+      "driving"
     ]
   },
   {
     "title": "A Trainer Appears (Girl Version)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -257,8 +271,8 @@
     "title": "Vermilion City Theme",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "laid-back",
+      "joyful"
     ]
   },
   {
@@ -273,23 +287,23 @@
     "title": "Cycling",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Lavender Town Theme",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Pokémon Tower",
     "plays": null,
     "moods": [
-      "eerie",
+      "ominous",
       "mysterious"
     ]
   },
@@ -298,22 +312,23 @@
     "plays": null,
     "moods": [
       "joyful",
-      "peaceful"
+      "epic"
     ]
   },
   {
     "title": "Rocket Game Corner",
     "plays": null,
     "moods": [
-      "mysterious",
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Fanfare: Winning",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -326,36 +341,40 @@
   },
   {
     "title": "Pokémon Printer",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Rocket Hideout",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "A Trainer Appears (Bad Guy Version)",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Silph Co.",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
     "title": "Road to Fuchsia City: Leaving Lavender Town",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "driving"
     ]
   },
@@ -363,16 +382,16 @@
     "title": "The Poké Flute",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "wonder"
     ]
   },
   {
     "title": "Fuchsia City Theme",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   }
 ]

@@ -8,8 +8,8 @@
       "Danny Bensi"
     ],
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -22,7 +22,7 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
+      "ominous",
       "eerie"
     ]
   },
@@ -35,7 +35,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -45,11 +46,7 @@
     "artists": [
       "The Stanley Brothers"
     ],
-    "song": true,
-    "moods": [
-      "nostalgic",
-      "tender"
-    ]
+    "song": true
   },
   {
     "title": "Orphans",
@@ -61,7 +58,7 @@
     ],
     "moods": [
       "sad",
-      "mysterious"
+      "eerie"
     ]
   },
   {
@@ -71,11 +68,7 @@
     "artists": [
       "The Browns"
     ],
-    "song": true,
-    "moods": [
-      "tender",
-      "nostalgic"
-    ]
+    "song": true
   },
   {
     "title": "Put It Off Until Tomorrow (Single Version)",
@@ -84,11 +77,7 @@
     "artists": [
       "Bill Phillips"
     ],
-    "song": true,
-    "moods": [
-      "playful",
-      "joyful"
-    ]
+    "song": true
   },
   {
     "title": "Delusions",
@@ -99,8 +88,8 @@
       "Danny Bensi"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -110,11 +99,7 @@
     "artists": [
       "Ferlin Husky"
     ],
-    "song": true,
-    "moods": [
-      "peaceful",
-      "tender"
-    ]
+    "song": true
   },
   {
     "title": "Honeycomb",
@@ -123,11 +108,7 @@
     "artists": [
       "Jimmie Rodgers"
     ],
-    "song": true,
-    "moods": [
-      "joyful",
-      "playful"
-    ]
+    "song": true
   },
   {
     "title": "Young Love",
@@ -136,11 +117,7 @@
     "artists": [
       "Sonny James"
     ],
-    "song": true,
-    "moods": [
-      "romantic",
-      "tender"
-    ]
+    "song": true
   },
   {
     "title": "Up Up Up",
@@ -151,8 +128,8 @@
       "Danny Bensi"
     ],
     "moods": [
-      "joyful",
-      "playful"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -162,11 +139,7 @@
     "artists": [
       "Skeeter Davis"
     ],
-    "song": true,
-    "moods": [
-      "romantic",
-      "nostalgic"
-    ]
+    "song": true
   },
   {
     "title": "Funny How Time Slips Away",
@@ -175,11 +148,7 @@
     "artists": [
       "Billy Walker"
     ],
-    "song": true,
-    "moods": [
-      "nostalgic",
-      "tender"
-    ]
+    "song": true
   },
   {
     "title": "Sinners",
@@ -190,8 +159,8 @@
       "Danny Bensi"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -203,8 +172,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "nostalgic"
+      "nostalgic",
+      "tender"
     ]
   },
   {
@@ -216,8 +185,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "eerie"
     ]
   },
   {
@@ -227,6 +196,10 @@
     "artists": [
       "Saunder Jurriaans",
       "Danny Bensi"
+    ],
+    "moods": [
+      "mysterious",
+      "suspenseful"
     ]
   }
 ]

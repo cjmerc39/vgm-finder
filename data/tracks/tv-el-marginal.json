@@ -9,8 +9,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -24,7 +24,7 @@
     "song": true,
     "moods": [
       "driving",
-      "mysterious"
+      "intense"
     ]
   },
   {
@@ -36,7 +36,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "mysterious",
       "eerie"
     ]
   },
@@ -49,7 +49,7 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
+      "ominous",
       "mysterious"
     ]
   },
@@ -62,7 +62,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -75,8 +75,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -88,8 +88,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "tender"
+      "tender",
+      "nostalgic"
     ]
   },
   {
@@ -101,8 +101,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -114,8 +114,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "eerie",
+      "suspenseful"
     ]
   },
   {
@@ -128,7 +128,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic"
+      "nostalgic",
+      "dreamy"
     ]
   },
   {
@@ -141,8 +142,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "ominous"
     ]
   },
   {
@@ -182,8 +183,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -195,8 +196,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -208,7 +209,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -223,8 +225,7 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "tender"
+      "mysterious"
     ]
   },
   {
@@ -236,8 +237,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "eerie"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -250,7 +251,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "intense",
       "eerie"
     ]
   },
@@ -263,8 +264,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "epic"
     ]
   },
   {
@@ -276,8 +277,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "tense"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -292,7 +293,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful"
+      "hopeful",
+      "tender"
     ]
   },
   {
@@ -318,7 +320,7 @@
     "song": true,
     "moods": [
       "sad",
-      "mournful"
+      "intense"
     ]
   },
   {
@@ -331,7 +333,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -343,8 +345,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "mysterious"
+      "mysterious",
+      "playful"
     ]
   },
   {
@@ -354,7 +356,11 @@
     "artists": [
       "Murci Bouscayrol"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "nostalgic"
+    ]
   },
   {
     "title": "Sunday",
@@ -368,7 +374,7 @@
     "song": true,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "dreamy"
     ]
   }
 ]

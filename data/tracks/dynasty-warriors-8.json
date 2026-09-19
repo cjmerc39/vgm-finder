@@ -3,7 +3,8 @@
     "title": "Fan the Flames",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
+      "heroic",
       "driving"
     ]
   },
@@ -11,6 +12,7 @@
     "title": "Touch the New World",
     "plays": null,
     "moods": [
+      "hopeful",
       "wonder",
       "transcendent"
     ]
@@ -19,6 +21,7 @@
     "title": "Sequence Start",
     "plays": null,
     "moods": [
+      "intense",
       "driving"
     ]
   },
@@ -26,7 +29,7 @@
     "title": "Beyond the Destiny",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -34,23 +37,23 @@
     "title": "Solid State Mind",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "mysterious",
+      "intense"
     ]
   },
   {
     "title": "Theme of Lu Bu -Dw 7Th Mix-",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Deathblow -Dw 7Th Mix-",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -59,7 +62,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
@@ -67,15 +70,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Silent Urge",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -83,7 +86,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -91,7 +94,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
@@ -106,22 +109,24 @@
     "title": "Deep Blue Ii.Introduction",
     "plays": null,
     "moods": [
-      "tender",
-      "nostalgic"
+      "mysterious",
+      "intense"
     ]
   },
   {
     "title": "Deep Blue Iii.Silence",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "mysterious"
     ]
   },
   {
     "title": "Deep Blue Iv.Pathetic",
     "plays": null,
     "moods": [
-      "sad"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -129,33 +134,39 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "hopeful"
     ]
   },
   {
     "title": "Be Satisfied",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Scrolls",
     "plays": null,
     "moods": [
-      "playful"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Talesbox",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
+    ]
   },
   {
     "title": "The Inherited Fang",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -171,14 +182,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Uninvited Guest",
     "plays": null,
     "moods": [
-      "eerie",
+      "suspenseful",
       "mysterious"
     ]
   },
@@ -187,21 +198,22 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "playful"
     ]
   },
   {
     "title": "Capricious Wind",
     "plays": null,
     "moods": [
-      "playful"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Overdose",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -209,15 +221,15 @@
     "title": "Mass Attack",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Smash and Smash",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -225,31 +237,31 @@
     "title": "Seventh Journey",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Stronghold",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Warm Red I.History",
     "plays": null,
     "moods": [
-      "romantic",
-      "tender"
+      "nostalgic",
+      "romantic"
     ]
   },
   {
     "title": "Warm Red Ii.Introduction",
     "plays": null,
     "moods": [
-      "nostalgic",
+      "mysterious",
       "tender"
     ]
   },
@@ -257,7 +269,8 @@
     "title": "Warm Red Iii.Silence",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
@@ -265,30 +278,30 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
     "title": "Warm Red V.Crossroads",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "hopeful",
+      "mysterious"
     ]
   },
   {
     "title": "Make a Decision",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Banquet",
     "plays": null,
     "moods": [
-      "joyful",
+      "laid-back",
       "playful"
     ]
   },
@@ -296,22 +309,23 @@
     "title": "In Preparation",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "To Calm",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "tender"
     ]
   },
   {
     "title": "Witness to History",
     "plays": null,
     "moods": [
-      "nostalgic",
+      "epic",
       "heroic"
     ]
   },
@@ -319,24 +333,24 @@
     "title": "Trio the Beryl",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "So Extreme",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "The Mountain",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -352,39 +366,39 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "epic"
     ]
   },
   {
     "title": "With Vengeance",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Hopeful Pain",
     "plays": null,
     "moods": [
-      "sad",
-      "romantic"
+      "hopeful",
+      "tender"
     ]
   },
   {
     "title": "Arena -Dw 7Th Mix-",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Welcome to China -Dw 7Th Mix-",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "epic",
+      "heroic"
     ]
   }
 ]

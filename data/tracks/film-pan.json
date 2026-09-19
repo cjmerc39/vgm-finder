@@ -7,6 +7,7 @@
       "John Powell"
     ],
     "moods": [
+      "epic",
       "wonder",
       "heroic"
     ]
@@ -19,7 +20,8 @@
       "John Powell"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
+      "intense",
       "driving"
     ]
   },
@@ -31,7 +33,8 @@
       "John Powell"
     ],
     "moods": [
-      "powerful",
+      "intense",
+      "suspenseful",
       "driving"
     ]
   },
@@ -44,6 +47,7 @@
     ],
     "moods": [
       "wonder",
+      "hopeful",
       "joyful"
     ]
   },
@@ -54,11 +58,7 @@
     "artists": [
       "Cast of Pan"
     ],
-    "song": true,
-    "moods": [
-      "driving",
-      "playful"
-    ]
+    "song": true
   },
   {
     "title": "Blitzkrieg Bop",
@@ -67,11 +67,7 @@
     "artists": [
       "Cast of Pan"
     ],
-    "song": true,
-    "moods": [
-      "driving",
-      "powerful"
-    ]
+    "song": true
   },
   {
     "title": "Murmurs of Love and Death",
@@ -81,8 +77,9 @@
       "John Powell"
     ],
     "moods": [
-      "mysterious",
-      "tender"
+      "tender",
+      "romantic",
+      "mysterious"
     ]
   },
   {
@@ -93,8 +90,9 @@
       "John Powell"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "driving",
+      "intense"
     ]
   },
   {
@@ -106,7 +104,8 @@
     ],
     "moods": [
       "mysterious",
-      "eerie"
+      "eerie",
+      "ominous"
     ]
   },
   {
@@ -117,6 +116,7 @@
       "John Powell"
     ],
     "moods": [
+      "wonder",
       "playful",
       "joyful"
     ]
@@ -130,8 +130,9 @@
     ],
     "song": true,
     "moods": [
+      "ominous",
       "eerie",
-      "tense"
+      "mysterious"
     ]
   },
   {
@@ -140,9 +141,6 @@
     "videoId": "7C5Rl1Zn_W4",
     "artists": [
       "John Powell"
-    ],
-    "moods": [
-      "playful"
     ]
   },
   {
@@ -153,8 +151,9 @@
       "John Powell"
     ],
     "moods": [
-      "nostalgic",
-      "tender"
+      "hopeful",
+      "wonder",
+      "nostalgic"
     ]
   },
   {
@@ -165,7 +164,8 @@
       "John Powell"
     ],
     "moods": [
-      "driving",
+      "intense",
+      "epic",
       "playful"
     ]
   },
@@ -178,7 +178,8 @@
     ],
     "moods": [
       "mysterious",
-      "eerie"
+      "eerie",
+      "dreamy"
     ]
   },
   {
@@ -190,7 +191,8 @@
     ],
     "moods": [
       "heroic",
-      "powerful"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -201,8 +203,9 @@
       "John Powell"
     ],
     "moods": [
+      "intense",
       "driving",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -214,6 +217,7 @@
     ],
     "moods": [
       "wonder",
+      "hopeful",
       "transcendent"
     ]
   },
@@ -226,6 +230,7 @@
     ],
     "moods": [
       "transcendent",
+      "wonder",
       "peaceful"
     ]
   },
@@ -237,8 +242,9 @@
       "John Powell"
     ],
     "moods": [
+      "playful",
       "joyful",
-      "playful"
+      "heroic"
     ]
   },
   {
@@ -250,8 +256,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "driving",
+      "epic"
     ]
   }
 ]

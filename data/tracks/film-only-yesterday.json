@@ -8,11 +8,24 @@
     ],
     "moods": [
       "nostalgic",
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
     "title": "椰子の実 - Coconut",
+    "plays": null,
+    "videoId": null,
+    "artists": [
+      "Katsu Hoshi"
+    ],
+    "moods": [
+      "laid-back",
+      "peaceful"
+    ]
+  },
+  {
+    "title": "星のフラメンコ - Flamenco of Stars",
     "plays": null,
     "videoId": null,
     "artists": [
@@ -24,18 +37,6 @@
     ]
   },
   {
-    "title": "星のフラメンコ - Flamenco of Stars",
-    "plays": null,
-    "videoId": null,
-    "artists": [
-      "Katsu Hoshi"
-    ],
-    "moods": [
-      "mysterious",
-      "romantic"
-    ]
-  },
-  {
     "title": "おはなはん - Ohanahan",
     "plays": null,
     "videoId": null,
@@ -43,6 +44,7 @@
       "Katsu Hoshi"
     ],
     "moods": [
+      "joyful",
       "playful"
     ]
   },
@@ -66,8 +68,8 @@
       "Katsu Hoshi"
     ],
     "moods": [
-      "tender",
-      "peaceful"
+      "sad",
+      "tender"
     ]
   },
   {
@@ -79,7 +81,7 @@
     ],
     "moods": [
       "romantic",
-      "joyful"
+      "hopeful"
     ]
   }
 ]

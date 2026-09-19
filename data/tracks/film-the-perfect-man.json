@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -34,7 +34,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "hopeful",
       "joyful"
     ]
   },
@@ -48,7 +48,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "joyful"
+      "wonder"
     ]
   },
   {
@@ -60,7 +60,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "hopeful"
     ]
   },
   {
@@ -83,7 +84,11 @@
     "artists": [
       "Beth Thornley"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Make Room",
@@ -92,7 +97,11 @@
     "artists": [
       "Grits"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Mr. Roboto (Live)",
@@ -104,7 +113,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -116,7 +125,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic"
+      "romantic",
+      "nostalgic"
     ]
   },
   {
@@ -129,7 +139,7 @@
     "song": true,
     "moods": [
       "tender",
-      "joyful"
+      "romantic"
     ]
   },
   {
@@ -141,8 +151,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "nostalgic"
+      "nostalgic",
+      "joyful"
     ]
   }
 ]

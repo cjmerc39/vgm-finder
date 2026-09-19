@@ -3,6 +3,7 @@
     "title": "Title Screen",
     "plays": null,
     "moods": [
+      "hopeful",
       "wonder"
     ]
   },
@@ -11,14 +12,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Battle SIM",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -26,83 +27,87 @@
     "title": "Pokémon HQ Lab",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "World Map",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "wonder",
+      "dreamy"
     ]
   },
   {
     "title": "Dr. Kaminko’s Yard",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
     "title": "Dr. Kaminko’s Manor",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Normal Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Jovi’s Theme",
     "plays": null,
     "moods": [
-      "tender"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Prof. Krane’s Kidnapping",
     "plays": null,
     "moods": [
-      "tense",
-      "sad"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Cipher Battle",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "We’ll Finish the Purify Chamber Ourselves!",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Our Pride as Scientists",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "heroic",
+      "hopeful"
     ]
   },
   {
     "title": "Gateon Port",
     "plays": null,
     "moods": [
-      "nostalgic",
+      "laid-back",
       "peaceful"
     ]
   },
@@ -111,7 +116,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "ominous"
     ]
   },
   {
@@ -135,7 +140,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "tender"
     ]
   },
   {
@@ -143,13 +148,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "wonder"
     ]
   },
   {
     "title": "Mt. Battle - Reception Counter",
     "plays": null,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -157,15 +163,16 @@
     "title": "Mt. Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Mt. Battle - Break Room",
     "plays": null,
     "moods": [
-      "playful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
@@ -173,14 +180,14 @@
     "plays": null,
     "moods": [
       "playful",
-      "mysterious"
+      "joyful"
     ]
   },
   {
     "title": "Cipher Lab",
     "plays": null,
     "moods": [
-      "tense",
+      "ominous",
       "eerie"
     ]
   },
@@ -188,15 +195,15 @@
     "title": "Cipher Admin Lovrina",
     "plays": null,
     "moods": [
-      "playful",
-      "mysterious"
+      "mysterious",
+      "playful"
     ]
   },
   {
     "title": "Cipher Admin Battle",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -204,23 +211,24 @@
     "title": "Purification Chamber",
     "plays": null,
     "moods": [
-      "transcendent",
-      "peaceful"
+      "mysterious",
+      "dreamy"
     ]
   },
   {
     "title": "Purification Chamber - Bad",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "sad",
+      "ominous"
     ]
   },
   {
     "title": "Purification Chamber - Good",
     "plays": null,
     "moods": [
-      "joyful"
+      "hopeful",
+      "tender"
     ]
   },
   {
@@ -228,7 +236,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "transcendent"
+      "hopeful"
     ]
   },
   {
@@ -236,7 +244,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "peaceful"
+      "hopeful"
     ]
   },
   {
@@ -244,7 +252,7 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "tender"
+      "epic"
     ]
   },
   {
@@ -252,14 +260,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "laid-back"
     ]
   },
   {
     "title": "Orre Colosseum",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -267,38 +275,39 @@
     "title": "Colosseum - 1st Round",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Colesseum - 2nd Round",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Colosseum - Semi-Finals",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Colesseum - Finals",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "ONBS News Broadcast",
     "plays": null,
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
@@ -314,8 +323,8 @@
     "title": "Wild Pokémon Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -330,16 +339,16 @@
     "title": "Trouble",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Mirror B. Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -347,13 +356,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "dreamy"
     ]
   },
   {
     "title": "ONBS",
     "plays": null,
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
@@ -361,39 +371,40 @@
     "title": "Kandee’s Theme",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Realgam Tower",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "epic"
     ]
   },
   {
     "title": "Battle Bingo - Board",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Battle Bingo - Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Phenac City Crisis",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -401,30 +412,31 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "tender"
     ]
   },
   {
     "title": "Pre Gym",
     "plays": null,
     "moods": [
-      "tense"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "S.S. Libra",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Robo Groudon",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -432,55 +444,55 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
     "title": "Rider Willie Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Snagem Hideout",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Gonzap’s Theme",
     "plays": null,
     "moods": [
-      "powerful",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Cipher Key Lair",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Citadark Isle",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Greevil’s Theme",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -488,47 +500,47 @@
     "plays": null,
     "moods": [
       "eerie",
-      "powerful"
+      "ominous"
     ]
   },
   {
     "title": "Shadow Lugia Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Master Greevil Final Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Master Greevil Defeated",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "heroic",
+      "hopeful"
     ]
   },
   {
     "title": "Master Greevil Redeemed",
     "plays": null,
     "moods": [
-      "transcendent",
-      "tender"
+      "tender",
+      "hopeful"
     ]
   },
   {
     "title": "Ending Cutscene",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "epic",
+      "transcendent"
     ]
   },
   {
@@ -536,7 +548,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "nostalgic"
+      "hopeful"
     ]
   },
   {
@@ -548,7 +560,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "tender"
     ]
   },
   {
@@ -556,52 +568,58 @@
     "plays": null,
     "moods": [
       "wonder",
-      "mysterious"
+      "hopeful"
     ]
   },
   {
     "title": "VS Mode Menu",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   },
   {
     "title": "VS Select Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "VS Battle Mode (version 1)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "VS Battle Mode (version 2)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "VS Battle Mode (version 3)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Last Battle (unused)",
-    "plays": null,
-    "moods": [
-      "powerful"
-    ]
+    "plays": null
   },
   {
     "title": "VS Battle Fanfare 1",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -609,6 +627,7 @@
     "title": "VS Battle Fanfare 2",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -616,6 +635,7 @@
     "title": "VS Battle Fanfare 3",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -623,6 +643,7 @@
     "title": "VS Battle Fanfare 4",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -638,34 +659,38 @@
     "title": "Fanfare - Success",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "Fanfare - Snag Machine",
     "plays": null,
     "moods": [
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Fanfare - Snag Successful",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "Fanfare - Level Up",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "Fanfare - Welcome",
     "plays": null,
     "moods": [
+      "hopeful",
       "joyful"
     ]
   },
@@ -680,7 +705,8 @@
     "title": "Fanfare - Evolution Starting",
     "plays": null,
     "moods": [
-      "transcendent"
+      "hopeful",
+      "wonder"
     ]
   },
   {
@@ -688,14 +714,15 @@
     "plays": null,
     "moods": [
       "joyful",
-      "transcendent"
+      "epic"
     ]
   },
   {
     "title": "Fanfare - Pokémon Healed",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "tender"
     ]
   },
   {

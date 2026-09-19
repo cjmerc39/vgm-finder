@@ -8,30 +8,27 @@
     "plays": null,
     "moods": [
       "heroic",
-      "transcendent"
+      "epic"
     ]
   },
   {
     "title": "Menu ~ In the Cockpit",
     "plays": null,
     "moods": [
-      "mysterious",
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Ship Landing",
     "plays": null,
     "moods": [
+      "mysterious",
       "wonder"
     ]
   },
   {
     "title": "Samus Appearance Jingle",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
+    "plays": null
   },
   {
     "title": "Surface, Sector 1 ~ Surface of SR388 (Ambient)",
@@ -45,18 +42,27 @@
     "title": "Item Room / Elevator",
     "plays": null,
     "moods": [
-      "peaceful"
+      "mysterious"
     ]
   },
   {
     "title": "Item Obtainment Jingle",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
+    "plays": null
   },
   {
     "title": "Chozo Seal Room ~ Ancient Chozo Ruins (Ver. 1)",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "ominous"
+    ]
+  },
+  {
+    "title": "Aeion Ability Obtainment Jingle",
+    "plays": null
+  },
+  {
+    "title": "Surface, Sector 2 ~ Surface of SR388",
     "plays": null,
     "moods": [
       "mysterious",
@@ -64,41 +70,23 @@
     ]
   },
   {
-    "title": "Aeion Ability Obtainment Jingle",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
-  },
-  {
-    "title": "Surface, Sector 2 ~ Surface of SR388",
-    "plays": null,
-    "moods": [
-      "mysterious",
-      "wonder"
-    ]
-  },
-  {
     "title": "Expansion Obtainment Jingle",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
+    "plays": null
   },
   {
     "title": "Before the Boss Battle",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "VS. Alpha Metroid",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -110,40 +98,33 @@
   },
   {
     "title": "Puzzle Solved Jingle",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
+    "plays": null
   },
   {
     "title": "Chozo Seal Unlocked Jingle",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
+    "plays": null
   },
   {
     "title": "Unlocked Chozo Seal Room",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "mysterious"
     ]
   },
   {
     "title": "Area 1 ~ Caverns (Ver. 2)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Extreme Heat ~ Norfair - Ancient Ruins Area",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -157,15 +138,15 @@
     "title": "VS. Evolved Alpha Metroid",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Area 2, Sector 2",
     "plays": null,
     "moods": [
-      "mysterious"
+      "eerie"
     ]
   },
   {
@@ -180,22 +161,23 @@
     "title": "VS. Gamma Metroid",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "VS. Arachnus",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Area 3, Sector 1 ~ Caverns (Ver. 2)",
     "plays": null,
     "moods": [
+      "eerie",
       "mysterious"
     ]
   },
@@ -204,13 +186,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "ominous"
     ]
   },
   {
     "title": "Area 3, Sector 3 ~ Caverns (Ver. 3)",
     "plays": null,
     "moods": [
+      "eerie",
       "mysterious"
     ]
   },
@@ -225,8 +208,7 @@
     "title": "Damaged Item Room",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "eerie"
     ]
   },
   {
@@ -234,15 +216,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "VS. Zeta Metroid",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -257,7 +239,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "eerie"
     ]
   },
   {
@@ -265,7 +247,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "ominous"
     ]
   },
   {
@@ -279,8 +261,8 @@
     "title": "Area 6, Sector 2",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -288,22 +270,22 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "ominous"
     ]
   },
   {
     "title": "VS. Omega Metroid",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "VS. Diggernaut",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -318,15 +300,16 @@
     "title": "Area 8, Sector 1",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Area 8, Sector 2 ~ Metroid Nest",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -340,78 +323,75 @@
     "title": "VS. Queen Metroid",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Area 8, Sector 4 ~ Metroid Hatchling Theme",
     "plays": null,
     "moods": [
-      "tender"
+      "tender",
+      "mysterious"
     ]
   },
   {
     "title": "Surface, Sector 3 ~ Planet Zebes - Crateria Arrival",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "transcendent"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "VS. Proteus Ridley, Phase 1",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "VS. Proteus Ridley, Phase 2",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "VS. Proteus Ridley, Phase 3",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Ending",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "hopeful",
+      "peaceful"
     ]
   },
   {
     "title": "Staff Credits",
     "plays": null,
     "moods": [
-      "joyful",
       "nostalgic"
     ]
   },
   {
     "title": "End Results",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
+    "plays": null
   },
   {
     "title": "Chozo Memories ~ Chozo Memory #11",
     "plays": null,
     "moods": [
-      "mysterious",
-      "transcendent"
+      "transcendent",
+      "mysterious"
     ]
   }
 ]

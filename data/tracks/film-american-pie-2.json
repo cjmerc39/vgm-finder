@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -34,7 +34,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -47,8 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -73,7 +73,7 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
+      "hopeful",
       "tender"
     ]
   },
@@ -86,7 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -99,7 +100,7 @@
     "song": true,
     "moods": [
       "sad",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -111,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -125,7 +126,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
@@ -135,11 +136,7 @@
     "artists": [
       "Fenix TX"
     ],
-    "song": true,
-    "moods": [
-      "nostalgic",
-      "playful"
-    ]
+    "song": true
   },
   {
     "title": "Susan",
@@ -151,7 +148,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "nostalgic"
+      "tender"
     ]
   },
   {
@@ -163,8 +160,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -189,8 +186,8 @@
     ],
     "song": true,
     "moods": [
-      "transcendent",
-      "peaceful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
@@ -202,8 +199,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   }
 ]

@@ -21,7 +21,7 @@
     ],
     "moods": [
       "mysterious",
-      "wonder"
+      "dreamy"
     ]
   },
   {
@@ -34,7 +34,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -47,7 +47,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -58,8 +58,8 @@
       "Mulatu Astatke"
     ],
     "moods": [
-      "mysterious",
-      "peaceful"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
@@ -78,10 +78,7 @@
     "artists": [
       "Holly Golightly"
     ],
-    "song": true,
-    "moods": [
-      "tender"
-    ]
+    "song": true
   },
   {
     "title": "Gubelye",
@@ -91,7 +88,8 @@
       "Mulatu Astatke"
     ],
     "moods": [
-      "mysterious"
+      "laid-back",
+      "dreamy"
     ]
   },
   {
@@ -103,8 +101,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -116,7 +114,7 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
+      "peaceful",
       "transcendent"
     ]
   },
@@ -127,11 +125,7 @@
     "artists": [
       "Dengue Fever"
     ],
-    "song": true,
-    "moods": [
-      "eerie",
-      "mysterious"
-    ]
+    "song": true
   },
   {
     "title": "Unnatural Habitat",
@@ -143,7 +137,7 @@
     "song": true,
     "moods": [
       "eerie",
-      "tense"
+      "mysterious"
     ]
   }
 ]

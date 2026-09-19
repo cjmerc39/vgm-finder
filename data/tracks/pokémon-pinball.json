@@ -3,21 +3,30 @@
     "title": "Title Screen",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "playful",
+      "wonder"
     ]
   },
   {
     "title": "Options",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Pokédex",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Field Select",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Red Field Theme",
@@ -31,8 +40,8 @@
     "title": "Catch'em & Evolution Mode in Red Field",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -46,16 +55,16 @@
     "title": "Evolution Completed",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
     "title": "Go to Bonus Stage",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "hopeful",
+      "driving"
     ]
   },
   {
@@ -70,7 +79,7 @@
     "title": "Diglett Stage ~ Whack Dugtrio",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -78,7 +87,7 @@
     "title": "End of Bonus Stage",
     "plays": null,
     "moods": [
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -93,16 +102,16 @@
     "title": "Gengar Stage ~ Haunter in the Graveyard",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Gengar Stage ~ Gengar in the Graveyard",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -117,13 +126,16 @@
     "title": "Catch'em & Evolution Mode in Blue Field",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Map Mode",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "wonder"
+    ]
   },
   {
     "title": "Moved to Another Area",
@@ -145,15 +157,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "dreamy"
     ]
   },
   {
     "title": "MewTwo Stage",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -172,18 +184,24 @@
   },
   {
     "title": "Name Entry",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Hi-Score Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "End Credits",
     "plays": null,
     "moods": [
       "joyful",
-      "nostalgic"
+      "hopeful"
     ]
   }
 ]

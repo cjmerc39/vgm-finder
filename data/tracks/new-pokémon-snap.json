@@ -4,7 +4,7 @@
     "plays": null,
     "moods": [
       "wonder",
-      "joyful"
+      "hopeful"
     ]
   },
   {
@@ -12,7 +12,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -20,7 +20,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "hopeful"
     ]
   },
   {
@@ -41,8 +41,7 @@
     "title": "Lental Map",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "wonder"
     ]
   },
   {
@@ -56,8 +55,8 @@
     "title": "Park (Day)",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
@@ -73,59 +72,43 @@
     "plays": null,
     "moods": [
       "wonder",
-      "transcendent"
+      "joyful"
     ]
   },
   {
     "title": "Jungle (Day)",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "wonder",
+      "playful"
     ]
   },
   {
     "title": "Jungle (Night)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Beach (Day)",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "peaceful",
+      "joyful"
     ]
   },
   {
     "title": "Beach (Night)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
-    ]
-  },
-  {
-    "title": "Reef (Day)",
-    "plays": null,
-    "moods": [
-      "joyful",
-      "wonder"
-    ]
-  },
-  {
-    "title": "Reef (Night)",
-    "plays": null,
-    "moods": [
-      "mysterious",
+      "dreamy",
       "peaceful"
     ]
   },
   {
-    "title": "Undersea",
+    "title": "Reef (Day)",
     "plays": null,
     "moods": [
       "wonder",
@@ -133,7 +116,15 @@
     ]
   },
   {
-    "title": "Illuminia Spot (Undersea)",
+    "title": "Reef (Night)",
+    "plays": null,
+    "moods": [
+      "dreamy",
+      "mysterious"
+    ]
+  },
+  {
+    "title": "Undersea",
     "plays": null,
     "moods": [
       "transcendent",
@@ -141,11 +132,19 @@
     ]
   },
   {
+    "title": "Illuminia Spot (Undersea)",
+    "plays": null,
+    "moods": [
+      "wonder",
+      "joyful"
+    ]
+  },
+  {
     "title": "Sands (Day)",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
@@ -160,32 +159,32 @@
     "title": "Forest",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Illuminia Spot (Forest)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "wonder"
+      "wonder",
+      "joyful"
     ]
   },
   {
     "title": "Volcano",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Illuminia Spot (Volcano)",
     "plays": null,
     "moods": [
-      "heroic",
-      "transcendent"
+      "wonder",
+      "joyful"
     ]
   },
   {
@@ -193,31 +192,31 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "wonder"
     ]
   },
   {
     "title": "Snowfields (Night)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "mysterious"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
     "title": "Cave",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Illuminia Spot (Cave)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "transcendent"
+      "wonder",
+      "joyful"
     ]
   },
   {
@@ -225,7 +224,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "eerie"
     ]
   },
   {
@@ -233,23 +232,23 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "epic"
     ]
   },
   {
     "title": "Energy From The Ruins",
     "plays": null,
     "moods": [
-      "transcendent",
-      "powerful"
+      "hopeful",
+      "transcendent"
     ]
   },
   {
     "title": "Illuminia Spot (Ruins)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "heroic"
+      "wonder",
+      "epic"
     ]
   },
   {
@@ -257,7 +256,7 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "heroic"
+      "hopeful"
     ]
   },
   {
@@ -265,23 +264,18 @@
     "plays": null,
     "moods": [
       "nostalgic",
-      "peaceful"
+      "tender"
     ]
   },
   {
     "title": "♪",
-    "plays": null,
-    "moods": [
-      "joyful",
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Staff Credits (No Intro)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "nostalgic"
     ]
   }
 ]

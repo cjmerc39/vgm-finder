@@ -3,13 +3,21 @@
     "title": "The Execution",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie",
-      "powerful"
+      "ominous",
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Wedding March",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
+  },
+  {
+    "title": "Hide-and-Seek",
     "plays": null,
     "moods": [
       "playful",
@@ -17,27 +25,19 @@
     ]
   },
   {
-    "title": "Hide-and-Seek",
-    "plays": null,
-    "moods": [
-      "tense",
-      "driving"
-    ]
-  },
-  {
     "title": "Lacrimosa",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
     "title": "Mirror",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   }
 ]

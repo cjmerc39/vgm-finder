@@ -11,15 +11,15 @@
     "title": "Stalker",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Taking the Death Toll",
     "plays": null,
     "moods": [
-      "powerful",
+      "heroic",
       "driving"
     ]
   },
@@ -27,8 +27,8 @@
     "title": "The City Streets",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -43,7 +43,7 @@
     "title": "Sneaky Snake",
     "plays": null,
     "moods": [
-      "playful",
+      "suspenseful",
       "mysterious"
     ]
   },
@@ -51,8 +51,8 @@
     "title": "The Call of Death",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -66,23 +66,23 @@
     "title": "Future Military Conquests",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Space Storm",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Gut Wrencher",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -98,15 +98,15 @@
     "title": "Stalag 3-D",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Pissed!",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -114,39 +114,45 @@
     "title": "Aliens, Say Your Prayers!",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "intense"
     ]
   },
   {
     "title": "Plasma",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
   {
     "title": "Alfred H.",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Gloomy",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "sad",
+      "eerie"
     ]
   },
   {
     "title": "In Tents",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "In Hiding",
     "plays": null,
     "moods": [
-      "mysterious",
+      "suspenseful",
       "eerie"
     ]
   },
@@ -154,8 +160,8 @@
     "title": "Going After the Fat Commander",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "epic"
     ]
   },
   {
@@ -163,30 +169,30 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Subway",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "laid-back",
+      "mysterious"
     ]
   },
   {
     "title": "Invader",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Gotham",
     "plays": null,
     "moods": [
-      "mysterious",
+      "ominous",
       "eerie"
     ]
   },
@@ -194,15 +200,15 @@
     "title": "233.778 Celsius",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Lord of L.A.",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -210,8 +216,8 @@
     "title": "Urban Jungle",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -219,15 +225,15 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "suspenseful"
     ]
   },
   {
     "title": "Whomp",
     "plays": null,
     "moods": [
-      "powerful",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -249,8 +255,8 @@
     "title": "Warehaus",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "mysterious",
+      "ominous"
     ]
   },
   {
@@ -264,34 +270,37 @@
     "title": "Preparation D",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Calypso Factor",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
     "title": "Lemon Chil",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Layers of Dust",
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "nostalgic"
     ]
   },
   {
     "title": "Floghorn",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -299,19 +308,23 @@
     "title": "Pissed Office Box",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Departure",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "hopeful",
+      "dreamy"
+    ]
   },
   {
     "title": "Restricted Area",
     "plays": null,
     "moods": [
-      "tense",
+      "suspenseful",
       "mysterious"
     ]
   }

@@ -3,9 +3,9 @@
     "title": "Ocarina of Time Title Theme",
     "plays": null,
     "moods": [
+      "epic",
       "heroic",
-      "wonder",
-      "powerful"
+      "wonder"
     ]
   },
   {
@@ -14,15 +14,16 @@
     "moods": [
       "peaceful",
       "joyful",
-      "tender"
+      "wonder"
     ]
   },
   {
     "title": "Hyrule Field",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "hopeful",
+      "wonder",
+      "driving"
     ]
   },
   {
@@ -30,7 +31,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "playful"
     ]
   },
   {
@@ -38,7 +39,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -47,16 +48,16 @@
     "moods": [
       "mysterious",
       "eerie",
-      "tense"
+      "wonder"
     ]
   },
   {
     "title": "Fairy's Fountain",
     "plays": null,
     "moods": [
+      "peaceful",
       "wonder",
-      "transcendent",
-      "peaceful"
+      "transcendent"
     ]
   },
   {
@@ -64,8 +65,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -74,23 +74,24 @@
     "moods": [
       "mysterious",
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Gerudo Valley",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "driving",
+      "epic"
     ]
   },
   {
     "title": "Spirit Temple",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful",
+      "intense",
+      "ominous",
       "mysterious"
     ]
   },
@@ -98,18 +99,18 @@
     "title": "Ganondorf's Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic",
-      "tense"
+      "intense",
+      "epic",
+      "ominous"
     ]
   },
   {
     "title": "The Legend of Zelda End Credits (Ocarina of Time)",
     "plays": null,
     "moods": [
-      "nostalgic",
       "heroic",
-      "joyful"
+      "hopeful",
+      "transcendent"
     ]
   }
 ]

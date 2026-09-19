@@ -7,6 +7,7 @@
     "title": "Prologue",
     "plays": null,
     "moods": [
+      "mysterious",
       "wonder"
     ]
   },
@@ -14,7 +15,8 @@
     "title": "Pikmin 3 Title Screen",
     "plays": null,
     "moods": [
-      "joyful"
+      "hopeful",
+      "playful"
     ]
   },
   {
@@ -23,7 +25,10 @@
   },
   {
     "title": "Carry Three Logbooks (Day Selection Screen)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Captain Charlie's Fanfare",
@@ -38,34 +43,38 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
     "title": "Tutorial Time! (Intro)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "hopeful"
     ]
   },
   {
     "title": "Tutorial Time! (No Intro)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "hopeful"
     ]
   },
   {
     "title": "Captain Charlie Captured!",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Alph Awakens",
     "plays": null,
     "moods": [
+      "hopeful",
       "wonder"
     ]
   },
@@ -81,7 +90,8 @@
     "title": "Red Onion Activated",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -96,37 +106,39 @@
     "title": "Alph's Landing Site (Battle)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Alph's Landing Site (Working)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
     "title": "Alph's Landing Site (Carrying)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Alph's Landing Site (Mix)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful"
     ]
   },
   {
     "title": "Found an Important Item!",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -149,7 +161,7 @@
     "title": "Cave (Battle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -157,36 +169,39 @@
     "title": "Cave (Working)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Cave (Carrying)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Cave (Mix)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful"
     ]
   },
   {
     "title": "Found the S.S. Drake!",
     "plays": null,
     "moods": [
-      "wonder"
+      "wonder",
+      "hopeful"
     ]
   },
   {
     "title": "Signs of Life_",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "hopeful"
     ]
   },
   {
@@ -194,24 +209,31 @@
     "plays": null,
     "moods": [
       "tender",
-      "joyful"
+      "nostalgic"
     ]
   },
   {
     "title": "Creatures of the Night",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Today's Report",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Inside The S.S. Drake (Area Selection Screen)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Inside The S.S. Drake (Area Selection Screen, SFX)",
@@ -219,12 +241,17 @@
   },
   {
     "title": "Helpful Hints",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   },
   {
     "title": "Landing in a New Area (Short)",
     "plays": null,
     "moods": [
+      "hopeful",
       "wonder"
     ]
   },
@@ -232,14 +259,16 @@
     "title": "Landing in a New Area (Long)",
     "plays": null,
     "moods": [
-      "wonder"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "A New Discovery",
     "plays": null,
     "moods": [
-      "wonder"
+      "wonder",
+      "hopeful"
     ]
   },
   {
@@ -247,37 +276,38 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "wonder"
+      "dreamy"
     ]
   },
   {
     "title": "Garden of Hope (Battle)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Garden of Hope (Working)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Garden of Hope (Carrying)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Garden of Hope (Mix)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful"
     ]
   },
   {
@@ -285,51 +315,53 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "romantic"
     ]
   },
   {
     "title": "Garden of Hope (Noon, Battle)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Garden of Hope (Noon, Working)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Garden of Hope (Noon, Carrying)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Garden of Hope (Noon, Mix)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful"
     ]
   },
   {
     "title": "Garden of Hope (Night)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Brittany's... Asleep_",
     "plays": null,
     "moods": [
+      "sad",
       "tender"
     ]
   },
@@ -337,6 +369,7 @@
     "title": "Brittany Awakens",
     "plays": null,
     "moods": [
+      "hopeful",
       "joyful"
     ]
   },
@@ -345,7 +378,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "wonder"
+      "heroic"
     ]
   },
   {
@@ -353,13 +386,14 @@
     "plays": null,
     "moods": [
       "joyful",
-      "tender"
+      "romantic"
     ]
   },
   {
     "title": "Got an Important Item!",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -367,158 +401,165 @@
     "title": "End of Day (Good)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "Rainfall",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
     "title": "Rainfall (Battle)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Rainfall (Working)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Rainfall (Carrying)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Rainfall (Mix)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful"
     ]
   },
   {
     "title": "Rainfall (Noon)",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "romantic"
     ]
   },
   {
     "title": "Rainfall (Noon, Battle)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Rainfall (Noon, Working)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Rainfall (Noon, Carrying)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Rainfall (Noon, Mix)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful"
     ]
   },
   {
     "title": "Rainfall (Night)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Ally in Distress!",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Pikmin Are Suffering!",
     "plays": null,
     "moods": [
-      "sad",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Boss Battle Intro",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Boss Battle!",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Boss Battle! (Boss Attacks)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Boss Battle! (Pikmin Vulnerable)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Boss Battle! (Boss Vulnerable)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "intense"
     ]
   },
   {
     "title": "End of Day (Best)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "epic",
+      "joyful"
     ]
   },
   {
     "title": "Brittany's Landing...",
     "plays": null,
     "moods": [
+      "hopeful",
       "wonder"
     ]
   },
@@ -526,7 +567,8 @@
     "title": "Yellow Onion Activated",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -534,14 +576,14 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "wonder"
+      "dreamy"
     ]
   },
   {
     "title": "Distant Tundra (Snowfall, Battle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -549,7 +591,7 @@
     "title": "Distant Tundra (Snowfall, Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -577,14 +619,14 @@
     "title": "Distant Tundra (Snowfall, Noon, Battle)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Distant Tundra (Snowfall, Noon, Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -605,23 +647,23 @@
     "title": "Distant Tundra (Snowfall, Night)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "eerie"
+      "eerie",
+      "peaceful"
     ]
   },
   {
     "title": "Distant Tundra",
     "plays": null,
     "moods": [
-      "wonder",
-      "peaceful"
+      "peaceful",
+      "wonder"
     ]
   },
   {
     "title": "Distant Tundra (Battle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -629,7 +671,7 @@
     "title": "Distant Tundra (Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -657,14 +699,14 @@
     "title": "Distant Tundra (Noon, Battle)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Distant Tundra (Noon, Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -701,8 +743,8 @@
     "title": "Phosbat Cave (No Bulbs Active, Dark, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -710,15 +752,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "wonder"
     ]
   },
   {
     "title": "Phosbat Cave (No Bulbs Active, Light, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -733,54 +775,56 @@
     "title": "Phosbat Cave (One or Two Bulbs Active, Dark, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Phosbat Cave (One or Two Bulbs Active, Light)",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Phosbat Cave (One or Two Bulbs Active, Light, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Phosbat Cave (Three Bulbs Active, Dark)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Phosbat Cave (Three Bulbs Active, Dark, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Phosbat Cave (Three Bulbs Active, Light)",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "hopeful"
     ]
   },
   {
     "title": "Phosbat Cave (Three Bulbs Active, Light, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -795,39 +839,40 @@
     "title": "Phosbat Cave (Fourth Bulb Active, Dark, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Phosbat Cave (Fourth Bulb Active, Light)",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "hopeful"
     ]
   },
   {
     "title": "Phosbat Cave (Fourth Bulb Active, Light, Vehemoth Phosbat Near)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "The Big Bulb is Activated!",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "heroic",
+      "hopeful"
     ]
   },
   {
     "title": "Phosbat Cave (All Bulbs Activated, Vehemoth Phosbat Vulnerable)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -842,7 +887,7 @@
     "title": "Captain Charlie's Alive!",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "tender"
     ]
   },
@@ -858,15 +903,15 @@
     "title": "Tropical Wilds",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "peaceful",
+      "wonder"
     ]
   },
   {
     "title": "Tropical Wilds (Battle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -874,7 +919,7 @@
     "title": "Tropical Wilds (Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -895,7 +940,6 @@
     "title": "Tropical Wilds (Noon)",
     "plays": null,
     "moods": [
-      "joyful",
       "peaceful"
     ]
   },
@@ -903,14 +947,14 @@
     "title": "Tropical Wilds (Noon, Battle)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Tropical Wilds (Noon, Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -932,30 +976,30 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "dreamy"
     ]
   },
   {
     "title": "Midboss Battle!",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Twilight River",
     "plays": null,
     "moods": [
-      "wonder",
-      "mysterious"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Twilight River (Battle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -963,7 +1007,7 @@
     "title": "Twilight River (Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -984,22 +1028,21 @@
     "title": "Twilight River (Noon)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "peaceful"
     ]
   },
   {
     "title": "Twilight River (Noon, Battle)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Twilight River (Noon, Working)",
     "plays": null,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -1020,16 +1063,16 @@
     "title": "Twilight River (Night)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "peaceful"
+      "peaceful",
+      "eerie"
     ]
   },
   {
     "title": "Wing Onion Activated",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -1041,20 +1084,24 @@
   },
   {
     "title": "Louie Analysis",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Follow that Hocotatian!",
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Blue Onion Activated",
     "plays": null,
     "moods": [
+      "hopeful",
       "joyful"
     ]
   },
@@ -1062,8 +1109,7 @@
     "title": "Captain Down..",
     "plays": null,
     "moods": [
-      "mournful",
-      "tense"
+      "sad"
     ]
   },
   {
@@ -1071,14 +1117,15 @@
     "plays": null,
     "moods": [
       "sad",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Game Over",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -1092,15 +1139,15 @@
     "title": "Mission Mode Levels 1-10",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Battle)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -1108,109 +1155,109 @@
     "title": "Mission Mode Levels 1-10 (Working)",
     "plays": null,
     "moods": [
-      "playful"
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Carrying)",
     "plays": null,
     "moods": [
-      "playful"
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Mix)",
     "plays": null,
     "moods": [
-      "playful"
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Hurry)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Hurry, Battle)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Hurry, Working)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Hurry, Carrying)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 1-10 (Hurry, Mix)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Level 11_ Fortress of Festivity!",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Mission Mode Level 11_ Fortress of Festivity! (Hurry)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Mission Mode Levels 12-15",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Mission Mode Levels 12-15 (Hurry)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Plasm Wraith Battle Intro (Mission Mode)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Mission Complete! _ Boss Battle Cleared!",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -1231,7 +1278,7 @@
     "title": "Ready... Go!",
     "plays": null,
     "moods": [
-      "joyful",
+      "intense",
       "driving"
     ]
   },
@@ -1239,7 +1286,7 @@
     "title": "Bingo Battle! (Nature)",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -1247,63 +1294,63 @@
     "title": "Bingo Battle! (Nature, Blue Team Carrying Red Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Nature, Red Team Carrying Blue Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Nature, Both Teams Carrying Flags)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Nature, Give It A Spin)",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Nature, Give It A Spin, Blue Team Carrying Red Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Nature, Give It A Spin, Red Team Carrying Blue Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Nature, Give It A Spin, Both Teams Carrying Flags)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Metallic)",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -1311,63 +1358,63 @@
     "title": "Bingo Battle! (Metallic, Blue Team Carrying Red Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Metallic, Red Team Carrying Blue Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Metallic, Both Teams Carrying Flags)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Metallic, Give It A Spin)",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Metallic, Give It A Spin, Blue Team Carrying Red Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Metallic, Give It A Spin, Red Team Carrying Blue Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Metallic, Give It A Spin, Both Teams Carrying Flags)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Toybox)",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -1375,96 +1422,96 @@
     "title": "Bingo Battle! (Toybox, Blue Team Carrying Red Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Toybox, Red Team Carrying Blue Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Toybox, Both Teams Carrying Flags)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Toybox, Give It A Spin)",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Toybox, Give It A Spin, Blue Team Carrying Red Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Toybox, Give It A Spin, Red Team Carrying Blue Flag)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Toybox, Give It A Spin, Both Teams Carrying Flags)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (Give It A Spin!)",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bingo Battle! (One Square Left)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Bingo Battle! (One Square Left, Blue Team Carrying Red Flag)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Bingo Battle! (One Square Left, Red Team Carrying Blue Flag)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Bingo Battle! (One Square Left, Both Teams Carrying Flags)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -1472,15 +1519,15 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
     "title": "Bingo Battle Win!",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -1496,15 +1543,15 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "mysterious"
+      "eerie"
     ]
   },
   {
     "title": "Formidable Oak (Exterior, Rain)",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "peaceful",
+      "mysterious"
     ]
   },
   {
@@ -1519,39 +1566,39 @@
     "title": "Formidable Oak (Exterior, Wraith's Lullaby)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tender"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
     "title": "Formidable Oak (Exterior, Mysterious Life-Form Battle and Aftermath)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "The Mysterious Life-Form Appears",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Formidable Oak (Interior)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "peaceful",
+      "mysterious"
     ]
   },
   {
     "title": "Formidable Oak (Interior, Mysterious Life-Form Near)",
     "plays": null,
     "moods": [
-      "tense",
+      "suspenseful",
       "mysterious"
     ]
   },
@@ -1559,40 +1606,40 @@
     "title": "Formidable Oak (Interior, Captain Olimar Captured)",
     "plays": null,
     "moods": [
-      "tense",
-      "sad"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Plasm Wraith Battle Intro",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Formidable Oak (Exterior, Interior, Plasm Wraith Battle!)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Plasm Wraith Defeated! Captain Olimar Saved!",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Captain Olimar and the Cosmic Key",
     "plays": null,
     "moods": [
-      "transcendent",
-      "peaceful"
+      "hopeful",
+      "romantic"
     ]
   },
   {
@@ -1607,24 +1654,22 @@
     "title": "Epilogue (Bad, Narration)",
     "plays": null,
     "moods": [
-      "sad",
-      "nostalgic"
+      "sad"
     ]
   },
   {
     "title": "Epilogue (Okay)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "hopeful",
+      "peaceful"
     ]
   },
   {
     "title": "Epilogue (Okay, Narration)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "hopeful"
     ]
   },
   {
@@ -1632,39 +1677,33 @@
     "plays": null,
     "moods": [
       "joyful",
-      "romantic"
+      "heroic"
     ]
   },
   {
     "title": "Epilogue (Good, Narration)",
     "plays": null,
     "moods": [
-      "joyful",
-      "romantic"
+      "joyful"
     ]
   },
   {
     "title": "Epilogue (Best)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "joyful"
+      "epic",
+      "transcendent"
     ]
   },
   {
     "title": "Epilogue (Best, Narration)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "joyful"
+      "epic"
     ]
   },
   {
     "title": "Staff Credits",
-    "plays": null,
-    "moods": [
-      "tender",
-      "peaceful"
-    ]
+    "plays": null
   }
 ]

@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "joyful"
     ]
   },
   {
@@ -35,8 +35,7 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -49,7 +48,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -62,7 +61,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -72,7 +71,10 @@
     "artists": [
       "Mack 10"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Tryin' To See Another Day",
@@ -83,8 +85,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "hopeful",
+      "tender"
     ]
   },
   {
@@ -98,7 +100,7 @@
     "song": true,
     "moods": [
       "playful",
-      "romantic"
+      "joyful"
     ]
   },
   {
@@ -108,7 +110,11 @@
     "artists": [
       "Rick James"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back",
+      "dreamy"
+    ]
   },
   {
     "title": "I Wanna Get Next To You",
@@ -120,7 +126,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -133,7 +139,7 @@
     "song": true,
     "moods": [
       "heroic",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -146,7 +152,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "joyful"
     ]
   },
   {
@@ -158,8 +164,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -171,7 +177,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -184,7 +191,7 @@
     "song": true,
     "moods": [
       "nostalgic",
-      "tender"
+      "laid-back"
     ]
   }
 ]

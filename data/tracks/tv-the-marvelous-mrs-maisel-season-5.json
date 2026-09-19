@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "joyful"
+      "tender"
     ]
   },
   {
@@ -71,7 +71,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -84,7 +85,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -96,8 +97,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "playful",
+      "ominous"
     ]
   },
   {
@@ -122,8 +123,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -136,7 +137,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic"
+      "romantic",
+      "playful"
     ]
   },
   {
@@ -149,7 +151,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "nostalgic"
+      "hopeful"
     ]
   },
   {
@@ -162,7 +164,7 @@
     "song": true,
     "moods": [
       "tender",
-      "nostalgic"
+      "mysterious"
     ]
   },
   {
@@ -198,10 +200,6 @@
     "artists": [
       "Rachel Brosnahan"
     ],
-    "song": true,
-    "moods": [
-      "mournful",
-      "tender"
-    ]
+    "song": true
   }
 ]

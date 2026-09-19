@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "nostalgic"
     ]
   },
   {
@@ -21,7 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -33,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -46,7 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -58,7 +60,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -83,7 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -95,7 +99,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -107,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "romantic"
+      "nostalgic",
+      "peaceful"
     ]
   },
   {
@@ -120,7 +125,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -145,6 +151,7 @@
     ],
     "song": true,
     "moods": [
+      "eerie",
       "mysterious"
     ]
   },
@@ -157,7 +164,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -168,7 +175,11 @@
     "artists": [
       "Robin Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "suspenseful",
+      "ominous"
+    ]
   },
   {
     "title": "Danger Heartbreak Dead Ahead",
@@ -179,7 +190,8 @@
     ],
     "song": true,
     "moods": [
-      "tense"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -191,8 +203,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -205,7 +217,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -215,7 +227,11 @@
     "artists": [
       "Robin Williams"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "epic",
+      "heroic"
+    ]
   },
   {
     "title": "What A Wonderful World",
@@ -226,8 +242,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "wonder"
+      "hopeful",
+      "transcendent"
     ]
   }
 ]

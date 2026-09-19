@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -21,8 +21,7 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "romantic"
+      "laid-back"
     ]
   },
   {
@@ -36,7 +35,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -72,8 +71,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -85,7 +84,7 @@
     ],
     "song": true,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
@@ -98,7 +97,7 @@
     "song": true,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -135,6 +134,7 @@
     ],
     "song": true,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -145,7 +145,11 @@
     "artists": [
       "UGK"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "intense"
+    ]
   },
   {
     "title": "Up North Trip",
@@ -188,7 +192,10 @@
     "artists": [
       "Blue Raspberry"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "hopeful"
+    ]
   },
   {
     "title": "Don't Give Up (feat. Kirk Franklin And The Family, Hezekiah Walker, The Fellowship Choir & Donald Lawrence)",
@@ -199,8 +206,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "powerful"
+      "hopeful",
+      "transcendent"
     ]
   }
 ]

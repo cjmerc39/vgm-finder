@@ -3,6 +3,7 @@
     "title": "Prologue",
     "plays": null,
     "moods": [
+      "mysterious",
       "wonder"
     ]
   },
@@ -18,7 +19,8 @@
     "title": "Opening Part 1",
     "plays": null,
     "moods": [
-      "joyful"
+      "hopeful",
+      "heroic"
     ]
   },
   {
@@ -26,14 +28,14 @@
     "plays": null,
     "moods": [
       "joyful",
-      "tender"
+      "wonder"
     ]
   },
   {
     "title": "Map (Phase 1)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "playful"
     ]
   },
@@ -41,7 +43,7 @@
     "title": "Map (Phase 2)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "playful"
     ]
   },
@@ -49,7 +51,7 @@
     "title": "Map (Phase 3)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "playful"
     ]
   },
@@ -57,7 +59,7 @@
     "title": "Map (Phase 4)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "playful"
     ]
   },
@@ -65,7 +67,7 @@
     "title": "Map (Phase 5)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "playful"
     ]
   },
@@ -73,7 +75,7 @@
     "title": "Map (Phase 6)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "playful"
     ]
   },
@@ -82,7 +84,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "driving"
     ]
   },
   {
@@ -90,23 +92,23 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "hopeful"
     ]
   },
   {
     "title": "Flower Garden",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "joyful",
+      "peaceful"
     ]
   },
   {
     "title": "Flower Field",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "joyful",
+      "peaceful"
     ]
   },
   {
@@ -114,7 +116,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "eerie"
     ]
   },
   {
@@ -129,7 +131,7 @@
     "title": "Jungle",
     "plays": null,
     "moods": [
-      "playful",
+      "joyful",
       "wonder"
     ]
   },
@@ -137,8 +139,8 @@
     "title": "In the Clouds",
     "plays": null,
     "moods": [
-      "wonder",
-      "peaceful"
+      "dreamy",
+      "wonder"
     ]
   },
   {
@@ -146,7 +148,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "dreamy"
     ]
   },
   {
@@ -154,7 +156,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "heroic"
     ]
   },
   {
@@ -176,8 +178,8 @@
     "title": "Bonus Challenge",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -192,23 +194,23 @@
     "title": "Fortress",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Boss Room",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Kamek's Theme",
     "plays": null,
     "moods": [
-      "eerie",
+      "ominous",
       "mysterious"
     ]
   },
@@ -216,15 +218,15 @@
     "title": "Kamek's Magic",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "eerie",
+      "suspenseful"
     ]
   },
   {
     "title": "Mini-Boss",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -232,8 +234,8 @@
     "title": "Big-Boss",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -248,16 +250,16 @@
     "title": "Kamek's Scheme",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Bowser",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -273,15 +275,15 @@
     "plays": null,
     "moods": [
       "tender",
-      "joyful"
+      "romantic"
     ]
   },
   {
     "title": "Ending",
     "plays": null,
     "moods": [
-      "joyful",
-      "tender"
+      "hopeful",
+      "transcendent"
     ]
   },
   {
@@ -296,13 +298,16 @@
     "title": "Powerful Infant",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Player Down",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Unused Jingle 1",

@@ -4,7 +4,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -12,23 +12,22 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "intense"
     ]
   },
   {
     "title": "Beach",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
     "title": "Beach - Fast",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "driving"
     ]
   },
   {
@@ -43,39 +42,39 @@
     "title": "Bonus Room - Fast",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Castle",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Castle - Fast",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Castle Boss - All Bubbled",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Castle Boss - Awaiting Friend",
     "plays": null,
     "moods": [
-      "mysterious"
+      "suspenseful"
     ]
   },
   {
@@ -90,15 +89,14 @@
     "title": "Co-op - Main Menu",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Co-op - Pick Save File",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -134,31 +132,30 @@
     "title": "Coin Rush - DLC Shop",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
     "title": "Coin Rush - Fail or Draw",
     "plays": null,
     "moods": [
-      "tense"
+      "playful"
     ]
   },
   {
     "title": "Coin Rush - Main Theme",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Coin Rush - Results",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -194,48 +191,47 @@
     "title": "Desert",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "wonder",
+      "laid-back"
     ]
   },
   {
     "title": "Desert - Fast",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "Final Boss - Fast - Phase 1",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Final Boss - Fast - Phase 2",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Final Boss - Fast - Phase 3",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Final Boss - Peach Saved...",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "hopeful",
+      "tender"
     ]
   },
   {
@@ -243,11 +239,34 @@
     "plays": null,
     "moods": [
       "joyful",
-      "romantic"
+      "heroic"
     ]
   },
   {
     "title": "Final Boss - Phase 1 Cleared",
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
+  },
+  {
+    "title": "Final Boss - Phase 1",
+    "plays": null,
+    "moods": [
+      "intense",
+      "ominous"
+    ]
+  },
+  {
+    "title": "Final Boss - Phase 2",
+    "plays": null,
+    "moods": [
+      "intense",
+      "epic"
+    ]
+  },
+  {
+    "title": "Final Boss - Phase 3 Cleared",
     "plays": null,
     "moods": [
       "joyful",
@@ -255,35 +274,11 @@
     ]
   },
   {
-    "title": "Final Boss - Phase 1",
-    "plays": null,
-    "moods": [
-      "powerful",
-      "tense"
-    ]
-  },
-  {
-    "title": "Final Boss - Phase 2",
-    "plays": null,
-    "moods": [
-      "powerful",
-      "tense"
-    ]
-  },
-  {
-    "title": "Final Boss - Phase 3 Cleared",
-    "plays": null,
-    "moods": [
-      "heroic",
-      "joyful"
-    ]
-  },
-  {
     "title": "Final Boss - Phase 3",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -298,7 +293,7 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "driving"
     ]
   },
   {
@@ -313,22 +308,29 @@
     "title": "Ground - Fast",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "Ground",
     "plays": null,
     "moods": [
-      "joyful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Hit 1 Million Coins",
     "plays": null,
     "moods": [
-      "joyful",
+      "joyful"
+    ]
+  },
+  {
+    "title": "Intro Movie",
+    "plays": null,
+    "moods": [
+      "epic",
       "heroic"
     ]
   },
@@ -336,32 +338,24 @@
     "title": "Intro Movie",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Intro Movie",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Intro Movie",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
-    ]
-  },
-  {
-    "title": "Intro Movie",
-    "plays": null,
-    "moods": [
-      "wonder",
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -377,22 +371,22 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Jungle",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "wonder"
     ]
   },
   {
     "title": "Mega Mushroom - Fast",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -400,20 +394,23 @@
     "title": "Mega Mushroom",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Message",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Mushroom House - Green",
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -421,7 +418,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -429,14 +426,13 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "P-Switch",
     "plays": null,
     "moods": [
-      "mysterious",
       "playful"
     ]
   },
@@ -452,8 +448,8 @@
     "title": "Rainbow Ground",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "wonder",
+      "joyful"
     ]
   },
   {
@@ -468,8 +464,8 @@
     "title": "Rainbow Sky",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "wonder",
+      "dreamy"
     ]
   },
   {
@@ -477,7 +473,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -485,77 +481,77 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Staff Credits",
     "plays": null,
     "moods": [
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Starman - Fast",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Starman",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Title Screen",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Tower - Fast",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Tower Boss - Fast",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Tower Boss",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Tower Clear",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "joyful"
     ]
   },
   {
     "title": "Tower",
     "plays": null,
     "moods": [
-      "tense",
+      "ominous",
       "mysterious"
     ]
   },
@@ -563,8 +559,7 @@
     "title": "Underground - Fast",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "driving"
     ]
   },
   {
@@ -572,7 +567,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "joyful"
+      "eerie"
     ]
   },
   {
@@ -580,7 +575,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "peaceful"
+      "playful"
     ]
   },
   {
@@ -588,31 +583,37 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "wonder"
+      "dreamy"
     ]
   },
   {
     "title": "Unknown Track - Fast",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Unknown Track",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Volcano Ground - Fast",
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "intense"
     ]
   },
   {
     "title": "Volcano Ground",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -620,22 +621,21 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "mysterious"
     ]
   },
   {
     "title": "Volcano Underground",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Warp Cannon",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -643,23 +643,22 @@
     "title": "World 1",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "World 2",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "World 3",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -667,7 +666,6 @@
     "title": "World 4",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -675,7 +673,6 @@
     "title": "World 5",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -683,7 +680,6 @@
     "title": "World 6",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -691,7 +687,6 @@
     "title": "World Flower",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -699,7 +694,6 @@
     "title": "World Mushroom",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -707,7 +701,6 @@
     "title": "World Star",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -715,24 +708,24 @@
     "title": "Athletic (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Athletic (Gold Ring)",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Athletic (Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
@@ -740,7 +733,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -748,7 +741,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -756,31 +749,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Beach (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Beach (Gold Ring)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Beach (Leaf Beat)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -788,7 +781,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -796,7 +789,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -804,38 +797,38 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Castle (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Castle (Gold Ring)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Castle (Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Castle - Fast (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -843,7 +836,7 @@
     "title": "Castle - Fast (Gold Ring)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -851,7 +844,7 @@
     "title": "Castle - Fast (Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -859,24 +852,24 @@
     "title": "Desert (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Desert (Gold Ring)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Desert (Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
@@ -884,7 +877,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -892,7 +885,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -900,7 +893,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -931,31 +924,30 @@
     "title": "Ghost House - Fast (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "eerie",
-      "driving"
+      "intense",
+      "eerie"
     ]
   },
   {
     "title": "Ghost House - Fast (Gold Ring)",
     "plays": null,
     "moods": [
-      "eerie",
-      "driving"
+      "intense",
+      "eerie"
     ]
   },
   {
     "title": "Ghost House - Fast (Leaf Beat)",
     "plays": null,
     "moods": [
-      "eerie",
-      "driving"
+      "intense",
+      "eerie"
     ]
   },
   {
     "title": "Ground (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -963,7 +955,6 @@
     "title": "Ground (Gold Ring)",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -971,7 +962,6 @@
     "title": "Ground (Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -980,7 +970,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -988,7 +978,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -996,14 +986,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Jungle (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
+      "playful",
       "wonder"
     ]
   },
@@ -1011,7 +1001,7 @@
     "title": "Jungle (Gold Ring)",
     "plays": null,
     "moods": [
-      "joyful",
+      "playful",
       "wonder"
     ]
   },
@@ -1019,7 +1009,7 @@
     "title": "Jungle (Leaf Beat)",
     "plays": null,
     "moods": [
-      "joyful",
+      "playful",
       "wonder"
     ]
   },
@@ -1028,7 +1018,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -1036,7 +1026,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -1044,31 +1034,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Snow (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "playful",
+      "peaceful"
     ]
   },
   {
     "title": "Snow (Gold Ring)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "playful",
+      "peaceful"
     ]
   },
   {
     "title": "Snow (Leaf Beat)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "playful",
+      "peaceful"
     ]
   },
   {
@@ -1076,7 +1066,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -1084,7 +1074,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -1092,55 +1082,55 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Tower (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Tower (Gold Ring)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Tower (Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Tower - Fast (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Tower - Fast (Gold Ring)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Tower - Fast (Leaf Beat)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -1148,7 +1138,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "playful"
     ]
   },
   {
@@ -1156,7 +1146,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "playful"
     ]
   },
   {
@@ -1164,7 +1154,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "playful"
     ]
   },
   {
@@ -1172,7 +1162,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "mysterious"
+      "playful"
     ]
   },
   {
@@ -1180,7 +1170,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "mysterious"
+      "playful"
     ]
   },
   {
@@ -1188,31 +1178,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "mysterious"
+      "playful"
     ]
   },
   {
     "title": "Underwater (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
     "title": "Underwater (Gold Ring)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
     "title": "Underwater (Leaf Beat)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
@@ -1220,7 +1210,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -1228,7 +1218,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -1236,38 +1226,38 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Volcano Ground (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Volcano Ground (Gold Ring)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Volcano Ground (Leaf Beat)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Volcano Ground - Fast (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -1275,7 +1265,7 @@
     "title": "Volcano Ground - Fast (Gold Ring)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -1283,7 +1273,7 @@
     "title": "Volcano Ground - Fast (Leaf Beat)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -1292,7 +1282,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "intense"
     ]
   },
   {
@@ -1300,7 +1290,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "intense"
     ]
   },
   {
@@ -1308,31 +1298,31 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "intense"
     ]
   },
   {
     "title": "Volcano Underground - Fast (Gold Ring & Leaf Beat)",
     "plays": null,
     "moods": [
-      "driving",
-      "mysterious"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Volcano Underground - Fast (Gold Ring)",
     "plays": null,
     "moods": [
-      "driving",
-      "mysterious"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Volcano Underground - Fast (Leaf Beat)",
     "plays": null,
     "moods": [
-      "driving",
-      "mysterious"
+      "intense",
+      "driving"
     ]
   }
 ]

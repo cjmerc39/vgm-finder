@@ -4,7 +4,7 @@
     "plays": null,
     "moods": [
       "wonder",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -19,7 +19,7 @@
     "title": "Main Menu",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -37,32 +37,31 @@
     "title": "Into the Pipe",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "Into the Pipe (Hurry!)",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Overworld",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Overworld (Hurry!)",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -70,15 +69,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "eerie"
     ]
   },
   {
     "title": "Underground (Hurry!)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -86,30 +85,30 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "playful"
+      "dreamy"
     ]
   },
   {
     "title": "Underwater (Hurry!)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Castle",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Castle (Hurry!)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -117,23 +116,23 @@
     "title": "Star",
     "plays": null,
     "moods": [
-      "transcendent",
-      "joyful"
+      "wonder",
+      "transcendent"
     ]
   },
   {
     "title": "Star (Hurry!)",
     "plays": null,
     "moods": [
-      "driving",
-      "transcendent"
+      "intense"
     ]
   },
   {
     "title": "Level Complete",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
@@ -148,7 +147,7 @@
     "title": "Ending",
     "plays": null,
     "moods": [
-      "peaceful",
+      "hopeful",
       "tender"
     ]
   },
@@ -157,18 +156,22 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "heroic"
     ]
   },
   {
     "title": "Challenge Results",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Challenge Results End",
     "plays": null,
     "moods": [
-      "peaceful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -194,7 +197,7 @@
     "plays": null,
     "moods": [
       "nostalgic",
-      "peaceful"
+      "tender"
     ]
   },
   {
@@ -202,23 +205,23 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "dreamy"
     ]
   },
   {
     "title": "Mystery Room",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "You VS Boo",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "suspenseful",
+      "eerie"
     ]
   },
   {
@@ -226,15 +229,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "intense"
     ]
   },
   {
     "title": "VS Race (Hurry!)",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -246,10 +249,7 @@
   },
   {
     "title": "Tie Race",
-    "plays": null,
-    "moods": [
-      "peaceful"
-    ]
+    "plays": null
   },
   {
     "title": "Win Race",
@@ -263,8 +263,8 @@
     "title": "Credits",
     "plays": null,
     "moods": [
-      "joyful",
-      "tender"
+      "hopeful",
+      "transcendent"
     ]
   }
 ]

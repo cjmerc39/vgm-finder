@@ -1,33 +1,26 @@
 [
   {
     "title": "Title",
-    "plays": null,
-    "moods": [
-      "playful",
-      "driving"
-    ]
+    "plays": null
   },
   {
     "title": "Title 2",
-    "plays": null,
-    "moods": [
-      "driving",
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Intro",
     "plays": null,
     "moods": [
-      "playful"
+      "joyful",
+      "driving"
     ]
   },
   {
     "title": "Menu",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -35,7 +28,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "driving"
+      "playful"
     ]
   },
   {
@@ -43,7 +36,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -51,7 +44,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "mysterious"
+      "intense"
     ]
   },
   {
@@ -59,7 +52,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -83,15 +76,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "eerie"
+      "playful"
     ]
   },
   {
     "title": "Boss Race",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -122,7 +115,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -130,14 +123,15 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "epic"
     ]
   },
   {
     "title": "Dingodile & Tiny Trophy Presentation",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "epic"
     ]
   },
   {
@@ -145,14 +139,14 @@
     "plays": null,
     "moods": [
       "joyful",
-      "peaceful"
+      "epic"
     ]
   },
   {
     "title": "Skull Rock",
     "plays": null,
     "moods": [
-      "driving",
+      "intense",
       "mysterious"
     ]
   },
@@ -161,7 +155,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "playful"
     ]
   },
   {
@@ -177,15 +171,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "mysterious"
+      "intense"
     ]
   },
   {
     "title": "Papu’s Pyramid",
     "plays": null,
     "moods": [
-      "driving",
-      "wonder"
+      "mysterious",
+      "intense"
     ]
   },
   {
@@ -200,8 +194,8 @@
     "title": "Rampage Ruins",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -209,7 +203,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "driving"
+      "dreamy"
     ]
   },
   {
@@ -217,7 +211,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "peaceful"
+      "intense"
     ]
   },
   {
@@ -225,7 +219,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -240,39 +234,40 @@
     "title": "Tiny Arena",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Rocky Road",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Citadel City Map",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "N. Gin Labs",
     "plays": null,
     "moods": [
-      "mysterious",
-      "driving"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Cortex Castle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -280,7 +275,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "wonder"
+      "playful"
     ]
   },
   {
@@ -288,7 +283,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -303,24 +298,24 @@
     "title": "Oxide Station",
     "plays": null,
     "moods": [
-      "driving",
-      "mysterious"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Aku Aku Invincibility",
     "plays": null,
     "moods": [
-      "powerful",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
     "title": "Uka Uka Invincibility",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -328,7 +323,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "heroic"
+      "hopeful"
     ]
   },
   {
@@ -343,15 +338,12 @@
     "title": "Maps Conglomerate",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Demo Track Intro On Spyro 2 Game",
-    "plays": null,
-    "moods": [
-      "playful",
-      "driving"
-    ]
+    "plays": null
   }
 ]

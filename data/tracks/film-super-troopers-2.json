@@ -33,8 +33,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "joyful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -58,8 +58,7 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "tense"
+      "laid-back"
     ]
   },
   {
@@ -69,7 +68,10 @@
     "artists": [
       "Super Troopers 2 Cast"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Sh** Makes The Flowers Grow",
@@ -78,7 +80,10 @@
     "artists": [
       "Folk Uke"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Penal Colony",
@@ -87,10 +92,7 @@
     "artists": [
       "Dog Trumpet"
     ],
-    "song": true,
-    "moods": [
-      "mysterious"
-    ]
+    "song": true
   },
   {
     "title": "Fruit Gum",
@@ -111,10 +113,7 @@
     "artists": [
       "Steak"
     ],
-    "song": true,
-    "moods": [
-      "powerful"
-    ]
+    "song": true
   },
   {
     "title": "Easy Eating",
@@ -123,7 +122,11 @@
     "artists": [
       "Naked Giants"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   },
   {
     "title": "F*** A Moose",
@@ -144,11 +147,7 @@
     "artists": [
       "Eagles Of Death Metal"
     ],
-    "song": true,
-    "moods": [
-      "mysterious",
-      "tense"
-    ]
+    "song": true
   },
   {
     "title": "French Excerpt",
@@ -168,8 +167,7 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "romantic"
+      "tender"
     ]
   },
   {
@@ -191,7 +189,10 @@
     "artists": [
       "Who Are Those Guys"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Lyin'",
@@ -200,10 +201,7 @@
     "artists": [
       "Charlie Patton's War"
     ],
-    "song": true,
-    "moods": [
-      "mysterious"
-    ]
+    "song": true
   },
   {
     "title": "Complexity",
@@ -235,8 +233,7 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "tense"
+      "mysterious"
     ]
   },
   {
@@ -246,6 +243,9 @@
     "artists": [
       "Super Troopers 2 Cast"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   }
 ]

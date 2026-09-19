@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
       "heroic",
+      "driving",
       "joyful"
     ]
   },
@@ -23,7 +23,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -48,8 +48,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "intense",
+      "epic"
     ]
   },
   {
@@ -88,7 +89,8 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense",
+      "joyful"
     ]
   },
   {
@@ -100,8 +102,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
       "heroic",
+      "driving",
       "joyful"
     ]
   },
@@ -115,7 +117,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -128,7 +130,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -140,8 +142,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "intense",
+      "epic"
     ]
   },
   {
@@ -180,7 +183,8 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense",
+      "joyful"
     ]
   }
 ]

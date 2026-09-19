@@ -6,7 +6,10 @@
     "artists": [
       "Alias Project"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Why",
@@ -15,7 +18,11 @@
     "artists": [
       "rude"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "tender"
+    ]
   },
   {
     "title": "Mr. Lover (feat. Baby)",
@@ -37,7 +44,10 @@
     "artists": [
       "Rayvon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Lie Till I Die",
@@ -57,7 +67,8 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -97,6 +108,7 @@
     ],
     "song": true,
     "moods": [
+      "hopeful",
       "joyful"
     ]
   },
@@ -109,8 +121,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -134,7 +146,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic"
+      "romantic",
+      "joyful"
     ]
   },
   {
@@ -147,7 +160,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "powerful"
+      "romantic"
     ]
   }
 ]

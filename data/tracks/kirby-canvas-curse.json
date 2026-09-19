@@ -4,7 +4,7 @@
     "plays": null,
     "moods": [
       "wonder",
-      "joyful"
+      "heroic"
     ]
   },
   {
@@ -12,21 +12,22 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "Training",
     "plays": null,
     "moods": [
-      "peaceful"
+      "hopeful",
+      "playful"
     ]
   },
   {
     "title": "Plain Plant",
     "plays": null,
     "moods": [
-      "playful",
+      "peaceful",
       "joyful"
     ]
   },
@@ -35,7 +36,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "nostalgic"
+      "joyful"
     ]
   },
   {
@@ -43,7 +44,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -58,15 +59,15 @@
     "title": "Growth Grass",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "wonder",
+      "hopeful"
     ]
   },
   {
     "title": "Mag Mount",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -83,31 +84,31 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "dreamy"
     ]
   },
   {
     "title": "Silver Submarine",
     "plays": null,
     "moods": [
-      "peaceful",
-      "playful"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
     "title": "Machine Mansion",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Dreamy Darkness",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "dreamy",
+      "eerie"
     ]
   },
   {
@@ -123,7 +124,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -131,7 +132,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -139,23 +140,23 @@
     "plays": null,
     "moods": [
       "wonder",
-      "playful"
+      "dreamy"
     ]
   },
   {
     "title": "Collapse Castle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Volatile Volcano",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -163,7 +164,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "mysterious"
+      "dreamy"
     ]
   },
   {
@@ -178,7 +179,7 @@
     "title": "Mad Mechanism",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -186,15 +187,15 @@
     "title": "Spectacle Space",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "epic",
+      "wonder"
     ]
   },
   {
     "title": "The World of Drawcia",
     "plays": null,
     "moods": [
-      "tense",
+      "ominous",
       "mysterious"
     ]
   },
@@ -202,16 +203,16 @@
     "title": "Room Guarder",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Goal Game",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -219,7 +220,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "hopeful"
     ]
   },
   {
@@ -227,7 +228,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "heroic"
     ]
   },
   {
@@ -235,7 +236,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "epic"
     ]
   },
   {
@@ -251,26 +252,29 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "epic"
     ]
   },
   {
     "title": "Fanfare3",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Game Over",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad"
+    ]
   },
   {
     "title": "Boss Game Select",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "mysterious"
     ]
   },
@@ -278,8 +282,8 @@
     "title": "Paint Panic",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -287,51 +291,54 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Kracko",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "He's Done For",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "Medal Changer",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Drawcia Demo",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Drawcia Sorceress",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Drawcia Soul",
     "plays": null,
     "moods": [
-      "powerful",
-      "transcendent"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -339,15 +346,15 @@
     "plays": null,
     "moods": [
       "tender",
-      "peaceful"
+      "nostalgic"
     ]
   },
   {
     "title": "Staff Roll",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "peaceful",
+      "romantic"
     ]
   }
 ]

@@ -4,6 +4,7 @@
     "plays": null,
     "moods": [
       "heroic",
+      "epic",
       "wonder"
     ]
   },
@@ -19,7 +20,8 @@
     "title": "Map",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "wonder"
     ]
   },
   {
@@ -33,16 +35,16 @@
     "title": "Fighting Theme (original version)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Fighting Theme (complete and almost uncut)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -50,7 +52,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "ominous"
     ]
   },
   {
@@ -58,15 +60,15 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "mysterious"
     ]
   },
   {
     "title": "Sophia's Office Is Ransacked / The Appearance of Nur-Ab-Sal",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -74,7 +76,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "dreamy"
     ]
   },
   {
@@ -82,29 +84,31 @@
     "plays": null,
     "moods": [
       "wonder",
-      "mysterious"
+      "heroic"
     ]
   },
   {
     "title": "Tikal Temple",
     "plays": null,
     "moods": [
-      "wonder",
-      "mysterious"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Sternhart Steals the Worldstone",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "The Azores and Mr. Costa",
     "plays": null,
     "moods": [
-      "playful"
+      "mysterious",
+      "laid-back"
     ]
   },
   {
@@ -116,13 +120,18 @@
   },
   {
     "title": "Caswell Hall",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back",
+      "peaceful"
+    ]
   },
   {
     "title": "The Hermocrates Manuscript",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "wonder"
     ]
   },
   {
@@ -130,7 +139,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "romantic"
+      "laid-back"
     ]
   },
   {
@@ -138,13 +147,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Monte Carlo Hotel Room",
     "plays": null,
     "moods": [
+      "romantic",
       "tender"
     ]
   },
@@ -152,8 +162,8 @@
     "title": "The Séance",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -161,7 +171,7 @@
     "plays": null,
     "moods": [
       "wonder",
-      "joyful"
+      "dreamy"
     ]
   },
   {
@@ -169,39 +179,11 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "mysterious"
+      "dreamy"
     ]
   },
   {
     "title": "Outside the Dig",
-    "plays": null,
-    "moods": [
-      "tense"
-    ]
-  },
-  {
-    "title": "Crete",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
-  },
-  {
-    "title": "Crete Ruins",
-    "plays": null,
-    "moods": [
-      "wonder"
-    ]
-  },
-  {
-    "title": "The Transit",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
-  },
-  {
-    "title": "The Ruins of Knossos",
     "plays": null,
     "moods": [
       "mysterious",
@@ -209,9 +191,41 @@
     ]
   },
   {
+    "title": "Crete",
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
+  },
+  {
+    "title": "Crete Ruins",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
+  },
+  {
+    "title": "The Transit",
+    "plays": null,
+    "moods": [
+      "suspenseful",
+      "driving"
+    ]
+  },
+  {
+    "title": "The Ruins of Knossos",
+    "plays": null,
+    "moods": [
+      "ominous",
+      "mysterious"
+    ]
+  },
+  {
     "title": "Creat (Dream mix by Bart Klepka)",
     "plays": null,
     "moods": [
+      "dreamy",
       "mysterious"
     ]
   },
@@ -219,24 +233,24 @@
     "title": "The Death of Dr. Jones",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
     "title": "The Singing Nazi",
     "plays": null,
     "moods": [
-      "playful",
-      "eerie"
+      "eerie",
+      "playful"
     ]
   },
   {
     "title": "The Nazi Submarine",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -252,14 +266,14 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Atlantis 1",
     "plays": null,
     "moods": [
-      "transcendent",
+      "epic",
       "mysterious"
     ]
   },
@@ -275,8 +289,8 @@
     "title": "Atlantis 3",
     "plays": null,
     "moods": [
-      "transcendent",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -284,15 +298,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "mysterious"
+      "intense"
     ]
   },
   {
     "title": "Crab Central",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -307,16 +321,16 @@
     "title": "Room of the God Machine",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "epic",
+      "ominous"
     ]
   },
   {
     "title": "The God Machine and Finale",
     "plays": null,
     "moods": [
-      "heroic",
-      "transcendent"
+      "epic",
+      "intense"
     ]
   }
 ]

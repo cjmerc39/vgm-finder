@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "driving"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
@@ -35,7 +35,7 @@
     "song": true,
     "moods": [
       "eerie",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -47,8 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "epic",
+      "driving"
     ]
   },
   {
@@ -60,8 +60,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -73,8 +73,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -86,8 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "joyful"
     ]
   },
   {
@@ -113,7 +113,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -136,7 +136,11 @@
     "artists": [
       "Electric Light Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "ominous"
+    ]
   },
   {
     "title": "A Horse with No Name",
@@ -147,8 +151,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "laid-back",
+      "dreamy"
     ]
   },
   {
@@ -160,7 +164,7 @@
     ],
     "song": true,
     "moods": [
-      "wonder",
+      "dreamy",
       "transcendent"
     ]
   },
@@ -171,7 +175,11 @@
     "artists": [
       "Chris Stills"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "hopeful",
+      "driving"
+    ]
   },
   {
     "title": "Irving Montage",
@@ -181,8 +189,8 @@
       "Danny Elfman"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "playful",
+      "nostalgic"
     ]
   }
 ]

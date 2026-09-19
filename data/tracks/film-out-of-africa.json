@@ -7,9 +7,9 @@
       "John Barry"
     ],
     "moods": [
+      "epic",
       "wonder",
-      "nostalgic",
-      "transcendent"
+      "romantic"
     ]
   },
   {
@@ -34,7 +34,7 @@
     ],
     "moods": [
       "mysterious",
-      "tender"
+      "playful"
     ]
   },
   {
@@ -46,11 +46,7 @@
       "Academy of St Martin in the Fields Chamber Ensemble",
       "Sir Neville Marriner"
     ],
-    "song": true,
-    "moods": [
-      "peaceful",
-      "transcendent"
-    ]
+    "song": true
   },
   {
     "title": "Safari",
@@ -60,8 +56,8 @@
       "John Barry"
     ],
     "moods": [
-      "wonder",
-      "driving"
+      "driving",
+      "wonder"
     ]
   },
   {
@@ -72,8 +68,8 @@
       "John Barry"
     ],
     "moods": [
-      "wonder",
-      "joyful"
+      "epic",
+      "hopeful"
     ]
   },
   {
@@ -84,8 +80,9 @@
       "John Barry"
     ],
     "moods": [
+      "wonder",
       "transcendent",
-      "wonder"
+      "dreamy"
     ]
   },
   {
@@ -97,8 +94,7 @@
     ],
     "moods": [
       "tender",
-      "romantic",
-      "nostalgic"
+      "romantic"
     ]
   },
   {
@@ -110,7 +106,7 @@
     ],
     "moods": [
       "peaceful",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -122,7 +118,7 @@
     ],
     "moods": [
       "romantic",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -133,9 +129,9 @@
       "John Barry"
     ],
     "moods": [
-      "romantic",
       "transcendent",
-      "nostalgic"
+      "romantic",
+      "sad"
     ]
   },
   {
@@ -146,9 +142,9 @@
       "John Barry"
     ],
     "moods": [
+      "epic",
       "romantic",
-      "transcendent",
-      "nostalgic"
+      "hopeful"
     ]
   }
 ]

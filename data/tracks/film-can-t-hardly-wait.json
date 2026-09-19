@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -34,7 +34,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "playful",
       "driving"
     ]
   },
@@ -47,7 +47,7 @@
     ],
     "song": true,
     "moods": [
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -60,7 +60,7 @@
     "song": true,
     "moods": [
       "driving",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -72,8 +72,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -98,7 +98,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -110,8 +111,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -121,7 +122,10 @@
     "artists": [
       "Feeder"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Tell Me What to Say",
@@ -145,7 +149,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic"
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -157,8 +162,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "joyful"
+      "hopeful",
+      "romantic"
     ]
   },
   {
@@ -168,7 +173,11 @@
     "artists": [
       "Dog's Eye View"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "dreamy"
+    ]
   },
   {
     "title": "Paradise City",
@@ -179,8 +188,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "joyful"
     ]
   }
 ]

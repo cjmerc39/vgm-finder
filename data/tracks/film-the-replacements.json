@@ -29,8 +29,7 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "romantic"
+      "hopeful"
     ]
   },
   {
@@ -40,11 +39,7 @@
     "artists": [
       "Young MC"
     ],
-    "song": true,
-    "moods": [
-      "joyful",
-      "playful"
-    ]
+    "song": true
   },
   {
     "title": "I Will Survive",
@@ -55,7 +50,6 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
       "joyful"
     ]
   },
@@ -67,8 +61,8 @@
       "John Debney"
     ],
     "moods": [
-      "heroic",
-      "driving"
+      "intense",
+      "heroic"
     ]
   },
   {
@@ -79,8 +73,7 @@
       "John Debney"
     ],
     "moods": [
-      "mysterious",
-      "tense"
+      "playful"
     ]
   },
   {
@@ -92,7 +85,7 @@
       "Font 48"
     ],
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -118,8 +111,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "heroic",
+      "driving"
     ]
   },
   {
@@ -143,7 +136,7 @@
     ],
     "moods": [
       "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
@@ -154,8 +147,8 @@
       "John Debney"
     ],
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -165,11 +158,7 @@
     "artists": [
       "Gary Glitter"
     ],
-    "song": true,
-    "moods": [
-      "powerful",
-      "joyful"
-    ]
+    "song": true
   },
   {
     "title": "Falco Changes The Play",
@@ -179,7 +168,8 @@
       "John Debney"
     ],
     "moods": [
-      "mysterious"
+      "playful",
+      "intense"
     ]
   },
   {
@@ -190,8 +180,7 @@
       "John Debney"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "intense"
     ]
   }
 ]

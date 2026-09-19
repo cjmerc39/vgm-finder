@@ -7,8 +7,8 @@
       "John Powell"
     ],
     "moods": [
-      "wonder",
-      "joyful"
+      "heroic",
+      "epic"
     ]
   },
   {
@@ -19,7 +19,7 @@
       "John Powell"
     ],
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -31,8 +31,8 @@
       "John Powell"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "mysterious",
+      "ominous"
     ]
   },
   {
@@ -44,7 +44,7 @@
     ],
     "moods": [
       "playful",
-      "driving"
+      "hopeful"
     ]
   },
   {
@@ -79,8 +79,8 @@
       "John Powell"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -92,7 +92,7 @@
     ],
     "moods": [
       "tender",
-      "joyful"
+      "peaceful"
     ]
   },
   {
@@ -103,8 +103,8 @@
       "John Powell"
     ],
     "moods": [
-      "joyful",
-      "playful"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -116,7 +116,7 @@
     ],
     "moods": [
       "peaceful",
-      "nostalgic"
+      "tender"
     ]
   },
   {
@@ -127,8 +127,8 @@
       "John Powell"
     ],
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "joyful"
     ]
   },
   {
@@ -139,8 +139,8 @@
       "John Powell"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -151,8 +151,8 @@
       "John Powell"
     ],
     "moods": [
-      "heroic",
-      "powerful"
+      "hopeful",
+      "heroic"
     ]
   },
   {
@@ -187,7 +187,7 @@
       "John Powell"
     ],
     "moods": [
-      "mysterious",
+      "ominous",
       "eerie"
     ]
   },
@@ -199,8 +199,8 @@
       "John Powell"
     ],
     "moods": [
-      "peaceful",
-      "tender"
+      "mysterious",
+      "peaceful"
     ]
   },
   {
@@ -211,8 +211,8 @@
       "John Powell"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -223,8 +223,8 @@
       "John Powell"
     ],
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -235,8 +235,8 @@
       "John Powell"
     ],
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -247,7 +247,7 @@
       "John Powell"
     ],
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -259,7 +259,8 @@
       "John Powell"
     ],
     "moods": [
-      "tense"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
@@ -270,7 +271,7 @@
       "John Powell"
     ],
     "moods": [
-      "joyful",
+      "hopeful",
       "heroic"
     ]
   },
@@ -281,7 +282,10 @@
     "artists": [
       "Jónsi"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "The Vikings Have Their Tea",
@@ -291,8 +295,8 @@
       "John Powell"
     ],
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "laid-back"
     ]
   }
 ]

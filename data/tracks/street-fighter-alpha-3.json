@@ -3,7 +3,7 @@
     "title": "Nobody Blink (Opening Title)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -12,7 +12,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "epic"
     ]
   },
   {
@@ -25,21 +25,25 @@
   },
   {
     "title": "Beginning (Story Demo 1)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "intense"
+    ]
   },
   {
     "title": "The Road (Ryu's Theme)",
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "hopeful"
     ]
   },
   {
     "title": "Active Red (Ken's Theme)",
     "plays": null,
     "moods": [
-      "heroic",
+      "intense",
       "driving"
     ]
   },
@@ -47,7 +51,7 @@
     "title": "Resolution (Chun-Li's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -56,47 +60,47 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "joyful"
     ]
   },
   {
     "title": "Proof Of Divinity (Adon's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Shining One (Sagat's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "mysterious"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Behind You (Birdie's Theme)",
     "plays": null,
     "moods": [
-      "playful",
-      "mysterious"
+      "mysterious",
+      "laid-back"
     ]
   },
   {
     "title": "Feel The Cool (Akuma's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Fatal Depth (M. Bison's Theme)",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "epic"
     ]
   },
   {
@@ -104,47 +108,47 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Decisive Bout (Charlie's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "No More Swingin' (Guy's Theme)",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Tower Of SHOGUN (Sodom's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Doll Eyes (Cammy's Theme)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Heavy Swell (Zangief's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -157,7 +161,11 @@
   },
   {
     "title": "Simple Rating (Karin's Theme)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "S.E. Collection",
@@ -167,40 +175,40 @@
     "title": "Prepare (Here Comes a New Challenger!)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Gimmick (Rolento's Theme)",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Stripes (Cody's Theme)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "KAKUGO (Sodom's Theme - X-ISM)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Mach-Smasher (E. Honda's Theme)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -208,28 +216,31 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "romantic"
+      "dreamy"
     ]
   },
   {
     "title": "Crimson (Vega's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Untamable Fists (Balrog's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "I'll Be Brief (Story Demo 2)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Primatic Stars (R. Mika's Theme)",
@@ -243,16 +254,16 @@
     "title": "Breeze (Sakura's Theme)",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "hopeful",
+      "tender"
     ]
   },
   {
     "title": "Wild Nature (Blanka's Theme)",
     "plays": null,
     "moods": [
-      "driving",
-      "mysterious"
+      "mysterious",
+      "intense"
     ]
   },
   {
@@ -260,73 +271,79 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "mysterious"
+      "nostalgic"
     ]
   },
   {
     "title": "Groan (Shin Akuma's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "High-Tech (Juli & Juni's Theme)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "eerie"
     ]
   },
   {
     "title": "Seek No Escape (Final Round Theme)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Black Power (Evil Ryu's Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Last Duel (Story Demo 3)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "suspenseful",
+      "intense"
+    ]
   },
   {
     "title": "Brave Or Grave (Final M. Bison Theme)",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Daybreak (Ending & Staff Roll)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "hopeful",
+      "peaceful"
     ]
   },
   {
     "title": "Rise Again (Continue)",
     "plays": null,
     "moods": [
-      "joyful"
+      "playful",
+      "hopeful"
     ]
   },
   {
     "title": "Zero Time (Game Over)",
     "plays": null,
     "moods": [
-      "sad"
+      "ominous",
+      "eerie"
     ]
   },
   {

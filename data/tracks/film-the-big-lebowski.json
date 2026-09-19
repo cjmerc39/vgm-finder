@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -21,7 +21,7 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
+      "dreamy",
       "tender"
     ]
   },
@@ -34,7 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious"
+      "nostalgic",
+      "playful"
     ]
   },
   {
@@ -46,8 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -60,7 +61,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -83,7 +84,11 @@
     "artists": [
       "Moondog"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back",
+      "playful"
+    ]
   },
   {
     "title": "Just Dropped In (To See What Condition My Condition Is In)",
@@ -95,7 +100,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "dreamy"
     ]
   },
   {
@@ -120,8 +125,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "nostalgic",
+      "peaceful"
     ]
   },
   {
@@ -134,7 +139,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "nostalgic"
+      "laid-back"
     ]
   },
   {
@@ -146,8 +151,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "romantic"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -171,8 +176,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "mournful"
+      "sad",
+      "nostalgic"
     ]
   }
 ]

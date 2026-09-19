@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -58,8 +58,8 @@
       "Elliot Goldenthal"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -69,7 +69,11 @@
     "artists": [
       "Billie Holiday & Her Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "dreamy"
+    ]
   },
   {
     "title": "Love In The Dunes",
@@ -90,7 +94,11 @@
     "artists": [
       "Diana Krall"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "laid-back"
+    ]
   },
   {
     "title": "Phone Call To Billie",
@@ -100,8 +108,8 @@
       "Elliot Goldenthal"
     ],
     "moods": [
-      "tender",
-      "mysterious"
+      "mysterious",
+      "tender"
     ]
   },
   {
@@ -113,8 +121,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -126,7 +134,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -139,7 +147,7 @@
     ],
     "moods": [
       "transcendent",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -150,8 +158,8 @@
       "Elliot Goldenthal"
     ],
     "moods": [
-      "driving",
-      "playful"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
@@ -161,7 +169,11 @@
     "artists": [
       "Billie Holiday"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "JD Dies",
@@ -171,8 +183,8 @@
       "Elliot Goldenthal"
     ],
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -185,7 +197,7 @@
     "song": true,
     "moods": [
       "eerie",
-      "mournful"
+      "mysterious"
     ]
   }
 ]

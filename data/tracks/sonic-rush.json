@@ -12,31 +12,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Plant Kingdom (Act1&2 Mix)",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "joyful"
     ]
   },
   {
     "title": "Machine Labyrinth (Act1&2 Mix)",
     "plays": null,
     "moods": [
-      "powerful",
-      "mysterious"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Coral Cave (Act1&2 Mix)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "driving",
+      "joyful"
     ]
   },
   {
@@ -44,23 +44,23 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Sky Babylon (Act1&2 Mix)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "driving",
+      "epic"
     ]
   },
   {
     "title": "Pirates Island (Act1&2 Mix)",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
@@ -75,7 +75,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "laid-back"
     ]
   },
   {
@@ -89,8 +89,7 @@
     "title": "Cutscene - Sailing",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "peaceful"
     ]
   },
   {
@@ -98,37 +97,39 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "Windmill Village Mode 2",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Sailboat",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
     "title": "Windmill Village Mode 3",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Sea Map",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "peaceful",
+      "mysterious"
     ]
   },
   {
@@ -142,30 +143,32 @@
     "title": "Windmill Village Mode 4",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Submarine",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
     "title": "Windmill Village Mode 5",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Emerald",
     "plays": null,
     "moods": [
-      "transcendent",
-      "wonder"
+      "wonder",
+      "joyful"
     ]
   },
   {
@@ -173,82 +176,11 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "wonder"
     ]
   },
   {
     "title": "Invincible Medley",
-    "plays": null,
-    "moods": [
-      "powerful",
-      "joyful"
-    ]
-  },
-  {
-    "title": "Cutscene - Opening",
-    "plays": null,
-    "moods": [
-      "wonder",
-      "joyful"
-    ]
-  },
-  {
-    "title": "Cutscene - Normal",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
-  },
-  {
-    "title": "Cutscene - Tense",
-    "plays": null,
-    "moods": [
-      "tense",
-      "powerful"
-    ]
-  },
-  {
-    "title": "Cutscene - Nervous",
-    "plays": null,
-    "moods": [
-      "tense",
-      "mysterious"
-    ]
-  },
-  {
-    "title": "Cutscene - Island Appears",
-    "plays": null,
-    "moods": [
-      "wonder",
-      "transcendent"
-    ]
-  },
-  {
-    "title": "Cutscene - Blaze Appears",
-    "plays": null,
-    "moods": [
-      "heroic",
-      "joyful"
-    ]
-  },
-  {
-    "title": "Cutscene - Waiting for Boss",
-    "plays": null,
-    "moods": [
-      "tense",
-      "mysterious"
-    ]
-  },
-  {
-    "title": "Boss",
-    "plays": null,
-    "moods": [
-      "powerful",
-      "driving"
-    ]
-  },
-  {
-    "title": "Jingle - Boss Clear",
     "plays": null,
     "moods": [
       "joyful",
@@ -256,26 +188,93 @@
     ]
   },
   {
-    "title": "Puzzle",
+    "title": "Cutscene - Opening",
+    "plays": null,
+    "moods": [
+      "hopeful",
+      "mysterious"
+    ]
+  },
+  {
+    "title": "Cutscene - Normal",
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
+  },
+  {
+    "title": "Cutscene - Tense",
+    "plays": null,
+    "moods": [
+      "suspenseful"
+    ]
+  },
+  {
+    "title": "Cutscene - Nervous",
+    "plays": null,
+    "moods": [
+      "suspenseful"
+    ]
+  },
+  {
+    "title": "Cutscene - Island Appears",
+    "plays": null,
+    "moods": [
+      "wonder",
+      "mysterious"
+    ]
+  },
+  {
+    "title": "Cutscene - Blaze Appears",
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "joyful"
+    ]
+  },
+  {
+    "title": "Cutscene - Waiting for Boss",
+    "plays": null,
+    "moods": [
+      "suspenseful",
+      "ominous"
+    ]
+  },
+  {
+    "title": "Boss",
+    "plays": null,
+    "moods": [
+      "intense",
+      "epic"
+    ]
+  },
+  {
+    "title": "Jingle - Boss Clear",
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
+  },
+  {
+    "title": "Puzzle",
+    "plays": null,
+    "moods": [
+      "mysterious"
     ]
   },
   {
     "title": "Cutscene - Pirates",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "playful",
+      "ominous"
     ]
   },
   {
     "title": "Boss - Whisker & Johnny",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -283,24 +282,23 @@
     "title": "Cutscene - Attack",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Cutscene - Big Swell",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Boss - Big Swell",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -316,46 +314,45 @@
     "plays": null,
     "moods": [
       "joyful",
-      "transcendent"
+      "hopeful"
     ]
   },
   {
     "title": "Cutscene - Eggman Appears",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Cutscene - The Power",
     "plays": null,
     "moods": [
-      "powerful",
-      "transcendent"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Cutscene - Transform",
     "plays": null,
     "moods": [
-      "heroic",
-      "transcendent"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Boss - Deep Core",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Boss - Deep Core - Allegro",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -363,16 +360,15 @@
     "title": "Jingle - Deep Core Clear",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Cutscene - Formation Reversion",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "hopeful"
     ]
   },
   {
@@ -380,15 +376,15 @@
     "plays": null,
     "moods": [
       "joyful",
-      "transcendent"
+      "hopeful"
     ]
   },
   {
     "title": "End Credits",
     "plays": null,
     "moods": [
-      "transcendent",
-      "nostalgic"
+      "joyful",
+      "hopeful"
     ]
   },
   {
@@ -396,7 +392,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -404,7 +400,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   }
 ]

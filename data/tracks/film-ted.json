@@ -21,7 +21,7 @@
     ],
     "moods": [
       "wonder",
-      "nostalgic"
+      "hopeful"
     ]
   },
   {
@@ -32,8 +32,8 @@
       "Walter Murphy"
     ],
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -44,8 +44,8 @@
       "Walter Murphy"
     ],
     "moods": [
-      "tender",
-      "peaceful"
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -56,8 +56,8 @@
       "Walter Murphy"
     ],
     "moods": [
-      "wonder",
-      "transcendent"
+      "dreamy",
+      "wonder"
     ]
   },
   {
@@ -81,7 +81,7 @@
     ],
     "moods": [
       "sad",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -92,7 +92,7 @@
       "Walter Murphy"
     ],
     "moods": [
-      "peaceful",
+      "hopeful",
       "joyful"
     ]
   },
@@ -105,8 +105,8 @@
       "John Williams"
     ],
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -118,7 +118,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -129,8 +129,8 @@
       "Walter Murphy"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "driving"
     ]
   },
   {
@@ -141,8 +141,8 @@
       "Walter Murphy"
     ],
     "moods": [
-      "powerful",
-      "joyful"
+      "epic",
+      "hopeful"
     ]
   },
   {
@@ -165,8 +165,8 @@
       "Walter Murphy"
     ],
     "moods": [
-      "joyful",
-      "playful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -178,8 +178,7 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "mysterious"
+      "playful"
     ]
   },
   {
@@ -189,7 +188,11 @@
     "artists": [
       "Daphne"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "intense",
+      "ominous"
+    ]
   },
   {
     "title": "Only Wanna Be With You",
@@ -200,8 +203,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "romantic"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
@@ -226,8 +229,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -253,8 +256,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   }
 ]

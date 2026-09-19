@@ -8,9 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -23,7 +22,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -35,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "joyful",
+      "driving"
     ]
   },
   {
@@ -48,8 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -61,8 +60,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "hopeful",
+      "romantic"
     ]
   },
   {
@@ -85,11 +84,7 @@
     "artists": [
       "Moby"
     ],
-    "song": true,
-    "moods": [
-      "mysterious",
-      "eerie"
-    ]
+    "song": true
   },
   {
     "title": "Adrenaline",
@@ -100,9 +95,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -114,7 +108,7 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
+      "intense",
       "mysterious"
     ]
   },
@@ -127,7 +121,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -139,7 +134,6 @@
     ],
     "song": true,
     "moods": [
-      "driving",
       "playful"
     ]
   },
@@ -152,8 +146,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -165,6 +159,7 @@
     ],
     "song": true,
     "moods": [
+      "joyful",
       "playful"
     ]
   },
@@ -178,7 +173,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -191,7 +186,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -204,7 +199,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "driving"
+      "playful"
     ]
   },
   {
@@ -243,7 +238,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "joyful"
     ]
   },
   {
@@ -256,7 +251,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   }
 ]

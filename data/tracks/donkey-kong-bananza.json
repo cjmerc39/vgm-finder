@@ -11,7 +11,8 @@
     "title": "DK Artist",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -19,22 +20,22 @@
     "plays": null,
     "moods": [
       "wonder",
-      "mysterious"
+      "peaceful"
     ]
   },
   {
     "title": "Ingot Isle Cave-In",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Ingot Isle Cave-In Battle",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -42,21 +43,23 @@
     "title": "Sinkhole",
     "plays": null,
     "moods": [
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Lagoon Layer",
     "plays": null,
     "moods": [
-      "mysterious",
-      "peaceful"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
     "title": "Salvager's Landing (Lagoon Layer)",
     "plays": null,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -64,15 +67,16 @@
     "title": "Void Kong Confrontation",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Hilltop Layer",
     "plays": null,
     "moods": [
-      "wonder"
+      "wonder",
+      "heroic"
     ]
   },
   {
@@ -87,40 +91,40 @@
     "title": "Canyon Layer",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "epic",
+      "driving"
     ]
   },
   {
     "title": "Banandium Refinery (Canyon Layer)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Smokestack Depths (Canyon Layer)",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "The Divide",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
     "title": "Freezer Path (The Divide)",
     "plays": null,
     "moods": [
-      "eerie",
-      "peaceful"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
@@ -128,15 +132,15 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "mysterious"
+      "wonder"
     ]
   },
   {
     "title": "Cold-Colt Crest (Freezer Layer)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
@@ -144,39 +148,39 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "dreamy"
     ]
   },
   {
     "title": "Canter Creamery (Freezer Layer)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "tender",
+      "joyful"
     ]
   },
   {
     "title": "Hot-Hoof Heater (Freezer Layer)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Beaky Thicket (Forest Layer)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "playful"
+      "playful",
+      "wonder"
     ]
   },
   {
     "title": "Eggshell Hotel (Forest Layer)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -191,8 +195,8 @@
     "title": "Eggshell Hotel Annex (Forest Layer)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "playful",
+      "wonder"
     ]
   },
   {
@@ -207,8 +211,8 @@
     "title": "The Junction",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -216,14 +220,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Resort Layer",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "joyful"
     ]
   },
@@ -231,24 +235,24 @@
     "title": "Forecaster Refuge (Tempest Layer)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Lava Lake (Tempest Layer)",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Hot-Shower Cave (Tempest Layer)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "peaceful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -263,31 +267,31 @@
     "title": "Stormy Weather (Tempest Layer)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Forgotten Pit Entry (Landfill Layer)",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Forgotten Pit (Landfill Layer)",
     "plays": null,
     "moods": [
-      "eerie",
-      "sad"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Trashtopia (Landfill Layer)",
     "plays": null,
     "moods": [
-      "playful",
+      "eerie",
       "mysterious"
     ]
   },
@@ -296,43 +300,19 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "heroic"
     ]
   },
   {
     "title": "Darkness (Radiance Layer)",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Elder Court (Radiance Layer)",
-    "plays": null,
-    "moods": [
-      "transcendent",
-      "peaceful"
-    ]
-  },
-  {
-    "title": "Solar Control Tower (Radiance Layer)",
-    "plays": null,
-    "moods": [
-      "mysterious",
-      "powerful"
-    ]
-  },
-  {
-    "title": "Solar Control Tower On (Radiance Layer)",
-    "plays": null,
-    "moods": [
-      "powerful",
-      "heroic"
-    ]
-  },
-  {
-    "title": "Serpent Sands (Radiance Layer)",
     "plays": null,
     "moods": [
       "mysterious",
@@ -340,35 +320,59 @@
     ]
   },
   {
-    "title": "Hiss Hiss Oasis (Radiance Layer)",
+    "title": "Solar Control Tower (Radiance Layer)",
+    "plays": null,
+    "moods": [
+      "intense",
+      "epic"
+    ]
+  },
+  {
+    "title": "Solar Control Tower On (Radiance Layer)",
+    "plays": null,
+    "moods": [
+      "epic",
+      "intense"
+    ]
+  },
+  {
+    "title": "Serpent Sands (Radiance Layer)",
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "peaceful"
+    ]
+  },
+  {
+    "title": "Hiss Hiss Oasis (Radiance Layer)",
+    "plays": null,
+    "moods": [
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Shade Clouds (Radiance Layer)",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Crystal-Cobra Den (Radiance Layer)",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Jail Hall (Groove Layer)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "mysterious",
+      "laid-back"
     ]
   },
   {
@@ -383,8 +387,8 @@
     "title": "Inside the Great Harmoneel",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "transcendent",
+      "wonder"
     ]
   },
   {
@@ -392,15 +396,15 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "Fried Pride Plaza (Feast Layer)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -416,36 +420,38 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "joyful"
     ]
   },
   {
     "title": "Ferocious Fryhouse (Feast Layer)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Royal Oil Cruise (Feast Layer)",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "laid-back",
+      "joyful"
     ]
   },
   {
     "title": "Cat-Scratch Kitchen (Feast Layer)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "wonder"
     ]
   },
   {
     "title": "Waste-Oil Container (Feast Layer)",
     "plays": null,
     "moods": [
+      "eerie",
       "mysterious"
     ]
   },
@@ -453,15 +459,15 @@
     "title": "Forbidden Layer",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Kremling Kourtyard (Planet Core)",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -469,15 +475,16 @@
     "title": "First Half (Planet Core)",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "First Half Battle (Planet Core)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -485,7 +492,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -493,70 +500,71 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
     "title": "Second Half (Planet Core)",
     "plays": null,
     "moods": [
-      "powerful"
+      "epic",
+      "driving"
     ]
   },
   {
     "title": "Climactic Cliff (Planet Core)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Heart of Gold (Planet Core)",
     "plays": null,
     "moods": [
-      "heroic",
-      "transcendent"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Banandium Root Tower (Gangplank Galleon)",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "New Donk City",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "Sinkhole Dive",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
     "title": "Sinkhole Dive (Forbidden Layer)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "suspenseful"
     ]
   },
   {
     "title": "Sinkhole Dive (Planet Core)",
     "plays": null,
     "moods": [
-      "powerful",
-      "mysterious"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -571,7 +579,8 @@
     "title": "Kong Bananza (Instrumental)",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -579,35 +588,38 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "joyful"
     ]
   },
   {
     "title": "Zebra Bananza (Instrumental)",
     "plays": null,
     "moods": [
-      "driving"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Ostrich Bananza",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Ostrich Bananza (Instrumental)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Elephant Bananza",
     "plays": null,
     "moods": [
-      "powerful",
+      "playful",
       "joyful"
     ]
   },
@@ -615,13 +627,15 @@
     "title": "Elephant Bananza (Instrumental)",
     "plays": null,
     "moods": [
-      "powerful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Snake Bananza",
     "plays": null,
     "moods": [
+      "playful",
       "mysterious"
     ]
   },
@@ -629,6 +643,7 @@
     "title": "Snake Bananza (Instrumental)",
     "plays": null,
     "moods": [
+      "playful",
       "mysterious"
     ]
   },
@@ -636,104 +651,104 @@
     "title": "Peekabruiser Battle",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Grumpy Kong Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "Mad Mixer Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Stompenclomper Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "Poppy Kong Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "joyful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Inflammonite Battle",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Abracajabya Battle",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Void Kong Battle 1",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Void Kong Battle 2",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Sinister Blusterwing Battle 1",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Sinister Blusterwing Battle 2",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Muckety-Muck Battle",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "K. Rool, King of Rot Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -746,17 +761,14 @@
   },
   {
     "title": "Closet",
-    "plays": null,
-    "moods": [
-      "peaceful"
-    ]
+    "plays": null
   },
   {
     "title": "Challenge Course 1",
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -764,14 +776,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Challenge Course 3",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -779,30 +792,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Challenge Course 5",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "DK Island Swing (Jungle Hijinx)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Stickerbush Symphony",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -810,30 +824,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
     "title": "25m BGM",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Battle Challenge",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Battle Challenge Lobby",
     "plays": null,
     "moods": [
-      "joyful"
+      "mysterious",
+      "intense"
     ]
   },
   {
@@ -848,15 +863,16 @@
     "title": "Breaking Through (Heart of Gold)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "powerful"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Breaking Through (Heart of Gold) (Instrumental)",
     "plays": null,
     "moods": [
-      "powerful"
+      "heroic",
+      "epic"
     ]
   }
 ]

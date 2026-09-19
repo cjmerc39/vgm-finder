@@ -3,6 +3,7 @@
     "title": "Tiltle Screen",
     "plays": null,
     "moods": [
+      "playful",
       "wonder"
     ]
   },
@@ -11,39 +12,39 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "transcendent"
+      "epic"
     ]
   },
   {
     "title": "Main Menu",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Intro Stage",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "hopeful",
+      "heroic"
     ]
   },
   {
     "title": "Dark Meta Knight Attacks",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Overworld",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -66,7 +67,7 @@
     "title": "Area 2: Moonlight Mansion, Area 5: Carrot Mansion",
     "plays": null,
     "moods": [
-      "peaceful",
+      "dreamy",
       "mysterious"
     ]
   },
@@ -74,7 +75,7 @@
     "title": "Area 2: Moonlight Mansion, Area 5: Carrot Castle (Echo)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "dreamy",
       "mysterious"
     ]
   },
@@ -83,15 +84,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "wonder"
     ]
   },
   {
     "title": "Area 4: Mustard Mountain",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "playful",
+      "epic"
     ]
   },
   {
@@ -99,35 +100,11 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "laid-back"
     ]
   },
   {
     "title": "Area 7: Peppermint Place",
-    "plays": null,
-    "moods": [
-      "playful",
-      "joyful"
-    ]
-  },
-  {
-    "title": "Area 8: Radish Ruins",
-    "plays": null,
-    "moods": [
-      "mysterious",
-      "tense"
-    ]
-  },
-  {
-    "title": "Area 8: Radish Ruins (Echo)",
-    "plays": null,
-    "moods": [
-      "mysterious",
-      "tense"
-    ]
-  },
-  {
-    "title": "Area 9: Candy Costellation",
     "plays": null,
     "moods": [
       "joyful",
@@ -135,19 +112,43 @@
     ]
   },
   {
+    "title": "Area 8: Radish Ruins",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "epic"
+    ]
+  },
+  {
+    "title": "Area 8: Radish Ruins (Echo)",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "epic"
+    ]
+  },
+  {
+    "title": "Area 9: Candy Costellation",
+    "plays": null,
+    "moods": [
+      "joyful",
+      "wonder"
+    ]
+  },
+  {
     "title": "Mini-Boss Battle",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Victory Star",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -155,7 +156,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "hopeful"
     ]
   },
   {
@@ -170,8 +171,8 @@
     "title": "Boss Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -186,23 +187,23 @@
     "title": "Dark Meta Knight Battle (intro)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Dark Meta Knight Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Dark Mind's Second Form",
     "plays": null,
     "moods": [
-      "powerful",
+      "ominous",
       "eerie"
     ]
   },
@@ -210,15 +211,15 @@
     "title": "Dark Mind Takes to the Sky",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Fighting Dark Mind in the Sky",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -226,7 +227,7 @@
     "title": "Ending",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "transcendent"
     ]
   },
@@ -234,7 +235,7 @@
     "title": "Invincibility Lollipop",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "joyful"
     ]
   },
@@ -242,8 +243,8 @@
     "title": "Out of Health",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -258,7 +259,7 @@
     "title": "Kirby Wave Ride (Get Ready)",
     "plays": null,
     "moods": [
-      "playful",
+      "hopeful",
       "driving"
     ]
   },
@@ -266,24 +267,24 @@
     "title": "Kirby Wave Ride",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Kirby Wave Ride (Finish)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Crackity Hack",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "intense",
+      "playful"
     ]
   },
   {
@@ -291,20 +292,22 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "playful"
     ]
   },
   {
     "title": "You Lose",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "playful"
     ]
   },
   {
     "title": "CPU Wins!! (Speed Eaters)",
     "plays": null,
     "moods": [
+      "intense",
       "playful"
     ]
   },
@@ -312,8 +315,8 @@
     "title": "You Win",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -328,31 +331,31 @@
     "title": "You Win (Crowd)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Game Over",
     "plays": null,
     "moods": [
-      "mournful"
+      "sad"
     ]
   },
   {
     "title": "You Are the Champion",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "transcendent"
     ]
   },
   {
     "title": "Kirby Copies a Skill",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -360,7 +363,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "playful"
     ]
   },
   {
@@ -368,15 +371,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "Calling for a Ride",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "hopeful"
     ]
   },
   {

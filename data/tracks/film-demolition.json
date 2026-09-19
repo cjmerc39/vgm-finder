@@ -8,7 +8,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "tender",
-      "peaceful"
+      "romantic"
     ]
   },
   {
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "joyful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -59,8 +59,7 @@
     ],
     "song": true,
     "moods": [
-      "sad",
-      "tender"
+      "sad"
     ]
   },
   {
@@ -72,7 +71,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful"
+      "sad",
+      "hopeful"
     ]
   },
   {
@@ -109,8 +109,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "heroic"
     ]
   },
   {
@@ -129,7 +129,10 @@
     "artists": [
       "M. Ward"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Nocturne in E-flat Major, Op. 9, No. 2 (Abridged)",
@@ -173,10 +176,6 @@
     "artists": [
       "Half Moon Run"
     ],
-    "song": true,
-    "moods": [
-      "tender",
-      "peaceful"
-    ]
+    "song": true
   }
 ]

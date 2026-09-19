@@ -4,7 +4,7 @@
     "plays": null,
     "moods": [
       "wonder",
-      "joyful"
+      "hopeful"
     ]
   },
   {
@@ -12,23 +12,23 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "laid-back"
     ]
   },
   {
     "title": "Planting Crops (Farm)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Small Adventures (Farm)",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "wonder",
+      "playful"
     ]
   },
   {
@@ -44,7 +44,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "driving"
+      "playful"
     ]
   },
   {
@@ -52,30 +52,30 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "hopeful"
     ]
   },
   {
     "title": "Cozy Caravan (Farm)",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "laid-back",
+      "tender"
     ]
   },
   {
     "title": "Luma Lullaby (Farm Night)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
     "title": "Starlit Sea (Farm Night)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "dreamy",
       "transcendent"
     ]
   },
@@ -84,7 +84,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "dreamy"
     ]
   },
   {
@@ -98,8 +98,8 @@
     "title": "Building a Home (Farm)",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -107,54 +107,54 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "romantic"
     ]
   },
   {
     "title": "Quiet Afternoons (Farm)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
     "title": "Growing Seeds (Farm)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "Rainy Farm 1 (Farm)",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
     "title": "Rainy Farm 2 (Farm)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "eerie"
+      "dreamy",
+      "peaceful"
     ]
   },
   {
     "title": "Rainy Farm 3 (Farm)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "mysterious"
+      "peaceful"
     ]
   },
   {
     "title": "Abandoned Farm Cave 1 (Farm)",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -169,8 +169,8 @@
     "title": "Abandoned Farm Cave 3 (Farm)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -178,7 +178,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -186,14 +186,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Through the Town Wall (Town)",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "wonder"
     ]
   },
@@ -202,11 +202,19 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "laid-back"
     ]
   },
   {
     "title": "Cobblestones (Town)",
+    "plays": null,
+    "moods": [
+      "laid-back",
+      "peaceful"
+    ]
+  },
+  {
+    "title": "Village (Town)",
     "plays": null,
     "moods": [
       "peaceful",
@@ -214,19 +222,11 @@
     ]
   },
   {
-    "title": "Village (Town)",
-    "plays": null,
-    "moods": [
-      "joyful",
-      "peaceful"
-    ]
-  },
-  {
     "title": "Strolling (Town)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
@@ -241,8 +241,8 @@
     "title": "Warm-Lit Windows (Town Night)",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "nostalgic",
+      "tender"
     ]
   },
   {
@@ -256,22 +256,22 @@
     "title": "Rainy Town 2 (Town)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "peaceful"
     ]
   },
   {
     "title": "Rainy Town 3 (Town)",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
     "title": "After the Earthquake (Town)",
     "plays": null,
     "moods": [
-      "tense",
+      "ominous",
       "mysterious"
     ]
   },
@@ -280,14 +280,14 @@
     "plays": null,
     "moods": [
       "wonder",
-      "peaceful"
+      "mysterious"
     ]
   },
   {
     "title": "Cannon Plants (Forest)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -295,8 +295,8 @@
     "title": "Sticky Leeches (Forest)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -304,7 +304,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "wonder"
     ]
   },
   {
@@ -319,7 +319,7 @@
     "title": "Trippy Mushrooms (Forest)",
     "plays": null,
     "moods": [
-      "mysterious",
+      "dreamy",
       "playful"
     ]
   },
@@ -344,14 +344,14 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "peaceful"
+      "dreamy"
     ]
   },
   {
     "title": "Midnight Glow (Forest Night)",
     "plays": null,
     "moods": [
-      "peaceful",
+      "dreamy",
       "mysterious"
     ]
   },
@@ -366,8 +366,8 @@
     "title": "Lost Forest Cave 1 (Forest)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -382,24 +382,24 @@
     "title": "Temple Traps 1 (Forest)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Temple Traps 2 (Forest)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Temple Traps 3 (Forest)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -407,7 +407,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -415,14 +415,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "intense"
     ]
   },
   {
     "title": "Temple Puzzles 3 (Forest)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "mysterious"
     ]
   },
@@ -430,8 +430,8 @@
     "title": "Underground Grove (Forest Final Temple)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "mysterious"
+      "epic",
+      "transcendent"
     ]
   },
   {
@@ -439,30 +439,30 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Foot of the Mountain (Mountain)",
     "plays": null,
     "moods": [
-      "wonder",
-      "powerful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "Ascension (Mountain)",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Snow Boulders (Mountain)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -470,8 +470,8 @@
     "title": "Through the Cold (Mountain)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -486,16 +486,16 @@
     "title": "Crystalline Underground (Mountain Final Temple)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "powerful"
+      "epic",
+      "transcendent"
     ]
   },
   {
     "title": "Temple Traps (Mountain)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -503,7 +503,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -511,14 +511,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Sandy Shores (Jungle)",
     "plays": null,
     "moods": [
-      "joyful",
+      "laid-back",
       "wonder"
     ]
   },
@@ -527,7 +527,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -535,39 +535,39 @@
     "plays": null,
     "moods": [
       "playful",
-      "eerie"
+      "intense"
     ]
   },
   {
     "title": "Dangerous Paradise (Jungle)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Underground Sanctuary (Jungle Final Temple)",
     "plays": null,
     "moods": [
-      "transcendent",
-      "mysterious"
+      "epic",
+      "transcendent"
     ]
   },
   {
     "title": "Temple Traps 1 (Jungle)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Temple Traps 2 (Jungle)",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -575,14 +575,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Temple Puzzles 2 (Jungle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "mysterious"
     ]
   },
@@ -591,23 +591,23 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Volcano (Jungle)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Midnight Glow (Jungle Night)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
@@ -615,39 +615,38 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "mysterious"
+      "dreamy"
     ]
   },
   {
     "title": "Quirky Grouse (Jungle)",
     "plays": null,
     "moods": [
-      "playful",
-      "eerie"
+      "playful"
     ]
   },
   {
     "title": "Forbidden Jungle Cave (Jungle)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "The Gemnod",
     "plays": null,
     "moods": [
-      "powerful",
-      "mysterious"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Credits",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "nostalgic",
+      "hopeful"
     ]
   },
   {

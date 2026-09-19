@@ -8,7 +8,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "eerie"
     ]
   },
   {
@@ -47,7 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -59,8 +60,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "tense"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -72,7 +73,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious"
+      "dreamy",
+      "laid-back"
     ]
   },
   {
@@ -82,7 +84,11 @@
     "artists": [
       "Cute Is What We Aim For"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "I Can See Clearly Now (Soundtrack Version)",
@@ -93,7 +99,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
@@ -105,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "playful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -118,8 +125,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "eerie"
     ]
   },
   {
@@ -144,7 +151,7 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
+      "ominous",
       "eerie"
     ]
   },
@@ -155,11 +162,7 @@
     "artists": [
       "The Sword"
     ],
-    "song": true,
-    "moods": [
-      "transcendent",
-      "mysterious"
-    ]
+    "song": true
   },
   {
     "title": "Little Lover's So Polite (From the Jennifer's Body Soundtrack)",
@@ -171,7 +174,7 @@
     "song": true,
     "moods": [
       "tender",
-      "playful"
+      "romantic"
     ]
   },
   {
@@ -184,7 +187,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   }
 ]

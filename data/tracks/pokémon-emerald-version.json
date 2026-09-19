@@ -3,30 +3,31 @@
     "title": "Opening Movie: Setting out on a Journey in the Hoenn Region",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
     "title": "Opening Movie: Double Battles",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Title Screen: Main Theme",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Introductions",
     "plays": null,
     "moods": [
+      "mysterious",
       "playful"
     ]
   },
@@ -42,7 +43,6 @@
     "title": "Birch Pokémon Lab",
     "plays": null,
     "moods": [
-      "tender",
       "peaceful"
     ]
   },
@@ -50,22 +50,21 @@
     "title": "May",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "H-Help Me!",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Battle! (Wild Pokémon)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -80,8 +79,8 @@
     "title": "Route 101",
     "plays": null,
     "moods": [
-      "peaceful",
-      "playful"
+      "hopeful",
+      "peaceful"
     ]
   },
   {
@@ -89,7 +88,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -125,8 +124,8 @@
     "title": "Battle! (Trainer Battle)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -149,7 +148,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -163,8 +162,8 @@
     "title": "Route 104",
     "plays": null,
     "moods": [
-      "peaceful",
-      "playful"
+      "hopeful",
+      "peaceful"
     ]
   },
   {
@@ -172,57 +171,63 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "eerie"
     ]
   },
   {
     "title": "Team Magma Appears!",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Battle! (Team Aqua ~ Team Magma)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Victory! (Team Aqua ~ Team Magma)",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Rustboro City",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Trainers' School",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "peaceful"
+    ]
   },
   {
     "title": "Crossing the Sea",
     "plays": null,
     "moods": [
       "wonder",
-      "peaceful"
+      "dreamy"
     ]
   },
   {
     "title": "Dewford Town",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "mysterious"
     ]
   },
   {
@@ -237,7 +242,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -252,23 +257,24 @@
     "title": "Route 110",
     "plays": null,
     "moods": [
-      "peaceful",
-      "playful"
+      "hopeful",
+      "driving"
     ]
   },
   {
     "title": "Cycling",
     "plays": null,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "joyful"
     ]
   },
   {
     "title": "Game Corner",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -304,15 +310,16 @@
     "title": "Verdanturf Town",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Route 113",
     "plays": null,
     "moods": [
-      "peaceful",
-      "mysterious"
+      "mysterious",
+      "dreamy"
     ]
   },
   {
@@ -333,16 +340,16 @@
     "title": "Cable Car",
     "plays": null,
     "moods": [
-      "mysterious",
-      "peaceful"
+      "wonder",
+      "dreamy"
     ]
   },
   {
     "title": "Mt. Chimney",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -356,6 +363,7 @@
     "title": "Route 111",
     "plays": null,
     "moods": [
+      "hopeful",
       "peaceful"
     ]
   },
@@ -363,24 +371,23 @@
     "title": "Pokémon Gym",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "peaceful"
     ]
   },
   {
     "title": "Battle! (Gym Leader)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Victory! (Gym Leader)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -410,24 +417,24 @@
     "title": "Route 119",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "hopeful",
+      "driving"
     ]
   },
   {
     "title": "Fortree City",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "wonder",
+      "peaceful"
     ]
   },
   {
     "title": "Route 120",
     "plays": null,
     "moods": [
-      "peaceful",
-      "mysterious"
+      "hopeful",
+      "dreamy"
     ]
   },
   {
@@ -457,7 +464,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -480,23 +487,23 @@
     "plays": null,
     "moods": [
       "playful",
-      "tender"
+      "nostalgic"
     ]
   },
   {
     "title": "Battle! (Brendan~May)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Evolution",
     "plays": null,
     "moods": [
-      "transcendent",
-      "joyful"
+      "wonder",
+      "transcendent"
     ]
   },
   {
@@ -511,7 +518,8 @@
     "title": "Poké Mart",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
@@ -526,7 +534,7 @@
     "title": "Trainers' Eyes Meet (Psychic)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
@@ -541,16 +549,16 @@
     "title": "Mt. Pyre Exterior",
     "plays": null,
     "moods": [
-      "eerie",
-      "peaceful"
+      "mysterious",
+      "ominous"
     ]
   },
   {
     "title": "Hideout",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -564,48 +572,48 @@
     "title": "Team Aqua Appears!",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Battle! (Team Aqua~Team Magma Leaders)",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "The Super-Ancient Pokémon Awaken!",
     "plays": null,
     "moods": [
-      "powerful",
-      "transcendent"
+      "epic",
+      "ominous"
     ]
   },
   {
     "title": "Drought",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Heavy Rain",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Dive",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "mysterious",
+      "dreamy"
     ]
   },
   {
@@ -613,7 +621,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -621,22 +629,22 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Battle! (Super-Ancient Pokémon)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Trainers’ Eyes Meet (Swimmer♀)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
@@ -644,7 +652,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "peaceful"
+      "hopeful"
     ]
   },
   {
@@ -659,7 +667,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -681,8 +689,8 @@
     "title": "Contest Winner",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -697,8 +705,8 @@
     "title": "Battle! (Regirock~Regice~Registeel)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -721,15 +729,15 @@
     "title": "Battle Tower",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Victory Road",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -737,23 +745,23 @@
     "title": "Trainers’ Eyes Meet (Cooltrainer)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "The Elite Four Appear!",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "ominous"
     ]
   },
   {
     "title": "Battle! (Elite Four)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -761,23 +769,23 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Battle! (Steven)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Victory! (Steven)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -785,7 +793,7 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "peaceful"
+      "joyful"
     ]
   },
   {
@@ -793,23 +801,22 @@
     "plays": null,
     "moods": [
       "joyful",
-      "heroic"
+      "hopeful"
     ]
   },
   {
     "title": "Ending Theme",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
     "title": "The End",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "peaceful"
     ]
   },
   {
@@ -820,55 +827,53 @@
     "title": "Abnormal Weather",
     "plays": null,
     "moods": [
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "A Visit from Rayquaza!",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "epic",
+      "mysterious"
     ]
   },
   {
     "title": "Battle Frontier (Hoenn)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Battle Tower (Hoenn)",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Battle Factory (Hoenn)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Battle Arena",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Battle Dome",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -876,15 +881,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Battle Palace",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -892,34 +896,19 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "suspenseful"
     ]
   },
   {
     "title": "Battle Pyramid Summit",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Received BP! (Hoenn)",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
-  },
-  {
-    "title": "Battle! Frontier Brain (Hoenn)",
-    "plays": null,
-    "moods": [
-      "powerful",
-      "heroic"
-    ]
-  },
-  {
-    "title": "Received Battle Symbol!",
     "plays": null,
     "moods": [
       "joyful",
@@ -927,10 +916,26 @@
     ]
   },
   {
+    "title": "Battle! Frontier Brain (Hoenn)",
+    "plays": null,
+    "moods": [
+      "intense",
+      "epic"
+    ]
+  },
+  {
+    "title": "Received Battle Symbol!",
+    "plays": null,
+    "moods": [
+      "heroic",
+      "joyful"
+    ]
+  },
+  {
     "title": "Battle! Mew",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "mysterious"
     ]
   },

@@ -15,7 +15,7 @@
     "title": "Intro Movie",
     "plays": null,
     "moods": [
-      "joyful",
+      "heroic",
       "driving"
     ]
   },
@@ -23,15 +23,15 @@
     "title": "Title, Loading",
     "plays": null,
     "moods": [
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Main Menu",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -51,7 +51,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "heroic"
     ]
   },
   {
@@ -59,21 +59,21 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "heroic"
     ]
   },
   {
     "title": "Eliminated!",
     "plays": null,
     "moods": [
-      "tense"
+      "sad"
     ]
   },
   {
     "title": "To the Next Round",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "driving"
     ]
   },
@@ -81,51 +81,60 @@
     "title": "End of Championship",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Game Credits (JP, US)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Game Credits (EU)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Game Credits (Looping)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "The Vice Selected (JP, US)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Vice Selected (EU)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Vice",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Thunder Island",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -134,7 +143,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -142,62 +151,62 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "The Lava Pit",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "The Wastelands Selected (JP, US)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "The Wastelands Selected (EU)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "The Wastelands",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Classic- Crater Field Selected (JP, US)",
     "plays": null,
     "moods": [
-      "driving",
-      "heroic"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Classic- Crater Field Selected (EU)",
     "plays": null,
     "moods": [
-      "driving",
-      "heroic"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Classic- Crater Field Intro",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -206,7 +215,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "intense"
     ]
   },
   {
@@ -214,7 +223,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "intense"
     ]
   },
   {
@@ -222,7 +231,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "intense"
     ]
   },
   {
@@ -230,7 +239,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "intense"
     ]
   },
   {
@@ -238,7 +247,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "intense"
     ]
   },
   {
@@ -246,15 +255,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "intense"
     ]
   },
   {
     "title": "Crystal Canyon",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "wonder",
+      "mysterious"
     ]
   },
   {
@@ -269,7 +278,7 @@
     "title": "Stormship Stadium",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -277,31 +286,28 @@
     "title": "Galactic Stadium",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Pause Menu",
-    "plays": null,
-    "moods": [
-      "peaceful"
-    ]
+    "plays": null
   },
   {
     "title": "Megastrike (Arranged)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Starman",
     "plays": null,
     "moods": [
-      "powerful",
-      "joyful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -309,7 +315,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "joyful"
     ]
   },
   {
@@ -317,15 +323,15 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "joyful"
     ]
   },
   {
     "title": "Suddendeath",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -333,7 +339,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -341,15 +347,15 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Megastrike (Mario)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -437,7 +443,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "driving"
+      "epic"
     ]
   },
   {
@@ -445,7 +451,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -453,15 +459,15 @@
     "plays": null,
     "moods": [
       "romantic",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Megastrike (Peach)",
     "plays": null,
     "moods": [
-      "powerful",
-      "romantic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -525,7 +531,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "tender"
+      "playful"
     ]
   },
   {
@@ -533,7 +539,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "tender"
+      "playful"
     ]
   },
   {
@@ -549,7 +555,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "driving"
+      "epic"
     ]
   },
   {
@@ -557,45 +563,47 @@
     "plays": null,
     "moods": [
       "romantic",
-      "joyful"
+      "tender"
     ]
   },
   {
     "title": "Peach’s Theme #2 (Arranged)",
     "plays": null,
     "moods": [
-      "tender",
-      "joyful"
+      "romantic",
+      "tender"
     ]
   },
   {
     "title": "Peach Loses #1 (Arranged)",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "playful"
     ]
   },
   {
     "title": "Peach Loses #2 (Arranged)",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "playful"
     ]
   },
   {
     "title": "DK’s Entrance",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "playful"
     ]
   },
   {
     "title": "Megastrike (DK)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -610,56 +618,49 @@
     "title": "DK Scores #2",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "DK Scores #3",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "DK Scores #4",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "DK Scores #5",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "DK Scores #6",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "DK Scores #7",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "DK Scores #8",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -680,8 +681,8 @@
     "title": "DK Wins",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -696,15 +697,15 @@
     "title": "DK’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "playful",
-      "powerful"
+      "heroic",
+      "playful"
     ]
   },
   {
     "title": "Waluigi’s Entrance",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -712,64 +713,57 @@
     "title": "Megastrike (Waluigi)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Waluigi Scores #1",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Waluigi Scores #2",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Waluigi Scores #3",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Waluigi Scores #4",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Waluigi Scores #5",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Waluigi Scores #6",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Waluigi Scores #7",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -790,8 +784,8 @@
     "title": "Waluigi Wins",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -806,14 +800,15 @@
     "title": "Waluigi’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Luigi’s Entrance",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -821,48 +816,43 @@
     "title": "Megastrike (Luigi)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Luigi Scores #1",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Luigi Scores #2",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Luigi Scores #3",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Luigi Scores #4",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Luigi Scores #5",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -883,8 +873,8 @@
     "title": "Luigi Wins",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -899,72 +889,65 @@
     "title": "Luigi’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "playful"
+      "heroic"
     ]
   },
   {
     "title": "Wario’s Entrance",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Megastrike (Wario)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Wario Scores #1",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Wario Scores #2",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Wario Scores #3",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Wario Scores #4",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Wario Scores #5",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Wario Scores #6",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -985,8 +968,8 @@
     "title": "Wario Wins",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -1001,56 +984,53 @@
     "title": "Wario’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "playful",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Wario’s Losing Theme (Arranged)",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
     "title": "Bowser’s Entrance",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Megastrike (Bowser)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Bowser Scores #1",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Bowser Scores #2",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Bowser Scores #3",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -1071,8 +1051,8 @@
     "title": "Bowser Wins",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -1095,16 +1075,16 @@
     "title": "Bowser’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "intense"
     ]
   },
   {
     "title": "Bowser’s Losing Theme (Arranged)",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -1112,55 +1092,50 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "wonder"
     ]
   },
   {
     "title": "Megastrike (Yoshi)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Yoshi Scores #1",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Yoshi Scores #2",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Yoshi Scores #3",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Yoshi Scores #4",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Yoshi Scores #5",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -1181,8 +1156,8 @@
     "title": "Yoshi Wins",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -1198,15 +1173,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "tender"
+      "wonder"
     ]
   },
   {
     "title": "Yoshi’s Losing Theme (Arranged)",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "nostalgic"
     ]
   },
   {
@@ -1214,15 +1189,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "Megastrike (Daisy)",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -1285,7 +1260,6 @@
     "title": "Daisy Wins",
     "plays": null,
     "moods": [
-      "joyful",
       "heroic"
     ]
   },
@@ -1301,24 +1275,24 @@
     "title": "Daisy’s Theme",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Bowser Jr.’s Entrance",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Megastrike (Bowser Jr.)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -1353,8 +1327,8 @@
     "title": "Bowser Jr. Wins",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "intense"
     ]
   },
   {
@@ -1362,7 +1336,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -1370,22 +1344,23 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "intense"
     ]
   },
   {
     "title": "Bowser Jr.’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "powerful",
-      "playful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Bowser Jr.’s Losing Theme (Arranged)",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -1393,14 +1368,14 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "Megastrike (Diddy)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -1436,38 +1411,39 @@
     "title": "Diddy Wins",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Diddy’s Crowd Song",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
     "title": "Diddy Kong’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Diddy Kong’s Losing Theme (Arranged)",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "playful"
     ]
   },
   {
     "title": "Petey Piranha’s Entrance",
     "plays": null,
     "moods": [
-      "eerie",
+      "ominous",
       "mysterious"
     ]
   },
@@ -1475,8 +1451,8 @@
     "title": "Megastrike (Petey Piranha)",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -1511,8 +1487,8 @@
     "title": "Petey Piranha Wins",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "intense"
     ]
   },
   {
@@ -1520,7 +1496,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -1528,15 +1504,15 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "intense"
     ]
   },
   {
     "title": "Petey Piranha’s Theme (Arranged)",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -1634,7 +1610,8 @@
     "title": "Dry Bones Theme (Arranged)",
     "plays": null,
     "moods": [
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -1726,7 +1703,7 @@
     "title": "Hammer Bros. Theme (Arranged)",
     "plays": null,
     "moods": [
-      "powerful"
+      "intense"
     ]
   },
   {

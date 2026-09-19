@@ -7,63 +7,63 @@
     "title": "The Subway",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Street",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Bank",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Rooftop",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Balcony",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "The Bridge",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Soul Chamber",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "The Church",
     "plays": null,
     "moods": [
-      "mournful",
+      "ominous",
       "eerie"
     ]
   },
@@ -71,7 +71,7 @@
     "title": "The Graveyard",
     "plays": null,
     "moods": [
-      "mournful",
+      "ominous",
       "eerie"
     ]
   },
@@ -79,16 +79,16 @@
     "title": "Lost Bridge",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Kombat Tomb",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -96,23 +96,23 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Kahn's Arena",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "The Tower",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -127,8 +127,8 @@
     "title": "The Portal",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "mysterious",
+      "ominous"
     ]
   },
   {
@@ -136,15 +136,15 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "ominous"
     ]
   },
   {
     "title": "Animality",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -174,27 +174,31 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Character Selection Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "intense",
+      "mysterious"
+    ]
   },
   {
     "title": "Title Screen",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "ominous"
     ]
   },
   {
     "title": "Victory",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
@@ -205,8 +209,8 @@
     "title": "Fatality",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {

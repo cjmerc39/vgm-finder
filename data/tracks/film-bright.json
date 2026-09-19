@@ -10,7 +10,7 @@
     "song": true,
     "moods": [
       "sad",
-      "powerful"
+      "nostalgic"
     ]
   },
   {
@@ -22,8 +22,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -37,8 +37,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "tender"
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -51,8 +51,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -79,7 +79,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -92,7 +92,10 @@
       "YG",
       "Snoop Dogg"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Smoke My Dope",
@@ -102,7 +105,10 @@
       "Steve Aoki",
       "Lil Uzi Vert"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "FTW (F**k The World)",
@@ -112,7 +118,10 @@
       "A$AP Rocky",
       "Tom Morello"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "intense"
+    ]
   },
   {
     "title": "Cheer Up",
@@ -124,7 +133,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "playful"
+      "hopeful"
     ]
   },
   {
@@ -134,11 +143,7 @@
     "artists": [
       "alt-J"
     ],
-    "song": true,
-    "moods": [
-      "mysterious",
-      "eerie"
-    ]
+    "song": true
   },
   {
     "title": "Campfire",
@@ -151,7 +156,7 @@
     "song": true,
     "moods": [
       "peaceful",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -163,7 +168,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "hopeful",
       "heroic"
     ]
   }

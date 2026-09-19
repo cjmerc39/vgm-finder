@@ -8,8 +8,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic",
+      "epic",
       "driving"
     ]
   },
@@ -22,8 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "mysterious"
     ]
   },
   {
@@ -35,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "tender"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -61,7 +60,7 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
+      "nostalgic",
       "romantic"
     ]
   },
@@ -75,7 +74,7 @@
     "song": true,
     "moods": [
       "driving",
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -87,7 +86,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "romantic",
       "mysterious"
     ]
   },
@@ -98,7 +97,10 @@
     "artists": [
       "Pixies"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Atmosphere",
@@ -109,7 +111,7 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
+      "eerie",
       "mysterious"
     ]
   },
@@ -123,7 +125,7 @@
     "song": true,
     "moods": [
       "nostalgic",
-      "wonder"
+      "peaceful"
     ]
   }
 ]

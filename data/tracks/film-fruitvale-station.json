@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -21,7 +21,7 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -31,7 +31,11 @@
     "artists": [
       "The Jacka & Cellski"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "mysterious"
+    ]
   },
   {
     "title": "Hey Little Mama",
@@ -42,7 +46,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -52,7 +57,10 @@
     "artists": [
       "The Mar-Keys, William Peoples, & Phillip Henderson"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Tatiana",
@@ -62,7 +70,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "tender"
+      "tender",
+      "nostalgic"
     ]
   },
   {
@@ -92,8 +101,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "tense",
-      "sad"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -102,6 +111,9 @@
     "videoId": "mvMwH9IDMNY",
     "artists": [
       "Ludwig Goransson"
+    ],
+    "moods": [
+      "driving"
     ]
   },
   {
@@ -112,8 +124,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "joyful",
-      "powerful"
+      "hopeful",
+      "heroic"
     ]
   },
   {
@@ -124,7 +136,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "joyful"
+      "romantic",
+      "nostalgic"
     ]
   },
   {
@@ -147,7 +160,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -156,6 +170,9 @@
     "videoId": "rA7vkzEd10M",
     "artists": [
       "Ludwig Goransson"
+    ],
+    "moods": [
+      "laid-back"
     ]
   },
   {
@@ -166,7 +183,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -185,8 +203,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
@@ -197,8 +215,8 @@
       "Ludwig Goransson"
     ],
     "moods": [
-      "mournful",
-      "mysterious"
+      "nostalgic",
+      "tender"
     ]
   }
 ]

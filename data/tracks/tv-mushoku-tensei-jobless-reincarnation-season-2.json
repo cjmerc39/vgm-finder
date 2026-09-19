@@ -8,7 +8,7 @@
     ],
     "moods": [
       "joyful",
-      "tender"
+      "peaceful"
     ]
   },
   {
@@ -19,8 +19,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "wonder",
+      "hopeful"
     ]
   },
   {
@@ -31,8 +31,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -44,7 +44,7 @@
     ],
     "moods": [
       "romantic",
-      "joyful"
+      "tender"
     ]
   },
   {
@@ -55,8 +55,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "tender",
-      "romantic"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -79,8 +79,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "nostalgic",
-      "tender"
+      "tender",
+      "nostalgic"
     ]
   },
   {
@@ -116,7 +116,7 @@
     ],
     "moods": [
       "mysterious",
-      "wonder"
+      "eerie"
     ]
   },
   {
@@ -126,7 +126,11 @@
     "artists": [
       "Nanahoshi (CV:Shion Wakayama)"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "hopeful",
+      "wonder"
+    ]
   },
   {
     "title": "ロキシーの優しさ - Roxy's kindness",
@@ -148,6 +152,7 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
@@ -159,7 +164,7 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
       "mysterious"
     ]
   },
@@ -171,8 +176,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "mysterious",
-      "wonder"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -183,7 +188,7 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -195,8 +200,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "hopeful",
+      "driving"
     ]
   },
   {
@@ -207,8 +212,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -219,8 +224,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -231,7 +236,7 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "mysterious",
+      "laid-back",
       "wonder"
     ]
   },
@@ -241,6 +246,10 @@
     "videoId": "IhQz7SzJWz0",
     "artists": [
       "Yoshiaki Fujisawa"
+    ],
+    "moods": [
+      "mysterious",
+      "nostalgic"
     ]
   },
   {
@@ -251,8 +260,8 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -264,7 +273,7 @@
     ],
     "moods": [
       "sad",
-      "tense"
+      "ominous"
     ]
   },
   {
@@ -275,7 +284,6 @@
       "Yoshiaki Fujisawa"
     ],
     "moods": [
-      "mournful",
       "sad"
     ]
   }

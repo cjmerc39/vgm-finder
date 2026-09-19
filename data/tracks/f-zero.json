@@ -3,9 +3,9 @@
     "title": "F-Zero Title Theme",
     "plays": null,
     "moods": [
-      "heroic",
+      "epic",
       "driving",
-      "powerful"
+      "heroic"
     ]
   },
   {
@@ -17,7 +17,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "mysterious"
+      "intense"
     ]
   },
   {
@@ -25,7 +25,8 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -33,27 +34,32 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "Records Screen",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Big Blue",
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Death Wind",
     "plays": null,
     "moods": [
-      "driving",
-      "eerie"
+      "intense",
+      "ominous",
+      "driving"
     ]
   },
   {
@@ -61,7 +67,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "peaceful"
+      "playful"
     ]
   },
   {
@@ -69,7 +75,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -77,7 +83,8 @@
     "plays": null,
     "moods": [
       "driving",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -85,7 +92,8 @@
     "plays": null,
     "moods": [
       "joyful",
-      "transcendent"
+      "hopeful",
+      "epic"
     ]
   }
 ]

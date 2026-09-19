@@ -4,7 +4,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -12,22 +12,22 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "mysterious"
+      "wonder"
     ]
   },
   {
     "title": "Volcano",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Ranger Test",
     "plays": null,
     "moods": [
-      "tense",
+      "heroic",
       "driving"
     ]
   },
@@ -43,8 +43,8 @@
     "title": "City",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "laid-back",
+      "joyful"
     ]
   },
   {
@@ -59,24 +59,24 @@
     "title": "Colosseum",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Island",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "wonder",
+      "peaceful"
     ]
   },
   {
     "title": "Jungletown",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -84,21 +84,18 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "laid-back"
     ]
   },
   {
     "title": "Fortune",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
+    "plays": null
   },
   {
     "title": "Rival",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -106,8 +103,8 @@
     "title": "Title01",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -130,7 +127,7 @@
     "title": "Cap Bridge",
     "plays": null,
     "moods": [
-      "tender",
+      "hopeful",
       "peaceful"
     ]
   },
@@ -138,8 +135,8 @@
     "title": "Gogo Capture",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -155,22 +152,23 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Capture01",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "heroic"
     ]
   },
   {
     "title": "Gogo Trumpet",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -185,8 +183,8 @@
     "title": "Mission Receive",
     "plays": null,
     "moods": [
-      "tender",
-      "peaceful"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -202,23 +200,23 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "joyful"
     ]
   },
   {
     "title": "Volcano2",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Encount",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -226,7 +224,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "peaceful"
+      "hopeful"
     ]
   },
   {
@@ -242,7 +240,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "joyful"
     ]
   },
   {
@@ -250,15 +248,15 @@
     "plays": null,
     "moods": [
       "tender",
-      "nostalgic"
+      "peaceful"
     ]
   },
   {
     "title": "Legend Capture",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -266,14 +264,14 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "hopeful"
     ]
   },
   {
     "title": "Field01",
     "plays": null,
     "moods": [
-      "joyful",
+      "peaceful",
       "wonder"
     ]
   },
@@ -281,8 +279,7 @@
     "title": "Gameover",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "sad"
     ]
   },
   {
@@ -290,7 +287,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "heroic"
+      "playful"
     ]
   },
   {
@@ -298,51 +295,27 @@
     "plays": null,
     "moods": [
       "joyful",
-      "peaceful"
+      "hopeful"
     ]
   },
   {
     "title": "Encount02",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Factory",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Jungle",
-    "plays": null,
-    "moods": [
-      "joyful",
-      "wonder"
-    ]
-  },
-  {
-    "title": "Gogodan",
-    "plays": null,
-    "moods": [
-      "playful",
-      "joyful"
-    ]
-  },
-  {
-    "title": "Submarine",
-    "plays": null,
-    "moods": [
-      "mysterious",
-      "peaceful"
-    ]
-  },
-  {
-    "title": "Mountain",
     "plays": null,
     "moods": [
       "wonder",
@@ -350,67 +323,91 @@
     ]
   },
   {
+    "title": "Gogodan",
+    "plays": null,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
+  },
+  {
+    "title": "Submarine",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
+  },
+  {
+    "title": "Mountain",
+    "plays": null,
+    "moods": [
+      "epic",
+      "wonder"
+    ]
+  },
+  {
     "title": "Town",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "laid-back",
+      "joyful"
     ]
   },
   {
     "title": "Temple",
     "plays": null,
     "moods": [
-      "transcendent",
-      "mysterious"
+      "mysterious",
+      "transcendent"
     ]
   },
   {
     "title": "Hideout",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Ranger Base",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "peaceful",
+      "hopeful"
     ]
   },
   {
     "title": "Gogoleader",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "Gogoboss",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Colocapture",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Trouble",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
@@ -418,7 +415,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "epic"
     ]
   },
   {
@@ -433,16 +430,16 @@
     "title": "Finalcapture02",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "epic",
+      "transcendent"
     ]
   },
   {
     "title": "Finalcapture03",
     "plays": null,
     "moods": [
-      "transcendent",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -457,8 +454,8 @@
     "title": "Title Arrange10",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -473,24 +470,24 @@
     "title": "Mission Bridge",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "hopeful",
+      "peaceful"
     ]
   },
   {
     "title": "Introduction",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "wonder",
+      "joyful"
     ]
   },
   {
     "title": "Levelup Fanfare",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -505,16 +502,16 @@
     "title": "Jingle02",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Solve",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -530,15 +527,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "Gogo Violin",
     "plays": null,
     "moods": [
-      "romantic",
-      "tender"
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -546,38 +543,38 @@
     "plays": null,
     "moods": [
       "joyful",
-      "heroic"
+      "playful"
     ]
   },
   {
     "title": "Panura",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "wonder",
+      "mysterious"
     ]
   },
   {
     "title": "Tension",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Gogoboss Final",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Gogo Capture2",
     "plays": null,
     "moods": [
-      "driving",
+      "playful",
       "joyful"
     ]
   },
@@ -586,7 +583,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -602,22 +599,22 @@
     "plays": null,
     "moods": [
       "playful",
-      "eerie"
+      "joyful"
     ]
   },
   {
     "title": "Sleepeuncle",
     "plays": null,
     "moods": [
-      "tender",
-      "nostalgic"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
     "title": "Staffroll",
     "plays": null,
     "moods": [
-      "joyful",
+      "nostalgic",
       "peaceful"
     ]
   },
@@ -625,16 +622,16 @@
     "title": "E_Strm",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "E10_Strm",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   }
 ]

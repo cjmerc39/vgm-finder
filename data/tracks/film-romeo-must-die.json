@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "driving",
-      "joyful"
+      "hopeful"
     ]
   },
   {
@@ -21,7 +21,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -35,7 +35,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tender"
+      "laid-back"
     ]
   },
   {
@@ -48,7 +48,7 @@
     "song": true,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -61,7 +61,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -73,8 +73,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -112,8 +112,7 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -125,8 +124,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -139,7 +138,7 @@
     "song": true,
     "moods": [
       "tender",
-      "sad"
+      "romantic"
     ]
   },
   {
@@ -151,8 +150,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -162,7 +161,11 @@
     "artists": [
       "Playa"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "dreamy",
+      "laid-back"
+    ]
   },
   {
     "title": "Pump The Brakes",
@@ -173,7 +176,7 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "playful"
     ]
   },
   {
@@ -183,11 +186,7 @@
     "artists": [
       "Chanté Moore"
     ],
-    "song": true,
-    "moods": [
-      "tense",
-      "mysterious"
-    ]
+    "song": true
   },
   {
     "title": "Revival",
@@ -198,8 +197,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "powerful"
+      "hopeful",
+      "epic"
     ]
   },
   {
@@ -211,8 +210,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "joyful"
+      "joyful",
+      "driving"
     ]
   },
   {
@@ -223,8 +222,8 @@
       "Stanley Clarke"
     ],
     "moods": [
-      "driving",
-      "playful"
+      "intense",
+      "driving"
     ]
   }
 ]

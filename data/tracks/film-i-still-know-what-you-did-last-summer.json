@@ -21,8 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "sad"
+      "sad",
+      "romantic"
     ]
   },
   {
@@ -34,6 +34,7 @@
     ],
     "song": true,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -60,7 +61,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "laid-back"
     ]
   },
   {
@@ -70,7 +71,11 @@
     "artists": [
       "Bijou Phillips"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "peaceful"
+    ]
   },
   {
     "title": "Try to Say Goodbye",
@@ -82,7 +87,7 @@
     "song": true,
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
@@ -92,7 +97,11 @@
     "artists": [
       "Grant Lee Buffalo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "mysterious"
+    ]
   },
   {
     "title": "(Do You) Wanna Ride",
@@ -116,8 +125,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -129,8 +138,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "eerie"
+      "transcendent",
+      "dreamy"
     ]
   },
   {
@@ -141,7 +150,7 @@
       "John Frizzell"
     ],
     "moods": [
-      "tense",
+      "eerie",
       "mysterious"
     ]
   }

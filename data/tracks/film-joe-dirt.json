@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "nostalgic",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -21,7 +21,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "hopeful",
       "driving"
     ]
   },
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "powerful"
+      "hopeful",
+      "heroic"
     ]
   },
   {
@@ -73,8 +73,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -86,8 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -99,8 +99,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -112,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "laid-back",
+      "dreamy"
     ]
   },
   {
@@ -123,7 +123,11 @@
     "artists": [
       "April Wine"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "epic"
+    ]
   },
   {
     "title": "Burnin' for You",
@@ -134,8 +138,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -147,7 +151,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic"
+      "romantic",
+      "joyful"
     ]
   }
 ]

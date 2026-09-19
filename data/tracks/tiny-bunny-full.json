@@ -3,7 +3,6 @@
     "title": "Main Menu",
     "plays": null,
     "moods": [
-      "mysterious",
       "wonder"
     ]
   },
@@ -11,8 +10,7 @@
     "title": "Reprieve",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "peaceful"
     ]
   },
   {
@@ -24,7 +22,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
@@ -32,15 +30,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "hopeful"
     ]
   },
   {
     "title": "Trouble",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -48,26 +46,29 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Anxiety",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Reportage",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "The Obscurity",
     "plays": null,
     "moods": [
-      "mysterious",
+      "ominous",
       "eerie"
     ]
   },
@@ -75,8 +76,7 @@
     "title": "Noise",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "eerie"
     ]
   },
   {
@@ -84,14 +84,14 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
     "title": "Countdown",
     "plays": null,
     "moods": [
-      "tense",
+      "suspenseful",
       "driving"
     ]
   },
@@ -99,8 +99,8 @@
     "title": "Master of the forest",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "mysterious",
+      "ominous"
     ]
   },
   {
@@ -123,7 +123,7 @@
     "title": "Sonata No.1 Polina",
     "plays": null,
     "moods": [
-      "transcendent",
+      "tender",
       "peaceful"
     ]
   },
@@ -131,6 +131,7 @@
     "title": "Ambient",
     "plays": null,
     "moods": [
+      "dreamy",
       "peaceful"
     ]
   },
@@ -138,16 +139,16 @@
     "title": "Beasts",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Chorus",
     "plays": null,
     "moods": [
-      "joyful",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -162,8 +163,8 @@
     "title": "FoxSong Instrumental",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "laid-back",
+      "dreamy"
     ]
   },
   {
@@ -171,15 +172,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "nostalgic"
+      "wonder"
     ]
   },
   {
     "title": "Mystic Waltz",
     "plays": null,
     "moods": [
-      "mysterious",
-      "romantic"
+      "romantic",
+      "dreamy"
     ]
   },
   {
@@ -187,51 +188,54 @@
     "plays": null,
     "moods": [
       "tender",
-      "peaceful"
+      "nostalgic"
     ]
   },
   {
     "title": "Polina's theme",
     "plays": null,
     "moods": [
-      "tender",
-      "transcendent"
+      "romantic",
+      "tender"
     ]
   },
   {
     "title": "Impression",
     "plays": null,
     "moods": [
-      "wonder",
-      "peaceful"
+      "peaceful",
+      "wonder"
     ]
   },
   {
     "title": "Katya's theme",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tender"
+      "tender",
+      "peaceful"
     ]
   },
   {
     "title": "Morning Tensions",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Talk",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Beautiful mystery",
     "plays": null,
     "moods": [
       "mysterious",
-      "romantic"
+      "wonder"
     ]
   },
   {
@@ -254,16 +258,16 @@
     "title": "This Is The End",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "ominous",
+      "sad"
     ]
   },
   {
     "title": "Cinematic Piano",
     "plays": null,
     "moods": [
-      "transcendent",
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -271,23 +275,23 @@
     "plays": null,
     "moods": [
       "sad",
-      "tender"
+      "nostalgic"
     ]
   },
   {
     "title": "Morning Tensions 2",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Weeping",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
@@ -300,19 +304,26 @@
   },
   {
     "title": "Trivial round",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Night Dance",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
     "title": "Class",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back",
+      "peaceful"
+    ]
   },
   {
     "title": "Byasha",
@@ -334,40 +345,40 @@
     "title": "FearTheMind",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Flute",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "tender",
+      "peaceful"
     ]
   },
   {
     "title": "FoxSong_Instumental+back_vocal",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
     "title": "He is near",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Imminence",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -382,16 +393,16 @@
     "title": "Morning Tensions Bad guys",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "SilentWhispering",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -399,19 +410,22 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "ominous"
     ]
   },
   {
     "title": "Teach at school",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Mistik",
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "eerie"
     ]
   },
   {
@@ -419,22 +433,22 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "tender"
     ]
   },
   {
     "title": "A loss",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "nostalgic"
     ]
   },
   {
     "title": "Buried In The Sands",
     "plays": null,
     "moods": [
-      "eerie",
+      "ominous",
       "mysterious"
     ]
   },
@@ -442,8 +456,8 @@
     "title": "Dark",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -451,7 +465,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "transcendent"
     ]
   },
   {
@@ -474,24 +488,24 @@
     "title": "Evil Alice",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Garazh_part1",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Garazh_part2",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "eerie",
+      "suspenseful"
     ]
   },
   {
@@ -499,15 +513,15 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "TremblingMind",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -515,7 +529,7 @@
     "plays": null,
     "moods": [
       "tender",
-      "peaceful"
+      "joyful"
     ]
   },
   {
@@ -530,7 +544,7 @@
     "title": "Tanets_Zverey-Symphonic_Orchestra_choir",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -538,16 +552,16 @@
     "title": "Kripota",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "ominous"
     ]
   },
   {
     "title": "Waltz",
     "plays": null,
     "moods": [
-      "playful",
-      "mysterious"
+      "romantic",
+      "dreamy"
     ]
   },
   {

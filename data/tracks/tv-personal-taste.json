@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -32,10 +32,7 @@
     "artists": [
       "SeeYa"
     ],
-    "song": true,
-    "moods": [
-      "tense"
-    ]
+    "song": true
   },
   {
     "title": "You’re my wings",
@@ -47,7 +44,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "tender"
+      "hopeful"
     ]
   },
   {
@@ -59,8 +56,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "joyful"
+      "joyful",
+      "romantic"
     ]
   },
   {
@@ -72,8 +69,8 @@
     ],
     "song": true,
     "moods": [
-      "sad",
-      "nostalgic"
+      "nostalgic",
+      "tender"
     ]
   },
   {
@@ -85,8 +82,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -99,7 +96,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
@@ -121,7 +118,11 @@
     "artists": [
       "방시혁"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   },
   {
     "title": "Creating Love Instrumental",
@@ -130,7 +131,11 @@
     "artists": [
       "JO YOUNG SOO"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "romantic"
+    ]
   },
   {
     "title": "You’re my wings Instrumental",
@@ -139,7 +144,11 @@
     "artists": [
       "LEE HYUN SEUNG"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "romantic",
+      "hopeful"
+    ]
   },
   {
     "title": "Breast Lump Instrumental",
@@ -157,7 +166,11 @@
     "artists": [
       "LEE HYUN SEUNG"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "peaceful",
+      "tender"
+    ]
   },
   {
     "title": "Nonsense Instrumental",
@@ -166,6 +179,10 @@
     "artists": [
       "LEE GWAN"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   }
 ]

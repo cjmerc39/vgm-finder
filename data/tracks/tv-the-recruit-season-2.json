@@ -7,7 +7,7 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
       "driving"
     ]
   },
@@ -19,8 +19,8 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -31,8 +31,7 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "mysterious",
-      "eerie"
+      "mysterious"
     ]
   },
   {
@@ -44,7 +43,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -55,8 +54,8 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "heroic",
-      "powerful"
+      "hopeful",
+      "driving"
     ]
   },
   {
@@ -67,8 +66,8 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -80,7 +79,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -92,7 +91,7 @@
     ],
     "moods": [
       "mysterious",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -104,7 +103,7 @@
     ],
     "moods": [
       "playful",
-      "mysterious"
+      "driving"
     ]
   },
   {
@@ -115,7 +114,8 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -126,8 +126,8 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -150,8 +150,8 @@
       "Jordan Gagne"
     ],
     "moods": [
-      "driving",
-      "tense"
+      "suspenseful",
+      "driving"
     ]
   },
   {
@@ -163,7 +163,7 @@
     ],
     "moods": [
       "sad",
-      "mournful"
+      "tender"
     ]
   },
   {
@@ -174,6 +174,7 @@
       "Jordan Gagne"
     ],
     "moods": [
+      "hopeful",
       "heroic"
     ]
   },
@@ -184,7 +185,11 @@
     "artists": [
       "Don’t Touch My Stuff"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   },
   {
     "title": "Sounds Like A You Problem (English Version)",
@@ -193,6 +198,10 @@
     "artists": [
       "Don’t Touch My Stuff"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   }
 ]

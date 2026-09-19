@@ -8,8 +8,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "heroic",
+      "romantic"
     ]
   },
   {
@@ -35,7 +36,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -61,7 +62,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -73,8 +74,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "romantic"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -87,7 +88,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "romantic"
+      "hopeful"
     ]
   },
   {
@@ -97,7 +98,10 @@
     "artists": [
       "Ralph Burns"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "It's A Wonderful World",
@@ -109,7 +113,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "peaceful"
+      "hopeful"
     ]
   },
   {
@@ -121,7 +125,7 @@
     ],
     "song": true,
     "moods": [
-      "tender",
+      "sad",
       "romantic"
     ]
   },
@@ -143,8 +147,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -154,7 +158,10 @@
     "artists": [
       "Liza Minnelli"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Blue Moon",
@@ -167,7 +174,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "tender"
+      "dreamy"
     ]
   },
   {
@@ -179,8 +186,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
@@ -194,7 +201,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "romantic"
+      "hopeful"
     ]
   },
   {
@@ -206,8 +213,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "powerful"
+      "hopeful",
+      "romantic"
     ]
   },
   {
@@ -219,8 +226,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "heroic",
+      "romantic"
     ]
   },
   {
@@ -233,7 +241,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -255,7 +263,7 @@
     "song": true,
     "moods": [
       "tender",
-      "peaceful"
+      "nostalgic"
     ]
   },
   {
@@ -267,8 +275,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "epic",
+      "joyful"
     ]
   },
   {
@@ -280,8 +289,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "heroic",
+      "romantic"
     ]
   }
 ]

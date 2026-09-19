@@ -7,8 +7,8 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -19,8 +19,8 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -55,7 +55,7 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "tender",
+      "dreamy",
       "peaceful"
     ]
   },
@@ -67,8 +67,8 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -80,7 +80,7 @@
     ],
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
@@ -103,8 +103,8 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "heroic",
-      "powerful"
+      "hopeful",
+      "epic"
     ]
   },
   {
@@ -116,7 +116,7 @@
     ],
     "moods": [
       "heroic",
-      "joyful"
+      "epic"
     ]
   },
   {
@@ -127,8 +127,8 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "mournful",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -139,8 +139,8 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -151,8 +151,8 @@
       "Harry Gregson-Williams"
     ],
     "moods": [
-      "wonder",
-      "nostalgic"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -175,11 +175,7 @@
     "artists": [
       "Alanis Morissette"
     ],
-    "song": true,
-    "moods": [
-      "joyful",
-      "playful"
-    ]
+    "song": true
   },
   {
     "title": "Winter Light",
@@ -191,7 +187,7 @@
     "song": true,
     "moods": [
       "peaceful",
-      "eerie"
+      "mysterious"
     ]
   },
   {
@@ -201,6 +197,10 @@
     "artists": [
       "Lisbeth Scott"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "tender"
+    ]
   }
 ]

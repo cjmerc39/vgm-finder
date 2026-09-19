@@ -4,28 +4,29 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Home",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
     "title": "The Truckstop",
     "plays": null,
     "moods": [
-      "mysterious"
+      "laid-back"
     ]
   },
   {
     "title": "The Outskirts",
     "plays": null,
     "moods": [
+      "mysterious",
       "driving"
     ]
   },
@@ -33,30 +34,31 @@
     "title": "Parade of Disasters",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "The Bridge",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "The Mine",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "The Junk Yard",
     "plays": null,
     "moods": [
+      "eerie",
       "mysterious"
     ]
   },
@@ -64,6 +66,7 @@
     "title": "The Trailer Park",
     "plays": null,
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
@@ -72,20 +75,22 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "The Farm",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "The Construction Site",
     "plays": null,
     "moods": [
+      "intense",
       "driving"
     ]
   },
@@ -93,15 +98,15 @@
     "title": "The Ghetto",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "The City",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -110,22 +115,22 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "hopeful"
     ]
   },
   {
     "title": "The Industrial Complex",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Air Force Base",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -133,20 +138,25 @@
     "title": "The Elementary School",
     "plays": null,
     "moods": [
-      "playful"
+      "eerie",
+      "ominous"
     ]
   },
   {
     "title": "Final Scene",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Ending",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "hopeful",
+      "peaceful"
+    ]
   },
   {
     "title": "Credits",
@@ -154,35 +164,39 @@
   },
   {
     "title": "Outro",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Stars and Stripes (Marching Band)",
     "plays": null,
     "moods": [
       "heroic",
-      "driving"
+      "epic"
     ]
   },
   {
     "title": "Map Muzak",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Fire in the Hole Club",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Bank Muzak",
     "plays": null,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -190,14 +204,14 @@
     "title": "Police Station Muzak",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "laid-back"
     ]
   },
   {
     "title": "Restaurant Muzak",
     "plays": null,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -206,29 +220,29 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "ominous"
     ]
   },
   {
     "title": "Mall Muzak 1",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Mall Muzak 2",
     "plays": null,
     "moods": [
-      "peaceful",
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "Arcade Muzak",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -236,15 +250,15 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "romantic"
+      "peaceful"
     ]
   },
   {
     "title": "Church Organ (Fanatic Reprise)",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -257,13 +271,17 @@
   },
   {
     "title": "Unused Parade Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "epic",
+      "heroic"
+    ]
   },
   {
     "title": "Holy Defecation (Easter Boss)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "eerie"
     ]
   },
@@ -271,6 +289,7 @@
     "title": "Clinic Muzak 1",
     "plays": null,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -278,14 +297,14 @@
     "title": "Clinic Muzak 2",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Uncle Dave (Heavy Metal)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -301,15 +320,15 @@
     "title": "Violence",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Habib's Lucky Ganesh All-American Market",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back",
+      "joyful"
     ]
   }
 ]

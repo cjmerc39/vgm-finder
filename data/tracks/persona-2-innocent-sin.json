@@ -3,22 +3,23 @@
     "title": "Opening",
     "plays": null,
     "moods": [
-      "wonder",
-      "mysterious"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
     "title": "Tension",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Seven Sisters High School A",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
@@ -33,7 +34,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -62,29 +63,32 @@
     "title": "Boss Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Philemon Theme",
     "plays": null,
     "moods": [
-      "transcendent",
-      "mysterious"
+      "mysterious",
+      "transcendent"
     ]
   },
   {
     "title": "Premonition",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Kurosu Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Eikichi Theme (Sad)",
@@ -98,78 +102,96 @@
     "title": "MAP Sumaru City",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Ramen Shiraishi",
     "plays": null,
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
   {
     "title": "Kuzunoha Detective Office",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Satomi Tadashi ~ Hirasaka Shop",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Tominaga Chiropractic",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Evil Moves",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Seven Sisters High School B",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Ginko Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Maya Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "romantic",
+      "tender"
+    ]
   },
   {
     "title": "Main Theme B",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "joyful"
+      "hopeful",
+      "heroic"
     ]
   },
   {
     "title": "Yukino Theme",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "Gatten Sushi",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "PEACE DINER",
     "plays": null,
     "moods": [
-      "peaceful",
+      "laid-back",
       "joyful"
     ]
   },
@@ -177,14 +199,15 @@
     "title": "Sumaru Gypsy",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "dreamy"
     ]
   },
   {
     "title": "Satomi Tadashi ~ Yumezaki Shop",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
@@ -202,31 +225,30 @@
     "title": "Kasugayama High School",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Bomb Shelter",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Tranquility",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "peaceful"
     ]
   },
   {
     "title": "Crazy Party",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -234,15 +256,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "mysterious"
+      "laid-back"
     ]
   },
   {
     "title": "Mu Continent",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "wonder",
+      "mysterious"
     ]
   },
   {
@@ -258,14 +280,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "CD Shop ~ Giga Macho",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -280,77 +302,76 @@
     "title": "Concert Hall",
     "plays": null,
     "moods": [
-      "romantic",
-      "joyful"
+      "transcendent",
+      "wonder"
     ]
   },
   {
     "title": "Ginko Theme (Sad)",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "sad"
     ]
   },
   {
     "title": "The Four Masquerade Executives",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Time Count",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful"
     ]
   },
   {
     "title": "W.SLASH",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "ROSA-CANDIDA ~ Aoba Shop",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Satomi Tadashi ~ Aoba Shop",
     "plays": null,
     "moods": [
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "etheria",
     "plays": null,
     "moods": [
-      "transcendent",
-      "mysterious"
+      "dreamy",
+      "transcendent"
     ]
   },
   {
     "title": "Smile Hirasaka",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "foolish Boss",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "intense"
     ]
   },
   {
@@ -358,15 +379,15 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Trish's Fountain",
     "plays": null,
     "moods": [
-      "romantic",
-      "tender"
+      "tender",
+      "peaceful"
     ]
   },
   {
@@ -382,15 +403,15 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -398,7 +419,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "transcendent"
+      "dreamy"
     ]
   },
   {
@@ -414,7 +435,7 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "mysterious"
+      "wonder"
     ]
   },
   {
@@ -425,8 +446,8 @@
     "title": "Araya Shrine",
     "plays": null,
     "moods": [
-      "peaceful",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -449,8 +470,8 @@
     "title": "Satomi Tadashi ~ Konan Shop",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
@@ -465,8 +486,7 @@
     "title": "London House",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "laid-back"
     ]
   },
   {
@@ -479,16 +499,13 @@
   },
   {
     "title": "BIKINI LINE",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
+    "plays": null
   },
   {
     "title": "Toa Defense",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -496,8 +513,7 @@
     "title": "TONY'S SHOP",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -505,15 +521,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "transcendent"
+      "wonder"
     ]
   },
   {
     "title": "Mt. Katatsumuri",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "eerie",
+      "ominous"
     ]
   },
   {
@@ -521,7 +537,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -529,31 +545,30 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "tender"
     ]
   },
   {
     "title": "Caracol",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "mysterious"
     ]
   },
   {
     "title": "Shadow",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Persona",
     "plays": null,
     "moods": [
-      "powerful",
-      "transcendent"
+      "transcendent",
+      "wonder"
     ]
   },
   {
@@ -561,15 +576,15 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "romantic"
     ]
   },
   {
     "title": "Joker Theme",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -577,23 +592,23 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "wonder"
+      "eerie"
     ]
   },
   {
     "title": "Leo Shrine",
     "plays": null,
     "moods": [
-      "peaceful",
-      "mysterious"
+      "mysterious",
+      "peaceful"
     ]
   },
   {
     "title": "ROSA-CANDIDA ~ Rengedai Shop",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
@@ -608,16 +623,16 @@
     "title": "Satomi Tadashi ~ Rengedai Shop",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "laid-back",
+      "peaceful"
     ]
   },
   {
     "title": "Honmaru Park",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
@@ -639,8 +654,8 @@
     "title": "Reminiscence (Beloved)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "tender",
+      "nostalgic"
     ]
   },
   {
@@ -655,8 +670,8 @@
     "title": "Le Cleir-de-lune",
     "plays": null,
     "moods": [
-      "transcendent",
-      "romantic"
+      "dreamy",
+      "transcendent"
     ]
   },
   {
@@ -664,7 +679,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "transcendent"
+      "wonder"
     ]
   },
   {
@@ -672,15 +687,15 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "wonder"
+      "dreamy"
     ]
   },
   {
     "title": "Milky Way",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "wonder",
+      "dreamy"
     ]
   },
   {
@@ -688,22 +703,22 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Danger",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Xibalba",
     "plays": null,
     "moods": [
-      "mysterious",
+      "ominous",
       "eerie"
     ]
   },
@@ -711,40 +726,39 @@
     "title": "Kashihara",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "mysterious"
     ]
   },
   {
     "title": "Final Boss Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Maya Dies",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
     "title": "Ending Movie",
     "plays": null,
     "moods": [
-      "transcendent",
-      "peaceful"
+      "hopeful",
+      "tender"
     ]
   },
   {
     "title": "Battle Contact",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -752,31 +766,31 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "driving"
     ]
   },
   {
     "title": "Last Battalion",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "JOKER",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Persona Ondo",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   }
 ]

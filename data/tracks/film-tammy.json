@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -21,7 +21,7 @@
     ],
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
@@ -32,8 +32,8 @@
       "Michael Andrews"
     ],
     "moods": [
-      "joyful",
-      "playful"
+      "hopeful",
+      "driving"
     ]
   },
   {
@@ -56,7 +56,7 @@
     ],
     "moods": [
       "playful",
-      "joyful"
+      "nostalgic"
     ]
   },
   {
@@ -78,8 +78,7 @@
       "Michael Andrews"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -90,7 +89,7 @@
       "Michael Andrews"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
       "driving"
     ]
   },
@@ -103,7 +102,7 @@
     ],
     "moods": [
       "driving",
-      "playful"
+      "heroic"
     ]
   },
   {
@@ -114,8 +113,8 @@
       "Michael Andrews"
     ],
     "moods": [
-      "joyful",
-      "playful"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -137,7 +136,11 @@
     "artists": [
       "Possum Creek"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "epic",
+      "nostalgic"
+    ]
   },
   {
     "title": "Light This Candle Again",
@@ -147,8 +150,7 @@
       "Michael Andrews"
     ],
     "moods": [
-      "joyful",
-      "playful"
+      "hopeful"
     ]
   },
   {
@@ -159,7 +161,7 @@
       "Michael Andrews"
     ],
     "moods": [
-      "tense"
+      "intense"
     ]
   },
   {
@@ -182,8 +184,7 @@
       "Michael Andrews"
     ],
     "moods": [
-      "sad",
-      "mournful"
+      "sad"
     ]
   },
   {
@@ -195,7 +196,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -206,7 +207,8 @@
       "Michael Andrews"
     ],
     "moods": [
-      "wonder"
+      "wonder",
+      "romantic"
     ]
   }
 ]

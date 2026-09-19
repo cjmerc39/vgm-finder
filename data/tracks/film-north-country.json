@@ -7,7 +7,7 @@
       "Gustavo Santaolalla"
     ],
     "moods": [
-      "powerful",
+      "hopeful",
       "heroic"
     ]
   },
@@ -31,7 +31,10 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Werewolves of London",
@@ -40,7 +43,11 @@
     "artists": [
       "Warren Zevon"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "intense",
+      "driving"
+    ]
   },
   {
     "title": "Bette Davis Eyes",
@@ -49,7 +56,10 @@
     "artists": [
       "Kim Carnes"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "If I Said You Had a Beautiful Body (Would You Hold It Against Me)",
@@ -58,7 +68,11 @@
     "artists": [
       "The Bellamy Brothers"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back",
+      "playful"
+    ]
   },
   {
     "title": "Lay, Lady, Lay",
@@ -92,7 +106,10 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "dreamy"
+    ]
   },
   {
     "title": "Baby Don't Get Hooked On Me",
@@ -101,7 +118,10 @@
     "artists": [
       "Mac Davis"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Do Right to Me Baby (Do Unto Others)",
@@ -110,7 +130,10 @@
     "artists": [
       "Bob Dylan"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "hopeful"
+    ]
   },
   {
     "title": "Standing Up",
@@ -120,8 +143,8 @@
       "Gustavo Santaolalla"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "hopeful"
     ]
   },
   {
@@ -133,8 +156,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "hopeful"
     ]
   }
 ]

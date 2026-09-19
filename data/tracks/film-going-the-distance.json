@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "romantic"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -21,8 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "hopeful",
+      "wonder"
     ]
   },
   {
@@ -32,7 +32,11 @@
     "artists": [
       "Katie Herzig"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "In Transit",
@@ -73,7 +77,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -86,8 +90,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "romantic"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -99,8 +103,8 @@
     ],
     "song": true,
     "moods": [
-      "sad",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -112,8 +116,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -132,7 +136,11 @@
     "artists": [
       "Fanfarlo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back",
+      "nostalgic"
+    ]
   },
   {
     "title": "Here Comes a Regular",
@@ -152,7 +160,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "hopeful",
       "driving"
     ]
   },
@@ -163,7 +171,11 @@
     "artists": [
       "Gotye"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Half of Something Else (Acoustic Version)",
@@ -172,7 +184,11 @@
     "artists": [
       "The Airborne Toxic Event"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Evacuate",
@@ -183,7 +199,8 @@
     ],
     "song": true,
     "moods": [
-      "tense"
+      "suspenseful",
+      "driving"
     ]
   },
   {
@@ -208,8 +225,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "dreamy",
+      "peaceful"
     ]
   }
 ]

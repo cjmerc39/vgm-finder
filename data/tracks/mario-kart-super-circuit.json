@@ -11,8 +11,8 @@
     "title": "Title Screen (Night)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "mysterious"
+      "mysterious",
+      "laid-back"
     ]
   },
   {
@@ -26,8 +26,7 @@
     "title": "Flyover",
     "plays": null,
     "moods": [
-      "wonder",
-      "joyful"
+      "wonder"
     ]
   },
   {
@@ -35,15 +34,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Shy Guy Beach | Cheep-Cheep Island",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -51,15 +50,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Bowser Castle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -74,8 +73,8 @@
     "title": "Cheese Land",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -90,39 +89,39 @@
     "title": "Sunset Wilds",
     "plays": null,
     "moods": [
-      "driving",
-      "romantic"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
     "title": "Snow Land",
     "plays": null,
     "moods": [
-      "driving",
-      "peaceful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Ribbon Road",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Yoshi Desert",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Lakeside Park",
     "plays": null,
     "moods": [
-      "driving",
+      "laid-back",
       "peaceful"
     ]
   },
@@ -130,24 +129,24 @@
     "title": "Rainbow Road",
     "plays": null,
     "moods": [
-      "driving",
-      "transcendent"
+      "epic",
+      "driving"
     ]
   },
   {
     "title": "Rainbow Road (No Intro)",
     "plays": null,
     "moods": [
-      "driving",
-      "transcendent"
+      "epic",
+      "driving"
     ]
   },
   {
     "title": "SNES Mario Circuit",
     "plays": null,
     "moods": [
-      "driving",
-      "nostalgic"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -155,14 +154,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "nostalgic"
+      "playful"
     ]
   },
   {
     "title": "SNES Ghost Valley",
     "plays": null,
     "moods": [
-      "driving",
+      "mysterious",
       "eerie"
     ]
   },
@@ -170,48 +169,45 @@
     "title": "SNES Bowser Castle",
     "plays": null,
     "moods": [
-      "powerful",
-      "nostalgic"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "SNES Choco Island",
     "plays": null,
     "moods": [
-      "driving",
-      "nostalgic"
+      "playful"
     ]
   },
   {
     "title": "SNES Koopa Beach",
     "plays": null,
     "moods": [
-      "driving",
-      "nostalgic"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "SNES Vanilla Lake",
     "plays": null,
     "moods": [
-      "driving",
-      "nostalgic"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "SNES Rainbow Road",
     "plays": null,
     "moods": [
-      "driving",
-      "transcendent",
-      "nostalgic"
+      "epic"
     ]
   },
   {
     "title": "Starman",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "joyful"
     ]
   },
@@ -234,7 +230,7 @@
     "title": "Final Lap",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -264,31 +260,29 @@
     "title": "1st Place Results",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "joyful"
     ]
   },
   {
     "title": "2nd - 4th Place Results",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "5th - 8th Place Results",
     "plays": null,
     "moods": [
-      "playful"
+      "sad"
     ]
   },
   {
     "title": "Award Ceremony",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -324,7 +318,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -339,8 +333,7 @@
     "title": "Battle Lose",
     "plays": null,
     "moods": [
-      "sad",
-      "playful"
+      "sad"
     ]
   },
   {
@@ -384,27 +377,30 @@
     "title": "Race (Single-Pak Multiplayer)",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
     "title": "Starman (Single-Pak Multiplayer)",
     "plays": null,
     "moods": [
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Final Lap (Single-Pak Multiplayer)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "1st Place (Single-Pak Multiplayer)",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },

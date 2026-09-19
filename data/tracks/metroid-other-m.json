@@ -8,7 +8,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -19,14 +19,15 @@
     "title": "Cutscene - Prologue ~ A Dream (Arranged)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "sad",
+      "nostalgic"
     ]
   },
   {
     "title": "Training Chamber",
     "plays": null,
     "moods": [
+      "intense",
       "driving"
     ]
   },
@@ -34,8 +35,8 @@
     "title": "VS. Minor Enemy",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -43,22 +44,23 @@
     "plays": null,
     "moods": [
       "tender",
-      "mournful"
+      "sad"
     ]
   },
   {
     "title": "Cutscene - Hanger Bay Touchdown",
     "plays": null,
     "moods": [
-      "driving"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Cutscene - Galactic Federation Presence",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
@@ -69,8 +71,8 @@
     "title": "Cutscene - The 07th Platoon",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "heroic",
+      "driving"
     ]
   },
   {
@@ -81,27 +83,32 @@
     "title": "VS. Brug Mass",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Cutscene - Cooperation",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "hopeful",
+      "tender"
+    ]
   },
   {
     "title": "Cutscene - Lady (Arranged)",
     "plays": null,
     "moods": [
-      "tender",
-      "nostalgic"
+      "romantic",
+      "tender"
     ]
   },
   {
     "title": "Cutscene - Briefing",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
@@ -109,38 +116,39 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "laid-back"
     ]
   },
   {
     "title": "Cutscene - Main Elevator",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
     "title": "Navigation Room",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "peaceful"
     ]
   },
   {
     "title": "Environment Sound (Tension)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "VS. Ghalmanian, Asborian, Kyratian",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -148,19 +156,11 @@
     "plays": null,
     "moods": [
       "wonder",
-      "mysterious"
+      "dreamy"
     ]
   },
   {
     "title": "Sector 1 (Biosphere) Specimen Observation Area",
-    "plays": null,
-    "moods": [
-      "mysterious",
-      "eerie"
-    ]
-  },
-  {
-    "title": "Cutscene - Dark Intelligence",
     "plays": null,
     "moods": [
       "eerie",
@@ -168,10 +168,19 @@
     ]
   },
   {
+    "title": "Cutscene - Dark Intelligence",
+    "plays": null,
+    "moods": [
+      "ominous",
+      "eerie"
+    ]
+  },
+  {
     "title": "Cutscene - Little Birdie",
     "plays": null,
     "moods": [
-      "tender"
+      "tender",
+      "dreamy"
     ]
   },
   {
@@ -179,30 +188,30 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Event - Sudden Enemy Attack!",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "VS. Reo, Nightmare 2",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "VS. Fune & Namihe",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -218,82 +227,87 @@
     "title": "VS. King Kihunter",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Cutscene - Disgusting Beast",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "VS. Groganch, Vorash Chase",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Sector 1 (Biosphere) Biosphere Test Area",
     "plays": null,
     "moods": [
+      "suspenseful",
       "mysterious"
     ]
   },
   {
     "title": "Cutscene - Training Grounds",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "peaceful"
+    ]
   },
   {
     "title": "Environment Sound (Horror)",
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "Cutscene - Cyborg",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Cutscene - Bioweapons Project ~ Environment Sound (Intrigue)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
     "title": "Cutscene - Mystery Creature Attack",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "VS. Mystery Creature",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Cutscene - Anthony's Cover Fire",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -301,8 +315,8 @@
     "title": "Cutscene - Lyle ~ Green Blood",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "ominous",
+      "sad"
     ]
   },
   {
@@ -310,30 +324,30 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "eerie"
     ]
   },
   {
     "title": "Cutscene - The Trail to Sector 3",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
     "title": "Sector 3 (Pyrosphere) Lava Lake Area",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "VS. Space Pirates",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -341,52 +355,36 @@
     "title": "Desperate Situation",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "VS. Goyagma, Nightmare 1",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Sector 2 (Cryosphere) Frozen Research Facility",
     "plays": null,
     "moods": [
-      "eerie",
-      "peaceful"
+      "peaceful",
+      "mysterious"
     ]
   },
   {
     "title": "Cutscene - A Disturbing Discovery",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Sector 2 (Cryosphere) Experiment Floor",
-    "plays": null,
-    "moods": [
-      "eerie",
-      "mysterious"
-    ]
-  },
-  {
-    "title": "Cutscene - Maurice",
-    "plays": null,
-    "moods": [
-      "sad",
-      "mournful"
-    ]
-  },
-  {
-    "title": "Cutscene - Mysterious Figure",
     "plays": null,
     "moods": [
       "mysterious",
@@ -394,42 +392,59 @@
     ]
   },
   {
+    "title": "Cutscene - Maurice",
+    "plays": null,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
+  },
+  {
+    "title": "Cutscene - Mysterious Figure",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "suspenseful"
+    ]
+  },
+  {
     "title": "Warehouse Pursuit",
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "VS. RB176 Ferrocrusher",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Cutscene - RB176 Ferrocrusher Defeated",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "hopeful",
+      "heroic"
     ]
   },
   {
     "title": "Cutscene - A Traitor",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Environment Sound (Tension 2)",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -437,7 +452,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "ominous"
     ]
   },
   {
@@ -445,7 +460,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -460,94 +475,91 @@
     "title": "VS. Rhedogian",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
   {
     "title": "Cutscene - Ian (Arranged)",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
+    "plays": null
   },
   {
     "title": "Sector 3 (Pyrosphere) Industrial Area",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "VS. Vorash, Airlock Escape",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Cutscene - The Second Empty Shell",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Sector 3 (Pyrosphere) Geothermal Power Plant",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Cutscene - Arrival at the Geothermal Power Plant",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Searching for the Exit",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "eerie"
     ]
   },
   {
     "title": "Trapped in the Geothermal Power Plant",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Cutscene - Ridley (Arranged)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "VS. Ridley",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Cutscene - Ridley's Escape",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -558,15 +570,16 @@
     "title": "Cutscene - Communications Lost",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Environment Sound (Tension 3)",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "eerie"
     ]
   },
   {
@@ -579,34 +592,30 @@
   },
   {
     "title": "Cutscene - Madeline (Arranged)",
-    "plays": null,
-    "moods": [
-      "tender",
-      "nostalgic"
-    ]
+    "plays": null
   },
   {
     "title": "Cutscene - Deleter (Arranged)",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Approaching Sector Zero",
     "plays": null,
     "moods": [
-      "mysterious",
-      "wonder"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
     "title": "The Entrance to Sector Zero",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -614,22 +623,22 @@
     "plays": null,
     "moods": [
       "tender",
-      "joyful"
+      "wonder"
     ]
   },
   {
     "title": "Cutscene - Attacked from Behind (Arranged)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "Cutscene - Adam (Arranged)",
     "plays": null,
     "moods": [
-      "mysterious",
+      "sad",
       "tender"
     ]
   },
@@ -637,15 +646,15 @@
     "title": "Final Mission Resolved",
     "plays": null,
     "moods": [
-      "heroic",
-      "transcendent"
+      "hopeful",
+      "epic"
     ]
   },
   {
     "title": "Sector Zero",
     "plays": null,
     "moods": [
-      "mysterious",
+      "ominous",
       "eerie"
     ]
   },
@@ -661,39 +670,39 @@
     "title": "Cutscene - Ridley's Remains",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "sad",
+      "mysterious"
     ]
   },
   {
     "title": "VS. Queen Metroid 1, Phantoon",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Cutscene - Desperate Struggle",
     "plays": null,
     "moods": [
-      "tense",
-      "mournful"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "VS. Queen Metroid 2",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Cutscene - Confrontation with Melissa (Arranged)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "mysterious"
     ]
   },
@@ -701,8 +710,8 @@
     "title": "VS. Desbrachian",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -714,22 +723,26 @@
   },
   {
     "title": "Cutscene - Ending (Arranged)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "epic",
+      "heroic"
+    ]
   },
   {
     "title": "Cutscene - Epilogue (Arranged)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "hopeful",
+      "nostalgic"
     ]
   },
   {
     "title": "Staff Roll",
     "plays": null,
     "moods": [
-      "joyful",
-      "transcendent"
+      "heroic",
+      "hopeful"
     ]
   },
   {
@@ -744,8 +757,8 @@
     "title": "Escape",
     "plays": null,
     "moods": [
-      "driving",
-      "heroic"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -759,7 +772,7 @@
     "title": "Title (Alternate) ~ Piano Medley",
     "plays": null,
     "moods": [
-      "nostalgic",
+      "dreamy",
       "peaceful"
     ]
   },
@@ -768,21 +781,21 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "joyful"
     ]
   },
   {
     "title": "Item Upgrade Fanfare",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Small Item Collect",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -795,24 +808,18 @@
   },
   {
     "title": "Death",
-    "plays": null,
-    "moods": [
-      "sad"
-    ]
+    "plays": null
   },
   {
     "title": "Unused Cutscene 1 ~ James",
-    "plays": null,
-    "moods": [
-      "tender"
-    ]
+    "plays": null
   },
   {
     "title": "Cutscene - Desperate Struggle (Unused Version)",
     "plays": null,
     "moods": [
-      "tense",
-      "mournful"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -820,7 +827,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -834,6 +841,7 @@
     "title": "Environment Sound (Swamp)",
     "plays": null,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -841,8 +849,8 @@
     "title": "Environment Sound (Rainstorm)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "eerie"
+      "eerie",
+      "peaceful"
     ]
   },
   {
@@ -850,30 +858,30 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Green Blood (BGM Version)",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "VS. Cyborg Zebesians, Mighty Griptians, Sidehoppers",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Cutscene - Heartbeat",
     "plays": null,
     "moods": [
-      "tense",
+      "suspenseful",
       "eerie"
     ]
   }

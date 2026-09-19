@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "eerie"
+      "ominous"
     ]
   },
   {
@@ -21,7 +21,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "suspenseful",
       "driving"
     ]
   },
@@ -34,7 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -47,7 +48,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "powerful"
+      "nostalgic"
     ]
   },
   {
@@ -59,8 +60,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -72,8 +73,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "nostalgic"
     ]
   },
   {
@@ -85,7 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -97,8 +99,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -110,7 +112,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -123,7 +125,7 @@
     "song": true,
     "moods": [
       "tender",
-      "joyful"
+      "hopeful"
     ]
   },
   {
@@ -136,7 +138,7 @@
     "song": true,
     "moods": [
       "heroic",
-      "powerful"
+      "joyful"
     ]
   },
   {
@@ -148,8 +150,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -161,8 +163,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -174,6 +176,7 @@
     ],
     "song": true,
     "moods": [
+      "playful",
       "joyful"
     ]
   },
@@ -186,8 +189,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "suspenseful"
     ]
   },
   {
@@ -200,7 +203,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -213,7 +216,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "powerful"
+      "tender"
     ]
   },
   {
@@ -223,7 +226,11 @@
     "artists": [
       "Dave & Derrick"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "eerie"
+    ]
   },
   {
     "title": "Dave On Acid",
@@ -231,6 +238,10 @@
     "videoId": null,
     "artists": [
       "Trevor Rabin"
+    ],
+    "moods": [
+      "intense",
+      "eerie"
     ]
   },
   {
@@ -242,8 +253,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -254,8 +265,8 @@
       "Trevor Rabin"
     ],
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -267,8 +278,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "hopeful",
+      "epic"
     ]
   },
   {
@@ -280,7 +291,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   }

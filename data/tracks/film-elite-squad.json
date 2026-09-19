@@ -22,8 +22,8 @@
       "Robertinho Silva"
     ],
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -36,7 +36,7 @@
     ],
     "moods": [
       "mysterious",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -48,7 +48,6 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
       "heroic"
     ]
   },
@@ -63,8 +62,8 @@
       "Ney Conceição"
     ],
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -76,7 +75,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful"
+      "hopeful",
+      "romantic"
     ]
   },
   {
@@ -90,7 +90,7 @@
     ],
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
@@ -100,7 +100,10 @@
     "artists": [
       "O Rappa"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Andando Pela África",
@@ -111,7 +114,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
@@ -125,7 +129,7 @@
     ],
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -137,7 +141,7 @@
       "Cassio Duarte"
     ],
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -148,7 +152,11 @@
     "artists": [
       "Fausto Fawcett and Os Robôs Efêmeros"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "laid-back"
+    ]
   },
   {
     "title": "Rose e Xuxa",
@@ -157,6 +165,9 @@
     "artists": [
       "Pedro Bromfman",
       "Ney Conceição"
+    ],
+    "moods": [
+      "laid-back"
     ]
   },
   {
@@ -169,7 +180,7 @@
     ],
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
@@ -181,8 +192,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -192,6 +202,10 @@
     "artists": [
       "Pedro Bromfman",
       "Robertinho Silva"
+    ],
+    "moods": [
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -203,8 +217,8 @@
       "Ney Conceição"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -217,7 +231,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   }
 ]

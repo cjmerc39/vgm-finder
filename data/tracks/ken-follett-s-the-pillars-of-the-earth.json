@@ -3,8 +3,8 @@
     "title": "The Pillars of the Earth - Main Theme",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -19,16 +19,16 @@
     "title": "Philip of Gwynedd",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "hopeful",
+      "peaceful"
     ]
   },
   {
     "title": "Bishop Waleran",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -44,15 +44,15 @@
     "plays": null,
     "moods": [
       "wonder",
-      "transcendent"
+      "epic"
     ]
   },
   {
     "title": "A cold Winter's Tale",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "eerie",
+      "sad"
     ]
   },
   {
@@ -67,8 +67,8 @@
     "title": "They say the Devil has come to Kingsbridge",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -82,8 +82,8 @@
     "title": "Subprior Remigius",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -91,21 +91,22 @@
     "plays": null,
     "moods": [
       "tender",
-      "nostalgic"
+      "hopeful"
     ]
   },
   {
     "title": "The Roads of Shiring",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "heroic"
     ]
   },
   {
     "title": "God thunders wondrously with his Voice",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "transcendent"
     ]
   },
@@ -113,22 +114,23 @@
     "title": "King Stephen and Empress Maude",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Meeting the Princess",
     "plays": null,
     "moods": [
-      "romantic"
+      "romantic",
+      "hopeful"
     ]
   },
   {
     "title": "Richard's Torment",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "sad"
     ]
   },
@@ -136,24 +138,24 @@
     "title": "William Hamleigh close on our heels",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "suspenseful",
+      "driving"
     ]
   },
   {
     "title": "The Song of Winchester",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "tender"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Father what have they done to you",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
@@ -161,31 +163,31 @@
     "plays": null,
     "moods": [
       "romantic",
-      "powerful"
+      "mysterious"
     ]
   },
   {
     "title": "Tom Builder's family",
     "plays": null,
     "moods": [
-      "tender",
-      "nostalgic"
+      "nostalgic",
+      "peaceful"
     ]
   },
   {
     "title": "Kingsbridge Cathedral shall be rebuild",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "hopeful",
+      "epic"
     ]
   },
   {
     "title": "A Man called Jack",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -200,8 +202,8 @@
     "title": "The Market",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -209,31 +211,31 @@
     "plays": null,
     "moods": [
       "nostalgic",
-      "tender"
+      "dreamy"
     ]
   },
   {
     "title": "Hell",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "He that committeth Sin (Choir)",
     "plays": null,
     "moods": [
-      "mournful",
-      "transcendent"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Bishop Waleran's Wrath",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -248,12 +250,20 @@
     "title": "Where can we go from here",
     "plays": null,
     "moods": [
-      "sad",
-      "mysterious"
+      "hopeful",
+      "tender"
     ]
   },
   {
     "title": "The Way of St. James",
+    "plays": null,
+    "moods": [
+      "epic",
+      "wonder"
+    ]
+  },
+  {
+    "title": "Foreign Miracles",
     "plays": null,
     "moods": [
       "wonder",
@@ -261,19 +271,11 @@
     ]
   },
   {
-    "title": "Foreign Miracles",
-    "plays": null,
-    "moods": [
-      "transcendent",
-      "joyful"
-    ]
-  },
-  {
     "title": "The Song of Toledo",
     "plays": null,
     "moods": [
-      "romantic",
-      "transcendent"
+      "epic",
+      "mysterious"
     ]
   },
   {
@@ -296,23 +298,24 @@
     "title": "The Trial",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Taking back Earlscastle",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "The Monk the Lady and the Bastard",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "playful"
     ]
   },
   {
@@ -320,15 +323,15 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "sad"
     ]
   },
   {
     "title": "Philip of Gwynedd (12th century version)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "transcendent"
+      "hopeful",
+      "peaceful"
     ]
   },
   {

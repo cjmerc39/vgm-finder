@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -35,7 +35,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -47,8 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -70,7 +70,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -82,8 +82,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -93,10 +93,7 @@
     "artists": [
       "Fuel"
     ],
-    "song": true,
-    "moods": [
-      "driving"
-    ]
+    "song": true
   },
   {
     "title": "A320",
@@ -107,8 +104,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -121,7 +118,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -140,11 +137,7 @@
     "artists": [
       "FuzzBubble"
     ],
-    "song": true,
-    "moods": [
-      "driving",
-      "powerful"
-    ]
+    "song": true
   },
   {
     "title": "Undercover",
@@ -163,8 +156,9 @@
       "David Arnold"
     ],
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "suspenseful",
+      "epic"
     ]
   },
   {
@@ -175,8 +169,7 @@
       "David Arnold"
     ],
     "moods": [
-      "mysterious",
-      "tense"
+      "mysterious"
     ]
   }
 ]

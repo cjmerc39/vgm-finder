@@ -8,7 +8,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -34,7 +34,7 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -44,7 +44,10 @@
     "artists": [
       "Lil Wayne"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "intense"
+    ]
   },
   {
     "title": "How Did I",
@@ -64,8 +67,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -75,7 +78,10 @@
     "artists": [
       "Mikkey"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Shorty Down",
@@ -86,8 +92,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -99,8 +104,7 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "driving"
     ]
   },
   {
@@ -112,7 +116,7 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -124,7 +128,10 @@
       "Gillie Da Kid",
       "Lac"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Think About You (Looking Through The Window)",
@@ -166,8 +173,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -212,7 +219,8 @@
     ],
     "song": true,
     "moods": [
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -233,8 +241,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense"
     ]
   }
 ]

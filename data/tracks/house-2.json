@@ -7,14 +7,15 @@
     "title": "Emergency broadcast",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Wanna watch TV?",
     "plays": null,
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
@@ -23,7 +24,7 @@
     "plays": null,
     "moods": [
       "tender",
-      "nostalgic"
+      "peaceful"
     ]
   },
   {
@@ -37,15 +38,16 @@
     "title": "Sleep",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
     "title": "Drift",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "dreamy",
+      "transcendent"
     ]
   },
   {
@@ -53,15 +55,15 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Chase",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "suspenseful",
+      "driving"
     ]
   },
   {
@@ -72,46 +74,48 @@
     "title": "Out of time",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Midnight",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Release",
     "plays": null,
     "moods": [
-      "peaceful"
+      "hopeful",
+      "transcendent"
     ]
   },
   {
     "title": "I told you it never ends",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Pain",
     "plays": null,
     "moods": [
-      "sad",
-      "powerful"
+      "intense",
+      "sad"
     ]
   },
   {
     "title": "Hopeless",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -119,14 +123,15 @@
     "plays": null,
     "moods": [
       "sad",
-      "eerie"
+      "intense"
     ]
   },
   {
     "title": "Lost girl",
     "plays": null,
     "moods": [
-      "mournful"
+      "sad",
+      "mysterious"
     ]
   },
   {
@@ -141,15 +146,16 @@
     "title": "Flute practice",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "tender"
     ]
   },
   {
     "title": "Hope",
     "plays": null,
     "moods": [
-      "joyful",
-      "tender"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -180,7 +186,7 @@
     "title": "Suzie's final episode",
     "plays": null,
     "moods": [
-      "mournful",
+      "intense",
       "sad"
     ]
   },
@@ -188,61 +194,63 @@
     "title": "A world full of nothing",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Mudworld",
     "plays": null,
     "moods": [
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Hungry",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Filthy",
     "plays": null,
     "moods": [
-      "eerie"
+      "eerie",
+      "intense"
     ]
   },
   {
     "title": "Husk",
     "plays": null,
     "moods": [
-      "eerie",
-      "mournful"
+      "sad",
+      "eerie"
     ]
   },
   {
     "title": "Empty",
     "plays": null,
     "moods": [
-      "sad",
-      "mysterious"
+      "ominous",
+      "peaceful"
     ]
   },
   {
     "title": "Signal lost",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "TV Guide",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -250,14 +258,15 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "dreamy"
     ]
   },
   {
     "title": "Shopping",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
@@ -272,12 +281,16 @@
     "title": "Tarot Tonight",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Weather Channel",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Plenty of Pets",
@@ -299,51 +312,20 @@
     "title": "Horror movie theme",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Clown Town",
     "plays": null,
     "moods": [
-      "eerie",
-      "playful"
+      "playful",
+      "eerie"
     ]
   },
   {
     "title": "Polymorph",
-    "plays": null,
-    "moods": [
-      "eerie",
-      "mysterious"
-    ]
-  },
-  {
-    "title": "Vultures",
-    "plays": null,
-    "moods": [
-      "eerie",
-      "tense"
-    ]
-  },
-  {
-    "title": "Signal found",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
-  },
-  {
-    "title": "Sea of Time",
-    "plays": null,
-    "moods": [
-      "mysterious",
-      "wonder"
-    ]
-  },
-  {
-    "title": "Cavern",
     "plays": null,
     "moods": [
       "mysterious",
@@ -351,57 +333,90 @@
     ]
   },
   {
+    "title": "Vultures",
+    "plays": null,
+    "moods": [
+      "ominous",
+      "intense"
+    ]
+  },
+  {
+    "title": "Signal found",
+    "plays": null,
+    "moods": [
+      "hopeful",
+      "wonder"
+    ]
+  },
+  {
+    "title": "Sea of Time",
+    "plays": null,
+    "moods": [
+      "transcendent",
+      "epic"
+    ]
+  },
+  {
+    "title": "Cavern",
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "wonder"
+    ]
+  },
+  {
     "title": "Maze",
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
     "title": "Temple",
     "plays": null,
     "moods": [
-      "mysterious",
-      "transcendent"
+      "epic",
+      "wonder"
     ]
   },
   {
     "title": "Father Time",
     "plays": null,
     "moods": [
-      "mysterious",
-      "powerful"
+      "ominous",
+      "mysterious"
     ]
   },
   {
     "title": "Time stop",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "End time",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Curtain call",
     "plays": null,
     "moods": [
-      "powerful",
-      "transcendent"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Déjà vu",
     "plays": null,
     "moods": [
+      "nostalgic",
       "mysterious"
     ]
   },
@@ -409,24 +424,24 @@
     "title": "Last bus",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
     "title": "Thank you",
     "plays": null,
     "moods": [
-      "tender",
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "You did this",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "sad"
     ]
   },
   {
@@ -441,8 +456,8 @@
     "title": "Season finale",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "epic",
+      "intense"
     ]
   },
   {

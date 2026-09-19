@@ -8,7 +8,7 @@
     ],
     "song": true,
     "moods": [
-      "driving",
+      "laid-back",
       "playful"
     ]
   },
@@ -21,8 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "romantic"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -47,7 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful"
+      "joyful",
+      "romantic"
     ]
   },
   {
@@ -82,7 +83,11 @@
     "artists": [
       "Modern English"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "nostalgic",
+      "peaceful"
+    ]
   },
   {
     "title": "Viva La Vogue",
@@ -118,7 +123,7 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
+      "hopeful",
       "heroic"
     ]
   }

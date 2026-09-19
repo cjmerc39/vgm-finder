@@ -12,7 +12,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -25,47 +25,45 @@
   },
   {
     "title": "Environment Sound (Silence 1)",
-    "plays": null,
-    "moods": [
-      "peaceful"
-    ]
+    "plays": null
   },
   {
     "title": "Environment Sound (Tension)",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Environment Sound (Shock)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Heading to the Huge Bio-Readings",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
     "title": "Tension before a Confrontation",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "VS. Arachnus",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -73,7 +71,7 @@
     "title": "X Invasion Detected",
     "plays": null,
     "moods": [
-      "tense",
+      "ominous",
       "eerie"
     ]
   },
@@ -81,6 +79,7 @@
     "title": "Navigation Room",
     "plays": null,
     "moods": [
+      "mysterious",
       "peaceful"
     ]
   },
@@ -88,8 +87,8 @@
     "title": "VS. Core-X, Chozo Statue Second Form",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -104,38 +103,35 @@
     "title": "Sector 2 (TRO) Tropical Area",
     "plays": null,
     "moods": [
-      "wonder",
-      "peaceful"
+      "mysterious",
+      "laid-back"
     ]
   },
   {
     "title": "VS. Zazabi, Varia Core-X",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
   {
     "title": "Environment Sound (Silence 2)",
-    "plays": null,
-    "moods": [
-      "peaceful"
-    ]
+    "plays": null
   },
   {
     "title": "Sector 4 (AQA) Water Level Control Area",
     "plays": null,
     "moods": [
       "mysterious",
-      "tender"
+      "eerie"
     ]
   },
   {
     "title": "VS. Serris, Yakuza",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -143,15 +139,15 @@
     "title": "Sector 3 (PYR) High Temperature Area",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "VS. BOX",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -159,16 +155,16 @@
     "title": "Sector 6 (NOC) Dark Area",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "ominous"
     ]
   },
   {
     "title": "SA-X Appears",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -176,7 +172,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -184,23 +180,23 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
     "title": "Sector 5 (ARC) Low Temperature Area",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Sector 3 Emergency Situation",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -208,46 +204,47 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Environment Sound (Intrigue)",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
     "title": "VS. Chozo Statue First Form",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "VS. Nightmare",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Sector 4 (AQA) Underwater Area",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "mysterious",
+      "dreamy"
     ]
   },
   {
     "title": "VS. Neo Ridley",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -255,15 +252,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "VS. SA-X",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -271,14 +268,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
     "title": "Epilogue",
     "plays": null,
     "moods": [
-      "tender",
+      "hopeful",
       "peaceful"
     ]
   },
@@ -286,16 +283,16 @@
     "title": "Ending",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "hopeful"
     ]
   },
   {
     "title": "Appearance Jingle",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -310,14 +307,15 @@
     "title": "Suit Upgrade",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Objective Complete",
     "plays": null,
     "moods": [
+      "hopeful",
       "joyful"
     ]
   },
@@ -325,23 +323,23 @@
     "title": "Metroid Fusion E3 2002 Demo Video",
     "plays": null,
     "moods": [
-      "powerful",
-      "mysterious"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "BSL Ambience",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Observation Deck",
     "plays": null,
     "moods": [
-      "peaceful",
+      "mysterious",
       "wonder"
     ]
   },
@@ -349,35 +347,35 @@
     "title": "Power Down",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
     "title": "Environment Sound (Silence 1, Alternate)",
-    "plays": null,
-    "moods": [
-      "peaceful"
-    ]
+    "plays": null
   },
   {
     "title": "Environment Sound (Tension, Alternate)",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Environment Sound (Shock, Alternate)",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Navigation Room (Alternate)",
     "plays": null,
     "moods": [
+      "mysterious",
       "peaceful"
     ]
   },
@@ -393,7 +391,7 @@
     "title": "VS. Zazabi, Varia Core-X (Alternate)",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -402,7 +400,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -410,15 +408,15 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "ominous"
     ]
   },
   {
     "title": "Sector 4 (AQA) Underwater Area (Alternate)",
     "plays": null,
     "moods": [
-      "peaceful",
-      "wonder"
+      "mysterious",
+      "dreamy"
     ]
   },
   {
@@ -426,7 +424,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "ominous"
     ]
   },
   {

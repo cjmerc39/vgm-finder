@@ -73,8 +73,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "joyful"
+      "joyful",
+      "romantic"
     ]
   },
   {
@@ -86,7 +86,7 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -99,7 +99,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -125,7 +125,7 @@
     "song": true,
     "moods": [
       "wonder",
-      "transcendent"
+      "dreamy"
     ]
   },
   {
@@ -138,7 +138,7 @@
     "song": true,
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
@@ -151,7 +151,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -163,6 +163,7 @@
     ],
     "song": true,
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
@@ -173,11 +174,7 @@
     "artists": [
       "Del Paxton"
     ],
-    "song": true,
-    "moods": [
-      "playful",
-      "driving"
-    ]
+    "song": true
   },
   {
     "title": "That Thing You Do! (Live at the Hollywood Television Showcase)",

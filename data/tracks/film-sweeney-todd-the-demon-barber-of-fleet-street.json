@@ -7,9 +7,9 @@
       "Stephen Sondheim"
     ],
     "moods": [
+      "ominous",
       "eerie",
-      "mysterious",
-      "powerful"
+      "mysterious"
     ]
   },
   {
@@ -22,8 +22,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "sad"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -49,8 +49,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "eerie"
     ]
   },
   {
@@ -63,9 +63,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving",
-      "eerie"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -89,7 +88,10 @@
       "Laura Michelle Kelly",
       "Jamie Campbell Bower"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Johanna",
@@ -128,8 +130,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -142,8 +144,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "transcendent"
     ]
   },
   {
@@ -171,7 +173,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "mysterious"
+      "tender"
     ]
   },
   {
@@ -185,9 +187,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "eerie",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -201,7 +202,8 @@
     "song": true,
     "moods": [
       "playful",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -215,8 +217,7 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "tender"
+      "romantic"
     ]
   },
   {
@@ -229,8 +230,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -243,8 +244,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "tender"
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
@@ -273,9 +274,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "sad",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   }
 ]

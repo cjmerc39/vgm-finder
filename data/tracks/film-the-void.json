@@ -21,8 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "mysterious"
     ]
   },
   {
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "eerie"
+      "eerie",
+      "suspenseful"
     ]
   },
   {
@@ -47,6 +47,7 @@
     ],
     "song": true,
     "moods": [
+      "eerie",
       "mysterious"
     ]
   },
@@ -58,8 +59,8 @@
       "Menalon"
     ],
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -70,8 +71,8 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -94,8 +95,8 @@
       "Menalon"
     ],
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -107,8 +108,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -119,7 +120,7 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
       "eerie"
     ]
   },
@@ -131,7 +132,7 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "eerie",
+      "ominous",
       "mysterious"
     ]
   },
@@ -144,8 +145,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -156,8 +157,8 @@
       "Menalon"
     ],
     "moods": [
-      "mysterious",
-      "transcendent"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -168,8 +169,8 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "eerie",
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -180,7 +181,8 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -193,7 +195,7 @@
     "song": true,
     "moods": [
       "eerie",
-      "mysterious"
+      "ominous"
     ]
   },
   {
@@ -205,8 +207,8 @@
       "Brian Wiacek"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -218,7 +220,7 @@
     ],
     "moods": [
       "eerie",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -230,8 +232,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -243,7 +245,7 @@
     ],
     "moods": [
       "eerie",
-      "tense"
+      "mysterious"
     ]
   },
   {
@@ -254,8 +256,8 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -266,8 +268,8 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "tender",
-      "peaceful"
+      "hopeful",
+      "tender"
     ]
   },
   {
@@ -280,7 +282,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "transcendent"
+      "suspenseful"
     ]
   },
   {
@@ -292,7 +294,7 @@
     ],
     "moods": [
       "eerie",
-      "mysterious"
+      "intense"
     ]
   },
   {
@@ -303,8 +305,8 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -315,6 +317,7 @@
       "Menalon"
     ],
     "moods": [
+      "suspenseful",
       "mysterious"
     ]
   },
@@ -326,7 +329,7 @@
       "Menalon"
     ],
     "moods": [
-      "eerie",
+      "ominous",
       "transcendent"
     ]
   },
@@ -339,7 +342,7 @@
     ],
     "moods": [
       "eerie",
-      "powerful"
+      "ominous"
     ]
   },
   {
@@ -351,7 +354,7 @@
     ],
     "moods": [
       "mysterious",
-      "transcendent"
+      "eerie"
     ]
   },
   {
@@ -363,7 +366,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -374,8 +377,8 @@
       "Blitz//Berlin"
     ],
     "moods": [
-      "mournful",
-      "peaceful"
+      "hopeful",
+      "epic"
     ]
   },
   {
@@ -388,10 +391,6 @@
       "Darrell Simpson",
       "Jeremy Gillespie"
     ],
-    "song": true,
-    "moods": [
-      "mysterious",
-      "transcendent"
-    ]
+    "song": true
   }
 ]

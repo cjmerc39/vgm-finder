@@ -23,8 +23,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -37,8 +37,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "powerful"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -52,7 +52,7 @@
     "song": true,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
@@ -75,7 +75,6 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
       "mysterious"
     ]
   },
@@ -88,8 +87,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -113,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "heroic"
     ]
   },
   {
@@ -127,8 +126,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "epic"
     ]
   },
   {
@@ -141,8 +140,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "eerie"
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -153,7 +152,11 @@
       "Incubus",
       "D. J. Greyboy"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "No Remorse (I Wanna Die)",
@@ -165,8 +168,8 @@
     ],
     "song": true,
     "moods": [
-      "sad",
-      "powerful"
+      "intense",
+      "sad"
     ]
   },
   {
@@ -179,8 +182,8 @@
     ],
     "song": true,
     "moods": [
-      "mysterious",
-      "eerie"
+      "dreamy",
+      "mysterious"
     ]
   }
 ]

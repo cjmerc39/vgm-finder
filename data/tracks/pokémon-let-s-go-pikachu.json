@@ -4,7 +4,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "wonder"
+      "heroic"
     ]
   },
   {
@@ -15,33 +15,39 @@
     "title": "Title Screen",
     "plays": null,
     "moods": [
-      "wonder"
+      "wonder",
+      "playful"
     ]
   },
   {
     "title": "Pallet Town Theme",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
     "title": "Professor Oak",
     "plays": null,
     "moods": [
-      "tender"
+      "tender",
+      "nostalgic"
     ]
   },
   {
     "title": "Guide",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Professor Oak's Laboratory",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "wonder"
     ]
   },
   {
@@ -55,7 +61,7 @@
     "title": "Road to Viridian City: Leaving Pallet Town",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "driving"
     ]
   },
@@ -71,28 +77,30 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "laid-back"
     ]
   },
   {
     "title": "Pokémon Healed",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
     "title": "A Trainer Appears (Boy Version)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Battle! (Trainer Battle)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -100,15 +108,16 @@
     "title": "Victory! (Trainer Battle)",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Pokédex Evaluation... You're on Your Way!",
     "plays": null,
     "moods": [
-      "joyful"
+      "hopeful",
+      "wonder"
     ]
   },
   {
@@ -116,14 +125,15 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "peaceful"
+      "dreamy"
     ]
   },
   {
     "title": "Catch! (Wild Pokémon)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -137,14 +147,16 @@
     "title": "Level Up!",
     "plays": null,
     "moods": [
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "A Trainer Appears (Girl Version)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -152,14 +164,14 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "laid-back"
     ]
   },
   {
     "title": "Pokémon Gym",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -167,8 +179,8 @@
     "title": "Battle! (Gym Leader Battle)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -176,7 +188,7 @@
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "epic"
     ]
   },
   {
@@ -184,14 +196,14 @@
     "plays": null,
     "moods": [
       "joyful",
-      "heroic"
+      "epic"
     ]
   },
   {
     "title": "Blue’s Theme",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "mysterious"
     ]
   },
@@ -199,8 +211,8 @@
     "title": "Road to Cerulean City: Leaving Mt. Moon",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "hopeful",
+      "driving"
     ]
   },
   {
@@ -223,7 +235,8 @@
     "title": "A Trainer Appears (Bad Guy Version)",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -231,15 +244,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "mournful"
+      "mysterious"
     ]
   },
   {
     "title": "Evolution",
     "plays": null,
     "moods": [
-      "transcendent",
-      "powerful"
+      "epic",
+      "transcendent"
     ]
   },
   {
@@ -247,7 +260,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "heroic"
+      "epic"
     ]
   },
   {
@@ -255,29 +268,30 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "wonder"
     ]
   },
   {
     "title": "To Bill: Leaving Cerulean City",
     "plays": null,
     "moods": [
-      "driving"
+      "hopeful",
+      "playful"
     ]
   },
   {
     "title": "Vermilion City Theme",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
     "title": "The S.S. Anne",
     "plays": null,
     "moods": [
-      "romantic",
+      "nostalgic",
       "peaceful"
     ]
   },
@@ -285,8 +299,8 @@
     "title": "Road to Lavender Town: Leaving Vermilion City",
     "plays": null,
     "moods": [
-      "driving",
-      "nostalgic"
+      "mysterious",
+      "driving"
     ]
   },
   {
@@ -294,7 +308,7 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mournful"
+      "mysterious"
     ]
   },
   {
@@ -302,15 +316,15 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "ominous"
     ]
   },
   {
     "title": "Celadon City Theme",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "peaceful",
+      "wonder"
     ]
   },
   {
@@ -318,22 +332,22 @@
     "plays": null,
     "moods": [
       "playful",
-      "driving"
+      "laid-back"
     ]
   },
   {
     "title": "Rocket Hideout",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Obtained a Key Item!",
     "plays": null,
     "moods": [
-      "joyful"
+      "epic"
     ]
   },
   {
@@ -341,14 +355,14 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "tender"
     ]
   },
   {
     "title": "The Poké Flute",
     "plays": null,
     "moods": [
-      "tender",
+      "hopeful",
       "joyful"
     ]
   },
@@ -356,8 +370,8 @@
     "title": "Battle! (Wild Pokémon)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {

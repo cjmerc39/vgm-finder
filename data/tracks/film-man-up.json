@@ -33,7 +33,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -47,7 +47,7 @@
     "song": true,
     "moods": [
       "driving",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -71,7 +71,7 @@
       "Dickon Hinchliffe"
     ],
     "moods": [
-      "tender",
+      "hopeful",
       "romantic"
     ]
   },
@@ -98,7 +98,7 @@
     "song": true,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
@@ -110,8 +110,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "romantic"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -124,7 +124,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
@@ -136,8 +136,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "romantic"
+      "laid-back",
+      "joyful"
     ]
   },
   {
@@ -149,7 +149,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -175,8 +175,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "hopeful"
     ]
   },
   {
@@ -220,7 +220,11 @@
     "artists": [
       "Ed Thomas"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "hopeful",
+      "dreamy"
+    ]
   },
   {
     "title": "The Reflex",
@@ -231,8 +235,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "epic",
+      "driving"
     ]
   },
   {
@@ -243,8 +247,8 @@
       "Dickon Hinchliffe"
     ],
     "moods": [
-      "romantic",
-      "driving"
+      "driving",
+      "romantic"
     ]
   },
   {
@@ -256,8 +260,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "driving"
     ]
   }
 ]

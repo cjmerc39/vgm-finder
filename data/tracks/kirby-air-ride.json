@@ -3,7 +3,7 @@
     "title": "Opening",
     "plays": null,
     "moods": [
-      "joyful",
+      "hopeful",
       "wonder"
     ]
   },
@@ -12,7 +12,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "peaceful"
+      "laid-back"
     ]
   },
   {
@@ -31,16 +31,16 @@
     "title": "CELESTIAL VALLEY",
     "plays": null,
     "moods": [
-      "transcendent",
-      "wonder"
+      "wonder",
+      "transcendent"
     ]
   },
   {
     "title": "SKY SANDS",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -48,15 +48,15 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "dreamy"
     ]
   },
   {
     "title": "MAGMA FLOWS",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -79,40 +79,40 @@
     "title": "CHECKER KNIGHTS",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "NEBULA BELT",
     "plays": null,
     "moods": [
-      "transcendent",
-      "wonder"
+      "wonder",
+      "dreamy"
     ]
   },
   {
     "title": "Spring Breeze",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "tender",
+      "peaceful"
     ]
   },
   {
     "title": "Forest Stage",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "peaceful",
+      "nostalgic"
     ]
   },
   {
     "title": "The Arena",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -127,8 +127,8 @@
     "title": "Revenge of Meta Knight 1",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -136,15 +136,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "Revenge of Meta Knight 2",
     "plays": null,
     "moods": [
-      "heroic",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -159,8 +159,8 @@
     "title": "Dream Land",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "dreamy",
+      "tender"
     ]
   },
   {
@@ -175,30 +175,26 @@
     "title": "Second Place or Worse",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "sad"
     ]
   },
   {
     "title": "CPU Finish",
+    "plays": null
+  },
+  {
+    "title": "Results Screen",
     "plays": null,
     "moods": [
       "playful"
     ]
   },
   {
-    "title": "Results Screen",
-    "plays": null,
-    "moods": [
-      "joyful"
-    ]
-  },
-  {
     "title": "Ending",
     "plays": null,
     "moods": [
-      "peaceful",
-      "tender"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -206,31 +202,31 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
     "title": "SAND",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "SKY",
     "plays": null,
     "moods": [
-      "transcendent",
-      "wonder"
+      "wonder",
+      "transcendent"
     ]
   },
   {
     "title": "FIRE",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -246,7 +242,7 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "tender"
+      "dreamy"
     ]
   },
   {
@@ -261,48 +257,48 @@
     "title": "The Mountain",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "wonder"
     ]
   },
   {
     "title": "Rock Star",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "heroic",
+      "intense"
     ]
   },
   {
     "title": "Revenge of Meta Knight (Map)",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Versus King Dedede",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Mid-Boss Room",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Float Islands",
     "plays": null,
     "moods": [
-      "wonder",
-      "peaceful"
+      "peaceful",
+      "wonder"
     ]
   },
   {
@@ -310,34 +306,18 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Results Screen",
     "plays": null,
     "moods": [
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "City",
-    "plays": null,
-    "moods": [
-      "driving",
-      "joyful"
-    ]
-  },
-  {
-    "title": "Not Much Time Left",
-    "plays": null,
-    "moods": [
-      "tense",
-      "driving"
-    ]
-  },
-  {
-    "title": "City (Backside)",
     "plays": null,
     "moods": [
       "mysterious",
@@ -345,11 +325,27 @@
     ]
   },
   {
+    "title": "Not Much Time Left",
+    "plays": null,
+    "moods": [
+      "suspenseful",
+      "intense"
+    ]
+  },
+  {
+    "title": "City (Backside)",
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
+  },
+  {
     "title": "Dyna Blade (intro)",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -364,47 +360,47 @@
     "title": "Flying Meteor",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Huge Pillar",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "epic",
+      "wonder"
     ]
   },
   {
     "title": "Station Fire",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "What's in the Box?",
     "plays": null,
     "moods": [
-      "mysterious",
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "The Lighthouse Light Burns",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
     "title": "Rowdy Charge Tank",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -427,7 +423,7 @@
     "title": "Legendary Air Ride Machine",
     "plays": null,
     "moods": [
-      "heroic",
+      "epic",
       "transcendent"
     ]
   },
@@ -448,31 +444,31 @@
     "plays": null,
     "moods": [
       "driving",
-      "joyful"
+      "intense"
     ]
   },
   {
     "title": "AIR GLIDER",
     "plays": null,
     "moods": [
-      "joyful",
-      "peaceful"
+      "driving",
+      "hopeful"
     ]
   },
   {
     "title": "TARGET FLIGHT",
     "plays": null,
     "moods": [
-      "driving",
-      "joyful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "KIRBY MELEE",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "heroic"
     ]
   },
   {
@@ -480,21 +476,22 @@
     "plays": null,
     "moods": [
       "joyful",
-      "peaceful"
+      "heroic"
     ]
   },
   {
     "title": "Retire",
     "plays": null,
     "moods": [
-      "playful"
+      "sad"
     ]
   },
   {
     "title": "Checklist Completed",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   }
 ]

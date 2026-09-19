@@ -4,13 +4,15 @@
     "plays": null,
     "moods": [
       "heroic",
-      "wonder"
+      "epic",
+      "hopeful"
     ]
   },
   {
     "title": "Dark World",
     "plays": null,
     "moods": [
+      "ominous",
       "eerie",
       "mysterious"
     ]
@@ -19,8 +21,9 @@
     "title": "Overworld",
     "plays": null,
     "moods": [
-      "joyful",
-      "wonder"
+      "hopeful",
+      "wonder",
+      "heroic"
     ]
   },
   {
@@ -28,23 +31,26 @@
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "nostalgic",
+      "tender"
     ]
   },
   {
     "title": "Death Mountain",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "ominous",
+      "driving"
     ]
   },
   {
     "title": "Boss",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic",
+      "driving"
     ]
   },
   {
@@ -52,7 +58,8 @@
     "plays": null,
     "moods": [
       "transcendent",
-      "wonder"
+      "wonder",
+      "epic"
     ]
   }
 ]

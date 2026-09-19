@@ -24,7 +24,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -36,8 +36,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -47,10 +46,7 @@
     "artists": [
       "Toto"
     ],
-    "song": true,
-    "moods": [
-      "romantic"
-    ]
+    "song": true
   },
   {
     "title": "Baker Street (1995 Digital Remaster)",
@@ -59,10 +55,7 @@
     "artists": [
       "Gerry Rafferty"
     ],
-    "song": true,
-    "moods": [
-      "driving"
-    ]
+    "song": true
   },
   {
     "title": "Nice Car Dickhead",
@@ -85,8 +78,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -121,11 +114,7 @@
     "artists": [
       "Eddie Money"
     ],
-    "song": true,
-    "moods": [
-      "romantic",
-      "nostalgic"
-    ]
+    "song": true
   },
   {
     "title": "Harden My Heart",
@@ -134,11 +123,7 @@
     "artists": [
       "Quarterflash"
     ],
-    "song": true,
-    "moods": [
-      "powerful",
-      "romantic"
-    ]
+    "song": true
   },
   {
     "title": "The Perfect Number",
@@ -147,7 +132,11 @@
     "artists": [
       "Vicki St. Elmo"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful",
+      "joyful"
+    ]
   },
   {
     "title": "Spill It",
@@ -166,10 +155,7 @@
     "artists": [
       "Mr. Mister"
     ],
-    "song": true,
-    "moods": [
-      "romantic"
-    ]
+    "song": true
   },
   {
     "title": "Steal Away",
@@ -187,11 +173,7 @@
     "artists": [
       "Michael Bolton"
     ],
-    "song": true,
-    "moods": [
-      "romantic",
-      "joyful"
-    ]
+    "song": true
   },
   {
     "title": "Rock My Body (feat. Lightspeed Champion)",
@@ -200,11 +182,7 @@
     "artists": [
       "Vicki St. Elmo"
     ],
-    "song": true,
-    "moods": [
-      "playful",
-      "joyful"
-    ]
+    "song": true
   },
   {
     "title": "Champioin",
@@ -213,11 +191,7 @@
     "artists": [
       "Vicki St. Elmo"
     ],
-    "song": true,
-    "moods": [
-      "joyful",
-      "heroic"
-    ]
+    "song": true
   },
   {
     "title": "MacGruber's Suite",
@@ -227,8 +201,8 @@
       "Matthew Compton"
     ],
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   }
 ]

@@ -8,7 +8,7 @@
     ],
     "moods": [
       "wonder",
-      "joyful"
+      "hopeful"
     ]
   },
   {
@@ -19,7 +19,7 @@
       "Tom Petty & The Heartbreakers"
     ],
     "moods": [
-      "peaceful",
+      "hopeful",
       "tender"
     ]
   },
@@ -32,8 +32,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "nostalgic"
+      "nostalgic",
+      "sad"
     ]
   },
   {
@@ -45,8 +45,8 @@
     ],
     "song": true,
     "moods": [
-      "tender",
-      "peaceful"
+      "dreamy",
+      "tender"
     ]
   },
   {
@@ -69,7 +69,11 @@
     "artists": [
       "My Morning Jacket"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "tender"
+    ]
   },
   {
     "title": "Long Ride Home",
@@ -80,8 +84,8 @@
     ],
     "song": true,
     "moods": [
-      "nostalgic",
-      "tender"
+      "epic",
+      "driving"
     ]
   },
   {
@@ -93,7 +97,7 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
+      "laid-back",
       "playful"
     ]
   },
@@ -106,8 +110,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
@@ -119,8 +123,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -133,7 +137,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "driving"
+      "playful"
     ]
   },
   {
@@ -146,7 +150,7 @@
     "song": true,
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
@@ -158,8 +162,8 @@
     ],
     "song": true,
     "moods": [
-      "transcendent",
-      "peaceful"
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -171,7 +175,7 @@
     ],
     "song": true,
     "moods": [
-      "tender",
+      "hopeful",
       "peaceful"
     ]
   },
@@ -185,7 +189,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "transcendent"
+      "tender"
     ]
   }
 ]

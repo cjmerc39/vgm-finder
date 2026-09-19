@@ -8,7 +8,7 @@
     ],
     "moods": [
       "heroic",
-      "mysterious"
+      "epic"
     ]
   },
   {
@@ -31,8 +31,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "suspenseful"
     ]
   },
   {
@@ -43,8 +43,7 @@
       "Christophe Beck"
     ],
     "moods": [
-      "mysterious",
-      "eerie"
+      "mysterious"
     ]
   },
   {
@@ -55,8 +54,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
-      "eerie"
+      "eerie",
+      "intense"
     ]
   },
   {
@@ -67,8 +66,7 @@
       "Christophe Beck"
     ],
     "moods": [
-      "nostalgic",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -80,7 +78,7 @@
     ],
     "moods": [
       "playful",
-      "joyful"
+      "tender"
     ]
   },
   {
@@ -91,8 +89,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "mysterious",
-      "playful"
+      "dreamy",
+      "mysterious"
     ]
   },
   {
@@ -104,7 +102,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -115,7 +113,7 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
       "mysterious"
     ]
   },
@@ -127,7 +125,7 @@
       "Christophe Beck"
     ],
     "moods": [
-      "mysterious"
+      "ominous"
     ]
   },
   {
@@ -138,8 +136,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "mysterious",
-      "wonder"
+      "wonder",
+      "mysterious"
     ]
   },
   {
@@ -150,7 +148,7 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
+      "suspenseful",
       "driving"
     ]
   },
@@ -162,8 +160,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "mournful",
-      "tender"
+      "sad",
+      "heroic"
     ]
   },
   {
@@ -175,7 +173,7 @@
     ],
     "moods": [
       "playful",
-      "driving"
+      "wonder"
     ]
   },
   {
@@ -186,8 +184,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -198,8 +196,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -210,8 +208,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -223,7 +221,7 @@
     ],
     "moods": [
       "heroic",
-      "powerful"
+      "hopeful"
     ]
   },
   {
@@ -234,7 +232,7 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -258,7 +256,7 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -270,8 +268,8 @@
       "Christophe Beck"
     ],
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -283,7 +281,7 @@
     ],
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -306,6 +304,7 @@
       "Christophe Beck"
     ],
     "moods": [
+      "hopeful",
       "joyful"
     ]
   },
@@ -318,7 +317,7 @@
     ],
     "moods": [
       "heroic",
-      "joyful"
+      "epic"
     ]
   },
   {
@@ -328,7 +327,10 @@
     "artists": [
       "Camilo Azuquita"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Escape (From The \"Coffy\" Soundtrack)",
@@ -340,7 +342,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "laid-back"
     ]
   },
   {
@@ -353,7 +355,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "playful"
+      "hopeful"
     ]
   },
   {
@@ -363,6 +365,9 @@
     "artists": [
       "HLM"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   }
 ]

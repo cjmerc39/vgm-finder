@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "tender",
-      "nostalgic"
+      "romantic"
     ]
   },
   {
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -48,7 +48,7 @@
     "song": true,
     "moods": [
       "nostalgic",
-      "tender"
+      "dreamy"
     ]
   },
   {
@@ -60,7 +60,7 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
+      "laid-back",
       "nostalgic"
     ]
   },
@@ -71,7 +71,11 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "dreamy",
+      "peaceful"
+    ]
   },
   {
     "title": "Lucky Me",
@@ -82,8 +86,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "hopeful"
     ]
   },
   {
@@ -93,7 +97,10 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Broken Hearted Savior",
@@ -104,8 +111,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "intense"
     ]
   },
   {
@@ -129,8 +136,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "wonder"
+      "wonder",
+      "dreamy"
     ]
   },
   {
@@ -142,8 +149,8 @@
     ],
     "song": true,
     "moods": [
-      "sad",
-      "tender"
+      "mysterious",
+      "dreamy"
     ]
   },
   {
@@ -155,8 +162,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -168,8 +175,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "transcendent"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -181,8 +188,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "transcendent"
+      "transcendent",
+      "peaceful"
     ]
   }
 ]

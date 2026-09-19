@@ -10,14 +10,16 @@
     "title": "Title Screen",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Original Mellow Room",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "laid-back"
     ]
   },
   {
@@ -31,7 +33,7 @@
     "title": "Sign Friend",
     "plays": null,
     "moods": [
-      "joyful"
+      "tender"
     ]
   },
   {
@@ -39,13 +41,14 @@
     "plays": null,
     "moods": [
       "eerie",
-      "tense"
+      "ominous"
     ]
   },
   {
     "title": "By The Fridge",
     "plays": null,
     "moods": [
+      "laid-back",
       "peaceful"
     ]
   },
@@ -53,57 +56,63 @@
     "title": "Tentacle Jumpscare",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "suspenseful",
+      "eerie"
     ]
   },
   {
     "title": "Game Over",
     "plays": null,
     "moods": [
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
     "title": "Mellow Room",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "dreamy"
     ]
   },
   {
     "title": "Monkeybank",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "wonder"
     ]
   },
   {
     "title": "Clockfight",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Beautiful Creature",
     "plays": null,
     "moods": [
-      "wonder",
-      "transcendent"
+      "tender",
+      "romantic"
     ]
   },
   {
     "title": "You Cheated",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "30 minutes till midnight",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
@@ -111,74 +120,79 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "eerie"
     ]
   },
   {
     "title": "CL-INJ-1",
     "plays": null,
     "moods": [
-      "tense"
+      "mysterious",
+      "intense"
     ]
   },
   {
     "title": "CL-DTH-1",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Cl-DTH-2",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "CL-INJ-3",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "CL-DTH-3",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "CL-INJ-4",
     "plays": null,
     "moods": [
-      "tense"
+      "intense",
+      "suspenseful"
     ]
   },
   {
     "title": "CL-DTH-4",
     "plays": null,
     "moods": [
-      "sad",
-      "mournful"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "CL-INJ-2",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "eerie"
     ]
   },
   {
     "title": "Boom",
     "plays": null,
     "moods": [
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -193,39 +207,39 @@
     "title": "Ol Fashioned Steam Engine",
     "plays": null,
     "moods": [
-      "driving"
+      "nostalgic",
+      "epic"
     ]
   },
   {
     "title": "MIME MAZE",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "APRIL_FOOLS_BEAST",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Western Anticipation",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful"
     ]
   },
   {
     "title": "The Ultimate Shootout",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -254,7 +268,7 @@
     "title": "Poisonous Flower",
     "plays": null,
     "moods": [
-      "eerie",
+      "ominous",
       "mysterious"
     ]
   }

@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "powerful"
+      "playful"
     ]
   },
   {
@@ -21,8 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -34,8 +34,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -61,7 +60,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -73,8 +72,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -84,7 +83,11 @@
     "artists": [
       "Aaliyah"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "nostalgic"
+    ]
   },
   {
     "title": "Low Income",
@@ -93,7 +96,10 @@
     "artists": [
       "Release - Topic"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Shaolin Worldwide",
@@ -104,8 +110,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -119,8 +125,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "peaceful"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -149,7 +155,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -174,8 +180,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "intense"
     ]
   },
   {
@@ -187,8 +192,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "laid-back",
+      "driving"
     ]
   }
 ]

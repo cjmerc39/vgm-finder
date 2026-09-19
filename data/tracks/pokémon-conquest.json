@@ -4,15 +4,15 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "epic"
     ]
   },
   {
     "title": "Episode Opening",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "hopeful",
+      "joyful"
     ]
   },
   {
@@ -26,16 +26,14 @@
     "title": "Map Theme 1",
     "plays": null,
     "moods": [
-      "mysterious",
-      "driving"
+      "laid-back"
     ]
   },
   {
     "title": "Map Theme 2",
     "plays": null,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "mysterious"
     ]
   },
   {
@@ -43,14 +41,14 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "ominous"
     ]
   },
   {
     "title": "Dungeon Theme 2",
     "plays": null,
     "moods": [
-      "tense",
+      "mysterious",
       "eerie"
     ]
   },
@@ -58,16 +56,14 @@
     "title": "Dungeon Theme 3",
     "plays": null,
     "moods": [
-      "mysterious",
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Dungeon Theme 4",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "intense"
     ]
   },
   {
@@ -79,15 +75,14 @@
     "plays": null,
     "moods": [
       "joyful",
-      "playful"
+      "hopeful"
     ]
   },
   {
     "title": "Bad Event",
     "plays": null,
     "moods": [
-      "tense",
-      "sad"
+      "ominous"
     ]
   },
   {
@@ -101,8 +96,8 @@
     "title": "Nobunaga Event",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -110,7 +105,7 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
@@ -118,7 +113,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -126,7 +121,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -134,23 +129,22 @@
     "plays": null,
     "moods": [
       "eerie",
-      "mysterious"
+      "suspenseful"
     ]
   },
   {
     "title": "Grapple Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Grass Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "driving"
     ]
   },
   {
@@ -158,7 +152,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -166,47 +160,47 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Insect Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Poison Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "eerie",
+      "intense"
     ]
   },
   {
     "title": "Rock Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Dragon Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Electric Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -214,23 +208,23 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Evil Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Flame Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -238,39 +232,38 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Steel Battle",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Legendary Battle",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Special Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Battle Lost",
     "plays": null,
     "moods": [
-      "sad",
-      "tense"
+      "sad"
     ]
   },
   {
@@ -285,7 +278,7 @@
     "title": "Boss Battle",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -293,7 +286,7 @@
     "title": "Pokémon Evolution",
     "plays": null,
     "moods": [
-      "transcendent",
+      "wonder",
       "joyful"
     ]
   },
@@ -301,16 +294,16 @@
     "title": "Pokemon Evolution 2",
     "plays": null,
     "moods": [
-      "transcendent",
-      "powerful"
+      "wonder",
+      "transcendent"
     ]
   },
   {
     "title": "Warlord Evolution",
     "plays": null,
     "moods": [
-      "heroic",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -325,8 +318,7 @@
     "title": "Game Over",
     "plays": null,
     "moods": [
-      "sad",
-      "peaceful"
+      "sad"
     ]
   }
 ]

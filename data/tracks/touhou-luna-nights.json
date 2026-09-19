@@ -1,16 +1,14 @@
 [
   {
     "title": "Title",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
+    "plays": null
   },
   {
     "title": "Event - Restlessness",
     "plays": null,
     "moods": [
-      "tense"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -18,36 +16,39 @@
     "plays": null,
     "moods": [
       "driving",
-      "mysterious"
+      "intense"
     ]
   },
   {
     "title": "Event - Child of Are",
     "plays": null,
     "moods": [
-      "tender"
+      "tender",
+      "nostalgic"
     ]
   },
   {
     "title": "Shop - Akutagawa Ryunosuke's \"Kappa\" ~ Candid Friend",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Event - Pre-Boss 1",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Stage 1 Boss - Shanghai Alice of Meiji 17",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -62,8 +63,8 @@
     "title": "Stage 2 Boss - Love-colored Master Spark",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -78,8 +79,8 @@
     "title": "Stage 3 Boss - Locked Girl ~ Girl's Secret Room",
     "plays": null,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -87,22 +88,23 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "nostalgic"
+      "eerie"
     ]
   },
   {
     "title": "Event - Pre-Boss 2",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Stage 4 Boss - Septette for a Dead Princess",
     "plays": null,
     "moods": [
-      "powerful",
-      "mournful"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -110,38 +112,38 @@
     "plays": null,
     "moods": [
       "romantic",
-      "mysterious"
+      "tender"
     ]
   },
   {
     "title": "Final Stage - Flowering Night",
     "plays": null,
     "moods": [
-      "transcendent",
-      "powerful"
+      "epic",
+      "heroic"
     ]
   },
   {
     "title": "Final Boss 1 - Akutagawa Ryunosuke's \"Kappa\" ~ Candid Friend",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Final Boss 2 - U.N. Owen Was Her?",
     "plays": null,
     "moods": [
-      "powerful",
-      "eerie"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Final Boss 3 - Night of Knights / Knight of Nights",
     "plays": null,
     "moods": [
-      "heroic",
+      "intense",
       "driving"
     ]
   },
@@ -150,14 +152,15 @@
     "plays": null,
     "moods": [
       "sad",
-      "mournful"
+      "nostalgic"
     ]
   },
   {
     "title": "Extra Warp - Akutagawa Ryunosuke's \"Kappa\" ~ Candid Friend",
     "plays": null,
     "moods": [
-      "playful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -165,22 +168,22 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
     "title": "Extra Boss - Maiden's Capriccio ~ Dream Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "joyful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Ending 2 - A Soul as Scarlet as a Ground Cherry",
     "plays": null,
     "moods": [
-      "peaceful",
+      "hopeful",
       "tender"
     ]
   },
@@ -188,16 +191,16 @@
     "title": "Boss Room - Akutagawa Ryunosuke's \"Kappa\" ~ Candid Friend",
     "plays": null,
     "moods": [
-      "playful",
-      "mysterious"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Extra Boss - Beloved Tomboyish Daughter",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "intense",
+      "epic"
     ]
   }
 ]

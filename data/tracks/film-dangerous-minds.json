@@ -8,7 +8,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tense"
+      "wonder"
     ]
   },
   {
@@ -35,7 +35,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "laid-back"
     ]
   },
   {
@@ -48,7 +48,7 @@
     "song": true,
     "moods": [
       "sad",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -62,7 +62,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -85,7 +85,11 @@
     "artists": [
       "24-K"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "suspenseful",
+      "ominous"
+    ]
   },
   {
     "title": "Feel The Funk",
@@ -97,7 +101,7 @@
     "song": true,
     "moods": [
       "joyful",
-      "playful"
+      "laid-back"
     ]
   },
   {
@@ -109,7 +113,7 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
+      "hopeful",
       "joyful"
     ]
   },
@@ -120,7 +124,11 @@
     "artists": [
       "Rappin' 4-Tay"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "mysterious",
+      "intense"
+    ]
   },
   {
     "title": "Gin & Juice",
@@ -132,7 +140,7 @@
     "song": true,
     "moods": [
       "playful",
-      "driving"
+      "laid-back"
     ]
   },
   {
@@ -144,7 +152,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful"
+      "joyful",
+      "nostalgic"
     ]
   }
 ]

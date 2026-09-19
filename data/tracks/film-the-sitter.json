@@ -9,7 +9,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -22,7 +22,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -34,8 +34,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "driving"
+      "driving",
+      "joyful"
     ]
   },
   {
@@ -48,7 +48,7 @@
     "song": true,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -73,6 +73,7 @@
     ],
     "song": true,
     "moods": [
+      "intense",
       "driving"
     ]
   },
@@ -86,7 +87,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -98,7 +99,7 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
+      "nostalgic",
       "tender"
     ]
   },
@@ -111,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -136,8 +137,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -147,7 +148,11 @@
     "artists": [
       "Raphael Saadiq"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "nostalgic"
+    ]
   },
   {
     "title": "Roxanne-End",
@@ -157,8 +162,7 @@
       "The Sitter (Motion Picture Soundtrack)"
     ],
     "moods": [
-      "mysterious",
-      "eerie"
+      "ominous"
     ]
   },
   {
@@ -171,7 +175,7 @@
     "song": true,
     "moods": [
       "playful",
-      "romantic"
+      "laid-back"
     ]
   },
   {

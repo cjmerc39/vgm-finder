@@ -9,8 +9,8 @@
     "song": true,
     "moods": [
       "heroic",
-      "powerful",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -24,7 +24,7 @@
     "moods": [
       "heroic",
       "joyful",
-      "powerful"
+      "driving"
     ]
   },
   {
@@ -36,7 +36,7 @@
     ],
     "moods": [
       "driving",
-      "mysterious"
+      "laid-back"
     ]
   },
   {
@@ -48,8 +48,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -61,7 +61,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -75,7 +75,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -85,7 +85,10 @@
     "artists": [
       "Highway Superstar"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Enter The Fury",
@@ -96,8 +99,8 @@
     ],
     "song": true,
     "moods": [
-      "heroic",
-      "powerful"
+      "intense",
+      "heroic"
     ]
   },
   {
@@ -109,8 +112,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "joyful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -121,8 +124,8 @@
       "Lost Years"
     ],
     "moods": [
-      "heroic",
-      "transcendent"
+      "hopeful",
+      "epic"
     ]
   },
   {
@@ -135,7 +138,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tense"
+      "driving"
     ]
   },
   {
@@ -147,8 +150,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "playful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -159,8 +162,8 @@
       "Lost Years"
     ],
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   }
 ]

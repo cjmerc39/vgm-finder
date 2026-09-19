@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -21,8 +21,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -47,7 +47,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -73,9 +73,9 @@
     ],
     "song": true,
     "moods": [
+      "ominous",
       "eerie",
-      "mysterious",
-      "tense"
+      "mysterious"
     ]
   },
   {
@@ -87,7 +87,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -101,7 +101,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "tender"
+      "hopeful"
     ]
   },
   {
@@ -113,7 +113,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic"
+      "romantic",
+      "tender"
     ]
   },
   {
@@ -122,6 +123,10 @@
     "videoId": "fDJ3U1DrDLw",
     "artists": [
       "Thomas Newman"
+    ],
+    "moods": [
+      "playful",
+      "mysterious"
     ]
   }
 ]

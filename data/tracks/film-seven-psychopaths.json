@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "eerie"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -19,11 +19,7 @@
     "artists": [
       "P.P. Arnold"
     ],
-    "song": true,
-    "moods": [
-      "tender",
-      "sad"
-    ]
+    "song": true
   },
   {
     "title": "The Quaker",
@@ -34,7 +30,7 @@
     ],
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
@@ -47,7 +43,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "transcendent"
+      "tender"
     ]
   },
   {
@@ -56,6 +52,10 @@
     "videoId": "i1ixFw9zIkA",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "eerie",
+      "mysterious"
     ]
   },
   {
@@ -65,10 +65,7 @@
     "artists": [
       "The Walkmen"
     ],
-    "song": true,
-    "moods": [
-      "playful"
-    ]
+    "song": true
   },
   {
     "title": "Billy's Diary",
@@ -78,6 +75,7 @@
       "Carter Burwell"
     ],
     "moods": [
+      "playful",
       "mysterious"
     ]
   },
@@ -88,7 +86,10 @@
     "artists": [
       "Deer Tick"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "My Lai",
@@ -98,8 +99,8 @@
       "Carter Burwell"
     ],
     "moods": [
-      "tense",
-      "driving"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -128,8 +129,8 @@
       "Carter Burwell"
     ],
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -140,8 +141,8 @@
       "Carter Burwell"
     ],
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -153,8 +154,8 @@
     ],
     "song": true,
     "moods": [
-      "sad",
-      "tender"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -166,7 +167,7 @@
     ],
     "moods": [
       "mysterious",
-      "tense"
+      "playful"
     ]
   },
   {
@@ -175,6 +176,10 @@
     "videoId": "q08aKuB7QEc",
     "artists": [
       "Carter Burwell"
+    ],
+    "moods": [
+      "hopeful",
+      "tender"
     ]
   },
   {
@@ -185,8 +190,9 @@
       "Carter Burwell"
     ],
     "moods": [
-      "powerful",
-      "driving"
+      "ominous",
+      "intense",
+      "eerie"
     ]
   },
   {
@@ -206,7 +212,7 @@
       "Carter Burwell"
     ],
     "moods": [
-      "tense",
+      "ominous",
       "driving"
     ]
   }

@@ -11,54 +11,55 @@
     "title": "Collection",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "wonder"
     ]
   },
   {
     "title": "Career",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "hopeful",
+      "driving"
     ]
   },
   {
     "title": "Shop",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "Character Select",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "playful",
+      "intense"
     ]
   },
   {
     "title": "Match Loading",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Start Match",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "heroic",
+      "epic"
     ]
   },
   {
     "title": "Defeat",
     "plays": null,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -71,14 +72,17 @@
   },
   {
     "title": "Connection Error",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "eerie"
+    ]
   },
   {
     "title": "Home (alternate)",
     "plays": null,
     "moods": [
       "peaceful",
-      "nostalgic"
+      "tender"
     ]
   }
 ]

@@ -3,26 +3,30 @@
     "title": "Title",
     "plays": null,
     "moods": [
-      "wonder"
+      "wonder",
+      "joyful"
     ]
   },
   {
     "title": "Continue Screen",
     "plays": null,
     "moods": [
-      "peaceful"
+      "hopeful"
     ]
   },
   {
     "title": "Pause Menu",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "World Map and Mason Lab",
     "plays": null,
     "moods": [
-      "wonder",
-      "peaceful"
+      "laid-back",
+      "wonder"
     ]
   },
   {
@@ -40,7 +44,7 @@
     "title": "Fire, Fighting & Science Clubs",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -48,7 +52,8 @@
     "title": "Water, Rock & Psychic Clubs",
     "plays": null,
     "moods": [
-      "driving"
+      "peaceful",
+      "mysterious"
     ]
   },
   {
@@ -56,23 +61,23 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "playful"
     ]
   },
   {
     "title": "Club Leader Duel",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Ronald's Theme",
     "plays": null,
     "moods": [
-      "mysterious",
-      "playful"
+      "heroic",
+      "driving"
     ]
   },
   {
@@ -80,22 +85,22 @@
     "plays": null,
     "moods": [
       "playful",
-      "eerie"
+      "mysterious"
     ]
   },
   {
     "title": "Challenge Hall",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Pokemon Dome's Great Hall",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -103,24 +108,24 @@
     "title": "Grandmaster Duel",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Hall of Honour",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Credits",
     "plays": null,
     "moods": [
-      "joyful",
-      "tender"
+      "nostalgic",
+      "hopeful"
     ]
   },
   {

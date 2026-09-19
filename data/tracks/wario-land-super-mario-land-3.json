@@ -1,10 +1,7 @@
 [
   {
     "title": "Intro",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
+    "plays": null
   },
   {
     "title": "Title Screen",
@@ -16,7 +13,10 @@
   },
   {
     "title": "File Select",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Kitchen Island",
@@ -30,27 +30,31 @@
     "title": "Rice Beach",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Level Selected",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "driving"
+    ]
   },
   {
     "title": "Main Theme",
     "plays": null,
     "moods": [
       "heroic",
-      "joyful"
+      "playful"
     ]
   },
   {
     "title": "Stage Clear",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -64,42 +68,46 @@
     "title": "Coin Game",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Heart Game",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Minigame Results",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful"
+    ]
   },
   {
     "title": "Beach Course",
     "plays": null,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Pouncer Course",
     "plays": null,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "intense"
     ]
   },
   {
     "title": "Boss Course",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -107,16 +115,16 @@
     "title": "Boss Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Boss Almost Defeated",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -147,14 +155,14 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "playful"
+      "eerie"
     ]
   },
   {
     "title": "Underwater Course",
     "plays": null,
     "moods": [
-      "peaceful",
+      "eerie",
       "mysterious"
     ]
   },
@@ -178,16 +186,15 @@
     "title": "Lake Course",
     "plays": null,
     "moods": [
-      "peaceful",
-      "joyful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Mystery Theme",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "mysterious"
     ]
   },
   {
@@ -202,7 +209,7 @@
     "title": "Invincible Wario",
     "plays": null,
     "moods": [
-      "powerful",
+      "epic",
       "heroic"
     ]
   },
@@ -211,30 +218,30 @@
     "plays": null,
     "moods": [
       "driving",
-      "playful"
+      "intense"
     ]
   },
   {
     "title": "Sherbet Land",
     "plays": null,
     "moods": [
-      "peaceful",
-      "playful"
+      "eerie",
+      "ominous"
     ]
   },
   {
     "title": "Ice Course",
     "plays": null,
     "moods": [
-      "playful",
-      "peaceful"
+      "mysterious",
+      "eerie"
     ]
   },
   {
     "title": "Stove Canyon",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -242,8 +249,8 @@
     "title": "Lava Course",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "ominous",
+      "intense"
     ]
   },
   {
@@ -251,15 +258,15 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
     "title": "S.S. Tea Cup",
     "plays": null,
     "moods": [
-      "playful",
-      "peaceful"
+      "mysterious",
+      "playful"
     ]
   },
   {
@@ -267,7 +274,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -283,39 +290,39 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "ominous"
     ]
   },
   {
     "title": "Final Course",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Summoning The Genie",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Last Battle",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Syrup Escapes!",
     "plays": null,
     "moods": [
-      "driving",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -330,8 +337,8 @@
     "title": "End Credits",
     "plays": null,
     "moods": [
-      "heroic",
-      "joyful"
+      "joyful",
+      "heroic"
     ]
   },
   {
@@ -345,15 +352,14 @@
     "title": "Time Up!",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful"
     ]
   },
   {
     "title": "Game Over",
     "plays": null,
     "moods": [
-      "sad",
-      "eerie"
+      "sad"
     ]
   },
   {

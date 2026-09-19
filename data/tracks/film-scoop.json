@@ -10,7 +10,8 @@
     "song": true,
     "moods": [
       "tender",
-      "peaceful"
+      "romantic",
+      "dreamy"
     ]
   },
   {
@@ -26,7 +27,7 @@
     "song": true,
     "moods": [
       "romantic",
-      "playful"
+      "dreamy"
     ]
   },
   {
@@ -39,8 +40,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "romantic",
+      "dreamy"
     ]
   },
   {
@@ -56,7 +57,7 @@
     "song": true,
     "moods": [
       "tender",
-      "peaceful"
+      "romantic"
     ]
   },
   {
@@ -69,8 +70,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -85,7 +86,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -99,8 +100,8 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -113,7 +114,7 @@
     ],
     "song": true,
     "moods": [
-      "joyful",
+      "playful",
       "driving"
     ]
   },
@@ -126,8 +127,8 @@
     ],
     "song": true,
     "moods": [
-      "playful",
-      "joyful"
+      "laid-back",
+      "playful"
     ]
   },
   {
@@ -140,7 +141,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -155,6 +156,7 @@
     "song": true,
     "moods": [
       "peaceful",
+      "hopeful",
       "wonder"
     ]
   },
@@ -168,8 +170,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
@@ -183,7 +185,7 @@
     "song": true,
     "moods": [
       "playful",
-      "joyful"
+      "laid-back"
     ]
   },
   {
@@ -196,8 +198,9 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "eerie"
+      "intense",
+      "ominous",
+      "driving"
     ]
   },
   {
@@ -223,7 +226,8 @@
     ],
     "song": true,
     "moods": [
-      "playful"
+      "nostalgic",
+      "romantic"
     ]
   },
   {
@@ -235,8 +239,8 @@
     ],
     "song": true,
     "moods": [
-      "romantic",
-      "nostalgic"
+      "laid-back",
+      "tender"
     ]
   },
   {
@@ -246,6 +250,10 @@
     "artists": [
       "Lester Lanin And His Orchestra"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "tender",
+      "romantic"
+    ]
   }
 ]

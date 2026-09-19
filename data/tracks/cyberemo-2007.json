@@ -21,14 +21,18 @@
   },
   {
     "title": "Tutorial",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful",
+      "hopeful"
+    ]
   },
   {
     "title": "Space",
     "plays": null,
     "moods": [
       "wonder",
-      "mysterious"
+      "dreamy"
     ]
   },
   {
@@ -36,7 +40,7 @@
     "plays": null,
     "moods": [
       "joyful",
-      "nostalgic"
+      "hopeful"
     ]
   },
   {
@@ -44,7 +48,7 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "tense"
+      "intense"
     ]
   }
 ]

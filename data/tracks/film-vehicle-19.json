@@ -9,7 +9,7 @@
     ],
     "song": true,
     "moods": [
-      "tense",
+      "ominous",
       "mysterious"
     ]
   },
@@ -23,7 +23,7 @@
     ],
     "song": true,
     "moods": [
-      "driving"
+      "suspenseful"
     ]
   },
   {
@@ -34,7 +34,11 @@
       "James Matthes",
       "Daniel Matthee"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "intense",
+      "driving"
+    ]
   },
   {
     "title": "Finding the Gun",
@@ -46,8 +50,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -60,7 +64,8 @@
     ],
     "song": true,
     "moods": [
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -73,8 +78,8 @@
     ],
     "song": true,
     "moods": [
-      "peaceful",
-      "nostalgic"
+      "mysterious",
+      "hopeful"
     ]
   },
   {
@@ -86,8 +91,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -101,7 +106,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "suspenseful"
     ]
   },
   {
@@ -113,8 +118,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "eerie"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -127,7 +132,8 @@
     ],
     "song": true,
     "moods": [
-      "tense"
+      "suspenseful",
+      "mysterious"
     ]
   },
   {
@@ -139,8 +145,8 @@
     ],
     "song": true,
     "moods": [
-      "mournful",
-      "sad"
+      "sad",
+      "ominous"
     ]
   },
   {
@@ -153,7 +159,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -165,7 +171,11 @@
       "James Matthes",
       "Daniel Matthee"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "driving",
+      "suspenseful"
+    ]
   },
   {
     "title": "Man on a Mission",
@@ -178,7 +188,7 @@
     "song": true,
     "moods": [
       "heroic",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -191,8 +201,8 @@
     ],
     "song": true,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -205,8 +215,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   }
 ]

@@ -8,8 +8,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
@@ -21,7 +21,7 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -35,7 +35,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tense"
+      "eerie"
     ]
   },
   {
@@ -47,8 +47,8 @@
     ],
     "song": true,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "suspenseful"
     ]
   },
   {
@@ -61,7 +61,7 @@
     "song": true,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -85,8 +85,8 @@
     ],
     "song": true,
     "moods": [
-      "tense",
-      "driving"
+      "driving",
+      "suspenseful"
     ]
   },
   {
@@ -98,8 +98,8 @@
     ],
     "song": true,
     "moods": [
-      "wonder",
-      "transcendent"
+      "dreamy",
+      "wonder"
     ]
   },
   {
@@ -111,8 +111,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "suspenseful"
     ]
   },
   {
@@ -125,7 +125,7 @@
     "song": true,
     "moods": [
       "mysterious",
-      "tender"
+      "nostalgic"
     ]
   },
   {
@@ -137,7 +137,8 @@
     ],
     "song": true,
     "moods": [
-      "powerful"
+      "hopeful",
+      "transcendent"
     ]
   },
   {
@@ -147,7 +148,11 @@
     "artists": [
       "IAMX"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "epic",
+      "heroic"
+    ]
   },
   {
     "title": "Tumbling Lights",
@@ -170,8 +175,8 @@
       "Photek"
     ],
     "moods": [
-      "mysterious",
-      "heroic"
+      "intense",
+      "epic"
     ]
   }
 ]

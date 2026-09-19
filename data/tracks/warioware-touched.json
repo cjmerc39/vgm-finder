@@ -3,7 +3,6 @@
     "title": "Opening",
     "plays": null,
     "moods": [
-      "joyful",
       "playful"
     ]
   },
@@ -19,6 +18,7 @@
     "title": "Main Menu",
     "plays": null,
     "moods": [
+      "laid-back",
       "playful"
     ]
   },
@@ -33,22 +33,21 @@
     "title": "Wario's Touch Training - My Teeth!!!",
     "plays": null,
     "moods": [
-      "playful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Wario's Touch Training - Meets With the Dentist",
     "plays": null,
     "moods": [
-      "playful"
+      "suspenseful"
     ]
   },
   {
     "title": "Wario's Touch Training - Back Out on the Road",
     "plays": null,
     "moods": [
-      "playful",
       "driving"
     ]
   },
@@ -56,7 +55,7 @@
     "title": "Wario's Touch Training - Next",
     "plays": null,
     "moods": [
-      "playful"
+      "hopeful"
     ]
   },
   {
@@ -78,7 +77,7 @@
     "title": "Microgame - Waste With Haste ~ Perfect Match ~ Blowin' Up",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -86,22 +85,22 @@
     "title": "Microgame - Big Bang ~ Steel Chef ~ It Slices, It Dices",
     "plays": null,
     "moods": [
-      "playful",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Microgame - Taping a Leak ~ Corrections Officer ~ Worked to&#8203;a Lather ~ Oh, the Irony",
     "plays": null,
     "moods": [
-      "playful"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Microgame - Sleepy Head ~ Very Attractive",
     "plays": null,
     "moods": [
-      "playful"
+      "peaceful"
     ]
   },
   {
@@ -115,11 +114,19 @@
     "title": "Microgame - Tune Out",
     "plays": null,
     "moods": [
-      "playful"
+      "mysterious"
     ]
   },
   {
     "title": "Microgame - Freak Mutation",
+    "plays": null,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
+  },
+  {
+    "title": "Microgame - Bug Eyed",
     "plays": null,
     "moods": [
       "playful",
@@ -127,17 +134,9 @@
     ]
   },
   {
-    "title": "Microgame - Bug Eyed",
-    "plays": null,
-    "moods": [
-      "playful"
-    ]
-  },
-  {
     "title": "Microgame - Lose Your Marble ~ Hit the Gust",
     "plays": null,
     "moods": [
-      "playful",
       "driving"
     ]
   },
@@ -152,13 +151,15 @@
     "title": "Microgame - Swamp Things",
     "plays": null,
     "moods": [
-      "playful"
+      "eerie",
+      "mysterious"
     ]
   },
   {
     "title": "Microgame - Number Cruncher ~ Greedy Hands ~ Chalk Full ~&#8203;Free Range",
     "plays": null,
     "moods": [
+      "driving",
       "playful"
     ]
   },
@@ -166,45 +167,45 @@
     "title": "Microgame - Housewares ~ Ramp It Up ~ Good Times",
     "plays": null,
     "moods": [
-      "playful",
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Microgame - Profiler ~ Goin' Loopy",
     "plays": null,
     "moods": [
-      "playful"
+      "mysterious"
     ]
   },
   {
     "title": "Microgame - Into the Sunset",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "peaceful"
+      "laid-back",
+      "nostalgic"
     ]
   },
   {
     "title": "Microgame - Character Development",
     "plays": null,
     "moods": [
-      "playful"
+      "wonder"
     ]
   },
   {
     "title": "Microgame - Accountant Assault",
     "plays": null,
     "moods": [
-      "playful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Microgame - Rump Roast ~ Public Transportation",
     "plays": null,
     "moods": [
-      "playful"
+      "driving"
     ]
   },
   {
@@ -219,8 +220,8 @@
     "title": "Speed Up! - Level Up!",
     "plays": null,
     "moods": [
-      "driving",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
@@ -248,15 +249,15 @@
     "title": "Boss Stage",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Boss - You Break It, You Buy It!",
     "plays": null,
     "moods": [
-      "powerful",
+      "intense",
       "driving"
     ]
   },
@@ -264,6 +265,7 @@
     "title": "Stage Clear",
     "plays": null,
     "moods": [
+      "heroic",
       "joyful"
     ]
   },
@@ -286,7 +288,8 @@
     "title": "Mona's Cute Cuts - Ear Candy",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -298,19 +301,33 @@
   },
   {
     "title": "Mona's Cute Cuts - Rank 5, Mike (English)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Mona's Cute Cuts - Rank 5, Mike (Japanese)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Mona's Cute Cuts - Rank 4, Luna (English)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "dreamy"
+    ]
   },
   {
     "title": "Mona's Cute Cuts - Rank 4, Luna (Japanese)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "dreamy"
+    ]
   },
   {
     "title": "Mona's Cute Cuts - Rank 3, Pork Loins",
@@ -318,36 +335,48 @@
   },
   {
     "title": "Mona's Cute Cuts - Singing Sensation, Sammy Rai",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Mona's Cute Cuts - Rank 2, Vanessa",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Mona's Cute Cuts - Rank 1, Mona",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "joyful",
+      "playful"
+    ]
   },
   {
     "title": "Mona's Cute Cuts - Vanessa Plots",
     "plays": null,
     "moods": [
-      "playful",
-      "mysterious"
+      "mysterious",
+      "ominous"
     ]
   },
   {
     "title": "Mona's Cute Cuts - Tutorial",
     "plays": null,
     "moods": [
-      "playful"
+      "laid-back"
     ]
   },
   {
     "title": "Mona's Cute Cuts - On the Move",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -375,7 +404,7 @@
     "title": "Microgame - Zooooooo",
     "plays": null,
     "moods": [
-      "playful",
+      "wonder",
       "joyful"
     ]
   },
@@ -383,7 +412,7 @@
     "title": "Microgame - Running of the Bull's-eye ~ Track and Field",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -391,52 +420,55 @@
     "title": "Microgame - Sinking Feeling ~ Admiral Blowhard",
     "plays": null,
     "moods": [
-      "playful",
-      "tense"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Microgame - Star Struck ~ Short Fuse ~ Domino Theory",
     "plays": null,
     "moods": [
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Microgame - Face-Lift ~ Tuft It Out ~ Sneeze, Please! ~ Oh,&#8203;Snap! ~ Washed Up",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "intense"
     ]
   },
   {
     "title": "Microgame - Cage Match ~ Farm Fresh",
     "plays": null,
     "moods": [
-      "playful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Microgame - No Love For You ~ Sweet Sorrow",
     "plays": null,
     "moods": [
-      "playful",
-      "sad"
+      "sad",
+      "tender"
     ]
   },
   {
     "title": "Microgame - Pass Aggressive",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Microgame - Sweeping Victory",
     "plays": null,
     "moods": [
-      "playful"
+      "joyful"
     ]
   },
   {
@@ -458,14 +490,15 @@
     "title": "Microgame - Middle Management",
     "plays": null,
     "moods": [
-      "playful"
+      "driving"
     ]
   },
   {
     "title": "Mona's Cute Cuts - Win",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -479,8 +512,8 @@
     "title": "Boss - Pro Bowling",
     "plays": null,
     "moods": [
-      "playful",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -502,14 +535,15 @@
     "title": "Microgame - Impressionism ~ Drop the Ball",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Microgame - Shakedown",
     "plays": null,
     "moods": [
-      "playful",
+      "intense",
       "driving"
     ]
   },
@@ -524,8 +558,7 @@
     "title": "Microgame - Arms Race",
     "plays": null,
     "moods": [
-      "playful",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -540,7 +573,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "romantic"
+      "mysterious"
     ]
   },
   {
@@ -554,8 +587,8 @@
     "title": "Microgame - Power Chord",
     "plays": null,
     "moods": [
-      "playful",
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -569,7 +602,6 @@
     "title": "Microgame - Ick Magnet",
     "plays": null,
     "moods": [
-      "playful",
       "eerie"
     ]
   },
@@ -578,7 +610,7 @@
     "plays": null,
     "moods": [
       "playful",
-      "joyful"
+      "driving"
     ]
   },
   {
@@ -593,14 +625,15 @@
     "title": "Microgame - Erosion",
     "plays": null,
     "moods": [
-      "mysterious"
+      "playful"
     ]
   },
   {
     "title": "Jimmy's Dance Club Rub - Win",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -614,7 +647,8 @@
     "title": "Boss - Rainbow Juice",
     "plays": null,
     "moods": [
-      "powerful"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -628,14 +662,16 @@
     "title": "Kat & Ana's Ninja Scribble - Opening",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "playful"
     ]
   },
   {
     "title": "Kat & Ana's Ninja Scribble - Tutorial",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
@@ -643,7 +679,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "tense"
+      "intense"
     ]
   },
   {
@@ -659,7 +695,11 @@
   },
   {
     "title": "Microgame - Long Division ~ Quite Puzzled",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "playful"
+    ]
   },
   {
     "title": "Microgame - Domestic Issue",
@@ -686,7 +726,8 @@
     "title": "Microgame - Finish Line",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
@@ -700,6 +741,7 @@
     "title": "Microgame - Bright Idea",
     "plays": null,
     "moods": [
+      "playful",
       "wonder"
     ]
   },
@@ -707,7 +749,8 @@
     "title": "Microgame - What's Your Sign",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "playful"
     ]
   },
   {
@@ -736,7 +779,8 @@
     "title": "Microgame - The Proud, The Fuse",
     "plays": null,
     "moods": [
-      "powerful"
+      "intense",
+      "driving"
     ]
   },
   {
@@ -748,13 +792,16 @@
   },
   {
     "title": "Microgame - In the Loop",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Microgame - Hi, Wire!",
     "plays": null,
     "moods": [
-      "tense",
+      "suspenseful",
       "playful"
     ]
   },
@@ -776,7 +823,8 @@
     "title": "Boss - Galaxy Bounce",
     "plays": null,
     "moods": [
-      "wonder"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -790,21 +838,30 @@
     "title": "Ashley & Red's Total Drag Games - Opening",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "playful"
     ]
   },
   {
     "title": "Ashley & Red's Total Drag Games - Tutorial",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Ashley & Red's Total Drag Games",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious",
+      "eerie"
+    ]
   },
   {
     "title": "Ashley's Song (English)",
     "plays": null,
     "moods": [
+      "mysterious",
       "eerie"
     ]
   },
@@ -812,32 +869,40 @@
     "title": "Ashley's Song (Japanese)",
     "plays": null,
     "moods": [
+      "mysterious",
       "eerie"
     ]
   },
   {
     "title": "Microgame - Separation Anxiety",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "sad",
+      "playful"
+    ]
   },
   {
     "title": "Microgame - Basket Case",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "intense"
     ]
   },
   {
     "title": "Microgame - I'm #1!",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Microgame - Rock Fever",
     "plays": null,
     "moods": [
-      "powerful"
+      "intense",
+      "playful"
     ]
   },
   {
@@ -858,7 +923,8 @@
     "title": "Microgame - Sugar Rush",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
@@ -886,25 +952,31 @@
     "title": "Microgame - Cheap Thrill",
     "plays": null,
     "moods": [
-      "joyful"
+      "joyful",
+      "playful"
     ]
   },
   {
     "title": "Microgame - Fill 'er Up",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Microgame - Don't Blow It",
     "plays": null,
     "moods": [
-      "tense"
+      "suspenseful",
+      "playful"
     ]
   },
   {
     "title": "Boss - Global Warning",
     "plays": null,
     "moods": [
-      "powerful"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -918,6 +990,7 @@
     "title": "Dr. Crygor's Slightly Unscrewed Games - Opening",
     "plays": null,
     "moods": [
+      "playful",
       "mysterious"
     ]
   },
@@ -929,7 +1002,8 @@
     "title": "Microgame - Heads Will Roll ~ Big as a Whale",
     "plays": null,
     "moods": [
-      "eerie"
+      "intense",
+      "playful"
     ]
   },
   {
@@ -971,7 +1045,7 @@
     "title": "Microgame - Gym Locker",
     "plays": null,
     "moods": [
-      "eerie"
+      "playful"
     ]
   },
   {
@@ -985,6 +1059,7 @@
     "title": "Microgame - Luna-see",
     "plays": null,
     "moods": [
+      "dreamy",
       "peaceful"
     ]
   },
@@ -1006,8 +1081,8 @@
     "title": "Boss - Living Room Rally",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -1019,11 +1094,19 @@
   },
   {
     "title": "Mike's Song (English)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back",
+      "playful"
+    ]
   },
   {
     "title": "Mike's Song (Japanese)",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back",
+      "playful"
+    ]
   },
   {
     "title": "Mike Mic Rocking - Next",
@@ -1033,6 +1116,7 @@
     "title": "Microgame - Spindy Day (Stage 1)",
     "plays": null,
     "moods": [
+      "driving",
       "playful"
     ]
   },
@@ -1040,6 +1124,7 @@
     "title": "Microgame - Spindy Day (Stage 2)",
     "plays": null,
     "moods": [
+      "driving",
       "playful"
     ]
   },
@@ -1047,6 +1132,7 @@
     "title": "Microgame - Spindy Day (Stage 3)",
     "plays": null,
     "moods": [
+      "driving",
       "playful"
     ]
   },
@@ -1054,14 +1140,16 @@
     "title": "Microgame - Sweet Nothings",
     "plays": null,
     "moods": [
-      "tender"
+      "tender",
+      "romantic"
     ]
   },
   {
     "title": "Microgame - Pop Art",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -1082,6 +1170,7 @@
     "title": "Microgame - Winter Fresh",
     "plays": null,
     "moods": [
+      "peaceful",
       "playful"
     ]
   },
@@ -1089,24 +1178,29 @@
     "title": "Microgame - Light Sleeper",
     "plays": null,
     "moods": [
-      "eerie"
+      "playful"
     ]
   },
   {
     "title": "Microgame - Cool It",
     "plays": null,
     "moods": [
+      "peaceful",
       "playful"
     ]
   },
   {
     "title": "Microgame - Rising Inflation",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Microgame - Crowd Control",
     "plays": null,
     "moods": [
+      "intense",
       "playful"
     ]
   },
@@ -1114,7 +1208,8 @@
     "title": "Microgame - Deep Breath ~ Straight to Video",
     "plays": null,
     "moods": [
-      "peaceful"
+      "peaceful",
+      "tender"
     ]
   },
   {
@@ -1135,15 +1230,16 @@
     "title": "Microgame - In Your Face",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "intense",
+      "playful"
     ]
   },
   {
     "title": "Microgame - Silent But Deadly",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
@@ -1171,8 +1267,8 @@
     "title": "Boss - Seedy Area",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "ominous",
+      "eerie"
     ]
   },
   {
@@ -1186,7 +1282,7 @@
     "title": "9-Volt & 18-Volt's Retro Action - Opening",
     "plays": null,
     "moods": [
-      "nostalgic"
+      "heroic"
     ]
   },
   {
@@ -1201,7 +1297,7 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
@@ -1215,16 +1311,16 @@
     "title": "Microgame - Super Mario Bros. (Coin)",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "joyful"
+      "joyful",
+      "nostalgic"
     ]
   },
   {
     "title": "Microgame - The Legend of Zelda (Stage 1)",
     "plays": null,
     "moods": [
-      "wonder",
-      "nostalgic"
+      "mysterious",
+      "wonder"
     ]
   },
   {
@@ -1232,38 +1328,39 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "nostalgic"
+      "playful"
     ]
   },
   {
     "title": "Microgame - The Legend of Zelda (Stage 3)",
     "plays": null,
     "moods": [
-      "heroic",
-      "nostalgic"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "Microgame - Duck Hunt",
     "plays": null,
     "moods": [
-      "driving",
-      "nostalgic"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Microgame - Metroid",
     "plays": null,
     "moods": [
-      "powerful",
-      "nostalgic"
+      "intense",
+      "heroic"
     ]
   },
   {
     "title": "Microgame - Famicom Tantei Club 2 (Stage 1)",
     "plays": null,
     "moods": [
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -1277,7 +1374,7 @@
     "title": "Microgame - Famicom Tantei Club 2 (Stage 3)",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "mysterious"
     ]
   },
@@ -1285,22 +1382,22 @@
     "title": "Microgame - Famicom Tantei Club 2 (Stage 4)",
     "plays": null,
     "moods": [
-      "mysterious"
+      "suspenseful"
     ]
   },
   {
     "title": "Microgame - Famicom Tantei Club 2 (Stage 5)",
     "plays": null,
     "moods": [
-      "mysterious"
+      "intense"
     ]
   },
   {
     "title": "Microgame - Pushing Buttons",
     "plays": null,
     "moods": [
-      "playful",
-      "driving"
+      "driving",
+      "playful"
     ]
   },
   {
@@ -1324,13 +1421,14 @@
     "plays": null,
     "moods": [
       "heroic",
-      "playful"
+      "epic"
     ]
   },
   {
     "title": "Microgame - Gold Digger",
     "plays": null,
     "moods": [
+      "playful",
       "driving"
     ]
   },
@@ -1338,29 +1436,32 @@
     "title": "Microgame - Super Mario Bros. (Enemies)",
     "plays": null,
     "moods": [
-      "playful",
-      "nostalgic"
+      "intense",
+      "playful"
     ]
   },
   {
     "title": "Microgame - Button Masher (Stage 1)",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Microgame - Button Masher (Stage 2)",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Microgame - Button Masher (Stage 3)",
     "plays": null,
     "moods": [
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
@@ -1374,8 +1475,8 @@
     "title": "Microgame - Donkey Kong 3",
     "plays": null,
     "moods": [
-      "nostalgic",
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -1390,7 +1491,8 @@
     "title": "Microgame - Hogan's Alley",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
@@ -1411,16 +1513,16 @@
     "title": "Boss - Gunslinger (Phase 1)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
     "title": "Boss - Gunslinger (Phase 1)",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "intense",
+      "ominous"
     ]
   },
   {
@@ -1434,7 +1536,6 @@
     "title": "Wario-Man's Super Zero - Opening",
     "plays": null,
     "moods": [
-      "powerful",
       "heroic"
     ]
   },
@@ -1449,8 +1550,8 @@
     "title": "Wario-Man's Super Zero - This Power!",
     "plays": null,
     "moods": [
-      "powerful",
-      "joyful"
+      "epic",
+      "heroic"
     ]
   },
   {
@@ -1471,6 +1572,7 @@
     "title": "Microgame - Hot Flash",
     "plays": null,
     "moods": [
+      "intense",
       "playful"
     ]
   },
@@ -1485,36 +1587,40 @@
     "title": "Microgame - Spario",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Microgame - Where's Wario",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "mysterious"
     ]
   },
   {
     "title": "Microgame - Nitpicking",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "intense"
     ]
   },
   {
     "title": "Microgame - Upper Cut",
     "plays": null,
     "moods": [
-      "playful"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Microgame - Dead Simon Says",
     "plays": null,
     "moods": [
-      "eerie",
-      "playful"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -1535,13 +1641,15 @@
     "title": "Boss - Being Nosy",
     "plays": null,
     "moods": [
-      "tense"
+      "eerie",
+      "ominous"
     ]
   },
   {
     "title": "Boss - Being Nosy (Escape)",
     "plays": null,
     "moods": [
+      "intense",
       "driving"
     ]
   },
@@ -1556,12 +1664,15 @@
     "title": "Cast Roll",
     "plays": null,
     "moods": [
-      "playful"
+      "joyful"
     ]
   },
   {
     "title": "Staff Roll",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Epilogue",
@@ -1569,20 +1680,25 @@
   },
   {
     "title": "Sub-Game Title",
-    "plays": null
-  },
-  {
-    "title": "Juggle Boy",
     "plays": null,
     "moods": [
       "playful"
     ]
   },
   {
+    "title": "Juggle Boy",
+    "plays": null,
+    "moods": [
+      "playful",
+      "driving"
+    ]
+  },
+  {
     "title": "Air Dude",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "joyful"
     ]
   },
   {
@@ -1590,80 +1706,122 @@
     "plays": null,
     "moods": [
       "playful",
-      "peaceful"
+      "laid-back"
     ]
   },
   {
     "title": "Pyoro T",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Mario Paint (Record)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "laid-back"
     ]
   },
   {
     "title": "Hogan's Alley (Record)",
     "plays": null,
     "moods": [
-      "playful"
+      "playful",
+      "driving"
     ]
   },
   {
     "title": "Unused Microgame 1",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 2",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 3",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 4",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 5",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 6",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 7",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 8",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 9",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 10",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 11",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 12",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   },
   {
     "title": "Unused Microgame 13",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "playful"
+    ]
   }
 ]

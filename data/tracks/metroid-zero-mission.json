@@ -3,7 +3,7 @@
     "title": "Intro Movie",
     "plays": null,
     "moods": [
-      "wonder",
+      "epic",
       "mysterious"
     ]
   },
@@ -12,19 +12,22 @@
     "plays": null,
     "moods": [
       "mysterious",
-      "transcendent"
+      "wonder"
     ]
   },
   {
     "title": "File Select",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "peaceful"
+    ]
   },
   {
     "title": "Landing on Zebes",
     "plays": null,
     "moods": [
-      "wonder",
-      "mysterious"
+      "mysterious",
+      "ominous"
     ]
   },
   {
@@ -32,15 +35,15 @@
     "plays": null,
     "moods": [
       "heroic",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Brinstar",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "mysterious",
+      "eerie"
     ]
   },
   {
@@ -67,42 +70,48 @@
   },
   {
     "title": "Map Room",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "laid-back"
+    ]
   },
   {
     "title": "Pushy Purple Worm",
     "plays": null,
     "moods": [
-      "eerie",
-      "driving"
+      "driving",
+      "intense"
     ]
   },
   {
     "title": "Mother Brain Sees You",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "ominous"
     ]
   },
   {
     "title": "Norfair",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "intense",
+      "eerie"
     ]
   },
   {
     "title": "Criteria",
-    "plays": null
+    "plays": null,
+    "moods": [
+      "mysterious"
+    ]
   },
   {
     "title": "Chozo Ruins",
     "plays": null,
     "moods": [
       "mysterious",
-      "eerie"
+      "wonder"
     ]
   },
   {
@@ -116,119 +125,119 @@
     "title": "The Elevator to Hell",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Kraid's Hideout",
     "plays": null,
     "moods": [
-      "eerie",
-      "mysterious"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Kraid Intro",
     "plays": null,
     "moods": [
-      "tense",
-      "heroic"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Kraid",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Ridley in Space",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "suspenseful"
     ]
   },
   {
     "title": "Wasp Larvae",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Ridley Lands on Zebes",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "ominous",
+      "epic"
     ]
   },
   {
     "title": "Ridley's Hideout",
     "plays": null,
     "moods": [
-      "mysterious",
-      "eerie"
+      "intense",
+      "mysterious"
     ]
   },
   {
     "title": "Hatched Wasp",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "intense",
+      "driving"
     ]
   },
   {
     "title": "Dead Wasp",
     "plays": null,
     "moods": [
-      "eerie"
+      "hopeful"
     ]
   },
   {
     "title": "Ridley",
     "plays": null,
     "moods": [
-      "powerful",
-      "driving"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Gate to Tourain",
     "plays": null,
     "moods": [
-      "tense",
-      "mysterious"
+      "suspenseful",
+      "intense"
     ]
   },
   {
     "title": "Metroids Feast",
     "plays": null,
     "moods": [
-      "eerie",
-      "tense"
+      "ominous",
+      "eerie"
     ]
   },
   {
     "title": "Tourain",
     "plays": null,
     "moods": [
-      "eerie",
-      "powerful"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "Mother Brain",
     "plays": null,
     "moods": [
-      "powerful",
-      "tense"
+      "epic",
+      "intense"
     ]
   },
   {
@@ -236,14 +245,14 @@
     "plays": null,
     "moods": [
       "driving",
-      "powerful"
+      "intense"
     ]
   },
   {
     "title": "Space Pirates",
     "plays": null,
     "moods": [
-      "tense",
+      "intense",
       "driving"
     ]
   },
@@ -251,16 +260,16 @@
     "title": "Space Pirate Mother Ship",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "epic",
+      "intense"
     ]
   },
   {
     "title": "Alarm Tripped",
     "plays": null,
     "moods": [
-      "tense",
-      "driving"
+      "suspenseful",
+      "intense"
     ]
   },
   {
@@ -275,47 +284,44 @@
     "title": "Chozo Guardian",
     "plays": null,
     "moods": [
-      "mysterious",
-      "transcendent"
+      "ominous",
+      "intense"
     ]
   },
   {
     "title": "System Scan",
-    "plays": null,
-    "moods": [
-      "mysterious"
-    ]
+    "plays": null
   },
   {
     "title": "Fully Powered Suit",
     "plays": null,
     "moods": [
-      "powerful",
-      "heroic"
+      "epic",
+      "hopeful"
     ]
   },
   {
     "title": "Metal Ridley",
     "plays": null,
     "moods": [
-      "tense",
-      "powerful"
+      "intense",
+      "epic"
     ]
   },
   {
     "title": "Mission Accomplished",
     "plays": null,
     "moods": [
-      "joyful",
-      "heroic"
+      "heroic",
+      "joyful"
     ]
   },
   {
     "title": "Staff Roll",
     "plays": null,
     "moods": [
-      "joyful",
-      "transcendent"
+      "heroic",
+      "nostalgic"
     ]
   },
   {
