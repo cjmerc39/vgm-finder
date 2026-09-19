@@ -55,7 +55,7 @@ def test_three_sources_in_order_and_nothing_overwritten():
 
 
 def test_credit_lines_split_into_names_and_drop_non_credits():
-    assert fill_composers._names("A, B &amp; C and D / E") == ["A", "B", "C", "D", "E"]
+    assert fill_composers._names("Ann Lee, Bo Chen &amp; Cy Park and Di Wu / Ed Moe") == ["Ann Lee", "Bo Chen", "Cy Park", "Di Wu", "Ed Moe"]
     assert fill_composers.credited(["Various Artists", "Geek Music", "Tiny Game", "Real Person"], "Tiny Game") == ["Real Person"]
 
 
@@ -64,3 +64,42 @@ def test_the_daily_step_only_touches_recent_rows():
     old["sources"][0]["seenAt"] = "2026-07-01T00:00:00Z"
     got = fill_composers.fill([old], recent_since="2026-09-01T00:00:00Z", post=lambda q: 1 / 0, pause=0, log=lambda *_: None)
     assert got == {"album": 0, "wikidata": 0, "steam": 0}
+
+
+def test_prose_credit_lines_give_the_composers_and_paragraphs_give_nothing():
+    kingdom = ("Music composed &amp; orchestrated by Jan Valta Tracks [4, 7, 12] composed by Adam Sporka "
+               "Lyrics by John Comer [42] Produced by Jan Valta")
+    assert fill_composers._names(kingdom) == ["Jan Valta", "Adam Sporka"]          # the lyricist and producer lines are skipped
+    assert fill_composers._names("Additional music by by Adam Sporka") == ["Adam Sporka"]
+    assert fill_composers._names("光碟一： 駱集益 音樂製作人，曾以《海角七號》電影配樂獲得第45屆金馬獎最佳原創電影音樂獎。") == []
+    assert fill_composers._names("C418") == ["C418"] and fill_composers._names("Tracks [4, 7]") == []
+
+
+def test_labels_and_the_game_s_own_name_are_never_composers():
+    assert fill_composers.credited(["SEGA", "Killing Floor 3", "Jan Valta"], "Killing Floor III") == ["Jan Valta"]
+
+
+def test_a_various_artists_album_credits_the_artists_on_most_of_its_tracks():
+    album = {"artists": [{"name": "Various Artists"}],
+             "tracks": [{"artists": [{"name": "LudoWic"}]}, {"artists": [{"name": "LudoWic"}, {"name": "Bill Kiley"}]},
+                        {"artists": [{"name": "Bill Kiley"}]}, {"artists": [{"name": "One Off"}]},
+                        {"artists": [{"name": "Various Artists"}]}]}
+    assert fill_composers.album_artists("x", album_fn=lambda b: album) == ["LudoWic", "Bill Kiley"]  # One Off has one track
+    assert fill_composers.album_artists("x", album_fn=lambda b: {"artists": [{"name": "Darren Korb"}]}) == ["Darren Korb"]
+
+
+def test_a_slow_wikidata_batch_is_retried_and_never_sinks_the_rest(monkeypatch):
+    monkeypatch.setattr(fill_composers.time, "sleep", lambda s: None)
+    calls = []
+
+    def post(q):
+        calls.append(q)
+        if '"slow-0"' in q and len([c for c in calls if '"slow-0"' in c]) < 3:
+            raise TimeoutError("read timed out")
+        if '"dead-0"' in q:
+            raise TimeoutError("read timed out")
+        slug = q.split('"')[1]
+        return {"results": {"bindings": [{"slug": {"value": slug}, "name": {"value": "Composer " + slug}}]}}
+    slugs = [f"slow-{i}" for i in range(25)] + [f"dead-{i}" for i in range(25)] + [f"fine-{i}" for i in range(25)]
+    out = fill_composers.wikidata_composers(slugs, post=post)
+    assert out == {"slow-0": ["Composer slow-0"], "fine-0": ["Composer fine-0"]}  # the dead batch alone is lost
