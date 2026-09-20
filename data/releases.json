@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T00:44:11Z",
+  "updatedAt": "2026-09-20T00:45:09Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -373907,7 +373907,18 @@
       "ytmPlaylistId": "OLAK5uy_m7YWL68VOgm7sPgdby9WU5rCQR21cOYww",
       "scoresN": 58,
       "tracksN": 58,
-      "playsTotal": 208066
+      "playsTotal": 208066,
+      "moods": [
+        "intense",
+        "wonder",
+        "mysterious"
+      ],
+      "moodsN": [
+        14,
+        13,
+        10
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-tales-of-the-walking-dead",
@@ -373949,7 +373960,18 @@
       "ytmPlaylistId": "OLAK5uy_mIpO8MAIrqRq90T1Ddx7CYNCSPkxrF26U",
       "scoresN": 15,
       "tracksN": 15,
-      "playsTotal": 603
+      "playsTotal": 603,
+      "moods": [
+        "intense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-the-walking-dead-vol-1",
@@ -373985,7 +374007,18 @@
       "scoresN": 1,
       "songsAlbum": true,
       "tracksN": 8,
-      "playsTotal": 21650000
+      "playsTotal": 21650000,
+      "moods": [
+        "tender",
+        "ominous",
+        "driving"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-the-walking-dead-vol-2",
@@ -374021,7 +374054,18 @@
       "scoresN": 0,
       "songsAlbum": true,
       "tracksN": 5,
-      "playsTotal": 23532000
+      "playsTotal": 23532000,
+      "moods": [
+        "ominous",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ],
+      "moodsV": 2
     }
   ]
 }

@@ -6,7 +6,11 @@
     "artists": [
       "Portugal. The Man"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "intense",
+      "driving"
+    ]
   },
   {
     "title": "Serpents (Basement)",
@@ -15,7 +19,11 @@
     "artists": [
       "Sharon Van Etten"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "suspenseful",
+      "ominous"
+    ]
   },
   {
     "title": "Blackbird Song",
@@ -24,7 +32,11 @@
     "artists": [
       "Lee DeWyze"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "eerie",
+      "mysterious"
+    ]
   },
   {
     "title": "Be Not So Fearful",
@@ -33,7 +45,11 @@
     "artists": [
       "A.C. Newman"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "hopeful",
+      "tender"
+    ]
   },
   {
     "title": "This Old Death",
@@ -42,6 +58,10 @@
     "artists": [
       "Ben Nichols"
     ],
-    "song": true
+    "song": true,
+    "moods": [
+      "sad",
+      "ominous"
+    ]
   }
 ]
