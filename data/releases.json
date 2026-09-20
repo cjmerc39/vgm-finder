@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T00:24:02Z",
+  "updatedAt": "2026-09-20T00:24:53Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -373695,7 +373695,18 @@
       "scoresN": 0,
       "songsAlbum": true,
       "tracksN": 15,
-      "playsTotal": 40706000
+      "playsTotal": 40706000,
+      "moods": [
+        "intense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ],
+      "moodsV": 2
     },
     {
       "id": "film-casino-royale",
@@ -373731,7 +373742,18 @@
       "scoresN": 0,
       "songsAlbum": true,
       "tracksN": 25,
-      "playsTotal": 83714000
+      "playsTotal": 83714000,
+      "moods": [
+        "intense",
+        "driving",
+        "suspenseful"
+      ],
+      "moodsN": [
+        9,
+        5,
+        4
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-castlevania-nocturne-season-1",
@@ -373767,7 +373789,18 @@
       "ytmPlaylistId": "OLAK5uy_kgMXB70IYNBxfuA7bRF3joVdZLeAxyMfg",
       "scoresN": 29,
       "tracksN": 30,
-      "playsTotal": 8563000
+      "playsTotal": 8563000,
+      "moods": [
+        "tender",
+        "intense",
+        "ominous"
+      ],
+      "moodsN": [
+        8,
+        8,
+        7
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-castlevania-nocturne-season-2",
@@ -373804,7 +373837,18 @@
       "ytmPlaylistId": "OLAK5uy_n6HkLBvCwEUU2Xq6cif97wgVyUXU6_OxQ",
       "scoresN": 30,
       "tracksN": 30,
-      "playsTotal": 586100
+      "playsTotal": 586100,
+      "moods": [
+        "intense",
+        "ominous",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        6,
+        6
+      ],
+      "moodsV": 2
     }
   ]
 }
