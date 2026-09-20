@@ -27,7 +27,13 @@
      "why": "weak guard: credited to Simon & Garfunkel and Dave Grusin, and TMDb names no composer"},
     {"tmdb": 671, "season": null, "name": "Harry Potter and the Philosopher's Stone", "album": "MPREb_rGH1DfISvgh",
      "albumTitle": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
-     "why": "title gate: TMDb titles the film Philosopher's Stone while John Williams' album is the US Sorcerer's Stone (CJ, 2026-09-19)"}
+     "why": "title gate: TMDb titles the film Philosopher's Stone while John Williams' album is the US Sorcerer's Stone (CJ, 2026-09-19)"},
+    {"tmdb": 36669, "name": "Die Another Day", "album": "MPREb_sYZEsrwkZfI",
+     "albumTitle": "Music From The MGM Motion Picture Die Another Day",
+     "why": "title gate: the studio's wording leads the album title, and David Arnold's score is inside it (CJ, 2026-09-19)"},
+    {"tmdb": 36557, "name": "Casino Royale", "album": "MPREb_zcY34in5N8F",
+     "albumTitle": "Casino Royale",
+     "why": "weak guard: the album is credited to 'Original Motion Picture Soundtrack', not to David Arnold (CJ, 2026-09-19)"}
   ],
   "tv": [
     {"tmdb": 4608, "season": null, "name": "30 Rock", "album": "MPREb_5FuG5LzEEeL",
@@ -96,6 +102,12 @@
     {"tmdb": 4194, "season": 7, "volume": 3, "name": "Star Wars: The Clone Wars", "album": "MPREb_bKIqx2PSF7J",
      "albumTitle": "Star Wars: The Clone Wars - The Final Season (Episodes 9-12) (Original Soundtrack)",
      "why": "the final season's third part, the one album the show's row wore until now"},
+    {"tmdb": 123548, "season": 1, "name": "Castlevania: Nocturne", "album": "MPREb_BlZ63nijBlg",
+     "albumTitle": "Castlevania Nocturne (Original Series Soundtrack)",
+     "why": "never evaluated (under the TV vote bar): Trevor Morris' own season 1 album, on his artist page (CJ, 2026-09-19)"},
+    {"tmdb": 123548, "season": 2, "name": "Castlevania: Nocturne", "album": "MPREb_qoJ7L42h2bG",
+     "albumTitle": "Castlevania Nocturne Season 2 (Original Series Soundtrack)",
+     "why": "the season 2 album, which had landed on the 2017 series' row and retired it; the 2017 Castlevania has no album on YTM"},
     {"tmdb": 34549, "season": null, "name": "The Great British Bake Off", "album": "MPREb_Svvjdud08bN",
      "albumTitle": "Great British Bake Off",
      "why": "never evaluated (under the TV vote bar) and no TMDb composer: Tom Howe's 2012 album of the show's cues and theme, the BBC run's era; Jack Hallam's Music from the Great British Bake Off covers the same cues and is left out (CJ, 2026-09-18)"}
