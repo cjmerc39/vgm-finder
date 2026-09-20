@@ -1082,6 +1082,23 @@ def test_normalize_screen_folds_the_screen_vocabulary():
         assert collect.normalize_screen(title) == want, title
 
 
+def test_a_studio_possessive_is_searched_and_matched_both_ways():
+    """TMDb calls the show Marvel's Luke Cage; the album is just Luke Cage."""
+    info = {"medium": "tv", "name": "Marvel's Luke Cage", "original": "Marvel's Luke Cage",
+            "years": [2016, 2018], "composers": [], "aliases": [], "seasons": {"1": "2016-09-30"}}
+    assert collect.screen_queries(info) == ["Marvel's Luke Cage soundtrack", "Luke Cage soundtrack"]
+    wants = collect._screen_wants(info)
+    assert ["luke", "cage"] in [w for w, _, _ in wants] and ["marvel", "s", "luke", "cage"] in [w for w, _, _ in wants]
+    assert collect._relation(["luke", "cage", "original", "soundtrack", "album"], wants)[0] == "exact"
+    assert collect.without_studio("DC's Legends of Tomorrow") == "Legends of Tomorrow"
+    assert collect.without_studio("Marvel Studios' What If...?") == "What If...?"
+    assert collect.without_studio("Disney") == "" and collect.without_studio("Luke Cage") == ""
+    assert collect.without_studio("marvel s luke cage", folded=True) == "luke cage"
+    # a show with no studio in front is searched once, as before
+    plain = dict(info, name="Succession", original="Succession")
+    assert collect.screen_queries(plain) == ["Succession soundtrack"]
+
+
 def test_season_numbers_come_from_seasons_never_volumes():
     assert collect._season_of("Succession: Season 4 (HBO Original Series Soundtrack)") == 4
     assert collect._season_of("Doctor Who - Series 8 (Original Television Soundtrack)") == 8

@@ -67,13 +67,20 @@ def rows_for(releases, medium, tid):
             and rewalk.tmdb_id_of(r) == str(tid) and (r.get("ytmAlbumUrl") or "")]
 
 
+def _fold(name):
+    return collect._numfold(collect.normalize_title(name or ""))
+
+
 def _same_title(stored, entry):
-    """The TMDb record still reads as the title that was asked for."""
-    want = collect._numfold(collect.normalize_title(stored or ""))
+    """The TMDb record still reads as the title that was asked for, with or
+    without a studio's name in front: TMDb calls the show Marvel's Luke
+    Cage, and the list may well say Luke Cage."""
+    want = _fold(stored)
     if not want:
         return True
     names = [entry.get("title"), entry.get("name"), entry.get("original_title"), entry.get("original_name")]
-    return any(want == collect._numfold(collect.normalize_title(n or "")) for n in names if n)
+    forms = {f for n in names if n for f in (_fold(n), collect.without_studio(_fold(n), folded=True)) if f}
+    return want in forms or collect.without_studio(want, folded=True) in forms
 
 
 def bundle(medium, entry):

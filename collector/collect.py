@@ -1031,6 +1031,24 @@ _SCREEN_TRIBUTE = {"the soundtrack studio stars", "the london film score orchest
                    "mileena rayne", "jennifer athena galatis", "songs in cinema", "vita", "album"}
 
 
+# A studio's name in front of a title is TMDb's, not the album's: "Marvel's
+# Luke Cage" is released as "Luke Cage (Original Soundtrack Album)", and
+# "DC's Legends of Tomorrow" as "Legends of Tomorrow". The title answers to
+# both forms and is searched under both. A closed list, like the networks,
+# so no title word is mistaken for a studio.
+_STUDIO = (r"(?:marvel(?:\s+studios)?|disney|dc|dreamworks|pixar|lucasfilm"
+           r"|tyler\s+perry|stephen\s+king|jim\s+henson)")
+_STUDIO_RAW = re.compile(rf"^{_STUDIO}(?:'s|s'|')\s+", re.IGNORECASE)
+_STUDIO_BASE = re.compile(rf"^{_STUDIO}(?:\s+s)?\s+")
+
+
+def without_studio(name, folded=False):
+    """A title without its leading studio possessive, or "" when it has
+    none (or when the studio is all there is)."""
+    short = (_STUDIO_BASE if folded else _STUDIO_RAW).sub("", name or "", count=1).strip()
+    return short if short and short != (name or "").strip() else ""
+
+
 def _screen_base(text):
     """normalize_title with numerals folded and numbered markers made
     uniform, so "Pt. Three", "Pt 3" and "Part III" all read "part 3"."""
@@ -1110,7 +1128,7 @@ def _screen_wants(info):
         if info.get("medium") == "film":
             full = _FIRST_VOLUME_TAIL.sub("", full).strip() or full  # same fold as the album side
         short = re.sub(r"\s+", " ", _EPISODE_MARK.sub(" ", full)).strip()
-        for form, ep in ((full, False), (short, True)):
+        for form, ep in ((full, False), (short, True), (without_studio(full, folded=True), False)):
             if form and form not in seen:
                 seen.add(form)
                 out.append((form.split(), ep, len(full.split()) - len(form.split())))
@@ -1735,11 +1753,16 @@ def screen_title_slots(info, results, album_fn, sets, date_fn=None):
 
 def screen_queries(info):
     """Rule 8: the title's search, plus one on TMDb's original title when it
-    reads differently."""
+    reads differently, plus one without a leading studio possessive, whose
+    albums carry the plain name ("Marvel's Luke Cage" -> Luke Cage)."""
     queries = [_query(info["name"])]
     orig = info.get("original")
     if orig and _screen_base(orig) != _screen_base(info["name"]):
         queries.append(_query(orig))
+    for name in (info["name"], orig):
+        short = without_studio(name)
+        if short and _query(short) not in queries:
+            queries.append(_query(short))
     return queries
 
 

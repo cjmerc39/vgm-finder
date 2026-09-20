@@ -129,6 +129,14 @@ def test_an_album_matched_on_plays_alone_is_reported_not_taken():
     assert keep == [solid] and why is None   # one bad candidate never blocks a good one
 
 
+def test_the_name_guard_forgives_a_studio_possessive():
+    cage = {"id": 62126, "name": "Marvel's Luke Cage", "original_name": "Marvel's Luke Cage"}
+    assert check_wanted._same_title("Luke Cage", cage)          # the list may drop the studio
+    assert check_wanted._same_title("Marvel's Luke Cage", cage)  # or keep it
+    assert check_wanted._same_title("", cage)                    # no name stored: no guard
+    assert not check_wanted._same_title("Iron Fist", cage)       # a different show is still caught
+
+
 def test_a_lookup_that_fails_is_a_warning_not_a_crash(monkeypatch):
     _patch(monkeypatch)
     def boom(medium, tid):
