@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T00:24:53Z",
+  "updatedAt": "2026-09-20T00:44:11Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -373849,6 +373849,179 @@
         6
       ],
       "moodsV": 2
+    },
+    {
+      "id": "tv-planet-earth-iii",
+      "title": "Planet Earth III Soundtrack",
+      "medium": "tv",
+      "game": "Planet Earth III",
+      "composers": [
+        "Hans Zimmer",
+        "Will Farquarson",
+        "Kyle Simmons",
+        "Chris \"Woody\" Wood",
+        "Dan Smith",
+        "RAYE",
+        "Sara Barone",
+        "Jacob Shea"
+      ],
+      "date": "2023-10-22",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/116156",
+          "seenAt": "2026-09-20T00:44:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Planet+Earth+III+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_d69S8w1TPa5",
+      "art": "https://yt3.googleusercontent.com/psv1rprQSb2LV8P2Gno7PSH6gU5aUeaddoH5Rw87oCq6r2RIc5_T95L_GuneS7-gIlyHzMBX4N6Dw_M=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Planet Earth III (Original Television Soundtrack)",
+      "genres": [
+        "Documentary",
+        "Family"
+      ],
+      "composerAliases": [
+        "Ханс Циммер",
+        "Ганс Ціммер",
+        "ฮานซ์ ซิมเมอร์",
+        "هانس زیمر",
+        "Hans Florian Zimmer",
+        "Bleeding Fingers",
+        "Bastille",
+        "Bastille",
+        "Kyle Jonathan Simmons",
+        "Bastille",
+        "Chris Wood",
+        "Daniel Campbell Smith",
+        "Bastille",
+        "Rachel Agatha Keen"
+      ],
+      "albumArtists": [
+        "Hans Zimmer",
+        "Jacob Shea",
+        "Sara Barone"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m7YWL68VOgm7sPgdby9WU5rCQR21cOYww",
+      "scoresN": 58,
+      "tracksN": 58,
+      "playsTotal": 208066
+    },
+    {
+      "id": "tv-tales-of-the-walking-dead",
+      "title": "Tales of the Walking Dead Soundtrack",
+      "medium": "tv",
+      "game": "Tales of the Walking Dead",
+      "composers": [
+        "Morgan Kibby"
+      ],
+      "date": "2022-08-14",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/136248",
+          "seenAt": "2026-09-20T00:44:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tales+of+the+Walking+Dead+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wglmQxCdWou",
+      "art": "https://yt3.googleusercontent.com/htC_W_1tMiiB6hRFW8JVJl_vhn4DsuOrlrBeVzW_0Bh74o_9Z2Qf9XV26_sbUkEAUE05DFqy_hMzYJo=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Tales of Walking Dead (Original Television Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Action & Adventure",
+        "Sci-Fi & Fantasy"
+      ],
+      "composerAliases": [
+        "White Sea",
+        "M83",
+        "The Romanovs",
+        "Morgan Grace Kibby"
+      ],
+      "albumArtists": [
+        "Daniel Wohl",
+        "Morgan Kibby"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mIpO8MAIrqRq90T1Ddx7CYNCSPkxrF26U",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 603
+    },
+    {
+      "id": "tv-the-walking-dead-vol-1",
+      "title": "The Walking Dead Vol. 1 Soundtrack",
+      "medium": "tv",
+      "game": "The Walking Dead",
+      "composers": [
+        "Bear McCreary"
+      ],
+      "date": "2010-10-31",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1402",
+          "seenAt": "2026-09-20T00:44:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Walking+Dead+Vol.+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_swF55m2JIKF",
+      "art": "https://yt3.googleusercontent.com/hFWs-oYwgjecwLQJ5VWBOSAY4TlljRA5Ey3OpHcSSyyJ_r1JOYvMdcke1flWgGQ47zDBoTena_c92nc=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Walking Dead (AMC’s Original Soundtrack – Vol. 1)",
+      "genres": [
+        "Action & Adventure",
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lH53OVuZ0Bt3nKhJyFYbZTSXddaw0Y4tA",
+      "scoresN": 1,
+      "songsAlbum": true,
+      "tracksN": 8,
+      "playsTotal": 21650000
+    },
+    {
+      "id": "tv-the-walking-dead-vol-2",
+      "title": "The Walking Dead Vol. 2 Soundtrack",
+      "medium": "tv",
+      "game": "The Walking Dead",
+      "composers": [
+        "Bear McCreary"
+      ],
+      "date": "2010-10-31",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1402",
+          "seenAt": "2026-09-20T00:44:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Walking+Dead+Vol.+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_A1I3iJuftPE",
+      "art": "https://yt3.googleusercontent.com/xrsrOGAEfowaYgllK6Phezugj_tuCFbeP8Jj2uPH1apDUJgpGATlo6OovValdqesN5jY3UmPjw0yyzrY=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Walking Dead: AMC Original Soundtrack, Vol. 2",
+      "genres": [
+        "Action & Adventure",
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k5wHk7EX2tqi2lCGxTHTpf78UByGuDTrg",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 5,
+      "playsTotal": 23532000
     }
   ]
 }
