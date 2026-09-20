@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T02:01:17Z",
+  "updatedAt": "2026-09-20T14:03:57Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -4678,7 +4678,8 @@
       "themes": [
         "Action",
         "Fantasy"
-      ]
+      ],
+      "tracksN": 50
     },
     {
       "id": "nine-sols",
@@ -249108,7 +249109,8 @@
         "Sci-Fi & Fantasy",
         "Drama"
       ],
-      "retired": true
+      "retired": true,
+      "tracksN": 27
     },
     {
       "id": "tv-legion",
@@ -302377,7 +302379,7 @@
       "composers": [
         "Go Sakabe"
       ],
-      "date": "2025-09-07",
+      "date": "2024-09-01",
       "sources": [
         {
           "name": "tmdb-tv",
@@ -302427,7 +302429,7 @@
       "composers": [
         "Go Sakabe"
       ],
-      "date": "2026-09-06",
+      "date": "2025-09-07",
       "sources": [
         {
           "name": "tmdb-tv",
@@ -375263,6 +375265,184 @@
         8,
         7,
         5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "disfigure",
+      "title": "Disfigure Soundtrack",
+      "medium": "game",
+      "game": "Disfigure",
+      "composers": [
+        "Arvid Eapen"
+      ],
+      "date": "2026-09-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5126840/Disfigure_Soundtrack/",
+          "seenAt": "2026-09-20T13:54:59Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Disfigure+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5126840/564a831d7a0b2e1b21ee34293f6d00c81462e758/header.jpg",
+      "notable": true,
+      "tracksN": 30,
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-best-of-the-best",
+      "title": "Best of the Best Soundtrack",
+      "medium": "film",
+      "game": "Best of the Best",
+      "composers": [
+        "Daniel Rojas"
+      ],
+      "date": "2026-09-18",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1514863",
+          "seenAt": "2026-09-20T13:54:59Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Best+of+the+Best+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZVcB6in1974",
+      "art": "https://yt3.googleusercontent.com/A_SAtkWVxX_nmDlUR-VRzmfekZcQ6a8AXof1HJQjsIyRtDknNnHwfNmpmO5wCcNriWw6BgSFjjrotNc_Ow=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Best of the Best (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Comedy"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Daniel Rojas"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k47ipLiV5ougFgEY2EOHYrszikdNqzsPE",
+      "scoresN": 23,
+      "tracksN": 23,
+      "playsTotal": 1735,
+      "moods": [
+        "playful",
+        "intense",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-birthday-party",
+      "title": "The Birthday Party Soundtrack",
+      "medium": "film",
+      "game": "The Birthday Party",
+      "composers": [
+        "Florencia Di Concilio"
+      ],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1191818",
+          "seenAt": "2026-09-20T13:54:59Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Birthday+Party+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_UXkvNwFoo9z",
+      "art": "https://yt3.googleusercontent.com/CAyGkad3lHUeCj0qQo5qiYZZ7POXkM17-NFjYIgSVTfECla3quhFAhx48surGkE5LvcfpwFHx_-uuyba=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Birthday Party (From The Original Motion Picture)",
+      "genres": [
+        "Thriller"
+      ],
+      "weakMatch": true,
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l-kWavfUPubE3NWUD6iC84HzDBcba9km4",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 15,
+      "playsTotal": 10326188,
+      "moods": [
+        "tender",
+        "romantic",
+        "wonder"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-lioness-season-3",
+      "title": "Lioness Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "Lioness",
+      "composers": [
+        "Andrew Lockington"
+      ],
+      "date": "2026-08-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/113962",
+          "seenAt": "2026-09-20T13:54:59Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lioness+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5GUYtTO7co5",
+      "art": "https://yt3.googleusercontent.com/v1j9sGTeulSFe1hlyXTnjitluqEWpuQ_wOPKW7qdZjerFKitWG6o1R-CZ-1nn6wUFsawG8h1HYpFlPg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Lioness: Season 3 (Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "War & Politics"
+      ],
+      "albumArtists": [
+        "Andrew Lockington"
+      ],
+      "ytmPlaylistId": "OLAK5uy_keNqk95PKTVNNd4dFlLQAFmjLU_cyZVXA",
+      "scoresN": 19,
+      "tracksN": 19,
+      "playsTotal": 3453,
+      "moods": [
+        "intense",
+        "ominous",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
       ],
       "moodsV": 2
     }
