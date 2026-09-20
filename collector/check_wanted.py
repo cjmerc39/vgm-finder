@@ -5,9 +5,16 @@ Heroes, Castlevania 2017) leaves no row, and nothing revisits it: the daily
 window has moved on and the backfill walks each vote band once. This keeps
 a short list of such titles in collector/wanted.json and searches every one
 again on each run, exactly as the daily leg searches its window, with the
-same title gate, one-album-one-row and weak-match guards. The run an album
-finally appears the row is added by itself, its tracklist is read, and the
-entry is stamped `got`, so it is never searched again.
+same title gate and one-album-one-row guard. The run an album finally
+appears the row is added by itself, its tracklist is read, and the entry is
+stamped `got`, so it is never searched again.
+
+An unattended check is stricter than a leg in one way: an album matched on
+plays alone, with no composer in common, is reported and left alone rather
+than taken. For a title that has gone years without a soundtrack that
+match is the likeliest wrong answer (the Castlevania show's search finds
+the Konami game's album), and a real one can be pinned in
+screen-overrides.json.
 
 One entry is one TMDb title:
   {"medium": "tv", "tmdb": "1639", "name": "Heroes", "asked": "2026-09-19"}
@@ -90,6 +97,28 @@ def search(medium, tid, resolve=None, album_fn=None, overrides=None, details=Non
     return items, entry
 
 
+def _winnowed(items, releases, name, log):
+    """The albums a wanted title may actually take -> (items, why none).
+    An unattended check is stricter than a leg: an album matched on plays
+    alone (no composer in common) is the likeliest wrong answer for a title
+    that has gone years without one, and the Castlevania show's search
+    finds the Konami game's album, so a weak match is reported and left for
+    a pin. An album another row already wears is never taken either."""
+    owner = {r["ytmAlbumUrl"]: r["id"] for r in releases if r.get("ytmAlbumUrl") and not r.get("retired")}
+    keep, why = [], None
+    for i in items:
+        held = owner.get(i.get("ytmAlbumUrl"))
+        if held:
+            why = f"{i['albumTitle']} is already worn by {held}"
+            log(f"  {name}: {why}, nothing to add")
+        elif i.get("weakMatch"):
+            why = f"{i['albumTitle']} matches on plays alone"
+            log(f"  {name}: {why}, not taken; pin it in screen-overrides.json if it is right")
+        else:
+            keep.append(i)
+    return keep, (None if keep else why)
+
+
 def check(releases, wanted, seen_at, today=None, only=None, dry_run=False, resolve=None, album_fn=None,
           details=None, tracks=True, log=print):
     """Every waiting title searched, and a row added for each album that wins.
@@ -99,6 +128,7 @@ def check(releases, wanted, seen_at, today=None, only=None, dry_run=False, resol
     landed, skipped = [], []
     for t in waiting(wanted):
         medium, tid = t["medium"], str(t["tmdb"])
+        name = t.get("name") or tid
         if only and tid not in only:
             continue
         have = rows_for(releases, medium, tid)
@@ -106,13 +136,13 @@ def check(releases, wanted, seen_at, today=None, only=None, dry_run=False, resol
             if not dry_run:
                 t["got"], t["rows"] = today, have
             landed.append((t, have))
-            log(f"  {t.get('name') or tid}: already has a row ({', '.join(have)})")
+            log(f"  {name}: already has a row ({', '.join(have)})")
             continue
         try:
             items, entry = search(medium, tid, resolve, album_fn, overrides, details)
         except Exception as e:
             skipped.append((t, f"lookup failed: {e}"))
-            log(f"::warning::wanted: {t.get('name') or tid} ({medium} {tid}) not searched: {e}")
+            log(f"::warning::wanted: {name} ({medium} {tid}) not searched: {e}")
             continue
         if not _same_title(t.get("name"), entry):
             skipped.append((t, f"TMDb {medium} {tid} is {entry.get('title') or entry.get('name')!r}"))
@@ -121,12 +151,16 @@ def check(releases, wanted, seen_at, today=None, only=None, dry_run=False, resol
             continue
         if not dry_run:
             t["checked"], t["checks"] = today, int(t.get("checks") or 0) + 1
+        items, refused = _winnowed(items, releases, name, log)
         if not items:
-            log(f"  {t.get('name') or tid}: still nothing on YT Music")
+            if refused:
+                skipped.append((t, refused))
+            else:
+                log(f"  {name}: still nothing on YT Music")
             continue
         if dry_run:
             landed.append((t, [i["albumTitle"] for i in items]))
-            log(f"  {t.get('name') or tid}: would add {len(items)} row(s): "
+            log(f"  {name}: would add {len(items)} row(s): "
                 f"{', '.join(i['albumTitle'] for i in items)}")
             continue
         before = {r["id"] for r in releases}
@@ -136,11 +170,11 @@ def check(releases, wanted, seen_at, today=None, only=None, dry_run=False, resol
         new = [r["id"] for r in releases if r["id"] not in before]
         if not new:
             skipped.append((t, "merge folded it into an existing row"))
-            log(f"  {t.get('name') or tid}: merge folded it into an existing row, check by hand")
+            log(f"  {name}: merge folded it into an existing row, check by hand")
             continue
         t["got"], t["rows"] = today, new
         landed.append((t, new))
-        log(f"  {t.get('name') or tid}: added {', '.join(new)}")
+        log(f"  {name}: added {', '.join(new)}")
         if tracks:
             fresh = [r for r in releases if r["id"] in new]
             collect.fill_tracks(fresh, album_fn or collect.ytm_album, lambda query: None,

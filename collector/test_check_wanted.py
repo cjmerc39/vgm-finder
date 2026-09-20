@@ -108,10 +108,25 @@ def test_an_album_another_row_wears_is_never_taken(monkeypatch):
                  "sources": [{"name": "igdb", "type": "catalog", "url": "https://igdb.com/games/oppenheimer",
                               "seenAt": SEEN}]}]
     wanted, logs = _wanted(), []
-    check_wanted.check(releases, wanted, SEEN, today=TODAY, resolve=resolve, album_fn=album,
-                       details=details, tracks=False, log=logs.append)
-    assert len(releases) == 1 and "got" not in wanted["titles"][0]
-    assert any("already wears that album" in x for x in logs)
+    out = check_wanted.check(releases, wanted, SEEN, today=TODAY, resolve=resolve, album_fn=album,
+                             details=details, tracks=False, log=logs.append)
+    assert len(releases) == 1 and "got" not in wanted["titles"][0] and len(out["skipped"]) == 1
+    assert any("already worn by oppenheimer" in x for x in logs)
+
+
+def test_an_album_matched_on_plays_alone_is_reported_not_taken():
+    # a wanted title takes only the match a leg would call exact: the plays-only
+    # class is the likeliest wrong answer after years with no soundtrack at all
+    weak = {"albumTitle": "Heroes", "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_weak",
+            "weakMatch": True}
+    solid = {"albumTitle": "Heroes (Original Television Soundtrack)",
+             "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_solid"}
+    logs = []
+    keep, why = check_wanted._winnowed([weak], [], "Heroes", logs.append)
+    assert keep == [] and "matches on plays alone" in why
+    assert any("pin it in screen-overrides.json" in x for x in logs)
+    keep, why = check_wanted._winnowed([weak, solid], [], "Heroes", lambda *_: None)
+    assert keep == [solid] and why is None   # one bad candidate never blocks a good one
 
 
 def test_a_lookup_that_fails_is_a_warning_not_a_crash(monkeypatch):
