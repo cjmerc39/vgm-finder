@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T00:56:50Z",
+  "updatedAt": "2026-09-20T00:58:26Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -374103,7 +374103,18 @@
       "ytmPlaylistId": "OLAK5uy_kWrcBpRetEO9iOxNwHYb_F0cn3bgpmlDo",
       "scoresN": 21,
       "tracksN": 30,
-      "playsTotal": 21713400
+      "playsTotal": 21713400,
+      "moods": [
+        "driving",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        13,
+        8,
+        6
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-warrior-season-2",
@@ -374141,7 +374152,18 @@
       "ytmPlaylistId": "OLAK5uy_mInqf_qfxyvsaqmCVxrrPdczwZS4UD60Y",
       "scoresN": 24,
       "tracksN": 27,
-      "playsTotal": 830700
+      "playsTotal": 830700,
+      "moods": [
+        "intense",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-warrior-season-3",
@@ -374179,7 +374201,18 @@
       "ytmPlaylistId": "OLAK5uy_lSYT_GOm_2EL_niArxIVZLUPoOJLenrgk",
       "scoresN": 14,
       "tracksN": 15,
-      "playsTotal": 62400
+      "playsTotal": 62400,
+      "moods": [
+        "intense",
+        "mysterious",
+        "suspenseful"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ],
+      "moodsV": 2
     }
   ]
 }
