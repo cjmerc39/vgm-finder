@@ -51,7 +51,7 @@ def test_three_sources_in_order_and_nothing_overwritten():
     assert by["done"]["composers"] == ["Someone"] and "composersFrom" not in by["done"]
     assert '"hades"' not in queries[0]                                   # filled from the album: never asked of Wikidata
     assert got == {"album": 1, "wikidata": 1, "steam": 2}
-    assert logs == ["composers: 6 game rows had none, 4 filled (1 from the album, 1 from Wikidata, 2 from Steam), 2 still without"]
+    assert logs == ["composers: 6 rows had none, 4 filled (1 from the album, 1 from Wikidata, 2 from Steam), 2 still without"]
 
 
 def test_credit_lines_split_into_names_and_drop_non_credits():
@@ -110,3 +110,55 @@ def test_a_shared_track_credit_counts_for_each_name_in_it():
              "tracks": [{"artists": [{"name": "Nobuko Toda/Shuichi Kobori"}]}, {"artists": [{"name": "Nobuko Toda/Shuichi Kobori"}]},
                         {"artists": [{"name": "Mick Gordon & Martin Stig Andersen"}]}, {"artists": [{"name": "Mick Gordon & Martin Stig Andersen"}]}]}
     assert fill_composers.album_artists("x", album_fn=lambda b: album) == ["Nobuko Toda", "Shuichi Kobori", "Mick Gordon", "Martin Stig Andersen"]
+
+
+def test_a_film_or_tv_row_takes_the_album_credit_then_wikidata():
+    """TMDb credits Marvel's Luke Cage no composer. Its album says Various
+    Artists, and on a screen row that is a song compilation, so the track
+    credits are never read; Wikidata's composer, found by TMDb id, is."""
+    cage = {"id": "tv-luke-cage", "medium": "tv", "game": "Marvel's Luke Cage", "date": "2016-09-30",
+            "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cage",
+            "sources": [{"name": "tmdb-tv", "url": "https://www.themoviedb.org/tv/62126", "seenAt": SEEN}]}
+    wolf = {"id": "film-wolf", "medium": "film", "game": "The Wolf of Wall Street", "date": "2013-12-25",
+            "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wolf",
+            "sources": [{"name": "tmdb-film", "url": "https://www.themoviedb.org/movie/106646", "seenAt": SEEN}]}
+    warrior = {"id": "tv-warrior", "medium": "tv", "game": "Warrior", "date": "2019-04-05",
+               "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_warrior",
+               "sources": [{"name": "tmdb-tv", "url": "https://www.themoviedb.org/tv/73544", "seenAt": SEEN}]}
+    albums = {"MPREb_cage": {"artists": [{"name": "Various Artists"}],
+                             "tracks": [{"title": "Good Man", "artists": [{"name": "Raphael Saadiq"}]},
+                                        {"title": "Soliloquy of Chaos",
+                                         "artists": [{"name": "Ali Shaheed Muhammad & The Midnight Hour"}]}]},
+              "MPREb_wolf": {"artists": [{"name": "Various Artists"}],
+                             "tracks": [{"title": "Bo Diddley", "artists": [{"name": "Bo Diddley"}]},
+                                        {"title": "Dust My Broom", "artists": [{"name": "Bo Diddley"}]}]},
+              "MPREb_warrior": {"artists": [{"name": "Reza Safinia"}, {"name": "H. Scott Salinas"}]}}
+    asked = []
+
+    def post(q):
+        asked.append(q)
+        return {"results": {"bindings": [{"tid": {"value": "62126"}, "name": {"value": "Ali Shaheed Muhammad"}},
+                                         {"tid": {"value": "62126"}, "name": {"value": "Adrian Younge"}},
+                                         {"tid": {"value": "106646"}, "name": {"value": "Howard Shore"}}]}}
+    got = fill_composers.fill([cage, wolf, warrior], album_fn=lambda b: albums[b], post=post,
+                              get=lambda url: "", pause=0, log=lambda *_: None)
+    assert warrior["composers"] == ["Reza Safinia", "H. Scott Salinas"] and warrior["composersFrom"] == "album"
+    assert cage["composers"] == ["Ali Shaheed Muhammad"] and cage["composersFrom"] == "wikidata"
+    assert "Adrian Younge" not in cage["composers"]     # Wikidata named him; this album's credits do not
+    assert "composers" not in wolf                      # Wikidata says Howard Shore; no track credits him
+    assert "Raphael Saadiq" not in str(cage) and "Bo Diddley" not in str(wolf)  # performers never become composers
+    assert fill_composers.on_album("Ali Shaheed Muhammad", {"ali shaheed muhammad the midnight hour"})
+    assert not fill_composers.on_album("Howard Shore", {"bo diddley"})
+    assert got == {"album": 1, "wikidata": 1, "steam": 0}
+    assert len(asked) == 2 and "P4947" in asked[0] and "P4983" in asked[1]      # films by movie id, shows by series id
+    assert '"73544"' not in asked[1]                    # filled from its album: never asked of Wikidata
+
+
+def test_a_games_album_still_reads_its_track_credits():
+    va = _game("va-game", ["https://www.igdb.com/games/va-game"], album="MPREb_va")
+    albums = {"MPREb_va": {"artists": [{"name": "Various Artists"}],
+                           "tracks": [{"title": "a", "artists": [{"name": "Lena Raine"}]},
+                                      {"title": "b", "artists": [{"name": "Lena Raine"}]}]}}
+    fill_composers.fill([va], album_fn=lambda b: albums[b], post=lambda q: {"results": {"bindings": []}},
+                        get=lambda url: "", pause=0, log=lambda *_: None)
+    assert va["composers"] == ["Lena Raine"] and va["composersFrom"] == "album"
