@@ -1,0 +1,44 @@
+name: Wanted list
+# Titles whose soundtrack is not on YT Music yet (collector/wanted.json),
+# searched again exactly as the daily leg searches its window. The daily run
+# does this too; dispatch here to check right now, or after adding a title.
+# Blank ids means every title still waiting.
+on:
+  workflow_dispatch:
+    inputs:
+      tmdb:
+        description: only these TMDb ids
+        required: false
+      dry_run:
+        description: search, write nothing
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: wanted
+  cancel-in-progress: false
+jobs:
+  wanted:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r collector/requirements.txt
+      - run: |
+          args=""
+          [ "$DRY_RUN" = "true" ] && args="--dry-run"
+          [ -n "$TMDB_IDS" ] && args="$args --only $TMDB_IDS"
+          python collector/check_wanted.py $args
+        env:
+          TMDB_IDS: ${{ inputs.tmdb }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      - if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name vgm-bot
+          git config user.email actions@users.noreply.github.com
+          git add data collector/wanted.json
+          git diff --cached --quiet || (git commit -m "wanted list" && git pull --rebase && git push)
