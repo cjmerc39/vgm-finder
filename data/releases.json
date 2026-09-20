@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T01:59:53Z",
+  "updatedAt": "2026-09-20T02:01:17Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -374966,7 +374966,18 @@
       "scoresN": 2,
       "songsAlbum": true,
       "tracksN": 13,
-      "playsTotal": 38383000
+      "playsTotal": 38383000,
+      "moods": [
+        "intense",
+        "driving",
+        "eerie"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-marvel-s-cloak-dagger",
@@ -375004,7 +375015,18 @@
       "ytmPlaylistId": "OLAK5uy_m7tnJuQ70O2qoYrxoCJARcDbxZ7Lq5gic",
       "scoresN": 25,
       "tracksN": 25,
-      "playsTotal": 47258
+      "playsTotal": 47258,
+      "moods": [
+        "intense",
+        "ominous",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-marvel-s-hit-monkey-season-2",
@@ -375039,7 +375061,18 @@
       "ytmPlaylistId": "OLAK5uy_lQKgNxqdoY7_TkzQfR2D-ZkF-yQs06bpg",
       "scoresN": 30,
       "tracksN": 30,
-      "playsTotal": 9866
+      "playsTotal": 9866,
+      "moods": [
+        "intense",
+        "driving",
+        "ominous"
+      ],
+      "moodsN": [
+        11,
+        7,
+        6
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-marvel-s-hit-monkey",
@@ -375074,7 +375107,18 @@
       "ytmPlaylistId": "OLAK5uy_nLLhSmK_Vt4QQgjoPOg_VGjxuqC0vXWOY",
       "scoresN": 34,
       "tracksN": 34,
-      "playsTotal": 156800
+      "playsTotal": 156800,
+      "moods": [
+        "intense",
+        "epic",
+        "driving"
+      ],
+      "moodsN": [
+        11,
+        6,
+        5
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-marvel-s-m-o-d-o-k",
@@ -375109,7 +375153,18 @@
       "ytmPlaylistId": "OLAK5uy_lTLyoFqkobspS1ZH9cFu2lFEo5Oje2Ac4",
       "scoresN": 26,
       "tracksN": 30,
-      "playsTotal": 176446
+      "playsTotal": 176446,
+      "moods": [
+        "intense",
+        "mysterious",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        6
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-your-friendly-neighborhood-spider-man",
@@ -375149,7 +375204,18 @@
       "ytmPlaylistId": "OLAK5uy_mnUuoAhJ-4qU4I-SaVh6p0z8CWOktMAI0",
       "scoresN": 32,
       "tracksN": 33,
-      "playsTotal": 3274600
+      "playsTotal": 3274600,
+      "moods": [
+        "intense",
+        "hopeful",
+        "heroic"
+      ],
+      "moodsN": [
+        11,
+        7,
+        7
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-eyes-of-wakanda",
@@ -375187,7 +375253,18 @@
       "ytmPlaylistId": "OLAK5uy_lgMeeAqXZ9ZzLrFh9M35S2bVK_yoX7WPQ",
       "scoresN": 24,
       "tracksN": 24,
-      "playsTotal": 84077
+      "playsTotal": 84077,
+      "moods": [
+        "intense",
+        "epic",
+        "heroic"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ],
+      "moodsV": 2
     }
   ]
 }
