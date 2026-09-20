@@ -1072,6 +1072,9 @@ def test_normalize_screen_folds_the_screen_vocabulary():
         "Breaking Bad: Original Score from the Television Series": "breaking bad",
         "Soundtrack From Twin Peaks": "twin peaks",
         "Chernobyl (Music from the Original TV Series)": "chernobyl",
+        "Warrior (Cinemax Original Series Soundtrack)": "warrior",
+        "Warrior: Season 2 (Cinemax Original Series Soundtrack)": "warrior",
+        "Claws (Original Series Soundtrack from the TNT Series)": "claws",
         "The Mandalorian: Chapter 1 (Original Score)": "the mandalorian",
         "La La Land (Original Motion Picture Score)": "la la land",
     }

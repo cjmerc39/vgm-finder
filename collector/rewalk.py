@@ -533,11 +533,14 @@ def _dated(c, dates):
     return c
 
 
-def _pin_candidate(p, rec, medium):
+def _pin_candidate(p, rec, medium, album_fn=None):
     """A screen-overrides.json pin as a winning candidate, from the title's
-    stored search, with song-compilation evidence when its page was read."""
+    stored search, with song-compilation evidence when its page was read.
+    album_fn reads the album's own page when the stored search never showed
+    it, so a pinned later season still carries its act and its art."""
     info = {"medium": medium, "composers": rec.get("composers"), "aliases": rec.get("aliases")}
-    c = {k: v for k, v in collect.pin_candidate(p, info, rec.get("results")).items() if k != "accepted"}
+    c = {k: v for k, v in collect.pin_candidate(p, info, rec.get("results"), album_fn).items()
+         if k != "accepted"}
     album = (rec.get("albums") or {}).get(p["album"])
     if album is not None and not c["credited"]:
         c["trackStats"] = track_stats(album, (rec.get("composers") or []) + (rec.get("aliases") or []))

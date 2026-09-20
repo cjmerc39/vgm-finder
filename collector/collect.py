@@ -916,8 +916,8 @@ _SCREEN_HEADS = ("music for the motion picture ", "soundtrack from the ", "sound
 # from the Apple Original Film)". Network words are a closed list, so a
 # title word is never mistaken for one.
 _NET = (r"(?:netflix|hbo|max|apple|tv|amazon|prime|video|disney|hulu|paramount|peacock"
-        r"|adult|swim|starz|showtime|fx|amc|bbc|itv|sky|crunchyroll|cartoon|network"
-        r"|nickelodeon|nbc|abc|cbs|fox|syfy|cw|mgm|epix|channel\s+4)")
+        r"|adult|swim|starz|showtime|cinemax|fx|amc|bbc|itv|sky|crunchyroll|cartoon|network"
+        r"|nickelodeon|nbc|abc|cbs|fox|syfy|cw|mgm|epix|tnt|tbs|freeform|britbox|channel\s+4)")
 _FORM = r"(?:(?:tv|television|limited|animated|anime|event)\s+)?(?:series|film|movie|documentary|special)"
 _NETWORK_TAIL = re.compile(
     rf"\s+(?:(?:a|an|the)\s+)?(?:{_NET}\s+){{0,3}}original\s+(?:{_NET}\s+){{0,3}}{_FORM}"
@@ -1688,10 +1688,18 @@ def screen_override_sets(overrides):
             "pinnedUrls": {YTM_BROWSE + p["album"] for p in pins.values()}, "songs": songs}
 
 
-def pin_candidate(p, info, results):
+def pin_candidate(p, info, results, album_fn=None):
     """A pin as a winning candidate, built from the title's search result for
-    that album when the search shows it, from the pin itself when not."""
+    that album when the search shows it, else from the album's own page, else
+    from the pin itself. A search returns eight albums, so a pin for a later
+    season or volume (Warrior seasons 2 and 3) is usually not among them, and
+    its page is the only place its act and its art can come from."""
     result = next((r for r in results or [] if r.get("browseId") == p["album"]), None) or {}
+    if not result and album_fn:
+        page = album_fn(p["album"]) or {}
+        result = {k: v for k, v in (("title", page.get("title")), ("year", page.get("year")),
+                                    ("artists", page.get("artists")), ("thumbnails", page.get("thumbnails")))
+                  if v}
     artists = [a["name"] for a in result.get("artists") or [] if a.get("name")]
     thumbs = sorted((t for t in result.get("thumbnails") or [] if t.get("url")), key=lambda t: t.get("width") or 0)
     names = list(info.get("composers") or []) + list(info.get("aliases") or [])

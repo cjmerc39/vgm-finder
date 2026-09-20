@@ -63,7 +63,7 @@ def fetch_records(releases, overrides, evaluations, only=None, fetch=evaluate_pi
     return fetched
 
 
-def apply_pins(releases, overrides, evaluations, seen_at, only=None, log=print):
+def apply_pins(releases, overrides, evaluations, seen_at, only=None, album_fn=None, log=print):
     """Merge a row for every pin whose album no row wears. only: TMDb ids to
     limit it to. -> ids of the rows added."""
     sets = collect.screen_override_sets(overrides)
@@ -79,7 +79,7 @@ def apply_pins(releases, overrides, evaluations, seen_at, only=None, log=print):
         if not rec:
             log(f"  {p.get('name')} ({medium} {tid}): no stored record, skipped")
             continue
-        album = rewalk._pin_candidate(p, rec, medium)
+        album = rewalk._pin_candidate(p, rec, medium, album_fn or collect.ytm_album)
         item = rewalk.addition_item({"title": rec, "album": album, "slot": list(slot)})
         before = {r["id"] for r in releases}
         collect.merge(releases, [item], rewalk.SRC[medium], seen_at)

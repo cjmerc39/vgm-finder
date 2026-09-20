@@ -75,3 +75,31 @@ def test_only_limits_the_run_to_the_named_titles():
     releases = _existing()
     assert apply_pins.apply_pins(releases, OVERRIDES, {("tv", "71446"): HEIST}, SEEN, only={"12345"}, log=lambda *_: None) == []
     assert len(releases) == 1
+
+
+def test_a_pin_for_an_album_the_search_never_showed_reads_its_page():
+    """A search returns eight albums, so a pinned later season is usually not
+    among them: its own page has to give the act, the art and the title."""
+    p = {"tmdb": 73544, "season": 3, "name": "Warrior", "album": "MPREb_U2hJBOqYuD9",
+         "albumTitle": "Warrior, Season 3 (Original Series Soundtrack)", "why": "x"}
+    page = {"title": "Warrior, Season 3 (Original Series Soundtrack)", "year": "2023",
+            "artists": [{"name": "Reza Safinia"}, {"name": "H. Scott Salinas"}],
+            "thumbnails": [{"url": "https://yt3/warrior-small", "width": 226},
+                           {"url": "https://yt3/warrior", "width": 544}]}
+    read = []
+    def album_fn(bid):
+        read.append(bid)
+        return page
+    info = {"medium": "tv", "composers": [], "aliases": []}   # TMDb credits Warrior no composer
+    c = collect.pin_candidate(p, info, [], album_fn)
+    assert read == ["MPREb_U2hJBOqYuD9"] and c["title"] == page["title"] and c["year"] == "2023"
+    assert c["art"] == "https://yt3/warrior" and c["season"] == 3
+    assert c["composers"] == ["Reza Safinia", "H. Scott Salinas"] and c["composersFrom"] == "album"
+    # the search's own result still wins, and no page is read for it
+    read.clear()
+    result = dict(page, browseId=p["album"], title="Warrior S3", thumbnails=[{"url": "https://yt3/s", "width": 60}])
+    c = collect.pin_candidate(p, info, [result], album_fn)
+    assert read == [] and c["title"] == "Warrior S3" and c["art"] == "https://yt3/s"
+    # no reader at all: the pin's own words, as before
+    c = collect.pin_candidate(p, info, [])
+    assert c["title"] == p["albumTitle"] and c["art"] is None and c["composers"] == []
