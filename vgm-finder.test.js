@@ -670,6 +670,12 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rows().length === 1, 'original headline text stays searchable behind the album label');
   type('slaps');
   assert(rows().length === 1 && rows()[0].dataset.id === 'ratchet-clank-rift-apart', 'search matches your notes');
+  type('rifts');
+  assert(rows().length === 1 && rows()[0].dataset.id === 'ratchet-clank-rift-apart',
+    'a plural finds the singular (dinosaurs finds Dinosaur)');
+  type('dreamer');
+  assert(rows().length === 1 && rows()[0].dataset.id === 'chrono-cross-the-radical-dreamers-edition',
+    'a singular finds the plural (hero finds Heroes)');
   assert(d.getElementById('qwrap').classList.contains('has'), 'clear button appears while text is present');
   d.getElementById('qclear').click(); await sleep(20);
   assert(d.getElementById('q').value === '' && !d.getElementById('qwrap').classList.contains('has')

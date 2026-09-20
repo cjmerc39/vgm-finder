@@ -20,6 +20,9 @@ jobs:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+      - run: python collector/check_wanted.py   # the wanted list: titles waiting for an album, searched again
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
       - run: python collector/fill_genres.py --games --recent   # IGDB themes (and missing genres) for new game rows
         env:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
@@ -31,5 +34,5 @@ jobs:
       - run: |
           git config user.name vgm-bot
           git config user.email actions@users.noreply.github.com
-          git add data collector/tv-window-state.json collector/film-recheck-state.json collector/moods-state.json
+          git add data collector/tv-window-state.json collector/film-recheck-state.json collector/moods-state.json collector/wanted.json
           git diff --cached --quiet || (git commit -m collect && git pull --rebase && git push)

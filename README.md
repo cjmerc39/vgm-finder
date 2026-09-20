@@ -62,16 +62,33 @@ IGDB's top-rated games (200+ ratings) checked against YTM. Capped per run
 with a committed cursor (`collector/backfill-state.json`) — dispatch until
 it logs "backfill complete".
 
+## Wanted list
+
+Some titles have no soundtrack on YouTube Music at all (Spider-Man 3,
+Heroes, Castlevania 2017), so they leave no row, and nothing revisits them:
+the daily window has moved on and the backfill walks each vote band once.
+`collector/wanted.json` is the short list of titles worth waiting for, and
+`collector/check_wanted.py` (a daily step) searches every one again, with
+the same title gate and one-album-one-row guards as the daily leg. The run
+an album finally appears, the row is added by itself, its tracklist is
+read, and the entry is stamped `got` and never searched again. Add a title
+with `python collector/check_wanted.py --add film/559`; the stored name is
+a guard, so a mistyped id is reported instead of quietly watching the wrong
+film. Games are not on the list: the game legs walk every day anyway.
+
 ## Mood tags
 
-The collector tags tracks with moods from a fixed sixteen-word vocabulary
-(`collector/moods.json`) using Claude Haiku, one call per album; the app
+The collector tags tracks with moods from a fixed twenty-word vocabulary
+(`collector/moods.json`, version 2; version 1's sixteen words are kept in
+`collector/moods-v1.json`) using Claude Haiku, one call per album; the app
 never calls an AI API and carries no key. The daily run tags albums first
 seen in the last 30 days, capped at 40 a run, and skips with a warning
 when `ANTHROPIC_API_KEY` is not set. `python collector/moods.py backfill
 --cap N` (the "Mood tags backfill" workflow) tags the rest until it
-reports "moods complete"; `--retag` tags an album again. Tags land as a
-`moods` list on each track and their union on the row; a reply with a word
+reports "moods complete"; `--retag` tags an album again, and the "Mood
+vocabulary switch" workflow retags the catalog through a Message Batch at
+half price. Tags land as a `moods` list on each track and, on the row, the
+three most common across its tracks (ties by plays); a reply with a word
 outside the vocabulary is retried once, then the album waits for a later
 run. Every run's tokens and dollars go to `collector/moods-state.json`.
 

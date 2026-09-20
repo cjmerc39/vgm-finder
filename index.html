@@ -748,11 +748,18 @@ function ensureViewTracks(){
 }
 function label(r){ return r.albumTitle || r.title; }
 function fold(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }  // pokemon finds Pokémon
+const PLURAL = /([a-z]{3,}?)(?:es|s)\b/g;
+function hit(hay, q){
+  // a plural finds the singular and the other way round, because both sides
+  // give up a trailing s: "dinosaurs" finds Dinosaur, "heroes" finds Heroes
+  const h = fold(hay), n = fold(q);
+  return h.includes(n) || h.replace(PLURAL, '$1').includes(n.replace(PLURAL, '$1'));
+}
 function matches(r, q){
   if(!q) return true;
   const hay = [r.title, r.albumTitle, r.game, r.company, ...(r.composers || []), E(r.id).note]
     .filter(Boolean).join(' ');
-  return fold(hay).includes(fold(q));
+  return hit(hay, q);
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
 function feedView(){
@@ -824,7 +831,7 @@ function likedSongRows(scores){
   }
   return out;
 }
-function songMatches(s, q){ return !q || fold(s.t.title).includes(fold(q)) || matches(s.r, q); }
+function songMatches(s, q){ return !q || hit(s.t.title, q) || matches(s.r, q); }
 
 /* ------------------------- playlist recipes -------------------------- */
 /* composed from personal state; exported as JSON for the local companion */
