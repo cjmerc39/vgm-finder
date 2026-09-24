@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T14:45:48Z",
+  "updatedAt": "2026-09-24T14:48:20Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -376379,6 +376379,533 @@
         9,
         6,
         4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "flame-in-glass",
+      "title": "Flame in Glass Original Soundtrack",
+      "medium": "game",
+      "game": "Flame in Glass",
+      "composers": [
+        "Airs"
+      ],
+      "date": "2026-09-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3517240/Flame_in_Glass_Original_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Flame+in+Glass+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3517240/d2f34faa0fbe75460991dbd1af9f0603fff1b30b/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Romance"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "sin-reloaded",
+      "title": "SiN Reloaded: Original Soundtrack",
+      "medium": "game",
+      "game": "SiN Reloaded",
+      "composers": [
+        "Chris Mock"
+      ],
+      "date": "2026-09-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5091720/SiN_Reloaded_Original_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SiN+Reloaded%3A+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5091720/594b2d9356bce804d46425b7d763a8a83e35f7c8/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Shooter"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "concerto-on-white-cajon-story-soundtrack-selections",
+      "title": "Concerto on White: Cajon Story - Soundtrack Selections",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "C11 Games"
+      ],
+      "date": "2026-09-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5101690/Concerto_on_White_Cajon_Story__Soundtrack_Selections/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Concerto+on+White%3A+Cajon+Story+-+Soundtrack+Selections",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5101690/404acf4eae3b898f5e00060677557cb69f65ff31/header.jpg",
+      "notable": true,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "kalanoro",
+      "title": "Kalanoro Soundtrack",
+      "medium": "game",
+      "game": "Kalanoro",
+      "composers": [
+        "Dina Valisoa",
+        "Rindra Ramili",
+        "Jyeuhair"
+      ],
+      "date": "2026-09-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4553820/Kalanoro_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kalanoro+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4553820/993768f9466619e4ee1b049246a3c43cbd63c97c/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Comedy"
+      ],
+      "genres": [
+        "Platform",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-last-zeppelin",
+      "title": "The Last Zeppelin Soundtrack",
+      "medium": "game",
+      "game": "The Last Zeppelin",
+      "composers": [
+        "Sven Vogelgesang"
+      ],
+      "date": "2026-09-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5219130/The_Last_Zeppelin_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Last+Zeppelin+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5219130/0514b3c34915f29cb531c833d85fd88f4272636e/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "drapline",
+      "title": "DRAPLINE Soundtrack",
+      "medium": "game",
+      "game": "DRAPLINE",
+      "composers": [
+        "kanawo"
+      ],
+      "date": "2026-09-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5074600/DRAPLINE_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DRAPLINE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5074600/922e2c3c6dea7d69935827b362b8909b1ce13ed4/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "nitro-turtles",
+      "title": "Nitro Turtles Soundtrack",
+      "medium": "game",
+      "game": "Nitro Turtles",
+      "composers": [
+        "Griffin Andrews"
+      ],
+      "date": "2026-09-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5238920/Nitro_Turtles_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nitro+Turtles+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5238920/c35c1d94274144156bc69a5387a4003177081960/header.jpg",
+      "notable": true,
+      "tracksN": 4,
+      "themes": [
+        "Action",
+        "Kids"
+      ],
+      "genres": [
+        "Racing"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "driving",
+        "playful",
+        "intense"
+      ],
+      "moodsN": [
+        3,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "the-well-is-not-empty",
+      "title": "THE WELL IS NOT EMPTY Soundtrack",
+      "medium": "game",
+      "game": "THE WELL IS NOT EMPTY",
+      "composers": [],
+      "date": "2026-09-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5227530/THE_WELL_IS_NOT_EMPTY_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=THE+WELL+IS+NOT+EMPTY+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5227530/ce5a224254f46223ef987e01f05750a796bbe99b/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "genres": [
+        "Adventure"
+      ]
+    },
+    {
+      "id": "thanks-for-the-soup",
+      "title": "Thanks for the Soup Soundtrack",
+      "medium": "game",
+      "game": "Thanks for the Soup",
+      "composers": [
+        "ENLS"
+      ],
+      "date": "2026-09-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5264900/Thanks_for_the_Soup_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Thanks+for+the+Soup+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5264900/2608fd509e5d98c7c1bb29662f07ca8bed7b883e/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "witch-please",
+      "title": "Witch Please Soundtrack",
+      "medium": "game",
+      "game": "Witch Please",
+      "composers": [
+        "Screenhog Studios"
+      ],
+      "date": "2026-09-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5217510/Witch_Please_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Witch+Please+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5217510/428199144b8aece7165b703245945f6f13c58872/header.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "horse-racing-manager",
+      "title": "Horse Racing Manager Soundtrack",
+      "medium": "game",
+      "game": "Horse Racing Manager",
+      "composers": [
+        "Alex Mäkinen"
+      ],
+      "date": "2026-09-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5136430/Horse_Racing_Manager_Soundtrack/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Horse+Racing+Manager+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5136430/bd3b31cea46760d6f7ea8ee61c40267af56203f1/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Business"
+      ],
+      "genres": [
+        "Racing",
+        "Simulator",
+        "Sport"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "gobble-original-soundtrack-eat-on-beat",
+      "title": "GOBBLE Original Soundtrack - Eat on Beat!",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Kazuya Takasu",
+        "a_hisa"
+      ],
+      "date": "2026-09-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5254960/GOBBLE_Original_Soundtrack__Eat_on_Beat/",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=GOBBLE+Original+Soundtrack+-+Eat+on+Beat%21",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5254960/88f5e4a930b2ca7c11c5ae24d8bba14f4832950c/header.jpg",
+      "notable": true,
+      "themes": [
+        "Action",
+        "Fantasy"
+      ],
+      "genres": [
+        "Platform"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "tv-neagley",
+      "title": "Neagley Soundtrack",
+      "medium": "tv",
+      "game": "Neagley",
+      "composers": [
+        "Tony Morales"
+      ],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/273207",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Neagley+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2tXqNSo1fwE",
+      "art": "https://yt3.googleusercontent.com/bfZbFUJmP60L_BrMgk9In5o8D0u88n2ggKmbmUmCpH2NS9udIRqFDK0YCng7zn8USuhLA4z0L_RdZRU=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Neagley (Prime Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Crime"
+      ],
+      "albumArtists": [
+        "Tony Morales"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l872TQ0UZqVKshnGR1U0DPkyd-lOeKdqg",
+      "scoresN": 30,
+      "tracksN": 30,
+      "playsTotal": 3295,
+      "moods": [
+        "intense",
+        "mysterious",
+        "suspenseful"
+      ],
+      "moodsN": [
+        10,
+        9,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-city-of-blood",
+      "title": "City of Blood Soundtrack",
+      "medium": "tv",
+      "game": "City of Blood",
+      "composers": [
+        "Michael Kadelbach"
+      ],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/332401",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=City+of+Blood+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_pQRmNapo2wO",
+      "art": "https://yt3.googleusercontent.com/nk2kYDYjcAdpDyc7VU17nJ4IkDT3LN5PrwdkZK7I1tINGluXEroJ1N7_A--br5sPAKm_y44gCCaBeBlt=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "City of Blood (Original Soundtrack)",
+      "genres": [
+        "Mystery"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Michael Kadelbach"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n6MI4peLIhaUe8cKR-y93d5RYgiy4AHAw",
+      "scoresN": 23,
+      "tracksN": 23,
+      "playsTotal": 1553,
+      "moods": [
+        "ominous",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-scandal",
+      "title": "The Scandal Soundtrack",
+      "medium": "tv",
+      "game": "The Scandal",
+      "composers": [
+        "Lee Jiyeon"
+      ],
+      "date": "2026-09-18",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/275102",
+          "seenAt": "2026-09-24T14:36:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Scandal+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_rtXvq7HntLR",
+      "art": "https://yt3.googleusercontent.com/Tj7a6Ijhst4kAa8h2ryuDjz5WLDmqJWYjxWLunPjsMw2w3NZ3IFYJRaSSi_1V05bnvzMXyvX5bW4LvpZ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Scandal (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Lee Jiyeon"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nL6f_eE5BG8axJp5JVQAOOSVwmbVbjPNc",
+      "scoresN": 14,
+      "songsAlbum": true,
+      "tracksN": 30,
+      "playsTotal": 11810,
+      "moods": [
+        "tender",
+        "mysterious",
+        "dreamy"
+      ],
+      "moodsN": [
+        9,
+        6,
+        5
       ],
       "moodsV": 2
     }
