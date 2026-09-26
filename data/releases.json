@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T15:06:38Z",
+  "updatedAt": "2026-09-26T14:10:14Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -377421,6 +377421,138 @@
         2
       ],
       "moodsV": 2
+    },
+    {
+      "id": "女装百合嵐",
+      "title": "女装百合嵐 Soundtrack",
+      "medium": "game",
+      "game": "女装百合嵐",
+      "composers": [
+        "Hajime Nishida"
+      ],
+      "date": "2026-09-25",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5190400/_Soundtrack/",
+          "seenAt": "2026-09-26T14:03:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E5%A5%B3%E8%A3%85%E7%99%BE%E5%90%88%E5%B5%90+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5190400/4e66d26ff9afbbdfbf77e6563978b4f9950ba692/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Comedy",
+        "Mystery",
+        "Romance"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "cursemark",
+      "title": "Cursemark Original Soundtrack",
+      "medium": "game",
+      "game": "Cursemark",
+      "composers": [
+        "Daniel Whitworth"
+      ],
+      "date": "2026-09-25",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5056210/Cursemark_Original_Soundtrack/",
+          "seenAt": "2026-09-26T14:03:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cursemark+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5056210/3c681c40b7b56e16e088b2f0f6891e2f37b1d248/header.jpg",
+      "notable": true,
+      "tracksN": 7,
+      "themes": [
+        "Action",
+        "Fantasy"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "ominous",
+        "intense",
+        "eerie"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "100-artroom-cats",
+      "title": "100 Artroom Cats Soundtrack",
+      "medium": "game",
+      "game": "100 Artroom Cats",
+      "composers": [
+        "100 Cozy Games"
+      ],
+      "date": "2026-09-25",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4322740/100_Artroom_Cats_Soundtrack/",
+          "seenAt": "2026-09-26T14:03:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=100+Artroom+Cats+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4322740/9f54c5ff6a9214f130a935c86a4665fa155e31db/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "mini-it-tycoon",
+      "title": "Mini IT Tycoon Soundtrack",
+      "medium": "game",
+      "game": "Mini IT Tycoon",
+      "composers": [
+        "\"Various Artists\""
+      ],
+      "date": "2026-09-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5153470/Mini_IT_Tycoon_Soundtrack/",
+          "seenAt": "2026-09-26T14:03:00Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mini+IT+Tycoon+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5153470/308daa1ccd004dc09bfb43a4aa7d704cf25f3ee3/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
     }
   ]
 }
