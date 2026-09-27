@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T14:10:14Z",
+  "updatedAt": "2026-09-27T14:58:22Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -61719,6 +61719,12 @@
           "type": "catalog",
           "url": "https://music.youtube.com/browse/MPREb_iRHRePq1NwU",
           "seenAt": "2026-07-29T04:39:44Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_2UTmZieEVGX",
+          "seenAt": "2026-09-27T14:58:22Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Live%3A+September+2025+%28Original+Soundtrack%29",
@@ -377550,6 +377556,78 @@
       "ytmSearchUrl": "https://music.youtube.com/search?q=Mini+IT+Tycoon+Soundtrack",
       "ytmAlbumUrl": null,
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5153470/308daa1ccd004dc09bfb43a4aa7d704cf25f3ee3/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "captive-3000-main-floors",
+      "title": "Captive 3000 Main Floors Soundtrack",
+      "medium": "game",
+      "game": "Captive 3000 Main Floors",
+      "composers": [
+        "Twin-FX"
+      ],
+      "date": "2026-09-26",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5174410/Captive_3000_Main_Floors_Soundtrack/",
+          "seenAt": "2026-09-27T14:58:22Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Captive+3000+Main+Floors+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5174410/c27116a841e488a221883234175cea5f5e9626ec/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "hexa-gone",
+      "title": "Hexa-Gone Soundtrack",
+      "medium": "game",
+      "game": "Hexa-Gone",
+      "composers": [
+        "Brandon Worley"
+      ],
+      "date": "2026-09-26",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5015040/HexaGone_Soundtrack/",
+          "seenAt": "2026-09-27T14:58:22Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hexa-Gone+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5015040/4d07ceaadfa3b3ce12c0e66768a67932218a7df1/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "waiting-for-you-in-hell",
+      "title": "Waiting for You in Hell Soundtrack",
+      "medium": "game",
+      "game": "Waiting for You in Hell",
+      "composers": [
+        "Lilith"
+      ],
+      "date": "2026-09-26",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5243080/Waiting_for_You_in_Hell_Soundtrack/",
+          "seenAt": "2026-09-27T14:58:22Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Waiting+for+You+in+Hell+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5243080/6bc2dcd89b5d11c80331bdc9bc87ee698d57e5a1/header.jpg",
       "notable": true,
       "tracksN": 0,
       "composersFrom": "steam"
