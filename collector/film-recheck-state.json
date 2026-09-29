@@ -52,6 +52,24 @@
     "vote_count": 5
    }
   },
+  "1248832": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Cosmo Sheldrake"
+   ],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1248832,
+    "original_title": "Digger",
+    "poster_path": "/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
+    "release_date": "2026-09-28",
+    "title": "Digger",
+    "vote_count": 12
+   }
+  },
   "1257147": {
    "aliases": [],
    "checked": [],
@@ -387,6 +405,27 @@
     "vote_count": 5
    }
   },
+  "1503762": {
+   "aliases": [
+    "Roger Goula Sarda"
+   ],
+   "checked": [],
+   "composers": [
+    "Roger Goula"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     10749
+    ],
+    "id": 1503762,
+    "original_title": "Sense and Sensibility",
+    "poster_path": "/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg",
+    "release_date": "2026-09-23",
+    "title": "Sense and Sensibility",
+    "vote_count": 8
+   }
+  },
   "1507877": {
    "aliases": [],
    "checked": [],
@@ -405,7 +444,9 @@
   },
   "1509381": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -424,7 +465,9 @@
   },
   "1519320": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [],
@@ -613,6 +656,23 @@
     "vote_count": 5
    }
   },
+  "1643768": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     10770
+    ],
+    "id": 1643768,
+    "original_title": "Il mio nome \u00e8 Carlo",
+    "poster_path": "/dAnK3dm6AqEltMrG2NlZq18qrqt.jpg",
+    "release_date": "2026-09-27",
+    "title": "Il mio nome \u00e8 Carlo",
+    "vote_count": 7
+   }
+  },
   "1645164": {
    "aliases": [],
    "checked": [],
@@ -748,6 +808,25 @@
     "vote_count": 9
    }
   },
+  "1750432": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     16,
+     12,
+     14,
+     10751
+    ],
+    "id": 1750432,
+    "original_title": "Spidey and the Avengers: Halloween Team-Up!",
+    "poster_path": "/hPucpn2pmszkcqRVHmrlUYK0PtG.jpg",
+    "release_date": "2026-09-24",
+    "title": "Spidey and the Avengers: Halloween Team-Up!",
+    "vote_count": 5
+   }
+  },
   "1751701": {
    "aliases": [],
    "checked": [],
@@ -782,6 +861,22 @@
     "release_date": "2026-09-02",
     "title": "Turning Point: Generation 9/11",
     "vote_count": 19
+   }
+  },
+  "1755291": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1755291,
+    "original_title": "NAZA",
+    "poster_path": "/uLsG2CW8oHnmXWdtPyruSegI8rF.jpg",
+    "release_date": "2026-09-25",
+    "title": "NAZA",
+    "vote_count": 6
    }
   },
   "1760262": {
@@ -848,6 +943,22 @@
     "poster_path": "/mCwCkGB1FIaoGxdNl4MfavdqEIR.jpg",
     "release_date": "2026-09-05",
     "title": "Unrelated (\u0628\u06cc \u0646\u0633\u0628)",
+    "vote_count": 5
+   }
+  },
+  "1770859": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1770859,
+    "original_title": "Jo Koy: Blue in the Face",
+    "poster_path": "/ex8xdDlmo0HWv716Ml5DDMwTkAt.jpg",
+    "release_date": "2026-09-15",
+    "title": "Jo Koy: Blue in the Face",
     "vote_count": 5
    }
   },
@@ -1040,6 +1151,16 @@
    "searched": 0,
    "searches": 0,
    "tracked": 48
+  },
+  {
+   "date": "2026-09-29",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 6,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 54
   }
  ]
 }

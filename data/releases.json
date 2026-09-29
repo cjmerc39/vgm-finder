@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T18:03:48Z",
+  "updatedAt": "2026-09-29T16:27:54Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -94589,11 +94589,10 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Pigeon%3A+A+Love+Story+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_I5HJtVoX8Il",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5026600/58402669b0e304e7237e27daead0408d3186b71e/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [
         "Action"
       ],
@@ -94602,7 +94601,11 @@
         "Adventure",
         "Indie"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "albumTitle": "Love Story (Original Soundtrack)",
+      "ytmPlaylistId": "OLAK5uy_kKzTnm5kNMIfa7rbkYv2x8w5T7duEzhYQ",
+      "tracksN": 1,
+      "playsTotal": 150
     },
     {
       "id": "the-skin-stapler",
@@ -377829,6 +377832,818 @@
         74,
         42,
         26
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hypercore-rhythm-bullet-hell",
+      "title": "HyperCore: Rhythm Bullet Hell - Original Soundtrack",
+      "medium": "game",
+      "game": "HyperCore: Rhythm Bullet Hell",
+      "composers": [
+        "Dustin Crenna"
+      ],
+      "date": "2026-09-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5049390/HyperCore_Rhythm_Bullet_Hell__Original_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=HyperCore%3A+Rhythm+Bullet+Hell+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5049390/e81c53d65888bbea99a7d0266c2f4567249af01a/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "nivalis-nights",
+      "title": "Nivalis Nights Soundtrack",
+      "medium": "game",
+      "game": "Nivalis Nights",
+      "composers": [
+        "Harry Critchley"
+      ],
+      "date": "2026-09-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5259980/Nivalis_Nights_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nivalis+Nights+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5259980/293b32969cd0f3b92c4d1d2b02458624705b71a5/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Business"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "endless-rails",
+      "title": "Endless Rails Soundtrack",
+      "medium": "game",
+      "game": "Endless Rails",
+      "composers": [
+        "Márton Hangácsi"
+      ],
+      "date": "2026-09-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5289050/Endless_Rails_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Endless+Rails+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5289050/e086e229ab1f5e2a0bd4d1b7ce8c2884d4d89d27/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Arcade"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "toem-2",
+      "title": "TOEM 2 Original Soundtrack",
+      "medium": "game",
+      "game": "TOEM 2",
+      "composers": [
+        "Jamal Green",
+        "Launchable Socks"
+      ],
+      "date": "2026-09-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4414810/TOEM_2_Original_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/toem-2",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=TOEM+2+Original+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KntHHN6AUqr",
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4414810/785903e5c0edeae066a492f4e2f27c8236d16d91/header.jpg",
+      "notable": true,
+      "albumTitle": "TOEM 2 (Original Game Soundtrack)",
+      "company": "Something We Made",
+      "console": true,
+      "genres": [
+        "Platform",
+        "Puzzle",
+        "Adventure"
+      ],
+      "themes": [
+        "Fantasy",
+        "Kids"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ku7jvDKPNwOld7dThsCHcFXVDQCr3Whlw",
+      "tracksN": 36,
+      "playsTotal": 59,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        7,
+        7
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "planet-nine",
+      "title": "Planet Nine Original Soundtrack",
+      "medium": "game",
+      "game": "Planet Nine",
+      "composers": [],
+      "date": "2026-09-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5217240/Planet_Nine_Original_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Planet+Nine+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5217240/abad00a5dae295a9ad58b84ecc9577e2d209cd0a/header.jpg",
+      "notable": true,
+      "tracksN": 8,
+      "themes": [
+        "Science fiction"
+      ],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ],
+      "moods": [
+        "mysterious",
+        "tender",
+        "ominous"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "the-anomaly-detective",
+      "title": "The Anomaly Detective Soundtrack",
+      "medium": "game",
+      "game": "The Anomaly Detective",
+      "composers": [
+        "GalaverseCreations"
+      ],
+      "date": "2026-09-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5276150/The_Anomaly_Detective_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Anomaly+Detective+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5276150/689b4bc1018a79096145fe952ea78ca60c8da9a4/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Puzzle",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "monster-alchemy",
+      "title": "Monster Alchemy Soundtrack",
+      "medium": "game",
+      "game": "Monster Alchemy",
+      "composers": [
+        "Casper Ego"
+      ],
+      "date": "2026-09-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5240550/Monster_Alchemy_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Monster+Alchemy+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5240550/86a6c94b4624ce2df24375f62217b21999f9a88a/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy",
+        "Open world"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Turn-based strategy (TBS)"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "world-of-tanks-heat-season-2",
+      "title": "World of Tanks: HEAT - Season 2 Soundtrack",
+      "medium": "game",
+      "game": "World of Tanks: HEAT - Season 2",
+      "composers": [],
+      "date": "2026-09-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4873700/World_of_Tanks_HEAT__Season_2_Soundtrack/",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=World+of+Tanks%3A+HEAT+-+Season+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4873700/3bcb7a4d10611e7f75dca96fa8370aa53943e49d/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Tactical"
+      ]
+    },
+    {
+      "id": "minecraft-dungeons-ii",
+      "title": "Minecraft Dungeons II Soundtrack",
+      "medium": "game",
+      "game": "Minecraft Dungeons II",
+      "composers": [
+        "Minecraft",
+        "Peter Hont"
+      ],
+      "date": "2026-09-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/minecraft-dungeons-ii",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Dungeons+II+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_j033Euuauzb",
+      "art": "https://yt3.googleusercontent.com/GYGcJbt7RC4vPWJoYgDxEJMWymc1KRrTsEtzurgWiY4w7fS_ivPnthBqAOcuPfFfJ9gbzEZI3uj5AT0=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Minecraft Dungeons II (Original Game Soundtrack)",
+      "company": "Mojang Studios",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "themes": [
+        "Action",
+        "Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lmT6P3ETqgXVgl-2kbnXdRnOuK6xs7jDE",
+      "tracksN": 200,
+      "playsTotal": 6618,
+      "moods": [
+        "peaceful",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        55,
+        48,
+        46
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-blue-lights-season-2",
+      "title": "Blue Lights Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Blue Lights",
+      "composers": [
+        "Eoin O Callaghan",
+        "Elma Orkestra"
+      ],
+      "date": "2024-04-15",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/218344",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Blue+Lights+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xpWlAEoyt8L",
+      "art": "https://yt3.googleusercontent.com/7hKlxgZnKlYgyTxXb2iCobmKUMydrnePPBQNBAjIKFHF5M68LATX468OTBS128swatejQXw65de2HPw8=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Blue Lights - Series 2 (Original Television Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Eoin O Callaghan",
+        "Elma Orkestra"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n6JZzqAKzd9BFRrUQAuczWvA2RUISFn0I",
+      "scoresN": 24,
+      "tracksN": 24,
+      "playsTotal": 24271,
+      "moods": [
+        "intense",
+        "mysterious",
+        "suspenseful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "endless-overworld-a-minecraft-inspired",
+      "title": "Endless Overworld: A Minecraft-Inspired Soundtrack",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Crystal Wave Machine"
+      ],
+      "date": "2026-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_uCuD69t3sF5",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Endless+Overworld%3A+A+Minecraft-Inspired+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uCuD69t3sF5",
+      "art": "https://yt3.googleusercontent.com/y6uLaeyYXW-XXIfZBKtchYrQVZZm308XL5TcU_DZGrc0Khw8SoU414jgwh0nByJX_lFZHItU2d-OoyZy=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_k8Ul9pGb3C9blPXpUITisfzzqVjJx2jNE",
+      "tracksN": 3,
+      "playsTotal": 65,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "dreamy"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "the-mohist-architecture-original-soundtrack-for-the-game-minecraft-the-mohist-architecture",
+      "title": "The Mohist Architecture (Original Soundtrack for the Game Minecraft the Mohist Architecture)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "eigenTunes"
+      ],
+      "date": "2020-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_YwZhjLZWhVo",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Mohist+Architecture+%28Original+Soundtrack+for+the+Game+Minecraft+the+Mohist+Architecture%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YwZhjLZWhVo",
+      "art": "https://yt3.googleusercontent.com/dbZUnDPlrrKWEv7umlCHTV6l4ZykvyXHmvC0p8OSABwOtDNEU30dSamVS5UDIL8hRPIOhXsaQlaovbE=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_lUx3UUpbB_gaLabF16v5aD6g5AYOoOHTQ",
+      "tracksN": 3,
+      "playsTotal": 576,
+      "moods": [
+        "epic",
+        "wonder",
+        "transcendent"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tales-of-the-trimensions-original-soundtrack-from-mythos-studios-world-of-minecraft",
+      "title": "Tales of the Trimensions (Original Soundtrack from Mythos Studios' World of Minecraft)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Mythos Music"
+      ],
+      "date": "2025-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_aqEceJe2qqN",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tales+of+the+Trimensions+%28Original+Soundtrack+from+Mythos+Studios%27+World+of+Minecraft%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_aqEceJe2qqN",
+      "art": "https://yt3.googleusercontent.com/EJGjQlPq3axuNoErUZwtvlaHDoZWU7G-dCQNRxzfLoZy4yEi5pgZqWDGQwDKAhymgKnWJgCmzRH-kkN8=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_ml9aBWDHezU4-t1kXz8ati5t1zuEtA4Dg",
+      "tracksN": 5,
+      "playsTotal": 62,
+      "moods": [
+        "epic",
+        "intense",
+        "wonder"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-dungeons-creeping-winter",
+      "title": "Minecraft Dungeons: Creeping Winter (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Peter Hont",
+        "Minecraft"
+      ],
+      "date": "2020-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_ORIMMzKqM4r",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Dungeons%3A+Creeping+Winter+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ORIMMzKqM4r",
+      "art": "https://yt3.googleusercontent.com/SbHsjepw1xUHCyODVzjzbHIHb-4cnXKFagcM7Yv_V37qltkez4VmUsn1YbQRWvzurOli_KhVwUnBVNmh=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_mh86dkSW7ps54Hg3Cvj7zUlRDK-U-5TK0",
+      "tracksN": 22,
+      "playsTotal": 305400,
+      "moods": [
+        "peaceful",
+        "eerie",
+        "ominous"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-sweden-soundtrack-chillhop-beat",
+      "title": "Minecraft (Sweden) [Soundtrack Chillhop Beat]",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Lazy Vibes"
+      ],
+      "date": "2021-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_HAB8hGcRidu",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+%28Sweden%29+%5BSoundtrack+Chillhop+Beat%5D",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HAB8hGcRidu",
+      "art": "https://yt3.googleusercontent.com/pznbW8yZMiKdoEDjNaZW4dILHxComnRiVgLvYanUps_bXg3CU97ANEEI9tAfvAoInKZ9Cm1P5aRFau_Q=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_kNW46zAgx89aPrAPn-LePrxJ63l09xFCI",
+      "tracksN": 1,
+      "playsTotal": 2600,
+      "moods": [
+        "dreamy",
+        "peaceful",
+        "laid-back"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-but-we-cant-break-character",
+      "title": "Minecraft, But We Cant Break Character (Original Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Pencil024"
+      ],
+      "date": "2026-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_PeJfqbsX4OY",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft%2C+But+We+Cant+Break+Character+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_PeJfqbsX4OY",
+      "art": "https://yt3.googleusercontent.com/HKm0JCAsRUZpgZWd2622S04rLcOddzglmM3qIEY6T7eQTlsRzI9J6wCc89QpK-IEV6MLXZ6o0HVGvKwOEg=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_nJUfUZKOKprx-294Wgt3W3suv8UqIMBeU",
+      "tracksN": 9,
+      "playsTotal": 661,
+      "moods": [
+        "intense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-dungeons-seasonal-adventures",
+      "title": "Minecraft Dungeons: Seasonal Adventures (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Peter Hont",
+        "Minecraft"
+      ],
+      "date": "2023-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_xHajy5BATTT",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Dungeons%3A+Seasonal+Adventures+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_xHajy5BATTT",
+      "art": "https://yt3.googleusercontent.com/mPBWMvqBMnqfCokntgg9AFyQrE2Eerov9NQbuSSAwevgoxtsg2QdWJdXZF_FeiPKAhpr3wGlqqvTnWY=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_noFMLaj613B8ifhOmdzo3iqJBiA0Qrfc0",
+      "tracksN": 15,
+      "playsTotal": 382000,
+      "moods": [
+        "intense",
+        "heroic",
+        "epic"
+      ],
+      "moodsN": [
+        5,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "excalia-kingdom-of-the-frozen-shadows-original-minecraft-server",
+      "title": "Excalia : Kingdom of the Frozen Shadows (Original Minecraft Server Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Albin Allard Bigot"
+      ],
+      "date": "2025-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_iyqZMKFsfb7",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Excalia+%3A+Kingdom+of+the+Frozen+Shadows+%28Original+Minecraft+Server+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_iyqZMKFsfb7",
+      "art": "https://yt3.googleusercontent.com/vLyoeoFhkj2aHXLa1veL2OnFK2qNL7iDiHcI7g5EXkyRkPpKpVLvu6vfNFhyEPwo8K7bSfZdBLwLaONG=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_mB-ub5kO5TTiqyyhyxmYWttMhZ7suIau4",
+      "tracksN": 4,
+      "playsTotal": 74,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "intense"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "christcraft-minecraft-server-soundtrack-2025",
+      "title": "Christcraft Minecraft Server Soundtrack (2025)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Gang Jesus"
+      ],
+      "date": "2025-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_PMDEfHWUFcc",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Christcraft+Minecraft+Server+Soundtrack+%282025%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_PMDEfHWUFcc",
+      "art": "https://yt3.googleusercontent.com/DSILOYsGJMtQksgl1bJBi1wjfLDRstWeVQfH-TAo4L-vIyOdZxji2MyYhbGrsTwf15Wf_rKRsqaYlBvk=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_lY7qDXOCEi1Eecx_8qFsLCcsMxbeG33ww",
+      "tracksN": 6,
+      "playsTotal": 223,
+      "moods": [
+        "tender",
+        "transcendent",
+        "peaceful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "a-shiny-minecraft-tale",
+      "title": "A Shiny Minecraft Tale Soundtrack",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Steve Thornely"
+      ],
+      "date": "2012-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_ewWn5dufgh7",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Shiny+Minecraft+Tale+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ewWn5dufgh7",
+      "art": "https://yt3.googleusercontent.com/ObHeH_HCdhDay_vEJ1hSqdNFeKg4DEVjBTtZvvQ3Ry6PTLmK-kEnFnr0RkQ7QnNYntGLJVur3rxumiGluw=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_l9KTuQLzzBWsZL6OrhccGp4x0_FIprSIA",
+      "tracksN": 1,
+      "playsTotal": 2700,
+      "moods": [
+        "wonder",
+        "dreamy",
+        "peaceful"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "cooked-minecraft-map",
+      "title": "Cooked (Minecraft Map Original Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "KillzYTBeatz"
+      ],
+      "date": "2025-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_qM0Jd9SzWE5",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cooked+%28Minecraft+Map+Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qM0Jd9SzWE5",
+      "art": "https://yt3.googleusercontent.com/O65huUxxUamNKciprByDAKpwoQ1nPHb-i9j0_mFWOpDQUBn0TELxW1-Mvj0HVIUgKKi_5ey22RxyCZGTmA=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_lnMGpGguVf4hTF_OCTlRH_OVjOJN8QFD4",
+      "tracksN": 7,
+      "playsTotal": 58,
+      "moods": [
+        "intense",
+        "driving",
+        "heroic"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "deltacraft-vol-1-minecraft-machinima",
+      "title": "Deltacraft, Vol. 1 (Minecraft Machinima Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Deltacraft",
+        "AlexGamingSW"
+      ],
+      "date": "2024-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_UJBI6OGLpDR",
+          "seenAt": "2026-09-29T16:18:56Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Deltacraft%2C+Vol.+1+%28Minecraft+Machinima+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_UJBI6OGLpDR",
+      "art": "https://yt3.googleusercontent.com/eNSgGq7iNg5BEN7wbudqeq2ZUtOEPSsDo75sV1TbZsYNCTF7vk4Y3Hq33fDMibPRF5IbBUUw3S_fsj8=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_kn3l0Eqhg02BejlQIzXoBp10u50zMCEgU",
+      "tracksN": 4,
+      "playsTotal": 1871,
+      "moods": [
+        "intense",
+        "playful",
+        "laid-back"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
       ],
       "moodsV": 2
     }
