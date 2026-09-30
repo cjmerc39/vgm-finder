@@ -103,6 +103,27 @@
     "vote_count": 15
    }
   },
+  "1283515": {
+   "aliases": [
+    "Hauschka"
+   ],
+   "checked": [],
+   "composers": [
+    "Volker Bertelmann"
+   ],
+   "entry": {
+    "genre_ids": [
+     9648,
+     53
+    ],
+    "id": 1283515,
+    "original_title": "Verity",
+    "poster_path": "/dGSsPovyUW5XVekXcy7F2GyhTEh.jpg",
+    "release_date": "2026-09-30",
+    "title": "Verity",
+    "vote_count": 5
+   }
+  },
   "1291366": {
    "aliases": [],
    "checked": [],
@@ -371,7 +392,9 @@
   },
   "1482547": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -720,6 +743,24 @@
     "poster_path": "/tUkIHTfiMIa5ipTvgYZW86fIoQX.jpg",
     "release_date": "2026-09-11",
     "title": "Gator Face",
+    "vote_count": 5
+   }
+  },
+  "1706702": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Tyler Michael Smith"
+   ],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1706702,
+    "original_title": "Daniel and the Fiery Furnace",
+    "poster_path": "/leE7dixdbzHXUBJdQgW1fFHz0ru.jpg",
+    "release_date": "2026-09-18",
+    "title": "Daniel and the Fiery Furnace",
     "vote_count": 5
    }
   },
@@ -1161,6 +1202,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 54
+  },
+  {
+   "date": "2026-09-30",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 2,
+   "searched": 1,
+   "searches": 1,
+   "tracked": 56
   }
  ]
 }
