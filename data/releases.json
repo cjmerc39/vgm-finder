@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T16:22:21Z",
+  "updatedAt": "2026-10-01T16:59:30Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -379090,6 +379090,389 @@
         4,
         4,
         4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "emojix",
+      "title": "Emojix Soundtrack",
+      "medium": "game",
+      "game": "Emojix",
+      "composers": [
+        "100 Cozy Games"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5291730/Emojix_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Emojix+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5291730/956a22703e9be46463e6e569a34bd6f7494299e5/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "roots-in-the-sky-the-hand-of-glory-2",
+      "title": "Roots in the Sky - The Hand of Glory 2 Soundtrack",
+      "medium": "game",
+      "game": "Roots in the Sky - The Hand of Glory 2",
+      "composers": [
+        "Carlos Leal Valladares"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5167490/Roots_in_the_Sky__The_Hand_of_Glory_2_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Roots+in+the+Sky+-+The+Hand+of+Glory+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5167490/c0fb1631ff291d00e7570616b46320d9cfad3c8f/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "c4",
+      "title": "C4: Original Soundtrack",
+      "medium": "game",
+      "game": "C4",
+      "composers": [
+        "Aedan Graves"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4788870/C4_Original_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=C4%3A+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4788870/730a0543ea239911ab1b449e6bf25aba6834fad4/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "muchi-muchi-pork-pinksweets-boosted",
+      "title": "Muchi Muchi Pork! & PinkSweets Boosted Soundtrack",
+      "medium": "game",
+      "game": "Muchi Muchi Pork! & PinkSweets Boosted",
+      "composers": [
+        "CAVE"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5172510/Muchi_Muchi_Pork__PinkSweets_Boosted_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Muchi+Muchi+Pork%21+%26+PinkSweets+Boosted+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5172510/612e41580ae68c19d00f1d8030e2666037114881/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Arcade"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "voin",
+      "title": "VOIN Soundtrack",
+      "medium": "game",
+      "game": "VOIN",
+      "composers": [
+        "Dark Twin",
+        "Nik Nocturnal",
+        "The Algorithm",
+        "Jonathan Young",
+        "GeoffPlaysGuitar"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4968560/VOIN_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=VOIN+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4968560/55203493dbb731c25240785cd1aabf2219d7148c/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "gamble-hunters",
+      "title": "Gamble Hunters Soundtrack",
+      "medium": "game",
+      "game": "Gamble Hunters",
+      "composers": [
+        "whiserim"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5170110/Gamble_Hunters_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gamble+Hunters+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5170110/e750c4831e294333715d881729c181f3a7d7a924/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "all-hallows",
+      "title": "All Hallows Soundtrack",
+      "medium": "game",
+      "game": "All Hallows",
+      "composers": [
+        "Martin Coombe"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4815340/All_Hallows_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=All+Hallows+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4815340/5e29958be460df419c24903361823e12a4d18d5f/header.jpg",
+      "notable": true,
+      "tracksN": 17,
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "playful",
+        "joyful",
+        "intense"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "havoc-heirs",
+      "title": "Havoc Heirs Soundtrack",
+      "medium": "game",
+      "game": "Havoc Heirs",
+      "composers": [
+        "Corey Sugarman"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5081950/Havoc_Heirs_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Havoc+Heirs+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5081950/030f016cd257ca6cdcf24d8f548dece31a780848/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "deadeye-deepfake-simulacrum",
+      "title": "Deadeye Deepfake Simulacrum Soundtrack",
+      "medium": "game",
+      "game": "Deadeye Deepfake Simulacrum",
+      "composers": [
+        "nodayshalleraseyou"
+      ],
+      "date": "2026-09-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4879890/Deadeye_Deepfake_Simulacrum_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Deadeye+Deepfake+Simulacrum+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4879890/cffdc478fce52001964dd87602d883434c7b9bc9/header.jpg",
+      "notable": true,
+      "tracksN": 29,
+      "themes": [
+        "Action",
+        "Stealth"
+      ],
+      "genres": [
+        "Shooter",
+        "Role-playing (RPG)",
+        "Simulator"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "ominous",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "emuurom",
+      "title": "EMUUROM Soundtrack",
+      "medium": "game",
+      "game": "EMUUROM",
+      "composers": [
+        "borb"
+      ],
+      "date": "2026-09-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5279990/EMUUROM_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=EMUUROM+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5279990/72670fe145a49d3be6f643c54ed6b5d3757979f3/header.jpg",
+      "notable": true,
+      "tracksN": 44,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Platform",
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "playful",
+        "intense",
+        "ominous"
+      ],
+      "moodsN": [
+        10,
+        9,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "echobreaker",
+      "title": "Echobreaker Soundtrack",
+      "medium": "game",
+      "game": "Echobreaker",
+      "composers": [
+        "Sam Bucknall"
+      ],
+      "date": "2026-09-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5272200/Echobreaker_Soundtrack/",
+          "seenAt": "2026-10-01T16:51:46Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Echobreaker+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5272200/d6c42afbe2be4ff7e6e157beca1c50d8b3b2e521/header.jpg",
+      "notable": true,
+      "tracksN": 4,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Racing"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
       ],
       "moodsV": 2
     }

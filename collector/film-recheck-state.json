@@ -179,7 +179,9 @@
   },
   "1361982": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -254,6 +256,25 @@
     "release_date": "2026-09-03",
     "title": "The Runner",
     "vote_count": 432
+   }
+  },
+  "1388805": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Alec Puro"
+   ],
+   "entry": {
+    "genre_ids": [
+     10402,
+     99
+    ],
+    "id": 1388805,
+    "original_title": "LINKIN PARK: UNSHATTER",
+    "poster_path": "/kHNrz7DBVPrtyMhJxmBm2poS2l9.jpg",
+    "release_date": "2026-09-30",
+    "title": "LINKIN PARK: UNSHATTER",
+    "vote_count": 6
    }
   },
   "1422041": {
@@ -783,7 +804,9 @@
   },
   "1739202": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -815,7 +838,9 @@
   },
   "1742458": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1212,6 +1237,16 @@
    "searched": 1,
    "searches": 1,
    "tracked": 56
+  },
+  {
+   "date": "2026-10-01",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 1,
+   "searched": 3,
+   "searches": 3,
+   "tracked": 57
   }
  ]
 }
