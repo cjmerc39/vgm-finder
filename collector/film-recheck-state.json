@@ -2,7 +2,9 @@
  "films": {
   "1084815": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -52,24 +54,6 @@
     "vote_count": 5
    }
   },
-  "1248832": {
-   "aliases": [],
-   "checked": [],
-   "composers": [
-    "Cosmo Sheldrake"
-   ],
-   "entry": {
-    "genre_ids": [
-     35
-    ],
-    "id": 1248832,
-    "original_title": "Digger",
-    "poster_path": "/1ATXKrIPJyKNwnJ6lcG088Sa6zi.jpg",
-    "release_date": "2026-09-28",
-    "title": "Digger",
-    "vote_count": 12
-   }
-  },
   "1257147": {
    "aliases": [],
    "checked": [],
@@ -103,27 +87,6 @@
     "vote_count": 15
    }
   },
-  "1283515": {
-   "aliases": [
-    "Hauschka"
-   ],
-   "checked": [],
-   "composers": [
-    "Volker Bertelmann"
-   ],
-   "entry": {
-    "genre_ids": [
-     9648,
-     53
-    ],
-    "id": 1283515,
-    "original_title": "Verity",
-    "poster_path": "/dGSsPovyUW5XVekXcy7F2GyhTEh.jpg",
-    "release_date": "2026-09-30",
-    "title": "Verity",
-    "vote_count": 5
-   }
-  },
   "1291366": {
    "aliases": [],
    "checked": [],
@@ -140,6 +103,24 @@
     "release_date": "2026-09-25",
     "title": "The Deputy",
     "vote_count": 5
+   }
+  },
+  "1318864": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     36,
+     35,
+     18
+    ],
+    "id": 1318864,
+    "original_title": "Notre salut",
+    "poster_path": "/tFzSSetNzvdaxms6RLfr2pyu9sM.jpg",
+    "release_date": "2026-09-30",
+    "title": "A Man of His Time",
+    "vote_count": 6
    }
   },
   "1340102": {
@@ -277,31 +258,11 @@
     "vote_count": 6
    }
   },
-  "1422041": {
-   "aliases": [
-    "Refree",
-    "Ra\u00fcl Fern\u00e1ndez Mir\u00f3"
-   ],
-   "checked": [],
-   "composers": [
-    "Ra\u00fcl Refree"
-   ],
-   "entry": {
-    "genre_ids": [
-     18,
-     10752
-    ],
-    "id": 1422041,
-    "original_title": "La bola negra",
-    "poster_path": "/jT5SR5qc9KvVg7HUEmjMWEUYMce.jpg",
-    "release_date": "2026-09-25",
-    "title": "La bola negra",
-    "vote_count": 6
-   }
-  },
   "1429713": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Ernst Reijseger"
    ],
@@ -339,11 +300,30 @@
     "vote_count": 11
    }
   },
+  "1437195": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     27,
+     35
+    ],
+    "id": 1437195,
+    "original_title": "Livestream from Hell",
+    "poster_path": "/2bKGy1SoXZEUa69HRSy51rVM5KF.jpg",
+    "release_date": "2026-09-30",
+    "title": "Livestream from Hell",
+    "vote_count": 10
+   }
+  },
   "1437948": {
    "aliases": [
     "Delphine Malauss\u00e9na"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Delphine Malaussena"
    ],
@@ -547,7 +527,9 @@
    "aliases": [
     "\ub3c4\ubbf8\ub2c8\ud06c \uc170\ub7ec"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Dominik Scherrer"
    ],
@@ -640,6 +622,25 @@
     "poster_path": "/2iX5Mf2xRLpL7X5ywYhEPmkzztV.jpg",
     "release_date": "2026-09-11",
     "title": "Back To Buenos Aires",
+    "vote_count": 6
+   }
+  },
+  "1599191": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     16,
+     28,
+     12,
+     14
+    ],
+    "id": 1599191,
+    "original_title": "\u4ed9\u9006\u5267\u573a\u7248\uff1a\u5f11\u4ed9\u4e4b\u6218",
+    "poster_path": "/cpgLuRAT8SW7YiZaBYUGZ43GiLL.jpg",
+    "release_date": "2026-10-01",
+    "title": "Renegade Immortal: Battle of the Immortal Slayer",
     "vote_count": 6
    }
   },
@@ -913,7 +914,9 @@
   },
   "1752159": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "John Dragonetti"
    ],
@@ -943,6 +946,22 @@
     "release_date": "2026-09-25",
     "title": "NAZA",
     "vote_count": 6
+   }
+  },
+  "1758536": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1758536,
+    "original_title": "The Widower: 'Til Death Do Us Part",
+    "poster_path": "/8MmN3JmgscGiAP3bUlrc2rLsGDq.jpg",
+    "release_date": "2026-09-30",
+    "title": "The Widower: 'Til Death Do Us Part",
+    "vote_count": 5
    }
   },
   "1760262": {
@@ -1026,6 +1045,25 @@
     "release_date": "2026-09-15",
     "title": "Jo Koy: Blue in the Face",
     "vote_count": 5
+   }
+  },
+  "1777750": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     16,
+     28,
+     9648,
+     80
+    ],
+    "id": 1777750,
+    "original_title": "\u540d\u63a2\u5075\u30b3\u30ca\u30f3 30\u53f7\u6bba\u4eba\u4e8b\u4ef6",
+    "poster_path": "/pT9RIHf4K9OyOB3eqYj97E5h0YA.jpg",
+    "release_date": "2026-10-02",
+    "title": "Detective Conan: The Counterfeit Case of Ultra 30",
+    "vote_count": 6
    }
   },
   "487802": {
@@ -1247,6 +1285,16 @@
    "searched": 3,
    "searches": 3,
    "tracked": 57
+  },
+  {
+   "date": "2026-10-02",
+   "deferred": 0,
+   "due": 5,
+   "found": 0,
+   "recorded": 5,
+   "searched": 5,
+   "searches": 8,
+   "tracked": 59
   }
  ]
 }
