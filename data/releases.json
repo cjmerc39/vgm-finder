@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T16:12:44Z",
+  "updatedAt": "2026-10-03T14:39:27Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -378124,13 +378124,19 @@
         "Minecraft",
         "Peter Hont"
       ],
-      "date": "2026-09-29",
+      "date": "2026-01-01",
       "sources": [
         {
           "name": "igdb",
           "type": "catalog",
           "url": "https://www.igdb.com/games/minecraft-dungeons-ii",
           "seenAt": "2026-09-29T16:18:56Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_j033Euuauzb",
+          "seenAt": "2026-10-03T14:32:20Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+Dungeons+II+Soundtrack",
@@ -380023,6 +380029,276 @@
         6,
         5,
         5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "ninja-vs-zombies",
+      "title": "Ninja VS Zombies Soundtrack",
+      "medium": "game",
+      "game": "Ninja VS Zombies",
+      "composers": [
+        "Yoshimoto Taro"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/2236000/Ninja_VS_Zombies_Soundtrack/",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ninja+VS+Zombies+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2236000/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "super-gem-shatter",
+      "title": "Super Gem Shatter Soundtrack",
+      "medium": "game",
+      "game": "Super Gem Shatter",
+      "composers": [
+        "Jay Feezor",
+        "Mari May"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5247430/Super_Gem_Shatter_Soundtrack/",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Super+Gem+Shatter+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5247430/86ca86ef23e39782e97ba847387e7640722434db/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bitvoid",
+      "title": "BitVoid Soundtrack",
+      "medium": "game",
+      "game": "BitVoid",
+      "composers": [
+        "Eguzkilore Games"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5229040/BitVoid_Soundtrack/",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=BitVoid+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5229040/027ee5ae0a2854e4f02060b518ffeaad606998b5/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "liminality",
+      "title": "LIMINALITY Original Game Soundtrack",
+      "medium": "game",
+      "game": "LIMINALITY",
+      "composers": [
+        "chrisgrammers"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5253770/LIMINALITY_Original_Game_Soundtrack/",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=LIMINALITY+Original+Game+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5253770/18ac6d5cc8ffb4ecb39b10bbd5a20d0496979ed4/header.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "dreamy",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "factorized",
+      "title": "Factorized Soundtrack",
+      "medium": "game",
+      "game": "Factorized",
+      "composers": [
+        "Lab of the Ocean"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5243780/Factorized_Soundtrack/",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Factorized+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5243780/da5d60b84b041327edcce0a28dff38acf9fc57e2/header.jpg",
+      "notable": true,
+      "tracksN": 24,
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "driving",
+        "suspenseful"
+      ],
+      "moodsN": [
+        8,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "from-beyond-album-edition",
+      "title": "From Beyond: Album Edition",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "BCVHS"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4807840/From_Beyond_Album_Edition/",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=From+Beyond%3A+Album+Edition+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4807840/0cf4013aa53ebd44bb464c72073a998028314d24/header.jpg",
+      "notable": true,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-doing-life",
+      "title": "Doing Life Soundtrack",
+      "medium": "film",
+      "game": "Doing Life",
+      "composers": [
+        "Meshell Ndegeocello"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1458857",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Doing+Life+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hIm55AsK8zT",
+      "art": "https://yt3.googleusercontent.com/ev0hh5RZEQNBS1-dPNA2TbVbuFwU-zMtR6BXDAn36KIG9YmDRRzZChMo-rdS7KrdCtE6Wg2I_zTD_GWZ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Doing Life (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Meshell Ndegeocello"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mZjExLPYnjjskRyRjQjN8xHSl-pqsVCXI",
+      "scoresN": 21,
+      "tracksN": 21,
+      "playsTotal": 1206,
+      "moods": [
+        "tender",
+        "mysterious",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-last-first-winter-k2",
+      "title": "The Last First: Winter K2 Soundtrack",
+      "medium": "film",
+      "game": "The Last First: Winter K2",
+      "composers": [
+        "Tom Hodge"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1596303",
+          "seenAt": "2026-10-03T14:32:20Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Last+First%3A+Winter+K2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_LTRs0rKWWL9",
+      "art": "https://yt3.googleusercontent.com/DAjOie7ydHZ-ULvEtVnuZ5QbvjwU_IXF9BVKGMQ0kRdyBpEGVhDLeV_--OQ-nInUBToexcTKcrjEIZo=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Last First: Winter K2 (Soundtrack from the Apple Original Film)",
+      "genres": [
+        "Documentary"
+      ],
+      "albumArtists": [
+        "Tom Hodge"
+      ],
+      "ytmPlaylistId": "OLAK5uy_klhs2umYxMWQYIQtcJFwoSHp3qfTqdbac",
+      "scoresN": 11,
+      "tracksN": 11,
+      "playsTotal": 57,
+      "moods": [
+        "suspenseful",
+        "ominous",
+        "epic"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
       ],
       "moodsV": 2
     }

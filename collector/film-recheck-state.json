@@ -56,7 +56,9 @@
   },
   "1257147": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -121,6 +123,27 @@
     "release_date": "2026-09-30",
     "title": "A Man of His Time",
     "vote_count": 6
+   }
+  },
+  "1321666": {
+   "aliases": [
+    "Lukasz Targosz"
+   ],
+   "checked": [],
+   "composers": [
+    "\u0141ukasz Targosz"
+   ],
+   "entry": {
+    "genre_ids": [
+     10749,
+     18
+    ],
+    "id": 1321666,
+    "original_title": "Lalka",
+    "poster_path": "/mU8squGiM5tybYBHhjg4jPUzOCl.jpg",
+    "release_date": "2026-09-30",
+    "title": "The Doll",
+    "vote_count": 5
    }
   },
   "1340102": {
@@ -222,7 +245,9 @@
   },
   "1386315": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Tom Hodge"
    ],
@@ -858,7 +883,9 @@
   },
   "1744876": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Carlos Vandera"
    ],
@@ -1013,6 +1040,25 @@
     "release_date": "2026-09-17",
     "title": "Thomas & Friends: Really Helpful Engines",
     "vote_count": 5
+   }
+  },
+  "1767073": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     27,
+     878,
+     14,
+     18
+    ],
+    "id": 1767073,
+    "original_title": "The Nice Ones",
+    "poster_path": "/akMSRVUZRBZlR9nzbEhRPoQ4xSu.jpg",
+    "release_date": "2026-09-29",
+    "title": "The Nice Ones",
+    "vote_count": 7
    }
   },
   "1768019": {
@@ -1295,6 +1341,16 @@
    "searched": 5,
    "searches": 8,
    "tracked": 59
+  },
+  {
+   "date": "2026-10-03",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 2,
+   "searched": 3,
+   "searches": 5,
+   "tracked": 61
   }
  ]
 }
