@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T14:39:27Z",
+  "updatedAt": "2026-10-04T15:13:49Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -380299,6 +380299,55 @@
         3,
         3,
         2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-aoashi",
+      "title": "Aoashi Soundtrack",
+      "medium": "tv",
+      "game": "Aoashi",
+      "composers": [
+        "Masaru Yokoyama"
+      ],
+      "date": "2022-04-09",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/126437",
+          "seenAt": "2026-10-04T15:06:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Aoashi+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_8Q20lBaCLm7",
+      "art": "https://yt3.googleusercontent.com/THMXqTqNRKgpv0SVXq6eUEmCx4aAePs8fQyvXcVZv4TMVqVHahcSRt2d7iSTBFZ1Op9s21Ubm7A_jWZD=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Aoashi Original Soundtrack",
+      "genres": [
+        "Animation",
+        "Anime"
+      ],
+      "composerAliases": [
+        "横山 克",
+        "よこやま まさる"
+      ],
+      "albumArtists": [
+        "Masaru Yokoyama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kjTIOc_qCdWPi6fZ73fjOPhkOiJ-dfp68",
+      "scoresN": 57,
+      "tracksN": 57,
+      "playsTotal": 589900,
+      "moods": [
+        "intense",
+        "driving",
+        "epic"
+      ],
+      "moodsN": [
+        14,
+        11,
+        8
       ],
       "moodsV": 2
     }

@@ -530,7 +530,9 @@
   },
   "1530121": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Max Aruj",
     "W. F. Smith Leithart"
@@ -586,6 +588,40 @@
     "release_date": "2026-09-11",
     "title": "Go Team!",
     "vote_count": 10
+   }
+  },
+  "1571687": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35,
+     36,
+     10752
+    ],
+    "id": 1571687,
+    "original_title": "Justin le Juste",
+    "poster_path": "/cqBdLH05sEjtNKEet4LqJt4iEEC.jpg",
+    "release_date": "2026-09-23",
+    "title": "Justin the Just",
+    "vote_count": 5
+   }
+  },
+  "1571766": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     27
+    ],
+    "id": 1571766,
+    "original_title": "Kraken",
+    "poster_path": "/hlNRCWGoFFvmRZERUgNUbntO5EU.jpg",
+    "release_date": "2026-09-25",
+    "title": "Kraken",
+    "vote_count": 5
    }
   },
   "1576934": {
@@ -684,6 +720,22 @@
     "release_date": "2026-09-22",
     "title": "One Last Shot",
     "vote_count": 13
+   }
+  },
+  "1610703": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     27
+    ],
+    "id": 1610703,
+    "original_title": "Infirmary",
+    "poster_path": "/bHiAp8WWHgfUrJmRnoiw4URYGcq.jpg",
+    "release_date": "2026-10-02",
+    "title": "Infirmary",
+    "vote_count": 6
    }
   },
   "1641629": {
@@ -825,6 +877,20 @@
     "poster_path": "/gtTw3Pbf0jj69Xq1nnHDXRztpEb.jpg",
     "release_date": "2026-09-17",
     "title": "Dov\u2019\u00e8 la fiesta?",
+    "vote_count": 6
+   }
+  },
+  "1728084": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [],
+    "id": 1728084,
+    "original_title": "AEW All Out 2026",
+    "poster_path": "/3Id93rTWF7zWT55Y16NtJ1lS1Am.jpg",
+    "release_date": "2026-09-26",
+    "title": "AEW All Out 2026",
     "vote_count": 6
    }
   },
@@ -993,7 +1059,9 @@
   },
   "1760262": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1351,6 +1419,16 @@
    "searched": 3,
    "searches": 5,
    "tracked": 61
+  },
+  {
+   "date": "2026-10-04",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 4,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 65
   }
  ]
 }

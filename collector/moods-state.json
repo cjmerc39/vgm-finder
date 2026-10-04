@@ -1,8 +1,8 @@
 {
- "tagged": 14370,
- "inputTokens": 15317170,
- "outputTokens": 5508248,
- "cost": 32.2296,
+ "tagged": 14371,
+ "inputTokens": 15318488,
+ "outputTokens": 5509100,
+ "cost": 32.2352,
  "runs": [
   {
    "at": "2026-09-14T16:14:17Z",
@@ -504,6 +504,17 @@
    "inputTokens": 4026,
    "outputTokens": 1034,
    "cost": 0.0092,
+   "remaining": 0
+  },
+  {
+   "at": "2026-10-04T15:13:49Z",
+   "kind": "daily",
+   "tagged": 1,
+   "skipped": 0,
+   "failed": 0,
+   "inputTokens": 1318,
+   "outputTokens": 852,
+   "cost": 0.0056,
    "remaining": 0
   }
  ]
