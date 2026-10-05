@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T15:13:49Z",
+  "updatedAt": "2026-10-05T19:09:17Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -380187,7 +380187,14 @@
         4,
         3
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Indie"
+      ]
     },
     {
       "id": "from-beyond-album-edition",
@@ -380348,6 +380355,115 @@
         14,
         11,
         8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "escape-immersion",
+      "title": "Escape: Immersion Soundtrack",
+      "medium": "game",
+      "game": "Escape: Immersion",
+      "composers": [
+        "Nijat Hasanzadeh"
+      ],
+      "date": "2026-10-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4599870/Escape_Immersion_Soundtrack/",
+          "seenAt": "2026-10-05T19:01:58Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Escape%3A+Immersion+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4599870/86c747a051d8af03b6ccb832b23a18cc8407d59f/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror",
+        "Thriller",
+        "Survival"
+      ],
+      "genres": [
+        "Platform",
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "christmas-crackhead",
+      "title": "Christmas Crackhead Soundtrack",
+      "medium": "game",
+      "game": "Christmas Crackhead",
+      "composers": [
+        "Crackhead"
+      ],
+      "date": "2026-10-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5308270/Christmas_Crackhead_Soundtrack/",
+          "seenAt": "2026-10-05T19:01:58Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Christmas+Crackhead+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5308270/192fb3d932fc7e2ed8007e1b7f6dcd795206fed9/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-schumacher-94-the-birth-of-a-legend",
+      "title": "Schumacher ’94 – The Birth of a Legend Soundtrack",
+      "medium": "film",
+      "game": "Schumacher ’94 – The Birth of a Legend",
+      "composers": [
+        "Ben Lukas Boysen"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1752355",
+          "seenAt": "2026-10-05T19:01:58Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Schumacher+%E2%80%9994+%E2%80%93+The+Birth+of+a+Legend+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_R7uOHyCyHz8",
+      "art": "https://yt3.googleusercontent.com/3jj5ZN2bKaBzcFLBeyDeEQk77sSHHUsNv0Oq7jOnlFc8An7zyYOw2TqP5-b1-nPPPxIjohqDlMPKgbs=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Schumacher ‘94 - Die Geburt einer Legende (Soundtrack der Netflix Dokumentation)",
+      "genres": [
+        "Documentary"
+      ],
+      "albumArtists": [
+        "Ben Lukas Boysen"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kXSdPxKyUrO2fdarbrjERaNaH9qV6nJwI",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 1659,
+      "moods": [
+        "intense",
+        "epic",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
       ],
       "moodsV": 2
     }

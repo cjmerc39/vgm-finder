@@ -738,6 +738,43 @@
     "vote_count": 6
    }
   },
+  "1613037": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Pressure Cooker"
+   ],
+   "entry": {
+    "genre_ids": [
+     27,
+     35,
+     53
+    ],
+    "id": 1613037,
+    "original_title": "Buzzkill",
+    "poster_path": "/uLftvCgy9WFGRnrGbMer7i61Zkn.jpg",
+    "release_date": "2026-09-25",
+    "title": "Buzzkill",
+    "vote_count": 5
+   }
+  },
+  "1632103": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     53
+    ],
+    "id": 1632103,
+    "original_title": "La citt\u00e0 dei vivi",
+    "poster_path": "/kKu3wGJCAvRZKNEnJEEB5DctYnh.jpg",
+    "release_date": "2026-10-01",
+    "title": "The City of the Living",
+    "vote_count": 6
+   }
+  },
   "1641629": {
    "aliases": [],
    "checked": [],
@@ -1131,7 +1168,9 @@
   },
   "1768019": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1429,6 +1468,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 65
+  },
+  {
+   "date": "2026-10-05",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 2,
+   "searched": 1,
+   "searches": 1,
+   "tracked": 67
   }
  ]
 }
