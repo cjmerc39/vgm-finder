@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T19:09:17Z",
+  "updatedAt": "2026-10-06T16:36:15Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -96534,18 +96534,20 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Choice+of+Life%3A+Floors+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_rmPN1urWzb7",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4688940/9f366f5b845032ca29a03f2da2f019418f51f352/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [],
       "genres": [
         "Role-playing (RPG)",
         "Simulator",
         "Adventure"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_n8TKsVaCAke9Vz12SWVirb4jrzqVP7D28",
+      "tracksN": 13,
+      "playsTotal": 746
     },
     {
       "id": "duskfade",
@@ -376542,7 +376544,14 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5219130/0514b3c34915f29cb531c833d85fd88f4272636e/header.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Arcade"
+      ]
     },
     {
       "id": "drapline",
@@ -377174,7 +377183,15 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5295610/10574f8b378640ab340f54d6a6fc11af7d522f81/header.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Racing",
+        "Indie",
+        "Arcade"
+      ]
     },
     {
       "id": "alien-breed-35th-anniversary",
@@ -380464,6 +380481,420 @@
         5,
         3,
         3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "gears-of-war-e-day",
+      "title": "Gears of War: E-Day Soundtrack",
+      "medium": "game",
+      "game": "Gears of War: E-Day",
+      "composers": [
+        "Adam Lastiwka",
+        "Gears of War"
+      ],
+      "date": "2026-10-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/gears-of-war-e-day",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gears+of+War%3A+E-Day+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_sgguMmZKWW1",
+      "art": "https://yt3.googleusercontent.com/-cmzWrdSbue2w-O37NfGTzpWERTde6Q6mNuzKwUQUDZN2K6eH3RrF5IKDc5TKoXjapS-1A0ldf2ixLw2=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Gears of War: E-Day (Original Soundtrack)",
+      "company": "The Coalition",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Adventure"
+      ],
+      "themes": [
+        "Action"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mq4CTTLEc7mzhAx8pGnct9H-qr6LV-AIk",
+      "tracksN": 18,
+      "playsTotal": 2495,
+      "moods": [
+        "intense",
+        "ominous",
+        "sad"
+      ],
+      "moodsN": [
+        7,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "star-wars-galactic-racer",
+      "title": "Star Wars: Galactic Racer Soundtrack",
+      "medium": "game",
+      "game": "Star Wars: Galactic Racer",
+      "composers": [
+        "Gordy Haab"
+      ],
+      "date": "2026-10-06",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/star-wars-galactic-racer",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Wars%3A+Galactic+Racer+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uMmJREHYbzL",
+      "art": "https://yt3.googleusercontent.com/WCj00gDqekFQ9C8rTqgi9Jl6BFT7OJ2h3LJfxJOIKOaJMRuqWYVPqBlhH7cGc0mJnK0y7Fy_Byonp8wCDQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Star Wars: Galactic Racer (Original Video Game Soundtrack)",
+      "company": "Fuse Games",
+      "console": true,
+      "genres": [
+        "Racing",
+        "Sport",
+        "Adventure"
+      ],
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kQDMM0yxmjPhM_Ip7T2DxRE-pe7qUgDBE",
+      "tracksN": 21,
+      "playsTotal": 15637,
+      "moods": [
+        "driving",
+        "intense",
+        "heroic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-ncis",
+      "title": "NCIS Soundtrack",
+      "medium": "tv",
+      "game": "NCIS",
+      "composers": [
+        "Brian Kirk",
+        "Joseph Conlan"
+      ],
+      "date": "2003-09-23",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/4614",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=NCIS+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_dYBduU2bOXz",
+      "art": "https://yt3.googleusercontent.com/5gfNZmc67klSqvfGwsELwUUFAb2AI_Ch2JT-5Z3KkZasu_0t9cO19xtHsxMJxCm4FJXA_odFfyLdwCXdOw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "NCIS Theme (From The NCIS: Benchmark Official TV Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "albumArtists": [
+        "Brian Kirk"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mLpWRb55IuzgTW2jTFv0HEOmpeUluEw70",
+      "scoresN": 1,
+      "tracksN": 1,
+      "playsTotal": 39000,
+      "moods": [
+        "intense",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-reasonable-doubt-season-2",
+      "title": "Reasonable Doubt Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Reasonable Doubt",
+      "composers": [
+        "Adrian Younge",
+        "Ali Shaheed Muhammad"
+      ],
+      "date": "2024-08-21",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/205272",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Reasonable+Doubt+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_09HoyK9eytl",
+      "art": "https://yt3.googleusercontent.com/ToZPDS07stg2NaAPOyxNSv4Kpbd6cO5nnOWLBUfgUvYxl41bagkmQxfmKqr8e4J0Ss52ZP68fNWsavIdYw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Reasonable Doubt (Season 2) (Original Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Adrian Younge",
+        "Ali Shaheed Muhammad"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lu9WJKoQokz8OOZbz62_iKG8CUP0-OeLw",
+      "scoresN": 5,
+      "tracksN": 5,
+      "playsTotal": 117700,
+      "moods": [
+        "mysterious",
+        "joyful",
+        "hopeful"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-four-hands-two-sonatas",
+      "title": "Four Hands, Two Sonatas Soundtrack",
+      "medium": "tv",
+      "game": "Four Hands, Two Sonatas",
+      "composers": [],
+      "date": "2026-08-29",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/305644",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Four+Hands%2C+Two+Sonatas+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mQ1aYa1lFX0",
+      "art": "https://yt3.googleusercontent.com/bAM4LCQHxK5mlE4I6X6NfYB0kM0Fvs8JhMAH2k31ABe3ugiWACTX2VWKYLzwEAdWJ5JrRLqYDxSfm82k=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Four Hands Two Sonatas (Original Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lzNZRj4lhz6z8w0tGRITeG5MF56f8fphc",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 54,
+      "playsTotal": 63485,
+      "moods": [
+        "intense",
+        "ominous",
+        "tender"
+      ],
+      "moodsN": [
+        13,
+        12,
+        11
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-love-is-better-the-second-time-around-season-2",
+      "title": "Love Is Better the Second Time Around Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Love Is Better the Second Time Around",
+      "composers": [
+        "Erina Koyama"
+      ],
+      "date": "2026-09-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/246482",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Love+Is+Better+the+Second+Time+Around+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DoeALMiGK0A",
+      "art": "https://yt3.googleusercontent.com/di2_onB-bwzQgcANqm7h6q0cvlY0_RDE9mxcz_xWSIMuKSlEWKJB4GHAKmj9UtCq8qhYNlvTsnHudLVk=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Love is Better the Second Time Around　season2 Original SoundTrack",
+      "genres": [
+        "Drama"
+      ],
+      "composerAliases": [
+        "小山 絵里奈"
+      ],
+      "albumArtists": [
+        "Erina Koyama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nvEf0Xi9l7UoEARqBlDaKHGMUnuhRpV9M",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 1259,
+      "moods": [
+        "mysterious",
+        "tender",
+        "romantic"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-vampirina-teenage-vampire-season-2",
+      "title": "Vampirina: Teenage Vampire Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Vampirina: Teenage Vampire",
+      "composers": [
+        "Rebecca Kneubuhl"
+      ],
+      "date": "2026-10-06",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/275722",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Vampirina%3A+Teenage+Vampire+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DC7GGdBsNDr",
+      "art": "https://yt3.googleusercontent.com/_jceWe4f8D1oJZWvU1Fk_8dwYd1sU-qRkZSMxPLh88-H2l9RPFIfg64OI6ojkKRG4V3PdwNtMy6YC8-N=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Vampirina: Teenage Vampire: Season 2 (Original Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Comedy"
+      ],
+      "composerAliases": [
+        "Becky Kneubuhl"
+      ],
+      "albumArtists": [
+        "Vampirina: Teenage Vampire – Cast",
+        "Kenzi Richardson"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l5b7KnnRpyTIcUcr8sS-bNuj4e_AXXTHc",
+      "scoresN": 6,
+      "tracksN": 8,
+      "playsTotal": 291700,
+      "moods": [
+        "playful",
+        "joyful",
+        "hopeful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-vampirina-teenage-vampire",
+      "title": "Vampirina: Teenage Vampire Soundtrack",
+      "medium": "tv",
+      "game": "Vampirina: Teenage Vampire",
+      "composers": [
+        "Rebecca Kneubuhl"
+      ],
+      "date": "2025-09-12",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/275722",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Vampirina%3A+Teenage+Vampire+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZknFjQerur5",
+      "art": "https://yt3.googleusercontent.com/o6ViUkkcALXobXSb7EoR7E132M5rIEueybzNYHQzpjjhR8TOGTZlJNfHVWVr_uemIw1g_bZV_Lk686q_Kw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Vampirina: Teenage Vampire (Original Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Comedy"
+      ],
+      "composerAliases": [
+        "Becky Kneubuhl"
+      ],
+      "albumArtists": [
+        "Disney",
+        "Vampirina: Teenage Vampire – Cast",
+        "Kenzi Richardson"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nmR0HiaWdmsHAapHkJnWErCPb3cZbomY0",
+      "scoresN": 10,
+      "tracksN": 14,
+      "playsTotal": 5243000,
+      "moods": [
+        "playful",
+        "hopeful",
+        "joyful"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-subwoofer-lullaby",
+      "title": "Minecraft (Subwoofer Lullaby Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Kid MuZic"
+      ],
+      "date": "2022-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_GW1KJHyMZMV",
+          "seenAt": "2026-10-06T16:28:34Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+%28Subwoofer+Lullaby+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GW1KJHyMZMV",
+      "art": "https://yt3.googleusercontent.com/Z1yzQkTBAjcSXBGkDb5P4hIQ6HxQ509JqUGrvmuGKrv3VeA0JyAEF89tee32hi2slK0Vad68pgJVgp-cpA=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_npfxyUoY75biejWgK29f_1-WbVa85p67g",
+      "tracksN": 1,
+      "playsTotal": 124,
+      "moods": [
+        "dreamy",
+        "peaceful",
+        "tender"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
       ],
       "moodsV": 2
     }
