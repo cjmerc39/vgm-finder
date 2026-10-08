@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T17:19:36Z",
+  "updatedAt": "2026-10-08T17:18:54Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -83508,6 +83508,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/pragmata",
           "seenAt": "2026-07-29T22:11:24Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4621820/PRAGMATA_Original_Soundtrack/",
+          "seenAt": "2026-10-08T17:10:17Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Pragmata+Soundtrack",
@@ -381316,6 +381322,853 @@
         15,
         12,
         10
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "order-of-the-sinking-star",
+      "title": "Order of the Sinking Star Soundtrack",
+      "medium": "game",
+      "game": "Order of the Sinking Star",
+      "composers": [
+        "Peter Due",
+        "Martin Stig Andersen"
+      ],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5217050/Order_of_the_Sinking_Star_Soundtrack/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Order+of+the+Sinking+Star+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5217050/2a247003152c1af0e23ef77c5e01be60aaff9b4c/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "echo-weaver",
+      "title": "Echo Weaver - Soundtrack",
+      "medium": "game",
+      "game": "Echo Weaver",
+      "composers": [
+        "Spacesuit"
+      ],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5296460/Echo_Weaver__Soundtrack/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Echo+Weaver+-+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5296460/179895fdb314fca63d4846061f0c22576ee84995/header.jpg",
+      "notable": true,
+      "tracksN": 16,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Platform",
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "wonder",
+        "transcendent"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "stranded-naked",
+      "title": "Stranded & Naked Soundtrack",
+      "medium": "game",
+      "game": "Stranded & Naked",
+      "composers": [
+        "Cus"
+      ],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5219180/Stranded__Naked_Soundtrack/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stranded+%26+Naked+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5219180/80828a0e8c9125641b60866e362f146ff20c96c3/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "forever-ago",
+      "title": "Forever Ago (Original Soundtrack)",
+      "medium": "game",
+      "game": "Forever Ago",
+      "composers": [
+        "Clark Aboud"
+      ],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5247710/Forever_Ago_Original_Soundtrack/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/forever-ago",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Forever+Ago+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_vDYR1V8FpOf",
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5247710/a84d31c7912c0fc58163b15632e0a0cef2b3b8ff/header.jpg",
+      "notable": true,
+      "albumTitle": "Forever Ago (Original Soundtrack)",
+      "company": "Third Shift",
+      "console": true,
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "themes": [
+        "Drama"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kT2MS0qPTojda8NsrZQt2mu_bFgmNgfVc",
+      "tracksN": 30,
+      "playsTotal": 32,
+      "moods": [
+        "tender",
+        "hopeful",
+        "peaceful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "organ-failure",
+      "title": "Organ Failure Soundtrack",
+      "medium": "game",
+      "game": "Organ Failure",
+      "composers": [
+        "KharphynOST",
+        "SirTartarus"
+      ],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5190650/Organ_Failure_Soundtrack/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Organ+Failure+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5190650/76d21b66e2f57bc2f48dc8e019fb6b11390ce1b3/header.jpg",
+      "notable": true,
+      "tracksN": 4,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "mysterious",
+        "suspenseful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "puzzles-meteorites",
+      "title": "Puzzles Meteorites Soundtrack",
+      "medium": "game",
+      "game": "Puzzles Meteorites",
+      "composers": [],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5349420/Puzzles_Meteorites_Soundtrack/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzles+Meteorites+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5349420/326137cd2fd58d63f7769ef7a3522ba66647773d/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "morimens-ost-ogier-oathbound-ep-where-the-sun-rises",
+      "title": "Morimens OST┊Ogier: Oathbound EP: Where the Sun Rises",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "F.R.K. @B.I.A.V. Studio"
+      ],
+      "date": "2026-10-07",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5307080/Morimens_OSTOgier_Oathbound_EP_Where_the_Sun_Rises/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Morimens+OST%E2%94%8AOgier%3A+Oathbound+EP%3A+Where+the+Sun+Rises",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5307080/710818cfb8bd468327afe74b954377ca2d37a5e0/header.jpg",
+      "notable": true,
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Drama",
+        "Mystery"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Turn-based strategy (TBS)"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "case-solved-the-london-files-supporter-pack-printable-cases-soundtrack-more",
+      "title": "Case Solved: The London Files - Supporter Pack (Printable Cases, Soundtrack & More!)",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Rodrigo Teodoro"
+      ],
+      "date": "2026-10-07",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4926300/Case_Solved_The_London_Files__Supporter_Pack_Printable_Cases_Soundtrack__More/",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Case+Solved%3A+The+London+Files+-+Supporter+Pack+%28Printable+Cases%2C+Soundtrack+%26+More%21%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4926300/55b22dd5e233b8a0b1f638e813705d4366871c59/header.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Simulator"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "silver-pines",
+      "title": "Silver Pines Soundtrack",
+      "medium": "game",
+      "game": "Silver Pines",
+      "composers": [
+        "Karl Flodin"
+      ],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/silver-pines",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Silver+Pines+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_yG7Ru6x05R9",
+      "art": "https://yt3.googleusercontent.com/f24xAXQsl-2TnbGz7fVDUAquWEs1pVsBTiR7IT7F0PK-v9o5xLKYlEvULKr7Jh-f0hZU7T0RNIArR8k=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Silver Pines (Original Video Game Soundtrack)",
+      "company": "Wych Elm",
+      "console": true,
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "themes": [
+        "Action",
+        "Horror",
+        "Survival",
+        "Mystery"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k9QevgHiEnbsZKscrCE6nnE-886-dumrU",
+      "tracksN": 38,
+      "playsTotal": 427,
+      "moods": [
+        "mysterious",
+        "ominous",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        9,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "retrospace",
+      "title": "Retrospace Soundtrack",
+      "medium": "game",
+      "game": "Retrospace",
+      "composers": [
+        "StrayBoom"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/retrospace",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Retrospace+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_4lfMckx5LHo",
+      "art": "https://yt3.googleusercontent.com/dt0XmmxRyveT9og5sGkV8JrdbvbNVgltLsKLrnTmPhRBZnCK8ySsEFLcjntwtUKL7WvAD7EZXMEcSxDK=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Retrospace (Official Soundtrack)",
+      "company": "The Wild Gentlemen",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Simulator",
+        "Adventure"
+      ],
+      "themes": [
+        "Action",
+        "Stealth"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kn_120OU48zyHeflgXpptf90ckyoYmdP0",
+      "tracksN": 25,
+      "playsTotal": 36,
+      "moods": [
+        "mysterious",
+        "intense",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-no-pain",
+      "title": "No Pain Soundtrack",
+      "medium": "film",
+      "game": "No Pain",
+      "composers": [
+        "Fabio Massimo Capogrosso"
+      ],
+      "date": "2026-09-24",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1594043",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=No+Pain+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hmUvxXmXkpW",
+      "art": "https://yt3.googleusercontent.com/Y3YouRNM4o7G6dENDQmy_7zFYhVSU3iqUW9HGwCs6EvKT6ImFTVNPGAt3WSn73ZFgt81fIYvT5l4TO4=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Nessun Dolore (Original Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Fabio Massimo Capogrosso"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m6guZyIOrQHshbl00zuCsOezUOSSRcVEA",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 1250,
+      "moods": [
+        "tender",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-beware-boiúna",
+      "title": "Beware Boiúna Soundtrack",
+      "medium": "film",
+      "game": "Beware Boiúna",
+      "composers": [
+        "Stephen Lukach"
+      ],
+      "date": "2026-10-01",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1244523",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Beware+Boi%C3%BAna+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9g5v3QVAL1B",
+      "art": "https://yt3.googleusercontent.com/WoVjpfcxEjgaGvQrOt7VtI2iI2ShfG9IkSR9KxRsfFAoX60kdL9YBXT2Y1iG0pBUiyKw8ulpZ1O5KITp=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Beware Boiúna (Original Soundtrack)",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "albumArtists": [
+        "Stephen Lukach"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lVv9j3l-BSDEflVR1nmXha_YD0DJLRnZw",
+      "scoresN": 51,
+      "tracksN": 51,
+      "playsTotal": 3514,
+      "moods": [
+        "intense",
+        "ominous",
+        "suspenseful"
+      ],
+      "moodsN": [
+        18,
+        16,
+        12
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-young-and-the-restless",
+      "title": "The Young and the Restless Soundtrack",
+      "medium": "tv",
+      "game": "The Young and the Restless",
+      "composers": [
+        "Sinfonia of London"
+      ],
+      "date": "1973-03-26",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/1054",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Young+and+the+Restless+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GtNCONEWyOu",
+      "art": "https://yt3.googleusercontent.com/DTwVJadwO9bHJS2DJ9YYu-Nok1PL6Jy5GgU0Sjh_KHFMH9HWApn_-vv-5FNaTJDE22X9plWzjsK4YAA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Young and the Restless (Original Soundtrack)",
+      "genres": [
+        "Soap",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Sinfonia of London"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l5Ga13r30s7jEIIBufcGvEASfZX4MI2UM",
+      "scoresN": 34,
+      "tracksN": 34,
+      "playsTotal": 2305600,
+      "moods": [
+        "romantic",
+        "tender",
+        "hopeful"
+      ],
+      "moodsN": [
+        9,
+        9,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-reincarnated-as-a-sword",
+      "title": "Reincarnated as a Sword Soundtrack",
+      "medium": "tv",
+      "game": "Reincarnated as a Sword",
+      "composers": [
+        "Kisida",
+        "a2c",
+        "Yasuharu Takanashi"
+      ],
+      "date": "2022-10-05",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/134667",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Reincarnated+as+a+Sword+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uAD3rfnLBel",
+      "art": "https://yt3.googleusercontent.com/lGj440go9v7OXsKQjf1EkaQ5_dPI9NctQygFnmJ0rQWbGBGfUj-6LsQEFJcXhj0-rzX0hWRGFLoUCBuT=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "[Reincarnated as a Sword]Original Soundtrack",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Sci-Fi & Fantasy",
+        "Anime"
+      ],
+      "composerAliases": [
+        "岸田教団\t",
+        "Kishida Kyōdan Ando Ji Akeboshi Rokettsu\t",
+        " Kishida Kyoudan & The Akeboshi Rockets\t",
+        "Kisida Kyodan & THE Akebosi Rockets",
+        "きしだきょうだん・アンド・ジ・あけぼしロケッツ",
+        "Kishida",
+        "Daisaku Kitagawa ",
+        "北川大作",
+        "Kitagawa Daisaku",
+        "きしだ",
+        "Kisidakyodan",
+        "岸田教団&THE明星ロケッツ",
+        "MintJam",
+        "ミントジャム",
+        "アツシ",
+        "a2c (ギタリスト)",
+        "Atsushi \"a2c\" Yokoyama",
+        "横山厚",
+        "Yokoyama Atsushi",
+        "요코야마 아츠시",
+        "横山 厚",
+        "G5 Project",
+        "에이투씨",
+        "A2C (에이투씨)    ",
+        "a2c(MintJam) ",
+        "A2C (bluemoon) ",
+        "a2cbluemoon",
+        "a2c [MellowJamStudio]",
+        "a's Hideout",
+        "aのアジト a's Hideout",
+        "aのアジト",
+        "a's Hideout [Car camping Journey] ",
+        "AsHideout",
+        "MellowJamStudio",
+        "Atsushi Yokoyama",
+        "fripSide",
+        "たかなし やすはる"
+      ],
+      "albumArtists": [
+        "Yasuharu Takanashi"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nFHTLaJyL_S1jEBIMd-oAhg-y7NxshpUk",
+      "scoresN": 50,
+      "tracksN": 50,
+      "playsTotal": 530500,
+      "moods": [
+        "intense",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        12,
+        9,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-unicorn-academy-season-1-vol-1",
+      "title": "Unicorn Academy Season 1 Vol. 1 Soundtrack",
+      "medium": "tv",
+      "game": "Unicorn Academy",
+      "composers": [
+        "Tyler Tsang",
+        "Ben J. Lee"
+      ],
+      "date": "2023-11-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/221504",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Unicorn+Academy+Season+1+Vol.+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_TP2MI1ifRHf",
+      "art": "https://yt3.googleusercontent.com/oSKUVBp0Ik6Aqs3Km2y6DfnBhmc_1StAKnqnDkrwATlT8rWj337ZYa1e0bpDHpiaZ6qaW9191kPLeJRNPg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Unicorn Academy Season 1, Vol. 1",
+      "genres": [
+        "Animation",
+        "Kids",
+        "Sci-Fi & Fantasy"
+      ],
+      "weakMatch": true,
+      "composerAliases": [
+        "    Benjamin Lee"
+      ],
+      "albumArtists": [
+        "Unicorn Academy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mM41UTkwd3y7JtiCB72FmJEWgjP48veFw",
+      "scoresN": 9,
+      "tracksN": 9,
+      "playsTotal": 3578000,
+      "moods": [
+        "hopeful",
+        "tender",
+        "heroic"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-unicorn-academy-season-1-vol-2",
+      "title": "Unicorn Academy Season 1 Vol. 2 Soundtrack",
+      "medium": "tv",
+      "game": "Unicorn Academy",
+      "composers": [
+        "Tyler Tsang",
+        "Ben J. Lee"
+      ],
+      "date": "2023-11-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/221504",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Unicorn+Academy+Season+1+Vol.+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Nx73W70VMlI",
+      "art": "https://yt3.googleusercontent.com/XyW9t_4b1dosS5OfvIVG3b7pIvMHxefwwAt81GdLwLRnxyen9GE0-cZ2KY6ZknXpw8puCCODnR0Czk0k=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Unicorn Academy Season 1, Vol. 2",
+      "genres": [
+        "Animation",
+        "Kids",
+        "Sci-Fi & Fantasy"
+      ],
+      "weakMatch": true,
+      "composerAliases": [
+        "    Benjamin Lee"
+      ],
+      "albumArtists": [
+        "Unicorn Academy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l5n-u6HRTAwhUL3icXcg-2PT5ClukVYik",
+      "scoresN": 8,
+      "tracksN": 8,
+      "playsTotal": 478000,
+      "moods": [
+        "joyful",
+        "playful",
+        "heroic"
+      ],
+      "moodsN": [
+        7,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-a-returner-s-magic-should-be-special-season-1-vol-1",
+      "title": "A Returner's Magic Should Be Special Season 1 Vol. 1 Soundtrack",
+      "medium": "tv",
+      "game": "A Returner's Magic Should Be Special",
+      "composers": [
+        "Kenta Higashiohji"
+      ],
+      "date": "2023-10-08",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/230050",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Returner%27s+Magic+Should+Be+Special+Season+1+Vol.+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MS1vE0xcRus",
+      "art": "https://yt3.googleusercontent.com/sEuFKqmyiNgAUAkCJePuYU0mTODMsEMBfIFov7nI8ivyRPQMOkBXsY66jQU2MXgOj2u07z1F09KLTQysYw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "A Returner's Magic Should Be Special Original Soundtrack Vol.1",
+      "genres": [
+        "Animation",
+        "Sci-Fi & Fantasy",
+        "Action & Adventure",
+        "Anime"
+      ],
+      "albumArtists": [
+        "Kenta Higashiohji"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nYSxF3dDFtl9eUyhiPV280I_FdVXcqnvU",
+      "scoresN": 24,
+      "tracksN": 24,
+      "playsTotal": 6908,
+      "moods": [
+        "intense",
+        "ominous",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-a-returner-s-magic-should-be-special-season-1-vol-2",
+      "title": "A Returner's Magic Should Be Special Season 1 Vol. 2 Soundtrack",
+      "medium": "tv",
+      "game": "A Returner's Magic Should Be Special",
+      "composers": [
+        "Kenta Higashiohji"
+      ],
+      "date": "2023-10-08",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/230050",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Returner%27s+Magic+Should+Be+Special+Season+1+Vol.+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_XxV5q167hO3",
+      "art": "https://yt3.googleusercontent.com/0UMV76I6WiUzP-La4vQSU90r91ip4hufHgKNhUoSR5lbTdukOFd7h3It_ptq-ghKrwnWgMogb_ZgIXQVJw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "A Returner's Magic Should Be Special Original Soundtrack Vol.2",
+      "genres": [
+        "Animation",
+        "Sci-Fi & Fantasy",
+        "Action & Adventure",
+        "Anime"
+      ],
+      "albumArtists": [
+        "Kenta Higashiohji"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kFJBZEpN6-r-RR0L4lo280L2IYVmQu9wY",
+      "scoresN": 26,
+      "tracksN": 26,
+      "playsTotal": 1015,
+      "moods": [
+        "intense",
+        "ominous",
+        "epic"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-carrie",
+      "title": "Carrie Soundtrack",
+      "medium": "tv",
+      "game": "Carrie",
+      "composers": [
+        "Andrew Grush",
+        "Taylor Stewart"
+      ],
+      "date": "2026-10-07",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/288673",
+          "seenAt": "2026-10-08T17:10:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Carrie+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GqlG3tdXL0L",
+      "art": "https://yt3.googleusercontent.com/I580XBoNLHegvmgF3f6EI4WdFDxG_-lXxW70qMGuqAh66oDHxJOcLYbVLAyIc2GRo6V96cNsf-4AarTw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Carrie (Prime Original Series Soundtrack)",
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "composerAliases": [
+        "John Andrew Grush",
+        "The Newton Brothers",
+        "Andy Grush",
+        "The Newton Brothers",
+        "Taylor Newton Stuart",
+        "Taylor Newton Stewart"
+      ],
+      "albumArtists": [
+        "The Newton Brothers"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mw5t2v_PjIp6-Lv9wCcVp0c3qgopcBZ-0",
+      "scoresN": 8,
+      "tracksN": 8,
+      "playsTotal": 2894,
+      "moods": [
+        "mysterious",
+        "tender",
+        "dreamy"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
       ],
       "moodsV": 2
     }
