@@ -39,7 +39,9 @@
   },
   "1208117": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -52,6 +54,27 @@
     "release_date": "2026-09-09",
     "title": "Les H\u00e9ros du Louvre",
     "vote_count": 5
+   }
+  },
+  "1236045": {
+   "aliases": [
+    "The Gregson-Williams Brothers"
+   ],
+   "checked": [],
+   "composers": [
+    "Harry Gregson-Williams"
+   ],
+   "entry": {
+    "genre_ids": [
+     53,
+     18
+    ],
+    "id": 1236045,
+    "original_title": "Animals",
+    "poster_path": "/cyltXU1lAGhRFBuHQIMWBAPj8fI.jpg",
+    "release_date": "2026-10-09",
+    "title": "Animals",
+    "vote_count": 16
    }
   },
   "1257147": {
@@ -74,7 +97,9 @@
   },
   "1258181": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -87,24 +112,6 @@
     "release_date": "2026-09-09",
     "title": "A Woman's Life",
     "vote_count": 15
-   }
-  },
-  "1291366": {
-   "aliases": [],
-   "checked": [],
-   "composers": [],
-   "entry": {
-    "genre_ids": [
-     28,
-     80,
-     53
-    ],
-    "id": 1291366,
-    "original_title": "The Deputy",
-    "poster_path": "/qL654LNOfBu49e12jnnQIv6mny.jpg",
-    "release_date": "2026-09-25",
-    "title": "The Deputy",
-    "vote_count": 5
    }
   },
   "1318864": {
@@ -187,7 +194,9 @@
   },
   "1352304": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Arnaud Toulon"
    ],
@@ -306,24 +315,6 @@
     "vote_count": 6
    }
   },
-  "1400837": {
-   "aliases": [],
-   "checked": [],
-   "composers": [
-    "Patrick Jonsson"
-   ],
-   "entry": {
-    "genre_ids": [
-     27
-    ],
-    "id": 1400837,
-    "original_title": "Other Mommy",
-    "poster_path": "/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg",
-    "release_date": "2026-10-07",
-    "title": "Other Mommy",
-    "vote_count": 14
-   }
-  },
   "1429713": {
    "aliases": [],
    "checked": [
@@ -407,7 +398,9 @@
   },
   "1447853": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -567,6 +560,22 @@
     "release_date": "2026-08-30",
     "title": "AEW All In: London",
     "vote_count": 8
+   }
+  },
+  "1528830": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1528830,
+    "original_title": "Extra Geography",
+    "poster_path": "/yhHRpLhtaFXGYMsE5LuaRvZYs77.jpg",
+    "release_date": "2026-10-02",
+    "title": "Extra Geography",
+    "vote_count": 5
    }
   },
   "1530121": {
@@ -1191,7 +1200,9 @@
   },
   "1762506": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1292,6 +1303,23 @@
     "release_date": "2026-09-15",
     "title": "Jo Koy: Blue in the Face",
     "vote_count": 5
+   }
+  },
+  "1774164": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     53
+    ],
+    "id": 1774164,
+    "original_title": "Mute",
+    "poster_path": "/eRNLdMwYka3xhde70bucqPNPdyi.jpg",
+    "release_date": "2026-10-09",
+    "title": "Mute",
+    "vote_count": 7
    }
   },
   "1777750": {
@@ -1619,6 +1647,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 73
+  },
+  {
+   "date": "2026-10-09",
+   "deferred": 0,
+   "due": 5,
+   "found": 0,
+   "recorded": 3,
+   "searched": 5,
+   "searches": 7,
+   "tracked": 74
   }
  ]
 }
