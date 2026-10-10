@@ -20,7 +20,9 @@
   },
   "1198654": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Chris Roe"
    ],
@@ -54,27 +56,6 @@
     "release_date": "2026-09-09",
     "title": "Les H\u00e9ros du Louvre",
     "vote_count": 5
-   }
-  },
-  "1236045": {
-   "aliases": [
-    "The Gregson-Williams Brothers"
-   ],
-   "checked": [],
-   "composers": [
-    "Harry Gregson-Williams"
-   ],
-   "entry": {
-    "genre_ids": [
-     53,
-     18
-    ],
-    "id": 1236045,
-    "original_title": "Animals",
-    "poster_path": "/cyltXU1lAGhRFBuHQIMWBAPj8fI.jpg",
-    "release_date": "2026-10-09",
-    "title": "Animals",
-    "vote_count": 16
    }
   },
   "1257147": {
@@ -178,7 +159,9 @@
   },
   "1340102": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -676,7 +659,9 @@
   },
   "1576934": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Cl\u00e9ment Ducol"
    ],
@@ -880,23 +865,6 @@
     "release_date": "2026-09-27",
     "title": "Il mio nome \u00e8 Carlo",
     "vote_count": 7
-   }
-  },
-  "1645164": {
-   "aliases": [],
-   "checked": [],
-   "composers": [],
-   "entry": {
-    "genre_ids": [
-     18,
-     35
-    ],
-    "id": 1645164,
-    "original_title": "Serpenti",
-    "poster_path": "/xHDfVddxKnvEaWeEEnr3T4Yemgc.jpg",
-    "release_date": "2026-09-10",
-    "title": "Serpenti",
-    "vote_count": 9
    }
   },
   "1664003": {
@@ -1358,6 +1326,24 @@
     "vote_count": 5
    }
   },
+  "1792591": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     80,
+     18,
+     53
+    ],
+    "id": 1792591,
+    "original_title": "Ate\u015f",
+    "poster_path": "/nXIFgZOHXmmr9PpPiD3B2ctmklD.jpg",
+    "release_date": "2026-10-09",
+    "title": "Ate\u015f",
+    "vote_count": 5
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -1657,6 +1643,16 @@
    "searched": 5,
    "searches": 7,
    "tracked": 74
+  },
+  {
+   "date": "2026-10-10",
+   "deferred": 0,
+   "due": 4,
+   "found": 1,
+   "recorded": 1,
+   "searched": 4,
+   "searches": 4,
+   "tracked": 73
   }
  ]
 }

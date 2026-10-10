@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T16:55:57Z",
+  "updatedAt": "2026-10-10T15:49:07Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -97005,11 +97005,10 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Sister+Other+Paranoia+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_6dawMjgZDzH",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5063110/225f30ebe535a44b5c702e057125e981037195b2/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [
         "Horror",
         "Drama"
@@ -97019,7 +97018,10 @@
         "Indie",
         "Visual Novel"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_kdTEq1nRUNtVAj0SwKpl32ZX3sveuBOnE",
+      "tracksN": 14,
+      "playsTotal": 28608
     },
     {
       "id": "wagotabi",
@@ -382966,6 +382968,458 @@
         15,
         12,
         9
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "dverghold",
+      "title": "Dverghold Soundtrack",
+      "medium": "game",
+      "game": "Dverghold",
+      "composers": [
+        "Splendorius",
+        "Kurald Galain"
+      ],
+      "date": "2026-10-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5284620/Dverghold_Soundtrack/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dverghold+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5284620/f3cfa0d9430b2cd32712615d99b8cf8d64866cdc/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Role-playing (RPG)"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "baby-kings",
+      "title": "Baby Kings Soundtrack",
+      "medium": "game",
+      "game": "Baby Kings",
+      "composers": [
+        "Christian Jansen"
+      ],
+      "date": "2026-10-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5345100/Baby_Kings_Soundtrack/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Baby+Kings+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5345100/56d95d0960e53c60dc242bd77e29614b4cef87b1/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Puzzle"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "triple-track-music",
+      "title": "Triple Track – Music",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Black Cat Leo"
+      ],
+      "date": "2026-10-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5262910/Triple_Track__Music/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Triple+Track+%E2%80%93+Music+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5262910/3e62844a45ab7d6f71f8df13fecf9e1ab2e0ba43/header.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Puzzle"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "艾兰军校",
+      "title": "艾兰军校 Soundtrack",
+      "medium": "game",
+      "game": "艾兰军校",
+      "composers": [
+        "Alpico"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5353100/_Soundtrack/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E8%89%BE%E5%85%B0%E5%86%9B%E6%A0%A1+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5353100/a71c0859902e2191f1e54d6e7be01a10eb8a5ddf/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "glintwave",
+      "title": "Glintwave Soundtrack",
+      "medium": "game",
+      "game": "Glintwave",
+      "composers": [
+        "Karmikal Apps"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5233330/Glintwave_Soundtrack/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Glintwave+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5233330/64df38252fadc1b4d76dab76dcb1f3997731f54b/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "memory-lost",
+      "title": "Memory Lost Soundtrack",
+      "medium": "game",
+      "game": "Memory Lost",
+      "composers": [
+        "Magic Hazard"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/1594380/Memory_Lost_Soundtrack/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Memory+Lost+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1594380/aee04884a6d9a1a1ed2665c9267c8de326e7ae71/header.jpg",
+      "notable": true,
+      "tracksN": 4,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Shooter",
+        "Hack and slash/Beat 'em up",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "ominous",
+        "eerie"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "paperhead",
+      "title": "PAPERHEAD Soundtrack",
+      "medium": "game",
+      "game": "PAPERHEAD",
+      "composers": [
+        "Joonas Turner"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5113440/PAPERHEAD_Soundtrack/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=PAPERHEAD+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5113440/5ffd640f2c62bbb9836b8232a6211b07b3f5c42a/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-music-of-car-park-capital",
+      "title": "The Music of Car Park Capital",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Kent Kercher"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5252230/The_Music_of_Car_Park_Capital/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Music+of+Car+Park+Capital",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5252230/e2b53a4956a66655e752d9448b257176e5d7ec2a/header.jpg",
+      "notable": true,
+      "themes": [
+        "Business",
+        "Sandbox"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "中国式地雷女",
+      "title": "中国式地雷女 Soundtrack",
+      "medium": "game",
+      "game": "中国式地雷女",
+      "composers": [
+        "ZHONGXIA GAMES"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5195260/_Soundtrack/",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E4%B8%AD%E5%9B%BD%E5%BC%8F%E5%9C%B0%E9%9B%B7%E5%A5%B3+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5195260/2f1add89d2ef58f535b9586ecda93c0927b3d483/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-animals",
+      "title": "Animals Soundtrack",
+      "medium": "film",
+      "game": "Animals",
+      "composers": [
+        "Harry Gregson-Williams"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1236045",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Animals+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YGMxtw7SE5g",
+      "art": "https://yt3.googleusercontent.com/QhJMHCuCTbsrClB36Ggw9ZOnf0xdPqSMZiK09ANp0y8duxGvwfJ8ZyhTsYoPgwk0FBBJBzSXd6ZLOwo=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Animals (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "composerAliases": [
+        "The Gregson-Williams Brothers"
+      ],
+      "albumArtists": [
+        "Harry Gregson-Williams"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n14ZDEzW9JJnGeDluhE91it_iMw3rQrJg",
+      "scoresN": 10,
+      "tracksN": 10,
+      "playsTotal": 511,
+      "moods": [
+        "ominous",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-all-about-corinne",
+      "title": "All About Corinne Soundtrack",
+      "medium": "film",
+      "game": "All About Corinne",
+      "composers": [
+        "Bertrand Burgalat"
+      ],
+      "date": "2026-10-07",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1429592",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=All+About+Corinne+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_lfBIGHieSlM",
+      "art": "https://yt3.googleusercontent.com/1pE0SCPb7DBeYlrKadt-Mqgp4dMWADTLgUIvuZZQCk_y6AYsdhzaTRI_Zqc7_wgUsoDvfGECXlhJqSs=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Ni vue, ni connue (Original Soundtrack)",
+      "genres": [
+        "Comedy"
+      ],
+      "albumArtists": [
+        "Bertrand Burgalat"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lGivDDZ8VunOqmRF1vB5mK20WrxMB1bwA",
+      "scoresN": 24,
+      "tracksN": 24,
+      "playsTotal": 2094,
+      "moods": [
+        "playful",
+        "laid-back",
+        "joyful"
+      ],
+      "moodsN": [
+        9,
+        6,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-serpenti",
+      "title": "Serpenti Soundtrack",
+      "medium": "film",
+      "game": "Serpenti",
+      "composers": [
+        "Vittorio Giampietro"
+      ],
+      "date": "2026-09-10",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1645164",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Serpenti+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OoicPC9hi3j",
+      "art": "https://yt3.googleusercontent.com/-O5ihMngz3jGcmFkCK7jGEBjhDL2e2hZwaF8SGaZxzmplo6jURmgp1BWiA1IBvY3AdbjOMpvuCUh1_S-=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Serpenti (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Vittorio Giampietro"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kV7Z8v-PjS54LvX8ibFG1KGkoibX9UfDk",
+      "scoresN": 10,
+      "tracksN": 10,
+      "playsTotal": 6390,
+      "moods": [
+        "mysterious",
+        "ominous",
+        "intense"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-undercover",
+      "title": "Undercover Soundtrack",
+      "medium": "tv",
+      "game": "Undercover",
+      "composers": [
+        "Vince Pope"
+      ],
+      "date": "2011-04-17",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/43424",
+          "seenAt": "2026-10-10T15:40:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Undercover+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_G09MX8xXIa3",
+      "art": "https://yt3.googleusercontent.com/-pm4jLaJ_9ZkO13NN47hPhvffFqubFW7jJCINYw150mCDtJlIMdcS_GHwP0Abwda4vgLYbstWPAe-Zs=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Undercover Original Soundtrack",
+      "genres": [
+        "Crime",
+        "Action & Adventure",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Vince Pope"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lgxUw5I9w2aSVFamcXeA_IYOLEwdXrS_Q",
+      "scoresN": 21,
+      "tracksN": 21,
+      "playsTotal": 3813,
+      "moods": [
+        "intense",
+        "mysterious",
+        "ominous"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
       ],
       "moodsV": 2
     }
