@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T15:49:07Z",
+  "updatedAt": "2026-10-11T16:15:11Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -379301,7 +379301,17 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5170110/e750c4831e294333715d881729c181f3a7d7a924/header.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Action",
+        "Comedy",
+        "Party"
+      ],
+      "genres": [
+        "Shooter",
+        "Simulator",
+        "Strategy"
+      ]
     },
     {
       "id": "all-hallows",
@@ -383420,6 +383430,103 @@
         8,
         7,
         6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-lanterns-season-1",
+      "title": "Lanterns Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Lanterns",
+      "composers": [
+        "Stephanie Economou"
+      ],
+      "date": "2026-08-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/95350",
+          "seenAt": "2026-10-11T16:07:21Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lanterns+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Mw71tB4Jv32",
+      "art": "https://yt3.googleusercontent.com/4Yzo4zOb1u94gkcbfz_k8oyMBvN40gA2LUwyVX1D_QXnjs6Gbs91hobiOF5BO2xY65Yxrw6KIiYWTaeB=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Lanterns: Season 1 (Soundtrack from the HBO Max® Original Series)",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Sci-Fi & Fantasy"
+      ],
+      "albumArtists": [
+        "Stephanie Economou"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kp_EHb1pqewUtjohMkAdYV9LZ6nTulcLA",
+      "scoresN": 24,
+      "tracksN": 24,
+      "playsTotal": 1124111,
+      "moods": [
+        "intense",
+        "ominous",
+        "suspenseful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-ludwig-season-2",
+      "title": "Ludwig Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Ludwig",
+      "composers": [
+        "Nathan Klein",
+        "Finn Keane"
+      ],
+      "date": "2026-08-20",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/243360",
+          "seenAt": "2026-10-11T16:07:21Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ludwig+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_uXGV79oDOV4",
+      "art": "https://yt3.googleusercontent.com/7SHidandtDB6C93W9MtFPwqV9-jq-sgraIgAKpzsjAukgc5dlCR8iEd2lH2m_ISEaw5n0DS_40zk0S9x=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Ludwig (Series Two Original Score)",
+      "genres": [
+        "Mystery",
+        "Crime",
+        "Drama"
+      ],
+      "composerAliases": [
+        "Nathan W. Klein",
+        "EASYFUN"
+      ],
+      "albumArtists": [
+        "Nathan Klein"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kFgPWFyqyBWyw340E9AYVyKTxTWeffPmg",
+      "scoresN": 18,
+      "tracksN": 18,
+      "playsTotal": 9828,
+      "moods": [
+        "mysterious",
+        "ominous",
+        "eerie"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
       ],
       "moodsV": 2
     }

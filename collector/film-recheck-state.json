@@ -240,7 +240,9 @@
   },
   "1378742": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Stephen Limbaugh"
    ],
@@ -454,7 +456,9 @@
   },
   "1497946": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "ermhoi"
    ],
@@ -607,7 +611,9 @@
   },
   "1558568": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Arnau Bataller"
    ],
@@ -687,7 +693,9 @@
     "Taku Matsushiba",
     "Bandoh Yuta"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Yuta Bandoh"
    ],
@@ -705,7 +713,9 @@
   },
   "1597199": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Guglielmo Diana"
    ],
@@ -887,7 +897,9 @@
   },
   "1701141": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1001,6 +1013,37 @@
     "release_date": "2026-09-08",
     "title": "Untold Mr. T: I Pity the Fool",
     "vote_count": 17
+   }
+  },
+  "1742441": {
+   "aliases": [
+    "Steven Ellison",
+    "Captain Murphy",
+    "FlyLo",
+    "Steve Ellison",
+    "DJ Flying Lotus",
+    "Steven D. Bingley-Ellison ",
+    "steve",
+    "Alexander Geringas"
+   ],
+   "checked": [],
+   "composers": [
+    "Flying Lotus",
+    "Alex Geringas",
+    "Mike Himelstein"
+   ],
+   "entry": {
+    "genre_ids": [
+     27,
+     10402,
+     53
+    ],
+    "id": 1742441,
+    "original_title": "V/H/S/Mixtape",
+    "poster_path": "/uS8yoiA6NfsuYeOTbVfpem8Ib9.jpg",
+    "release_date": "2026-10-09",
+    "title": "V/H/S/Mixtape",
+    "vote_count": 10
    }
   },
   "1742458": {
@@ -1653,6 +1696,16 @@
    "searched": 4,
    "searches": 4,
    "tracked": 73
+  },
+  {
+   "date": "2026-10-11",
+   "deferred": 0,
+   "due": 6,
+   "found": 0,
+   "recorded": 1,
+   "searched": 6,
+   "searches": 10,
+   "tracked": 74
   }
  ]
 }
