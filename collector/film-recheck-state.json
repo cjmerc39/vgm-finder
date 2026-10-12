@@ -1,5 +1,23 @@
 {
  "films": {
+  "1001405": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Florencia Di Concilio"
+   ],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1001405,
+    "original_title": "L'Esp\u00e8ce explosive",
+    "poster_path": "/myXEa3yLlTrZF28diJ5AnXo9Wvz.jpg",
+    "release_date": "2026-10-07",
+    "title": "Too Many Beasts",
+    "vote_count": 5
+   }
+  },
   "1084815": {
    "aliases": [],
    "checked": [
@@ -533,6 +551,24 @@
     "vote_count": 5
    }
   },
+  "1514891": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "FAUX AMIS"
+   ],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1514891,
+    "original_title": "M\u00e9moire de fille",
+    "poster_path": "/eRpP2kcfhvjZPR8dnaUKQE563Dm.jpg",
+    "release_date": "2026-09-30",
+    "title": "A Girl\u2019s Story",
+    "vote_count": 6
+   }
+  },
   "1519320": {
    "aliases": [],
    "checked": [
@@ -607,6 +643,23 @@
     "release_date": "2026-09-02",
     "title": "The Girl with the Leica",
     "vote_count": 5
+   }
+  },
+  "1545690": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     28,
+     18
+    ],
+    "id": 1545690,
+    "original_title": "WWE Money in the Bank 2026",
+    "poster_path": "/wRFDnH3XzwDKV9QU3DTYNU8XX2R.jpg",
+    "release_date": "2026-10-10",
+    "title": "WWE Money in the Bank 2026",
+    "vote_count": 7
    }
   },
   "1558568": {
@@ -875,6 +928,25 @@
     "release_date": "2026-09-27",
     "title": "Il mio nome \u00e8 Carlo",
     "vote_count": 7
+   }
+  },
+  "1646945": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Chanell Crichlow",
+    "Michael Tuller"
+   ],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1646945,
+    "original_title": "The Swan: Behind the Mirror",
+    "poster_path": "/hCALD2uCetzUjj40k8TUMnsA397.jpg",
+    "release_date": "2026-09-29",
+    "title": "The Swan: Behind the Mirror",
+    "vote_count": 5
    }
   },
   "1664003": {
@@ -1706,6 +1778,16 @@
    "searched": 6,
    "searches": 10,
    "tracked": 74
+  },
+  {
+   "date": "2026-10-12",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 4,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 78
   }
  ]
 }

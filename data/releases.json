@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T16:15:11Z",
+  "updatedAt": "2026-10-12T19:43:12Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -383527,6 +383527,243 @@
         5,
         5,
         4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "moonfrost",
+      "title": "Moonfrost Soundtrack",
+      "medium": "game",
+      "game": "Moonfrost",
+      "composers": [
+        "Daniel Hoang"
+      ],
+      "date": "2026-10-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4791030/Moonfrost_Soundtrack/",
+          "seenAt": "2026-10-12T19:35:45Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Moonfrost+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4791030/df8a0de633d1281376bbc78e830507dda1b882de/header.jpg",
+      "notable": true,
+      "tracksN": 29,
+      "themes": [
+        "Fantasy",
+        "Mystery",
+        "Romance"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "hopeful",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "nature-hike",
+      "title": "Nature Hike (Original Soundtrack)",
+      "medium": "game",
+      "game": "Nature Hike",
+      "composers": [
+        "Tancla"
+      ],
+      "date": "2026-10-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5356370/Nature_Hike_Original_Soundtrack/",
+          "seenAt": "2026-10-12T19:35:45Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nature+Hike+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5356370/c1ef1f0c666ca92cb1fb69c74b0bb6b70b2abb60/header.jpg",
+      "notable": true,
+      "tracksN": 12,
+      "themes": [
+        "Comedy",
+        "Romance"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "tender",
+        "wonder",
+        "peaceful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "time-to-wake-up",
+      "title": "Time To Wake Up Soundtrack",
+      "medium": "game",
+      "game": "Time To Wake Up",
+      "composers": [
+        "Alexander Baboian"
+      ],
+      "date": "2026-10-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5087730/Time_To_Wake_Up_Soundtrack/",
+          "seenAt": "2026-10-12T19:35:45Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Time+To+Wake+Up+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5087730/37df805c07ce8887d91bfc6aa4cd78c0248e0cff/header.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [
+        "Horror",
+        "Thriller",
+        "Mystery"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "wonder"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "burn-with-me",
+      "title": "Burn With Me Soundtrack",
+      "medium": "game",
+      "game": "Burn With Me",
+      "composers": [
+        "Nikita Melnikov"
+      ],
+      "date": "2026-10-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5332750/Burn_With_Me_Soundtrack/",
+          "seenAt": "2026-10-12T19:35:45Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Burn+With+Me+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5332750/7167fedeb12e8c401105a13b06e367f9ab3afb40/header.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [
+        "Fantasy",
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "cyclics-demo",
+      "title": "Cyclics Demo Soundtrack",
+      "medium": "game",
+      "game": "Cyclics Demo",
+      "composers": [
+        "DaviMrS"
+      ],
+      "date": "2026-10-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3783650/Cyclics_Demo_Soundtrack/",
+          "seenAt": "2026-10-12T19:35:45Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cyclics+Demo+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3783650/b5f921b0b99ca3412d5b78bb9f32848af9c628f6/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "totems-a-minecraft",
+      "title": "Totems (A Minecraft Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Approaching Nirvana"
+      ],
+      "date": "2020-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_veKGPsByUNK",
+          "seenAt": "2026-10-12T19:35:45Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Totems+%28A+Minecraft+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_veKGPsByUNK",
+      "art": "https://yt3.googleusercontent.com/Bp1qvM_PAqnEg0LFK_M62BDA7F6SXiO43-1MuVAF1qFj1buUYx6nVZZrXRh7ha8kfvYiHzxOp-chmjIg=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_ktzZ4LGHR3wockhCoFAxZ5i9pSR5r90uc",
+      "tracksN": 10,
+      "playsTotal": 11504,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
       ],
       "moodsV": 2
     }
