@@ -1021,6 +1021,22 @@
     "vote_count": 6
    }
   },
+  "1725719": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1725719,
+    "original_title": "Sotto a chi tocca",
+    "poster_path": "/pKvjxEfynVoJC6h9vw0jardGbQr.jpg",
+    "release_date": "2026-10-08",
+    "title": "Sotto a chi tocca",
+    "vote_count": 8
+   }
+  },
   "1728084": {
    "aliases": [],
    "checked": [],
@@ -1468,7 +1484,9 @@
     "Hans Florian Zimmer",
     "Bleeding Fingers"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Hans Zimmer",
     "Steven Doar",
@@ -1489,16 +1507,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-13",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 25,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 25
-  },
   {
    "date": "2026-09-14",
    "deferred": 0,
@@ -1788,6 +1796,16 @@
    "searched": 0,
    "searches": 0,
    "tracked": 78
+  },
+  {
+   "date": "2026-10-13",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 1,
+   "searched": 1,
+   "searches": 1,
+   "tracked": 79
   }
  ]
 }
