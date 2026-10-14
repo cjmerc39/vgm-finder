@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T17:27:30Z",
+  "updatedAt": "2026-10-14T14:57:45Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -290871,7 +290871,7 @@
       "composers": [
         "Cast Of 'Phineas and Ferb'"
       ],
-      "date": "2025-05-26",
+      "date": "2025-05-25",
       "sources": [
         {
           "name": "tmdb-tv",
@@ -384165,6 +384165,440 @@
         4,
         1,
         1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "labyrinth-knights",
+      "title": "Labyrinth Knights Soundtrack",
+      "medium": "game",
+      "game": "Labyrinth Knights",
+      "composers": [
+        "Byron T. Simmons"
+      ],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4344610/Labyrinth_Knights_Soundtrack/",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Labyrinth+Knights+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4344610/c6ee57c1924a7c37953d95586cc319c811d08c9f/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "nomori",
+      "title": "Nomori Soundtrack",
+      "medium": "game",
+      "game": "Nomori",
+      "composers": [
+        "Vijay van der Weijden"
+      ],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5282200/Nomori_Soundtrack/",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nomori+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5282200/66337a603cbb1426f035d94b974f766eff6db71c/header.jpg",
+      "notable": true,
+      "tracksN": 49,
+      "themes": [
+        "Action",
+        "Fantasy"
+      ],
+      "genres": [
+        "Puzzle",
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "playful",
+        "peaceful",
+        "mysterious"
+      ],
+      "moodsN": [
+        12,
+        12,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "dungeon-settlers",
+      "title": "Dungeon Settlers Soundtrack",
+      "medium": "game",
+      "game": "Dungeon Settlers",
+      "composers": [
+        "Simon Ton"
+      ],
+      "date": "2026-10-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5217950/Dungeon_Settlers_Soundtrack/",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dungeon+Settlers+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5217950/32b1f32bea8c7dea8ac99b5c092ff70b59649214/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "permafrost",
+      "title": "Permafrost - Original Soundtrack",
+      "medium": "game",
+      "game": "Permafrost",
+      "composers": [
+        "Paweł Flanc",
+        "Jakub Jóskowiak"
+      ],
+      "date": "2026-10-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5345330/Permafrost__Original_Soundtrack/",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Permafrost+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5345330/71cfc3199ac70d60e9c3e816e904413de17baa3d/header.jpg",
+      "notable": true,
+      "tracksN": 20,
+      "themes": [
+        "Action",
+        "Survival",
+        "Open world"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "sad",
+        "playful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "among-the-trolls",
+      "title": "Among the Trolls Soundtrack",
+      "medium": "game",
+      "game": "Among the Trolls",
+      "composers": [
+        "Daniele Carmosino"
+      ],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/among-the-trolls",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Among+the+Trolls+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_erO0FzheQfN",
+      "art": "https://yt3.googleusercontent.com/a6ldjIsUPa0KklZwbPr_SImnvHlUmwyNSs3Wn2tcYGPPx1Vc5yANd1WDrLl7ef151hd7AR8_BmGjkf4TZw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Among the Trolls (Original Soundtrack)",
+      "company": "AvantGarden Games",
+      "console": false,
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Horror",
+        "Survival"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kt7Jdl8UIHfgMJb-VtoKc5ULNeqJO4lj4",
+      "tracksN": 12,
+      "playsTotal": 22,
+      "moods": [
+        "mysterious",
+        "nostalgic",
+        "sad"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-love-of-your-life",
+      "title": "Love of Your Life Soundtrack",
+      "medium": "film",
+      "game": "Love of Your Life",
+      "composers": [
+        "Dustin O'Halloran"
+      ],
+      "date": "2026-10-07",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1381078",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Love+of+Your+Life+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7hTfhONDTq1",
+      "art": "https://yt3.googleusercontent.com/xCnSC3iDL3ADEyY7v1H5ibPHRb82QIKFaSonKWLHQxmBa17DKguyYYN8WwdgxhUPmqWfTGnlNhsJ99lB=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Love of Your Life (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "albumArtists": [
+        "Dustin O'Halloran"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m81T_K7_27hsI29gHlaMRzZUHKDpKa4-0",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 6372,
+      "moods": [
+        "tender",
+        "mysterious",
+        "nostalgic"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-helluva-boss-season-1",
+      "title": "Helluva Boss Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Helluva Boss",
+      "composers": [
+        "Jefferson Friedman",
+        "Matt Novack",
+        "Christopher French",
+        "Christopher French",
+        "Brian Sadler"
+      ],
+      "date": "2020-10-31",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/289892",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Helluva+Boss+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MPtWRes5SuO",
+      "art": "https://yt3.googleusercontent.com/Xhzfjgog0CEVYrDJ8Jgzm2e3jAanJrImqDcRCd_XXgrSZCNbFrGbEwbtFvZCgieSABb-h2Char7R-Qpf=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Helluva Boss: Season One (Original Soundtrack)",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Helluva Boss"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k-xu-Q3pKIH--DSj_A93GGqI8zy3rGomM",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 19083000,
+      "moods": [
+        "playful",
+        "joyful",
+        "intense"
+      ],
+      "moodsN": [
+        8,
+        5,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-helluva-boss-season-2",
+      "title": "Helluva Boss Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Helluva Boss",
+      "composers": [
+        "Jefferson Friedman",
+        "Matt Novack",
+        "Christopher French",
+        "Christopher French",
+        "Brian Sadler"
+      ],
+      "date": "2022-07-30",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/289892",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Helluva+Boss+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Iicy1SW7kDZ",
+      "art": "https://yt3.googleusercontent.com/lYEWQu-pURd9Fa1U3OSBu7uDCB_yXJh0Gm0SiqdO70QAxlJQHAHzv8Pd3Ygdp-FEm2-aNJuFdEqd8K8=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Helluva Boss: Season Two (Original Soundtrack)",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Helluva Boss"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kmz2Ivz_V3GdsgeXa27FK9UA4UbMpBs2Y",
+      "scoresN": 26,
+      "tracksN": 26,
+      "playsTotal": 119544000,
+      "moods": [
+        "playful",
+        "intense",
+        "tender"
+      ],
+      "moodsN": [
+        11,
+        8,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-lowdown",
+      "title": "The Lowdown Soundtrack",
+      "medium": "tv",
+      "game": "The Lowdown",
+      "composers": [
+        "JD McPherson"
+      ],
+      "date": "2025-09-23",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/273247",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Lowdown+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_v0K3UCUljcS",
+      "art": "https://yt3.googleusercontent.com/wi8-3VNpehr9eWRXZymZf04r3JSwJWaCNKSokGq0ADQwQ6eAmnrttqW-3XQx9tRtEtcelLmk02ciBHUX=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Lowdown (Original Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "JD McPherson"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k1-aN7y4Vsw20j3cG5sZTVsLeEE6oemQQ",
+      "scoresN": 21,
+      "tracksN": 21,
+      "playsTotal": 5912,
+      "moods": [
+        "nostalgic",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-nature",
+      "title": "Nature Soundtrack",
+      "medium": "tv",
+      "game": "Nature",
+      "composers": [
+        "Brian Bennett",
+        "Edward Williams",
+        "Noah Sorota"
+      ],
+      "date": "1982-10-10",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/14951",
+          "seenAt": "2026-10-14T14:51:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nature+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_s02Hxf8StJw",
+      "art": "https://yt3.googleusercontent.com/nla7o2woQRGTsJ1QuoYAuZeq543HgPo1j8iZQdGfBYUXMZTXRBfvk12gaES2Q9NFjh_Cxwt_mLv-dPUB=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Nature Soundtrack",
+      "genres": [
+        "Documentary",
+        "Family"
+      ],
+      "composerAliases": [
+        "The Shadows"
+      ],
+      "albumArtists": [
+        "Rest & Relax Nature Sounds Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lNMjel92_CGqetQ7hzUNMtgLpWoOPOnu8",
+      "scoresN": 30,
+      "tracksN": 30,
+      "playsTotal": 81165,
+      "moods": [
+        "peaceful",
+        "wonder",
+        "mysterious"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
       ],
       "moodsV": 2
     }

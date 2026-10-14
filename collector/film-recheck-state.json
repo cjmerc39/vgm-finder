@@ -36,6 +36,23 @@
     "vote_count": 10
    }
   },
+  "1153576": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     28,
+     14
+    ],
+    "id": 1153576,
+    "original_title": "Street Fighter",
+    "poster_path": "/dJPT2Uf12X6aFg8i5N67NTpIZ9t.jpg",
+    "release_date": "2026-10-13",
+    "title": "Street Fighter",
+    "vote_count": 8
+   }
+  },
   "1198654": {
    "aliases": [],
    "checked": [
@@ -1475,6 +1492,22 @@
     "vote_count": 5
    }
   },
+  "1794652": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1794652,
+    "original_title": "Raio-X Lula 3",
+    "poster_path": "/cdfBGRBphX73nvY7xiWO24nUYou.jpg",
+    "release_date": "2026-10-10",
+    "title": "Raio-X Lula 3",
+    "vote_count": 5
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -1507,16 +1540,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-14",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 4,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 29
-  },
   {
    "date": "2026-09-15",
    "deferred": 0,
@@ -1806,6 +1829,16 @@
    "searched": 1,
    "searches": 1,
    "tracked": 79
+  },
+  {
+   "date": "2026-10-14",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 2,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 81
   }
  ]
 }
