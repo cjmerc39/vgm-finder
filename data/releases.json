@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T14:57:45Z",
+  "updatedAt": "2026-10-15T14:45:01Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -384326,6 +384326,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/among-the-trolls",
           "seenAt": "2026-10-14T14:51:48Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5283060/Among_the_Trolls_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Among+the+Trolls+Soundtrack",
@@ -384599,6 +384605,350 @@
         8,
         6,
         5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "frosthaven-soundtrack-art-book",
+      "title": "Frosthaven Soundtrack + Art Book",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "George Strezov"
+      ],
+      "date": "2026-10-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4866430/Frosthaven_Soundtrack__Art_Book/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Frosthaven+Soundtrack+%2B+Art+Book",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4866430/a076969f611070086ca51a8da0aa3d80074ecb70/header.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "project-betrayal-midnight-terror",
+      "title": "Project Betrayal: Midnight Terror Original Soundtrack",
+      "medium": "game",
+      "game": "Project Betrayal: Midnight Terror",
+      "composers": [
+        "Periklis Ntrekis"
+      ],
+      "date": "2026-10-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5231740/Project_Betrayal_Midnight_Terror_Original_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Project+Betrayal%3A+Midnight+Terror+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5231740/d6c085285de1fb4e191e6f18868312178d1cc598/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "navy-island-confidential",
+      "title": "Navy Island Confidential Soundtrack",
+      "medium": "game",
+      "game": "Navy Island Confidential",
+      "composers": [
+        "Jerome Lemarchand"
+      ],
+      "date": "2026-10-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5380820/Navy_Island_Confidential_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Navy+Island+Confidential+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5380820/8c8f40ad55ba10cb40b78a9d5c0b8a933d736514/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-jackbox-party-pack-12",
+      "title": "The Jackbox Party Pack 12 Soundtrack",
+      "medium": "game",
+      "game": "The Jackbox Party Pack 12",
+      "composers": [],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5108610/The_Jackbox_Party_Pack_12_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Jackbox+Party+Pack+12+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5108610/8b1f45e68bc022fdebd94e6b326bfda5dab656c6/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Comedy",
+        "Party"
+      ],
+      "genres": [
+        "Strategy",
+        "Quiz/Trivia",
+        "Indie"
+      ]
+    },
+    {
+      "id": "the-only-eye-arcane-legacy",
+      "title": "The Only Eye: Arcane Legacy Soundtrack",
+      "medium": "game",
+      "game": "The Only Eye: Arcane Legacy",
+      "composers": [
+        "BitRoot Studios"
+      ],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5393240/The_Only_Eye_Arcane_Legacy_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Only+Eye%3A+Arcane+Legacy+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5393240/f9aeda2c51fdd56d48381bad86d51307e0727abd/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Fantasy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "trash-day",
+      "title": "Trash Day (Official Soundtrack)",
+      "medium": "game",
+      "game": "Trash Day",
+      "composers": [],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5394290/Trash_Day_Official_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Trash+Day+%28Official+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5394290/e6b02999e611ebc9f71e636cde2e98b3664e69ad/header.jpg",
+      "notable": true,
+      "tracksN": 4,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "moods": [
+        "mysterious",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "captive-3000-lower-floors",
+      "title": "Captive 3000 Lower Floors Soundtrack",
+      "medium": "game",
+      "game": "Captive 3000 Lower Floors",
+      "composers": [
+        "Twin-FX"
+      ],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5339820/Captive_3000_Lower_Floors_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Captive+3000+Lower+Floors+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5339820/c27116a841e488a221883234175cea5f5e9626ec/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "captive-3000-upper-floors",
+      "title": "Captive 3000 Upper Floors Soundtrack",
+      "medium": "game",
+      "game": "Captive 3000 Upper Floors",
+      "composers": [
+        "Twin-FX"
+      ],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5174420/Captive_3000_Upper_Floors_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Captive+3000+Upper+Floors+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5174420/c27116a841e488a221883234175cea5f5e9626ec/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "cozy-builder",
+      "title": "Cozy Builder Soundtrack",
+      "medium": "game",
+      "game": "Cozy Builder",
+      "composers": [],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5210890/Cozy_Builder_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cozy+Builder+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5210890/ea80eeb286a7019c94eeb2ca37c9e59022ae7045/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ]
+    },
+    {
+      "id": "over-the-hill",
+      "title": "over the hill Soundtrack",
+      "medium": "game",
+      "game": "over the hill",
+      "composers": [
+        "Vyacheslav Anatolevich Koristov",
+        "Giacomo Giunchedi"
+      ],
+      "date": "2026-10-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5147400/over_the_hill_Soundtrack/",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=over+the+hill+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5147400/7137cc89167cc9759c0ebef855d680b8aa517b86/header.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [
+        "Sandbox"
+      ],
+      "genres": [
+        "Racing",
+        "Simulator",
+        "Sport"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "epic",
+        "driving"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-diplomat-season-4",
+      "title": "The Diplomat Season 4 Soundtrack",
+      "medium": "tv",
+      "game": "The Diplomat",
+      "composers": [
+        "Marcelo Zarvos",
+        "Nathan Barr",
+        "Dimitri Smith"
+      ],
+      "date": "2026-10-15",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/203857",
+          "seenAt": "2026-10-15T14:38:49Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Diplomat+Season+4+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7wv70gYqhH8",
+      "art": "https://yt3.googleusercontent.com/qBCmO2pAzzGRdFmR9CWAMuD77s5xkzvW7CdABVuAPpOVJsGj4hC2vNQjM02NjcpIazM847nWGqXEWYYn=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Diplomat: Season 4 (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama",
+        "War & Politics"
+      ],
+      "composerAliases": [
+        "Marcelo Uchoa Zarvos",
+        "Marcelo U. Zarvos"
+      ],
+      "albumArtists": [
+        "Marcelo Zarvos"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kr7zAiK0h8M7pp-ViRb-gJKytaHc54UcY",
+      "scoresN": 22,
+      "tracksN": 22,
+      "playsTotal": 177,
+      "moods": [
+        "heroic",
+        "intense",
+        "epic"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
       ],
       "moodsV": 2
     }

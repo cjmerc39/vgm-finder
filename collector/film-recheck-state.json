@@ -93,6 +93,26 @@
     "vote_count": 5
    }
   },
+  "1255833": {
+   "aliases": [
+    "Joe Trapanese"
+   ],
+   "checked": [],
+   "composers": [
+    "Joseph Trapanese"
+   ],
+   "entry": {
+    "genre_ids": [
+     53
+    ],
+    "id": 1255833,
+    "original_title": "Whalefall",
+    "poster_path": "/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg",
+    "release_date": "2026-10-14",
+    "title": "Whalefall",
+    "vote_count": 6
+   }
+  },
   "1257147": {
    "aliases": [],
    "checked": [
@@ -128,6 +148,22 @@
     "release_date": "2026-09-09",
     "title": "A Woman's Life",
     "vote_count": 15
+   }
+  },
+  "1282159": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1282159,
+    "original_title": "Let's Have Kids!",
+    "poster_path": "/ciHBHFWAUn9tXNpm5NfDOkcgcMx.jpg",
+    "release_date": "2026-10-13",
+    "title": "Let's Have Kids!",
+    "vote_count": 6
    }
   },
   "1318864": {
@@ -468,6 +504,28 @@
     "release_date": "2026-09-16",
     "title": "Think Good",
     "vote_count": 7
+   }
+  },
+  "1477583": {
+   "aliases": [
+    "Hauschka"
+   ],
+   "checked": [],
+   "composers": [
+    "Volker Bertelmann",
+    "Lennart Saathoff"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     878
+    ],
+    "id": 1477583,
+    "original_title": "Corpus Delicti",
+    "poster_path": "/8ErdJXLWWCSjHgDV4hHHkwYfcqG.jpg",
+    "release_date": "2026-10-01",
+    "title": "Corpus Delicti",
+    "vote_count": 5
    }
   },
   "1482547": {
@@ -912,7 +970,9 @@
     "Mondo Boys",
     "Mondo Boys"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Mike Griffin",
     "Mike Schanzlin"
@@ -1212,7 +1272,9 @@
   },
   "1751701": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1407,7 +1469,9 @@
   },
   "1770859": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1537,19 +1601,27 @@
     "title": "The Last Photograph",
     "vote_count": 6
    }
+  },
+  "947493": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     16,
+     18,
+     10751
+    ],
+    "id": 947493,
+    "original_title": "Le corset",
+    "poster_path": "/aXNm7mgW22mxCSwSV7i7GHjy6Ga.jpg",
+    "release_date": "2026-10-14",
+    "title": "Iron Boy",
+    "vote_count": 7
+   }
   }
  },
  "runs": [
-  {
-   "date": "2026-09-15",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 0,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 29
-  },
   {
    "date": "2026-09-16",
    "deferred": 0,
@@ -1839,6 +1911,16 @@
    "searched": 0,
    "searches": 0,
    "tracked": 81
+  },
+  {
+   "date": "2026-10-15",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 4,
+   "searched": 3,
+   "searches": 3,
+   "tracked": 85
   }
  ]
 }
