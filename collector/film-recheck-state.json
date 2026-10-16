@@ -36,23 +36,6 @@
     "vote_count": 10
    }
   },
-  "1153576": {
-   "aliases": [],
-   "checked": [],
-   "composers": [],
-   "entry": {
-    "genre_ids": [
-     28,
-     14
-    ],
-    "id": 1153576,
-    "original_title": "Street Fighter",
-    "poster_path": "/dJPT2Uf12X6aFg8i5N67NTpIZ9t.jpg",
-    "release_date": "2026-10-13",
-    "title": "Street Fighter",
-    "vote_count": 8
-   }
-  },
   "1198654": {
    "aliases": [],
    "checked": [
@@ -93,24 +76,24 @@
     "vote_count": 5
    }
   },
-  "1255833": {
-   "aliases": [
-    "Joe Trapanese"
-   ],
+  "1241803": {
+   "aliases": [],
    "checked": [],
    "composers": [
-    "Joseph Trapanese"
+    "Christophe Julien"
    ],
    "entry": {
     "genre_ids": [
-     53
+     36,
+     10749,
+     18
     ],
-    "id": 1255833,
-    "original_title": "Whalefall",
-    "poster_path": "/vjTYUTgh9nO88i6HZ4YPRhiFL05.jpg",
+    "id": 1241803,
+    "original_title": "Les Mis\u00e9rables",
+    "poster_path": "/tY3CoBNTCpvJayVRLqIIGDa4Ep8.jpg",
     "release_date": "2026-10-14",
-    "title": "Whalefall",
-    "vote_count": 6
+    "title": "Les Mis\u00e9rables",
+    "vote_count": 13
    }
   },
   "1257147": {
@@ -394,7 +377,9 @@
   },
   "1433583": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Latham Gaines",
     "Shelby Gaines"
@@ -492,7 +477,9 @@
   },
   "1466670": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -757,6 +744,25 @@
     "vote_count": 10
    }
   },
+  "1561726": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Pol\u00e9rik Rouvi\u00e8re"
+   ],
+   "entry": {
+    "genre_ids": [
+     28,
+     53
+    ],
+    "id": 1561726,
+    "original_title": "Masterplan",
+    "poster_path": "/5xmXVd7nCK3tAo34XkO58SxUCip.jpg",
+    "release_date": "2026-10-16",
+    "title": "Masterplan",
+    "vote_count": 5
+   }
+  },
   "1571687": {
    "aliases": [],
    "checked": [],
@@ -929,6 +935,23 @@
     "release_date": "2026-09-25",
     "title": "Buzzkill",
     "vote_count": 5
+   }
+  },
+  "1623256": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35,
+     18
+    ],
+    "id": 1623256,
+    "original_title": "Stormen",
+    "poster_path": "/5YNjTi5AhbSM4hDOynJcgFfvKRn.jpg",
+    "release_date": "2026-10-15",
+    "title": "The Storm",
+    "vote_count": 10
    }
   },
   "1632103": {
@@ -1623,16 +1646,6 @@
  },
  "runs": [
   {
-   "date": "2026-09-16",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 3,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 32
-  },
-  {
    "date": "2026-09-17",
    "deferred": 0,
    "due": 0,
@@ -1921,6 +1934,16 @@
    "searched": 3,
    "searches": 3,
    "tracked": 85
+  },
+  {
+   "date": "2026-10-16",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 3,
+   "searched": 2,
+   "searches": 3,
+   "tracked": 86
   }
  ]
 }
