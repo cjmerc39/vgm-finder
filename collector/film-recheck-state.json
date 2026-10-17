@@ -534,6 +534,25 @@
     "vote_count": 6
    }
   },
+  "1487317": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Roque Ba\u00f1os"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     18
+    ],
+    "id": 1487317,
+    "original_title": "Lo dejamos ac\u00e1",
+    "poster_path": "/2gJiHJYhPXQy4ovDD5ZvSjwYfMZ.jpg",
+    "release_date": "2026-10-08",
+    "title": "Therapy Done Right",
+    "vote_count": 10
+   }
+  },
   "1497946": {
    "aliases": [],
    "checked": [
@@ -1106,7 +1125,9 @@
   },
   "1723662": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1437,7 +1458,9 @@
   },
   "1764166": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1645,16 +1668,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-17",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 32
-  },
   {
    "date": "2026-09-18",
    "deferred": 0,
@@ -1944,6 +1957,16 @@
    "searched": 2,
    "searches": 3,
    "tracked": 86
+  },
+  {
+   "date": "2026-10-17",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 1,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 87
   }
  ]
 }
