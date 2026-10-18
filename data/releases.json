@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T13:32:23Z",
+  "updatedAt": "2026-10-18T13:51:46Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -98789,7 +98789,9 @@
       "id": "world-of-tanks-heat-season-1",
       "title": "World of Tanks: HEAT - Season 1 Soundtrack",
       "game": "World of Tanks: HEAT - Season 1",
-      "composers": [],
+      "composers": [
+        "World of Tanks: HEAT Sound Squad"
+      ],
       "date": "2026-08-21",
       "sources": [
         {
@@ -98800,18 +98802,21 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=World+of+Tanks%3A+HEAT+-+Season+1+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_CePtqLekG7R",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4873690/0c7d2ab131ba31506f51be28e56b131ae8717265/header.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [
         "Action"
       ],
       "genres": [
         "Shooter",
         "Tactical"
-      ]
+      ],
+      "albumTitle": "Season 1 Soundtrack",
+      "ytmPlaylistId": "OLAK5uy_mwBy0tyLu5-UEG2YJERpyzGjhgWMkiOg8",
+      "tracksN": 4,
+      "playsTotal": 427
     },
     {
       "id": "lsdos",
@@ -378663,6 +378668,18 @@
           "type": "catalog",
           "url": "https://music.youtube.com/browse/MPREb_wvTUuQNk36t",
           "seenAt": "2026-10-17T13:26:14Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_g7TY7JHSZfX",
+          "seenAt": "2026-10-18T13:45:03Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_MicnEcw66Go",
+          "seenAt": "2026-10-18T13:45:03Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Deltacraft%2C+Vol.+1+%28Minecraft+Machinima+Soundtrack%29",
@@ -385607,6 +385624,341 @@
         5,
         3,
         3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "community-button-electric-flow",
+      "title": "Community Button – Electric Flow (Official Soundtrack)",
+      "medium": "game",
+      "game": "Community Button – Electric Flow",
+      "composers": [
+        "RecursionSplash"
+      ],
+      "date": "2026-10-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4718530/Community_Button__Electric_Flow_Official_Soundtrack/",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Community+Button+%E2%80%93+Electric+Flow+%28Official+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4718530/73fc4e7b71bbbf580b3738fb90efab19fb80d4c8/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "community-button-bloom",
+      "title": "Community Button – Bloom (Official Soundtrack)",
+      "medium": "game",
+      "game": "Community Button – Bloom",
+      "composers": [
+        "RecursionSplash"
+      ],
+      "date": "2026-10-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4718250/Community_Button__Bloom_Official_Soundtrack/",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Community+Button+%E2%80%93+Bloom+%28Official+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4718250/78608dce787d81b1fa9d53b0ba978c7f50925609/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "community-button-drift",
+      "title": "Community Button – Drift (Official Soundtrack)",
+      "medium": "game",
+      "game": "Community Button – Drift",
+      "composers": [
+        "RecursionSplash"
+      ],
+      "date": "2026-10-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4718260/Community_Button__Drift_Official_Soundtrack/",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Community+Button+%E2%80%93+Drift+%28Official+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4718260/b8b8cc19f16f08ca6ce4396f60dec3a0a1adf9e4/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "needle-in-a-haystack",
+      "title": "Needle In A Haystack Soundtrack",
+      "medium": "game",
+      "game": "Needle In A Haystack",
+      "composers": [
+        "NoGlyph"
+      ],
+      "date": "2026-10-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5336660/Needle_In_A_Haystack_Soundtrack/",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Needle+In+A+Haystack+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5336660/ec25b3363097ba24e88b48f57bead34201015fc5/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Comedy"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-reporting-live",
+      "title": "Reporting Live Soundtrack",
+      "medium": "film",
+      "game": "Reporting Live",
+      "composers": [
+        "Zubin Balaporia",
+        "Dhruv Tripathi",
+        "Raj Shekhar",
+        "Aditya Rawat"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1389172",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Reporting+Live+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gkPxU1dt0zK",
+      "art": "https://yt3.googleusercontent.com/W_d4f_Si25zd8sM_lt5mRxFKku42XoVGwFRdNnCM6-PyoUkjCvImAGSUKkeBYKhhXl6fRxHMli56E_ah=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Reporting Live (Soundtrack from the Film on Netflix)",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Zubin Balaporia",
+        "Dhruv Tripathi",
+        "Raj Shekhar",
+        "Aditya Rawat"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mmFjjdzXFLGuS5S4RjD-xyVH8r2JR7K9k",
+      "scoresN": 2,
+      "tracksN": 2,
+      "playsTotal": 3100,
+      "moods": [
+        "heroic",
+        "hopeful",
+        "eerie"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-maigret",
+      "title": "Maigret Soundtrack",
+      "medium": "tv",
+      "game": "Maigret",
+      "composers": [
+        "Uèle Lamore"
+      ],
+      "date": "2025-10-05",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/271051",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Maigret+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Syt0DYKDx90",
+      "art": "https://yt3.googleusercontent.com/vTePIg0tf_d7ctvIKhsuC-qh29atrSSvodLLJbDuu5YojDmaRyz4de3s8nDWRt3SvOGe8Tb7jDMFgh42=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Maigret (Original Series Soundtrack)",
+      "genres": [
+        "Mystery",
+        "Crime",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Uèle Lamore"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mMsSx-_oYG72O40Ely4Mk2mTyu9cbl_M0",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 8046,
+      "moods": [
+        "mysterious",
+        "tender",
+        "nostalgic"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-american-hostage",
+      "title": "American Hostage Soundtrack",
+      "medium": "tv",
+      "game": "American Hostage",
+      "composers": [
+        "Robert Duncan"
+      ],
+      "date": "2026-09-20",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/239618",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=American+Hostage+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_yORbcqsWxRh",
+      "art": "https://yt3.googleusercontent.com/Y6sNanbm_WgaBU7mE6gBFtujqZ2sR7L__AvKQBXXLMurKyk3OpkN9RPC33j_XHbXUo0Bvb1VcdRE-Ag=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "American Hostage (Original Series Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Robert Duncan"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mBw1cn_k0Jrdsz89OecPutHhW-d-TcXPA",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 2142,
+      "moods": [
+        "intense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "ghastbusters-minecraft-halloween",
+      "title": "Ghastbusters Minecraft Halloween (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Podcrash"
+      ],
+      "date": "2020-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_wzIlnPt4uLk",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ghastbusters+Minecraft+Halloween+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wzIlnPt4uLk",
+      "art": "https://yt3.googleusercontent.com/KmR1n1EIqD9qlgkQY8NJn8KdYsRB_3LGEVMT5TtiZraOEH_7rhWcsw-PO0O4W_m1X1PyA26xzW2ziug=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_lkoTjHnQxzH-M6r7Ud2z5Y_f7AsV2Tvuc",
+      "tracksN": 14,
+      "playsTotal": 1942,
+      "moods": [
+        "playful",
+        "eerie",
+        "intense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "doors-but-bad-minecraft-original-map-soundtrack-vol-1",
+      "title": "Doors But Bad Minecraft (Original Map Soundtrack), Vol. 1",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Really Cool Ducks"
+      ],
+      "date": "2026-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_9Px4r4XE9f2",
+          "seenAt": "2026-10-18T13:45:03Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Doors+But+Bad+Minecraft+%28Original+Map+Soundtrack%29%2C+Vol.+1",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9Px4r4XE9f2",
+      "art": "https://yt3.googleusercontent.com/UD7no1KtxcYyX88tEUwrWdTNzGo9NjCmhb-xX7GxvG7ELXzJpljONfmJaRTbxHBae8vw0Z3dZ56BKZU7=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_kz7mSlvAirQ-ms8n9yAKdIZD4lADaQYmo",
+      "tracksN": 5,
+      "playsTotal": 190,
+      "moods": [
+        "hopeful",
+        "wonder",
+        "intense"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
       ],
       "moodsV": 2
     }

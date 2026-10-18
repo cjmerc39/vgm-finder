@@ -437,6 +437,23 @@
     "vote_count": 7
    }
   },
+  "1438966": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     10402
+    ],
+    "id": 1438966,
+    "original_title": "Je so\u2019 pazzo",
+    "poster_path": "/eDfWOV5oad5wbI8AdzsMhnq7Zbd.jpg",
+    "release_date": "2026-10-15",
+    "title": "Je so\u2019 pazzo",
+    "vote_count": 7
+   }
+  },
   "1447853": {
    "aliases": [],
    "checked": [
@@ -458,7 +475,9 @@
   },
   "1451944": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Neel Adhikari"
    ],
@@ -992,7 +1011,9 @@
   },
   "1641629": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1107,7 +1128,9 @@
   },
   "1706702": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Tyler Michael Smith"
    ],
@@ -1567,6 +1590,22 @@
     "vote_count": 6
    }
   },
+  "1783629": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1783629,
+    "original_title": "Michael Che: Shot in Minnesota",
+    "poster_path": "/1DbNbV9zWT29yAUr45qSbCGCtFz.jpg",
+    "release_date": "2026-10-13",
+    "title": "Michael Che: Shot in Minnesota",
+    "vote_count": 5
+   }
+  },
   "1788735": {
    "aliases": [],
    "checked": [],
@@ -1582,6 +1621,22 @@
     "release_date": "2026-10-05",
     "title": "Family Guy Happy Hell-o-ween",
     "vote_count": 5
+   }
+  },
+  "1790935": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1790935,
+    "original_title": "Instadocs: AI Gone Wild",
+    "poster_path": "/ybMAd7Tkd3T7XlCv4Ps54r1yC1M.jpg",
+    "release_date": "2026-10-12",
+    "title": "Instadocs: AI Gone Wild",
+    "vote_count": 7
    }
   },
   "1792591": {
@@ -1648,6 +1703,31 @@
     "vote_count": 6
    }
   },
+  "848700": {
+   "aliases": [
+    "E. Galperin",
+    "Evgeniy Galperin",
+    "Evgueni Gasperine"
+   ],
+   "checked": [],
+   "composers": [
+    "Evgueni Galperine",
+    "Sacha Galperine"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     80,
+     53
+    ],
+    "id": 848700,
+    "original_title": "Minotaure",
+    "poster_path": "/bM37B5CuMWrPyGPpNsKzTGict4Q.jpg",
+    "release_date": "2026-10-14",
+    "title": "Minotaur",
+    "vote_count": 12
+   }
+  },
   "947493": {
    "aliases": [],
    "checked": [],
@@ -1668,16 +1748,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-18",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 0,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 31
-  },
   {
    "date": "2026-09-19",
    "deferred": 0,
@@ -1967,6 +2037,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 87
+  },
+  {
+   "date": "2026-10-18",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 4,
+   "searched": 3,
+   "searches": 5,
+   "tracked": 91
   }
  ]
 }
