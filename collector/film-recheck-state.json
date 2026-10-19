@@ -36,6 +36,25 @@
     "vote_count": 10
    }
   },
+  "1185344": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Tuomas Kantelinen"
+   ],
+   "entry": {
+    "genre_ids": [
+     28,
+     53
+    ],
+    "id": 1185344,
+    "original_title": "The Beast",
+    "poster_path": "/ocg5JfJP19fodcv5uQUApkmZMdI.jpg",
+    "release_date": "2026-10-08",
+    "title": "The Beast",
+    "vote_count": 5
+   }
+  },
   "1198654": {
    "aliases": [],
    "checked": [
@@ -491,6 +510,23 @@
     "poster_path": "/cLA83DD1qMEBwbRIYXf29RKjMja.jpg",
     "release_date": "2026-09-18",
     "title": "Lust Stories 3",
+    "vote_count": 6
+   }
+  },
+  "1452110": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     80,
+     18
+    ],
+    "id": 1452110,
+    "original_title": "Clean Hands",
+    "poster_path": "/szIEtkFLOMsPX6AVQSfzalNEEDd.jpg",
+    "release_date": "2026-10-16",
+    "title": "Clean Hands",
     "vote_count": 6
    }
   },
@@ -975,6 +1011,22 @@
     "vote_count": 5
    }
   },
+  "1620918": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1620918,
+    "original_title": "Norm: The Tale of Norm Macdonald",
+    "poster_path": "/sQw3m4hl1xyoT9zr7shnNCHDKI3.jpg",
+    "release_date": "2026-10-16",
+    "title": "Norm: The Tale of Norm Macdonald",
+    "vote_count": 7
+   }
+  },
   "1623256": {
    "aliases": [],
    "checked": [],
@@ -1006,6 +1058,22 @@
     "poster_path": "/kKu3wGJCAvRZKNEnJEEB5DctYnh.jpg",
     "release_date": "2026-10-01",
     "title": "The City of the Living",
+    "vote_count": 6
+   }
+  },
+  "1639616": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1639616,
+    "original_title": "Zust\u00ecssia",
+    "poster_path": "/15IfVZjAiwUkTx7Bib58wJTjOSi.jpg",
+    "release_date": "2026-10-08",
+    "title": "Zust\u00ecssia",
     "vote_count": 6
    }
   },
@@ -1749,16 +1817,6 @@
  },
  "runs": [
   {
-   "date": "2026-09-19",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 5,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 36
-  },
-  {
    "date": "2026-09-20",
    "deferred": 0,
    "due": 0,
@@ -2047,6 +2105,16 @@
    "searched": 3,
    "searches": 5,
    "tracked": 91
+  },
+  {
+   "date": "2026-10-19",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 4,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 95
   }
  ]
 }

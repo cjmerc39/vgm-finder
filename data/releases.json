@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T13:51:46Z",
+  "updatedAt": "2026-10-19T16:46:27Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -385961,6 +385961,117 @@
         1
       ],
       "moodsV": 2
+    },
+    {
+      "id": "spudfall",
+      "title": "SpudFall Soundtrack",
+      "medium": "game",
+      "game": "SpudFall",
+      "composers": [
+        "A Beautiful Potato"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5394450/SpudFall_Soundtrack/",
+          "seenAt": "2026-10-19T16:46:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SpudFall+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5394450/b6bbac2e25ec5525468850e16c152f1baea60784/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bootstrap-island",
+      "title": "Bootstrap Island Soundtrack",
+      "medium": "game",
+      "game": "Bootstrap Island",
+      "composers": [
+        "Liina Sumera"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5136960/Bootstrap_Island_Soundtrack/",
+          "seenAt": "2026-10-19T16:46:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bootstrap+Island+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5136960/2398cb292e047a0d57296595c94cbddc34d3b211/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Survival",
+        "Historical"
+      ],
+      "genres": [
+        "Simulator",
+        "Tactical",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "scam-line",
+      "title": "Scam Line Soundtrack",
+      "medium": "game",
+      "game": "Scam Line",
+      "composers": [
+        "YOUR MOM'S HP"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5030530/Scam_Line_Soundtrack/",
+          "seenAt": "2026-10-19T16:46:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Scam+Line+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5030530/703c906294bae4c2ad491065989751ad95117ae0/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "obey-the-beat",
+      "title": "Obey the Beat Soundtrack",
+      "medium": "game",
+      "game": "Obey the Beat",
+      "composers": [
+        "Bekho Team"
+      ],
+      "date": "2026-10-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5304920/Obey_the_Beat_Soundtrack/",
+          "seenAt": "2026-10-19T16:46:27Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Obey+the+Beat+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5304920/b7312a87534ebd54eea989cfcdc55e8d1448b23c/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
     }
   ]
 }
