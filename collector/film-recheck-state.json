@@ -1157,6 +1157,23 @@
     "vote_count": 5
    }
   },
+  "1654998": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     14,
+     27
+    ],
+    "id": 1654998,
+    "original_title": "R.L. Stine's Pumpkinhead 2",
+    "poster_path": "/4liM7YBglVRk2UVuKsN7YQDmMpr.jpg",
+    "release_date": "2026-10-09",
+    "title": "R.L. Stine's Pumpkinhead 2",
+    "vote_count": 5
+   }
+  },
   "1664003": {
    "aliases": [],
    "checked": [
@@ -1211,6 +1228,22 @@
     "poster_path": "/leE7dixdbzHXUBJdQgW1fFHz0ru.jpg",
     "release_date": "2026-09-18",
     "title": "Daniel and the Fiery Furnace",
+    "vote_count": 5
+   }
+  },
+  "1713935": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1713935,
+    "original_title": "Se ami qualcuno dillo",
+    "poster_path": "/sX7tCKtYbqmO9CuzXs2piz5AflT.jpg",
+    "release_date": "2026-10-16",
+    "title": "Se ami qualcuno dillo",
     "vote_count": 5
    }
   },
@@ -1817,16 +1850,6 @@
  },
  "runs": [
   {
-   "date": "2026-09-20",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 3,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 39
-  },
-  {
    "date": "2026-09-21",
    "deferred": 0,
    "due": 0,
@@ -2115,6 +2138,16 @@
    "searched": 0,
    "searches": 0,
    "tracked": 95
+  },
+  {
+   "date": "2026-10-20",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 2,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 97
   }
  ]
 }

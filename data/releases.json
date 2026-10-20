@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T16:46:27Z",
+  "updatedAt": "2026-10-20T14:45:20Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -376300,7 +376300,11 @@
         2,
         2
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ]
     },
     {
       "id": "karten-klingen-kleingedrucktes",
@@ -386072,6 +386076,394 @@
       "notable": true,
       "tracksN": 0,
       "composersFrom": "steam"
+    },
+    {
+      "id": "we-were-here-tomorrow",
+      "title": "We Were Here Tomorrow Soundtrack",
+      "medium": "game",
+      "game": "We Were Here Tomorrow",
+      "composers": [
+        "Tom Wolkers"
+      ],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5202800/We_Were_Here_Tomorrow_Soundtrack/",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=We+Were+Here+Tomorrow+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5202800/b4f9421226e9f470e2d1689dbd53689a3c60848d/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "drowse",
+      "title": "DROWSE (Original Soundtrack)",
+      "medium": "game",
+      "game": "DROWSE",
+      "composers": [
+        "Jeremy Marlon",
+        "Dimitri Ben Hamou"
+      ],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5347550/DROWSE_Original_Soundtrack/",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DROWSE+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5347550/509ff2980d829ae6e6f9978d10dca2abd1c467e5/header.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [
+        "Thriller"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "driving",
+        "dreamy"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "nest-rivals",
+      "title": "Nest Rivals (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Nest Rivals",
+      "composers": [],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5369560/Nest_Rivals_Original_Game_Soundtrack/",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nest+Rivals+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5369560/528b60b549bf0ff2b242d25372a2745d9ab1946b/header.jpg",
+      "notable": true,
+      "tracksN": 12,
+      "moods": [
+        "intense",
+        "mysterious",
+        "suspenseful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "escape-everlit",
+      "title": "Escape Everlit Soundtrack",
+      "medium": "game",
+      "game": "Escape Everlit",
+      "composers": [
+        "lantao studio"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3963330/Escape_Everlit_Soundtrack/",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Escape+Everlit+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3963330/ba58f18943902822b864a980bfb211ee89d05106/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "citadel",
+      "title": "CITADEL Soundtrack",
+      "medium": "game",
+      "game": "CITADEL",
+      "composers": [
+        "Liam Atkinson"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5344630/CITADEL_Soundtrack/",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=CITADEL+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5344630/5a97ec98d158cdc5fdef6e9abd9cf1ef8d665cef/header.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [
+        "Science fiction",
+        "Mystery"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "sad",
+        "driving"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hyperfight-2",
+      "title": "HYPERFIGHT 2 Soundtrack",
+      "medium": "game",
+      "game": "HYPERFIGHT 2",
+      "composers": [
+        "STEEL_PLUS"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5372490/HYPERFIGHT_2_Soundtrack/",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=HYPERFIGHT+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5372490/5b5ab5fbcdbe597f663a7fe124fbf8b422b23c79/header.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Fighting",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "heroic",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "flats-full-of-cats",
+      "title": "Flats Full of Cats Soundtrack",
+      "medium": "game",
+      "game": "Flats Full of Cats",
+      "composers": [
+        "Liniker Nascimento"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4412500/Flats_Full_of_Cats_Soundtrack/",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Flats+Full+of+Cats+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4412500/18c78c4fddfd9749baeda60318bf57a3a3dcfad5/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Kids"
+      ],
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "mycopunk",
+      "title": "Mycopunk Soundtrack",
+      "medium": "game",
+      "game": "Mycopunk",
+      "composers": [
+        "Aaron Schondorf",
+        "Johnum Palado",
+        "Ian Yan"
+      ],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/mycopunk",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mycopunk+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_6cNWJEX3GNy",
+      "art": "https://yt3.googleusercontent.com/nNP-vg2KI_DP2q8px9c6uZZ5vtgxezGQqQF2JZHxeQ-SAlHeJSFpeFk8mUcFddnYojv0AgNKVXXcygPx=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Mycopunk (Original Soundtrack)",
+      "company": "Pigeons at Play",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Tactical",
+        "Indie"
+      ],
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lLD5c9KpimjCELTPdm4jnSK9aeMS2HTiw",
+      "tracksN": 61,
+      "playsTotal": 26644,
+      "moods": [
+        "peaceful",
+        "intense",
+        "driving"
+      ],
+      "moodsN": [
+        23,
+        21,
+        12
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-clayface",
+      "title": "Clayface Soundtrack",
+      "medium": "film",
+      "game": "Clayface",
+      "composers": [
+        "Volker Bertelmann"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1400940",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Clayface+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_u6txE9subNd",
+      "art": "https://yt3.googleusercontent.com/z7TpcKaXZcvu-sAfX9kHO-vgvonVF547m7gyhHUWgfvLKngvWoOwUlkEQpDg_LkalfVqhzA7NyhJFNo=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Clayface (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Horror",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "composerAliases": [
+        "Hauschka"
+      ],
+      "albumArtists": [
+        "Volker Bertelmann"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mr5p6hkh7Vx8fRpsVJpOVJ3gVjy3yszP8",
+      "scoresN": 22,
+      "tracksN": 23,
+      "playsTotal": 138407,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "ominous"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "cooked-extra-minecraft-map",
+      "title": "Cooked Extra (Minecraft Map Original Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "KillzYTBeatz"
+      ],
+      "date": "2026-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_BD0pHCtsVbs",
+          "seenAt": "2026-10-20T14:38:32Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cooked+Extra+%28Minecraft+Map+Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_BD0pHCtsVbs",
+      "art": "https://yt3.googleusercontent.com/DtjuHCVhJvJlD0_q9GKtqN5LpYN0KKQ5nWUBockhxcfOLjdWexTUasMYFHfSXiZ7IAd_cKVwrSA7bhI=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_mSzuzFiZI34StV_hGNQzWcEQuAsSP8QQo",
+      "tracksN": 11,
+      "playsTotal": 1,
+      "moods": [
+        "intense",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ],
+      "moodsV": 2
     }
   ]
 }
