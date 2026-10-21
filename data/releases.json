@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T14:45:20Z",
+  "updatedAt": "2026-10-21T14:57:07Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -385275,6 +385275,12 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/4105810/The_Ripe_Blood_Anthology_This_World_Is_Just_for_the_Two_of_Us__Original_Soundtrack/",
           "seenAt": "2026-10-17T13:26:14Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4105810/The_Ripe_Blood_Anthology_This_World_Is_Just_for_the_Two_of_Us_Original_Soundtrack/",
+          "seenAt": "2026-10-21T14:50:09Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Ripe+Blood+Anthology%3A+This+World+Is+Just+for+the+Two+of+Us+-+Original+Soundtrack",
@@ -385646,6 +385652,12 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/4718530/Community_Button__Electric_Flow_Official_Soundtrack/",
           "seenAt": "2026-10-18T13:45:03Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4718530/Community_Button_Electric_Flow_Official_Soundtrack/",
+          "seenAt": "2026-10-21T14:50:09Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Community+Button+%E2%80%93+Electric+Flow+%28Official+Soundtrack%29",
@@ -385675,6 +385687,12 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/4718250/Community_Button__Bloom_Official_Soundtrack/",
           "seenAt": "2026-10-18T13:45:03Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4718250/Community_Button_Bloom_Official_Soundtrack/",
+          "seenAt": "2026-10-21T14:50:09Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Community+Button+%E2%80%93+Bloom+%28Official+Soundtrack%29",
@@ -385704,6 +385722,12 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/4718260/Community_Button__Drift_Official_Soundtrack/",
           "seenAt": "2026-10-18T13:45:03Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4718260/Community_Button_Drift_Official_Soundtrack/",
+          "seenAt": "2026-10-21T14:50:09Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Community+Button+%E2%80%93+Drift+%28Official+Soundtrack%29",
@@ -386462,6 +386486,232 @@
         5,
         5,
         5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "posthumors-サウンドトラック",
+      "title": "Posthumors サウンドトラック",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "アニサ喫茶",
+        "御伽宗太郎"
+      ],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5424880/Posthumors_サウンドトラック/",
+          "seenAt": "2026-10-21T14:50:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Posthumors+%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5424880/ef29c4e7d5a7ceb95c9343712cfa507708cd98ac/header.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "dr-mancell-and-mr-flame",
+      "title": "Dr. Mancell and Mr. Flame Soundtrack",
+      "medium": "game",
+      "game": "Dr. Mancell and Mr. Flame",
+      "composers": [
+        "Waterflame",
+        "Josh Mancell"
+      ],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5315110/Dr_Mancell_and_Mr_Flame_Soundtrack/",
+          "seenAt": "2026-10-21T14:50:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dr.+Mancell+and+Mr.+Flame+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5315110/8d4e9e5f355d8cf15d3cdc18334d1ea68873a126/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Platform",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "lights-on-my-screen",
+      "title": "Lights On My Screen Soundtrack",
+      "medium": "game",
+      "game": "Lights On My Screen",
+      "composers": [
+        "Epic"
+      ],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5378820/Lights_On_My_Screen_Soundtrack/",
+          "seenAt": "2026-10-21T14:50:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lights+On+My+Screen+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5378820/6a8bb1f74da7a6c96f0284dc2263b9da58622771/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "observe-sounds-of-the-great-war",
+      "title": "Observe: Sounds of The Great War",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "traditional sources"
+      ],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5422080/Observe_Sounds_of_The_Great_War/",
+          "seenAt": "2026-10-21T14:50:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Observe%3A+Sounds+of+The+Great+War+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5422080/5b23c5d89b48a6480e4ad127ee48b8a670ef65d1/header.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "akiba-lost",
+      "title": "AKIBA LOST - Original Soundtrack",
+      "medium": "game",
+      "game": "AKIBA LOST",
+      "composers": [],
+      "date": "2026-10-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4885210/AKIBA_LOST_Original_Soundtrack/",
+          "seenAt": "2026-10-21T14:50:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=AKIBA+LOST+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4885210/65ead5ac77b941a48e2a009dcce8d5df1d45cf14/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure"
+      ]
+    },
+    {
+      "id": "film-wildwood",
+      "title": "Wildwood Soundtrack",
+      "medium": "film",
+      "game": "Wildwood",
+      "composers": [
+        "Dario Marianelli"
+      ],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/791523",
+          "seenAt": "2026-10-21T14:50:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wildwood+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DscpJa9NYva",
+      "art": "https://yt3.googleusercontent.com/JPuUA60YqkDHDkjxAPNThnmgoc_MmMHjYNOeYNPK8lzhc6yDMifeVRp1gnaWBm5ro0Ez-JfwHXh2KmLf=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Wildwood: Original Motion Picture Soundtrack",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Fantasy"
+      ],
+      "albumArtists": [
+        "Dario Marianelli"
+      ],
+      "scoresN": 25,
+      "tracksN": 26,
+      "moods": [
+        "intense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "genshin-impact-a-lyght-of-the-mone-for-thee",
+      "title": "Genshin Impact - A Lyght of the Mone for Thee (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Genshin Impact",
+      "composers": [
+        "HOYO-MiX"
+      ],
+      "date": "2026-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_pAC4cru0WRA",
+          "seenAt": "2026-10-21T14:50:09Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Genshin+Impact+-+A+Lyght+of+the+Mone+for+Thee+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_pAC4cru0WRA",
+      "art": "https://yt3.googleusercontent.com/dEyJEwI3VO4bZzBPKHQ2Jvx76AtYGXC-Di_I2QYkQuEncKF3RnUj4kizT26oEgR6PhfjURLSdoS7R2GB=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_muBIk9wH93DtkrUkPw7TPWT6mOWvSQdyg",
+      "tracksN": 3,
+      "playsTotal": 32600,
+      "moods": [
+        "hopeful",
+        "nostalgic",
+        "wonder"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
       ],
       "moodsV": 2
     }

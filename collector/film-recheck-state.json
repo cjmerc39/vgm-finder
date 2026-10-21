@@ -1655,6 +1655,22 @@
     "vote_count": 5
    }
   },
+  "1771323": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1771323,
+    "original_title": "Super Scam Me",
+    "poster_path": "/y07DF84TR67NVAevJR6JMydIL5H.jpg",
+    "release_date": "2026-10-17",
+    "title": "Super Scam Me",
+    "vote_count": 5
+   }
+  },
   "1774164": {
    "aliases": [],
    "checked": [],
@@ -1849,16 +1865,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-21",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 40
-  },
   {
    "date": "2026-09-22",
    "deferred": 0,
@@ -2148,6 +2154,16 @@
    "searched": 0,
    "searches": 0,
    "tracked": 97
+  },
+  {
+   "date": "2026-10-21",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 1,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 98
   }
  ]
 }
