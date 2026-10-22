@@ -36,25 +36,6 @@
     "vote_count": 10
    }
   },
-  "1185344": {
-   "aliases": [],
-   "checked": [],
-   "composers": [
-    "Tuomas Kantelinen"
-   ],
-   "entry": {
-    "genre_ids": [
-     28,
-     53
-    ],
-    "id": 1185344,
-    "original_title": "The Beast",
-    "poster_path": "/ocg5JfJP19fodcv5uQUApkmZMdI.jpg",
-    "release_date": "2026-10-08",
-    "title": "The Beast",
-    "vote_count": 5
-   }
-  },
   "1198654": {
    "aliases": [],
    "checked": [
@@ -960,7 +941,9 @@
   },
   "1607127": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1790,6 +1773,22 @@
     "vote_count": 5
    }
   },
+  "1796707": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1796707,
+    "original_title": "Daylight: A Twilight story",
+    "poster_path": "/yNPpKdl20jAvJLusQr14fjgVGo5.jpg",
+    "release_date": "2026-10-22",
+    "title": "Daylight: A Twilight story",
+    "vote_count": 5
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -1865,16 +1864,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-22",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 41
-  },
   {
    "date": "2026-09-23",
    "deferred": 0,
@@ -2163,6 +2152,16 @@
    "recorded": 1,
    "searched": 0,
    "searches": 0,
+   "tracked": 98
+  },
+  {
+   "date": "2026-10-22",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 1,
+   "searched": 1,
+   "searches": 1,
    "tracked": 98
   }
  ]

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T14:57:07Z",
+  "updatedAt": "2026-10-22T14:57:33Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -386712,6 +386712,436 @@
         1,
         1,
         1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "puzzle-dolphins",
+      "title": "Puzzle Dolphins Soundtrack",
+      "medium": "game",
+      "game": "Puzzle Dolphins",
+      "composers": [],
+      "date": "2026-10-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5381020/Puzzle_Dolphins_Soundtrack/",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzle+Dolphins+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5381020/49f5f72a643110394dc2522141711255b34c3c6c/header.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "yume-tenshi",
+      "title": "Yume Tenshi Soundtrack",
+      "medium": "game",
+      "game": "Yume Tenshi",
+      "composers": [
+        "GOREFREAK"
+      ],
+      "date": "2026-10-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5316740/Yume_Tenshi_Soundtrack/",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Yume+Tenshi+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5316740/853c79185732fc89911ef3b0e14f5fe74efa4ffd/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "battle-gaze",
+      "title": "Battle Gaze Soundtrack",
+      "medium": "game",
+      "game": "Battle Gaze",
+      "composers": [
+        "m.o.k."
+      ],
+      "date": "2026-10-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5290990/Battle_Gaze_Soundtrack/",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Battle+Gaze+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5290990/13c5c361ee183a3edf33d0682f6433e081edfd00/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "puppet-mall-chapter-1",
+      "title": "Puppet Mall: Chapter 1 Soundtrack",
+      "medium": "game",
+      "game": "Puppet Mall: Chapter 1",
+      "composers": [
+        "kiviGames"
+      ],
+      "date": "2026-10-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5192710/Puppet_Mall_Chapter_1_Soundtrack/",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puppet+Mall%3A+Chapter+1+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5192710/2e275e0a1ef28493c1719eb1046e3d4bc1098567/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "chiseler",
+      "title": "Chiseler Soundtrack",
+      "medium": "game",
+      "game": "Chiseler",
+      "composers": [
+        "Todd Cope"
+      ],
+      "date": "2026-10-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5054620/Chiseler_Soundtrack/",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Chiseler+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5054620/cf00abf9eca6c7a9bb96244d9c26003a581ceee4/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "stupid-never-dies",
+      "title": "Stupid Never Dies Soundtrack",
+      "medium": "game",
+      "game": "Stupid Never Dies",
+      "composers": [
+        "Rei Kondoh",
+        "Yuta Yamaguchi",
+        "Haruno Ito",
+        "Varon Chase Bantug"
+      ],
+      "date": "2026-10-21",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/stupid-never-dies",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stupid+Never+Dies+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_QcalqHziMbC",
+      "art": "https://yt3.googleusercontent.com/G3_lBYuQ3CkLT6XZr5GComYZrcOwKT8rexrzlS8p_na-J4Rpwih9kiLAOytBA4a7Bh5C_jjHYXhRQrcG=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Stupid Never Dies (Original Soundtrack)",
+      "company": "GPTRACK50",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "themes": [
+        "Action"
+      ],
+      "ytmPlaylistId": "OLAK5uy_klZGi6LoD4mg7DSsDU7-3ksMREkFGO_ig",
+      "tracksN": 80,
+      "playsTotal": 267,
+      "composersFrom": "album",
+      "moods": [
+        "intense",
+        "epic",
+        "driving"
+      ],
+      "moodsN": [
+        28,
+        18,
+        11
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-karma",
+      "title": "Karma Soundtrack",
+      "medium": "film",
+      "game": "Karma",
+      "composers": [],
+      "date": "2026-10-21",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1418998",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Karma+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NbLZk1hXdkP",
+      "art": "https://yt3.googleusercontent.com/ZEAS2UYrIqTdZkTg6v6gkIMy_z2wRh3LKQpK44wbzA_gqQBYvzoaRyqs9lop4W8KOS-x7ZBChwDBEohx=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Karma (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Thriller"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lbYfR-5rpE72yXcZpnoHmoNLPEnIQA1nE",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 5,
+      "playsTotal": 39550000,
+      "moods": [
+        "mysterious",
+        "wonder",
+        "intense"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-beast",
+      "title": "The Beast Soundtrack",
+      "medium": "film",
+      "game": "The Beast",
+      "composers": [
+        "Tuomas Kantelinen"
+      ],
+      "date": "2026-10-08",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1185344",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Beast+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NNsVBT0dTgJ",
+      "art": "https://yt3.googleusercontent.com/aceJAVSC4LRZmEa_JN36pHpBHPsWzC2Z_vBLtWALRg4LxnB0N-3v-dkDVWIAmC2mznUOhDdAW6VHyg2z=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Beast (Original Soundtrack)",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "albumArtists": [
+        "Bertrand Bonello"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kehVGRPnVWb-3KAzIa-ZVBxbKuMOIabkk",
+      "scoresN": 14,
+      "tracksN": 20,
+      "playsTotal": 20616,
+      "moods": [
+        "mysterious",
+        "suspenseful",
+        "intense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-nobody-wants-this-season-2",
+      "title": "Nobody Wants This Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Nobody Wants This",
+      "composers": [
+        "Duncan Blickenstaff"
+      ],
+      "date": "2025-10-23",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/250923",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nobody+Wants+This+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MHsN2jHQZsA",
+      "art": "https://yt3.googleusercontent.com/WWvlf6-FIPwmZX6uog1ngSjDRHMi1jf3jxCEKO9UwpeACP_DHFXheDuR9OSByfDMwtyyU6_c2hjBrLRz=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Nobody Wants This Season 2: The Soundtrack",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_neNeTG1skMfDgI7If8MlQoGHmtXW0Znf8",
+      "scoresN": 1,
+      "songsAlbum": true,
+      "tracksN": 19,
+      "playsTotal": 25772000,
+      "moods": [
+        "romantic",
+        "tender",
+        "intense"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-doll",
+      "title": "The Doll Soundtrack",
+      "medium": "tv",
+      "game": "The Doll",
+      "composers": [
+        "musAIca spark"
+      ],
+      "date": "2026-09-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/295089",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Doll+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WeAs1d4IoAI",
+      "art": "https://yt3.googleusercontent.com/a7LEq8GIc763ODHZ8mNNF8XLN1EHIyl8tH4vhekfO9rWLeqZRW1s4lfyf93vtfN8vAmU5qUzSgwpPoeA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Lalka soundtrack",
+      "genres": [
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "musAIca spark"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k5Ba6MK2Ll1qye0vOPjfNbNfoRCltsg_E",
+      "scoresN": 11,
+      "tracksN": 11,
+      "playsTotal": 2002,
+      "moods": [
+        "mysterious",
+        "nostalgic",
+        "romantic"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-x-sonic-racing-crossworlds",
+      "title": "Minecraft x Sonic Racing: CrossWorlds (Original Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Minecraft",
+        "Takahiro Kai"
+      ],
+      "date": "2025-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_2Z3YU9GyjSE",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+x+Sonic+Racing%3A+CrossWorlds+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2Z3YU9GyjSE",
+      "art": "https://yt3.googleusercontent.com/E-FiI6ZIeg6miXZ_PEd7bvxalgdmDhdBjrIE8rX7xPKKMOn2txG2W6WXU9icfnpTmZDQe9MmjxqKLX_Zsg=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_kLHvLhB3q4IHxbRhe2D7P5ku7i3-rE-lI",
+      "tracksN": 4,
+      "playsTotal": 200000,
+      "moods": [
+        "wonder",
+        "peaceful",
+        "intense"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-whimsical-compilation",
+      "title": "Minecraft: Whimsical Compilation (Original Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Minecraft",
+        "James Everingham"
+      ],
+      "date": "2024-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_kPFno1Sd5jI",
+          "seenAt": "2026-10-22T14:50:51Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft%3A+Whimsical+Compilation+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_kPFno1Sd5jI",
+      "art": "https://yt3.googleusercontent.com/tc8Y4IC-8wgutfYnN7hW2_KUy1V8Y_pvk1v2s-_Fx5mPC3NVF0QELw97OsJhKYDINWrenWP6sakS4Jk=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_md1fzKhTSbJtDrLS6SsaM2CzLDfaSq7DI",
+      "tracksN": 11,
+      "playsTotal": 48400,
+      "moods": [
+        "playful",
+        "wonder",
+        "driving"
+      ],
+      "moodsN": [
+        4,
+        4,
+        2
       ],
       "moodsV": 2
     }
