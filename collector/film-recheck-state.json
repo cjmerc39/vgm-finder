@@ -274,7 +274,9 @@
    "aliases": [
     "Ani"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Anirudh Ravichander"
    ],
@@ -610,30 +612,11 @@
     "vote_count": 5
    }
   },
-  "1503762": {
-   "aliases": [
-    "Roger Goula Sarda"
-   ],
-   "checked": [],
-   "composers": [
-    "Roger Goula"
-   ],
-   "entry": {
-    "genre_ids": [
-     18,
-     10749
-    ],
-    "id": 1503762,
-    "original_title": "Sense and Sensibility",
-    "poster_path": "/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg",
-    "release_date": "2026-09-23",
-    "title": "Sense and Sensibility",
-    "vote_count": 8
-   }
-  },
   "1507877": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -820,7 +803,9 @@
   },
   "1571687": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1789,6 +1774,39 @@
     "vote_count": 5
    }
   },
+  "1796883": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     27
+    ],
+    "id": 1796883,
+    "original_title": "Biohazard",
+    "poster_path": "/3FqLdOQdX4VBk3dB663CCA8CAMS.jpg",
+    "release_date": "2026-10-14",
+    "title": "Biohazard",
+    "vote_count": 5
+   }
+  },
+  "1798852": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35,
+     10751
+    ],
+    "id": 1798852,
+    "original_title": "Angelo Pintus in Nabana",
+    "poster_path": "/ic7036z9Q1ZJWh585syxy8t9Jkj.jpg",
+    "release_date": "2026-10-10",
+    "title": "Angelo Pintus in Nabana",
+    "vote_count": 5
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -1864,16 +1882,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-23",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 4,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 45
-  },
   {
    "date": "2026-09-24",
    "deferred": 0,
@@ -2163,6 +2171,16 @@
    "searched": 1,
    "searches": 1,
    "tracked": 98
+  },
+  {
+   "date": "2026-10-23",
+   "deferred": 0,
+   "due": 4,
+   "found": 1,
+   "recorded": 2,
+   "searched": 4,
+   "searches": 7,
+   "tracked": 99
   }
  ]
 }
