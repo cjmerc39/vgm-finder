@@ -36,6 +36,22 @@
     "vote_count": 10
    }
   },
+  "1154730": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1154730,
+    "original_title": "La Gradiva",
+    "poster_path": "/y6AkOgTEPM9nTJUOeyvHqlf6Bgp.jpg",
+    "release_date": "2026-10-21",
+    "title": "La Gradiva",
+    "vote_count": 5
+   }
+  },
   "1198654": {
    "aliases": [],
    "checked": [
@@ -1389,7 +1405,9 @@
   },
   "1750432": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1480,7 +1498,9 @@
   },
   "1760114": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1675,6 +1695,22 @@
     "vote_count": 6
    }
   },
+  "1780005": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1780005,
+    "original_title": "Contra el hurac\u00e1n",
+    "poster_path": "/chZa8Jd9kSDj11bekGjwwotFPEw.jpg",
+    "release_date": "2026-10-23",
+    "title": "Surviving Hurricane Otis",
+    "vote_count": 5
+   }
+  },
   "1783629": {
    "aliases": [],
    "checked": [],
@@ -1807,6 +1843,24 @@
     "vote_count": 5
    }
   },
+  "1802674": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     16,
+     10751,
+     28
+    ],
+    "id": 1802674,
+    "original_title": "Hot Wheels Let's Race: Attack of the T-Rex",
+    "poster_path": "/xTqzOESz9Loj2SL5Klxf7oahJHb.jpg",
+    "release_date": "2026-10-20",
+    "title": "Hot Wheels Let's Race: Attack of the T-Rex",
+    "vote_count": 5
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -1882,16 +1936,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-24",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 2,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 47
-  },
   {
    "date": "2026-09-25",
    "deferred": 0,
@@ -2181,6 +2225,16 @@
    "searched": 4,
    "searches": 7,
    "tracked": 99
+  },
+  {
+   "date": "2026-10-24",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 3,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 102
   }
  ]
 }
