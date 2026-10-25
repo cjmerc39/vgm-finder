@@ -409,7 +409,7 @@ function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.tes
    diary entry. Bumping would make a briefly-cached v3 page reject this
    state and overwrite it with a blank one, which costs the queue, the
    library, and every custom playlist. */
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all', all:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all', all:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all', all:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all', all:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false, feedCover:false }; }
 /* one genre vocabulary across mediums: TMDb's paired TV genres split into
    the film names, and a game's IGDB themes (Horror, Fantasy...) join its
    genres under the shared names, so a film + tv or all-mediums pick
@@ -524,6 +524,7 @@ function validateState(d){
   s.mixScores = d.mixScores !== false;  // the random mix skips songs unless switched off
   s.mixLimit = Number.isInteger(d.mixLimit) && d.mixLimit >= 1 && d.mixLimit <= RECIPE_MAX ? d.mixLimit : 30;
   s.feedScores = d.feedScores === true;
+  s.feedCover = d.feedCover === true;
   s.libScores = d.libScores === true;
   if(Array.isArray(d.recipes)){  // absent in older backups: they import with none, nothing else changes
     const ids = new Set();
@@ -575,10 +576,11 @@ function setFeedGenre(bucket, g){
 function clearFeedFilters(){
   S.feedCo = 'all'; S.feedConsole = false;
   S.feedGenre = { game: 'all', screen: 'all', all: 'all' };
-  S.feedMedium = 'all'; S.feedScores = false;
+  S.feedMedium = 'all'; S.feedScores = false; S.feedCover = false;
   save(); renderAll();
 }
 function toggleFeedScores(){ S.feedScores = !S.feedScores; save(); renderAll(); }
+function toggleFeedCover(){ S.feedCover = !S.feedCover; save(); renderAll(); }
 function toggleLibScores(){ S.libScores = !S.libScores; save(); renderAll(); }
 function setMixLimit(n){
   if(!(Number.isInteger(n) && n >= 1 && n <= RECIPE_MAX)) return;
@@ -702,6 +704,9 @@ function needsTrackLoad(r){
    (song: true) and counts the rest on the row (scoresN). The album always
    stays; only its songs leave. Games are scores by definition. */
 function scoreTracks(r, tt){ return mediumOf(r) === 'game' ? tt : tt.filter(t => !t.song); }
+/* any art is the album's own cover, whatever the source, except IGDB box
+   art: that is the game's cover, a stand-in until an album is matched */
+function hasCover(r){ return !!r.art && !/^https:\/\/images\.igdb\.com\//.test(r.art); }
 function viewScores(){ return S.view === 'feed' ? S.feedScores : S.view === 'library' ? S.libScores : false; }
 function shownTracks(r){ const tt = tracksOf(r) || []; return viewScores() ? scoreTracks(r, tt) : tt; }
 function albumMoods(r){ return Array.isArray(r.moods) ? r.moods.filter(m => MOODS.includes(m)) : []; }  // the album's top three, commonest first
@@ -790,6 +795,7 @@ function feedRows(){
   } else if(m === 'all' && S.feedGenre.all !== 'all'){
     rows = rows.filter(r => genresOf(r).includes(S.feedGenre.all));  // one genre across games, films and shows
   }
+  if(S.feedCover) rows = rows.filter(hasCover);
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
   else if(S.feedSort === 'az')
@@ -1414,6 +1420,7 @@ function feedFilterBits(){
   } else if(m === 'all' && S.feedGenre.all !== 'all'){
     bits.push(S.feedGenre.all.toLowerCase());
   }
+  if(S.feedCover) bits.push('album covers');
   return bits;
 }
 function libFilterBits(){
@@ -1786,7 +1793,7 @@ function pageKey(){
   // showHidden stays out on purpose: revealing the hidden shelf must not
   // reset paging or throw the scroll position back to the top
   return [S.view, S.libView, S.feedSort, S.feedCo, S.feedConsole,
-          S.feedGenre.game, S.feedGenre.screen, S.feedGenre.all, S.feedMedium,
+          S.feedGenre.game, S.feedGenre.screen, S.feedGenre.all, S.feedMedium, S.feedCover,
           S.libSort, S.libLiked, S.libMedium, Q.trim(), FMOOD].join('\n');
 }
 function pageSlice(list){
@@ -2097,6 +2104,8 @@ function csheetHtml(){
     } else {
       body += scoresRow + genreRow(S.feedGenre.all);  // mode all: scores only touches film and tv; the genre spans every medium
     }
+    body += `<button class="shrow" id="shcover" aria-pressed="${S.feedCover}">` +
+      `<span class="shl">album covers only</span><span class="shr">${S.feedCover ? '✓' : ''}</span></button>`;
     footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
   }
   const tall = CSHEET === 'recipe' || CSHEET === 'rgenre' || CSHEET === 'rmood' ? ' tall' : '';  // the recipe sheet runs full height
@@ -2340,6 +2349,7 @@ sheetwrap.addEventListener('click', e => {
     const pr = e.target.closest('[data-shplgrow]');
     if(pr){ PLGBUCKET = pr.dataset.shplgrow === 'screen' ? 'screen' : 'game'; CSHEET = 'plgpick'; renderSheet(); return; }
     if(e.target.closest('#shscores')){ toggleFeedScores(); return; }
+    if(e.target.closest('#shcover')){ toggleFeedCover(); return; }
     if(e.target.closest('#shlscores')){ toggleLibScores(); return; }
     const fs = e.target.closest('[data-shsort]');
     if(fs){ CSHEET = null; setFeedSort(fs.dataset.shsort); return; }

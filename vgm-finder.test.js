@@ -31,13 +31,13 @@ const FIXTURE = {
     { id: 'ratchet-clank-rift-apart', title: 'Ratchet & Clank: Rift Apart OST', game: null, composers: [], date: '2026-07-18', console: true,
       sources: [{ name: 'blipblop', type: 'editorial', url: 'https://blipblop.net/r', seenAt: '2026-07-12T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Ratchet+%26+Clank%3A+Rift+Apart+OST+soundtrack',
-      ytmAlbumUrl: null, art: null, notable: true },
+      ytmAlbumUrl: null, art: 'https://yt3.googleusercontent.com/rca=w544-h544-l90-rj', notable: true },
     { id: 'ゼルダの伝説', title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム OST', game: null, composers: [], date: '2026-07-15',
       topTracks: [{ title: 'メインテーマ', plays: null }, { title: 'ハイラル平原', plays: null }],
       sources: [{ name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z', seenAt: '2026-07-13T10:00:00Z' },
                 { name: 'igdb', type: 'catalog', url: 'https://www.igdb.com/games/z2', seenAt: '2026-07-14T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC+OST+soundtrack',
-      ytmAlbumUrl: null, art: null, notable: true },
+      ytmAlbumUrl: null, art: 'https://images.igdb.com/igdb/image/upload/t_cover_big/zt.jpg', notable: true },
     { id: 'evil', title: '<img src=x onerror="window.__pwned=1">Evil OST', game: null, composers: [], date: '2026-07-18', console: false,
       sources: [{ name: 'r/gamemusic', type: 'community', url: 'https://reddit.com/e', seenAt: '2026-07-14T10:00:00Z' }],
       ytmSearchUrl: 'https://music.youtube.com/search?q=Evil+OST+soundtrack',
@@ -197,6 +197,12 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rows().length === 5 && stored().feedCo === 'all' && stored().feedConsole === false,
     'clear resets scope and console');
   assert(d.querySelector('#c-filters').textContent === 'filters', 'chip label returns to neutral');
+  inSheet(d, '#shcover').click(); await sleep(20);
+  assert(rows().map(r => r.dataset.id).sort().join() === 'hades-ii,ratchet-clank-rift-apart' && stored().feedCover === true,
+    'album covers only keeps every cover, whatever its source, and drops box art and artless rows');
+  assert(d.querySelector('#c-filters').textContent === 'filters · album covers', 'the chip names the cover filter');
+  inSheet(d, '#shclear').click(); await sleep(20);
+  assert(rows().length === 5 && stored().feedCover === false, 'clear resets album covers only');
   inSheet(d, '.shbody').scrollTop = 120;
   inSheet(d, '#shconsole').click(); await sleep(20);
   assert(inSheet(d, '.shbody').scrollTop === 120 && sheetEl(d).style.animation === 'none',
