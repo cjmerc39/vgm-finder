@@ -492,10 +492,17 @@ def _steam_game(title):
     return game if game and game != title.strip() else None
 
 
+_STEAM_HASHED = re.compile(r"/apps/\d+/[0-9a-f]{40}/")
+
+
 def _steam_art(row_html):
-    # swap the search capsule filename for the full-size header on the same CDN path
+    # an unhashed path takes the full-size header beside the search capsule; a
+    # hashed path keeps the capsule, as its header sits under another hash
     m = re.search(r'<img[^>]*\ssrc="([^"]+)"', row_html)
-    return re.sub(r"/[^/?]+(\?.*)?$", "/header.jpg", m.group(1)) if m else None
+    if not m:
+        return None
+    src = m.group(1).split("?")[0]
+    return src if _STEAM_HASHED.search(src) else re.sub(r"/[^/]+$", "/header.jpg", src)
 
 
 def parse_steam(raw, resolve=None):

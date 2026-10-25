@@ -96,9 +96,20 @@ def test_steam_parses_search_rows():
 def test_steam_rows_carry_game_and_art():
     items = collect.parse_steam(raw("steam-soundtracks.json"), no_resolve)
     assert items[0]["game"] == "Endacopia"
-    assert items[0]["art"] and items[0]["art"].endswith("/header.jpg")
+    assert items[0]["art"] and items[0]["art"].endswith("/capsule_231x87.jpg")  # hashed path: the capsule stays
     assert "/apps/" in items[0]["art"]
     assert all(i["art"] for i in items)  # every search row ships a capsule image
+
+
+def test_steam_art_keeps_hashed_capsules():
+    # a hashed asset path's header sits under a different hash, so swapping
+    # the filename 404s; only unhashed paths take the header
+    row = '<img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5447880/{}capsule_231x87.jpg?t=1">'
+    hashed = "f076366e259d8b1eaba9673ea3f41d9ee759b0fc/"
+    assert collect._steam_art(row.format(hashed)) == (
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5447880/" + hashed + "capsule_231x87.jpg")
+    assert collect._steam_art(row.format("")) == (
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5447880/header.jpg")
 
 
 @pytest.mark.parametrize("title,game", [
