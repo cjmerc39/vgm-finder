@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T13:56:54Z",
+  "updatedAt": "2026-10-25T14:12:06Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -388247,6 +388247,238 @@
         4,
         3,
         3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "ad-nauseam-the-wrong-side",
+      "title": "Ad Nauseam - The Wrong Side Soundtrack",
+      "medium": "game",
+      "game": "Ad Nauseam - The Wrong Side",
+      "composers": [
+        "lolratz"
+      ],
+      "date": "2026-10-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5212610/Ad_Nauseam_The_Wrong_Side_Soundtrack/",
+          "seenAt": "2026-10-25T14:04:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ad+Nauseam+-+The+Wrong+Side+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5212610/930f55153bd9a52f22a23bd284f1ce4ee39bfd7d/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror",
+        "Mystery",
+        "Romance"
+      ],
+      "genres": [
+        "Point-and-click",
+        "Role-playing (RPG)",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "this-is-the-peace",
+      "title": "This Is the Peace Soundtrack",
+      "medium": "game",
+      "game": "This Is the Peace",
+      "composers": [
+        "Nokwite Games"
+      ],
+      "date": "2026-10-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5336880/This_Is_the_Peace_Soundtrack/",
+          "seenAt": "2026-10-25T14:04:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=This+Is+the+Peace+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5336880/488c084e3bb7c8a30f3ab89a83be4f084b4361c8/header.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "scottside",
+      "title": "Scottside Soundtrack",
+      "medium": "game",
+      "game": "Scottside",
+      "composers": [],
+      "date": "2026-10-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5206570/Scottside_Soundtrack/",
+          "seenAt": "2026-10-25T14:04:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Scottside+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5206570/6f7a9b4cefba20fe6536a37740e1f14ce1590f79/header.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [
+        "Drama"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "moods": [
+        "hopeful",
+        "wonder"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-chad-powers-season-2",
+      "title": "Chad Powers Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Chad Powers",
+      "composers": [
+        "Natalie Holt"
+      ],
+      "date": "2026-09-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/247168",
+          "seenAt": "2026-10-25T14:04:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Chad+Powers+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_FK6kqfHJiOK",
+      "art": "https://yt3.googleusercontent.com/F8FgZDQoCTkjADE196FD_KDq7LNWFg3bklCu5xdc201zXAJdDWS3VmeU_L8OUb9kZr5aL_zKDglgGyE=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Chad Powers: Season 2 (Original Soundtrack)",
+      "genres": [
+        "Comedy"
+      ],
+      "composerAliases": [
+        "Natalie Ann Holt"
+      ],
+      "albumArtists": [
+        "Natalie Holt"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mDAOcZiurrharuEBw6tXpf3t_bsmcsi6U",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 949,
+      "moods": [
+        "mysterious",
+        "driving",
+        "intense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-this-city-is-ours",
+      "title": "This City Is Ours Soundtrack",
+      "medium": "tv",
+      "game": "This City Is Ours",
+      "composers": [
+        "Rael Jones"
+      ],
+      "date": "2025-03-23",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/255570",
+          "seenAt": "2026-10-25T14:04:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=This+City+Is+Ours+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9i2i0gwlAcq",
+      "art": "https://yt3.googleusercontent.com/_tpKi0uK3vsqwO0UVZuVKbTRYFnc_rP5De1TH4WgpZci6SyuzIfbCMyOSvPDBWCMsIEO-RACmkmbuGS3=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "This City Is Ours (Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "albumArtists": [
+        "Rael Jones"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nO2d5xvrqTsUY49_tAAzrekNqsBTSqzRw",
+      "scoresN": 20,
+      "tracksN": 20,
+      "playsTotal": 29507,
+      "moods": [
+        "intense",
+        "mysterious",
+        "sad"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-against-the-current",
+      "title": "Against the Current Soundtrack",
+      "medium": "tv",
+      "game": "Against the Current",
+      "composers": [],
+      "date": "2026-09-11",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/282326",
+          "seenAt": "2026-10-25T14:04:35Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Against+the+Current+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MIswlCTZ5lh",
+      "art": "https://yt3.googleusercontent.com/IahL-Jr5ZH-Q1q8e52z2R8JwIgj22l2AX5XP5xQmgdVIqDdrVlLf_0OD0psdMWQVD2KkwnC1PgZW-IG0MA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "兰香如故 影视原声带",
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lRs6EqUWetaLc5LT5yr9HcVUK47Zpqk_k",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 48,
+      "playsTotal": 3903179,
+      "moods": [
+        "tender",
+        "hopeful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
       ],
       "moodsV": 2
     }

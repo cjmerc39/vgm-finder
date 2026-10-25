@@ -839,7 +839,9 @@
   },
   "1571766": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -977,7 +979,9 @@
   },
   "1613037": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Pressure Cooker"
    ],
@@ -1466,7 +1470,9 @@
   },
   "1755291": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1810,6 +1816,24 @@
     "vote_count": 5
    }
   },
+  "1796809": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Eric Scullin"
+   ],
+   "entry": {
+    "genre_ids": [
+     27
+    ],
+    "id": 1796809,
+    "original_title": "Remain Calm",
+    "poster_path": "/mwS8LsBd7FWp0XomfzVpynrGhHR.jpg",
+    "release_date": "2026-10-12",
+    "title": "Remain Calm",
+    "vote_count": 6
+   }
+  },
   "1796883": {
    "aliases": [],
    "checked": [],
@@ -1936,16 +1960,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-25",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 0,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 45
-  },
   {
    "date": "2026-09-26",
    "deferred": 0,
@@ -2235,6 +2249,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 102
+  },
+  {
+   "date": "2026-10-25",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 1,
+   "searched": 3,
+   "searches": 3,
+   "tracked": 103
   }
  ]
 }
