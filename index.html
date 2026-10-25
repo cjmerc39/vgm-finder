@@ -706,7 +706,22 @@ function needsTrackLoad(r){
 function scoreTracks(r, tt){ return mediumOf(r) === 'game' ? tt : tt.filter(t => !t.song); }
 /* any art is the album's own cover, whatever the source, except IGDB box
    art: that is the game's cover, a stand-in until an album is matched */
-function hasCover(r){ return !!r.art && !/^https:\/\/images\.igdb\.com\//.test(r.art); }
+function hasCover(r){ return !!r.art && !/^https:\/\/images\.igdb\.com\//.test(r.art) && !BADART.has(r.art); }
+/* art that failed to load this session counts as none: the tile turns to the
+   placeholder and, under album covers only, the row leaves the feed. Kept in
+   memory only, so an offline blip or a fixed link clears on the next visit. */
+const BADART = new Set();
+let BADART_T = null;
+function showArt(r){ return !!r.art && !BADART.has(r.art); }  // a known-dead link is not fetched twice
+function artFailed(img){
+  const src = img.getAttribute('src');
+  img.parentNode.classList.add('noart');
+  img.remove();
+  if(!src || BADART.has(src)) return;
+  BADART.add(src);
+  if(S.feedCover && S.view === 'feed' && !BADART_T)
+    BADART_T = setTimeout(() => { BADART_T = null; renderList(); }, 150);  // a page of failures, one re-render
+}
 function viewScores(){ return S.view === 'feed' ? S.feedScores : S.view === 'library' ? S.libScores : false; }
 function shownTracks(r){ const tt = tracksOf(r) || []; return viewScores() ? scoreTracks(r, tt) : tt; }
 function albumMoods(r){ return Array.isArray(r.moods) ? r.moods.filter(m => MOODS.includes(m)) : []; }  // the album's top three, commonest first
@@ -1631,8 +1646,8 @@ function rowHtml(r, view, ghost){
       <button class="log on" data-act="log" aria-label="Edit log">▶</button>`;
   }
 
-  const art = r.art
-    ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noart');this.remove()"></div>`
+  const art = showArt(r)
+    ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="artFailed(this)"></div>`
     : `<div class="rart noart"></div>`;
   const expanded = !ghost && EXPANDED === r.id;
   return `<div class="row${heard && view === 'feed' ? ' heard' : ''}${ghost ? ' ghost' : ''}" data-id="${esc(r.id)}" tabindex="0" role="button" aria-expanded="${expanded}" aria-label="${esc(label(r))}">
@@ -1719,8 +1734,8 @@ function expandedHtml(r, e){
 
 function songRowHtml(s){
   const { r, t } = s;
-  const art = r.art
-    ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noart');this.remove()"></div>`
+  const art = showArt(r)
+    ? `<div class="rart"><img src="${esc(r.art)}" alt="" loading="lazy" decoding="async" onerror="artFailed(this)"></div>`
     : `<div class="rart noart"></div>`;
   return `<div class="row song" data-id="${esc(r.id)}" data-t="${esc(t.title)}" tabindex="0" role="link" aria-label="Play ${esc(t.title)}">
     ${art}
@@ -1759,7 +1774,7 @@ function renderAlbum(){
   wrap.innerHTML = `<div id="album">
     <div class="ahead"><button class="aclose" aria-label="Back">✕</button><span class="tno">TRACK ${pad3(TRACKNO[r.id] || 0)}</span></div>
     <div class="abody">
-      <div class="aart${r.art ? '' : ' noart'}">${r.art ? `<img src="${esc(r.art)}" alt="" onerror="this.parentNode.classList.add('noart');this.remove()">` : ''}</div>
+      <div class="aart${showArt(r) ? '' : ' noart'}">${showArt(r) ? `<img src="${esc(r.art)}" alt="" onerror="artFailed(this)">` : ''}</div>
       <div class="atitle">${esc(label(r))}</div>
       ${[r.game, (r.composers || []).join(', ')].filter(Boolean).length ? `<div class="asub">${esc([r.game, (r.composers || []).join(', ')].filter(Boolean).join(' · '))}</div>` : ''}
       ${meta ? `<div class="ameta">${esc(meta)}</div>` : ''}

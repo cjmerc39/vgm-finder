@@ -201,8 +201,13 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(rows().map(r => r.dataset.id).sort().join() === 'hades-ii,ratchet-clank-rift-apart' && stored().feedCover === true,
     'album covers only keeps every cover, whatever its source, and drops box art and artless rows');
   assert(d.querySelector('#c-filters').textContent === 'filters · album covers', 'the chip names the cover filter');
+  rows().find(r => r.dataset.id === 'ratchet-clank-rift-apart').querySelector('.rart img').dispatchEvent(new d.defaultView.Event('error'));
+  await sleep(200);
+  assert(rows().map(r => r.dataset.id).join() === 'hades-ii', 'a cover that fails to load drops its row from album covers only');
   inSheet(d, '#shclear').click(); await sleep(20);
   assert(rows().length === 5 && stored().feedCover === false, 'clear resets album covers only');
+  assert(rows().find(r => r.dataset.id === 'ratchet-clank-rift-apart').querySelector('.rart.noart') !== null,
+    'with the filter off the row stays, its failed cover a placeholder');
   inSheet(d, '.shbody').scrollTop = 120;
   inSheet(d, '#shconsole').click(); await sleep(20);
   assert(inSheet(d, '.shbody').scrollTop === 120 && sheetEl(d).style.animation === 'none',
