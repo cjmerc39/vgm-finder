@@ -52,6 +52,23 @@
     "vote_count": 5
    }
   },
+  "1176778": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     878,
+     10770
+    ],
+    "id": 1176778,
+    "original_title": "Juste apr\u00e8s l'Aube",
+    "poster_path": "/4GxSC6ByogOhbUsQQnFKjyAs5tJ.jpg",
+    "release_date": "2026-10-18",
+    "title": "Just After Dawn",
+    "vote_count": 7
+   }
+  },
   "1198654": {
    "aliases": [],
    "checked": [
@@ -529,6 +546,25 @@
     "vote_count": 6
    }
   },
+  "1453407": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Sanjoy Chowdhury"
+   ],
+   "entry": {
+    "genre_ids": [
+     53,
+     80
+    ],
+    "id": 1453407,
+    "original_title": "\u0917\u093c\u091c\u093c\u092c \u0930\u093e\u0924",
+    "poster_path": "/e4N7M52cBbyi24xLga8yI6yt1u1.jpg",
+    "release_date": "2026-10-23",
+    "title": "Gajab Raat",
+    "vote_count": 5
+   }
+  },
   "1466670": {
    "aliases": [],
    "checked": [
@@ -628,6 +664,25 @@
     "vote_count": 5
    }
   },
+  "1504972": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Michel Petrossian"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     18
+    ],
+    "id": 1504972,
+    "original_title": "Une femme aujourd\u2019hui",
+    "poster_path": "/vBNsvbJsb9fnSre8TakYNJbU1ey.jpg",
+    "release_date": "2026-10-21",
+    "title": "A Woman Today",
+    "vote_count": 5
+   }
+  },
   "1507877": {
    "aliases": [],
    "checked": [
@@ -701,6 +756,22 @@
     "vote_count": 8
    }
   },
+  "1525072": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1525072,
+    "original_title": "Der perfekte Urlaub",
+    "poster_path": "/cNSQoDGWbnSVex9bkffBju1a8Lt.jpg",
+    "release_date": "2026-10-22",
+    "title": "The Perfect Holiday",
+    "vote_count": 5
+   }
+  },
   "1528830": {
    "aliases": [],
    "checked": [],
@@ -737,6 +808,23 @@
     "release_date": "2026-09-04",
     "title": "The Girl in the River",
     "vote_count": 9
+   }
+  },
+  "1536343": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     10770
+    ],
+    "id": 1536343,
+    "original_title": "Impossible",
+    "poster_path": "/qXuJHyhTCAG3pmoDs2Zv3r2PvO7.jpg",
+    "release_date": "2026-10-16",
+    "title": "Impossible",
+    "vote_count": 6
    }
   },
   "1544437": {
@@ -1272,7 +1360,9 @@
   },
   "1728084": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [],
@@ -1682,6 +1772,22 @@
     "vote_count": 7
    }
   },
+  "1776531": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1776531,
+    "original_title": "Clown Panic",
+    "poster_path": "/pZ15WSO7UzzJ297SLBMvxHNQDC1.jpg",
+    "release_date": "2026-10-12",
+    "title": "Clown Panic",
+    "vote_count": 5
+   }
+  },
   "1777750": {
    "aliases": [],
    "checked": [],
@@ -1960,16 +2066,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-26",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 46
-  },
   {
    "date": "2026-09-27",
    "deferred": 0,
@@ -2259,6 +2355,16 @@
    "searched": 3,
    "searches": 3,
    "tracked": 103
+  },
+  {
+   "date": "2026-10-26",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 6,
+   "searched": 1,
+   "searches": 1,
+   "tracked": 109
   }
  ]
 }
