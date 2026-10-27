@@ -756,22 +756,6 @@
     "vote_count": 8
    }
   },
-  "1525072": {
-   "aliases": [],
-   "checked": [],
-   "composers": [],
-   "entry": {
-    "genre_ids": [
-     35
-    ],
-    "id": 1525072,
-    "original_title": "Der perfekte Urlaub",
-    "poster_path": "/cNSQoDGWbnSVex9bkffBju1a8Lt.jpg",
-    "release_date": "2026-10-22",
-    "title": "The Perfect Holiday",
-    "vote_count": 5
-   }
-  },
   "1528830": {
    "aliases": [],
    "checked": [],
@@ -1199,7 +1183,9 @@
   },
   "1643768": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2067,16 +2053,6 @@
  },
  "runs": [
   {
-   "date": "2026-09-27",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 47
-  },
-  {
    "date": "2026-09-28",
    "deferred": 0,
    "due": 0,
@@ -2365,6 +2341,16 @@
    "searched": 1,
    "searches": 1,
    "tracked": 109
+  },
+  {
+   "date": "2026-10-27",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 0,
+   "searched": 1,
+   "searches": 1,
+   "tracked": 108
   }
  ]
 }
