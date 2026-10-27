@@ -1131,14 +1131,25 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
 
   bg.d.querySelector('#c-year').click();
   const yRows = [...bg.d.querySelectorAll('#sheetwrap [data-shyear]')];
-  assert(yRows.length === 8 && yRows[0].dataset.shyear === '2026'
-    && yRows[0].querySelector('.shr').textContent === '20',
-    'year sheet lists the years newest first with counts');
+  assert(yRows.length === 9 && yRows[0].dataset.shyear === 'all' && yRows[1].dataset.shyear === '2026'
+    && yRows[1].querySelector('.shr').textContent === '20',
+    'year sheet lists all years, then each year newest first with counts');
   inSheet(bg.d, '[data-shyear="2020"]').click();
   await sleep(20);
   assert(sheetEl(bg.d) === null, 'picking a year closes the sheet');
-  assert([...bg.d.querySelectorAll('#list .yhead')].some(h => h.textContent === '2020'),
-    'year jump pages in far years and lands on the header');
+  const yHeads = [...bg.d.querySelectorAll('#list .yhead')].map(h => h.textContent);
+  assert(yHeads.length === 1 && yHeads[0] === '2020' && bRows().length > 0,
+    'a year pick filters the feed to that year');
+  assert(bg.d.querySelector('#c-year').textContent === '2020 ▾' && bg.d.querySelector('#c-year').classList.contains('on'),
+    'the year chip names the picked year');
+  bg.d.querySelector('#c-year').click();
+  assert(bg.d.querySelectorAll('#sheetwrap [data-shyear]').length === 9
+    && inSheet(bg.d, '[data-shyear="2020"]').querySelector('.shr').textContent.startsWith('✓'),
+    'the year sheet still lists every year, the picked one ticked');
+  inSheet(bg.d, '[data-shyear="all"]').click();
+  await sleep(20);
+  assert(bg.d.querySelectorAll('#list .yhead').length > 1 && bg.d.querySelector('#c-year').textContent === 'year ▾',
+    'all years brings the whole feed back');
 
   const bMain = bg.d.querySelector('main');
   const toTop = bg.d.querySelector('#totop');
@@ -1198,8 +1209,10 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   bg.w.eval(`setFeedSort('az')`);
   bg.d.querySelector('#c-year').click();
   inSheet(bg.d, '[data-shyear="2019"]').click(); await sleep(20);
-  assert(bg.d.querySelector('#list .row[data-id="big-140"]') !== null,
-    'a year pick under a flat sort still pages in that year');
+  assert(bg.d.querySelector('#list .row[data-id="big-140"]') !== null
+    && bRows().every(r => bg.w.eval(`(R.releases.find(x => x.id === ${JSON.stringify(r.dataset.id)}) || {}).date || ''`).startsWith('2019')),
+    'a year pick under a flat sort shows just that year');
+  bg.w.eval(`setFeedYear('all')`);
   bg.w.eval(`setFeedSort('date')`);
 
   // ---------- retired rows (MATCHER-FIX-SPEC Phase 2 orphans) ----------

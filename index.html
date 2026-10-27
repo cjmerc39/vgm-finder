@@ -409,7 +409,7 @@ function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.tes
    diary entry. Bumping would make a briefly-cached v3 page reject this
    state and overwrite it with a blank one, which costs the queue, the
    library, and every custom playlist. */
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all', all:'all' }, feedMedium:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all', all:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false, feedCover:false }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all', all:'all' }, feedMedium:'all', feedYear:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all', all:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false, feedCover:false }; }
 /* one genre vocabulary across mediums: TMDb's paired TV genres split into
    the film names, and a game's IGDB themes (Horror, Fantasy...) join its
    genres under the shared names, so a film + tv or all-mediums pick
@@ -475,6 +475,7 @@ function validateState(d){
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
   s.libLiked = d.libLiked === true;
   s.libView = LIB_VIEWS.includes(d.libView) ? d.libView : 'albums';
+  s.feedYear = typeof d.feedYear === 'string' && /^(\d{4}|····)$/.test(d.feedYear) ? d.feedYear : 'all';
   s.plYear = typeof d.plYear === 'string' && /^\d{4}$/.test(d.plYear) ? d.plYear : 'all';
   s.plGenre = genreState(d.plGenre, 'both');  // the old playlists list merged both vocabularies
   s.showHidden = d.showHidden === true;
@@ -626,6 +627,11 @@ function toggleTrackLike(id, title){ editEntry(id, e => {
     : e.likedTracks.concat([title]);  // store the display title; compare folded
 }); }
 function setLibView(v){ if(LIB_VIEWS.includes(v)){ S.libView = v; CSHEET = null; save(); ensureViewTracks(); renderAll(); } }
+function setFeedYear(y){
+  S.feedYear = /^(\d{4}|····)$/.test(y) ? y : 'all'; save();
+  document.querySelector('main').scrollTop = 0;  // a different list starts at its top
+  renderAll();
+}
 function setPlYear(y){ S.plYear = /^\d{4}$/.test(y) ? y : 'all'; save(); renderAll(); }
 function setPlGenre(bucket, g){
   if(bucket !== 'game' && bucket !== 'screen') return;
@@ -782,10 +788,10 @@ function matches(r, q){
   return hit(hay, q);
 }
 function searched(rows){ const q = Q.trim(); return rows.filter(r => matches(r, q)); }
-function feedView(){
+function feedView(anyYear){
   // what the feed shows: its filters, then a tapped mood and the search; the
   // NEW badge counts the filters alone, as it has always ignored the search
-  const rows = feedRows();
+  const rows = feedRows(anyYear);
   return searched(FMOOD ? rows.filter(r => albumMoods(r).includes(FMOOD)) : rows);
 }
 function feedMediumEff(){
@@ -794,7 +800,8 @@ function feedMediumEff(){
   return multiMedium() ? S.feedMedium : 'game';
 }
 function libMediumEff(){ return multiMedium() ? S.libMedium : 'all'; }
-function feedRows(){
+function rowYear(r){ return (r.date || '').slice(0, 4) || '····'; }
+function feedRows(anyYear){
   // retired rows (a wrong album with no right one) leave the feed, search
   // and random; queue, library and liked songs still show them
   let rows = sorted().filter(r => !r.retired && E(r.id).status !== 'hidden');
@@ -811,6 +818,9 @@ function feedRows(){
     rows = rows.filter(r => genresOf(r).includes(S.feedGenre.all));  // one genre across games, films and shows
   }
   if(S.feedCover) rows = rows.filter(hasCover);
+  // the year chip narrows the feed to one year; its own sheet (anyYear) and
+  // the NEW badge look past it
+  if(S.feedYear !== 'all' && !anyYear) rows = rows.filter(r => rowYear(r) === S.feedYear);
   if(S.feedSort === 'oldest')
     rows.sort((a, b) => String(a.date || '9999').localeCompare(String(b.date || '9999')) || TRACKNO[a.id] - TRACKNO[b.id]);
   else if(S.feedSort === 'az')
@@ -1349,7 +1359,7 @@ async function watchPublish(tok, t0){
   return 'sent';
 }
 
-function newCount(){ return feedRows().filter(isNew).length; }
+function newCount(){ return feedRows(true).filter(isNew).length; }
 
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 function fmtDate(iso){
@@ -1455,7 +1465,8 @@ function renderControls(){
       `<button id="c-sort" aria-haspopup="dialog">${esc(SORT_NAMES[S.feedSort])} ▾</button>` +
       `<button id="c-filters" class="fchip${bits.length ? ' on' : ''}" aria-haspopup="dialog">` +
         `${esc(bits.length ? 'filters · ' + bits.join(', ') : 'filters')}</button>` +
-      `<button id="c-year" aria-haspopup="dialog">year ▾</button>`;
+      `<button id="c-year" class="${S.feedYear !== 'all' ? 'on' : ''}" aria-haspopup="dialog">` +
+        `${esc(S.feedYear === 'all' ? 'year' : S.feedYear)} ▾</button>`;
     return;
   }
   if(S.view !== 'library'){ el.innerHTML = ''; return; }
@@ -1523,14 +1534,16 @@ function plYearList(){
 }
 
 function yearCounts(){
-  // years present in the current filtered feed, newest first, undated last
+  // years present in the current filtered feed (whatever year is picked),
+  // newest first, undated last
   const counts = {};
-  for(const r of feedView()){
-    const y = (r.date || '').slice(0, 4) || '····';
+  for(const r of feedView(true)){
+    const y = rowYear(r);
     counts[y] = (counts[y] || 0) + 1;
   }
   const ys = Object.keys(counts).filter(y => y !== '····').sort().reverse();
   if(counts['····']) ys.push('····');
+  if(S.feedYear !== 'all' && !counts[S.feedYear]) ys.push(S.feedYear);  // the picked year stays listed to unpick
   return ys.map(y => [y, counts[y]]);
 }
 
@@ -1808,7 +1821,7 @@ function pageKey(){
   // showHidden stays out on purpose: revealing the hidden shelf must not
   // reset paging or throw the scroll position back to the top
   return [S.view, S.libView, S.feedSort, S.feedCo, S.feedConsole,
-          S.feedGenre.game, S.feedGenre.screen, S.feedGenre.all, S.feedMedium, S.feedCover,
+          S.feedGenre.game, S.feedGenre.screen, S.feedGenre.all, S.feedMedium, S.feedCover, S.feedYear,
           S.libSort, S.libLiked, S.libMedium, Q.trim(), FMOOD].join('\n');
 }
 function pageSlice(list){
@@ -1866,17 +1879,6 @@ function observeMore(){
   MORE_IO = new IntersectionObserver(es => { if(es.some(x => x.isIntersecting)) morePage(); },
                                      { root: document.querySelector('main') });
   MORE_IO.observe(btn);
-}
-function jumpToYear(y){
-  const rows = feedView();
-  const idx = rows.findIndex(r => ((r.date || '').slice(0, 4) || '····') === y);
-  if(idx < 0) return;
-  pageSlice(rows);  // sync PAGE_KEY first so the bump below survives the render
-  PAGE_N = Math.max(PAGE_N, Math.ceil((idx + 1) / PAGE));
-  renderList();
-  const head = [...document.querySelectorAll('#list .yhead')].find(h => h.textContent === y)
-    || document.querySelector(`#list .row[data-id="${rows[idx].id}"]`);  // no rails outside date sorts: land on the year's first row
-  if(head && head.scrollIntoView) head.scrollIntoView({ block: 'start', behavior: motionOk() ? 'smooth' : 'auto' });
 }
 function renderList(){
   const el = document.getElementById('list');
@@ -1946,7 +1948,7 @@ function shPickRow(attr, val, label, right){
     `<span class="shr">${right}</span></button>`;
 }
 function csheetHtml(){
-  // one sheet component for every control: sorts, filters, year jumps
+  // one sheet component for every control: sorts, filters, years
   let label = '', body = '', footer = '';
   if(CSHEET === 'feedsort' || CSHEET === 'libsort'){
     label = 'Sort';
@@ -1959,9 +1961,11 @@ function csheetHtml(){
       `<button class="shrow" data-${feed ? 'shsort' : 'shlsort'}="${k}">` +
       `<span class="shl">${cur === k ? '✓ ' : ''}${name}</span></button>`).join('');
   } else if(CSHEET === 'year'){
-    label = 'Jump to a year';
-    const ys = yearCounts();
-    body = ys.length ? ys.map(([y, n]) => shPickRow('shyear', y, y, n)).join('')
+    label = 'Year';
+    const ys = yearCounts(), all = ys.reduce((t, [, n]) => t + (n || 0), 0);
+    const mark = (y, n) => (S.feedYear === y ? '✓ ' : '') + (n || 0);
+    body = ys.length ? shPickRow('shyear', 'all', 'all years', mark('all', all)) +
+                       ys.map(([y, n]) => shPickRow('shyear', y, y, mark(y, n))).join('')
                      : `<div class="shnote">nothing in the current list</div>`;
   } else if(CSHEET === 'plyear'){
     label = 'Year';
@@ -2371,7 +2375,7 @@ sheetwrap.addEventListener('click', e => {
     const ls = e.target.closest('[data-shlsort]');
     if(ls){ CSHEET = null; setLibSort(ls.dataset.shlsort); return; }
     const y = e.target.closest('[data-shyear]');
-    if(y){ CSHEET = null; renderSheet(); jumpToYear(y.dataset.shyear); return; }
+    if(y){ CSHEET = null; setFeedYear(y.dataset.shyear); return; }
     const co = e.target.closest('[data-shco]');
     if(co){ setFeedCo(co.dataset.shco); return; }        // filters apply live; the sheet stays open
     if(e.target.closest('#shconsole')){ toggleFeedConsole(); return; }
