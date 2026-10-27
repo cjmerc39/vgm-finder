@@ -1811,6 +1811,19 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
   assert(mq('#moodbar') === null && feedIds().length === 5, 'clear brings the whole feed back');
   md.w.eval(`openAlbum('m-hero')`); await sleep(60);
   assert(same([...md.d.querySelectorAll('#album .amoods .mchip')].map(x => x.textContent), ['epic', 'heroic', 'suspenseful']), 'the album page shows the moods');
+  const aTitles = () => [...md.d.querySelectorAll('#album .atrack .ttl')].map(x => x.textContent);
+  const aNums = () => [...md.d.querySelectorAll('#album .atrack .tix')].map(x => x.textContent);
+  assert(same([...md.d.querySelectorAll('#album [data-asort]')].map(x => x.textContent), ['album order', 'a–z', 'most played'])
+    && mq('#album [data-asort="album"]').classList.contains('on') && same(aTitles(), ['H1', 'H2', 'H3']),
+    'the tracklist opens in album order with its three sorts');
+  mq('#album [data-asort="plays"]').click(); await sleep(10);
+  assert(same(aTitles(), ['H3', 'H1', 'H2']) && same(aNums(), ['03', '01', '02']) && mdStored().albumSort === 'plays',
+    'most played sorts by plays, keeps each album number, and is remembered');
+  assert(same([...md.d.querySelectorAll('#album .atrack')].map(x => x.dataset.i), ['2', '0', '1']),
+    'a sorted row still plays its own track');
+  mq('#album [data-asort="az"]').click(); await sleep(10);
+  assert(same(aTitles(), ['H1', 'H2', 'H3']) && mq('#album [data-asort="az"]').classList.contains('on'), 'a–z sorts by name');
+  mq('#album [data-asort="album"]').click(); await sleep(10);
   mq('#album .mchip[data-mood="epic"]').click(); await sleep(10);
   assert(mq('#album') === null && mq('#moodbar .mlabel').textContent === 'MOOD · EPIC' && same(feedIds(), ['m-hero']),
     'a chip on the album page closes it and opens the feed on that mood');

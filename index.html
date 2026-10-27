@@ -172,6 +172,10 @@ a.xsrc{text-decoration:none}
 .atrack .ttl{flex:1;min-width:0;font-size:14px;overflow-wrap:anywhere}
 .atrack .medal{font-family:var(--disp);font-size:10px;color:var(--bg);background:var(--amber);border-radius:4px;padding:2px 6px}
 .atrack .tplays{color:var(--dim);font-size:11px;white-space:nowrap}
+#album .asort{margin-top:22px;display:flex;gap:6px;justify-content:center}
+#album .asort button{font-size:11.5px;letter-spacing:.5px;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+#album .asort button.on{color:var(--bg);background:var(--amber);border-color:var(--amber)}
+#album .asort + .alist{margin-top:12px}
 .xall{margin-top:12px;display:block;width:100%;text-align:center;color:var(--amber);font-size:11.5px;
   letter-spacing:1.6px;text-transform:uppercase;border:1px solid var(--amberdim);border-radius:10px;padding:11px}
 
@@ -305,6 +309,7 @@ const STATUSES = ['unsorted', 'queued', 'listened', 'hidden'];
 const LIB_SORTS = ['listenedOn', 'rating', 'date'];
 const LIB_VIEWS = ['albums', 'songs', 'playlists'];
 const FEED_SORTS = ['date', 'oldest', 'az', 'added', 'plays'];
+const ALBUM_SORTS = ['album', 'az', 'plays'];  // the album page's tracklist: album order, a–z, most played
 const MEDIUMS = ['all', 'game', 'screen', 'film', 'tv'];  // screen = film + tv together
 /* saved recipes: rules, never tracks. A recipe is re-evaluated on every
    render, so a fresh rating or heart changes what it produces. */
@@ -409,7 +414,7 @@ function isDateStr(s){ return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.tes
    diary entry. Bumping would make a briefly-cached v3 page reject this
    state and overwrite it with a blank one, which costs the queue, the
    library, and every custom playlist. */
-function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all', all:'all' }, feedMedium:'all', feedYear:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all', all:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false, feedCover:false }; }
+function fresh(){ return { v:3, entries:{}, lastSeen:0, view:'feed', feedSort:'date', feedCo:'all', feedConsole:false, feedGenre:{ game:'all', screen:'all', all:'all' }, feedMedium:'all', feedYear:'all', libSort:'listenedOn', libLiked:false, libView:'albums', libMedium:'all', plYear:'all', plGenre:{ game:'all', screen:'all', all:'all' }, showHidden:false, cpls:[], cplLast:null, recipes:[], mixScores:true, mixLimit:30, feedScores:false, libScores:false, feedCover:false, albumSort:'album' }; }
 /* one genre vocabulary across mediums: TMDb's paired TV genres split into
    the film names, and a game's IGDB themes (Horror, Fantasy...) join its
    genres under the shared names, so a film + tv or all-mediums pick
@@ -473,6 +478,7 @@ function validateState(d){
   s.feedGenre = genreState(d.feedGenre, screenish(s.feedMedium) ? 'screen' : 'game');
   s.libMedium = MEDIUMS.includes(d.libMedium) ? d.libMedium : 'all';
   s.libSort = LIB_SORTS.includes(d.libSort) ? d.libSort : 'listenedOn';
+  s.albumSort = ALBUM_SORTS.includes(d.albumSort) ? d.albumSort : 'album';
   s.libLiked = d.libLiked === true;
   s.libView = LIB_VIEWS.includes(d.libView) ? d.libView : 'albums';
   s.feedYear = typeof d.feedYear === 'string' && /^(\d{4}|····)$/.test(d.feedYear) ? d.feedYear : 'all';
@@ -566,6 +572,7 @@ function setView(v){ if(VIEWS.includes(v)){ S.view = v; CSHEET = null; save(); e
 function setFeedMedium(m){ if(MEDIUMS.includes(m)){ S.feedMedium = m; save(); renderAll(); } }
 function setLibMedium(m){ if(MEDIUMS.includes(m)){ S.libMedium = m; save(); renderAll(); } }
 function setLibSort(k){ if(LIB_SORTS.includes(k)){ S.libSort = k; save(); renderAll(); } }
+function setAlbumSort(k){ if(ALBUM_SORTS.includes(k)){ S.albumSort = k; save(); renderAlbum(); } }
 function setFeedSort(k){ if(FEED_SORTS.includes(k)){ S.feedSort = k; save(); renderAll(); } }
 function setFeedCo(k){ if(['all', 'big', 'indie'].includes(k)){ S.feedCo = k; save(); renderAll(); } }
 function toggleFeedConsole(){ S.feedConsole = !S.feedConsole; save(); renderAll(); }
@@ -1773,7 +1780,17 @@ function renderAlbum(){
   t3.ranked.forEach((t, rank) => { medal[tt.indexOf(t)] = rank + 1; });
   const kind = mediumOf(r) === 'game' ? null : (mediumOf(r) === 'tv' ? 'tv score' : 'film score');
   const meta = [kind, r.company, (r.date || '').slice(0, 4)].filter(Boolean).join(' · ');
-  const rows = tt.length ? tt.map((t, i) =>
+  // sorting only changes the order shown: each row keeps its album number and its index for playing
+  const byPlays = playsRank(tt);
+  const sort = S.albumSort === 'plays' && !byPlays ? 'album' : S.albumSort;  // no play counts: album order
+  const order = tt.map((t, i) => i);
+  if(sort === 'az') order.sort((a, b) => tt[a].title.localeCompare(tt[b].title, undefined, { sensitivity: 'base', numeric: true }));
+  else if(sort === 'plays') order.splice(0, order.length, ...byPlays);
+  const sorts = [['album', 'album order'], ['az', 'a–z']].concat(byPlays ? [['plays', 'most played']] : []);
+  const sortRow = tt.length > 1 ? `<div class="asort" role="group" aria-label="Sort tracks">` +
+    sorts.map(([k, name]) => `<button data-asort="${k}" class="${sort === k ? 'on' : ''}" aria-pressed="${sort === k}">${name}</button>`).join('') +
+    `</div>` : '';
+  const rows = tt.length ? order.map(i => [tt[i], i]).map(([t, i]) =>
     `<div class="atrack" data-i="${i}" role="link" tabindex="0">
       <span class="tix">${String(i + 1).padStart(2, '0')}</span>
       <span class="ttl">${esc(t.title)}</span>
@@ -1793,7 +1810,7 @@ function renderAlbum(){
       ${meta ? `<div class="ameta">${esc(meta)}</div>` : ''}
       ${e.rating != null ? `<div class="ameta"><span class="minis">${minis(e.rating)}</span></div>` : ''}
       ${moodChipsHtml(r) ? `<div class="amoods">${moodChipsHtml(r)}</div>` : ''}
-      <div class="alist">${rows}</div>
+      ${sortRow}<div class="alist">${rows}</div>
     </div>
   </div>`;
   const now = wrap.querySelector('#album');
@@ -2472,6 +2489,8 @@ document.getElementById('albumwrap').addEventListener('click', e => {
   if(e.target.closest('.aclose')){ closeAlbum(); return; }
   const mc = e.target.closest('[data-mood]');
   if(mc){ openMoodFeed(mc.dataset.mood); return; }
+  const so = e.target.closest('[data-asort]');
+  if(so){ setAlbumSort(so.dataset.asort); return; }
   const r = ALBUM && byId(ALBUM);
   const lk = e.target.closest('[data-act="tlike"]');
   if(lk && r){ toggleTrackLike(r.id, lk.dataset.t); return; }  // heart, not play
