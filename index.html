@@ -261,10 +261,12 @@ a.xsrc{text-decoration:none}
 .shseg button.on{color:var(--amber2);border-color:var(--amberdim)}
 .shseg button[disabled]{opacity:.45}
 .shnote{color:var(--dim);font-size:11px;margin:2px 0 8px}
-.shfoot{display:flex;justify-content:space-between;margin-top:12px;flex:none}
-.shfoot button{color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
+.shtop{display:flex;align-items:center;gap:8px;margin:-4px 0 6px;min-height:40px;flex:none}
+.shtop .shtitle{flex:1;min-width:0;font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.shtop button{flex:none;color:var(--amber);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
   border:1px solid var(--amberdim);border-radius:9px;padding:9px 15px}
-#subctl .fchip{flex-shrink:1000}  /* the label chip gives way first; sort and year stay whole */
+.shtop button.shbk{color:var(--mut);border:0;padding:9px 6px 9px 0;font-size:14px;letter-spacing:0;text-transform:none}
+#subctl button:not(.fchip){flex:none}  /* sort and year stay whole; the filters chip gives way */
 
 /* the recipe sheet: full height, a live count on top, typed fields between the segments */
 #sheet.ctrl.tall{max-height:calc(100vh - 48px)}
@@ -1997,7 +1999,7 @@ function csheetHtml(){
         `<span class="shr">▸</span></button>`;
     };
     body = row('game', 'game genre') + (multiMedium() ? row('screen', 'film + tv genre') : '');
-    footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
+    footer = `<button id="shclear">clear</button><button id="shdone">done</button>`;
   } else if(CSHEET === 'plgpick'){
     const bucket = PLGBUCKET, sel = S.plGenre[bucket];
     label = bucket === 'game' ? 'Game genre' : 'Film + TV genre';
@@ -2060,7 +2062,7 @@ function csheetHtml(){
         `<span>tracks, up to ${RECIPE_MAX}</span></div>` +
       `<div class="slab">Order</div>` +
         segs('order', [['plays', 'most played'], ['album', 'album'], ['newest', 'newest'], ['shuffle', 'shuffle']], rc.order);
-    footer = `<div class="shfoot"><button id="rc-cancel">cancel</button><button id="rc-save">save</button></div>`;
+    footer = `<button id="rc-cancel">cancel</button><button id="rc-save">save</button>`;
   } else if(CSHEET === 'rgenre'){
     label = 'Genre';
     const rc = RDRAFT.rec, m = recipeMedium(rc);
@@ -2103,7 +2105,7 @@ function csheetHtml(){
         : `<div class="slab">Show</div>` +
           `<button class="shrow" id="shliked" aria-pressed="${S.libLiked}">` +
           `<span class="shl">♥ only</span><span class="shr">${S.libLiked ? '✓' : ''}</span></button>`);
-    footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
+    footer = `<button id="shclear">clear</button><button id="shdone">done</button>`;
   } else {  // feed filters: medium first, the rest follows the selection
     label = 'Filters';
     const seg = (attr, val, name, on) =>
@@ -2142,12 +2144,18 @@ function csheetHtml(){
     }
     body += `<button class="shrow" id="shcover" aria-pressed="${S.feedCover}">` +
       `<span class="shl">album covers only</span><span class="shr">${S.feedCover ? '✓' : ''}</span></button>`;
-    footer = `<div class="shfoot"><button id="shclear">clear</button><button id="shdone">done</button></div>`;
+    footer = `<button id="shclear">clear</button><button id="shdone">done</button>`;
   }
   const tall = CSHEET === 'recipe' || CSHEET === 'rgenre' || CSHEET === 'rmood' ? ' tall' : '';  // the recipe sheet runs full height
+  // the title, a picker's way back, and the sheet's buttons sit at the top, where Safari's toolbar and the
+  // home bar can't cover them; only the list scrolls
+  const back = /^<button class="shrow" id="shback"><span class="shl">‹ ([^<]*)<\/span><\/button>/.exec(body);
+  if(back) body = body.slice(back[0].length);
+  const top = `<div class="shtop">${back ? `<button id="shback" class="shbk">‹ ${back[1]}</button>` : ''}` +
+    `<span class="shtitle">${back ? '' : esc(label)}</span>${footer}</div>`;
   return `<div id="scrim"></div>` +
     `<div id="sheet" class="ctrl${tall}" role="dialog" aria-modal="true" aria-label="${esc(label)}">` +
-    `<div class="shbody">${body}</div>${footer}</div>`;
+    `${top}<div class="shbody">${body}</div></div>`;
 }
 let SHEET_SCROLL = {};   // control sheet -> where its list was scrolled, so a picker reopens where it was left
 let SHEET_LAST = null;   // the control sheet on screen after the last render
