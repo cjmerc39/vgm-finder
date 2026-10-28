@@ -975,6 +975,27 @@
     "vote_count": 6
    }
   },
+  "1596275": {
+   "aliases": [
+    "Meredi"
+   ],
+   "checked": [],
+   "composers": [
+    "Ina Meredi Arakelian"
+   ],
+   "entry": {
+    "genre_ids": [
+     10749,
+     53
+    ],
+    "id": 1596275,
+    "original_title": "Drive - The Pretenders",
+    "poster_path": "/s9syckECnUYhKePQ1A0DC0mFVZ9.jpg",
+    "release_date": "2026-10-27",
+    "title": "Drive - The Pretenders",
+    "vote_count": 5
+   }
+  },
   "1597199": {
    "aliases": [],
    "checked": [
@@ -2053,16 +2074,6 @@
  },
  "runs": [
   {
-   "date": "2026-09-28",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 48
-  },
-  {
    "date": "2026-09-29",
    "deferred": 0,
    "due": 2,
@@ -2351,6 +2362,16 @@
    "searched": 1,
    "searches": 1,
    "tracked": 108
+  },
+  {
+   "date": "2026-10-28",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 1,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 109
   }
  ]
 }
