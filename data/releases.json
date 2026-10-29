@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T16:33:00Z",
+  "updatedAt": "2026-10-29T16:42:43Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -378684,6 +378684,12 @@
           "type": "catalog",
           "url": "https://music.youtube.com/browse/MPREb_MicnEcw66Go",
           "seenAt": "2026-10-18T13:45:03Z"
+        },
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_v8CtpwcQxgd",
+          "seenAt": "2026-10-29T16:34:13Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Deltacraft%2C+Vol.+1+%28Minecraft+Machinima+Soundtrack%29",
@@ -383273,7 +383279,12 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5195260/2f1add89d2ef58f535b9586ecda93c0927b3d483/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ]
     },
     {
       "id": "film-animals",
@@ -386787,7 +386798,15 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5290990/13c5c361ee183a3edf33d0682f6433e081edfd00/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Strategy",
+        "Adventure",
+        "Indie"
+      ]
     },
     {
       "id": "puppet-mall-chapter-1",
@@ -386897,7 +386916,9 @@
       "title": "Karma Soundtrack",
       "medium": "film",
       "game": "Karma",
-      "composers": [],
+      "composers": [
+        "Yodelice"
+      ],
       "date": "2026-10-21",
       "sources": [
         {
@@ -386933,7 +386954,8 @@
         1,
         1
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "composersFrom": "album"
     },
     {
       "id": "film-the-beast",
@@ -389801,6 +389823,686 @@
         1,
         1,
         1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tom-the-postgirl",
+      "title": "Tom the Postgirl Soundtrack",
+      "medium": "game",
+      "game": "Tom the Postgirl",
+      "composers": [
+        "Floris Demandt"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5066750/Tom_the_Postgirl_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tom+the+Postgirl+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5066750/c5338230700e0cd9c47bb3172781a0ba35528495/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Comedy"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-phone-from-another-world-my-first-love-theme-song-echo",
+      "title": "The Phone from Another World: My First Love Theme song - Echo",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "SymPhoNetiK",
+        "Plumko",
+        "WeissGarden"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5215060/The_Phone_from_Another_World_My_First_Love_Theme_song_Echo/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Phone+from+Another+World%3A+My+First+Love+Theme+song+-+Echo+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5215060/aa6737669b952d40b63bc2de1596b7256855cceb/capsule_231x87.jpg",
+      "notable": true,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "curse-of-resthaven-black-pony-tavern-ep",
+      "title": "Curse of Resthaven - Black Pony Tavern EP",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Scott Christian",
+        "Michael Cox"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5435380/Curse_of_Resthaven_Black_Pony_Tavern_EP/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Curse+of+Resthaven+-+Black+Pony+Tavern+EP+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5435380/59705c5b4dfa08b5ddacf38399d9987dadda8a14/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Horror",
+        "Mystery"
+      ],
+      "genres": [
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "curse-of-resthaven-gilded-edition",
+      "title": "Curse of Resthaven Gilded Edition Soundtrack",
+      "medium": "game",
+      "game": "Curse of Resthaven Gilded Edition",
+      "composers": [
+        "Scott Christian"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5435370/Curse_of_Resthaven_Gilded_Edition_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Curse+of+Resthaven+Gilded+Edition+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5435370/fa315bc70375b15ad7379b75947cb741a1bda7a4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror",
+        "Mystery"
+      ],
+      "genres": [
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "danchi-days",
+      "title": "Danchi Days OST",
+      "medium": "game",
+      "game": "Danchi Days",
+      "composers": [
+        "Melos Han-Tani"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5427420/Danchi_Days_OST/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Danchi+Days+OST",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5427420/b3d284d25ead39d7f4a02c7cd7311dcc0c9dcf2b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [
+        "Action",
+        "Comedy",
+        "Drama"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "joyful",
+        "hopeful"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "heir-of-the-dog",
+      "title": "Heir of the Dog Soundtrack",
+      "medium": "game",
+      "game": "Heir of the Dog",
+      "composers": [
+        "Bertrand Guégan"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5361260/Heir_of_the_Dog_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Heir+of+the+Dog+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5361260/fff9e23290854f90c592712508916b2f71842ca4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Comedy",
+        "Mystery"
+      ],
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "cataclyzm",
+      "title": "Cataclyzm Soundtrack",
+      "medium": "game",
+      "game": "Cataclyzm",
+      "composers": [
+        "Electric Yawn"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5378270/Cataclyzm_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cataclyzm+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5378270/e3184781495d461881fa2f9338c219b9ee4a0c63/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "knuckle-creek",
+      "title": "Knuckle Creek Soundtrack",
+      "medium": "game",
+      "game": "Knuckle Creek",
+      "composers": [
+        "Anthony Flack"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5419380/Knuckle_Creek_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Knuckle+Creek+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5419380/4d3d4cae1d7c43d4a15d75d665e7ec9c74b00b70/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Comedy",
+        "Party"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "what-the-bat",
+      "title": "WHAT THE BAT? Soundtrack",
+      "medium": "game",
+      "game": "WHAT THE BAT?",
+      "composers": [
+        "Sune Carlsson Kølster"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5459070/WHAT_THE_BAT_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=WHAT+THE+BAT%3F+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5459070/de920be55607f1e06a8987d4e8478dd87027f6d6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 14,
+      "themes": [
+        "Comedy"
+      ],
+      "genres": [
+        "Simulator",
+        "Sport",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "hopeful",
+        "wonder",
+        "peaceful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "what-the-car",
+      "title": "WHAT THE CAR? Soundtrack",
+      "medium": "game",
+      "game": "WHAT THE CAR?",
+      "composers": [
+        "Sune Carlsson Kølster"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4022350/WHAT_THE_CAR_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=WHAT+THE+CAR%3F+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4022350/394206554708d8f48a9df0db00fdb1ffcf9ad406/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Comedy"
+      ],
+      "genres": [
+        "Platform",
+        "Racing",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "tama-in-between",
+      "title": "Tama In-Between Original Game Soundtrack",
+      "medium": "game",
+      "game": "Tama In-Between",
+      "composers": [
+        "Makkun",
+        "Masagomi"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4750790/Tama_InBetween_Original_Game_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tama+In-Between+Original+Game+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4750790/3763bdf1e3fb411aa1ee3347387581d504b08f35/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Platform",
+        "Puzzle"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bao-bao-s-cozy-cleaning-services",
+      "title": "Bao Bao's Cozy Cleaning Services Soundtrack",
+      "medium": "game",
+      "game": "Bao Bao's Cozy Cleaning Services",
+      "composers": [
+        "Pazi"
+      ],
+      "date": "2026-10-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4778830/Bao_Baos_Cozy_Cleaning_Services_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bao+Bao%27s+Cozy+Cleaning+Services+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4778830/1d65e00b97501fa64cee2debc0e43c4b6167ad18/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Sandbox"
+      ],
+      "genres": [
+        "Simulator"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "neon-breaker-endless-arcade",
+      "title": "Neon Breaker: Endless Arcade Soundtrack",
+      "medium": "game",
+      "game": "Neon Breaker: Endless Arcade",
+      "composers": [
+        "Roy Massaad"
+      ],
+      "date": "2026-10-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5473600/Neon_Breaker_Endless_Arcade_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Neon+Breaker%3A+Endless+Arcade+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5473600/35386064073b454898723b566872ca0d489d967e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Shooter",
+        "Indie",
+        "Arcade"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bestricken-part-1",
+      "title": "Bestricken Part 1 Soundtrack",
+      "medium": "game",
+      "game": "Bestricken Part 1",
+      "composers": [
+        "Andy Palmer"
+      ],
+      "date": "2026-10-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4877540/Bestricken_Part_1_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bestricken+Part+1+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4877540/dd2ea03c39f1629c9fe1fcc5ad9a3b1d44935285/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "westward-dash",
+      "title": "Westward Dash Soundtrack",
+      "medium": "game",
+      "game": "Westward Dash",
+      "composers": [
+        "灵如酱 Lingrujiang"
+      ],
+      "date": "2026-10-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5378530/Westward_Dash_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Westward+Dash+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5378530/005c2fb97ccb1a71556f6685ed92daa037d3f9f0/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "come-inside-it-s-cold-out",
+      "title": "Come Inside It's Cold Out ! Soundtrack",
+      "medium": "game",
+      "game": "Come Inside It's Cold Out !",
+      "composers": [],
+      "date": "2026-10-28",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5387390/Come_Inside_Its_Cold_Out_Soundtrack/",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Come+Inside+It%27s+Cold+Out+%21+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5387390/d9d0e3a2ca2cfef4be2aaabc076ac91c2c17e748/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "cop-bastard",
+      "title": "Cop Bastard Soundtrack",
+      "medium": "game",
+      "game": "Cop Bastard",
+      "composers": [
+        "Özgür Barış"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/cop-bastard",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cop+Bastard+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_LgN7HEyLCaU",
+      "art": "https://yt3.googleusercontent.com/1kuZ44S7nfayXQZXqldgx9TWZNUKVOp3hlWvxJdwFu8cxxIMu1x0jrjXm0_jwfQEAS1XleyZSfefYHXE=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "COP BASTARD (Original Soundtrack)",
+      "company": "targim.",
+      "console": false,
+      "genres": [
+        "Shooter",
+        "Indie"
+      ],
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kxqJh1b44VopdiOmu4cPUlFdNRHSrg8gI",
+      "tracksN": 3,
+      "playsTotal": 20,
+      "moods": [
+        "intense",
+        "driving",
+        "joyful"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-nobody-wants-this-season-3",
+      "title": "Nobody Wants This Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "Nobody Wants This",
+      "composers": [
+        "Duncan Blickenstaff"
+      ],
+      "date": "2026-10-22",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/250923",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nobody+Wants+This+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cJ5aiVGRsaW",
+      "art": "https://yt3.googleusercontent.com/OVs2ZvLzW4zh49Uu-txMlJ9Wn1tX_im9XpGkZjtyjr8LMZjHmRwISmKAmSotmgJtVVmoXVqYTBZ_uK15=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Nobody Wants This: Season 3 (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Nobody Wants This",
+        "STELLA LEFTY",
+        "Bailey Zimmerman",
+        "Cameron Whitcomb"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n2qP16GD6TqE8t2GkrhOuEi54puK6e8QM",
+      "scoresN": 3,
+      "songsAlbum": true,
+      "tracksN": 17,
+      "playsTotal": 1448900,
+      "moods": [
+        "romantic",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-drop-a-snowfall-saga",
+      "title": "The Drop: A Snowfall Saga Soundtrack",
+      "medium": "tv",
+      "game": "The Drop: A Snowfall Saga",
+      "composers": [
+        "The Drop - Cast"
+      ],
+      "date": "2026-09-08",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/304842",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Drop%3A+A+Snowfall+Saga+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_a1ihwJ5FyzF",
+      "art": "https://yt3.googleusercontent.com/DOsD_LoBVxzHqAhvqqTaTzrETbzb66xt4IdfVhcX5VyKq8EyTkTo_xmjrRWUfQyA3Fsgq2psQeLVPEQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Drop: A Snowfall Saga (Original Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "The Drop - Cast"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n-8chgLqu7EVbRSswljYCazqsNpmREeq8",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 13,
+      "playsTotal": 959200,
+      "moods": [
+        "driving",
+        "intense",
+        "laid-back"
+      ],
+      "moodsN": [
+        8,
+        7,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-super-official-soundtrack-deluxe",
+      "title": "Minecraft SUPER Official Soundtrack: Deluxe",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "BananaPU"
+      ],
+      "date": "2024-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_IQlFTYWxBmr",
+          "seenAt": "2026-10-29T16:34:13Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+SUPER+Official+Soundtrack%3A+Deluxe",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_IQlFTYWxBmr",
+      "art": "https://yt3.googleusercontent.com/HJigoenpF0yXwXRJUbptcTPILE_nxBelEfYegv1Bvcop1FerzH2Iezdl36waPyMxp3rgCibVnTkXA6oJ0A=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_nx7pskdMvB5WqBmQ7rjq-s5Cny3XjUYAc",
+      "tracksN": 20,
+      "playsTotal": 196,
+      "moods": [
+        "intense",
+        "playful",
+        "eerie"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
       ],
       "moodsV": 2
     }
