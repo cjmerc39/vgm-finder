@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T16:42:43Z",
+  "updatedAt": "2026-10-30T16:40:30Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -102806,18 +102806,20 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=magnat+-+OST",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_eB330WsNCgN",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5102680/91c4c198d2388e7c699b95d3bfbab7754c3863d1/capsule_231x87.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [
         "Horror"
       ],
       "genres": [
         "Indie"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_n5shvXElndokfQ1KAzLMujOrDWK845x8k",
+      "tracksN": 10,
+      "playsTotal": 92
     },
     {
       "id": "四十四次日落",
@@ -390504,6 +390506,703 @@
         4,
         3
       ],
+      "moodsV": 2
+    },
+    {
+      "id": "underway-tales-of-a-killer",
+      "title": "Underway: Tales Of A Killer Soundtrack",
+      "medium": "game",
+      "game": "Underway: Tales Of A Killer",
+      "composers": [
+        "Matt McGreevy"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4245910/Underway_Tales_Of_A_Killer_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Underway%3A+Tales+Of+A+Killer+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4245910/2e493d0455756f3b6637ec940846a803981ba702/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 7,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "ominous",
+        "mysterious"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "ecstatica-ii",
+      "title": "Ecstatica II Soundtrack",
+      "medium": "game",
+      "game": "Ecstatica II",
+      "composers": [],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5406240/Ecstatica_II_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ecstatica+II+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5406240/270140d11b6ce3838a8454e4301901dc311e9c47/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Adventure"
+      ]
+    },
+    {
+      "id": "ecstatica",
+      "title": "Ecstatica Soundtrack",
+      "medium": "game",
+      "game": "Ecstatica",
+      "composers": [],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5406230/Ecstatica_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ecstatica+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5406230/334376c13ccfdf0ca92e8ecf19cd05bc09b0cd01/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Adventure"
+      ]
+    },
+    {
+      "id": "silver-bullet",
+      "title": "Silver Bullet Soundtrack",
+      "medium": "game",
+      "game": "Silver Bullet",
+      "composers": [
+        "Ammie Gardner"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4717010/Silver_Bullet_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Silver+Bullet+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4717010/e99ec0da07df40967e8e7ae4bf21598dc381ac32/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 11,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Fighting",
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "goblin-cleanup",
+      "title": "Goblin Cleanup - Original Soundtrack",
+      "medium": "game",
+      "game": "Goblin Cleanup",
+      "composers": [
+        "Ariel Contreras-Esquivel"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4684520/Goblin_Cleanup_Original_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Goblin+Cleanup+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4684520/64aec9cfe0a8968b13138ddee718f45a34103523/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "rat-game",
+      "title": "Rat Game Soundtrack",
+      "medium": "game",
+      "game": "Rat",
+      "composers": [
+        "Kollektiv"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5472970/Rat_Game_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rat+Game+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5472970/e3dffa142c169c354564286a62e85ed99e1b5ae5/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "battle-nap",
+      "title": "Battle Nap Soundtrack",
+      "medium": "game",
+      "game": "Battle Nap",
+      "composers": [
+        "Backpullver"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5440340/Battle_Nap_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Battle+Nap+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5440340/0ade46074d0648484ce6983a124f35517184e804/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-doll-shop-soundtrack-artbook",
+      "title": "The Doll Shop Soundtrack & Artbook",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Atelier Sentô"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5396400/The_Doll_Shop_Soundtrack_Artbook/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Doll+Shop+Soundtrack+%26+Artbook",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5396400/da47f1882adb235802ffe19b26c414ba3c742e86/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Adventure",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "buzz-or-die",
+      "title": "BUZZ or DIE Soundtrack",
+      "medium": "game",
+      "game": "BUZZ or DIE",
+      "composers": [
+        "BON"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5373320/BUZZ_or_DIE_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=BUZZ+or+DIE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5373320/2acf5c607b6a5bc103dd4224c96184ce58d2e2a6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "mining-fire-ball",
+      "title": "Mining Fire Ball Soundtrack",
+      "medium": "game",
+      "game": "Mining Fire Ball",
+      "composers": [
+        "POCOYA"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5438230/Mining_Fire_Ball_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mining+Fire+Ball+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5438230/f949af25c902942b577d73ee9e0562ca04afb21f/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "alice-nation",
+      "title": "Alice Nation Soundtrack",
+      "medium": "game",
+      "game": "Alice Nation",
+      "composers": [
+        "虽华"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5470630/Alice_Nation_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Alice+Nation+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5470630/f732c88a625c50d7024915044869c974b7e7f050/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-fifth-trace-is-music",
+      "title": "The fifth trace is music.",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Black Cat Leo"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5263760/The_fifth_trace_is_music/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+fifth+trace+is+music.+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5263760/77779d5591fc9475739efa71cfe497e18c69ae16/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Puzzle"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "epicselectly",
+      "title": "EpicSelectly Soundtrack",
+      "medium": "game",
+      "game": "EpicSelectly",
+      "composers": [
+        "Ucchii0-うっちーぜろ"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5329850/EpicSelectly_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=EpicSelectly+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5329850/2620270b1d9b5314532102e05d42b82103dda241/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "puzzle-sharks",
+      "title": "Puzzle Sharks Soundtrack",
+      "medium": "game",
+      "game": "Puzzle Sharks",
+      "composers": [],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5447910/Puzzle_Sharks_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Puzzle+Sharks+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5447910/ccbe10edcb28837313bebb58c32f8c42392041be/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "culdcept-begins-digital-contents-set",
+      "title": "Culdcept BEGINS \"Digital Contents Set\"",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Neos Corporation"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5359880/Culdcept_BEGINS_Digital_Contents_Set/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Culdcept+BEGINS+%22Digital+Contents+Set%22+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5359880/23305692a0f9cf2bccd7741468b7f125437b11b0/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Party"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "hokko-spaces",
+      "title": "Hokko Spaces Soundtrack",
+      "medium": "game",
+      "game": "Hokko Spaces",
+      "composers": [
+        "Samantha van der Sluis"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5021630/Hokko_Spaces_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hokko+Spaces+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5021630/6ad2536d84697d03c076771e0519f7c941767da9/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 5,
+      "themes": [
+        "Sandbox"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "peaceful",
+        "dreamy",
+        "laid-back"
+      ],
+      "moodsN": [
+        5,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "shadow-gangs-zero",
+      "title": "Shadow Gangs Zero Soundtrack",
+      "medium": "game",
+      "game": "Shadow Gangs Zero",
+      "composers": [
+        "Soufiane Naim",
+        "Clayton Tapp",
+        "Crisps"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5250330/Shadow_Gangs_Zero_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Shadow+Gangs+Zero+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5250330/5681faf3ca51df35b14b5bc4327eaf2423965045/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "powerplay",
+      "title": "Powerplay Soundtrack",
+      "medium": "game",
+      "game": "Powerplay",
+      "composers": [
+        "Pierre-Henri Barralis"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5019100/Powerplay_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Powerplay+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5019100/da7cbcfe6730e2a2562001d330ecb3b255017b43/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction"
+      ],
+      "genres": [
+        "Real Time Strategy (RTS)",
+        "Simulator",
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "balingo",
+      "title": "Balingo Soundtrack",
+      "medium": "game",
+      "game": "Balingo",
+      "composers": [
+        "Guillaume Mazet-Roux"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5363050/Balingo_Soundtrack/",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Balingo+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5363050/0cc5076257924e1d4266acb40e08387eeb9d53a7/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "terrible-lizards",
+      "title": "Terrible Lizards Soundtrack",
+      "medium": "game",
+      "game": "Terrible Lizards",
+      "composers": [
+        "Joseph Aaskov",
+        "JT Music",
+        "The Civil Slingers"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/terrible-lizards",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Terrible+Lizards+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5eGrXvPJRBE",
+      "art": "https://yt3.googleusercontent.com/CKiMOkc0ZQSTt5sEYgFB3rOi6nt5jIEffKBEbv1Q-8ULS43t7IoUr9EYcR5CFPIRiPB0wl5Yyln9xPIV=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Terrible Lizards (Original Soundtrack)",
+      "company": "WDR Studios",
+      "console": true,
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nzQ4dY90doSz7xm2JD4DOOS1zZJo3-rPM",
+      "tracksN": 13,
+      "playsTotal": 1169,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "playful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "reka",
+      "title": "Reka Soundtrack",
+      "medium": "game",
+      "game": "Reka",
+      "composers": [
+        "Sebastian Grunewald"
+      ],
+      "date": "2026-10-26",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/reka",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Reka+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YxWBnWXHtEN",
+      "art": "https://yt3.googleusercontent.com/A1bN0-RZ-0MrNwjNCT3wWZLz-BVVPNZ3k8MWAe3ncBaerXfxpTtpX-8hEqFqM3rT3_X0ihvJHV2ybmYC=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "REKA (Original Game Soundtrack)",
+      "company": "Emberstorm Entertainment",
+      "console": false,
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "themes": [
+        "Fantasy"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m4kmjFcPswJQl-MXabQEOvWe2mpQQoJ0A",
+      "tracksN": 36,
+      "playsTotal": 70,
+      "moods": [
+        "mysterious",
+        "peaceful",
+        "intense"
+      ],
+      "moodsN": [
+        11,
+        7,
+        7
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-lava-chicken",
+      "title": "Minecraft: Lava Chicken (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Minecraft",
+        "Hyper Potions"
+      ],
+      "date": "2025-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_NxxhEAcmPHq",
+          "seenAt": "2026-10-30T16:31:17Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft%3A+Lava+Chicken+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NxxhEAcmPHq",
+      "art": "https://yt3.googleusercontent.com/noy5sw-5onlq-jwe5S2adZoi5fgMCBm5cWtqsHInAN4dzMu3VBj_zAB23xkPRQ79omyi8FrNnDCENIU=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_llaTBUB2GftTbFmeUAeeDUQPV6xo4U-7c",
+      "tracksN": 1,
+      "playsTotal": 8800000,
+      "moods": [],
+      "moodsN": [],
       "moodsV": 2
     }
   ]

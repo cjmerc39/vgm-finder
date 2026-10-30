@@ -201,7 +201,9 @@
   },
   "1318864": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -237,27 +239,6 @@
     "poster_path": "/eTWcOmwSqC8Xr5o5VKFj7BFHKSI.jpg",
     "release_date": "2026-10-02",
     "title": "Stranglehold",
-    "vote_count": 5
-   }
-  },
-  "1321666": {
-   "aliases": [
-    "Lukasz Targosz"
-   ],
-   "checked": [],
-   "composers": [
-    "\u0141ukasz Targosz"
-   ],
-   "entry": {
-    "genre_ids": [
-     10749,
-     18
-    ],
-    "id": 1321666,
-    "original_title": "Lalka",
-    "poster_path": "/mU8squGiM5tybYBHhjg4jPUzOCl.jpg",
-    "release_date": "2026-09-30",
-    "title": "The Doll",
     "vote_count": 5
    }
   },
@@ -389,7 +370,9 @@
   },
   "1388805": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Alec Puro"
    ],
@@ -475,7 +458,9 @@
   },
   "1437195": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -488,6 +473,26 @@
     "release_date": "2026-09-30",
     "title": "Livestream from Hell",
     "vote_count": 10
+   }
+  },
+  "1437925": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "La\u00ebtitia Pansanel-Garric"
+   ],
+   "entry": {
+    "genre_ids": [
+     36,
+     18,
+     10752
+    ],
+    "id": 1437925,
+    "original_title": "Moulin",
+    "poster_path": "/f3yopLJXRBcPvgkfRji1jloDrxd.jpg",
+    "release_date": "2026-10-28",
+    "title": "Moulin",
+    "vote_count": 5
    }
   },
   "1437948": {
@@ -645,10 +650,29 @@
     "vote_count": 5
    }
   },
+  "1480856": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Sven Faulconer"
+   ],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1480856,
+    "original_title": "Hanging by a Wire",
+    "poster_path": "/duZIrDULyk3PBIxoUmKXm3uqlBv.jpg",
+    "release_date": "2026-10-21",
+    "title": "Hanging by a Wire",
+    "vote_count": 5
+   }
+  },
   "1482547": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -765,7 +789,9 @@
   },
   "1514891": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "FAUX AMIS"
    ],
@@ -851,6 +877,27 @@
     "release_date": "2026-10-16",
     "title": "Impossible",
     "vote_count": 6
+   }
+  },
+  "1541477": {
+   "aliases": [
+    "Andrea Oliviero Laszlo De Simone Sacc\u00e0"
+   ],
+   "checked": [],
+   "composers": [
+    "Andrea Laszlo De Simone"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     35
+    ],
+    "id": 1541477,
+    "original_title": "Noi un po' meglio",
+    "poster_path": "/4Gw8ukw5aAUP1uzNtYZ0CNTUy5A.jpg",
+    "release_date": "2026-10-29",
+    "title": "You, Me, Us",
+    "vote_count": 12
    }
   },
   "1544437": {
@@ -1360,6 +1407,23 @@
     "vote_count": 5
    }
   },
+  "1704895": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35,
+     9648
+    ],
+    "id": 1704895,
+    "original_title": "Quello che Resta di Noi",
+    "poster_path": "/gXutde3SoIY4dTjlcdA2QLnnPwH.jpg",
+    "release_date": "2026-10-29",
+    "title": "Quello che Resta di Noi",
+    "vote_count": 5
+   }
+  },
   "1706702": {
    "aliases": [],
    "checked": [
@@ -1651,7 +1715,9 @@
   },
   "1758536": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2066,6 +2132,23 @@
     "vote_count": 5
    }
   },
+  "1810511": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     27,
+     53
+    ],
+    "id": 1810511,
+    "original_title": "Mama Bear",
+    "poster_path": "/vh4IC30MNGk8shVGE6fJ81ZI6dY.jpg",
+    "release_date": "2026-10-29",
+    "title": "Mama Bear",
+    "vote_count": 11
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -2121,6 +2204,28 @@
     "vote_count": 12
    }
   },
+  "891621": {
+   "aliases": [
+    "Carter Benedict Burwell"
+   ],
+   "checked": [],
+   "composers": [
+    "Carter Burwell"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     80,
+     53
+    ],
+    "id": 891621,
+    "original_title": "Wild Horse Nine",
+    "poster_path": "/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+    "release_date": "2026-10-30",
+    "title": "Wild Horse Nine",
+    "vote_count": 7
+   }
+  },
   "947493": {
    "aliases": [],
    "checked": [],
@@ -2141,16 +2246,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-09-30",
-   "deferred": 0,
-   "due": 1,
-   "found": 0,
-   "recorded": 2,
-   "searched": 1,
-   "searches": 1,
-   "tracked": 56
-  },
   {
    "date": "2026-10-01",
    "deferred": 0,
@@ -2440,6 +2535,16 @@
    "searched": 4,
    "searches": 4,
    "tracked": 112
+  },
+  {
+   "date": "2026-10-30",
+   "deferred": 0,
+   "due": 7,
+   "found": 1,
+   "recorded": 6,
+   "searched": 7,
+   "searches": 10,
+   "tracked": 117
   }
  ]
 }
