@@ -284,7 +284,8 @@
   "1361982": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -626,28 +627,6 @@
     "release_date": "2026-09-16",
     "title": "Think Good",
     "vote_count": 7
-   }
-  },
-  "1477583": {
-   "aliases": [
-    "Hauschka"
-   ],
-   "checked": [],
-   "composers": [
-    "Volker Bertelmann",
-    "Lennart Saathoff"
-   ],
-   "entry": {
-    "genre_ids": [
-     18,
-     878
-    ],
-    "id": 1477583,
-    "original_title": "Corpus Delicti",
-    "poster_path": "/8ErdJXLWWCSjHgDV4hHHkwYfcqG.jpg",
-    "release_date": "2026-10-01",
-    "title": "Corpus Delicti",
-    "vote_count": 5
    }
   },
   "1480856": {
@@ -1016,6 +995,30 @@
     "vote_count": 5
    }
   },
+  "1571955": {
+   "aliases": [
+    "Frederico Jusid",
+    " Juan Federico Jusid"
+   ],
+   "checked": [],
+   "composers": [
+    "Federico Jusid",
+    "Lorenzo Perelmuter"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     28,
+     80
+    ],
+    "id": 1571955,
+    "original_title": "Colisi\u00f3n",
+    "poster_path": "/s2eAK0uiODjlNUSIiOBwdp3at2u.jpg",
+    "release_date": "2026-10-30",
+    "title": "Collision Course",
+    "vote_count": 6
+   }
+  },
   "1576934": {
    "aliases": [],
    "checked": [
@@ -1064,27 +1067,6 @@
     "vote_count": 6
    }
   },
-  "1596275": {
-   "aliases": [
-    "Meredi"
-   ],
-   "checked": [],
-   "composers": [
-    "Ina Meredi Arakelian"
-   ],
-   "entry": {
-    "genre_ids": [
-     10749,
-     53
-    ],
-    "id": 1596275,
-    "original_title": "Drive - The Pretenders",
-    "poster_path": "/s9syckECnUYhKePQ1A0DC0mFVZ9.jpg",
-    "release_date": "2026-10-27",
-    "title": "Drive - The Pretenders",
-    "vote_count": 5
-   }
-  },
   "1597199": {
    "aliases": [],
    "checked": [
@@ -1107,7 +1089,9 @@
   },
   "1599191": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1216,7 +1200,9 @@
   },
   "1632103": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1513,7 +1499,9 @@
   },
   "1736490": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1530,7 +1518,8 @@
   "1739202": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1597,7 +1586,8 @@
   "1742458": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1788,7 +1778,9 @@
   },
   "1763619": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2247,16 +2239,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-01",
-   "deferred": 0,
-   "due": 3,
-   "found": 0,
-   "recorded": 1,
-   "searched": 3,
-   "searches": 3,
-   "tracked": 57
-  },
-  {
    "date": "2026-10-02",
    "deferred": 0,
    "due": 5,
@@ -2545,6 +2527,16 @@
    "searched": 7,
    "searches": 10,
    "tracked": 117
+  },
+  {
+   "date": "2026-10-31",
+   "deferred": 0,
+   "due": 8,
+   "found": 1,
+   "recorded": 1,
+   "searched": 8,
+   "searches": 12,
+   "tracked": 116
   }
  ]
 }
