@@ -1903,5 +1903,121 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     'an all-mediums genre reads out in a recipe name');
   assert(gn.errors.length === 0, 'the genre flow stays clean');
 
+  // ---------- follows, compact rows, the preview player, the year recap ----------
+  const FX = { updatedAt: '2026-10-31T10:00:00Z', releases: [
+    { id: 'hades-ii', title: 'Hades II Original Soundtrack', game: 'Hades II', composers: ['Darren Korb'], date: '2026-09-25',
+      tracks: [{ title: 'Quiet', plays: '10 plays', videoId: 'vidQ' }, { title: 'No Escape', plays: '1.2M plays', videoId: 'vidNE' },
+               { title: 'Unlisted', plays: null }],
+      sources: [{ name: 'steam', type: 'catalog', url: 'https://s/h', seenAt: '2026-10-30T10:00:00Z' }], ytmSearchUrl: 'https://music.youtube.com/search?q=h' },
+    { id: 'bastion', title: 'Bastion Original Soundtrack', game: 'Bastion', composers: ['Darren Korb'], date: '2011-08-02',
+      sources: [{ name: 'steam', type: 'catalog', url: 'https://s/b', seenAt: '2026-01-01T10:00:00Z' }], ytmSearchUrl: 'https://music.youtube.com/search?q=b' },
+    { id: 'zelda-totk', title: 'The Legend of Zelda: Tears of the Kingdom OST', game: 'The Legend of Zelda: Tears of the Kingdom',
+      composers: ['Manaka Kataoka'], date: '2023-05-12', moods: ['wonder'],
+      sources: [{ name: 'igdb', type: 'catalog', url: 'https://s/z', seenAt: '2026-01-02T10:00:00Z' }], ytmSearchUrl: 'https://music.youtube.com/search?q=z' },
+    { id: 'film-dune-part-two', medium: 'film', title: 'Dune: Part Two', game: 'Dune: Part Two', composers: ['Hans Zimmer'], date: '2024-03-01',
+      sources: [{ name: 'tmdb-film', type: 'catalog', url: 'https://s/d', seenAt: '2026-01-03T10:00:00Z' }], ytmSearchUrl: 'https://music.youtube.com/search?q=d' },
+  ] };
+  const fx = makeDom(okFetch(FX), { v: 3, lastSeen: T('2026-10-01T00:00:00Z'), entries: {
+    'hades-ii': { status: 'listened', listenedOn: '2026-10-03', rating: 4.5, liked: true, likedTracks: ['No Escape'] },
+    'bastion': { status: 'listened', listenedOn: '2026-03-14', rating: 5 },
+    'film-dune-part-two': { status: 'listened', listenedOn: '2025-12-30', rating: 3 } } });
+  await sleep(80);
+  const fq = (sel) => fx.d.querySelector(sel);
+  const fRow = (id) => fx.d.querySelector(`#list .row[data-id="${id}"]`);
+  const fIds = () => [...fx.d.querySelectorAll('#list .row:not(.ghost)')].map(x => x.dataset.id);
+  const fState = () => JSON.parse(fx.w.localStorage.getItem('vgm-v1'));
+
+  // follow a composer from the row's details
+  fRow('hades-ii').click(); await sleep(10);
+  const korb = fRow('hades-ii').querySelector('[data-act="follow"][data-fk="composer"]');
+  assert(korb !== null && korb.textContent.includes('Darren Korb') && korb.textContent.includes('☆'), 'the composer in a row\'s details is a ☆ follow button');
+  korb.click(); await sleep(10);
+  assert(same(fState().follows.map(f => [f.k, f.v]), [['composer', 'Darren Korb']]), 'following a composer is saved');
+  assert(fRow('hades-ii').querySelector('.fol') !== null && fRow('bastion').querySelector('.fol') !== null
+    && fRow('zelda-totk').querySelector('.fol') === null, 'every album by a followed composer wears the ★, and only those');
+  assert(fq('#toast').textContent.includes('following Darren Korb'), 'a toast says it took');
+  // the bar for new albums from follows, and the following-only filter
+  fx.w.eval(`EXPANDED = null; renderList()`);
+  assert(fq('#followbar') !== null && fq('#followbar').textContent.includes('1 new'), 'new albums from follows since the last visit are counted at the top');
+  fq('#followshow').click(); await sleep(10);
+  assert(same(fIds(), ['hades-ii', 'bastion']) && fq('#c-filters').textContent === 'filters · following',
+    'show narrows the feed to what you follow and the filters chip says so');
+  assert(fq('#followbar') === null, 'the bar steps aside while the feed shows only follows');
+  // a search can be followed too
+  fx.w.eval(`clearFeedFilters(); setQuery('zelda')`);
+  assert(fq('#qfollow') !== null && fq('#followq').textContent.includes('follow'), 'a search offers to follow it');
+  fq('#followq').click(); await sleep(10);
+  fx.w.eval(`setQuery('')`);
+  assert(fRow('zelda-totk').querySelector('.fol') !== null && fState().follows.length === 2, 'a followed search stars its matches');
+  // the follows list in the filters sheet
+  fq('#c-filters').click(); await sleep(10);
+  assert(fq('#sheetwrap #shfollow') !== null && fq('#sheetwrap #shfollow').getAttribute('aria-pressed') === 'false', 'the filters sheet has a following-only switch');
+  fq('#sheetwrap #shfollows').click(); await sleep(10);
+  const unf = fq('#sheetwrap [data-unfollow-v="zelda"]');
+  assert(unf !== null && fq('#sheetwrap .shtop #shback') !== null, 'the follows list names each follow, with a way back');
+  unf.click(); await sleep(10);
+  assert(same(fState().follows.map(f => f.v), ['Darren Korb']) && fRow('zelda-totk').querySelector('.fol') === null, 'a follow comes off from the list');
+  fq('#sheetwrap #shback').click(); await sleep(10);
+  assert(fx.w.eval('CSHEET') === 'filters', 'back returns to the filters');
+  // compact rows from the same sheet
+  fq('#sheetwrap #shcompact').click(); await sleep(10);
+  fq('#sheetwrap #shdone').click(); await sleep(10);
+  assert(fState().compact === true && fx.d.querySelectorAll('#list .row.compact').length === fIds().length
+    && fRow('bastion').querySelector('[data-act="queue"]') !== null && fRow('bastion').querySelector('.rsub').textContent.includes('aug 2 2011'),
+    'compact rows keep their actions and fold the date into the detail line');
+  fx.w.eval(`toggleCompact()`);
+  assert(fx.d.querySelectorAll('#list .row.compact').length === 0, 'and switch back');
+  assert(same(JSON.parse(fx.w.eval(`JSON.stringify(validateState({ v: 3, compact: true, feedFollow: true, follows: [{ k: 'composer', v: ' A ' }, { k: 'composer', v: 'a' }, { k: 'bad', v: 'x' }, { k: 'word', v: '' }] }))`)),
+    JSON.parse(fx.w.eval(`JSON.stringify(Object.assign(fresh(), { compact: true, feedFollow: true, follows: [{ k: 'composer', v: 'A', at: 0 }] }))`))),
+    'saved follows are cleaned: trimmed, deduped, unknown kinds dropped');
+
+  // the preview player
+  fRow('hades-ii').click(); await sleep(10);
+  const prevBtn = fRow('hades-ii').querySelector('[data-act="preview"]');
+  assert(prevBtn !== null && fRow('hades-ii').querySelector('.xlisten') !== null, 'an album with playable tracks offers a preview beside YT Music');
+  prevBtn.click(); await sleep(10);
+  const ifr = () => fq('#player iframe');
+  assert(ifr() !== null && ifr().src.includes('youtube-nocookie.com/embed/vidNE') && fx.d.body.classList.contains('playing'),
+    'preview plays the most played track in the docked player');
+  assert(fRow('hades-ii').querySelector('.tplay.on') !== null && fRow('hades-ii').querySelector('.tplay.on').dataset.t === 'No Escape',
+    'the playing track lights up');
+  fx.w.eval(`openAlbum('hades-ii')`); await sleep(10);
+  assert(fx.d.querySelectorAll('#album .tplay').length === 2 && fx.d.body.classList.contains('albumon'),
+    'the album page has a preview button on each playable track');
+  const firstFrame = ifr();
+  fx.d.querySelector('#album .tplay[data-t="Quiet"]').click(); await sleep(10);
+  assert(ifr().src.includes('vidQ') && ifr() !== firstFrame && fx.w.__opened !== 'https://music.youtube.com/watch?v=vidQ',
+    'a track\'s ▶ previews it here instead of leaving for YT Music');
+  fx.w.eval(`renderAll()`);
+  assert(ifr().src.includes('vidQ'), 'other renders leave the player playing');
+  fq('#pyt').click(); await sleep(10);
+  assert(fq('#player') === null && String(fx.w.__opened).includes('watch?v=vidQ') && !fx.d.body.classList.contains('playing'),
+    '↗ hands the track to YT Music and stops the preview');
+  fx.w.eval(`previewTrack(byId('hades-ii'), byId('hades-ii').tracks[0])`);
+  fq('#pclose').click(); await sleep(10);
+  assert(fq('#player') === null, '✕ stops it');
+  fx.w.eval(`closeAlbum()`);
+
+  // the year recap
+  fx.w.eval(`setView('library')`); await sleep(10);
+  const rcOpen = fq('#recapopen');
+  assert(rcOpen !== null && rcOpen.dataset.y === '2026' && rcOpen.textContent.includes('2 albums heard'), 'the library opens on a recap card for the latest year');
+  rcOpen.click(); await sleep(10);
+  const rcStat = (i) => fx.d.querySelectorAll('#recap .rcstat b')[i].textContent;
+  assert(fq('#recap') !== null && rcStat(0) === '2' && rcStat(1) === '4.8★' && rcStat(2) === '1', 'the recap counts albums, the average rating and ♥ songs');
+  const bar = (m) => fq(`#recap .rcbar[data-m="${m}"]`);
+  assert(bar(2).getAttribute('aria-label') === 'March: 1 album' && bar(9).getAttribute('aria-label') === 'October: 1 album'
+    && bar(0).classList.contains('dim'), 'twelve months, each named with its count');
+  assert(fq('#recap .rctop').dataset.rid === 'bastion' && fx.d.querySelector('#recap .rcline .rn').textContent === 'Darren Korb',
+    'the best rated comes first, and the most heard composer');
+  bar(2).click(); await sleep(10);
+  assert(fq('#rccap').textContent === 'March · 1 album', 'a tapped month reads out under the chart');
+  fq('#recap [data-ry="2025"]').click(); await sleep(10);
+  assert(rcStat(0) === '1' && fq('#recap').textContent.includes('film scores'), 'another year from the chips');
+  fx.w.dispatchEvent(new fx.w.KeyboardEvent('keydown', { key: 'Escape' })); await sleep(10);
+  assert(fq('#recap') === null, 'escape closes the recap');
+  assert(fq('#colophon').textContent.includes('collected daily') && !fq('#colophon').textContent.includes('6am'), 'the footer promises no hour the scheduler doesn\'t keep');
+  assert(fx.errors.length === 0, 'the new features stay clean' + (fx.errors.length ? ' -> ' + fx.errors.join(' | ') : ''));
+
   console.log(process.exitCode ? '\nSUITE FAILED' : '\nall green');
 })();

@@ -6,10 +6,8 @@ Deferred by choice, not forgotten. Ordered roughly by pull.
 the Liked-songs view, the Playlists builder in Library, and
 `companion/make_playlists.py`. Usage lives in the README.)
 
-## Stats / year recap
-Listens per month, average rating, top composers and games. The diary
-records (date, rating, liked) were shaped for this from day one — no
-migration needed, purely additive view.
+(The year recap, follows, in-app previews and compact rows shipped
+2026-11-01; see "Recap, follows and previews" in the README.)
 
 ## Themed lists
 User-curated lists (per CATALOG-SPEC's "not in this pass"). Cheap once

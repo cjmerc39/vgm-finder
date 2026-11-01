@@ -62,6 +62,29 @@ IGDB's top-rated games (200+ ratings) checked against YTM. Capped per run
 with a committed cursor (`collector/backfill-state.json`) — dispatch until
 it logs "backfill complete".
 
+## Recap, follows and previews
+
+- **Year recap.** The Library opens on a card for the latest year with
+  listens; it shows albums heard, the average rating and ♥ songs, a
+  listens-by-month chart (tap a month for its count), the top rated, the
+  most heard composers, the medium split and the commonest moods. Years
+  with listens sit in chips at the top. Built from the diary alone.
+- **Follows.** In a row's details the game and each composer carry a ☆:
+  tap to follow. A composer follow matches the credited name exactly; a
+  game follow (or a followed search, offered under the search box) matches
+  titles and games the way search does, so "final fantasy" covers the
+  series. Followed albums wear a ★, the feed opens with "★ N new from what
+  you follow" when there are new ones, and the Filters sheet has a
+  following-only switch and the list of follows. Stored in state
+  (`follows`), so they ride in backups.
+- **Previews.** Tracks with a YouTube id get a ▶ that plays them in a small
+  player docked above the tabs (`youtube-nocookie.com` embeds), and a row's
+  details have ▷ PREVIEW for its most played track. ↗ hands the track to
+  YT Music. Nothing plays until tapped; iOS may need a second tap on the
+  video to start sound.
+- **Compact rows.** A switch under View in the Filters sheets: one line of
+  title, one of game, composer and date, actions beside them.
+
 ## Wanted list
 
 Some titles have no soundtrack on YouTube Music at all (Spider-Man 3,
