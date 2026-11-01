@@ -231,6 +231,8 @@ a.xsrc{text-decoration:none}
 #sheet .shead{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
 #sheet .stitle{font-weight:600;font-size:15px;overflow-wrap:anywhere}
 #sheet .slab{color:var(--dim);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;margin:12px 0 6px;display:flex;align-items:baseline;gap:10px}
+#sh-date{-webkit-appearance:none;appearance:none;display:block;width:100%;min-width:0;max-width:100%;min-height:44px;text-align:left}
+#sh-date::-webkit-date-and-time-value{text-align:left}
 #sh-clear{color:var(--mut);font-size:10.5px;letter-spacing:1px;text-decoration:underline;text-underline-offset:2px}
 #sh-stars{display:flex;gap:6px}
 .star{position:relative;width:40px;height:40px}
@@ -1788,18 +1790,18 @@ function rowHtml(r, view, ghost){
     acts = `<button class="restore" data-act="restore">Restore</button>`;
   } else if(view === 'feed'){
     acts = `<button class="queue${queued ? ' on' : ''}" data-act="queue" aria-pressed="${queued}" aria-label="Queue">${queued ? '✓' : '+'}</button>
-      <button class="log${heard ? ' on' : ''}" data-act="log" aria-label="${heard ? 'Edit log' : 'Mark listened'}">${heard ? '▶' : '▷'}</button>
+      <button class="log${heard ? ' on' : ''}" data-act="log" aria-label="${heard ? 'Edit log' : 'Mark listened'}">✎</button>
       <button class="hide" data-act="hide" aria-label="Hide ${esc(label(r))}">✕</button>`;
   } else if(view === 'queue'){
     meta += `<span class="chip">queued ${esc(fmtDate(e.queuedOn).toLowerCase())}</span>`;
-    acts = `<button class="log" data-act="log" aria-label="Mark listened">▷</button>`;
+    acts = `<button class="log" data-act="log" aria-label="Mark listened">✎</button>`;
   } else { // library
     const bits = [];
     if(e.rating != null) bits.push(`<span class="minis">${minis(e.rating)}</span>`);
     bits.push(`<span class="chip">released ${esc(fmtDate(r.date).toLowerCase())}</span>`);
     meta = bits.concat([chips]).join('');
     acts = `<button class="like${e.liked ? ' on' : ''}" data-act="like" aria-pressed="${e.liked}" aria-label="Liked">${e.liked ? '♥' : '♡'}</button>
-      <button class="log on" data-act="log" aria-label="Edit log">▶</button>`;
+      <button class="log on" data-act="log" aria-label="Edit log">✎</button>`;
   }
 
   const art = showArt(r)
@@ -2007,7 +2009,7 @@ function emptyHtml(){
       return stateHtml('NO LIKED SONGS', 'Tap the ♡ next to any track — in a row’s track list or on its album page — and it lands here.');
     return S.libLiked
       ? stateHtml('NO LIKED TRACKS', 'The ♥ lives in the logging sheet and on library rows.')
-      : stateHtml('NOTHING LOGGED YET', 'The ▷ on any row opens the logging sheet and starts your diary.');
+      : stateHtml('NOTHING LOGGED YET', 'The ✎ on any row opens the logging sheet and starts your diary.');
   }
   return stateHtml('ALL TRACKS HIDDEN', 'Everything is hidden. Use “show” below to bring tracks back.');
 }
