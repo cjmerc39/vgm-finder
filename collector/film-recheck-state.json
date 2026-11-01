@@ -18,10 +18,33 @@
     "vote_count": 5
    }
   },
+  "1084409": {
+   "aliases": [
+    "Dickon Hinchcliffe"
+   ],
+   "checked": [],
+   "composers": [
+    "Dickon Hinchliffe"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     80,
+     53
+    ],
+    "id": 1084409,
+    "original_title": "A Talent for Murder",
+    "poster_path": "/mstDPKNKgSGFvVFVdfzeMNkcyw2.jpg",
+    "release_date": "2026-10-23",
+    "title": "A Talent for Murder",
+    "vote_count": 5
+   }
+  },
   "1084815": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -224,7 +247,9 @@
     "TT",
     "Warpaint"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Theresa Wayman"
    ],
@@ -300,6 +325,28 @@
     "release_date": "2026-09-01",
     "title": "The Room Below",
     "vote_count": 6
+   }
+  },
+  "1371730": {
+   "aliases": [
+    "Jeffrey Morrow",
+    "Jeffrey D. Morrow"
+   ],
+   "checked": [],
+   "composers": [
+    "Jeff Morrow"
+   ],
+   "entry": {
+    "genre_ids": [
+     10749,
+     35
+    ],
+    "id": 1371730,
+    "original_title": "Love Language",
+    "poster_path": "/sCQde3BSMpDgA1qpE0zzboFdwl0.jpg",
+    "release_date": "2026-10-23",
+    "title": "Love Language",
+    "vote_count": 5
    }
   },
   "1376856": {
@@ -393,7 +440,8 @@
   "1429713": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Ernst Reijseger"
@@ -501,7 +549,8 @@
     "Delphine Malauss\u00e9na"
    ],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Delphine Malaussena"
@@ -805,7 +854,9 @@
   },
   "1528830": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -884,7 +935,8 @@
     "\ub3c4\ubbf8\ub2c8\ud06c \uc170\ub7ec"
    ],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Dominik Scherrer"
@@ -1129,7 +1181,9 @@
   },
   "1610703": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1668,7 +1722,8 @@
   "1752159": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "John Dragonetti"
@@ -1923,7 +1978,9 @@
   },
   "1777750": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2141,6 +2198,26 @@
     "vote_count": 11
    }
   },
+  "1813355": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Benjamin Wallfisch"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     27,
+     9648
+    ],
+    "id": 1813355,
+    "original_title": "A Story of Derry",
+    "poster_path": "/q2XCoT6AqBANz0mKmkgVeo4PyRQ.jpg",
+    "release_date": "2026-10-31",
+    "title": "A Story of Derry",
+    "vote_count": 20
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -2238,16 +2315,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-02",
-   "deferred": 0,
-   "due": 5,
-   "found": 0,
-   "recorded": 5,
-   "searched": 5,
-   "searches": 8,
-   "tracked": 59
-  },
   {
    "date": "2026-10-03",
    "deferred": 0,
@@ -2537,6 +2604,16 @@
    "searched": 8,
    "searches": 12,
    "tracked": 116
+  },
+  {
+   "date": "2026-11-01",
+   "deferred": 0,
+   "due": 9,
+   "found": 0,
+   "recorded": 3,
+   "searched": 9,
+   "searches": 13,
+   "tracked": 119
   }
  ]
 }

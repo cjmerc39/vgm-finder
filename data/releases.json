@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T15:45:01Z",
+  "updatedAt": "2026-11-01T16:42:20Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -391941,6 +391941,470 @@
         8,
         7,
         6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "sticktype",
+      "title": "StickType Soundtrack",
+      "medium": "game",
+      "game": "StickType",
+      "composers": [
+        "Mike Palotas"
+      ],
+      "date": "2026-10-31",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5317650/StickType_Soundtrack/",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=StickType+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5317650/6b0edd254d649813810047cbc30b1d0241ec1fe3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-the-birthday-gift",
+      "title": "The Birthday​ Gift​ Soundtrack",
+      "medium": "film",
+      "game": "The Birthday​ Gift​",
+      "composers": [
+        "Loy Wesselburg"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1789549",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Birthday%E2%80%8B+Gift%E2%80%8B+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wsNaSrYqG4T",
+      "art": "https://yt3.googleusercontent.com/XVkALUXY9THs-1vQrst_TB0uzRJSN9GlW0eqh5DMHKGdk35WvUJZ5YbO8H4FZ2zET7-98-1SRJkd3xkQqw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Das Geschenk (Soundtrack des Netflix Films)",
+      "genres": [
+        "Comedy"
+      ],
+      "albumArtists": [
+        "Loy Wesselburg"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kdJECYGxdcxF4UrtcPOgHITTjeNyBJG_Y",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 236,
+      "moods": [
+        "playful",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        9,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-udta-teer",
+      "title": "Udta Teer Soundtrack",
+      "medium": "film",
+      "game": "Udta Teer",
+      "composers": [
+        "Jigar Saraiya",
+        "Sachin Sanghvi"
+      ],
+      "date": "2026-10-23",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1375156",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Udta+Teer+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_bBEISIDsy7m",
+      "art": "https://yt3.googleusercontent.com/VCgfeFKOfnRnlAosPPWR8ERtvRDHghhClmEn0vEYzRhOD_-CwfkMYwDm60_Ed3vFizqwiNvu1Dhj4K0=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Udta Teer (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "composerAliases": [
+        "Sachin–Jigar",
+        "Sachin – Jigar",
+        "Sachin Jigar",
+        "Sachin–Jigar",
+        "Sachin – Jigar",
+        "Sachin Jigar"
+      ],
+      "albumArtists": [
+        "Sachin-Jigar",
+        "Amitabh Bhattacharya"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n9ohwkpAxvwRFIvF01ZbkXSDjRvWZhACA",
+      "scoresN": 5,
+      "tracksN": 5,
+      "playsTotal": 54081000,
+      "moods": [
+        "playful",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-dexter-resurrection-season-1-vol-1",
+      "title": "Dexter: Resurrection Season 1 Vol. 1 Soundtrack",
+      "medium": "tv",
+      "game": "Dexter: Resurrection",
+      "composers": [
+        "Pat Irwin",
+        "Rolfe Kent"
+      ],
+      "date": "2025-07-13",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/259909",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dexter%3A+Resurrection+Season+1+Vol.+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KAEnb7dRu4O",
+      "art": "https://yt3.googleusercontent.com/tI1DVjXl0ZIthgw1UV1rfjRCCGA60NWg67tOjUvWkcOvx9ZnuiTihCiULydXBS_O3MPkNG8oCeYygkbO=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Dexter: Resurrection, Vol. 1 (Original Series Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "albumArtists": [
+        "Pat Irwin"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l99JRH3Yco286XAf6uEmOYnjhKPV6SmMw",
+      "scoresN": 23,
+      "tracksN": 24,
+      "playsTotal": 5566,
+      "moods": [
+        "intense",
+        "mysterious",
+        "ominous"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-gilded-age-season-2",
+      "title": "The Gilded Age Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "The Gilded Age",
+      "composers": [
+        "Harry Gregson-Williams",
+        "Rupert Gregson-Williams"
+      ],
+      "date": "2023-10-29",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/81723",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Gilded+Age+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_jwd1j1LBoUJ",
+      "art": "https://yt3.googleusercontent.com/I5GqFKrjo4q8CWyLocoe_HRCWDGETsKSOLzebs_unFRYW6pXGpjkkYpiNt76KoHmS9OKJPx8llzMaEIzXQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Gilded Age: Season 2 (Soundtrack from the HBO® Original Series)",
+      "genres": [
+        "Drama"
+      ],
+      "composerAliases": [
+        "The Gregson-Williams Brothers",
+        "The Gregson-Williams Brothers"
+      ],
+      "albumArtists": [
+        "Harry Gregson-Williams",
+        "Rupert Gregson-Williams"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nrZ5GG4RFTvMy7fSnr3KRRS0WsOPg2ea0",
+      "scoresN": 31,
+      "tracksN": 31,
+      "playsTotal": 779500,
+      "moods": [
+        "mysterious",
+        "intense",
+        "tender"
+      ],
+      "moodsN": [
+        8,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-gilded-age-season-3",
+      "title": "The Gilded Age Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "The Gilded Age",
+      "composers": [
+        "Harry Gregson-Williams",
+        "Rupert Gregson-Williams"
+      ],
+      "date": "2025-06-22",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/81723",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Gilded+Age+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qjgQ7oaO4N9",
+      "art": "https://yt3.googleusercontent.com/B8nEZWRd-vHTRLDzEAoKekgxzIK7NECJYv6NEZcmD4-Z7GrrYdFPY5B4LEBJr-uucSP1_87vX6eg-hw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Gilded Age: Season 3 (Soundtrack from the HBO® Original Series)",
+      "genres": [
+        "Drama"
+      ],
+      "composerAliases": [
+        "The Gregson-Williams Brothers",
+        "The Gregson-Williams Brothers"
+      ],
+      "albumArtists": [
+        "Harry Gregson-Williams",
+        "Rupert Gregson-Williams"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n19mA2uVnCpO88qIdC10zo0R1Sv1Opn8E",
+      "scoresN": 29,
+      "tracksN": 29,
+      "playsTotal": 700400,
+      "moods": [
+        "tender",
+        "hopeful",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-gilded-age",
+      "title": "The Gilded Age Soundtrack",
+      "medium": "tv",
+      "game": "The Gilded Age",
+      "composers": [
+        "Harry Gregson-Williams",
+        "Rupert Gregson-Williams"
+      ],
+      "date": "2022-01-24",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/81723",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Gilded+Age+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_68yocUI3DD4",
+      "art": "https://yt3.googleusercontent.com/VE8Nija4-0MN7eI4VdCrPumUA9NO4CVvBLsXwXoMDModJEOm55v6xW0SJtAz6ovxGtaz8UCaK7HVtTWayw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Gilded Age (Soundtrack from the HBO® Original Series)",
+      "genres": [
+        "Drama"
+      ],
+      "composerAliases": [
+        "The Gregson-Williams Brothers",
+        "The Gregson-Williams Brothers"
+      ],
+      "albumArtists": [
+        "Harry Gregson-Williams",
+        "Rupert Gregson-Williams"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mVIsYZLnrZRektVgOFLJUjh5WL8Rlw99s",
+      "scoresN": 39,
+      "tracksN": 39,
+      "playsTotal": 1807600,
+      "moods": [
+        "mysterious",
+        "intense",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        7,
+        7
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-this-city-is-ours-season-2",
+      "title": "This City Is Ours Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "This City Is Ours",
+      "composers": [
+        "Rael Jones"
+      ],
+      "date": "2026-10-25",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/255570",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=This+City+Is+Ours+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Pvc59cnWNP7",
+      "art": "https://yt3.googleusercontent.com/Q8rEYcZ8eIEYGbSAUu--8SctA72xa6aPD0p3B-9DZgN-yJ-tnsV9-mokc4leF4fBB93a8pQSoEoD2_oKsA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "This City Is Ours: Series 2 (Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "albumArtists": [
+        "Rael Jones"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nlEF6I9HGBg7dLnNCbxEb9xLr04dQV9k0",
+      "scoresN": 19,
+      "tracksN": 19,
+      "playsTotal": 929,
+      "moods": [
+        "intense",
+        "heroic",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-firefly-wedding",
+      "title": "Firefly Wedding Soundtrack",
+      "medium": "tv",
+      "game": "Firefly Wedding",
+      "composers": [
+        "Koichi Sato",
+        "KAY",
+        "Nic Gitter"
+      ],
+      "date": "2026-10-09",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/320909",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Firefly+Wedding+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_AUz0IV2Qc3W",
+      "art": "https://yt3.googleusercontent.com/o-3MKpa8M0PJfVN3lJUcSESSDgObuGok3Iq1xqGDT1QIZWHn6QoVJBSqdbKnDEzUfIkNB760M4tYRPSJtg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Firefly Wedding (Original Series Soundtrack)",
+      "genres": [
+        "Animation",
+        "Drama",
+        "Anime"
+      ],
+      "composerAliases": [
+        "佐藤 浩一",
+        "Kōichi Satō",
+        "Kouichi Satou"
+      ],
+      "albumArtists": [
+        "Koichi Sato",
+        "Nic Gitter",
+        "KAY"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mNKhnyOSFJVDW50uCqdyRlEtVTURchYXY",
+      "scoresN": 50,
+      "tracksN": 50,
+      "playsTotal": 1298,
+      "moods": [
+        "intense",
+        "romantic",
+        "tender"
+      ],
+      "moodsN": [
+        13,
+        9,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-dungeons-dragons",
+      "title": "Minecraft: Dungeons & Dragons (Original Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Minecraft",
+        "Kylydian"
+      ],
+      "date": "2023-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_wLysDIEFutF",
+          "seenAt": "2026-11-01T16:33:41Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft%3A+Dungeons+%26+Dragons+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wLysDIEFutF",
+      "art": "https://yt3.googleusercontent.com/tGxCpWn0CMHXjMRDJm14XQ5_pF1HFT37KH0XSgRkJoP2tNaWWy2m5pJ1ZIt8a1UQu5O2hx89IsTsV5w=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_lag_AXnXAk9SIsfddqfV07kmXYlPzLsj4",
+      "tracksN": 18,
+      "playsTotal": 25283,
+      "moods": [
+        "intense",
+        "epic",
+        "wonder"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
       ],
       "moodsV": 2
     }
