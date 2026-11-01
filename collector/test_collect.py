@@ -1440,3 +1440,25 @@ def test_claimed_albums_never_leave_their_first_row():
     # both preexisting: published rows are never deleted
     two = [{"id": "a", "ytmAlbumUrl": "u"}, {"id": "b", "ytmAlbumUrl": "u"}]
     assert collect.drop_claimed_newcomers(two, {"a", "b"}) == [] and len(two) == 2
+
+
+def test_merge_takes_no_future_date():
+    # Ahsoka's Season 1 Vol. 2 once arrived with Season 2's premiere, months away
+    releases = []
+    collect.merge(releases, [{"title": "Ahsoka Season 1 Vol 2", "url": "https://www.themoviedb.org/tv/114461",
+                              "medium": "tv", "date": "2027-01-19"}], src("tmdb-tv"), "2026-11-01T12:00:00Z")
+    assert releases[0]["date"] is None
+    # a real date fills it later, by the earlier-date rule
+    collect.merge(releases, [{"title": "Ahsoka Season 1 Vol 2", "url": "https://www.themoviedb.org/tv/114461",
+                              "medium": "tv", "date": "2023-08-22"}], src("tmdb-tv"), "2026-11-02T12:00:00Z")
+    assert releases[0]["date"] == "2023-08-22"
+    # tomorrow is allowed (time zones), the day after is not
+    collect.merge(releases, [{"title": "Tomorrow Game Soundtrack", "url": "https://store.example/t",
+                              "date": "2026-11-02"}], src("steam"), "2026-11-01T23:00:00Z")
+    assert releases[-1]["date"] == "2026-11-02"
+
+
+def test_rows_already_dated_in_the_future_lose_the_date():
+    rows = [{"id": "a", "date": "2027-01-19"}, {"id": "b", "date": "2026-10-31"}, {"id": "c", "date": None}]
+    assert collect.drop_future_dates(rows, "2026-11-01T12:00:00Z") == ["a"]
+    assert [r["date"] for r in rows] == [None, "2026-10-31", None]

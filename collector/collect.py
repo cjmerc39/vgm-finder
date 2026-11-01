@@ -2356,6 +2356,28 @@ def _tmdb_other(row, url):
     return bool(m and ids) and m.groups() not in ids
 
 
+def _future(date, seen_at):
+    """A date past tomorrow (a day of slack for time zones) as of seen_at. An
+    album isn't out before it's out, so such a date is a mistake: Ahsoka's
+    Season 1 Vol. 2 once took the premiere date of Season 2, still to air."""
+    if not date or not seen_at:
+        return False
+    tomorrow = (datetime.strptime(seen_at[:10], "%Y-%m-%d") + timedelta(days=1)).strftime("%Y-%m-%d")
+    return date[:10] > tomorrow
+
+
+def drop_future_dates(releases, seen_at):
+    """Rows already dated in the future lose the date (it sorts as undated)
+    rather than sit on top of the newest-first feed until that day. Returns
+    the ids touched."""
+    out = []
+    for r in releases:
+        if _future(r.get("date"), seen_at):
+            r["date"] = None
+            out.append(r["id"])
+    return out
+
+
 def merge(releases, items, source, seen_at):
     """Fold one source's items in. Append-only: existing entries only ever gain
     a source, an earlier date, or a fill for a still-null enrichment field;
@@ -2372,6 +2394,8 @@ def merge(releases, items, source, seen_at):
     for it in items:
         if not it["title"] or not it["url"]:
             continue
+        if _future(it.get("date"), seen_at):
+            it = dict(it, date=None)  # no date beats a wrong one: an earlier real date can still fill it
         med = it.get("medium") or "game"
         slug = slugify(it["title"]) if med == "game" else f"{med}-{slugify(it['title'])}"
         norm = normalize_title(it["title"])
@@ -2695,6 +2719,9 @@ def run(fetch_fn=fetch_any, resolve_fn=ytm_resolve, album_fn=ytm_album,
     if ok == 0:
         print("::error::every source failed")
         return 1
+    future = drop_future_dates(releases, seen_at)
+    if future:
+        print(f"future dates cleared: {', '.join(future)}")
     dropped = drop_claimed_newcomers(releases, preexisting)
     if dropped:
         print(f"claimed-album guard: {len(dropped)} newcomer rows dropped: "

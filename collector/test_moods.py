@@ -292,8 +292,11 @@ def test_a_transport_failure_leaves_the_row_for_next_time(tmp_path):
     data_path, tracks_dir, state_path = _setup(tmp_path, rows, {"a": [{"title": "T"}]})
     def boom(client, system, prompt):
         raise RuntimeError("503")
+    # pinned: the row was first seen 2026-09-10, so a real "today" ages it out of the 30-day daily window
+    from datetime import datetime, timezone
+    now = datetime(2026, 9, 12, tzinfo=timezone.utc)
     out = moods.run("daily", vocab_path=V1_PATH, data_path=data_path, tracks_dir=tracks_dir, state_path=state_path,
-                    client=object(), vocab=VOCAB, log=lambda s: None, call=boom)
+                    client=object(), vocab=VOCAB, now=now, log=lambda s: None, call=boom)
     assert out["failed"] == 1 and out["tagged"] == 0 and out["remaining"] == 1
     assert "moods" not in json.loads(data_path.read_text(encoding="utf-8"))["releases"][0]
 
