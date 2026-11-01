@@ -77,11 +77,14 @@ it logs "backfill complete".
   you follow" when there are new ones, and the Filters sheet has a
   following-only switch and the list of follows. Stored in state
   (`follows`), so they ride in backups.
-- **Previews.** Tracks with a YouTube id get a ▶ that plays them in a small
-  player docked above the tabs (`youtube-nocookie.com` embeds), and a row's
-  details have ▷ PREVIEW for its most played track. ↗ hands the track to
-  YT Music. Nothing plays until tapped; iOS may need a second tap on the
-  video to start sound.
+- **Previews.** Apple's free 30-second previews (the iTunes Search API, no
+  key). Opening an album looks it up on Apple, the album first (all of our
+  title's words, with the composer among its artists or nothing extra),
+  then its tracks, matched to ours by name; about two albums in three have
+  them. Tracks with a preview get a ▶ that plays in a small player docked
+  above the tabs, and a row's details have ▷ PREVIEW for its most played
+  track. ↗ hands the track to YT Music. YouTube embeds were tried first and
+  dropped: most labels block their tracks from playing on other sites.
 - **Compact rows.** A switch under View in the Filters sheets: one line of
   title, one of game, composer and date, actions beside them.
 

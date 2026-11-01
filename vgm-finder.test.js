@@ -1917,10 +1917,27 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     { id: 'film-dune-part-two', medium: 'film', title: 'Dune: Part Two', game: 'Dune: Part Two', composers: ['Hans Zimmer'], date: '2024-03-01',
       sources: [{ name: 'tmdb-film', type: 'catalog', url: 'https://s/d', seenAt: '2026-01-03T10:00:00Z' }], ytmSearchUrl: 'https://music.youtube.com/search?q=d' },
   ] };
-  const fx = makeDom(okFetch(FX), { v: 3, lastSeen: T('2026-10-01T00:00:00Z'), entries: {
+  // Apple's catalog for the previews: the Hades II album and two of its tracks; anything else is the catalog file
+  const pvFetch = (w) => async (url) => {
+    url = String(url);
+    if(url.startsWith('https://itunes.apple.com/')){
+      w().__pvUrls.push(url);
+      if(url.includes('/search')) return { ok: true, status: 200, json: async () => ({ results: [
+        { collectionId: 8, collectionName: 'Hades II Remixes, Vol. 2', artistName: 'Someone Else' },
+        { collectionId: 9, collectionName: 'Hades II (Original Soundtrack)', artistName: 'Darren Korb' }] }) };
+      return { ok: true, status: 200, json: async () => ({ results: [{ wrapperType: 'collection' },
+        { wrapperType: 'track', trackName: 'No Escape', previewUrl: 'https://audio.example/ne.m4a' },
+        { wrapperType: 'track', trackName: 'Quiet (feat. A Singer)', previewUrl: 'https://audio.example/q.m4a' }] }) };
+    }
+    return { ok: true, status: 200, json: async () => FX };
+  };
+  let fxw = null;
+  const fx = makeDom(pvFetch(() => fxw), { v: 3, lastSeen: T('2026-10-01T00:00:00Z'), entries: {
     'hades-ii': { status: 'listened', listenedOn: '2026-10-03', rating: 4.5, liked: true, likedTracks: ['No Escape'] },
     'bastion': { status: 'listened', listenedOn: '2026-03-14', rating: 5 },
     'film-dune-part-two': { status: 'listened', listenedOn: '2025-12-30', rating: 3 } } });
+  fxw = fx.w; fx.w.__pvUrls = []; // jsdom has no audio: playing is a no-op here
+  fx.w.HTMLMediaElement.prototype.play = function(){ return Promise.resolve(); }; fx.w.HTMLMediaElement.prototype.pause = function(){};
   await sleep(80);
   const fq = (sel) => fx.d.querySelector(sel);
   const fRow = (id) => fx.d.querySelector(`#list .row[data-id="${id}"]`);
@@ -1971,32 +1988,41 @@ const { w, d, errors } = makeDom(okFetch(FIXTURE),
     JSON.parse(fx.w.eval(`JSON.stringify(Object.assign(fresh(), { compact: true, feedFollow: true, follows: [{ k: 'composer', v: 'A', at: 0 }] }))`))),
     'saved follows are cleaned: trimmed, deduped, unknown kinds dropped');
 
-  // the preview player
-  fRow('hades-ii').click(); await sleep(10);
+  // the preview player: Apple's 30-second previews, found album first
+  fRow('hades-ii').click(); await sleep(40);
+  const pvUrls = () => fx.w.__pvUrls.map(u => u.replace(/\?.*/, ''));
+  assert(same(pvUrls(), ['https://itunes.apple.com/search', 'https://itunes.apple.com/lookup'])
+    && fx.w.__pvUrls[1].includes('id=9'), 'opening an album looks it up on Apple once: the album by its words and composer, then its tracks');
   const prevBtn = fRow('hades-ii').querySelector('[data-act="preview"]');
-  assert(prevBtn !== null && fRow('hades-ii').querySelector('.xlisten') !== null, 'an album with playable tracks offers a preview beside YT Music');
+  assert(prevBtn !== null && fRow('hades-ii').querySelector('.xlisten') !== null, 'an album with previews offers one beside YT Music');
+  assert(same([...fRow('hades-ii').querySelectorAll('.tplay')].map(b => b.dataset.t), ['No Escape', 'Quiet']),
+    '▶ shows only on tracks Apple has a preview for, a featured artist in its name or not');
   prevBtn.click(); await sleep(10);
-  const ifr = () => fq('#player iframe');
-  assert(ifr() !== null && ifr().src.includes('youtube-nocookie.com/embed/vidNE') && fx.d.body.classList.contains('playing'),
-    'preview plays the most played track in the docked player');
+  const aud = () => fq('#pvaudio');
+  assert(aud().getAttribute('src') === 'https://audio.example/ne.m4a' && fq('#player .pt').textContent === 'No Escape'
+    && fx.d.body.classList.contains('playing'), 'preview plays the most played track in the docked player');
   assert(fRow('hades-ii').querySelector('.tplay.on') !== null && fRow('hades-ii').querySelector('.tplay.on').dataset.t === 'No Escape',
     'the playing track lights up');
   fx.w.eval(`openAlbum('hades-ii')`); await sleep(10);
-  assert(fx.d.querySelectorAll('#album .tplay').length === 2 && fx.d.body.classList.contains('albumon'),
-    'the album page has a preview button on each playable track');
-  const firstFrame = ifr();
+  assert(fx.d.querySelectorAll('#album .tplay').length === 2 && fx.d.body.classList.contains('albumon') && fx.w.__pvUrls.length === 2,
+    'the album page has the same previews, without asking Apple again');
   fx.d.querySelector('#album .tplay[data-t="Quiet"]').click(); await sleep(10);
-  assert(ifr().src.includes('vidQ') && ifr() !== firstFrame && fx.w.__opened !== 'https://music.youtube.com/watch?v=vidQ',
+  assert(aud().getAttribute('src') === 'https://audio.example/q.m4a' && fx.w.__opened !== 'https://music.youtube.com/watch?v=vidQ',
     'a track\'s ▶ previews it here instead of leaving for YT Music');
   fx.w.eval(`renderAll()`);
-  assert(ifr().src.includes('vidQ'), 'other renders leave the player playing');
+  assert(aud().getAttribute('src') === 'https://audio.example/q.m4a' && fq('#player') !== null, 'other renders leave the player playing');
   fq('#pyt').click(); await sleep(10);
-  assert(fq('#player') === null && String(fx.w.__opened).includes('watch?v=vidQ') && !fx.d.body.classList.contains('playing'),
-    '↗ hands the track to YT Music and stops the preview');
-  fx.w.eval(`previewTrack(byId('hades-ii'), byId('hades-ii').tracks[0])`);
+  assert(fq('#player') === null && String(fx.w.__opened).includes('watch?v=vidQ') && !fx.d.body.classList.contains('playing')
+    && !aud().getAttribute('src'), '↗ hands the track to YT Music and stops the preview');
+  fx.w.eval(`previewTrack(byId('hades-ii'), byId('hades-ii').tracks[1])`);
   fq('#pclose').click(); await sleep(10);
-  assert(fq('#player') === null, '✕ stops it');
+  assert(fq('#player') === null && !aud().getAttribute('src'), '✕ stops it');
   fx.w.eval(`closeAlbum()`);
+  fx.w.__pvFail = true;
+  fx.w.eval(`EXPANDED = null; toggleExpand('zelda-totk')`); await sleep(20);
+  assert(fRow('zelda-totk').querySelector('[data-act="preview"]') === null && fx.w.__pvUrls.length === 2,
+    'an album with no tracklist asks Apple nothing and offers no preview');
+  fx.w.eval(`EXPANDED = null; renderList()`);
 
   // the year recap
   fx.w.eval(`setView('library')`); await sleep(10);

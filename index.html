@@ -322,7 +322,10 @@ body.albumon #playerwrap{bottom:0}
 #player{max-width:560px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 10px calc(8px + var(--pbot,0px));
   background:rgba(13,16,24,.98);border:1px solid var(--line);border-bottom:0;border-radius:12px 12px 0 0;box-shadow:0 -8px 28px rgba(0,0,0,.45)}
 body.albumon #player{--pbot:env(safe-area-inset-bottom)}
-#player iframe{flex:none;width:128px;height:72px;border:0;border-radius:6px;background:#000}
+#player .rart{width:52px;height:52px;margin-top:0;align-self:center}
+#player .pbar{height:3px;margin-top:6px;border-radius:2px;background:var(--line);overflow:hidden}
+#player .pbar i{display:block;height:100%;width:0;background:var(--amber)}
+#player #ppause{color:var(--amber2);border-color:var(--amberdim);font-size:12px}
 #player .pinfo{flex:1;min-width:0}
 #player .pt{font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #player .pg{color:var(--mut);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -395,6 +398,7 @@ body.playing #toastwrap{bottom:calc(164px + env(safe-area-inset-bottom))}
 <div id="albumwrap"></div>
 <div id="recapwrap"></div>
 <div id="playerwrap"></div>
+<audio id="pvaudio" preload="none"></audio>
 <div id="sheetwrap"></div>
 <div id="toastwrap"></div>
 <script>
@@ -728,17 +732,17 @@ function randomListen(){
   const pick = rows[i];
   EXPANDED = pick.id;  // open it here first; LISTEN is one tap away
   PAGE_N = Math.max(PAGE_N, Math.ceil((i + 1) / PAGE));  // the pick may sit past the rendered pages
-  loadTracks([pick.id]);
+  loadTracks([pick.id]); loadPreviews(pick.id);
   renderList();
   const el = [...document.querySelectorAll('.row')].find(x => x.dataset.id === pick.id);
   if(el && el.scrollIntoView) el.scrollIntoView({ block: 'center' });
 }
 function toggleExpand(id){
   EXPANDED = EXPANDED === id ? null : id;
-  if(EXPANDED) loadTracks([id]);
+  if(EXPANDED){ loadTracks([id]); loadPreviews(id); }
   renderList();
 }
-function openAlbum(id){ ALBUM = id; loadTracks([id]); renderAlbum(); }
+function openAlbum(id){ ALBUM = id; loadTracks([id]); loadPreviews(id); renderAlbum(); }
 function closeAlbum(){ ALBUM = null; renderAlbum(); }
 function toggleLibLiked(){ S.libLiked = !S.libLiked; save(); renderAll(); }
 function toggleQueued(id){ editEntry(id, e => {
@@ -1790,18 +1794,18 @@ function rowHtml(r, view, ghost){
     acts = `<button class="restore" data-act="restore">Restore</button>`;
   } else if(view === 'feed'){
     acts = `<button class="queue${queued ? ' on' : ''}" data-act="queue" aria-pressed="${queued}" aria-label="Queue">${queued ? '✓' : '+'}</button>
-      <button class="log${heard ? ' on' : ''}" data-act="log" aria-label="${heard ? 'Edit log' : 'Mark listened'}">✎</button>
+      <button class="log${heard ? ' on' : ''}" data-act="log" aria-label="${heard ? 'Edit log' : 'Mark listened'}">✎︎</button>
       <button class="hide" data-act="hide" aria-label="Hide ${esc(label(r))}">✕</button>`;
   } else if(view === 'queue'){
     meta += `<span class="chip">queued ${esc(fmtDate(e.queuedOn).toLowerCase())}</span>`;
-    acts = `<button class="log" data-act="log" aria-label="Mark listened">✎</button>`;
+    acts = `<button class="log" data-act="log" aria-label="Mark listened">✎︎</button>`;
   } else { // library
     const bits = [];
     if(e.rating != null) bits.push(`<span class="minis">${minis(e.rating)}</span>`);
     bits.push(`<span class="chip">released ${esc(fmtDate(r.date).toLowerCase())}</span>`);
     meta = bits.concat([chips]).join('');
     acts = `<button class="like${e.liked ? ' on' : ''}" data-act="like" aria-pressed="${e.liked}" aria-label="Liked">${e.liked ? '♥' : '♡'}</button>
-      <button class="log on" data-act="log" aria-label="Edit log">✎</button>`;
+      <button class="log on" data-act="log" aria-label="Edit log">✎︎</button>`;
   }
 
   const art = showArt(r)
@@ -1844,9 +1848,10 @@ function taddHtml(r, t){
     ` aria-label="Save ${esc(t.title)} to a playlist">+</button>`;
 }
 function tplayHtml(r, t){
-  // a preview plays in the docked player; only tracks YouTube knows by id can play here
-  if(!t.videoId) return '';
-  const on = !!PLAY && PLAY.id === r.id && PLAY.videoId === t.videoId;
+  // a preview plays in the docked player; only tracks Apple has a preview for show the ▶
+  const url = previewOf(r, t);
+  if(!url) return '';
+  const on = !!PLAY && PLAY.url === url;
   return `<button class="tplay${on ? ' on' : ''}" data-act="tplay" data-t="${esc(t.title)}" aria-pressed="${on}"` +
     ` aria-label="Preview ${esc(t.title)}">▶</button>`;
 }
@@ -2793,42 +2798,112 @@ document.getElementById('totop').addEventListener('click', () => {
 });
 
 /* ======================= preview player ======================== */
-/* A track's YouTube video in a small player docked above the tab bar, so an
-   album can be sampled without leaving. YT Music's own track ids play as
-   ordinary YouTube embeds (no cookies until played). Session only. */
-let PLAY = null;   // {id, t, videoId} the track in the player
+/* Apple's free 30-second previews (the iTunes Search API: no key, open to
+   any page), played in a small player docked above the tab bar. YouTube
+   can't do this job: most labels block their tracks from playing on other
+   sites. An album's previews are looked up when it is opened (the album on
+   Apple first, then its tracks, matched to ours by name) and kept for the
+   session, so ▶ only shows on tracks that really have one. */
+const PV_STOP = new Set(('original soundtrack soundtracks score scores ost music from the a an of series motion picture ' +
+                         'game video official vol volume complete deluxe edition expanded').split(' '));
+let PV = {};       // release id -> 'loading', or {tracks: {name key: preview url}} ({} when Apple has none)
+let PLAY = null;   // {id, t, url} the track in the player
+function pvWords(s){ return fold(String(s || '')).replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(w => w && !PV_STOP.has(w)); }
+function pvKey(title){
+  // a track's name for matching: no featured artists, no punctuation
+  return fold(String(title || '').replace(/\s*[(\[][^)\]]*\b(feat|ft|with)\b[^)\]]*[)\]]/ig, ''))
+    .replace(/[^a-z0-9]+/g, ' ').trim();
+}
+function pvPlain(s){ return String(s || '').replace(/\s*[(\[][^)\]]*[)\]]/g, ''); }  // "Theme (Main Title)" -> "Theme"
+function previewOf(r, t){
+  const p = r && PV[r.id];
+  if(!p || p === 'loading' || !t) return null;
+  return p.tracks[pvKey(t.title)] || p.tracks[pvKey(pvPlain(t.title))] || null;
+}
+function pvGet(path, params){
+  return fetch('https://itunes.apple.com/' + path + '?' + new URLSearchParams(params))
+    .then(x => { if(!x.ok) throw new Error('HTTP ' + x.status); return x.json(); });
+}
+function loadPreviews(id){
+  const r = byId(id);
+  if(!r || PV[id] || !((r.tracksN || 0) > 0 || (r.tracks || []).length)) return;
+  const want = pvWords(label(r));
+  if(!want.length) return;
+  PV[id] = 'loading';
+  const comps = (r.composers || []).map(c => fold(c).trim().split(/\s+/).pop()).filter(Boolean);
+  const term = want.slice(0, 6).concat(r.composers && r.composers[0] ? [fold(r.composers[0])] : []).join(' ');
+  pvGet('search', { term, entity: 'album', limit: 10, country: 'US' }).then(j => {
+    // the album must carry every word of ours; the composer among its artists, or nothing extra, settles it
+    let best = null;
+    for(const a of (j && j.results) || []){
+      const have = new Set(pvWords(a.collectionName));
+      if(!want.every(w => have.has(w))) continue;
+      const by = comps.some(c => fold(a.artistName || '').includes(c));
+      const extra = have.size - new Set(want).size;
+      if(!best || (by && !best.by) || (by === best.by && extra < best.extra)) best = { a, by, extra };
+    }
+    if(!best || !(best.by || best.extra === 0)) return null;
+    return pvGet('lookup', { id: best.a.collectionId, entity: 'song', country: 'US' });
+  }).then(j => {
+    const tracks = {};
+    for(const x of (j && j.results) || []){
+      if(x.wrapperType !== 'track' || !x.previewUrl || !x.trackName) continue;
+      for(const k of [pvKey(x.trackName), pvKey(pvPlain(x.trackName))]) if(k && !tracks[k]) tracks[k] = x.previewUrl;
+    }
+    PV[id] = { tracks };
+  }).catch(() => { delete PV[id]; })  // offline or turned away: the next opening tries again
+    .finally(() => { if(EXPANDED === id) renderList(); if(ALBUM === id) renderAlbum(); });
+}
 function trackByTitle(r, title){ const f = fold(String(title || '')); return (tracksOf(r) || []).find(x => fold(x.title) === f) || null; }
 function previewPick(r){
-  // the album's most played track that can play here, else the first that can
+  // the album's most played track with a preview, else the first that has one
   const tt = shownTracks(r);
-  return top3Of(r, tt).ranked.find(t => t.videoId) || tt.find(t => t.videoId) || null;
+  return top3Of(r, tt).ranked.find(t => previewOf(r, t)) || tt.find(t => previewOf(r, t)) || null;
 }
+function pvAudio(){ return document.getElementById('pvaudio'); }
+function pvPlay(a){ try{ const p = a.play(); if(p && p.catch) p.catch(() => {}); }catch(e){} }
 function previewTrack(r, t){
-  if(!r || !t || !t.videoId) return;
-  PLAY = { id: r.id, t: t.title, videoId: t.videoId };
+  const url = previewOf(r, t);
+  if(!url) return;
+  const a = pvAudio();
+  if(PLAY && PLAY.url === url){ if(a.paused) pvPlay(a); else a.pause(); return; }  // the same ▶ pauses and resumes
+  PLAY = { id: r.id, t: t.title, url };
+  a.src = url;
+  pvPlay(a);  // still inside the tap, so iOS lets it make sound
   renderPlayer(); renderList(); renderAlbum();  // the playing track's ▶ lights up
 }
-function stopPreview(){ PLAY = null; renderPlayer(); renderList(); renderAlbum(); }
+function stopPreview(){
+  const a = pvAudio();
+  try{ a.pause(); }catch(e){}
+  a.removeAttribute('src');
+  PLAY = null; renderPlayer(); renderList(); renderAlbum();
+}
 function renderPlayer(){
   const wrap = document.getElementById('playerwrap');
   document.body.classList.toggle('playing', !!PLAY);
-  if(!PLAY){ wrap.innerHTML = ''; wrap.dataset.vid = ''; return; }
-  if(wrap.dataset.vid === PLAY.videoId && wrap.firstChild) return;  // the same track keeps playing
-  wrap.dataset.vid = PLAY.videoId;
+  if(!PLAY){ wrap.innerHTML = ''; return; }
   setTabH();
   const r = byId(PLAY.id);
   wrap.innerHTML = `<div id="player" role="region" aria-label="Preview player">` +
-    `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(PLAY.videoId)}?autoplay=1&playsinline=1&rel=0"` +
-    ` allow="autoplay; encrypted-media; picture-in-picture" title="Preview of ${esc(PLAY.t)}"></iframe>` +
-    `<div class="pinfo"><div class="pl">PREVIEW</div><div class="pt">${esc(PLAY.t)}</div>` +
-    `<div class="pg">${esc(r ? (r.game || label(r)) : '')}</div></div>` +
-    `<button id="pyt" aria-label="Open in YT Music">↗</button><button id="pclose" aria-label="Stop the preview">✕</button></div>`;
+    (r && showArt(r) ? `<div class="rart"><img src="${esc(r.art)}" alt="" onerror="artFailed(this)"></div>` : `<div class="rart noart"></div>`) +
+    `<div class="pinfo"><div class="pl">30-SECOND PREVIEW</div><div class="pt">${esc(PLAY.t)}</div>` +
+    `<div class="pg">${esc(r ? (r.game || label(r)) : '')}</div><div class="pbar"><i id="pprog"></i></div></div>` +
+    `<button id="ppause"></button><button id="pyt" aria-label="Open in YT Music">↗</button>` +
+    `<button id="pclose" aria-label="Stop the preview">✕</button></div>`;
+  pvTick();
 }
+function pvTick(){
+  const a = pvAudio(), bar = document.getElementById('pprog'), b = document.getElementById('ppause');
+  if(bar) bar.style.width = (a.duration ? Math.min(100, a.currentTime / a.duration * 100) : 0) + '%';
+  if(b){ b.textContent = a.paused ? '▶' : '❚❚'; b.setAttribute('aria-label', a.paused ? 'Play' : 'Pause'); }
+}
+['timeupdate', 'play', 'pause', 'ended'].forEach(ev => pvAudio().addEventListener(ev, pvTick));
 document.getElementById('playerwrap').addEventListener('click', e => {
   if(!PLAY) return;
   if(e.target.closest('#pclose')){ stopPreview(); return; }
+  if(e.target.closest('#ppause')){ const a = pvAudio(); if(a.paused) pvPlay(a); else a.pause(); return; }
   if(e.target.closest('#pyt')){
-    const r = byId(PLAY.id), t = r && (trackByTitle(r, PLAY.t) || { title: PLAY.t, videoId: PLAY.videoId });
+    const r = byId(PLAY.id), t = r && (trackByTitle(r, PLAY.t) || { title: PLAY.t });
     stopPreview();  // one player at a time: YT Music takes over
     if(r) openUrl(trackUrl(r, t));
   }
