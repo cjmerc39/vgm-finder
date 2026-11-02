@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T16:42:20Z",
+  "updatedAt": "2026-11-02T20:07:50Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -103416,11 +103416,10 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Wanderburg+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_0BB9ayHjZGe",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5054670/85bc78530ed153644b14abad8dc3711c2e593fda/capsule_231x87.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [
         "Action",
         "Fantasy"
@@ -103430,7 +103429,10 @@
         "Simulator",
         "Strategy"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_ni2NXJenKUWcvBq0GD6aNxuBf6Dg9UBrw",
+      "tracksN": 11,
+      "playsTotal": 535599
     },
     {
       "id": "faaast-penguin-original-soundtrack-vol-2",
@@ -103787,18 +103789,20 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=PLATiNA+%3A%3A+LAB+-+SWEETIE%3BS+OST",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gEpy2K59jTw",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5130210/376f9ac7290a9b495486955193425eb4094558f9/capsule_231x87.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [
         "Action"
       ],
       "genres": [
         "Music",
         "Simulator"
-      ]
+      ],
+      "ytmPlaylistId": "OLAK5uy_lh-RRs4DavJ342uwH8UkQdbl3Cs6b41aE",
+      "tracksN": 37,
+      "playsTotal": 501973
     },
     {
       "id": "嘉豪-原声集",
@@ -391455,7 +391459,16 @@
         1,
         1
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "genres": [
+        "Shooter",
+        "Indie",
+        "Arcade"
+      ]
     },
     {
       "id": "buried-inside-me",
@@ -391479,7 +391492,16 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4913610/78fc05c1c6cf98dabc749b4700f162521bc04643/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Action",
+        "Horror",
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ]
     },
     {
       "id": "aura-2-lust-of-the-gods",
@@ -391590,7 +391612,14 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5393740/2b95b777dee8ea1dc7299ef09b67b1a99226c169/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ]
     },
     {
       "id": "queen-s-domain",
@@ -392405,6 +392434,544 @@
         4,
         4,
         3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "boost-vector-ex",
+      "title": "BOOST VECTOR EX - OST",
+      "medium": "game",
+      "game": "BOOST VECTOR EX",
+      "composers": [
+        "Andrew Djakaria"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4048050/BOOST_VECTOR_EX_OST/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=BOOST+VECTOR+EX+-+OST",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4048050/37b7e27792329cd14eb582923ebf74b57037d8ab/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 33,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Platform",
+        "Racing",
+        "Sport"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "driving",
+        "intense",
+        "epic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "aşk-ölürüm-sana",
+      "title": "Aşk: Ölürüm Sana Soundtrack",
+      "medium": "game",
+      "game": "Aşk: Ölürüm Sana",
+      "composers": [
+        "Berk Kirtiş"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5090500/Aşk_Ölürüm_Sana_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A%C5%9Fk%3A+%C3%96l%C3%BCr%C3%BCm+Sana+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5090500/55c07c6cb6ef21deca70109ab546bb68e0a4aef6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy",
+        "Horror",
+        "Comedy",
+        "Romance"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "silicon-sprint-data-center-incremental",
+      "title": "Silicon Sprint: Data Center Incremental Soundtrack",
+      "medium": "game",
+      "game": "Silicon Sprint: Data Center Incremental",
+      "composers": [
+        "Göksu Güleç"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5363650/Silicon_Sprint_Data_Center_Incremental_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Silicon+Sprint%3A+Data+Center+Incremental+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5363650/3e86e563a9d6fc22cf32615638769dc3e71c3bbf/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "collapse-vector",
+      "title": "Collapse Vector Soundtrack",
+      "medium": "game",
+      "game": "Collapse Vector",
+      "composers": [
+        "Chrome Chapel"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5191310/Collapse_Vector_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Collapse+Vector+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5191310/dad2a38591c61437c87c3fed37f05d2519719c59/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "xenoflekt",
+      "title": "XENOFLEKT Soundtrack",
+      "medium": "game",
+      "game": "XENOFLEKT",
+      "composers": [
+        "Catoio Software"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5127430/XENOFLEKT_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=XENOFLEKT+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5127430/977a30bda5044d65918b8da4af9ff7184faeb9c8/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "horde-lab",
+      "title": "Horde Lab Original Soundtrack",
+      "medium": "game",
+      "game": "Horde Lab",
+      "composers": [
+        "MurzaGames"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5371460/Horde_Lab_Original_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Horde+Lab+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5371460/df2810eaf2aa9747b9f2df28a29558f17fe55ffe/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-mermaid-mask",
+      "title": "The Mermaid Mask Soundtrack",
+      "medium": "game",
+      "game": "The Mermaid Mask",
+      "composers": [
+        "Raphael Benjamin Meyer"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5295000/The_Mermaid_Mask_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Mermaid+Mask+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5295000/dff8ae81090a92d08c5de25a3ce65eae4147998f/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 22,
+      "themes": [
+        "Action",
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "ominous",
+        "playful"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "the-farmer-was-replaced",
+      "title": "The Farmer Was Replaced Soundtrack",
+      "medium": "game",
+      "game": "The Farmer Was Replaced",
+      "composers": [
+        "Floris Demandt"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5447020/The_Farmer_Was_Replaced_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Farmer+Was+Replaced+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5447020/21123f2118f8514afc0813b496732b7f16297523/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Simulator",
+        "Strategy"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "whisper-of-the-swallows",
+      "title": "Whisper of the Swallows Soundtrack",
+      "medium": "game",
+      "game": "Whisper of the Swallows",
+      "composers": [
+        "Thomas Whisper"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4898070/Whisper_of_the_Swallows_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Whisper+of+the+Swallows+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4898070/f57571729dd660ff88083ad94a8b858da68501c4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 11,
+      "themes": [
+        "Action",
+        "Survival"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "eerie",
+        "suspenseful",
+        "ominous"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "command-ω-omega-2",
+      "title": "Command-Ω Omega 2 Soundtrack",
+      "medium": "game",
+      "game": "Command-Ω Omega 2",
+      "composers": [
+        "Veronika Zolotaryova"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5157650/CommandΩ_Omega_2_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Command-%CE%A9+Omega+2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5157650/555d93038034181ea5ceac1b34e4ddc58cfddde2/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "심해월광-챕터1",
+      "title": "심해월광-챕터1 Soundtrack",
+      "medium": "game",
+      "game": "심해월광-챕터1",
+      "composers": [
+        "Garurai"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5344030/심해월광챕터1_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%EC%8B%AC%ED%95%B4%EC%9B%94%EA%B4%91-%EC%B1%95%ED%84%B01+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5344030/924178fc8791db9c84c2389a6ff343354874aada/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy",
+        "Drama",
+        "Romance"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "schrott",
+      "title": "SCHROTT Soundtrack",
+      "medium": "game",
+      "game": "SCHROTT",
+      "composers": [
+        "Markus Zierhofer"
+      ],
+      "date": "2026-11-02",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4264790/SCHROTT_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SCHROTT+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4264790/7ea7b075d631793e5b78814af88d91bde5df4b82/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 6,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Racing",
+        "Indie",
+        "Arcade"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "driving",
+        "intense",
+        "playful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "blargle-and-the-quest-for-the-nothing-burger",
+      "title": "Blargle and the Quest for the Nothing Burger Soundtrack",
+      "medium": "game",
+      "game": "Blargle and the Quest for the Nothing Burger",
+      "composers": [],
+      "date": "2026-11-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5410240/Blargle_and_the_Quest_for_the_Nothing_Burger_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Blargle+and+the+Quest+for+the+Nothing+Burger+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5410240/550feb26b482a2a5fce8b969b8c955e95c18d892/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Racing",
+        "Indie"
+      ]
+    },
+    {
+      "id": "白线-原创曲",
+      "title": "白线-原创曲 Soundtrack",
+      "medium": "game",
+      "game": "白线-原创曲",
+      "composers": [
+        "公举KINGEX、一个myU、停电前夜、Atomo_muzic"
+      ],
+      "date": "2026-11-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5281560/白线原创曲_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E7%99%BD%E7%BA%BF-%E5%8E%9F%E5%88%9B%E6%9B%B2+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5281560/4d7860588b0f559b09548ca3772ce8b950f1ac89/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bravemech-the-century-war",
+      "title": "Bravemech: The Century War Soundtrack",
+      "medium": "game",
+      "game": "Bravemech: The Century War",
+      "composers": [
+        "Hua Chang Lee"
+      ],
+      "date": "2026-11-01",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5483460/Bravemech_The_Century_War_Soundtrack/",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bravemech%3A+The+Century+War+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5483460/9f8e126d54041db502ce15e6d642e08f3813abf1/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "tv-mermaid-magic-season-2",
+      "title": "Mermaid Magic Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Mermaid Magic",
+      "composers": [],
+      "date": "2026-10-19",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/231725",
+          "seenAt": "2026-11-02T19:57:33Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mermaid+Magic+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Lx3MRD6p9Ma",
+      "art": "https://yt3.googleusercontent.com/2g0RbVsQR5EzhnCzEDkoB66JpH6Hzdb28qb-ztWwvs-nfY-A9-s2yqX3S1dOemO9j4dubM0NxT3fh67jqQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Mermaid Magic Season 2",
+      "genres": [
+        "Animation",
+        "Kids",
+        "Action & Adventure"
+      ],
+      "weakMatch": true,
+      "albumArtists": [
+        "Mermaid Magic"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nc0KJQ5sMm8RaLBvAI5zaMXTZ6tKo4kek",
+      "scoresN": 4,
+      "tracksN": 4,
+      "playsTotal": 1924900,
+      "moods": [
+        "joyful",
+        "wonder",
+        "heroic"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
       ],
       "moodsV": 2
     }

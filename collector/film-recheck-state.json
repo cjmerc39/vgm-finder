@@ -155,7 +155,8 @@
   "1257147": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -398,7 +399,8 @@
   "1386315": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Tom Hodge"
@@ -1428,6 +1430,22 @@
     "vote_count": 5
    }
   },
+  "1678120": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1678120,
+    "original_title": "Un tranquillo funerale di famiglia",
+    "poster_path": "/iXtZ4Y28GTw1BJFHgcmHrICoyL1.jpg",
+    "release_date": "2026-10-29",
+    "title": "Un tranquillo funerale di famiglia",
+    "vote_count": 7
+   }
+  },
   "1701141": {
    "aliases": [],
    "checked": [
@@ -1660,7 +1678,8 @@
   "1744876": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Carlos Vandera"
@@ -2316,16 +2335,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-03",
-   "deferred": 0,
-   "due": 3,
-   "found": 0,
-   "recorded": 2,
-   "searched": 3,
-   "searches": 5,
-   "tracked": 61
-  },
-  {
    "date": "2026-10-04",
    "deferred": 0,
    "due": 2,
@@ -2614,6 +2623,16 @@
    "searched": 9,
    "searches": 13,
    "tracked": 119
+  },
+  {
+   "date": "2026-11-02",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 1,
+   "searched": 3,
+   "searches": 5,
+   "tracked": 120
   }
  ]
 }
