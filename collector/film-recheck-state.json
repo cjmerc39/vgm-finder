@@ -396,6 +396,32 @@
     "vote_count": 5
    }
   },
+  "1381071": {
+   "aliases": [
+    "Naoki Sat\u00f4",
+    "Naoki Sat\u014d",
+    "\u4f50\u85e4 \u76f4\u7d00",
+    "Naoki Satou",
+    "Naoki Satoh"
+   ],
+   "checked": [],
+   "composers": [
+    "Naoki Sato"
+   ],
+   "entry": {
+    "genre_ids": [
+     878,
+     27,
+     28
+    ],
+    "id": 1381071,
+    "original_title": "\u30b4\u30b8\u30e9-0.0",
+    "poster_path": "/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
+    "release_date": "2026-11-03",
+    "title": "Godzilla Minus Zero",
+    "vote_count": 7
+   }
+  },
   "1386315": {
    "aliases": [],
    "checked": [
@@ -875,7 +901,8 @@
   "1530121": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Max Aruj",
@@ -930,6 +957,26 @@
     "release_date": "2026-10-29",
     "title": "You, Me, Us",
     "vote_count": 12
+   }
+  },
+  "1544163": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Guillaume Humery",
+    "Chapelier Fou"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     18
+    ],
+    "id": 1544163,
+    "original_title": "Quelques mots d'amour",
+    "poster_path": "/lUSCFTt9YWRbDG6kkUQBIUZ0IFc.jpg",
+    "release_date": "2026-10-28",
+    "title": "Words of Love",
+    "vote_count": 6
    }
   },
   "1544437": {
@@ -1446,6 +1493,23 @@
     "vote_count": 7
    }
   },
+  "1689329": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     28,
+     53
+    ],
+    "id": 1689329,
+    "original_title": "Leones en invierno",
+    "poster_path": "/ozr5OyKt1whnfuLei2viZsS38Kp.jpg",
+    "release_date": "2026-10-23",
+    "title": "Winter Lions",
+    "vote_count": 5
+   }
+  },
   "1701141": {
    "aliases": [],
    "checked": [
@@ -1795,6 +1859,26 @@
     "vote_count": 5
    }
   },
+  "1758886": {
+   "aliases": [
+    "MiM"
+   ],
+   "checked": [],
+   "composers": [
+    "Emilien Bernaux"
+   ],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1758886,
+    "original_title": "Papa o\u00f9 t'es ?",
+    "poster_path": "/3HqZ26kFQnyJKVgtzu8MnrzKBLX.jpg",
+    "release_date": "2026-10-28",
+    "title": "Papa o\u00f9 t'es ?",
+    "vote_count": 5
+   }
+  },
   "1760114": {
    "aliases": [],
    "checked": [
@@ -1816,7 +1900,8 @@
   "1760262": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2335,16 +2420,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-04",
-   "deferred": 0,
-   "due": 2,
-   "found": 0,
-   "recorded": 4,
-   "searched": 2,
-   "searches": 2,
-   "tracked": 65
-  },
-  {
    "date": "2026-10-05",
    "deferred": 0,
    "due": 1,
@@ -2633,6 +2708,16 @@
    "searched": 3,
    "searches": 5,
    "tracked": 120
+  },
+  {
+   "date": "2026-11-03",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 4,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 124
   }
  ]
 }

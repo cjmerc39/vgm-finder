@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T20:07:50Z",
+  "updatedAt": "2026-11-03T17:38:47Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -103998,18 +103998,20 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=The+Loopler+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_oMx1vDkHxwe",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4632040/47c587dd8e525d8ffcca12572a9c0e5d2ff921a6/capsule_231x87.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [],
       "genres": [
         "Racing",
         "Simulator",
         "Strategy"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_l8L30tqmx_TZ6eylCZ-Kobgg1xOpQ9VJA",
+      "tracksN": 8,
+      "playsTotal": 1575
     },
     {
       "id": "tacos-the-adventurous-couple-s-original-story-season-1",
@@ -387879,7 +387881,11 @@
       "ytmAlbumUrl": null,
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5447830/132e659950cbad9b9d2943c23bd5d14b87cc6785/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ]
     },
     {
       "id": "puzzle-lakes",
@@ -392970,6 +392976,318 @@
       ],
       "moodsN": [
         2,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "corporate-corp-incorporated",
+      "title": "Corporate Corp Incorporated Soundtrack",
+      "medium": "game",
+      "game": "Corporate Corp Incorporated",
+      "composers": [
+        "Stryker Pose Studios"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5421250/Corporate_Corp_Incorporated_Soundtrack/",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Corporate+Corp+Incorporated+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5421250/c6f5e502c1cb51d1dad95df1ef9755bbe6cfdcde/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "dungeonos",
+      "title": "DungeonOS Soundtrack",
+      "medium": "game",
+      "game": "DungeonOS",
+      "composers": [],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5433280/DungeonOS_Soundtrack/",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DungeonOS+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5433280/4b19e7d58121b1c79cfc932ccc7ba70661e7d99e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy",
+        "Business"
+      ],
+      "genres": [
+        "Puzzle",
+        "Role-playing (RPG)",
+        "Turn-based strategy (TBS)"
+      ]
+    },
+    {
+      "id": "space-savory",
+      "title": "Space Savory Soundtrack",
+      "medium": "game",
+      "game": "Space Savory",
+      "composers": [
+        "Yusuf Emre Çetinkaya",
+        "Enes Çetinkaya"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5469100/Space_Savory_Soundtrack/",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Space+Savory+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5469100/f14aecd538fba005beb35907dd6452f8d0cbe429/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 20,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "laid-back",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "saraab-beyond-the-veil",
+      "title": "Saraab: Beyond The Veil - Original Soundtrack",
+      "medium": "game",
+      "game": "Saraab: Beyond The Veil",
+      "composers": [
+        "Rooted Elevation"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5397600/Saraab_Beyond_The_Veil_Original_Soundtrack/",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Saraab%3A+Beyond+The+Veil+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5397600/439a8a9b0dacfb528fb5308a344cf666bb310624/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "cult-of-the-yellow-king",
+      "title": "Cult of the Yellow King Soundtrack",
+      "medium": "game",
+      "game": "Cult of the Yellow King",
+      "composers": [
+        "Merhum"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5362740/Cult_of_the_Yellow_King_Soundtrack/",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cult+of+the+Yellow+King+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5362740/a6fb9576c42855df06910475b1c47cad014c834e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "solitaire-exe",
+      "title": "SOLITAIRE.EXE Soundtrack",
+      "medium": "game",
+      "game": "SOLITAIRE.EXE",
+      "composers": [
+        "PhoenixDnB"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4958060/SOLITAIREEXE_Soundtrack/",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=SOLITAIRE.EXE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4958060/da1e4ef3418e7596af059c37c4016855d903b9d3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "loftia",
+      "title": "Loftia Soundtrack",
+      "medium": "game",
+      "game": "Loftia",
+      "composers": [
+        "Tomás Palazzi"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/loftia",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Loftia+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_9TjU0vwCE0h",
+      "art": "https://yt3.googleusercontent.com/quKCYxavml0JzkY-QVt1kF8i_2FUFyMOFh_3wmELy7umDnMRBQFRtVb0gzl4z5rDW9uNQvAVNoeVS98=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Loftia (Original Soundtrack)",
+      "company": "Qloud Games",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "themes": [
+        "Sandbox",
+        "Educational"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lGbtTKoZBm_JFqYqQwkHAo3McAevYMcbM",
+      "tracksN": 25,
+      "playsTotal": 1,
+      "moods": [
+        "wonder",
+        "mysterious",
+        "peaceful"
+      ],
+      "moodsN": [
+        6,
+        6,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-stick-season-1",
+      "title": "Stick Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Stick",
+      "composers": [
+        "Zachary Dawes"
+      ],
+      "date": "2025-06-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/248830",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stick+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_4HqmkJ38lq6",
+      "art": "https://yt3.googleusercontent.com/IHS9R69Ae7alfBC-YlAtDsO_m63QTa5FhDtstLVf-ISLkSj--mSqmlBCl99CtbV8AF2e4c1G6fVxmbtD=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Stick: Season 1 (Apple TV+ Original Series Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "composerAliases": [
+        "Zack Dawes"
+      ],
+      "albumArtists": [
+        "Zachary Dawes"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nJz-17yclxkl3xlee7d-QtXsBpOUIEBto",
+      "scoresN": 26,
+      "tracksN": 26,
+      "playsTotal": 4909,
+      "moods": [
+        "playful",
+        "joyful",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-flurry",
+      "title": "Minecraft: Flurry (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "Minecraft",
+        "Hyper Potions"
+      ],
+      "date": "2026-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_5v16f9Vl0xK",
+          "seenAt": "2026-11-03T17:30:02Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft%3A+Flurry+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_5v16f9Vl0xK",
+      "art": "https://yt3.googleusercontent.com/yWrrmvM5UCWyMAd3kWsA8AHNVN-wf18yK30G85dDwh4z_-44_OUQ41jZOqu05GCsCUnjpnGjnrGRlLoYhg=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_kR35zPJO_-61GEVkb1esxLMqY1gSTrl9A",
+      "tracksN": 1,
+      "playsTotal": 2200,
+      "moods": [
+        "wonder",
+        "peaceful"
+      ],
+      "moodsN": [
         1,
         1
       ],
