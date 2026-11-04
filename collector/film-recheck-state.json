@@ -396,32 +396,6 @@
     "vote_count": 5
    }
   },
-  "1381071": {
-   "aliases": [
-    "Naoki Sat\u00f4",
-    "Naoki Sat\u014d",
-    "\u4f50\u85e4 \u76f4\u7d00",
-    "Naoki Satou",
-    "Naoki Satoh"
-   ],
-   "checked": [],
-   "composers": [
-    "Naoki Sato"
-   ],
-   "entry": {
-    "genre_ids": [
-     878,
-     27,
-     28
-    ],
-    "id": 1381071,
-    "original_title": "\u30b4\u30b8\u30e9-0.0",
-    "poster_path": "/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
-    "release_date": "2026-11-03",
-    "title": "Godzilla Minus Zero",
-    "vote_count": 7
-   }
-  },
   "1386315": {
    "aliases": [],
    "checked": [
@@ -1841,6 +1815,22 @@
     "vote_count": 6
    }
   },
+  "1756307": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1756307,
+    "original_title": "SCTV: The Greatest Show You've Never Heard Of",
+    "poster_path": "/vBqVyTpzv5RzHSsQdu8ECxAqSvd.jpg",
+    "release_date": "2026-10-30",
+    "title": "SCTV: The Greatest Show You've Never Heard Of",
+    "vote_count": 5
+   }
+  },
   "1758536": {
    "aliases": [],
    "checked": [
@@ -1998,7 +1988,8 @@
   "1768019": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2135,7 +2126,9 @@
   },
   "1788735": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2419,16 +2412,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-05",
-   "deferred": 0,
-   "due": 1,
-   "found": 0,
-   "recorded": 2,
-   "searched": 1,
-   "searches": 1,
-   "tracked": 67
-  },
   {
    "date": "2026-10-06",
    "deferred": 0,
@@ -2715,6 +2698,16 @@
    "due": 2,
    "found": 0,
    "recorded": 4,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 124
+  },
+  {
+   "date": "2026-11-04",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 1,
    "searched": 2,
    "searches": 2,
    "tracked": 124

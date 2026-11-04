@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T17:38:47Z",
+  "updatedAt": "2026-11-04T17:51:49Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -104193,11 +104193,10 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Welcome+to+Elderfield+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_i5NQ8dAhhdW",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5145770/0439126a1f39f6a13b62b255ed911fb8275b4bac/capsule_231x87.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
       "themes": [
         "Fantasy",
         "Horror",
@@ -104211,7 +104210,10 @@
         "Simulator",
         "Strategy"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_kbKc2Y4Z-6Ewg3h1M5tI5L9KODkueGlb0",
+      "tracksN": 46,
+      "playsTotal": 9478
     },
     {
       "id": "code-terraform",
@@ -104394,12 +104396,14 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Qubx+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YfSOU4VDrCc",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5182150/11f9d9bd00988c0c6b3a3c0806fed6e57a76a4fb/capsule_231x87.jpg",
       "notable": true,
       "medium": "game",
-      "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_k5BZZsUQj6PbXG9IzbRXbhJeQh1jMIX80",
+      "tracksN": 16,
+      "playsTotal": 61
     },
     {
       "id": "volley-guns",
@@ -390928,7 +390932,11 @@
       "ytmAlbumUrl": null,
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5447910/ccbe10edcb28837313bebb58c32f8c42392041be/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ]
     },
     {
       "id": "culdcept-begins-digital-contents-set",
@@ -393177,6 +393185,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/loftia",
           "seenAt": "2026-11-03T17:30:02Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5373000/Loftia_Original_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Loftia+Soundtrack",
@@ -393290,6 +393304,679 @@
       "moodsN": [
         1,
         1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "starshapes",
+      "title": "Starshapes - Original Soundtrack",
+      "medium": "game",
+      "game": "Starshapes",
+      "composers": [
+        "Hannibal Sigfusson"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4849710/Starshapes_Original_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Starshapes+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4849710/2eab3b6f3ec04131bfd5cbccc806cd3e6115bcc7/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "mancalero",
+      "title": "Mancalero Soundtrack",
+      "medium": "game",
+      "game": "Mancalero",
+      "composers": [
+        "MeloEclipse"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4983850/Mancalero_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mancalero+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4983850/8efa78a46ed2e02f8b96f4b026db3c589b99028f/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Puzzle",
+        "Strategy",
+        "Turn-based strategy (TBS)"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "far-far-west",
+      "title": "Far Far West (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Far Far West",
+      "composers": [
+        "Ludovic Frances"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5439600/Far_Far_West_Original_Game_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Far+Far+West+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5439600/1b7a2e45f6fa889aea8f7407fbc6d5bca78ce30f/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 21,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "laid-back",
+        "mysterious",
+        "intense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "pibcremental",
+      "title": "Pibcremental Soundtrack",
+      "medium": "game",
+      "game": "Pibcremental",
+      "composers": [
+        "Gustaf Blix"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5327020/Pibcremental_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pibcremental+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5327020/2eaee6d5646ba676da47d4d5083e4872ca759dc9/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "driving",
+        "intense",
+        "epic"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "herbteaman-soundtrack-melodies-of-herbs",
+      "title": "HerbTeaMan soundtrack - Melodies of Herbs",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Shuya"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5352540/HerbTeaMan_soundtrack_Melodies_of_Herbs/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=HerbTeaMan+soundtrack+-+Melodies+of+Herbs",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5352540/0366502af07e3995ded6bd87299be3204d140678/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "erlik",
+      "title": "ERLIK Soundtrack",
+      "medium": "game",
+      "game": "ERLIK",
+      "composers": [
+        "Ash",
+        "Antler"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4937060/ERLIK_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=ERLIK+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4937060/c986a38451fab4123a916534cbbf7afe8b00d2b6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "market-panic",
+      "title": "Market Panic Soundtrack",
+      "medium": "game",
+      "game": "Market Panic",
+      "composers": [
+        "Pixiliated"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4905110/Market_Panic_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Market+Panic+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4905110/d0e726f7406f196df7c4a13d18bb314d77f4c23c/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "desire-s-burgers",
+      "title": "Desire's Burgers Soundtrack",
+      "medium": "game",
+      "game": "Desire's Burgers",
+      "composers": [
+        "davis \"davisdoesgames\" horachek"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4966150/Desires_Burgers_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Desire%27s+Burgers+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4966150/9789ad3f8ac88f3ee150097000857999b56d4b40/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "地獄楽-パラダイスバトル",
+      "title": "地獄楽 パラダイスバトル Soundtrack",
+      "medium": "game",
+      "game": "地獄楽 パラダイスバトル",
+      "composers": [
+        "ZENTA"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5099790/地獄楽_パラダイスバトル_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E5%9C%B0%E7%8D%84%E6%A5%BD+%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%82%B9%E3%83%90%E3%83%88%E3%83%AB+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5099790/793900ed17046919daa1f28e878d865cef701ad7/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Arcade",
+        "Card & Board Game"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "astra-bestiary",
+      "title": "Astra Bestiary Soundtrack",
+      "medium": "game",
+      "game": "Astra Bestiary",
+      "composers": [
+        "Yoshi_UMR"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5304610/Astra_Bestiary_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Astra+Bestiary+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5304610/8c19c3228c345a2050041f23bbf565ea7bacf286/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "pulse-drive",
+      "title": "Pulse Drive Soundtrack",
+      "medium": "game",
+      "game": "Pulse Drive",
+      "composers": [
+        "Bas Spindler"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4931570/Pulse_Drive_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pulse+Drive+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4931570/23144c4304c933142623cb0dc4e337b505723093/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 3,
+      "themes": [],
+      "genres": [
+        "Racing",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "driving",
+        "intense"
+      ],
+      "moodsN": [
+        3,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "duck-life-6-space",
+      "title": "Duck Life 6: Space Soundtrack",
+      "medium": "game",
+      "game": "Duck Life 6: Space",
+      "composers": [
+        "Becky Wixon",
+        "Peter Carr"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5392480/Duck_Life_6_Space_Soundtrack/",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Duck+Life+6%3A+Space+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5392480/77cfe70862418193baf104cd661b68efce75bf60/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Racing",
+        "Sport",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "cozy-game-restoration",
+      "title": "Cozy Game Restoration Soundtrack",
+      "medium": "game",
+      "game": "Cozy Game Restoration",
+      "composers": [
+        "Nate M"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/cozy-game-restoration",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cozy+Game+Restoration+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_VINZny8jlam",
+      "art": "https://yt3.googleusercontent.com/yDyG9-22HXJlCtYTNgNzYNpta77Fkc3fgjF7g-p92uk-L5vCd77MmkAxBXnVZx2iDM_r63BBAIlruyQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Cozy Game Restoration (Original Video Game Soundtrack)",
+      "company": "Parasol Corp",
+      "console": false,
+      "genres": [
+        "Simulator"
+      ],
+      "themes": [],
+      "ytmPlaylistId": "OLAK5uy_kiVMO6oVJDJMx7yhHAytHr6sBKXbKwgNo",
+      "tracksN": 21,
+      "playsTotal": 19,
+      "moods": [
+        "driving",
+        "tender",
+        "nostalgic"
+      ],
+      "moodsN": [
+        5,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-godzilla-minus-zero",
+      "title": "Godzilla Minus Zero Soundtrack",
+      "medium": "film",
+      "game": "Godzilla Minus Zero",
+      "composers": [
+        "Naoki Sato"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1381071",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Godzilla+Minus+Zero+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7jfMpdV20mb",
+      "art": "https://yt3.googleusercontent.com/iODjqWoS5uLped87b1q-qNcXLYy89exErPfKfXEgTMzFjgdDSupg-XS7o-n7T0_0D3AcXIfhDusvn-pm=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Godzilla Minus Zero (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Science Fiction",
+        "Horror",
+        "Action"
+      ],
+      "composerAliases": [
+        "Naoki Satô",
+        "Naoki Satō",
+        "佐藤 直紀",
+        "Naoki Satou",
+        "Naoki Satoh"
+      ],
+      "albumArtists": [
+        "Naoki Sato"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nQxm6XOTaeMs2h7dfGAv1ri9OSffWLjyc",
+      "scoresN": 16,
+      "tracksN": 16,
+      "playsTotal": 84900,
+      "moods": [
+        "epic",
+        "intense",
+        "ominous"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-god-laughs",
+      "title": "God Laughs Soundtrack",
+      "medium": "film",
+      "game": "God Laughs",
+      "composers": [
+        "Paolo Buonvino"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1506710",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=God+Laughs+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_s0SCkom48xl",
+      "art": "https://yt3.googleusercontent.com/31PHitTfXSgPHalNyaHgntlC38l0WvmKaFCPTFo_D7n8RxumISaoc20G0aB40P6dfrlHzi6-eoIloJxn=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Dio ride (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Paolo Buonvino"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n_50XjpuxXMcLUGr1K9gOGfQ3EsUYgrAQ",
+      "scoresN": 20,
+      "tracksN": 20,
+      "playsTotal": 15255,
+      "moods": [
+        "peaceful",
+        "transcendent",
+        "hopeful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-cat-in-the-hat-2026",
+      "title": "The Cat in the Hat Soundtrack",
+      "medium": "film",
+      "game": "The Cat in the Hat",
+      "composers": [
+        "Lorne Balfe"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1117898",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Cat+in+the+Hat+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_NPZlWs3YLuR",
+      "art": "https://yt3.googleusercontent.com/tqm1cfrcxx9a2yArTNFVJw2yd561R6E_Fhp3ur4vfjlXhUpQDfC0wUqmlohVcW_u2MGG6LHBu7gTnfI=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Cat in the Hat (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy"
+      ],
+      "composerAliases": [
+        "Oswin Mackintosh",
+        "Лорн Бэлф"
+      ],
+      "albumArtists": [
+        "Lorne Balfe"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mD49gK4cWWDRJN9gtrxPBR5kRbwrDAu6M",
+      "scoresN": 21,
+      "tracksN": 24,
+      "playsTotal": 2202019,
+      "moods": [
+        "playful",
+        "joyful",
+        "intense"
+      ],
+      "moodsN": [
+        7,
+        6,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-all-s-fair",
+      "title": "All's Fair Soundtrack",
+      "medium": "tv",
+      "game": "All's Fair",
+      "composers": [
+        "David Klotz",
+        "Morgan Kibby"
+      ],
+      "date": "2025-11-04",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/258742",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=All%27s+Fair+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ozhKnfexnP9",
+      "art": "https://yt3.googleusercontent.com/cPC8BtIJukisMJyHW0Y6gVAhzovxQHl4BDYkc1dUAt0mwzP_ouRm1H3vGax3S-7arN5JXBdZ_oOrFzV6=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "All's Fair (Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "composerAliases": [
+        "White Sea",
+        "M83",
+        "The Romanovs",
+        "Morgan Grace Kibby"
+      ],
+      "albumArtists": [
+        "Morgan Kibby",
+        "David Klotz"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kKFzPY-KgpntjmNRwlicddHohYy3An0FA",
+      "scoresN": 22,
+      "tracksN": 22,
+      "playsTotal": 17961,
+      "moods": [
+        "intense",
+        "playful",
+        "tender"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-one-about-matthew-perry",
+      "title": "The One About Matthew Perry Soundtrack",
+      "medium": "tv",
+      "game": "The One About Matthew Perry",
+      "composers": [
+        "Ian Hultquist"
+      ],
+      "date": "2026-10-27",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/333533",
+          "seenAt": "2026-11-04T17:43:12Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+One+About+Matthew+Perry+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ELerJY0qZmz",
+      "art": "https://yt3.googleusercontent.com/l2t2ZLFuMhj-aYxFJLv36Bt9WhvxZK3XL7dYnZFZsPsE5HEkpURvEL2reTvlyRGGBKhTQ8dmMUj68Bv0Og=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The One About Matthew Perry (Soundtrack from the Netflix Documentary Series)",
+      "genres": [
+        "Documentary"
+      ],
+      "albumArtists": [
+        "Ian Hultquist"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n-KNwUX50ytkfTjoImgxwMd0-qCNFiq0c",
+      "scoresN": 23,
+      "tracksN": 23,
+      "playsTotal": 1679,
+      "moods": [
+        "tender",
+        "epic",
+        "hopeful"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
       ],
       "moodsV": 2
     }
