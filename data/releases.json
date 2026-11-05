@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T17:51:49Z",
+  "updatedAt": "2026-11-05T17:59:36Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -393707,6 +393707,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/cozy-game-restoration",
           "seenAt": "2026-11-04T17:43:12Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5338940/Cozy_Game_Restoration_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Cozy+Game+Restoration+Soundtrack",
@@ -393841,7 +393847,7 @@
       "composers": [
         "Lorne Balfe"
       ],
-      "date": "2026-11-04",
+      "date": "2026-10-31",
       "sources": [
         {
           "name": "tmdb-film",
@@ -393977,6 +393983,789 @@
         5,
         4,
         4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "escape-academy-2-back-2-school",
+      "title": "Escape Academy 2: Back 2 School Soundtrack",
+      "medium": "game",
+      "game": "Escape Academy 2: Back 2 School",
+      "composers": [
+        "doseone"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5370630/Escape_Academy_2_Back_2_School_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Escape+Academy+2%3A+Back+2+School+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5370630/3711dc9f76421db91a5362b74200637b9c88dd4c/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "neon-rhythm",
+      "title": "Neon Rhythm + Soundtrack",
+      "medium": "game",
+      "game": "Neon Rhythm +",
+      "composers": [
+        "Figburn"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5381940/Neon_Rhythm_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Neon+Rhythm+%2B+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5381940/107111f5b2ebb89b8675a917f3e4b579d9661989/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Music",
+        "Arcade"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "100-cafe-cats",
+      "title": "100 Cafe Cats Soundtrack",
+      "medium": "game",
+      "game": "100 Cafe Cats",
+      "composers": [
+        "100 Cozy Games"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4322480/100_Cafe_Cats_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=100+Cafe+Cats+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4322480/56bd3d8b5e4bee6ffa58c687d3cd523d6d308489/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-bull-of-heaven",
+      "title": "The Bull Of Heaven Soundtrack",
+      "medium": "game",
+      "game": "The Bull Of Heaven",
+      "composers": [
+        "Frank Siduri"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4934220/The_Bull_Of_Heaven_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Bull+Of+Heaven+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4934220/fb084e4df4d180e700768549306ca0acbe580ac7/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "warmachine-rogue-scout",
+      "title": "Warmachine: Rogue-Scout Original Soundtrack",
+      "medium": "game",
+      "game": "Warmachine: Rogue-Scout",
+      "composers": [
+        "Vaultkeeper"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5519020/Warmachine_RogueScout_Original_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Warmachine%3A+Rogue-Scout+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5519020/4e2ceb5790de24c629b1cde492ecb66479ff2b72/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction",
+        "Warfare"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Tactical"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "brush-rush",
+      "title": "Brush Rush Soundtrack",
+      "medium": "game",
+      "game": "Brush Rush",
+      "composers": [
+        "Bronson Bragg"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5519230/Brush_Rush_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Brush+Rush+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5519230/85d0c1ac293794c8ea5dccb202e6bec573a13c13/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Sport",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "chivalware",
+      "title": "Chivalware (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Chivalware",
+      "composers": [
+        "Patrick Crecelius",
+        "Zach Fendelman"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5314560/Chivalware_Original_Game_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Chivalware+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5314560/c9ad17a8e7570b2c18a2101dc8723098e2d93214/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 13,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "緋修羅-hijura-scarlet-gear",
+      "title": "緋修羅 HIJURA SCARLET GEAR Soundtrack",
+      "medium": "game",
+      "game": "緋修羅 HIJURA SCARLET GEAR",
+      "composers": [
+        "HUGA STUDIO"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5486730/緋修羅_HIJURA_SCARLET_GEAR_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E7%B7%8B%E4%BF%AE%E7%BE%85+HIJURA+SCARLET+GEAR+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5486730/5ba26da0bfc8dd6d17bf519f19dbf4eb458a0635/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Comedy"
+      ],
+      "genres": [
+        "Shooter",
+        "Platform",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "riggin-farm-raw-land-to-riches",
+      "title": "Riggin Farm: Raw Land to Riches Soundtrack",
+      "medium": "game",
+      "game": "Riggin Farm: Raw Land to Riches",
+      "composers": [
+        "Nick Riggin"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5381890/Riggin_Farm_Raw_Land_to_Riches_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Riggin+Farm%3A+Raw+Land+to+Riches+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5381890/6716be32245c5294486094204548c92b12544ac7/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "deepcorp-rescue",
+      "title": "DeepCorp Rescue Soundtrack",
+      "medium": "game",
+      "game": "DeepCorp Rescue",
+      "composers": [
+        "Green Fridge Labs"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5084050/DeepCorp_Rescue_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DeepCorp+Rescue+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5084050/468e1a579c93e3df41dda0c55a8d2e1ad8894f92/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "psycho-sleuth",
+      "title": "Psycho-Sleuth Soundtrack",
+      "medium": "game",
+      "game": "Psycho-Sleuth",
+      "composers": [
+        "Alex Lu"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3465870/PsychoSleuth_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Psycho-Sleuth+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3465870/30a9014ae538fbf519ab28721cf4ba9655210132/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Puzzle",
+        "Strategy",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "ved-recure",
+      "title": "Ved: Recure Soundtrack",
+      "medium": "game",
+      "game": "Ved: Recure",
+      "composers": [
+        "Bian Huijing"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5433210/Ved_Recure_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ved%3A+Recure+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5433210/90df8d09742ad24d2b34d36d9b98e56131a8bd1f/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "sign-broken-kether-supporter-pack",
+      "title": "Sign: Broken Kether Supporter Pack",
+      "medium": "game",
+      "game": null,
+      "composers": [],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5478770/Sign_Broken_Kether_Supporter_Pack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sign%3A+Broken+Kether+Supporter+Pack+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5478770/bb5af66a8cd65a6e1cdc59aa34543e1fe05e8f79/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ]
+    },
+    {
+      "id": "cat-astrophy",
+      "title": "Cat-Astrophy Soundtrack",
+      "medium": "game",
+      "game": "Cat-Astrophy",
+      "composers": [
+        "Marc Panicello Torras"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5458420/CatAstrophy_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cat-Astrophy+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5458420/8282af4eee9e3aa2032ad757de41648494ec8163/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 24,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "mysterious",
+        "epic"
+      ],
+      "moodsN": [
+        9,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "mayday-the-survival-island",
+      "title": "Mayday: The Survival Island Soundtrack",
+      "medium": "game",
+      "game": "Mayday: The Survival Island",
+      "composers": [],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5295510/Mayday_The_Survival_Island_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mayday%3A+The+Survival+Island+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5295510/f1405fb3ab53c886c56d1d3d5833cb6e170d8faf/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Survival"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ]
+    },
+    {
+      "id": "deadly-contagion",
+      "title": "Deadly Contagion Soundtrack",
+      "medium": "game",
+      "game": "Deadly Contagion",
+      "composers": [
+        "Dave Deville"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5142090/Deadly_Contagion_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Deadly+Contagion+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5142090/fad42ee12dcf56143f0e4fb90bdf6a19bab8a08c/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror",
+        "Mystery"
+      ],
+      "genres": [
+        "Shooter",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "animaly-bar-no-humanity",
+      "title": "Animaly Bar: NO HUMANITY! Soundtrack",
+      "medium": "game",
+      "game": "Animaly Bar: NO HUMANITY!",
+      "composers": [
+        "Efe Havutlu"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5463220/Animaly_Bar_NO_HUMANITY_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Animaly+Bar%3A+NO+HUMANITY%21+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5463220/aade087a3115836b67b3f8cf39c5b2b4bd98a59a/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "cubus-tower",
+      "title": "Cubus Tower Soundtrack",
+      "medium": "game",
+      "game": "Cubus Tower",
+      "composers": [],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5387290/Cubus_Tower_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cubus+Tower+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5387290/c56e3b450102a7eaa9a8c92d43a9a014d789a169/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "void-breaker",
+      "title": "VOID/BREAKER Soundtrack",
+      "medium": "game",
+      "game": "VOID/BREAKER",
+      "composers": [
+        "Joe Ford"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5089600/VOIDBREAKER_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=VOID%2FBREAKER+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5089600/db8f7945463136612a3f37cdc2407be5d50ca565/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Role-playing (RPG)",
+        "Simulator"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "iron-sol",
+      "title": "IRON SOL Soundtrack",
+      "medium": "game",
+      "game": "IRON SOL",
+      "composers": [
+        "belo"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5475630/IRON_SOL_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=IRON+SOL+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5475630/8392d3380935505c1e1880996ce32dba6d86ffa1/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Platform",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "wardspire",
+      "title": "Wardspire Soundtrack",
+      "medium": "game",
+      "game": "Wardspire",
+      "composers": [
+        "SoftForge IT Kft."
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5452140/Wardspire_Soundtrack/",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wardspire+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5452140/f99ca091c32172bd6d1afad0d35a1ef965739408/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "airframe-ultra",
+      "title": "Airframe Ultra Soundtrack",
+      "medium": "game",
+      "game": "Airframe Ultra",
+      "composers": [
+        "James Primate"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/airframe-ultra",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Airframe+Ultra+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_qwd9ZXp8JfG",
+      "art": "https://yt3.googleusercontent.com/W7Cvj4GGPF1u-ZD5VRTFxjPATGkaUxQwaMkJD52knnIgR8nnECJ8GUpYpLV6zIqEmg4h2nInDiqh0Muq=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Airframe Ultra (Original Game Soundtrack)",
+      "company": "Videocult",
+      "console": false,
+      "genres": [
+        "Racing",
+        "Indie"
+      ],
+      "themes": [
+        "Action"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l0QgiZbFhbr0rPb_pdvwJGIp-nS4_UziM",
+      "tracksN": 20,
+      "playsTotal": 189,
+      "moods": [
+        "driving",
+        "intense",
+        "laid-back"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-a-dog-s-perfect-christmas",
+      "title": "A Dog's Perfect Christmas Soundtrack",
+      "medium": "film",
+      "game": "A Dog's Perfect Christmas",
+      "composers": [
+        "Rachel Portman"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1570488",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Dog%27s+Perfect+Christmas+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_2nMTz8y9PKn",
+      "art": "https://yt3.googleusercontent.com/UuUpq2_siQvFC8d7b8TEsqZpn3p3s9PLWauhPbUXDCSdVi-C00jWowHRn9kHBP6vrZwJQUPP1ealqhNkYg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "A Dog’s Perfect Christmas (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "albumArtists": [
+        "Rachel Portman"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m2TduA-zpNBi77uKqjEy9cRB4QeGN0Wxc",
+      "scoresN": 28,
+      "tracksN": 29,
+      "playsTotal": 1133,
+      "moods": [
+        "joyful",
+        "playful",
+        "hopeful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-when-it-rains-it-pours",
+      "title": "When It Rains, It Pours Soundtrack",
+      "medium": "tv",
+      "game": "When It Rains, It Pours",
+      "composers": [
+        "Hidekazu Sakamoto"
+      ],
+      "date": "2025-01-10",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/279412",
+          "seenAt": "2026-11-05T17:49:43Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=When+It+Rains%2C+It+Pours+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_kTbqlHakppi",
+      "art": "https://yt3.googleusercontent.com/24zmTY9iq8TR-R-KBj9s2kWLeYwGO1yAwFtC_1oniedbpcf2J_Gfkas3N2AKdxJxS2_A4V5zpjKV7DM=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "When it rains, it pours (Original Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "composerAliases": [
+        "Shuichi Sakamoto",
+        "坂本秀一"
+      ],
+      "albumArtists": [
+        "Hidekazu Sakamoto"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ktzOsfCpJkc6_3KOTZE3ouyW0-tO9tlSc",
+      "scoresN": 16,
+      "tracksN": 16,
+      "playsTotal": 54600,
+      "moods": [
+        "mysterious",
+        "tender",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        5,
+        3
       ],
       "moodsV": 2
     }

@@ -2159,6 +2159,26 @@
     "vote_count": 7
    }
   },
+  "1792170": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Aldo Shllaku"
+   ],
+   "entry": {
+    "genre_ids": [
+     80,
+     878,
+     53
+    ],
+    "id": 1792170,
+    "original_title": "Model Citizen",
+    "poster_path": "/7SE0LBwgqiqZzkm9gKVbBAbcNQL.jpg",
+    "release_date": "2026-11-03",
+    "title": "Model Citizen",
+    "vote_count": 9
+   }
+  },
   "1792591": {
    "aliases": [],
    "checked": [],
@@ -2345,6 +2365,44 @@
     "vote_count": 6
    }
   },
+  "656908": {
+   "aliases": [
+    "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
+    "\u0413\u0430\u043d\u0441 \u0426\u0456\u043c\u043c\u0435\u0440",
+    "\u0e2e\u0e32\u0e19\u0e0b\u0e4c \u0e0b\u0e34\u0e21\u0e40\u0e21\u0e2d\u0e23\u0e4c",
+    "\u0647\u0627\u0646\u0633 \u0632\u06cc\u0645\u0631",
+    "Hans Florian Zimmer",
+    "Bleeding Fingers",
+    "Allah Rakha Rahman",
+    "A. S. Dileep Kumar",
+    "Mozart of Madras",
+    "Isai Puyal",
+    "AR Rahman",
+    "\u090f \u0906\u0930 \u0930\u0939\u092e\u093e\u0928",
+    " A.R. Rehman",
+    " A. R. Rehman",
+    "\u0b8f. \u0b86\u0bb0\u0bcd. \u0bb0\u0b95\u0bc1\u0bae\u0bbe\u0ba9\u0bcd",
+    "A. R. Rahman"
+   ],
+   "checked": [],
+   "composers": [
+    "Hans Zimmer",
+    "A.R. Rahman"
+   ],
+   "entry": {
+    "genre_ids": [
+     14,
+     28,
+     12
+    ],
+    "id": 656908,
+    "original_title": "\u0930\u093e\u092e\u093e\u092f\u0923\u092e\u094d",
+    "poster_path": "/hz2Hv8tPToHvQ7HaxzqeLvahmcJ.jpg",
+    "release_date": "2026-11-05",
+    "title": "Ramayana: Rise of a Legend",
+    "vote_count": 7
+   }
+  },
   "848700": {
    "aliases": [
     "E. Galperin",
@@ -2412,16 +2470,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-06",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 3,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 70
-  },
   {
    "date": "2026-10-07",
    "deferred": 0,
@@ -2711,6 +2759,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 124
+  },
+  {
+   "date": "2026-11-05",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 2,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 126
   }
  ]
 }
