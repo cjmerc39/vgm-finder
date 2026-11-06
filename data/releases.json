@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T17:59:36Z",
+  "updatedAt": "2026-11-06T17:16:56Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -370204,10 +370204,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=In+The+Vroms+In+Clones+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MLK68EdxIam",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5154740/c5720b778ea93d0c63f0af1097f7587a0f7fa4f5/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 4,
       "moods": [
         "intense",
         "eerie",
@@ -393506,7 +393505,16 @@
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4937060/c986a38451fab4123a916534cbbf7afe8b00d2b6/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Horror"
+      ],
+      "genres": [
+        "Shooter",
+        "Indie"
+      ]
     },
     {
       "id": "market-panic",
@@ -394645,6 +394653,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/airframe-ultra",
           "seenAt": "2026-11-05T17:49:43Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5517070/Airframe_Ultra_Soundtrack/",
+          "seenAt": "2026-11-06T17:08:15Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Airframe+Ultra+Soundtrack",
@@ -394766,6 +394780,357 @@
         7,
         5,
         3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "degenerate-star",
+      "title": "DEGENERATE STAR Soundtrack",
+      "medium": "game",
+      "game": "DEGENERATE STAR",
+      "composers": [
+        "Ozone Interactive"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4751370/DEGENERATE_STAR_Soundtrack/",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DEGENERATE+STAR+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4751370/c0122354784bde947c00c46f25bdafbd008e3c01/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction",
+        "Horror",
+        "Mystery"
+      ],
+      "genres": [
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "horses-of-hoofprint-bay",
+      "title": "Horses of Hoofprint Bay Soundtrack",
+      "medium": "game",
+      "game": "Horses of Hoofprint Bay",
+      "composers": [
+        "Michal Sinka"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5490650/Horses_of_Hoofprint_Bay_Soundtrack/",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Horses+of+Hoofprint+Bay+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5490650/815fdea6bb493e9506ee59e474c4434fff202eb1/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Sport"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "infested-dx",
+      "title": "Infested DX Soundtrack",
+      "medium": "game",
+      "game": "Infested DX",
+      "composers": [
+        "Orie Falconer"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5421320/Infested_DX_Soundtrack/",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Infested+DX+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5421320/25d33c0c4be3ecbf705c1f7ed51f9b895a8ba209/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "pool-of-radiance-ruins-of-myth-drannor",
+      "title": "Pool of Radiance: Ruins of Myth Drannor Soundtrack",
+      "medium": "game",
+      "game": "Pool of Radiance: Ruins of Myth Drannor",
+      "composers": [
+        "Andrew Boyd",
+        "Robb Mills"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5406220/Pool_of_Radiance_Ruins_of_Myth_Drannor_Soundtrack/",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Pool+of+Radiance%3A+Ruins+of+Myth+Drannor+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5406220/48af7c724a4f736428a7bd7fdf2ce211e3b3a91b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 33,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "mysterious",
+        "ominous"
+      ],
+      "moodsN": [
+        6,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "railblaster",
+      "title": "RailBlaster Soundtrack",
+      "medium": "game",
+      "game": "RailBlaster",
+      "composers": [],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5353580/RailBlaster_Soundtrack/",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=RailBlaster+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5353580/adfebf24ccb743334bb6d4e6b825e28b1bb74db5/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "disk-y",
+      "title": "DISK-Y ORIGINAL SOUNDTRACK",
+      "medium": "game",
+      "game": "DISK-Y",
+      "composers": [
+        "NINOMIYA Yuji"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5095340/DISKY_ORIGINAL_SOUNDTRACK/",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DISK-Y+ORIGINAL+SOUNDTRACK",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5095340/61f2e49a9239e946c659e40d204f7920aab18a10/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "priestess-s-delusions",
+      "title": "Priestess’s Delusions – Official Soundtrack",
+      "medium": "game",
+      "game": "Priestess’s Delusions",
+      "composers": [
+        "Froren"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5223760/Priestesss_Delusions_Official_Soundtrack/",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Priestess%E2%80%99s+Delusions+%E2%80%93+Official+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5223760/797a0193f7a7254e04ad7f1189e086b036db41be/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "phantom-blade-zero",
+      "title": "Phantom Blade Zero Soundtrack",
+      "medium": "game",
+      "game": "Phantom Blade Zero",
+      "composers": [
+        "Caisheng Bo"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/phantom-blade-zero",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Phantom+Blade+Zero+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OIRsDXulWY8",
+      "art": "https://yt3.googleusercontent.com/BEhV6OXBYn757fmaP-v2KWgnVmrwCYcaR_VMJCtbWYUVaUNXSkSX6AnTHw0ywIk1sy5zkrlZbBuFVeuTNA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Phantom Blade Zero (Original Game Soundtrack)",
+      "company": "S-Game",
+      "console": true,
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "themes": [
+        "Action",
+        "Open world"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lxIIgCgRWTqm38qHCPySr8__HmNb6eXFY",
+      "tracksN": 81,
+      "playsTotal": 2774,
+      "moods": [
+        "intense",
+        "epic",
+        "ominous"
+      ],
+      "moodsN": [
+        34,
+        27,
+        20
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-wild-horse-nine",
+      "title": "Wild Horse Nine Soundtrack",
+      "medium": "film",
+      "game": "Wild Horse Nine",
+      "composers": [
+        "Carter Burwell"
+      ],
+      "date": "2026-10-30",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/891621",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wild+Horse+Nine+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ACYvIqTyXFM",
+      "art": "https://yt3.googleusercontent.com/85jqIbPXrjByZW0kur26z7I5JFuwjcNDur0Ay_nwgXuSSl2HQrRUG5UlU3Hjm4EUON1uvaNQFKZY4Nz-=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Wild Horse Nine (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Thriller"
+      ],
+      "composerAliases": [
+        "Carter Benedict Burwell"
+      ],
+      "albumArtists": [
+        "Carter Burwell"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k4Pque6ewiwrhzC_HXeIKQkx5bVnNauKc",
+      "scoresN": 16,
+      "tracksN": 17,
+      "playsTotal": 535,
+      "moods": [
+        "peaceful",
+        "tender",
+        "intense"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-one-year-to-live-buy-a-man",
+      "title": "One Year to Live, Buy a Man Soundtrack",
+      "medium": "film",
+      "game": "One Year to Live, Buy a Man",
+      "composers": [
+        "haruka nakamura"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1654940",
+          "seenAt": "2026-11-06T17:08:15Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=One+Year+to+Live%2C+Buy+a+Man+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_jvgRKWdnqeQ",
+      "art": "https://yt3.googleusercontent.com/EuqXtIOHS2-sypIndeX2pVHqGNV4iWJXtE7gEd6m9_zbX_9ohplZaptFC_u_aUSKlHHKSjowqeISWCfx=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "One Year to Live, Buy a Man (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "haruka nakamura"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l3RwgXeuiqrky62jLJpP5bIY4LlheTkwM",
+      "scoresN": 25,
+      "tracksN": 25,
+      "playsTotal": 1408,
+      "moods": [
+        "hopeful",
+        "tender",
+        "wonder"
+      ],
+      "moodsN": [
+        10,
+        6,
+        4
       ],
       "moodsV": 2
     }

@@ -2,7 +2,9 @@
  "films": {
   "1001405": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Florencia Di Concilio"
    ],
@@ -204,6 +206,27 @@
     "release_date": "2026-10-13",
     "title": "Let's Have Kids!",
     "vote_count": 6
+   }
+  },
+  "1286656": {
+   "aliases": [
+    "David Palmer"
+   ],
+   "checked": [],
+   "composers": [
+    "Dave Palmer"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     36
+    ],
+    "id": 1286656,
+    "original_title": "I Play Rocky",
+    "poster_path": "/xE5tY3lppZUyG7WKKThsuYHuAHr.jpg",
+    "release_date": "2026-11-06",
+    "title": "I Play Rocky",
+    "vote_count": 7
    }
   },
   "1294189": {
@@ -1112,6 +1135,27 @@
     "poster_path": "/xJvbcxyD8BN8tyr0XdlxRP4czzV.jpg",
     "release_date": "2026-09-10",
     "title": "The Echo Chamber",
+    "vote_count": 6
+   }
+  },
+  "1585239": {
+   "aliases": [
+    "One Ton"
+   ],
+   "checked": [],
+   "composers": [
+    "Crist\u00f3bal Tapia de Veer"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     18
+    ],
+    "id": 1585239,
+    "original_title": "Club Kid",
+    "poster_path": "/o1qMU0ZB5XDX8IXJFFu3AkhOqjh.jpg",
+    "release_date": "2026-11-04",
+    "title": "Club Kid",
     "vote_count": 6
    }
   },
@@ -2428,28 +2472,6 @@
     "vote_count": 12
    }
   },
-  "891621": {
-   "aliases": [
-    "Carter Benedict Burwell"
-   ],
-   "checked": [],
-   "composers": [
-    "Carter Burwell"
-   ],
-   "entry": {
-    "genre_ids": [
-     35,
-     80,
-     53
-    ],
-    "id": 891621,
-    "original_title": "Wild Horse Nine",
-    "poster_path": "/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
-    "release_date": "2026-10-30",
-    "title": "Wild Horse Nine",
-    "vote_count": 7
-   }
-  },
   "947493": {
    "aliases": [],
    "checked": [],
@@ -2470,16 +2492,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-07",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 71
-  },
   {
    "date": "2026-10-08",
    "deferred": 0,
@@ -2769,6 +2781,16 @@
    "searched": 0,
    "searches": 0,
    "tracked": 126
+  },
+  {
+   "date": "2026-11-06",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 2,
+   "searched": 1,
+   "searches": 2,
+   "tracked": 127
   }
  ]
 }
