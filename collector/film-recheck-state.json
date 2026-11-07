@@ -743,7 +743,9 @@
   },
   "1487317": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Roque Ba\u00f1os"
    ],
@@ -1340,7 +1342,9 @@
   },
   "1639616": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1480,7 +1484,8 @@
   "1664003": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1621,7 +1626,9 @@
   },
   "1725719": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1691,7 +1698,8 @@
   "1739206": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2493,16 +2501,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-08",
-   "deferred": 0,
-   "due": 2,
-   "found": 0,
-   "recorded": 2,
-   "searched": 2,
-   "searches": 2,
-   "tracked": 73
-  },
-  {
    "date": "2026-10-09",
    "deferred": 0,
    "due": 5,
@@ -2790,6 +2788,16 @@
    "recorded": 2,
    "searched": 1,
    "searches": 2,
+   "tracked": 127
+  },
+  {
+   "date": "2026-11-07",
+   "deferred": 0,
+   "due": 5,
+   "found": 0,
+   "recorded": 0,
+   "searched": 5,
+   "searches": 6,
    "tracked": 127
   }
  ]

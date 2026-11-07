@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T17:16:56Z",
+  "updatedAt": "2026-11-07T16:11:45Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -370218,7 +370218,10 @@
         1
       ],
       "moodsV": 2,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_lvDuGrfrmZhieVEmPj_3EDy6SvFBVgzMg",
+      "tracksN": 4,
+      "playsTotal": 189
     },
     {
       "id": "in-the-vroms-in-clones-level-3-soundtrack-free",
@@ -383920,7 +383923,8 @@
         1,
         1
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "themes": []
     },
     {
       "id": "pulse-final-fantasy-xiv-remix-album-vol-3",
@@ -395131,6 +395135,140 @@
         10,
         6,
         4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "bob-logistics",
+      "title": "BOB LOGISTICS Soundtrack",
+      "medium": "game",
+      "game": "BOB LOGISTICS",
+      "composers": [
+        "CS",
+        "Hyerim Park"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5220560/BOB_LOGISTICS_Soundtrack/",
+          "seenAt": "2026-11-07T16:03:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=BOB+LOGISTICS+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5220560/92722a0b3b84f4331827edea8cddad0bdbc9dc9e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-last-wish",
+      "title": "The Last Wish Soundtrack",
+      "medium": "game",
+      "game": "The Last Wish",
+      "composers": [
+        "AI-generated with Gemini"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5441610/The_Last_Wish_Soundtrack/",
+          "seenAt": "2026-11-07T16:03:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Last+Wish+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5441610/955291623839b59ec1f2adc6660b6087cc8d9ec1/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "les-enquêtes-de-grégoire-lefèbvre-le-serment-de-haine",
+      "title": "Les enquêtes de Grégoire Lefèbvre : Le Serment de Haine Soundtrack",
+      "medium": "game",
+      "game": "Les enquêtes de Grégoire Lefèbvre : Le Serment de Haine",
+      "composers": [
+        "Olivier Rabat"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5267710/Les_enquêtes_de_Grégoire_Lefèbvre_Le_Serment_de_Haine_Soundtrack/",
+          "seenAt": "2026-11-07T16:03:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Les+enqu%C3%AAtes+de+Gr%C3%A9goire+Lef%C3%A8bvre+%3A+Le+Serment+de+Haine+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5267710/219b83dd4673aefd0b6fa447f508dc66f2c45bf9/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "tv-nocturne",
+      "title": "Nocturne Soundtrack",
+      "medium": "tv",
+      "game": "Nocturne",
+      "composers": [
+        "Pablo Clements",
+        "James Griffith"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/292741",
+          "seenAt": "2026-11-07T16:03:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nocturne+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gSaeBBxCbXd",
+      "art": "https://yt3.googleusercontent.com/R69achUUWj5liilwWnahBDT_x2mUXVW1vLAzscijMh9UlPAQpL2x6_R-2202pPfdW-Vpc0iz5SC3-iM6=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Nocturne (Original Soundtrack)",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "composerAliases": [
+        "Toydrum",
+        "Toydrum"
+      ],
+      "albumArtists": [
+        "João Luís"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mRq2dersy_1_Tkmpr-MmS7zrnS7IosTgA",
+      "scoresN": 26,
+      "tracksN": 26,
+      "playsTotal": 1857,
+      "moods": [
+        "intense",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        15,
+        8,
+        6
       ],
       "moodsV": 2
     }
