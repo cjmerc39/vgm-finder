@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T16:11:45Z",
+  "updatedAt": "2026-11-08T16:37:26Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -391038,7 +391038,14 @@
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5250330/5681faf3ca51df35b14b5bc4327eaf2423965045/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Platform",
+        "Indie"
+      ]
     },
     {
       "id": "powerplay",
@@ -392176,7 +392183,7 @@
         "Harry Gregson-Williams",
         "Rupert Gregson-Williams"
       ],
-      "date": "2023-10-29",
+      "date": "2023-10-28",
       "sources": [
         {
           "name": "tmdb-tv",
@@ -395269,6 +395276,234 @@
         15,
         8,
         6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-se-domani-non-torno",
+      "title": "Se domani non torno Soundtrack",
+      "medium": "film",
+      "game": "Se domani non torno",
+      "composers": [
+        "Michele Braga"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1583853",
+          "seenAt": "2026-11-08T16:29:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Se+domani+non+torno+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_T3UWl7fvTKS",
+      "art": "https://yt3.googleusercontent.com/pdlI2VntlwRgfrxCaZIuYSz-rOrOjGp1if7GU562Bf4udWGofYW-UyjXv8nbldXx9Q3J-EvNR9WWvIzM=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Se Domani Non Torno (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Michele Braga"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lKftLtsgTX0v5JJxEXRtteMVt5-h9z3U0",
+      "scoresN": 13,
+      "tracksN": 13,
+      "playsTotal": 1404,
+      "moods": [
+        "mysterious",
+        "tender",
+        "intense"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-scene",
+      "title": "Scene Soundtrack",
+      "medium": "film",
+      "game": "Scene",
+      "composers": [
+        "Sushin Shyam"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1402181",
+          "seenAt": "2026-11-08T16:29:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Scene+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_We7kcuDahJn",
+      "art": "https://yt3.googleusercontent.com/A3tmEScFkNrh0TaibzjxPuT3wQcKYU5yROokZ1f_N2ykVTEDaVp-e_Lx0PPF8JYIOLHv7cz6OQSCo4k=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Scene (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Romance"
+      ],
+      "composerAliases": [
+        "Sushin"
+      ],
+      "albumArtists": [
+        "Sushin Shyam"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nG46q5PdlED0jjvuYlurwXpUNj7ABUDlk",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 26801000,
+      "moods": [
+        "playful",
+        "laid-back",
+        "joyful"
+      ],
+      "moodsN": [
+        6,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-les-héros-du-louvre",
+      "title": "Les Héros du Louvre Soundtrack",
+      "medium": "film",
+      "game": "Les Héros du Louvre",
+      "composers": [
+        "ABBOTT"
+      ],
+      "date": "2026-09-09",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1208117",
+          "seenAt": "2026-11-08T16:29:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Les+H%C3%A9ros+du+Louvre+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Nn0tQeDVv8t",
+      "art": "https://yt3.googleusercontent.com/lH9PgTP_8GmcxemHLLHKZicdsdQktLtn8aJO34G-21sDL4RaK45Q95nkZigBNXBX8T_2m6Q-W7n_BqFrEA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Les Héros Du Louvre (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "ABBOTT"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mwIjC6dIqqDj1u8Ow2QNHRH_viznuq-b0",
+      "scoresN": 23,
+      "tracksN": 23,
+      "playsTotal": 1235,
+      "moods": [
+        "tender",
+        "hopeful",
+        "romantic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-kill-jackie",
+      "title": "Kill Jackie Soundtrack",
+      "medium": "tv",
+      "game": "Kill Jackie",
+      "composers": [
+        "Matteo Zingales"
+      ],
+      "date": "2026-10-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/284558",
+          "seenAt": "2026-11-08T16:29:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Kill+Jackie+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wKqcyHwals6",
+      "art": "https://yt3.googleusercontent.com/raTFx83wZwiAlDLbzktyFrWO0p18QFNFrYCigLBQu3EbcG-H5IKsbRl4ClbTemW7QLnOLBkBr3jJ1jLW=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Kill Jackie (Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Matteo Zingales"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lRd7ROM-t5yuzDnwpCYOcheCWJq0ZJfWY",
+      "scoresN": 24,
+      "tracksN": 25,
+      "playsTotal": 9600,
+      "moods": [
+        "intense",
+        "mysterious",
+        "ominous"
+      ],
+      "moodsN": [
+        12,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-where-the-mask-ends",
+      "title": "Where the Mask Ends Soundtrack",
+      "medium": "tv",
+      "game": "Where the Mask Ends",
+      "composers": [],
+      "date": "2026-10-16",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/300146",
+          "seenAt": "2026-11-08T16:29:44Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Where+the+Mask+Ends+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_37bgGCQCZon",
+      "art": "https://yt3.googleusercontent.com/wb_Vs6fIVx9eybaZJ58CFb8TxRCOmwhMVe8Gb1Vv7rbGoaii5q9zWTawdW5Vr4TK6fxE9SE7C6-G5uAP=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "嫁金钗 影视原声带",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_msF8pD2np7DbiC7AfAUNZnp-e8g3LN6i0",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 39,
+      "playsTotal": 1978134,
+      "moods": [
+        "mysterious",
+        "intense",
+        "romantic"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
       ],
       "moodsV": 2
     }
