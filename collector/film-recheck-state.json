@@ -114,7 +114,8 @@
   "1198654": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Chris Roe"
@@ -293,7 +294,8 @@
   "1340102": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1064,7 +1066,9 @@
   },
   "1545690": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1183,7 +1187,8 @@
   "1576934": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Cl\u00e9ment Ducol"
@@ -1287,6 +1292,31 @@
     "poster_path": "/cpgLuRAT8SW7YiZaBYUGZ43GiLL.jpg",
     "release_date": "2026-10-01",
     "title": "Renegade Immortal: Battle of the Immortal Slayer",
+    "vote_count": 6
+   }
+  },
+  "1600653": {
+   "aliases": [
+    "Stephen James Edwards",
+    "Steve J. Edwards",
+    "Steve Edwards",
+    "Stevie Edwards",
+    "Homer Greencastle"
+   ],
+   "checked": [],
+   "composers": [
+    "Stephen Edwards"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     10749
+    ],
+    "id": 1600653,
+    "original_title": "The 12 Dates of Christmas",
+    "poster_path": "/w82vKEoYNZ9SxYxvccxO85CnZKE.jpg",
+    "release_date": "2026-11-05",
+    "title": "The 12 Dates of Christmas",
     "vote_count": 6
    }
   },
@@ -2319,9 +2349,28 @@
     "vote_count": 5
    }
   },
-  "1794652": {
+  "1794569": {
    "aliases": [],
    "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99,
+     80
+    ],
+    "id": 1794569,
+    "original_title": "Desprotexida: el crimen de Pazos",
+    "poster_path": "/ljDe9CMzO7PpM86WOqIZzDfokgE.jpg",
+    "release_date": "2026-11-06",
+    "title": "Unprotected: Murder in Galicia",
+    "vote_count": 7
+   }
+  },
+  "1794652": {
+   "aliases": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2403,7 +2452,9 @@
   },
   "1798852": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2606,16 +2657,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-10",
-   "deferred": 0,
-   "due": 4,
-   "found": 1,
-   "recorded": 1,
-   "searched": 4,
-   "searches": 4,
-   "tracked": 73
-  },
   {
    "date": "2026-10-11",
    "deferred": 0,
@@ -2905,6 +2946,16 @@
    "searched": 9,
    "searches": 11,
    "tracked": 132
+  },
+  {
+   "date": "2026-11-09",
+   "deferred": 0,
+   "due": 6,
+   "found": 0,
+   "recorded": 2,
+   "searched": 6,
+   "searches": 6,
+   "tracked": 134
   }
  ]
 }
