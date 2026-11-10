@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T20:30:30Z",
+  "updatedAt": "2026-11-10T17:36:17Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -371653,10 +371653,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Heroes+Suck+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ENDZCoA35l4",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4828950/631b91a4eae71d8e0ee7bf4447f0652911f9ddc9/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 6,
       "moods": [
         "epic",
         "ominous",
@@ -371677,7 +371676,10 @@
         "Indie"
       ],
       "moodsV": 2,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_ld0qHDpxyUyFyyX6MB0PSgDbUqKLv1V7o",
+      "tracksN": 6,
+      "playsTotal": 38
     },
     {
       "id": "film-forgotten-island",
@@ -395775,6 +395777,648 @@
         5,
         4,
         3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "starlight-cove",
+      "title": "Starlight Cove Soundtrack",
+      "medium": "game",
+      "game": "Starlight Cove",
+      "composers": [
+        "Mirko Topalski"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5521750/Starlight_Cove_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Starlight+Cove+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5521750/555da1c3c343c153a2f6b18f1d1c63dc9306f378/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie",
+        "Arcade"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "project-autumn",
+      "title": "Project: Autumn Soundtrack",
+      "medium": "game",
+      "game": "Project: Autumn",
+      "composers": [
+        "Zachary Lorenz"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5493180/Project_Autumn_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Project%3A+Autumn+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5493180/5bf5093db91dda2652bf8d52f8daaadfc0c579c6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "suspenseful",
+        "ominous"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "after-the-wane",
+      "title": "After the Wane Soundtrack",
+      "medium": "game",
+      "game": "After the Wane",
+      "composers": [
+        "Camille Marcos",
+        "Julien Ponsoda"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5473480/After_the_Wane_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=After+the+Wane+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5473480/a4b4a99d4a6cdcac57b67837953897fd9fec0dfb/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Drama",
+        "Mystery",
+        "Romance"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "along-the-edge",
+      "title": "Along the Edge Soundtrack",
+      "medium": "game",
+      "game": "Along the Edge",
+      "composers": [
+        "Charles-Henry Martin"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5405190/Along_the_Edge_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Along+the+Edge+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5405190/5a0577124de60f0f6ec2652c57dc261f4a992de5/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [
+        "Mystery",
+        "Romance"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "driving",
+        "laid-back"
+      ],
+      "moodsN": [
+        2,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "taival",
+      "title": "Taival Soundtrack",
+      "medium": "game",
+      "game": "Taival",
+      "composers": [
+        "Henri Hellman"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5324470/Taival_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Taival+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5324470/035b3776568cd4e0d72eb4449aca2615f178df1a/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "potion-making-path-of-the-alchemist",
+      "title": "Potion-making: Path of the Alchemist Soundtrack",
+      "medium": "game",
+      "game": "Potion-making: Path of the Alchemist",
+      "composers": [
+        "Alexander Tavrizyan"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5419590/Potionmaking_Path_of_the_Alchemist_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Potion-making%3A+Path+of+the+Alchemist+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5419590/231d414f11cadcc81658e71438743d6ef7251e5d/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Strategy",
+        "Indie",
+        "Card & Board Game"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "celestay",
+      "title": "CELESTAY Soundtrack",
+      "medium": "game",
+      "game": "CELESTAY",
+      "composers": [
+        "Doremi Obake",
+        "Rutia",
+        "Shohei Kikawa",
+        "Kazuki Fujihira"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5432100/CELESTAY_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=CELESTAY+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5432100/0927c79439ba2ec9464717af8b8a9058e40d150a/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "relocat",
+      "title": "Relocat Soundtrack",
+      "medium": "game",
+      "game": "Relocat",
+      "composers": [
+        "ahhTrevor"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5424730/Relocat_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Relocat+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5424730/6b549c2e26b45508b280309fe63dbc81dde3bd4d/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "7-days-to-think-about-it",
+      "title": "7 Days To Think About It (Original Soundtrack)",
+      "medium": "game",
+      "game": "7 Days To Think About It",
+      "composers": [
+        "silver978"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4966910/7_Days_To_Think_About_It_Original_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=7+Days+To+Think+About+It+%28Original+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4966910/971bf013a2c88ca3f581791a3a7b8f10cece09f3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 13,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "ominous",
+        "eerie"
+      ],
+      "moodsN": [
+        6,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "annihilated",
+      "title": "Annihilated Original Soundtrack",
+      "medium": "game",
+      "game": "Annihilated",
+      "composers": [
+        "NINOMIYA Yuji"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4549290/Annihilated_Original_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Annihilated+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4549290/28fc7bbdc21d09a0f7a62f6d1c3edaf3c5b37d5a/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "toddler-simulator",
+      "title": "Toddler Simulator Soundtrack",
+      "medium": "game",
+      "game": "Toddler Simulator",
+      "composers": [
+        "Loyalty Freak"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5470350/Toddler_Simulator_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Toddler+Simulator+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5470350/9e783c0dd07ecf09e4df143f229d01ea9c5d390f/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "1999tokoyo-building",
+      "title": "1999TOKOYO Building Soundtrack",
+      "medium": "game",
+      "game": "1999TOKOYO Building",
+      "composers": [
+        "Yasuhiro Nakashima"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5324310/1999TOKOYO_Building_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=1999TOKOYO+Building+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5324310/1bf9a5d205828c6f91aa8d909c5029706b656e44/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 25,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "suspenseful",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "texas-dominoes",
+      "title": "TEXAS DOMINOES Soundtrack",
+      "medium": "game",
+      "game": "TEXAS DOMINOES",
+      "composers": [
+        "TheJerm"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5533230/TEXAS_DOMINOES_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=TEXAS+DOMINOES+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5533230/f47a0c658293179fb023c917a40a1c0af1047ba9/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "know-your-ánima",
+      "title": "Know Your Ánima Soundtrack",
+      "medium": "game",
+      "game": "Know Your Ánima",
+      "composers": [
+        "Undecided Hikki"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5475640/Know_Your_Ánima_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Know+Your+%C3%81nima+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5475640/95c90d0b78d5182297aa0101e4ef8160cda16cb8/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "voxotron",
+      "title": "VOXOTRON Soundtrack",
+      "medium": "game",
+      "game": "VOXOTRON",
+      "composers": [
+        "Hamster On Coke"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5535900/VOXOTRON_Soundtrack/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=VOXOTRON+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5535900/7bffbfd4a36d27d32985c5a9422a6fcef60abbd3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Racing",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "takeover-2-original-soundtrack-volume-1-francisco-cerda",
+      "title": "Takeover 2 Original Soundtrack Volume 1: Francisco Cerda",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Francisco Cerda"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5408630/Takeover_2_Original_Soundtrack_Volume_1_Francisco_Cerda/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Takeover+2+Original+Soundtrack+Volume+1%3A+Francisco+Cerda",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5408630/b23b2abeb236e7a95745c93e379bc24802760512/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Fighting",
+        "Hack and slash/Beat 'em up",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "takeover-2-original-soundtrack-volume-2-gonzalo-varela",
+      "title": "Takeover 2 Original Soundtrack Volume 2: Gonzalo Varela",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Gonzalo Varela"
+      ],
+      "date": "2026-11-09",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5408610/Takeover_2_Original_Soundtrack_Volume_2_Gonzalo_Varela/",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Takeover+2+Original+Soundtrack+Volume+2%3A+Gonzalo+Varela",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5408610/2725a65f28434a0e9df1973e4b994576a9d0dcaa/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Fighting",
+        "Hack and slash/Beat 'em up",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "tanuki-pon-s-summer",
+      "title": "Tanuki: Pon's Summer Soundtrack",
+      "medium": "game",
+      "game": "Tanuki: Pon's Summer",
+      "composers": [
+        "Sean Bialo",
+        "Eddie Edwards"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/tanuki-pons-summer",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tanuki%3A+Pon%27s+Summer+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MQqCkkWVik6",
+      "art": "https://yt3.googleusercontent.com/Zs_N9u_xbv09kZDyViasyZlu4PPpbpdmTEwmdYgFvROOXcY3mZhtlo-nJGvo1deZp7VcJ640wDi6V9Y=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "TANUKI: Pon's Summer (Original Game Soundtrack)",
+      "company": "Denkiworks",
+      "console": true,
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "themes": [
+        "Open world"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k0J6DF9o_8HQhqDxtGvqH8PbNvzWyMBOY",
+      "tracksN": 47,
+      "playsTotal": 417,
+      "moods": [
+        "driving",
+        "joyful",
+        "peaceful"
+      ],
+      "moodsN": [
+        17,
+        11,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "minecraft-music",
+      "title": "Minecraft music",
+      "medium": "game",
+      "game": "Minecraft",
+      "composers": [
+        "AT Musica"
+      ],
+      "date": "2026-01-01",
+      "sources": [
+        {
+          "name": "ytm",
+          "type": "catalog",
+          "url": "https://music.youtube.com/browse/MPREb_CXywfjBHY8A",
+          "seenAt": "2026-11-10T17:27:26Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minecraft+music+soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_CXywfjBHY8A",
+      "art": "https://yt3.googleusercontent.com/klHKaesUnmiuJvcg-I0LP64z1T1KYwhlDLZU3ZZZtxFxyWPQv6RimrzqvWV8Y4Wu6rsVk3ffujQeDCRHXw=w544-h544-l90-rj",
+      "notable": true,
+      "ytmPlaylistId": "OLAK5uy_lJwn_VyEcIUwDR0xAV6-O8XjeL-xj_MXE",
+      "tracksN": 1,
+      "playsTotal": 110,
+      "moods": [
+        "wonder",
+        "dreamy",
+        "peaceful"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
       ],
       "moodsV": 2
     }

@@ -402,7 +402,8 @@
   "1378742": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Stephen Limbaugh"
@@ -790,7 +791,8 @@
   "1497946": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "ermhoi"
@@ -1086,7 +1088,8 @@
   "1558568": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Arnau Bataller"
@@ -1119,6 +1122,23 @@
     "poster_path": "/5xmXVd7nCK3tAo34XkO58SxUCip.jpg",
     "release_date": "2026-10-16",
     "title": "Masterplan",
+    "vote_count": 5
+   }
+  },
+  "1562642": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     28,
+     53
+    ],
+    "id": 1562642,
+    "original_title": "Ghost Soldier",
+    "poster_path": "/8Y4oJ5iUs3hgPcDB3SIEmsNYjZk.jpg",
+    "release_date": "2026-11-06",
+    "title": "Ghost Soldier",
     "vote_count": 5
    }
   },
@@ -1237,7 +1257,8 @@
     "Bandoh Yuta"
    ],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Yuta Bandoh"
@@ -1257,7 +1278,8 @@
   "1597199": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Guglielmo Diana"
@@ -1629,7 +1651,8 @@
   "1701141": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2658,16 +2681,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-11",
-   "deferred": 0,
-   "due": 6,
-   "found": 0,
-   "recorded": 1,
-   "searched": 6,
-   "searches": 10,
-   "tracked": 74
-  },
-  {
    "date": "2026-10-12",
    "deferred": 0,
    "due": 0,
@@ -2956,6 +2969,16 @@
    "searched": 6,
    "searches": 6,
    "tracked": 134
+  },
+  {
+   "date": "2026-11-10",
+   "deferred": 0,
+   "due": 6,
+   "found": 0,
+   "recorded": 1,
+   "searched": 6,
+   "searches": 10,
+   "tracked": 135
   }
  ]
 }
