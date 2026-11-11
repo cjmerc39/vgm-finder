@@ -1142,6 +1142,25 @@
     "vote_count": 5
    }
   },
+  "1567605": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Tyler Bates"
+   ],
+   "entry": {
+    "genre_ids": [
+     14,
+     35
+    ],
+    "id": 1567605,
+    "original_title": "Ebenezer",
+    "poster_path": "/wbTHJ5VzOjEq02PYHkLAL7yhhBn.jpg",
+    "release_date": "2026-11-11",
+    "title": "Ebenezer",
+    "vote_count": 10
+   }
+  },
   "1571687": {
    "aliases": [],
    "checked": [
@@ -2230,7 +2249,9 @@
   },
   "1776531": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2318,7 +2339,9 @@
   },
   "1790935": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2425,7 +2448,9 @@
   },
   "1796809": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Eric Scullin"
    ],
@@ -2545,6 +2570,23 @@
     "release_date": "2026-10-31",
     "title": "A Story of Derry",
     "vote_count": 20
+   }
+  },
+  "1816668": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99,
+     10402
+    ],
+    "id": 1816668,
+    "original_title": "Ninho : Le prix \u00e0 payer",
+    "poster_path": "/xy02UZTSEJWXeJXG4XGb4aWDxdP.jpg",
+    "release_date": "2026-11-04",
+    "title": "Ninho: Fame Ain\u2019t Worth It",
+    "vote_count": 5
    }
   },
   "487802": {
@@ -2680,16 +2722,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-12",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 4,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 78
-  },
   {
    "date": "2026-10-13",
    "deferred": 0,
@@ -2979,6 +3011,16 @@
    "searched": 6,
    "searches": 10,
    "tracked": 135
+  },
+  {
+   "date": "2026-11-11",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 2,
+   "searched": 3,
+   "searches": 3,
+   "tracked": 137
   }
  ]
 }

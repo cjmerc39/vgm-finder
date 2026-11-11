@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T17:36:17Z",
+  "updatedAt": "2026-11-11T17:50:02Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -372301,10 +372301,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=House+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ZJYsHetpzFF",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5223780/0488f5299fbd42c9a21bcd6b33552b3cdfa8ceda/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 60,
       "moods": [
         "eerie",
         "intense",
@@ -372323,7 +372322,10 @@
         "Indie"
       ],
       "moodsV": 2,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_mf2K8oqguLUP2jeVdfyPP9wDSPfGKeolI",
+      "tracksN": 60,
+      "playsTotal": 101650
     },
     {
       "id": "monowave",
@@ -372343,10 +372345,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=MONOWAVE+%28Original+Soundtrack%29",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_8mFDtOVqQFD",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5234700/6b0d76069ee8aa8dc7464a9f6d4d7e4d283b8d89/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 38,
       "moods": [
         "intense",
         "joyful",
@@ -372366,7 +372367,10 @@
         "Adventure"
       ],
       "moodsV": 2,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_mp49l9c3PKfk4PdOl7BhvruT4vfcepiws",
+      "tracksN": 38,
+      "playsTotal": 452
     },
     {
       "id": "patlabor-the-case-files",
@@ -396419,6 +396423,675 @@
         1,
         1,
         1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "nick-vs-the-brick-of-ick-from-space",
+      "title": "Nick vs the Brick of Ick from space Soundtrack",
+      "medium": "game",
+      "game": "Nick vs the Brick of Ick from space",
+      "composers": [
+        "Jon Rosario"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5536540/Nick_vs_the_Brick_of_Ick_from_space_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nick+vs+the+Brick+of+Ick+from+space+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5536540/f03101fc0d0bb51b156f61e9613ff5349966d179/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Strategy",
+        "Tactical",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "just-up-2d-platformer",
+      "title": "Just Up: 2D Platformer Soundtrack",
+      "medium": "game",
+      "game": "Just Up: 2D Platformer",
+      "composers": [
+        "Scythé Games"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5518690/Just_Up_2D_Platformer_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Just+Up%3A+2D+Platformer+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5518690/75b417ff42781c7b58f8a83c01b82c78a251c0c7/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Platform",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "boltz",
+      "title": "Boltz Soundtrack",
+      "medium": "game",
+      "game": "Boltz",
+      "composers": [
+        "Emre Akdeniz"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5148580/Boltz_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Boltz+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5148580/806581c7ac769f0d73304966e6641b8ae79ecc24/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "white-whisper",
+      "title": "White Whisper Soundtrack",
+      "medium": "game",
+      "game": "White Whisper",
+      "composers": [
+        "Mira Mudrik"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5289240/White_Whisper_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=White+Whisper+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5289240/40ce1183873313090bb258fb8a2df88f4bbdd512/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 5,
+      "themes": [
+        "Science fiction"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "driving",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "the-coo-job-pidgeon-pocket",
+      "title": "The Coo Job - Pidgeon Pocket Original Soundtrack",
+      "medium": "game",
+      "game": "The Coo Job - Pidgeon Pocket",
+      "composers": [
+        "Lianes8 Studio"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5460010/The_Coo_Job_Pidgeon_Pocket_Original_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Coo+Job+-+Pidgeon+Pocket+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5460010/97a1f1a3b3c3b31ab46cc23026e23a3f056b4f48/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Stealth",
+        "Comedy"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "billionth-soul",
+      "title": "Billionth Soul Soundtrack",
+      "medium": "game",
+      "game": "Billionth Soul",
+      "composers": [
+        "Gnomesoft LLC"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4990720/Billionth_Soul_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Billionth+Soul+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4990720/9df26b197207cb8a3d6eb87c695a2c79dd1755b9/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "primal-realms",
+      "title": "Primal Realms Soundtrack",
+      "medium": "game",
+      "game": "Primal Realms",
+      "composers": [
+        "Static Games"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5402720/Primal_Realms_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Primal+Realms+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5402720/7f882769304de6a702a3eec40c25ba612a6aab53/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "thronefall",
+      "title": "Thronefall Soundtrack",
+      "medium": "game",
+      "game": "Thronefall",
+      "composers": [],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5418900/Thronefall_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Thronefall+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5418900/672aae7eef3c694a171876bca5b739a0f80029d6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Survival"
+      ],
+      "genres": [
+        "Fighting",
+        "Strategy",
+        "Tactical"
+      ]
+    },
+    {
+      "id": "wall-world-strategy",
+      "title": "Wall World Strategy Soundtrack",
+      "medium": "game",
+      "game": "Wall World Strategy",
+      "composers": [
+        "Deallry"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5331150/Wall_World_Strategy_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wall+World+Strategy+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5331150/c12a9668c61f9918b365c124717e2fa2f515d953/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "void-reaver",
+      "title": "Void Reaver Soundtrack",
+      "medium": "game",
+      "game": "Void Reaver",
+      "composers": [],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5453130/Void_Reaver_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Void+Reaver+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5453130/3d02a899cda4444632e32c32cd8c9a0bd845e563/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Science fiction",
+        "Survival"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Tactical",
+        "Hack and slash/Beat 'em up"
+      ]
+    },
+    {
+      "id": "pengpong",
+      "title": "PengPong Soundtrack",
+      "medium": "game",
+      "game": "PengPong",
+      "composers": [
+        "SANDY FLOOR"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5067440/PengPong_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=PengPong+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5067440/a559e7074a2cd7381cc79d36f262d8026ec57b0f/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Pinball",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "追命战士dreamingfighter",
+      "title": "追命战士DreamingFighter",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "SpecialGames"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5429580/追命战士DreamingFighter/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E8%BF%BD%E5%91%BD%E6%88%98%E5%A3%ABDreamingFighter+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5429580/08cf663c85642eae4f2d3d5f5b7b06460fe03b87/capsule_231x87.jpg",
+      "notable": true,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "ghost-express",
+      "title": "Ghost Express Soundtrack",
+      "medium": "game",
+      "game": "Ghost Express",
+      "composers": [
+        "Gong Jun"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5264230/Ghost_Express_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ghost+Express+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5264230/b9cad614c5d716e6324e4ff67d2ebc9f84c41951/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-ramen-bar",
+      "title": "The Ramen Bar Soundtrack",
+      "medium": "game",
+      "game": "The Ramen Bar",
+      "composers": [
+        "Abramo Riti"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5494580/The_Ramen_Bar_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Ramen+Bar+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5494580/20ab0ac5a8953530b0a890a47f5f848f4a7fbc89/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "emotional-labor-laboratory",
+      "title": "Emotional Labor Laboratory Soundtrack",
+      "medium": "game",
+      "game": "Emotional Labor Laboratory",
+      "composers": [
+        "astro stew"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5544130/Emotional_Labor_Laboratory_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Emotional+Labor+Laboratory+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5544130/746b6afc65f4a92bcbd8b08a5bd59d197a5a5761/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "battle-runes-of-metalaria",
+      "title": "Battle Runes of Metalaria Soundtrack",
+      "medium": "game",
+      "game": "Battle Runes of Metalaria",
+      "composers": [],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5047160/Battle_Runes_of_Metalaria_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Battle+Runes+of+Metalaria+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5047160/f54aab88252492c455cd8f4dc13350cc3f6fa1c2/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "dawn-aerowar",
+      "title": "DAWN AEROWAR Original Soundtrack",
+      "medium": "game",
+      "game": "DAWN AEROWAR",
+      "composers": [
+        "Jose Pavli"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5326270/DAWN_AEROWAR_Original_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=DAWN+AEROWAR+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5326270/170e9a61568537a768af32d8c8a66714d246f500/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 34,
+      "composersFrom": "steam",
+      "moods": [
+        "epic",
+        "intense",
+        "ominous"
+      ],
+      "moodsN": [
+        8,
+        7,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "stormforge",
+      "title": "Stormforge Soundtrack",
+      "medium": "game",
+      "game": "Stormforge",
+      "composers": [
+        "Clark Aboud",
+        "Max Davidoff-Grey"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5487210/Stormforge_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Stormforge+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5487210/a1a05d1f2b8121ee35b3697d41d277489fdf1a65/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Open world"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "first-light",
+      "title": "First Light Soundtrack",
+      "medium": "game",
+      "game": "First Light",
+      "composers": [
+        "Jonathan Mellette"
+      ],
+      "date": "2026-11-10",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4999850/First_Light_Soundtrack/",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=First+Light+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4999850/8176f3298e4c5b49cbf91612f97021eacb8d4dc3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 10,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Indie",
+        "Arcade"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "wonder",
+        "peaceful"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-mosquito-bowl",
+      "title": "The Mosquito Bowl Soundtrack",
+      "medium": "film",
+      "game": "The Mosquito Bowl",
+      "composers": [
+        "Munaf Rayani",
+        "Chris Hrasky",
+        "Mark Smith",
+        "Michael James"
+      ],
+      "date": "2026-10-29",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1458300",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Mosquito+Bowl+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_oQrFhNABCSI",
+      "art": "https://yt3.googleusercontent.com/wllqlQeWqYFit4YJ_C_huoO9zQz2lI8gHUFICT8YsZyx9EBuDufc1QAmaWP2KWlsEPFsGKLV9le0JNaB=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Mosquito Bowl (Soundtrack from the Netflix Film)",
+      "genres": [
+        "History",
+        "Drama",
+        "War"
+      ],
+      "composerAliases": [
+        "Explosions in the Sky",
+        "Explosions in the Sky",
+        "Explosions in the Sky",
+        "Explosions in the Sky"
+      ],
+      "albumArtists": [
+        "Explosions in the Sky"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ny_8MK_LBJ6osbVl4QJCzlrIOHBU1hr60",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 7606,
+      "moods": [
+        "intense",
+        "ominous",
+        "tender"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-between-steps",
+      "title": "Between Steps Soundtrack",
+      "medium": "tv",
+      "game": "Between Steps",
+      "composers": [],
+      "date": "2026-10-05",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/307106",
+          "seenAt": "2026-11-11T17:40:23Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Between+Steps+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_DgIpEbPTbsc",
+      "art": "https://yt3.googleusercontent.com/7lqBDKg4hfKMyaSa1FfsDhOcQoDcoQBteXhxgKJQSjAATls1AtD_BLJ-mKTbWEvInRYxp36aZIg6lkU=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "연애박사 (Original Television Soundtrack)",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kXgfiYqZ-AXrXOQKdwGYpeaz0wgUeR8bM",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 15,
+      "playsTotal": 2523,
+      "moods": [
+        "romantic",
+        "tender",
+        "dreamy"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
       ],
       "moodsV": 2
     }
