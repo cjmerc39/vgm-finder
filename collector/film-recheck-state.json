@@ -194,7 +194,9 @@
   },
   "1282159": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2020,6 +2022,23 @@
     "vote_count": 5
    }
   },
+  "1757174": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     10749,
+     35
+    ],
+    "id": 1757174,
+    "original_title": "Bara till jul",
+    "poster_path": "/9kHrUoPF2rl5Hj0QMquAy3xznXT.jpg",
+    "release_date": "2026-11-12",
+    "title": "The Christmas Switch",
+    "vote_count": 5
+   }
+  },
   "1758536": {
    "aliases": [],
    "checked": [
@@ -2304,7 +2323,9 @@
   },
   "1783629": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2498,6 +2519,22 @@
     "vote_count": 5
    }
   },
+  "1798383": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1798383,
+    "original_title": "Wolves Up Close with Bertie Gregory",
+    "poster_path": "/fopmDU345HPkMC9iUaNQEY0uRkk.jpg",
+    "release_date": "2026-11-06",
+    "title": "Wolves Up Close with Bertie Gregory",
+    "vote_count": 16
+   }
+  },
   "1798852": {
    "aliases": [],
    "checked": [
@@ -2599,7 +2636,8 @@
     "Bleeding Fingers"
    ],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Hans Zimmer",
@@ -2722,16 +2760,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-13",
-   "deferred": 0,
-   "due": 1,
-   "found": 0,
-   "recorded": 1,
-   "searched": 1,
-   "searches": 1,
-   "tracked": 79
-  },
   {
    "date": "2026-10-14",
    "deferred": 0,
@@ -3021,6 +3049,16 @@
    "searched": 3,
    "searches": 3,
    "tracked": 137
+  },
+  {
+   "date": "2026-11-12",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 2,
+   "searched": 3,
+   "searches": 3,
+   "tracked": 139
   }
  ]
 }
