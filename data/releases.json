@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T18:02:31Z",
+  "updatedAt": "2026-11-13T17:38:24Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -373414,10 +373414,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Draco+and+the+Seven+Scales+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ely676oXzVW",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5171590/508ec8c46ebe251908c411febef0472af1ccf63a/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0,
       "themes": [
         "Action"
       ],
@@ -373426,7 +373425,10 @@
         "Adventure",
         "Indie"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_nqy6H6BzcjaJihdqVrNa9rMJCo2E-ZoqU",
+      "tracksN": 38,
+      "playsTotal": 1015
     },
     {
       "id": "and-who-is-the-maiden",
@@ -396049,7 +396051,15 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5424730/6b549c2e26b45508b280309fe63dbc81dde3bd4d/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [
+        "Comedy",
+        "Drama"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ]
     },
     {
       "id": "7-days-to-think-about-it",
@@ -397755,6 +397765,692 @@
         5,
         4,
         4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "green-again",
+      "title": "Green Again Soundtrack",
+      "medium": "game",
+      "game": "Green Again",
+      "composers": [
+        "Tobi Weiss"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5144910/Green_Again_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Green+Again+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5144910/81bea477a2dc2ed8b1ce094bfdc2746b243dfd25/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Sandbox"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "100-kingdom-cats",
+      "title": "100 Kingdom Cats Soundtrack",
+      "medium": "game",
+      "game": "100 Kingdom Cats",
+      "composers": [
+        "100 Cozy Games"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4322420/100_Kingdom_Cats_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=100+Kingdom+Cats+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4322420/33e62b022bf59a3a34ca7d5d6997b78394bcb01a/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bloom-blow-florilegium",
+      "title": "Bloom Blow: Florilegium — Original Soundtrack",
+      "medium": "game",
+      "game": "Bloom Blow: Florilegium",
+      "composers": [
+        "ringarden"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5545960/Bloom_Blow_Florilegium_Original_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bloom+Blow%3A+Florilegium+%E2%80%94+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5545960/1618c7745927a798b09703b71a8970dff7424428/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "draconite",
+      "title": "Draconite Soundtrack",
+      "medium": "game",
+      "game": "Draconite",
+      "composers": [
+        "CandyBox",
+        "Chenyuan"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5245920/Draconite_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Draconite+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5245920/dfa9328cc659dcfa8ebc3d5dbfe5aa7b11f60964/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "manbou-voyage",
+      "title": "MANBOU / VOYAGE Soundtrack",
+      "medium": "game",
+      "game": "MANBOU / VOYAGE",
+      "composers": [],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5495500/MANBOU_VOYAGE_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=MANBOU+%2F+VOYAGE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5495500/355f5702b00757e84642c483609c79c5d3b0c36e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0
+    },
+    {
+      "id": "revenant-survivors",
+      "title": "Revenant Survivors Soundtrack",
+      "medium": "game",
+      "game": "Revenant Survivors",
+      "composers": [
+        "Mongma Studio"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5542830/Revenant_Survivors_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Revenant+Survivors+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5542830/4aaded85610af4035b6102cfa5031f8534989c57/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Survival"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "fakin-it-xl",
+      "title": "Fakin It XL Soundtrack",
+      "medium": "game",
+      "game": "Fakin It XL",
+      "composers": [
+        "Andy Poland"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5309490/Fakin_It_XL_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Fakin+It+XL+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5309490/e0a4f9c5d9ba898e93ab9d74990bd50b5e7b0243/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 31,
+      "themes": [],
+      "genres": [
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "playful",
+        "suspenseful"
+      ],
+      "moodsN": [
+        12,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "迷家-mygohome",
+      "title": "迷家 mygohome Soundtrack",
+      "medium": "game",
+      "game": "迷家 mygohome",
+      "composers": [
+        "关慧卿"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5264240/迷家_mygohome_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E8%BF%B7%E5%AE%B6+mygohome+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5264240/310b04dd1c184e868de8ed8a13aaffb39da3a3d6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "welcome-to-hillveil",
+      "title": "Welcome To HillVeil Soundtrack",
+      "medium": "game",
+      "game": "Welcome To HillVeil",
+      "composers": [
+        "Riley"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5481000/Welcome_To_HillVeil_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Welcome+To+HillVeil+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5481000/e4c287f16b5884a7a89602eeccb88c6e1e566933/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "lurking-in-tenebris",
+      "title": "Lurking in Tenebris Soundtrack",
+      "medium": "game",
+      "game": "Lurking in Tenebris",
+      "composers": [
+        "Zombie2358"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3722420/Lurking_in_Tenebris_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lurking+in+Tenebris+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3722420/86557668f6b11e46ca7ab6eaa9ae3af5acf108c2/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "there-s-always-a-madman-v-i-c-t-o-r",
+      "title": "There's Always a Madman: V.I.C.T.O.R. Soundtrack",
+      "medium": "game",
+      "game": "There's Always a Madman: V.I.C.T.O.R.",
+      "composers": [
+        "Emily McNally"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3373590/Theres_Always_a_Madman_VICTOR_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=There%27s+Always+a+Madman%3A+V.I.C.T.O.R.+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3373590/ccbf9c529e2c16ae1d5cd9793786a58a388e681e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Thriller",
+        "Comedy"
+      ],
+      "genres": [
+        "Adventure",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bouncing-body-bits",
+      "title": "Bouncing Body Bits Soundtrack",
+      "medium": "game",
+      "game": "Bouncing Body Bits",
+      "composers": [
+        "AshumArcade"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5511430/Bouncing_Body_Bits_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bouncing+Body+Bits+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5511430/a12a580821f06366de48fefa9e4646e8ff45acb5/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "jay-and-silent-bob-chronic-blunt-punch",
+      "title": "Jay and Silent Bob: Chronic Blunt Punch Soundtrack",
+      "medium": "game",
+      "game": "Jay and Silent Bob: Chronic Blunt Punch",
+      "composers": [
+        "Toni Leys"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5421560/Jay_and_Silent_Bob_Chronic_Blunt_Punch_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Jay+and+Silent+Bob%3A+Chronic+Blunt+Punch+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5421560/d433d8847ef110036ea6ae4a53f9cb3a01aaea04/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 16,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Fighting",
+        "Hack and slash/Beat 'em up",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "driving",
+        "playful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "flowfall-inertia",
+      "title": "FLOWFALL Inertia Soundtrack",
+      "medium": "game",
+      "game": "FLOWFALL Inertia",
+      "composers": [
+        "ComAdore"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5372100/FLOWFALL_Inertia_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=FLOWFALL+Inertia+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5372100/5dc3e3e23e06fa063116ca56645250f645182ef6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 19,
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "intense",
+        "wonder"
+      ],
+      "moodsN": [
+        8,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "the-great-sassanelli",
+      "title": "The Great Sassanelli Original Soundtrack",
+      "medium": "game",
+      "game": "The Great Sassanelli",
+      "composers": [
+        "Florian Mönks"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5552060/The_Great_Sassanelli_Original_Soundtrack/",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Great+Sassanelli+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5552060/4d693b5c4865618c5f6ebf3b037eb4c39c575218/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-ebenezer",
+      "title": "Ebenezer Soundtrack",
+      "medium": "film",
+      "game": "Ebenezer",
+      "composers": [
+        "Tyler Bates"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1567605",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ebenezer+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_dUassZIgutq",
+      "art": "https://yt3.googleusercontent.com/FzvOrcd9p5s3f7lxwlXj-rS4kHy6JpqoHd59hXmsQsfvihHn3HBWZu7JkFahrby92ENdFsBVUOrYL-CPjg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Ebenezer (Music from the Motion Picture)",
+      "genres": [
+        "Fantasy",
+        "Comedy"
+      ],
+      "albumArtists": [
+        "Tyler Bates"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n_WLcHIh6wWxliaf50LtHVbRNDDKkx8Ig",
+      "scoresN": 25,
+      "tracksN": 25,
+      "playsTotal": 2028,
+      "moods": [
+        "tender",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        6,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-gospel-of-christmas",
+      "title": "The Gospel of Christmas Soundtrack",
+      "medium": "film",
+      "game": "The Gospel of Christmas",
+      "composers": [
+        "The Gospel of Christmas Cast"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1559980",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Gospel+of+Christmas+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GuWkVvB1JWE",
+      "art": "https://yt3.googleusercontent.com/iXli2yngG3thyW5zL4JElXFi4HEI4tyDgLA9HyIzxD_CtW_5IfbMLxLS-0EKKtaFvGxENAMNc_1hrQB2=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Gospel of Christmas (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Music",
+        "Family",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "The Gospel of Christmas Cast"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l_5mmHJL2OIsyc-1Tub-Lvf4n5wX5UUek",
+      "scoresN": 0,
+      "songsAlbum": true,
+      "tracksN": 11,
+      "playsTotal": 32971,
+      "moods": [
+        "joyful",
+        "hopeful",
+        "heroic"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-12-dates-of-christmas",
+      "title": "The 12 Dates of Christmas Soundtrack",
+      "medium": "film",
+      "game": "The 12 Dates of Christmas",
+      "composers": [
+        "Stephen Edwards"
+      ],
+      "date": "2026-11-05",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1600653",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+12+Dates+of+Christmas+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_803aZEIjvs9",
+      "art": "https://yt3.googleusercontent.com/AbtEUF1tnzerNkyDUDjKQ8Qs0ls8BKsqdx3fe1DYqoLfV8JGpY0kOxWbHREijMHT7khBsPMNGHZfTWw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Music From The Original Score - The 12 Dates Of Christmas",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "composerAliases": [
+        "Stephen James Edwards",
+        "Steve J. Edwards",
+        "Steve Edwards",
+        "Stevie Edwards",
+        "Homer Greencastle"
+      ],
+      "albumArtists": [
+        "Stephen Edwards"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lddDPxUHk9M4r09DwblARo6er7n7Ozaj0",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 37,
+      "moods": [
+        "playful",
+        "joyful",
+        "romantic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-being-heumann",
+      "title": "Being Heumann Soundtrack",
+      "medium": "film",
+      "game": "Being Heumann",
+      "composers": [
+        "Francesco Le Metre"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1050981",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Being+Heumann+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_e3EBgVEjBvS",
+      "art": "https://yt3.googleusercontent.com/VAtAeSLPKljb_khaDU2SxU36svqJ6PdB_EyIrbh83sZWBTgCY0GG62QUZa-O1E_R7bymuzDNmK6PLL7YUw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Being Heumann (Apple Original Film Soundtrack) (feat. London Contemporary Orchestra)",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "albumArtists": [
+        "Francesco Le Metre"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nYMhirz-s6Y9BfC_x-RFY0oc9WQOZHoog",
+      "scoresN": 15,
+      "tracksN": 15,
+      "playsTotal": 284,
+      "moods": [
+        "intense",
+        "epic",
+        "heroic"
+      ],
+      "moodsN": [
+        4,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-body",
+      "title": "The Body Soundtrack",
+      "medium": "tv",
+      "game": "The Body",
+      "composers": [
+        "Christopher Stracey"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/291507",
+          "seenAt": "2026-11-13T17:29:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Body+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_RWkLasTskOv",
+      "art": "https://yt3.googleusercontent.com/ZsfWStcFR88ch-pbcR8qWoFTo2_OH9YlxUZOQeyzMU1f6c96VS6SSzNas5LKG4zHyftoADrOgVhZVWWB=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Body (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "composerAliases": [
+        "Chris Stracey"
+      ],
+      "albumArtists": [
+        "Christopher Stracey"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k800XVprrIarNTTpACHGbenM0WL1UpTaI",
+      "scoresN": 38,
+      "tracksN": 38,
+      "playsTotal": 8227,
+      "moods": [
+        "mysterious",
+        "tender",
+        "eerie"
+      ],
+      "moodsN": [
+        9,
+        8,
+        8
       ],
       "moodsV": 2
     }

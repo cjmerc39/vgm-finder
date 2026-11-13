@@ -135,7 +135,9 @@
   },
   "1241803": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Christophe Julien"
    ],
@@ -912,6 +914,29 @@
     "vote_count": 6
    }
   },
+  "1518204": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Joff Bush",
+    "Daniel O'Brien",
+    "Ack Kinmonth"
+   ],
+   "entry": {
+    "genre_ids": [
+     878,
+     12,
+     35,
+     10751
+    ],
+    "id": 1518204,
+    "original_title": "Allen",
+    "poster_path": "/alhhrpj1PSAn5bfz4Os1k7Bweoj.jpg",
+    "release_date": "2026-11-12",
+    "title": "Allen",
+    "vote_count": 9
+   }
+  },
   "1519320": {
    "aliases": [],
    "checked": [
@@ -1144,25 +1169,6 @@
     "vote_count": 5
    }
   },
-  "1567605": {
-   "aliases": [],
-   "checked": [],
-   "composers": [
-    "Tyler Bates"
-   ],
-   "entry": {
-    "genre_ids": [
-     14,
-     35
-    ],
-    "id": 1567605,
-    "original_title": "Ebenezer",
-    "poster_path": "/wbTHJ5VzOjEq02PYHkLAL7yhhBn.jpg",
-    "release_date": "2026-11-11",
-    "title": "Ebenezer",
-    "vote_count": 10
-   }
-  },
   "1571687": {
    "aliases": [],
    "checked": [
@@ -1338,31 +1344,6 @@
     "vote_count": 6
    }
   },
-  "1600653": {
-   "aliases": [
-    "Stephen James Edwards",
-    "Steve J. Edwards",
-    "Steve Edwards",
-    "Stevie Edwards",
-    "Homer Greencastle"
-   ],
-   "checked": [],
-   "composers": [
-    "Stephen Edwards"
-   ],
-   "entry": {
-    "genre_ids": [
-     35,
-     10749
-    ],
-    "id": 1600653,
-    "original_title": "The 12 Dates of Christmas",
-    "poster_path": "/w82vKEoYNZ9SxYxvccxO85CnZKE.jpg",
-    "release_date": "2026-11-05",
-    "title": "The 12 Dates of Christmas",
-    "vote_count": 6
-   }
-  },
   "1607127": {
    "aliases": [],
    "checked": [
@@ -1420,6 +1401,24 @@
     "release_date": "2026-09-25",
     "title": "Buzzkill",
     "vote_count": 5
+   }
+  },
+  "1616687": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     28,
+     80,
+     53
+    ],
+    "id": 1616687,
+    "original_title": "Serangan Balik",
+    "poster_path": "/hKROmLddpzpjkxKKVFYFRAOXX1b.jpg",
+    "release_date": "2026-11-12",
+    "title": "Never Surrender",
+    "vote_count": 10
    }
   },
   "1620918": {
@@ -1573,6 +1572,28 @@
     "poster_path": "/hCALD2uCetzUjj40k8TUMnsA397.jpg",
     "release_date": "2026-09-29",
     "title": "The Swan: Behind the Mirror",
+    "vote_count": 5
+   }
+  },
+  "1649403": {
+   "aliases": [
+    "Georgios Kyriacos Panayiotou",
+    "Wham!",
+    "Wham"
+   ],
+   "checked": [],
+   "composers": [
+    "George Michael"
+   ],
+   "entry": {
+    "genre_ids": [
+     10402
+    ],
+    "id": 1649403,
+    "original_title": "George Michael: The Faith Tour",
+    "poster_path": "/LXqHnaJ4ffkcx5YCuJN1noxkhr.jpg",
+    "release_date": "2026-11-04",
+    "title": "George Michael: The Faith Tour",
     "vote_count": 5
    }
   },
@@ -2114,6 +2135,25 @@
     "vote_count": 5
    }
   },
+  "1760311": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     16,
+     10751,
+     14,
+     12
+    ],
+    "id": 1760311,
+    "original_title": "Barbie in the Nutcracker",
+    "poster_path": "/suSGUJNCgdVVjCXcJBDtjKxWTlg.jpg",
+    "release_date": "2026-10-31",
+    "title": "Barbie in the Nutcracker",
+    "vote_count": 5
+   }
+  },
   "1762506": {
    "aliases": [],
    "checked": [
@@ -2505,7 +2545,9 @@
   },
   "1796883": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2701,7 +2743,9 @@
     "Evgeniy Galperin",
     "Evgueni Gasperine"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Evgueni Galperine",
     "Sacha Galperine"
@@ -2742,7 +2786,9 @@
   },
   "947493": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2760,16 +2806,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-14",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 2,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 81
-  },
   {
    "date": "2026-10-15",
    "deferred": 0,
@@ -3059,6 +3095,16 @@
    "searched": 3,
    "searches": 3,
    "tracked": 139
+  },
+  {
+   "date": "2026-11-13",
+   "deferred": 0,
+   "due": 4,
+   "found": 0,
+   "recorded": 4,
+   "searched": 4,
+   "searches": 6,
+   "tracked": 141
   }
  ]
 }
