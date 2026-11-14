@@ -1,20 +1,9 @@
 {
- "tagged": 14592,
- "inputTokens": 15551518,
- "outputTokens": 5572372,
- "cost": 32.7848,
+ "tagged": 14597,
+ "inputTokens": 15556847,
+ "outputTokens": 5574011,
+ "cost": 32.7983,
  "runs": [
-  {
-   "at": "2026-09-20T00:24:53Z",
-   "kind": "backfill",
-   "tagged": 4,
-   "skipped": 0,
-   "failed": 0,
-   "inputTokens": 4674,
-   "outputTokens": 1660,
-   "cost": 0.013,
-   "remaining": 0
-  },
   {
    "at": "2026-09-20T00:45:09Z",
    "kind": "backfill",
@@ -662,6 +651,17 @@
    "inputTokens": 9148,
    "outputTokens": 2569,
    "cost": 0.022,
+   "remaining": 0
+  },
+  {
+   "at": "2026-11-14T16:29:42Z",
+   "kind": "daily",
+   "tagged": 5,
+   "skipped": 0,
+   "failed": 0,
+   "inputTokens": 5329,
+   "outputTokens": 1639,
+   "cost": 0.0135,
    "remaining": 0
   }
  ]

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T17:38:24Z",
+  "updatedAt": "2026-11-14T16:29:42Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -375332,10 +375332,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Disfigure+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OAGE1vqzfTa",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5126840/564a831d7a0b2e1b21ee34293f6d00c81462e758/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 30,
       "themes": [
         "Action",
         "Horror"
@@ -375354,7 +375353,10 @@
         6,
         6
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_lma9zYhDzAF7BLzlEli0eE-CU-pTLcCK4",
+      "tracksN": 30,
+      "playsTotal": 11411
     },
     {
       "id": "film-best-of-the-best",
@@ -375543,10 +375545,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Soul%27s+Remnant+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_sCKPQqvTFZY",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5147600/e87f8360f22e5c840821974bb88dfa025e37bcd2/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 50,
       "themes": [
         "Fantasy"
       ],
@@ -375566,7 +375567,10 @@
         10,
         9
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_k-G6I4fSp_miZLNsM6jX4YX_rc6g6Q2rA",
+      "tracksN": 51,
+      "playsTotal": 4521
     },
     {
       "id": "nullbreak-protocol",
@@ -375618,10 +375622,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Darby+Is+Here+Forever+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_x4yTnF8VqD1",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3528890/8753fbf942b39d1ac17ec18e93ea4cf2a76a68d1/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 8,
       "themes": [
         "Action"
       ],
@@ -375641,7 +375644,10 @@
         2,
         2
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_lPvSXWuncDGd5YdDsAZw7Wy_YjfgvrrqM",
+      "tracksN": 8,
+      "playsTotal": 19
     },
     {
       "id": "dressmaker",
@@ -398451,6 +398457,406 @@
         9,
         8,
         8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "cuby-clicker",
+      "title": "Cuby Clicker Soundtrack",
+      "medium": "game",
+      "game": "Cuby Clicker",
+      "composers": [
+        "GabboKoi"
+      ],
+      "date": "2026-11-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5419960/Cuby_Clicker_Soundtrack/",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cuby+Clicker+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5419960/cc8ed9ae6f95bdf836dfa7cd4af1a17b9d259388/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "robogal-gaga-delta-lady",
+      "title": "RoboGAL: Gaga Delta Lady Soundtrack",
+      "medium": "game",
+      "game": "RoboGAL: Gaga Delta Lady",
+      "composers": [
+        "Neoware"
+      ],
+      "date": "2026-11-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5481290/RoboGAL_Gaga_Delta_Lady_Soundtrack/",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=RoboGAL%3A+Gaga+Delta+Lady+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5481290/97f5ec090589e19c728870930a97401ab03436a6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Shooter",
+        "Platform",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-bell-echoes",
+      "title": "The Bell Echoes Soundtrack",
+      "medium": "game",
+      "game": "The Bell Echoes",
+      "composers": [
+        "Checkmate"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5554110/The_Bell_Echoes_Soundtrack/",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Bell+Echoes+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5554110/988425ddc075871dfa629602284474c8effa366a/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "ablahshikar",
+      "title": "Ablahshikar Soundtrack",
+      "medium": "game",
+      "game": "Ablahshikar",
+      "composers": [
+        "Samekh Meryuiet"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5491960/Ablahshikar_Soundtrack/",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ablahshikar+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5491960/6587f561ab39359e64c77c53d5bc48f1587a5b65/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Simulator",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "falling-face-fragments",
+      "title": "Falling Face Fragments Soundtrack",
+      "medium": "game",
+      "game": "Falling Face Fragments",
+      "composers": [
+        "AshumArcade"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5511040/Falling_Face_Fragments_Soundtrack/",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Falling+Face+Fragments+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5511040/6b6e8926df8d348c20e448a04a24df656abc8779/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-heartland",
+      "title": "Heartland Soundtrack",
+      "medium": "film",
+      "game": "Heartland",
+      "composers": [
+        "Danny Bensi",
+        "Saunder Jurriaans"
+      ],
+      "date": "2026-11-13",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1543469",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Heartland+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_E3EseGeO9Pv",
+      "art": "https://yt3.googleusercontent.com/usCrRZRGW3P7a9vUoUkjIIgAx-3gOj4UpfcFVWvXK-w6f42obdGzVKgaTXjUM3qGo5WcWTLThGZFihyE=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Heartland (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "composerAliases": [
+        "Daniel Bensi"
+      ],
+      "albumArtists": [
+        "Jessica Chastain",
+        "Heartland Cast"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lOmxH3nc0-Hcf-U08hxLEI0oVe-2j1sVI",
+      "scoresN": 3,
+      "songsAlbum": true,
+      "tracksN": 15,
+      "playsTotal": 1789,
+      "moods": [
+        "intense",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-ghost-soldier",
+      "title": "Ghost Soldier Soundtrack",
+      "medium": "film",
+      "game": "Ghost Soldier",
+      "composers": [
+        "Brandon Roberts"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1562642",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Ghost+Soldier+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Xa4dQ47iXeY",
+      "art": "https://yt3.googleusercontent.com/8J9g4kkEK-z1LBza9sr60DT9gPGOeCsICFwKDHLZqXQIkKz3Cc-g2wBhwi7lfvWOT_nfRhoERmlE3aDj=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Ghost Soldier (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Brandon Roberts"
+      ],
+      "ytmPlaylistId": "OLAK5uy_l4C0D3T27xNcLy97gfoeFP0ebeQItH14I",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 1227,
+      "moods": [
+        "intense",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-snoopy-presents-12-days-of-snoopy",
+      "title": "Snoopy Presents: 12 Days of Snoopy Soundtrack",
+      "medium": "film",
+      "game": "Snoopy Presents: 12 Days of Snoopy",
+      "composers": [
+        "Jeff Morrow"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1780407",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Snoopy+Presents%3A+12+Days+of+Snoopy+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_gTrd0Yj4R3X",
+      "art": "https://yt3.googleusercontent.com/T1EvjpBwqOBdiD7iyjijA0CR6V0p-WYmktVa5naXovTxSYUUghnfscrz3FPhtV3rhTGM12vdeuKMm7E=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Snoopy Presents: 12 Days of Snoopy (Original Apple TV Soundtrack)",
+      "genres": [
+        "Animation",
+        "Family"
+      ],
+      "composerAliases": [
+        "Jeffrey Morrow",
+        "Jeffrey D. Morrow"
+      ],
+      "albumArtists": [
+        "Peanuts",
+        "Jeff Morrow"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lfU1UiE_0WLXpVxhG0dTd3Cq5uwpqDtnk",
+      "scoresN": 14,
+      "tracksN": 14,
+      "playsTotal": 2362,
+      "moods": [
+        "joyful",
+        "playful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        6,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-remarried-empress",
+      "title": "The Remarried Empress Soundtrack",
+      "medium": "tv",
+      "game": "The Remarried Empress",
+      "composers": [
+        "Kim Tae-seong"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/279246",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Remarried+Empress+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_1qUfwCCxhHL",
+      "art": "https://yt3.googleusercontent.com/Rx8u34ZV3eURBdwi7coWX515pjceXnpvplNwDErAz3n7QZVgMfrE5ywk43EKHWiXoIcZSNW_IVRLi9Pi7A=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Remarried Empress (Original Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "composerAliases": [
+        "김태성",
+        "Gim Taeseong",
+        "Taeseong Kim",
+        "Tae-seong Kim",
+        "Kim Tae-sung",
+        "Tae Seong Kim",
+        "Kim Tae-seong",
+        "Кім Тхе-сон",
+        "Кім Те-сон"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_m0EplIZLK_UUXkgnJOTCLCMRL6Bfb4wQM",
+      "scoresN": 11,
+      "songsAlbum": true,
+      "tracksN": 34,
+      "playsTotal": 20355,
+      "moods": [
+        "hopeful",
+        "romantic",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-bass-x-machina",
+      "title": "Bass X Machina Soundtrack",
+      "medium": "tv",
+      "game": "Bass X Machina",
+      "composers": [
+        "Roman GianArthur",
+        "Nate \"Rocket\" Wonder"
+      ],
+      "date": "2026-11-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/314271",
+          "seenAt": "2026-11-14T16:21:08Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bass+X+Machina+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MMzUlbbix8v",
+      "art": "https://yt3.googleusercontent.com/-YN6GOEi70rlJrxvRGghWCKoFXob7KiN0EgBfLzFuZO8n1Vh-UlwioThD-UxMXBsoxWaqX4xdxuGFN2z=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Bass X Machina (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Animation",
+        "Western",
+        "Sci-Fi & Fantasy"
+      ],
+      "composerAliases": [
+        "Nate Wonder"
+      ],
+      "albumArtists": [
+        "Roman GianArthur"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kUrRp4kjNUS1XbcnOJQHfHOctNkvsa9Ac",
+      "scoresN": 23,
+      "tracksN": 25,
+      "playsTotal": 39616,
+      "moods": [
+        "intense",
+        "playful",
+        "epic"
+      ],
+      "moodsN": [
+        5,
+        4,
+        4
       ],
       "moodsV": 2
     }

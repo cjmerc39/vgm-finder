@@ -601,7 +601,9 @@
   },
   "1438966": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1152,20 +1154,20 @@
     "vote_count": 5
    }
   },
-  "1562642": {
+  "1570467": {
    "aliases": [],
    "checked": [],
    "composers": [],
    "entry": {
     "genre_ids": [
-     28,
+     18,
      53
     ],
-    "id": 1562642,
-    "original_title": "Ghost Soldier",
-    "poster_path": "/8Y4oJ5iUs3hgPcDB3SIEmsNYjZk.jpg",
-    "release_date": "2026-11-06",
-    "title": "Ghost Soldier",
+    "id": 1570467,
+    "original_title": "Frequency of Fear",
+    "poster_path": "/aUAHtBalyuiMMu8dz2iJN90kYm6.jpg",
+    "release_date": "2026-11-05",
+    "title": "Frequency of Fear",
     "vote_count": 5
    }
   },
@@ -1439,7 +1441,9 @@
   },
   "1623256": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1452,6 +1456,30 @@
     "release_date": "2026-10-15",
     "title": "The Storm",
     "vote_count": 10
+   }
+  },
+  "1630420": {
+   "aliases": [
+    "Toy Terdsak Janpan",
+    "\u0e40\u0e17\u0e34\u0e14\u0e28\u0e31\u0e01\u0e14\u0e34\u0e4c \u0e08\u0e31\u0e19\u0e17\u0e23\u0e4c\u0e1b\u0e32\u0e19"
+   ],
+   "checked": [],
+   "composers": [
+    "Terdsak Janpan",
+    "Thanawin Kaewsri"
+   ],
+   "entry": {
+    "genre_ids": [
+     28,
+     12,
+     35
+    ],
+    "id": 1630420,
+    "original_title": "\u0e41\u0e01\u0e4a\u0e07\u0e42\u0e2d\u0e40\u0e27\u0e2d\u0e23\u0e4c",
+    "poster_path": "/rve2a7JXJbXivl0JakEWgc9Fhwh.jpg",
+    "release_date": "2026-11-04",
+    "title": "Overacting",
+    "vote_count": 5
    }
   },
   "1632103": {
@@ -1516,7 +1544,8 @@
     "Mondo Boys"
    ],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Mike Griffin",
@@ -1971,7 +2000,8 @@
   "1751701": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2256,7 +2286,8 @@
   "1770859": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2807,16 +2838,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-15",
-   "deferred": 0,
-   "due": 3,
-   "found": 0,
-   "recorded": 4,
-   "searched": 3,
-   "searches": 3,
-   "tracked": 85
-  },
-  {
    "date": "2026-10-16",
    "deferred": 0,
    "due": 2,
@@ -3105,6 +3126,16 @@
    "searched": 4,
    "searches": 6,
    "tracked": 141
+  },
+  {
+   "date": "2026-11-14",
+   "deferred": 0,
+   "due": 5,
+   "found": 0,
+   "recorded": 2,
+   "searched": 5,
+   "searches": 6,
+   "tracked": 142
   }
  ]
 }
