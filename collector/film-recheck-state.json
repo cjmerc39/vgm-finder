@@ -111,6 +111,23 @@
     "vote_count": 7
    }
   },
+  "1193614": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35,
+     18
+    ],
+    "id": 1193614,
+    "original_title": "Il faut br\u00fbler maman",
+    "poster_path": "/3KDbl3m07R9hsFgM04JetRSJWeR.jpg",
+    "release_date": "2026-11-11",
+    "title": "Il faut br\u00fbler maman",
+    "vote_count": 9
+   }
+  },
   "1198654": {
    "aliases": [],
    "checked": [
@@ -517,7 +534,8 @@
   "1433583": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Latham Gaines",
@@ -661,7 +679,9 @@
   },
   "1452110": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -698,7 +718,8 @@
   "1466670": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1016,7 +1037,9 @@
   },
   "1536343": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1137,7 +1160,9 @@
   },
   "1561726": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Pol\u00e9rik Rouvi\u00e8re"
    ],
@@ -1425,7 +1450,9 @@
   },
   "1620918": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -1778,7 +1805,9 @@
   },
   "1713935": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2838,16 +2867,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-16",
-   "deferred": 0,
-   "due": 2,
-   "found": 0,
-   "recorded": 3,
-   "searched": 2,
-   "searches": 3,
-   "tracked": 86
-  },
-  {
    "date": "2026-10-17",
    "deferred": 0,
    "due": 2,
@@ -3136,6 +3155,16 @@
    "searched": 5,
    "searches": 6,
    "tracked": 142
+  },
+  {
+   "date": "2026-11-15",
+   "deferred": 0,
+   "due": 7,
+   "found": 0,
+   "recorded": 1,
+   "searched": 7,
+   "searches": 8,
+   "tracked": 143
   }
  ]
 }

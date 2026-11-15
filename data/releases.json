@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T16:29:42Z",
+  "updatedAt": "2026-11-15T16:54:52Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -391293,7 +391293,13 @@
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5465660/b74cb9b2de798d8418c6a95e895995f82b076e97/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [],
+      "genres": [
+        "Platform",
+        "Racing",
+        "Simulator"
+      ]
     },
     {
       "id": "cyberdeck",
@@ -396524,7 +396530,12 @@
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5148580/806581c7ac769f0d73304966e6641b8ae79ecc24/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ]
     },
     {
       "id": "white-whisper",
@@ -398856,6 +398867,243 @@
       "moodsN": [
         5,
         4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "beat-bots",
+      "title": "Beat Bots Soundtrack",
+      "medium": "game",
+      "game": "Beat Bots",
+      "composers": [
+        "Matt J Hart"
+      ],
+      "date": "2026-11-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5531470/Beat_Bots_Soundtrack/",
+          "seenAt": "2026-11-15T16:46:24Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Beat+Bots+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5531470/4aec3f61c608d3edacfa7e9c40353a69c480f891/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "beastforger-autobattle",
+      "title": "Beastforger Autobattle Soundtrack",
+      "medium": "game",
+      "game": "Beastforger Autobattle",
+      "composers": [
+        "Will ideas"
+      ],
+      "date": "2026-11-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5321950/Beastforger_Autobattle_Soundtrack/",
+          "seenAt": "2026-11-15T16:46:24Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Beastforger+Autobattle+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5321950/0d0426fa0ea5b8a54266c0e45cb72a994361e42a/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "sweet-swipe",
+      "title": "Sweet Swipe Soundtrack",
+      "medium": "game",
+      "game": "Sweet Swipe",
+      "composers": [
+        "João Pedro Dias"
+      ],
+      "date": "2026-11-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4397760/Sweet_Swipe_Soundtrack/",
+          "seenAt": "2026-11-15T16:46:24Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sweet+Swipe+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4397760/0c2606fb41aa0db00e7a93629dc53abb591b20de/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "computer-sillow",
+      "title": "Computer Sillow Soundtrack",
+      "medium": "game",
+      "game": "Computer Sillow",
+      "composers": [
+        "kessieswingemoji",
+        "OutWoods",
+        "OJSTheCoder"
+      ],
+      "date": "2026-11-14",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5154190/Computer_Sillow_Soundtrack/",
+          "seenAt": "2026-11-15T16:46:24Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Computer+Sillow+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5154190/cf4f4f21bc15166354407b2ca99fed133c98a3f3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 21,
+      "themes": [
+        "Comedy",
+        "Drama"
+      ],
+      "genres": [
+        "Point-and-click",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "playful",
+        "mysterious",
+        "driving"
+      ],
+      "moodsN": [
+        6,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-a-proud-family-wizmas",
+      "title": "A Proud Family Wizmas Soundtrack",
+      "medium": "film",
+      "game": "A Proud Family Wizmas",
+      "composers": [
+        "Kurt Farquhar"
+      ],
+      "date": "2026-11-14",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1716604",
+          "seenAt": "2026-11-15T16:46:24Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Proud+Family+Wizmas+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_4LfmMA3U7ES",
+      "art": "https://yt3.googleusercontent.com/9rXudZ-S4qjIcofsmJ4XATeVZSXGIpFfBXBQt4SNC7vsw6KjxlZjjl7vOPsVhMat0b3TEXtEMZZpbKb0=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "A Proud Family Wizmas (Original Soundtrack)",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Music"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nOBkgb7Vtzqa-AJMiHLniptp2i203RgsY",
+      "scoresN": 1,
+      "songsAlbum": true,
+      "tracksN": 10,
+      "playsTotal": 996,
+      "moods": [
+        "joyful",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        5,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-yaga",
+      "title": "YAGA Soundtrack",
+      "medium": "tv",
+      "game": "YAGA",
+      "composers": [
+        "Trevor Yuile"
+      ],
+      "date": "2026-10-23",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/314360",
+          "seenAt": "2026-11-15T16:46:24Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=YAGA+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_bMjFgtGAYHw",
+      "art": "https://yt3.googleusercontent.com/RxFCyIGYKAjgVls10TMAG6iXLuvaGOAioGbcveV1_RHEdHu8z5-OR_zfxYQ_O1RlAFbn2lCSqpDTEj5K=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Yaga (Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy",
+        "Mystery"
+      ],
+      "composersFrom": "album"
+    },
+    {
+      "id": "tv-the-greatest",
+      "title": "The Greatest Soundtrack",
+      "medium": "tv",
+      "game": "The Greatest",
+      "composers": [
+        "Stanley A. Smith"
+      ],
+      "date": "2026-11-04",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/258989",
+          "seenAt": "2026-11-15T16:46:24Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Greatest+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_GafqGbzNGwg",
+      "art": "https://yt3.googleusercontent.com/_iNwHAaJY762tZUXt-0_CKhG70fOezq23oj0Ha3h0yg1ofZCxmd8BCorgJdwfn4vlBHQUlaL9BN6JL01=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Greatest (Prime Original Series Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "Stanley A. Smith"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kniIGW0w-ylGDoF9JAyx7VO27rhmncArE",
+      "scoresN": 22,
+      "tracksN": 26,
+      "playsTotal": 101759,
+      "moods": [
+        "intense",
+        "heroic",
+        "hopeful"
+      ],
+      "moodsN": [
+        9,
+        7,
         4
       ],
       "moodsV": 2
