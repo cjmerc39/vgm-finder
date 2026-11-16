@@ -486,6 +486,24 @@
     "vote_count": 6
    }
   },
+  "1429602": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Gael Rakotondrabe"
+   ],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1429602,
+    "original_title": "15/18",
+    "poster_path": "/nmIQQG8IDy0WYQy79Z0N7PhRNHg.jpg",
+    "release_date": "2026-11-11",
+    "title": "A Place to Heal",
+    "vote_count": 9
+   }
+  },
   "1429713": {
    "aliases": [],
    "checked": [
@@ -1073,6 +1091,22 @@
     "release_date": "2026-10-29",
     "title": "You, Me, Us",
     "vote_count": 12
+   }
+  },
+  "1544126": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1544126,
+    "original_title": "Il rumore delle cose nuove",
+    "poster_path": "/2Wq59OquoiAmgs1A86FfJcnzxfs.jpg",
+    "release_date": "2026-11-12",
+    "title": "Il rumore delle cose nuove",
+    "vote_count": 5
    }
   },
   "1544163": {
@@ -1713,6 +1747,25 @@
     "vote_count": 5
    }
   },
+  "1664682": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Flavia Tygel"
+   ],
+   "entry": {
+    "genre_ids": [
+     80,
+     99
+    ],
+    "id": 1664682,
+    "original_title": "Suzane von Richthofen: O Que o Tempo N\u00e3o Apaga",
+    "poster_path": "/pO3BpFyC9B2fnfByJulxjs3hM4P.jpg",
+    "release_date": "2026-11-11",
+    "title": "The Unthinkable Daughter",
+    "vote_count": 7
+   }
+  },
   "1678120": {
    "aliases": [],
    "checked": [],
@@ -1824,7 +1877,8 @@
   "1723662": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2255,7 +2309,8 @@
   "1764166": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2333,7 +2388,9 @@
   },
   "1771323": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2867,16 +2924,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-17",
-   "deferred": 0,
-   "due": 2,
-   "found": 0,
-   "recorded": 1,
-   "searched": 2,
-   "searches": 2,
-   "tracked": 87
-  },
-  {
    "date": "2026-10-18",
    "deferred": 0,
    "due": 3,
@@ -3165,6 +3212,16 @@
    "searched": 7,
    "searches": 8,
    "tracked": 143
+  },
+  {
+   "date": "2026-11-16",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 3,
+   "searched": 3,
+   "searches": 3,
+   "tracked": 146
   }
  ]
 }

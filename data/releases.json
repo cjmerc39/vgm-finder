@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T16:54:52Z",
+  "updatedAt": "2026-11-16T20:07:05Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -376646,10 +376646,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Nitro+Turtles+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ELHivAnj5Xj",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5238920/c35c1d94274144156bc69a5387a4003177081960/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 4,
       "themes": [
         "Action",
         "Kids"
@@ -376668,7 +376667,10 @@
         2,
         1
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_nohl5xxJD8ctOTfPQnfHr3tGI517VJoCc",
+      "tracksN": 4,
+      "playsTotal": 36
     },
     {
       "id": "the-well-is-not-empty",
@@ -399062,7 +399064,25 @@
         "Sci-Fi & Fantasy",
         "Mystery"
       ],
-      "composersFrom": "album"
+      "composersFrom": "album",
+      "albumArtists": [
+        "Trevor Yuile"
+      ],
+      "ytmPlaylistId": "OLAK5uy_mXrT93u2hOeJaCK2mEMQ9uAbgYCuyPD7A",
+      "scoresN": 24,
+      "tracksN": 24,
+      "playsTotal": 10474,
+      "moods": [
+        "intense",
+        "mysterious",
+        "suspenseful"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ],
+      "moodsV": 2
     },
     {
       "id": "tv-the-greatest",
@@ -399107,6 +399127,296 @@
         4
       ],
       "moodsV": 2
+    },
+    {
+      "id": "tied-to-the-beat",
+      "title": "Tied to the Beat Soundtrack",
+      "medium": "game",
+      "game": "Tied to the Beat",
+      "composers": [
+        "Lianes8 Studio"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5544100/Tied_to_the_Beat_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tied+to+the+Beat+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5544100/d9dad950558423e71ea4ed57ad7a0531e9b096b5/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Music",
+        "Role-playing (RPG)"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-legend-of-the-crystal-revolver",
+      "title": "The Legend of the Crystal Revolver Soundtrack",
+      "medium": "game",
+      "game": "The Legend of the Crystal Revolver",
+      "composers": [
+        "Eseresh"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5278640/The_Legend_of_the_Crystal_Revolver_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Legend+of+the+Crystal+Revolver+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5278640/d099eeb43b84cb928ac8247aefaa8d94e20c9d7b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Fantasy"
+      ],
+      "genres": [
+        "Platform",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "hillthorn",
+      "title": "Hillthorn Original Soundtrack",
+      "medium": "game",
+      "game": "Hillthorn",
+      "composers": [
+        "Antoine Vachon"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5411250/Hillthorn_Original_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hillthorn+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5411250/62ff779a1c9efe78523fdfeff494bf87d9d2c9d3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror",
+        "Thriller",
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "off-the-table",
+      "title": "Off the Table! Soundtrack",
+      "medium": "game",
+      "game": "Off the Table!",
+      "composers": [
+        "Gravi"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5513430/Off_the_Table_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Off+the+Table%21+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5513430/d522919dbc61288068c87f213871ed93e2b89baa/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "composersFrom": "steam",
+      "moods": [
+        "joyful",
+        "playful"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "trees-hate-you",
+      "title": "Trees Hate You Soundtrack",
+      "medium": "game",
+      "game": "Trees Hate You",
+      "composers": [
+        "Jonathon Website"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5364210/Trees_Hate_You_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Trees+Hate+You+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5364210/79371234cd3b1d797c9575670323846a1beea166/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 15,
+      "themes": [
+        "Comedy"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "playful",
+        "suspenseful"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "the-alighieri-circle-dante-s-bloodline",
+      "title": "The Alighieri Circle: Dante's Bloodline Soundtrack",
+      "medium": "game",
+      "game": "The Alighieri Circle: Dante's Bloodline",
+      "composers": [
+        "Enrico Maria Perlini"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5477850/The_Alighieri_Circle_Dantes_Bloodline_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Alighieri+Circle%3A+Dante%27s+Bloodline+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5477850/9cae9ffc7b5e2ee1762c3c9c3073fd66f0c5fa39/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror",
+        "Thriller",
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "obey-me-sinner-s-choice-lucifer",
+      "title": "Obey Me! Sinner's Choice: Lucifer Soundtrack",
+      "medium": "game",
+      "game": "Obey Me! Sinner's Choice: Lucifer",
+      "composers": [],
+      "date": "2026-11-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5282320/Obey_Me_Sinners_Choice_Lucifer_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Obey+Me%21+Sinner%27s+Choice%3A+Lucifer+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5282320/c688291445534cbde71342847ad0aab2a9be09ce/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Fantasy",
+        "Romance"
+      ],
+      "genres": [
+        "Adventure",
+        "Visual Novel"
+      ]
+    },
+    {
+      "id": "abyss-ring",
+      "title": "Abyss Ring Soundtrack",
+      "medium": "game",
+      "game": "Abyss Ring",
+      "composers": [],
+      "date": "2026-11-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5322960/Abyss_Ring_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Abyss+Ring+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5322960/70444ea8b55786e85013b6dbe8396906ad95cc8c/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Horror"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Indie"
+      ]
+    },
+    {
+      "id": "arcane-dash-a-pixel-adventure",
+      "title": "Arcane Dash - A Pixel Adventure Soundtrack",
+      "medium": "game",
+      "game": "Arcane Dash - A Pixel Adventure",
+      "composers": [
+        "James Snee"
+      ],
+      "date": "2026-11-15",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5195520/Arcane_Dash_A_Pixel_Adventure_Soundtrack/",
+          "seenAt": "2026-11-16T19:59:01Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Arcane+Dash+-+A+Pixel+Adventure+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5195520/47ede4a9a5f154dc61d70148b5d6024854830b32/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
     }
   ]
 }
