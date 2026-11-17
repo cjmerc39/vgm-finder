@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T20:07:05Z",
+  "updatedAt": "2026-11-17T19:04:29Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -399416,6 +399416,605 @@
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5195520/47ede4a9a5f154dc61d70148b5d6024854830b32/capsule_231x87.jpg",
       "notable": true,
       "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "squomb",
+      "title": "Squomb Soundtrack",
+      "medium": "game",
+      "game": "Squomb",
+      "composers": [
+        "Mirko Topalski"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5495880/Squomb_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Squomb+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5495880/c68519ecac9a48a39a90d14686ff5f38d9fd6ec0/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-liar-king",
+      "title": "The Liar King Soundtrack",
+      "medium": "game",
+      "game": "The Liar King",
+      "composers": [
+        "BeriaLabs Games"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5349470/The_Liar_King_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Liar+King+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5349470/0487f39094a61cbcc9fe034613f37449d5dfec72/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "orb-rush-vr",
+      "title": "Orb Rush VR Soundtrack",
+      "medium": "game",
+      "game": "Orb Rush VR",
+      "composers": [
+        "Ralf Starke"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5593180/Orb_Rush_VR_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Orb+Rush+VR+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5593180/e20cf96e0a47261678e2c809adf4f4d4f11db91b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "milki-delivery",
+      "title": "Milki Delivery Soundtrack",
+      "medium": "game",
+      "game": "Milki Delivery",
+      "composers": [
+        "Zakku"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5433500/Milki_Delivery_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/milki-delivery",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Milki+Delivery+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_7ANuiReCe32",
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5433500/61f037c1f8f24a6902375f8fc6707bd5b7246774/capsule_231x87.jpg",
+      "notable": true,
+      "albumTitle": "Milki Delivery Original Soundtrack",
+      "company": "Doot",
+      "console": false,
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "themes": [],
+      "ytmPlaylistId": "OLAK5uy_lP8BkbE9Ji-04jtgPp9cJxuu0rbpjx9Bg",
+      "tracksN": 16,
+      "playsTotal": 88,
+      "moods": [
+        "peaceful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "choice-of-life-modern-ages",
+      "title": "Choice of Life: Modern Ages Soundtrack",
+      "medium": "game",
+      "game": "Choice of Life: Modern Ages",
+      "composers": [
+        "misha root"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5529130/Choice_of_Life_Modern_Ages_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Choice+of+Life%3A+Modern+Ages+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5529130/86703f9d9b97bb4dd19ae4d1bda449d2c46ad519/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "rise-of-the-merchants",
+      "title": "Rise of the Merchants Soundtrack",
+      "medium": "game",
+      "game": "Rise of the Merchants",
+      "composers": [
+        "Torben Schmidt"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5438910/Rise_of_the_Merchants_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rise+of+the+Merchants+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5438910/b4eb2e224f4f9000d1b080822b0909c1f811db40/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Strategy"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "beyond-reality-ost-aspis",
+      "title": "Beyond Reality (OST ASPIS)",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Danila Ponomarev"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5585320/Beyond_Reality_OST_ASPIS/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Beyond+Reality+%28OST+ASPIS%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5585320/0025e3436c0436a3a07d0e7beb4ea84793ce50a2/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Action",
+        "Science fiction",
+        "Horror",
+        "Thriller",
+        "Drama"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "amnea28-two-eternities",
+      "title": "Amnea28: Two Eternities Soundtrack",
+      "medium": "game",
+      "game": "Amnea28: Two Eternities",
+      "composers": [
+        "Aila",
+        "Alexey Susloparov"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5463920/Amnea28_Two_Eternities_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Amnea28%3A+Two+Eternities+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5463920/c5c922198081503498399f6ffcd584974719c936/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "kaz",
+      "title": "KAZ Soundtrack",
+      "medium": "game",
+      "game": "KAZ",
+      "composers": [
+        "Thumbless"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5307480/KAZ_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=KAZ+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5307480/0903c121032cb33be060aafe50956a4fd30238b4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Survival"
+      ],
+      "genres": [
+        "Indie",
+        "Arcade"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "funeral-for-the-sun",
+      "title": "Funeral for the Sun Soundtrack",
+      "medium": "game",
+      "game": "Funeral for the Sun",
+      "composers": [
+        "Alejandro G. Cid Delgado"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5490900/Funeral_for_the_Sun_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Funeral+for+the+Sun+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5490900/19d7aff5a59604fe444904a1406aeb9ca1bc5ab8/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "melvor-idle-2-a-runescape-adventure",
+      "title": "Melvor Idle 2: A RuneScape Adventure Soundtrack",
+      "medium": "game",
+      "game": "Melvor Idle 2: A RuneScape Adventure",
+      "composers": [
+        "Matteo Palmer"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5552220/Melvor_Idle_2_A_RuneScape_Adventure_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Melvor+Idle+2%3A+A+RuneScape+Adventure+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5552220/885c8d36342eb1b54196d153f47e014f07c1d3f4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 13,
+      "themes": [
+        "Fantasy"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "mysterious",
+        "epic",
+        "heroic"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "pith",
+      "title": "PITH Soundtrack",
+      "medium": "game",
+      "game": "PITH",
+      "composers": [],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5551350/PITH_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=PITH+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5551350/f589e11696ccfde0b0e6164214468a9300c33722/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Mystery"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ]
+    },
+    {
+      "id": "crimson-desert-original-soundtrack-volume-2",
+      "title": "Crimson Desert Original Soundtrack Volume 2",
+      "medium": "game",
+      "game": null,
+      "composers": [],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5555930/Crimson_Desert_Original_Soundtrack_Volume_2/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Crimson+Desert+Original+Soundtrack+Volume+2",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5555930/da40c552dfbb9a8ad0de4d47c6b70d46561bb343/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Open world"
+      ],
+      "genres": [
+        "Adventure"
+      ]
+    },
+    {
+      "id": "morimens-ost-vivian-ep-a-cuckoo-and-her-sparrows-nest",
+      "title": "Morimens OST┊Vivian EP: A Cuckoo and Her Sparrows' Nest",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "F.R.K. @B.I.A.V. Studio"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5307100/Morimens_OSTVivian_EP_A_Cuckoo_and_Her_Sparrows_Nest/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Morimens+OST%E2%94%8AVivian+EP%3A+A+Cuckoo+and+Her+Sparrows%27+Nest",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5307100/9dbc98b58029eff4233a293a0c6ea7f6a6a38773/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Action",
+        "Fantasy",
+        "Drama",
+        "Mystery"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Turn-based strategy (TBS)"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "wald-guard",
+      "title": "Wald-Guard Soundtrack",
+      "medium": "game",
+      "game": "Wald-Guard",
+      "composers": [
+        "Fryrvo"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5531090/WaldGuard_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wald-Guard+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5531090/f816846b1bcb57ffdb3c1331d70dbe9ec0d41e0b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "deadline",
+      "title": "Deadline Soundtrack",
+      "medium": "game",
+      "game": "Deadline",
+      "composers": [
+        "Orikazi"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5066500/Deadline_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Deadline+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5066500/f48944567cd24944648986d66c89a11ecc58cbf1/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 3,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Platform",
+        "Puzzle",
+        "Strategy"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "playful",
+        "joyful",
+        "wonder"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hidden-cats-in-spooky-carnival",
+      "title": "Hidden Cats in Spooky Carnival Soundtrack",
+      "medium": "game",
+      "game": "Hidden Cats in Spooky Carnival",
+      "composers": [
+        "Thiago Romanelli",
+        "Thiago Adamo"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5476510/Hidden_Cats_in_Spooky_Carnival_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hidden+Cats+in+Spooky+Carnival+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5476510/211ceb38009c9e253e49715b6dc727de5aade707/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "remparz",
+      "title": "RemparZ Soundtrack",
+      "medium": "game",
+      "game": "RemparZ",
+      "composers": [
+        "iFredZ"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5404230/RemparZ_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=RemparZ+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5404230/68aeeb9b839b2dd33fbbc3ea3ad49d5d0eda818d/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "tied-to-the-beat-song-survivors",
+      "title": "Tied to the Beat: Song Survivors Soundtrack",
+      "medium": "game",
+      "game": "Tied to the Beat: Song Survivors",
+      "composers": [
+        "Lianes8 Studio"
+      ],
+      "date": "2026-11-16",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5544100/Tied_to_the_Beat_Song_Survivors_Soundtrack/",
+          "seenAt": "2026-11-17T18:55:37Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Tied+to+the+Beat%3A+Song+Survivors+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5544100/d9dad950558423e71ea4ed57ad7a0531e9b096b5/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Music",
+        "Role-playing (RPG)"
+      ],
       "composersFrom": "steam"
     }
   ]
