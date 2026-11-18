@@ -269,6 +269,30 @@
     "vote_count": 6
    }
   },
+  "1300968": {
+   "aliases": [
+    "James Howard Newton",
+    "James Newton-Howard",
+    "The Behemoth! Collective"
+   ],
+   "checked": [],
+   "composers": [
+    "James Newton Howard"
+   ],
+   "entry": {
+    "genre_ids": [
+     878,
+     28,
+     12
+    ],
+    "id": 1300968,
+    "original_title": "The Hunger Games: Sunrise on the Reaping",
+    "poster_path": "/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg",
+    "release_date": "2026-11-18",
+    "title": "The Hunger Games: Sunrise on the Reaping",
+    "vote_count": 21
+   }
+  },
   "1314786": {
    "aliases": [],
    "checked": [],
@@ -1191,6 +1215,23 @@
     "release_date": "2026-10-10",
     "title": "WWE Money in the Bank 2026",
     "vote_count": 7
+   }
+  },
+  "1551025": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     10749,
+     35
+    ],
+    "id": 1551025,
+    "original_title": "Guarding Stars",
+    "poster_path": "/wWNizZ4IcSld3xXH1WEXziJiNJN.jpg",
+    "release_date": "2026-11-18",
+    "title": "Guarding Stars",
+    "vote_count": 8
    }
   },
   "1558568": {
@@ -2849,6 +2890,25 @@
     "vote_count": 5
    }
   },
+  "1823907": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Nainita Desai"
+   ],
+   "entry": {
+    "genre_ids": [
+     99,
+     80
+    ],
+    "id": 1823907,
+    "original_title": "Russell Brand: Open Secret",
+    "poster_path": "/rYhOUFkNRwD4ETV7BFcsID53yyi.jpg",
+    "release_date": "2026-11-13",
+    "title": "Russell Brand: Open Secret",
+    "vote_count": 6
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -2987,16 +3047,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-19",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 4,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 95
-  },
   {
    "date": "2026-10-20",
    "deferred": 0,
@@ -3286,6 +3336,16 @@
    "searched": 4,
    "searches": 7,
    "tracked": 149
+  },
+  {
+   "date": "2026-11-18",
+   "deferred": 0,
+   "due": 0,
+   "found": 0,
+   "recorded": 3,
+   "searched": 0,
+   "searches": 0,
+   "tracked": 152
   }
  ]
 }

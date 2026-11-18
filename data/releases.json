@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T19:04:29Z",
+  "updatedAt": "2026-11-18T18:47:05Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -394227,13 +394227,18 @@
           "type": "catalog",
           "url": "https://store.steampowered.com/app/5314560/Chivalware_Original_Game_Soundtrack/",
           "seenAt": "2026-11-05T17:49:43Z"
+        },
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/chivalware",
+          "seenAt": "2026-11-18T18:37:05Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Chivalware+%28Original+Game+Soundtrack%29",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Lwdgyyjmp49",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5314560/c9ad17a8e7570b2c18a2101dc8723098e2d93214/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 13,
       "themes": [
         "Action"
       ],
@@ -394252,7 +394257,12 @@
         3,
         3
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "albumTitle": "Chivalware (Original Game Soundtrack)",
+      "console": true,
+      "ytmPlaylistId": "OLAK5uy_nu3PDY3qF94oYSeg5lpdKNNdW4ugVQLVQ",
+      "tracksN": 13,
+      "playsTotal": 337
     },
     {
       "id": "緋修羅-hijura-scarlet-gear",
@@ -396383,6 +396393,12 @@
           "type": "catalog",
           "url": "https://www.igdb.com/games/tanuki-pons-summer",
           "seenAt": "2026-11-10T17:27:26Z"
+        },
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5530500/TANUKI_Pons_Summer_Original_Game_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Tanuki%3A+Pon%27s+Summer+Soundtrack",
@@ -400016,6 +400032,711 @@
         "Role-playing (RPG)"
       ],
       "composersFrom": "steam"
+    },
+    {
+      "id": "you",
+      "title": "YOU Soundtrack",
+      "medium": "game",
+      "game": "YOU",
+      "composers": [
+        "Cherry'Start"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5541830/YOU_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=YOU+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5541830/d1d9c324c6dbca01a7cdfd7fc77b2a9f4bc5645b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "idle-deepcore",
+      "title": "Idle Deepcore Soundtrack",
+      "medium": "game",
+      "game": "Idle Deepcore",
+      "composers": [
+        "swissm4n"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5540840/Idle_Deepcore_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Idle+Deepcore+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5540840/cefe65b936a902f3f847832562522dc9a9e5f072/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "minsgon-simulator",
+      "title": "Minsgon Simulator Soundtrack",
+      "medium": "game",
+      "game": "Minsgon Simulator",
+      "composers": [
+        "BlouneMusic"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5145010/Minsgon_Simulator_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minsgon+Simulator+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5145010/b0c766ad2e1d9eef54a31798fd7ec9b2e97ff175/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 7,
+      "themes": [
+        "Fantasy",
+        "Business"
+      ],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "playful",
+        "joyful",
+        "dreamy"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "freeze-line",
+      "title": "Freeze Line Original Soundtrack",
+      "medium": "game",
+      "game": "Freeze Line",
+      "composers": [
+        "ZeroTick Studio"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4936580/Freeze_Line_Original_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Freeze+Line+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4936580/87a4ba7de60c28b9fde6e62b8986c936be4d7fa9/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Stealth"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "witch-s-last-curse",
+      "title": "Witch's Last Curse Soundtrack",
+      "medium": "game",
+      "game": "Witch's Last Curse",
+      "composers": [
+        "Granitefire Games"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5530700/Witchs_Last_Curse_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Witch%27s+Last+Curse+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5530700/02dbc2f3f88d5350620464bfe56eed9964b39d63/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-magus-circle",
+      "title": "The Magus Circle Original Soundtrack",
+      "medium": "game",
+      "game": "The Magus Circle",
+      "composers": [
+        "Sean Porio",
+        "Zachary Mezzo"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5310630/The_Magus_Circle_Original_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Magus+Circle+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5310630/af45002cbf41fa65a6d5955e10105bf73520f64d/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Fantasy"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "legend-of-edda-pegasus",
+      "title": "Legend of Edda: Pegasus Soundtrack",
+      "medium": "game",
+      "game": "Legend of Edda: Pegasus",
+      "composers": [],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3161300/Legend_of_Edda_Pegasus_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Legend+of+Edda%3A+Pegasus+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3161300/1d8eb7074b42620d87da767d7814311e863b01e4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)"
+      ]
+    },
+    {
+      "id": "grave-ambition",
+      "title": "Grave Ambition Soundtrack",
+      "medium": "game",
+      "game": "Grave Ambition",
+      "composers": [
+        "Baron Von Ruzij"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5501610/Grave_Ambition_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Grave+Ambition+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5501610/5bac71a2ac4c6de4e003fe8ec732eb33639c34a4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "mysteries-of-rodion",
+      "title": "Mysteries of Rodion - Original Soundtrack",
+      "medium": "game",
+      "game": "Mysteries of Rodion",
+      "composers": [
+        "VOLGANKA GAMES"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5603850/Mysteries_of_Rodion_Original_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Mysteries+of+Rodion+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5603850/b87c28a0be80f8a217181d02087f622e8422560e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "house-of-pips-a-domino-roguelike",
+      "title": "House of Pips: a Domino Roguelike Soundtrack",
+      "medium": "game",
+      "game": "House of Pips: a Domino Roguelike",
+      "composers": [
+        "Marza",
+        "Slapcraft"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5305610/House_of_Pips_a_Domino_Roguelike_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=House+of+Pips%3A+a+Domino+Roguelike+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5305610/822ada73936eb88a11b279841f133f4a545c5bf8/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "s-a-m-stasis-asset-management",
+      "title": "S.A.M. - Stasis Asset Management Soundtrack",
+      "medium": "game",
+      "game": "S.A.M. - Stasis Asset Management",
+      "composers": [
+        "MagnumOpus Inc."
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5566970/SAM_Stasis_Asset_Management_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=S.A.M.+-+Stasis+Asset+Management+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5566970/72bfc914e9107da16553532c1048776134897ad1/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "s-a-m-stasis-asset-management-soundtrack-case-file",
+      "title": "S.A.M. - Stasis Asset Management Soundtrack & Case File",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "MagnumOpus Inc."
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5566980/SAM_Stasis_Asset_Management_Soundtrack_Case_File/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=S.A.M.+-+Stasis+Asset+Management+Soundtrack+%26+Case+File",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5566980/72bfc914e9107da16553532c1048776134897ad1/capsule_231x87.jpg",
+      "notable": true,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "into-the-crypt",
+      "title": "Into the Crypt Original Soundtrack",
+      "medium": "game",
+      "game": "Into the Crypt",
+      "composers": [
+        "Dirk J. Neefs"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5528260/Into_the_Crypt_Original_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Into+the+Crypt+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5528260/c82dbfe769b574f5dd5d01ac15f52040aac38f36/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 3,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "suspenseful",
+        "ominous",
+        "intense"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hello-kitty-island-adventure-volume-3",
+      "title": "Hello Kitty Island Adventure: Volume 3 (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Hello Kitty Island Adventure: Volume 3",
+      "composers": [
+        "Phill Boucher"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5525710/Hello_Kitty_Island_Adventure_Volume_3_Original_Game_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hello+Kitty+Island+Adventure%3A+Volume+3+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5525710/56ff796c79ed12fdbe2e2b407920d29944412dd4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 25,
+      "themes": [
+        "Action",
+        "Open world"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "wonder",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hello-kitty-island-adventure-volume-2",
+      "title": "Hello Kitty Island Adventure: Volume 2 (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Hello Kitty Island Adventure: Volume 2",
+      "composers": [
+        "Phill Boucher"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5525470/Hello_Kitty_Island_Adventure_Volume_2_Original_Game_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hello+Kitty+Island+Adventure%3A+Volume+2+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5525470/2f1ceecfbb6cea26e04ea4659af3ecc5d6594bd6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 26,
+      "themes": [
+        "Action",
+        "Open world"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "joyful",
+        "playful",
+        "wonder"
+      ],
+      "moodsN": [
+        10,
+        9,
+        7
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hello-kitty-island-adventure-volume-1",
+      "title": "Hello Kitty Island Adventure: Volume 1 (Original Game Soundtrack)",
+      "medium": "game",
+      "game": "Hello Kitty Island Adventure: Volume 1",
+      "composers": [
+        "Phill Boucher"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3485850/Hello_Kitty_Island_Adventure_Volume_1_Original_Game_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hello+Kitty+Island+Adventure%3A+Volume+1+%28Original+Game+Soundtrack%29",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3485850/92fa8b295d01d58dceefb9eec960bd6238442815/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Open world"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "type-to-survive",
+      "title": "Type to Survive Soundtrack",
+      "medium": "game",
+      "game": "Type to Survive",
+      "composers": [
+        "Maj Labs"
+      ],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5393100/Type_to_Survive_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Type+to+Survive+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5393100/512e63eefb1b064ce9bf283b10654ef566fc2950/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "lighthouse-of-madness",
+      "title": "Lighthouse of Madness Soundtrack",
+      "medium": "game",
+      "game": "Lighthouse of Madness",
+      "composers": [],
+      "date": "2026-11-17",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3130010/Lighthouse_of_Madness_Soundtrack/",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lighthouse+of+Madness+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3130010/49a1a0e48f2bebe89e64e348c759bd8dcb0e87c2/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Horror"
+      ],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ]
+    },
+    {
+      "id": "tv-the-lord-of-the-rings-the-rings-of-power-season-3",
+      "title": "The Lord of the Rings: The Rings of Power Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "The Lord of the Rings: The Rings of Power",
+      "composers": [
+        "Bear McCreary",
+        "Howard Shore"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/84773",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Lord+of+the+Rings%3A+The+Rings+of+Power+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cNY6XVQazt8",
+      "art": "https://yt3.googleusercontent.com/RlPmFUpXX5hv4UkPGKQzT1EzioM8azC8ZzgPwk3VD806_2nwRgvVtmaoHCN96z0Wp76gEDZojEAYgOTDXA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Lord of the Rings: The Rings of Power (Season 3: Prime Original Series Soundtrack)",
+      "genres": [
+        "Action & Adventure",
+        "Sci-Fi & Fantasy"
+      ],
+      "composerAliases": [
+        "Howard Leslie Shore"
+      ],
+      "albumArtists": [
+        "Bear McCreary"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lg46u4wGmdHRfOl_jOj9uCeLmk1L8A7Qk",
+      "scoresN": 22,
+      "tracksN": 22,
+      "playsTotal": 867800,
+      "moods": [
+        "ominous",
+        "intense",
+        "suspenseful"
+      ],
+      "moodsN": [
+        8,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-visionquest-season-1-vol-2",
+      "title": "VisionQuest Season 1 Vol. 2 Soundtrack",
+      "medium": "tv",
+      "game": "VisionQuest",
+      "composers": [
+        "Mick Giacchino"
+      ],
+      "date": "2026-10-13",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/213375",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=VisionQuest+Season+1+Vol.+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_zpJpDoVxnvY",
+      "art": "https://yt3.googleusercontent.com/DhhXrwRI_5_yhdXPSzAStqu_sIKnqh2E4h6NgbJiLVFRm0vpaftLYyRYzyfYrH1RQySCfJD4eZmdOKg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "VisionQuest - Vol. 2 (Episodes 5-8) (Original Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama"
+      ],
+      "composerAliases": [
+        "Matthew Giacchino"
+      ],
+      "albumArtists": [
+        "Mick Giacchino"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lskeWf9AeQBz-G1yAn1pUDR3bI3QBpHV4",
+      "scoresN": 24,
+      "tracksN": 25,
+      "playsTotal": 532412,
+      "moods": [
+        "intense",
+        "mysterious",
+        "epic"
+      ],
+      "moodsN": [
+        6,
+        5,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-sunshine-through-the-rain",
+      "title": "Sunshine through the Rain Soundtrack",
+      "medium": "tv",
+      "game": "Sunshine through the Rain",
+      "composers": [
+        "裘德",
+        "米卡",
+        "尹露浠"
+      ],
+      "date": "2026-11-06",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/307853",
+          "seenAt": "2026-11-18T18:37:05Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Sunshine+through+the+Rain+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_8RriaV8O9Sm",
+      "art": "https://yt3.googleusercontent.com/TgC1TSOZhWvqtmGYgn0f1hzWaw9cbePhnE9KDJseWfTbBOZtjAygteVcej4vOiEfbxUcnc8RCTpxpkyA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "《今天是太阳雨》OST",
+      "genres": [
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "裘德",
+        "米卡",
+        "尹露浠"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lnD3fclg9VVYIuWfcnDlctL8z-aE76caA",
+      "scoresN": 1,
+      "tracksN": 1,
+      "playsTotal": 56000,
+      "moods": [
+        "hopeful",
+        "tender",
+        "romantic"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
     }
   ]
 }
