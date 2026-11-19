@@ -78,6 +78,29 @@
     "vote_count": 10
    }
   },
+  "1131943": {
+   "aliases": [
+    "Marcelo Uchoa Zarvos",
+    "Marcelo U. Zarvos"
+   ],
+   "checked": [],
+   "composers": [
+    "Marcelo Zarvos"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     36,
+     35
+    ],
+    "id": 1131943,
+    "original_title": "Madden",
+    "poster_path": "/bRa83oPFFPqaAF3wrpVWPqqfFel.jpg",
+    "release_date": "2026-11-18",
+    "title": "Madden",
+    "vote_count": 19
+   }
+  },
   "1154730": {
    "aliases": [],
    "checked": [],
@@ -901,6 +924,25 @@
     "vote_count": 5
    }
   },
+  "1502759": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Olivier Marguerit"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     53
+    ],
+    "id": 1502759,
+    "original_title": "Jupiter",
+    "poster_path": "/b5keZSJLDEJMGNWrht1urXmqrW5.jpg",
+    "release_date": "2026-11-18",
+    "title": "Jupiter",
+    "vote_count": 10
+   }
+  },
   "1504972": {
    "aliases": [],
    "checked": [],
@@ -1139,22 +1181,6 @@
     "vote_count": 12
    }
   },
-  "1544126": {
-   "aliases": [],
-   "checked": [],
-   "composers": [],
-   "entry": {
-    "genre_ids": [
-     18
-    ],
-    "id": 1544126,
-    "original_title": "Il rumore delle cose nuove",
-    "poster_path": "/2Wq59OquoiAmgs1A86FfJcnzxfs.jpg",
-    "release_date": "2026-11-12",
-    "title": "Il rumore delle cose nuove",
-    "vote_count": 5
-   }
-  },
   "1544163": {
    "aliases": [],
    "checked": [],
@@ -1215,23 +1241,6 @@
     "release_date": "2026-10-10",
     "title": "WWE Money in the Bank 2026",
     "vote_count": 7
-   }
-  },
-  "1551025": {
-   "aliases": [],
-   "checked": [],
-   "composers": [],
-   "entry": {
-    "genre_ids": [
-     10749,
-     35
-    ],
-    "id": 1551025,
-    "original_title": "Guarding Stars",
-    "poster_path": "/wWNizZ4IcSld3xXH1WEXziJiNJN.jpg",
-    "release_date": "2026-11-18",
-    "title": "Guarding Stars",
-    "vote_count": 8
    }
   },
   "1558568": {
@@ -2820,7 +2829,9 @@
   },
   "1802674": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -3047,16 +3058,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-20",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 2,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 97
-  },
   {
    "date": "2026-10-21",
    "deferred": 0,
@@ -3345,6 +3346,16 @@
    "recorded": 3,
    "searched": 0,
    "searches": 0,
+   "tracked": 152
+  },
+  {
+   "date": "2026-11-19",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 2,
+   "searched": 1,
+   "searches": 1,
    "tracked": 152
   }
  ]

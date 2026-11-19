@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T18:47:05Z",
+  "updatedAt": "2026-11-19T18:59:00Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -400735,6 +400735,631 @@
         1,
         1,
         1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "starduster",
+      "title": "STARDUSTER Soundtrack",
+      "medium": "game",
+      "game": "STARDUSTER",
+      "composers": [
+        "Refusta"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5539380/STARDUSTER_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=STARDUSTER+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5539380/b045b60eb7b4e9fc9fbbd5f69f624394d45fb2e8/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "solar-voltage",
+      "title": "Solar Voltage Soundtrack",
+      "medium": "game",
+      "game": "Solar Voltage",
+      "composers": [
+        "TwistBit"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5566360/Solar_Voltage_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Solar+Voltage+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5566360/4da7c3cc99d7cbd9c476c96cfbcd17adb1692380/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Science fiction"
+      ],
+      "genres": [
+        "Platform",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "about-a-boy",
+      "title": "About a Boy Soundtrack",
+      "medium": "game",
+      "game": "About a Boy",
+      "composers": [
+        "Return 0 Game Studio"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/3817580/About_a_Boy_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=About+a+Boy+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3817580/79e542b17cd5aef70d35f10659f3e5628b2bef59/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 16,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "playful",
+        "tender",
+        "mysterious"
+      ],
+      "moodsN": [
+        5,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "lost-host",
+      "title": "Lost Host Soundtrack",
+      "medium": "game",
+      "game": "Lost Host",
+      "composers": [
+        "Narvydas Žukauskas"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5549540/Lost_Host_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Lost+Host+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5549540/7918dc941139213dc0c185b3c44584db855921bd/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "4X (explore, expand, exploit, and exterminate)"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "in-the-unknown-the-night-walk",
+      "title": "In The Unknown - The Night Walk OST",
+      "medium": "game",
+      "game": "In The Unknown - The Night Walk",
+      "composers": [
+        "Anelie M"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5540960/In_The_Unknown_The_Night_Walk_OST/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=In+The+Unknown+-+The+Night+Walk+OST",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5540960/f7b0f9b7f87341d7462d132622ca465d8f443e97/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "the-night-walk-gravel-and-breath",
+      "title": "The Night Walk — Gravel and Breath",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Attic at Night"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5584930/The_Night_Walk_Gravel_and_Breath/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Night+Walk+%E2%80%94+Gravel+and+Breath+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5584930/f7b0f9b7f87341d7462d132622ca465d8f443e97/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [],
+      "genres": [
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "from-space-operation-clear-skies",
+      "title": "From Space - Operation: Clear Skies Soundtrack",
+      "medium": "game",
+      "game": "From Space - Operation: Clear Skies",
+      "composers": [
+        "Deon van Heerden"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5521090/From_Space_Operation_Clear_Skies_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=From+Space+-+Operation%3A+Clear+Skies+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5521090/b5402cf0b74e5067ca441fdd4ba2d8e35b5d1bae/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Shooter",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "forestrike",
+      "title": "Forestrike Soundtrack",
+      "medium": "game",
+      "game": "Forestrike",
+      "composers": [
+        "Thomas Olsson",
+        "Maxime Olsson"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/2325940/Forestrike_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Forestrike+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2325940/195269bdd814b83e8dd980a064cf3099e06c3712/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Fighting",
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "classroom-in-sora",
+      "title": "Classroom in Sora Soundtrack",
+      "medium": "game",
+      "game": "Classroom in Sora",
+      "composers": [
+        "hypo-"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5112260/Classroom_in_Sora_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Classroom+in+Sora+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5112260/a0c5c104813bf955af8eaafb25e303dfd6260553/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "one-fenix-down",
+      "title": "One Fenix Down Soundtrack",
+      "medium": "game",
+      "game": "One Fenix Down",
+      "composers": [
+        "Thomas J. Peters",
+        "JamCat",
+        "YouFulca"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5555280/One_Fenix_Down_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=One+Fenix+Down+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5555280/7a2bc95b00dd858aec9eab609772a71ebe990d85/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 50,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "epic",
+        "intense",
+        "peaceful"
+      ],
+      "moodsN": [
+        10,
+        9,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "dragona-fireborne",
+      "title": "Dragona: Fireborne Soundtrack",
+      "medium": "game",
+      "game": "Dragona: Fireborne",
+      "composers": [],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5564340/Dragona_Fireborne_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dragona%3A+Fireborne+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5564340/30e8e4d1f8c9f3c3e5b7c7b1ff7b6c75364feaa9/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Indie"
+      ]
+    },
+    {
+      "id": "poop-killer-the-golden-fart",
+      "title": "Poop Killer - The Golden Fart Soundtrack",
+      "medium": "game",
+      "game": "Poop Killer - The Golden Fart",
+      "composers": [
+        "brazatattoo"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5598830/Poop_Killer_The_Golden_Fart_Soundtrack/",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Poop+Killer+-+The+Golden+Fart+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5598830/4afc376ab42d3c973270421522e3f1369960f4be/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror",
+        "Thriller",
+        "Comedy"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "grand-theft-auto-vi",
+      "title": "Grand Theft Auto VI Soundtrack",
+      "medium": "game",
+      "game": "Grand Theft Auto VI",
+      "composers": [
+        "Memê no Beat Soundtracks"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "igdb",
+          "type": "catalog",
+          "url": "https://www.igdb.com/games/grand-theft-auto-vi",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Grand+Theft+Auto+VI+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_LvsEESf9A78",
+      "art": "https://yt3.googleusercontent.com/KySKYMZptNCrmxhhijh77X30_1Gv8t7Kn70dmxyHmZIrizWn-ZUu9TmKzNK4I_XYe6UKdCO_iUBpE6Y3=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Grand Theft Auto VI Soundtrack",
+      "company": "Rockstar Games",
+      "console": true,
+      "genres": [
+        "Shooter",
+        "Racing",
+        "Adventure"
+      ],
+      "themes": [
+        "Action",
+        "Comedy",
+        "Sandbox",
+        "Open world"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nh64xIjHgHfklQy2mugBRPRhK59-4ihWE",
+      "tracksN": 1,
+      "playsTotal": 557,
+      "moods": [
+        "intense",
+        "epic",
+        "driving"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-guarding-stars",
+      "title": "Guarding Stars Soundtrack",
+      "medium": "film",
+      "game": "Guarding Stars",
+      "composers": [
+        "Robert Duncan"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1551025",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Guarding+Stars+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Ohkq99waE9I",
+      "art": "https://yt3.googleusercontent.com/cQ8B46TTdDR2PKw14IO0vHd2k9JMVOg43yLrMqbQZy-Cm-P6rxlq0edu4yHwVFNfAIBz0vFgRHAepCo=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Guarding Stars (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Robert Duncan"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nQfsnmuhSHVVvYWUQWxBN3czzFHKeZMoI",
+      "scoresN": 20,
+      "tracksN": 20,
+      "playsTotal": 1244,
+      "moods": [
+        "romantic",
+        "playful",
+        "joyful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-the-noise-of-new-things",
+      "title": "The Noise of New Things Soundtrack",
+      "medium": "film",
+      "game": "The Noise of New Things",
+      "composers": [
+        "Daprinski"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1544126",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Noise+of+New+Things+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_EtdSioP4Afu",
+      "art": "https://yt3.googleusercontent.com/3fqTmqrvX-ay-LRhKxPUqXZMHRqpHVfh6hW1_uw3gZfSxNpv55A_nGSRkbcuB-vUQENa8UVQS7Me2gM=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Il Rumore delle Cose Nuove (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Daprinski"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n6xb0_2GjJle-zpHH-W9zBBcXQFUjFOhA",
+      "scoresN": 16,
+      "tracksN": 16,
+      "playsTotal": 3069,
+      "moods": [
+        "tender",
+        "romantic",
+        "transcendent"
+      ],
+      "moodsN": [
+        9,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-victorian-psycho",
+      "title": "Victorian Psycho Soundtrack",
+      "medium": "film",
+      "game": "Victorian Psycho",
+      "composers": [
+        "Ariel Marx"
+      ],
+      "date": "2026-11-11",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1379486",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Victorian+Psycho+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_lqUz2mrBcly",
+      "art": "https://yt3.googleusercontent.com/GHP7Pe8Zd_kzpRtz78bU3oM9sSAiQbWs0Poa1DoYXAhf-KmkSpbSApp0heYra_LjzAGYnEe7tMansOpB=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Victorian Psycho (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "composerAliases": [
+        "Ariel Rose Marx"
+      ],
+      "albumArtists": [
+        "Ariel Marx"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lwSl5SKvCmTajWOTmPY9u5wGI-jE5DnSA",
+      "scoresN": 17,
+      "tracksN": 17,
+      "playsTotal": 1487,
+      "moods": [
+        "eerie",
+        "ominous",
+        "intense"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-empress-season-3",
+      "title": "The Empress Season 3 Soundtrack",
+      "medium": "tv",
+      "game": "The Empress",
+      "composers": [
+        "Sebastian Damerius",
+        "Lisa Morgenstern",
+        "Johannes Lehniger"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/131488",
+          "seenAt": "2026-11-19T18:49:52Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Empress+Season+3+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_JYyxyAdYfoW",
+      "art": "https://yt3.googleusercontent.com/uCfbGGJDAngwQNeZnKrQL1RhFoZ7iMIfWGIgt9_77zvbiUJQPLIe7xHdrI6L2kX5RgDzee0aih6Yne6L=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Empress: Season 3 (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Sebastian Damerius",
+        "Lisa Morgenstern",
+        "Johannes Lehniger"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nBH_F3DFLylINuK6mFhHGYi3aNWAfkW7w",
+      "scoresN": 30,
+      "tracksN": 30,
+      "playsTotal": 4879,
+      "moods": [
+        "intense",
+        "romantic",
+        "tender"
+      ],
+      "moodsN": [
+        9,
+        6,
+        6
       ],
       "moodsV": 2
     }
