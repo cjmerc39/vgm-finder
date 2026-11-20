@@ -103,7 +103,9 @@
   },
   "1154730": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -252,27 +254,6 @@
     "release_date": "2026-10-13",
     "title": "Let's Have Kids!",
     "vote_count": 6
-   }
-  },
-  "1286656": {
-   "aliases": [
-    "David Palmer"
-   ],
-   "checked": [],
-   "composers": [
-    "Dave Palmer"
-   ],
-   "entry": {
-    "genre_ids": [
-     18,
-     36
-    ],
-    "id": 1286656,
-    "original_title": "I Play Rocky",
-    "poster_path": "/xE5tY3lppZUyG7WKKThsuYHuAHr.jpg",
-    "release_date": "2026-11-06",
-    "title": "I Play Rocky",
-    "vote_count": 7
    }
   },
   "1294189": {
@@ -845,7 +826,9 @@
   },
   "1480856": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Sven Faulconer"
    ],
@@ -945,7 +928,9 @@
   },
   "1504972": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Michel Petrossian"
    ],
@@ -1081,6 +1066,24 @@
     "release_date": "2026-08-30",
     "title": "AEW All In: London",
     "vote_count": 8
+   }
+  },
+  "1522071": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Roque Ba\u00f1os"
+   ],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1522071,
+    "original_title": "Ruega por nosotras",
+    "poster_path": "/6CWXhVFfin3zh1LZ5HsWnzTXTPN.jpg",
+    "release_date": "2026-11-06",
+    "title": "Pray for Us",
+    "vote_count": 5
    }
   },
   "1528830": {
@@ -1282,6 +1285,23 @@
     "poster_path": "/5xmXVd7nCK3tAo34XkO58SxUCip.jpg",
     "release_date": "2026-10-16",
     "title": "Masterplan",
+    "vote_count": 5
+   }
+  },
+  "1561834": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     10749,
+     18
+    ],
+    "id": 1561834,
+    "original_title": "Son Yemek",
+    "poster_path": "/kdz0fHndmpFKb0iwJvauyPHRAh7.jpg",
+    "release_date": "2026-11-18",
+    "title": "Last Meal",
     "vote_count": 5
    }
   },
@@ -2901,6 +2921,22 @@
     "vote_count": 5
    }
   },
+  "1820101": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     14
+    ],
+    "id": 1820101,
+    "original_title": "The Invisible Horse",
+    "poster_path": "/r8hrwq16pdEp8z8QshG0994SY8k.jpg",
+    "release_date": "2026-11-09",
+    "title": "The Invisible Horse",
+    "vote_count": 5
+   }
+  },
   "1823907": {
    "aliases": [],
    "checked": [],
@@ -3058,16 +3094,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-21",
-   "deferred": 0,
-   "due": 0,
-   "found": 0,
-   "recorded": 1,
-   "searched": 0,
-   "searches": 0,
-   "tracked": 98
-  },
   {
    "date": "2026-10-22",
    "deferred": 0,
@@ -3357,6 +3383,16 @@
    "searched": 1,
    "searches": 1,
    "tracked": 152
+  },
+  {
+   "date": "2026-11-20",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 3,
+   "searched": 3,
+   "searches": 4,
+   "tracked": 154
   }
  ]
 }
