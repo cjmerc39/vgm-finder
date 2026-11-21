@@ -1305,6 +1305,24 @@
     "vote_count": 5
    }
   },
+  "1568060": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     10749,
+     53
+    ],
+    "id": 1568060,
+    "original_title": "Perfectos mentirosos",
+    "poster_path": "/kej8EipJOvfHUHFg5wtT7gQ6bNb.jpg",
+    "release_date": "2026-11-20",
+    "title": "Perfect Liars",
+    "vote_count": 13
+   }
+  },
   "1570467": {
    "aliases": [],
    "checked": [],
@@ -1500,7 +1518,8 @@
   "1607127": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1532,6 +1551,22 @@
     "release_date": "2026-10-02",
     "title": "Infirmary",
     "vote_count": 6
+   }
+  },
+  "1613021": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1613021,
+    "original_title": "Camembert",
+    "poster_path": "/6SXZREznWh5vAQCcndzRuu2Q3Se.jpg",
+    "release_date": "2026-11-18",
+    "title": "Camembert",
+    "vote_count": 17
    }
   },
   "1613037": {
@@ -2744,7 +2779,9 @@
   },
   "1796707": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -3095,16 +3132,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-22",
-   "deferred": 0,
-   "due": 1,
-   "found": 0,
-   "recorded": 1,
-   "searched": 1,
-   "searches": 1,
-   "tracked": 98
-  },
-  {
    "date": "2026-10-23",
    "deferred": 0,
    "due": 4,
@@ -3393,6 +3420,16 @@
    "searched": 3,
    "searches": 4,
    "tracked": 154
+  },
+  {
+   "date": "2026-11-21",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 2,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 156
   }
  ]
 }

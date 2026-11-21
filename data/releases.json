@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T18:24:42Z",
+  "updatedAt": "2026-11-21T17:12:58Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -377741,10 +377741,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Unshine+Arcade+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_KBv2H86ChCE",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5108750/2636ac4cef42608c2a9ffe1f17302874bb1b8998/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 8,
       "themes": [
         "Action",
         "Horror",
@@ -377766,7 +377765,10 @@
         2,
         1
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_k8XhI1Q9TbjUlRkuyavLcHyZXgeOtMC8Y",
+      "tracksN": 8,
+      "playsTotal": 99
     },
     {
       "id": "guinea-pig-gunner",
@@ -401726,6 +401728,339 @@
         8,
         7,
         6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "ゾンビポリス-ゾンビ刑事と凍てつく真夏のお正月",
+      "title": "ゾンビポリス ～ゾンビ刑事と凍てつく真夏のお正月～ Soundtrack",
+      "medium": "game",
+      "game": "ゾンビポリス ～ゾンビ刑事と凍てつく真夏のお正月～",
+      "composers": [
+        "畠中弦",
+        "田ノ上昂成"
+      ],
+      "date": "2026-11-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5392220/ゾンビポリス_ゾンビ刑事と凍てつく真夏のお正月_Soundtrack/",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E3%82%BE%E3%83%B3%E3%83%93%E3%83%9D%E3%83%AA%E3%82%B9+%EF%BD%9E%E3%82%BE%E3%83%B3%E3%83%93%E5%88%91%E4%BA%8B%E3%81%A8%E5%87%8D%E3%81%A6%E3%81%A4%E3%81%8F%E7%9C%9F%E5%A4%8F%E3%81%AE%E3%81%8A%E6%AD%A3%E6%9C%88%EF%BD%9E+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5392220/f73bad8100b81b621d57072d873b84add6d880b4/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "duckpool",
+      "title": "Duckpool Soundtrack",
+      "medium": "game",
+      "game": "Duckpool",
+      "composers": [
+        "Ormai Peter"
+      ],
+      "date": "2026-11-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5490850/Duckpool_Soundtrack/",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Duckpool+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5490850/d6de8465e3a2237ac3f5b17f6897e72007c0816b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "wildcat",
+      "title": "Wildcat Soundtrack",
+      "medium": "game",
+      "game": "Wildcat",
+      "composers": [
+        "Suricatta"
+      ],
+      "date": "2026-11-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5620290/Wildcat_Soundtrack/",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Wildcat+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5620290/d9ac6d497a0bfee4f8e26df9db7ac5a341e60777/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "boardroom-wars-fight-for-kashistan",
+      "title": "Boardroom Wars: Fight for Kashistan Soundtrack",
+      "medium": "game",
+      "game": "Boardroom Wars: Fight for Kashistan",
+      "composers": [
+        "Alex Shesha"
+      ],
+      "date": "2026-11-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5333360/Boardroom_Wars_Fight_for_Kashistan_Soundtrack/",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Boardroom+Wars%3A+Fight+for+Kashistan+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5333360/34df0b7cb7c048ad67814da6e13a849ae3925487/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "birdwatching-notebook",
+      "title": "Birdwatching Notebook Soundtrack",
+      "medium": "game",
+      "game": "Birdwatching Notebook",
+      "composers": [
+        "Wei Wei"
+      ],
+      "date": "2026-11-20",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4684580/Birdwatching_Notebook_Soundtrack/",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Birdwatching+Notebook+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4684580/ad4378cce015995f8f06e1987c6894a0642c4a31/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Sandbox"
+      ],
+      "genres": [
+        "Point-and-click",
+        "Simulator"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-steps",
+      "title": "Steps Soundtrack",
+      "medium": "film",
+      "game": "Steps",
+      "composers": [
+        "Kris Bowers"
+      ],
+      "date": "2026-11-20",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1595124",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Steps+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_MI2UyG3ZvzD",
+      "art": "https://yt3.googleusercontent.com/aQs3lmZhRjIXoFgWGAaXmd9y2P81KwTdB5zi8FM5zw5Rukr8rh7koygjMF8TffJFX6LUvmDKVaqgOBns=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Steps (Soundtrack from the Netflix Film)",
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy"
+      ],
+      "composerAliases": [
+        "Kristopher Bowers"
+      ],
+      "albumArtists": [
+        "Kris Bowers",
+        "Justin Tranter"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n_e8Ohpwog2dy77bB_nvYqdFir9NSadTw",
+      "scoresN": 43,
+      "tracksN": 47,
+      "playsTotal": 2150224,
+      "moods": [
+        "playful",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        15,
+        9,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-black-clover",
+      "title": "Black Clover Soundtrack",
+      "medium": "tv",
+      "game": "Black Clover",
+      "composers": [
+        "Minako Seki"
+      ],
+      "date": "2017-10-03",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/73223",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Black+Clover+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_FizCWm1u4HU",
+      "art": "https://yt3.googleusercontent.com/LDqOKMXJfxhvnnQRC8TIa0VDV0sVnH4uL1HFqCDd4ARZuI80qNe_DIEAviE-2dmZ-BlnbrsToiRhE85vfg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Black Clover Soundtrack",
+      "genres": [
+        "Animation",
+        "Action & Adventure",
+        "Sci-Fi & Fantasy",
+        "Anime"
+      ],
+      "composerAliases": [
+        "関美奈子"
+      ],
+      "albumArtists": [
+        "Vmak Music"
+      ],
+      "ytmPlaylistId": "OLAK5uy_n2jBPN_EmYaJtoQl_E136XnLLRIQJ2qRo",
+      "scoresN": 3,
+      "tracksN": 3,
+      "playsTotal": 2574,
+      "moods": [
+        "heroic",
+        "epic",
+        "hopeful"
+      ],
+      "moodsN": [
+        2,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-12-12-12-season-1",
+      "title": "12 12 12 Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "12 12 12",
+      "composers": [
+        "Federico Jusid"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/254630",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=12+12+12+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_cHBmBaDbuHG",
+      "art": "https://yt3.googleusercontent.com/YKozzbrD3PstJP4motedR2ul_0l2ckBQ3iTlIU_L7vrt-1mXn-oWSLPHX3kFazHAzAwhCLCBjocXsTA=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "12 12 12, Season 1 (Apple Original Series Soundtrack)",
+      "genres": [
+        "Action & Adventure",
+        "Crime",
+        "Drama"
+      ],
+      "composerAliases": [
+        "Frederico Jusid",
+        " Juan Federico Jusid"
+      ],
+      "albumArtists": [
+        "Federico Jusid"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kAkia6w2FBSho4wRdW7SntxCtYLeZj6ZE",
+      "scoresN": 25,
+      "tracksN": 25,
+      "playsTotal": 691,
+      "moods": [
+        "intense",
+        "driving",
+        "mysterious"
+      ],
+      "moodsN": [
+        7,
+        6,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-brothers-season-1",
+      "title": "Brothers Season 1 Soundtrack",
+      "medium": "tv",
+      "game": "Brothers",
+      "composers": [
+        "Zachary Dawes",
+        "Nick Sena"
+      ],
+      "date": "2026-09-22",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/250203",
+          "seenAt": "2026-11-21T17:04:47Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Brothers+Season+1+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_erKqqRuiIbw",
+      "art": "https://yt3.googleusercontent.com/ahJaAgVCBlWhs0DX103-YGYlitpMI6g2oQhhi_M46M-M_5QRelOvOYOV8PhvFw1VVf2BItj10yXP4eI3rw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Brothers, Season 1 (Apple Original Series Soundtrack)",
+      "genres": [
+        "Comedy"
+      ],
+      "composerAliases": [
+        "Zack Dawes"
+      ],
+      "albumArtists": [
+        "Zachary Dawes",
+        "Nick Sena"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k1nfC8o5q3rl1r8Wx19nfnrBguf8w07lg",
+      "scoresN": 28,
+      "tracksN": 28,
+      "playsTotal": 555,
+      "moods": [
+        "playful",
+        "tender",
+        "joyful"
+      ],
+      "moodsN": [
+        10,
+        5,
+        5
       ],
       "moodsV": 2
     }
