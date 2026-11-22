@@ -37,28 +37,6 @@
     "vote_count": 8
    }
   },
-  "1084409": {
-   "aliases": [
-    "Dickon Hinchcliffe"
-   ],
-   "checked": [],
-   "composers": [
-    "Dickon Hinchliffe"
-   ],
-   "entry": {
-    "genre_ids": [
-     18,
-     80,
-     53
-    ],
-    "id": 1084409,
-    "original_title": "A Talent for Murder",
-    "poster_path": "/mstDPKNKgSGFvVFVdfzeMNkcyw2.jpg",
-    "release_date": "2026-10-23",
-    "title": "A Talent for Murder",
-    "vote_count": 5
-   }
-  },
   "1084815": {
    "aliases": [],
    "checked": [
@@ -273,30 +251,6 @@
     "vote_count": 6
    }
   },
-  "1300968": {
-   "aliases": [
-    "James Howard Newton",
-    "James Newton-Howard",
-    "The Behemoth! Collective"
-   ],
-   "checked": [],
-   "composers": [
-    "James Newton Howard"
-   ],
-   "entry": {
-    "genre_ids": [
-     878,
-     28,
-     12
-    ],
-    "id": 1300968,
-    "original_title": "The Hunger Games: Sunrise on the Reaping",
-    "poster_path": "/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg",
-    "release_date": "2026-11-18",
-    "title": "The Hunger Games: Sunrise on the Reaping",
-    "vote_count": 21
-   }
-  },
   "1314786": {
    "aliases": [],
    "checked": [],
@@ -428,7 +382,9 @@
     "Jeffrey Morrow",
     "Jeffrey D. Morrow"
    ],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Jeff Morrow"
    ],
@@ -450,7 +406,8 @@
     "Ani"
    ],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Anirudh Ravichander"
@@ -766,7 +723,9 @@
   },
   "1453407": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [
     "Sanjoy Chowdhury"
    ],
@@ -950,7 +909,8 @@
   "1507877": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1343,7 +1303,8 @@
   "1571687": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1589,6 +1550,26 @@
     "release_date": "2026-09-25",
     "title": "Buzzkill",
     "vote_count": 5
+   }
+  },
+  "1615596": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Carl-Johan Sevedag"
+   ],
+   "entry": {
+    "genre_ids": [
+     28,
+     53,
+     80
+    ],
+    "id": 1615596,
+    "original_title": "Best Pancakes in the County",
+    "poster_path": "/wXVYDQl2ENk3NhT1ETS4C8cAEOC.jpg",
+    "release_date": "2026-11-12",
+    "title": "Best Pancakes in the County",
+    "vote_count": 7
    }
   },
   "1616687": {
@@ -1952,7 +1933,9 @@
   },
   "1689329": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2573,6 +2556,22 @@
     "vote_count": 5
    }
   },
+  "1772726": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18
+    ],
+    "id": 1772726,
+    "original_title": "Confession",
+    "poster_path": "/kPId5qdaCPVOSeZYHaYXFYQmEFy.jpg",
+    "release_date": "2026-11-11",
+    "title": "Confession",
+    "vote_count": 5
+   }
+  },
   "1774164": {
    "aliases": [],
    "checked": [
@@ -2633,7 +2632,9 @@
   },
   "1780005": {
    "aliases": [],
-   "checked": [],
+   "checked": [
+    30
+   ],
    "composers": [],
    "entry": {
     "genre_ids": [
@@ -2974,6 +2975,22 @@
     "vote_count": 5
    }
   },
+  "1820172": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     35
+    ],
+    "id": 1820172,
+    "original_title": "Janelle James: How Romantic",
+    "poster_path": "/zjASMxUqsye6BKLbW78FA9d64Yy.jpg",
+    "release_date": "2026-11-10",
+    "title": "Janelle James: How Romantic",
+    "vote_count": 5
+   }
+  },
   "1823907": {
    "aliases": [],
    "checked": [],
@@ -3131,16 +3148,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-23",
-   "deferred": 0,
-   "due": 4,
-   "found": 1,
-   "recorded": 2,
-   "searched": 4,
-   "searches": 7,
-   "tracked": 99
-  },
   {
    "date": "2026-10-24",
    "deferred": 0,
@@ -3430,6 +3437,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 156
+  },
+  {
+   "date": "2026-11-22",
+   "deferred": 0,
+   "due": 8,
+   "found": 1,
+   "recorded": 3,
+   "searched": 8,
+   "searches": 14,
+   "tracked": 157
   }
  ]
 }

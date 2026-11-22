@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T17:12:58Z",
+  "updatedAt": "2026-11-22T17:43:11Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -378054,7 +378054,9 @@
       "title": "Planet Nine Original Soundtrack",
       "medium": "game",
       "game": "Planet Nine",
-      "composers": [],
+      "composers": [
+        "Benn Jordan"
+      ],
       "date": "2026-09-29",
       "sources": [
         {
@@ -378065,10 +378067,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Planet+Nine+Original+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_LfpoCfXOwEX",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5217240/abad00a5dae295a9ad58b84ecc9577e2d209cd0a/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 8,
       "themes": [
         "Science fiction"
       ],
@@ -378086,7 +378087,10 @@
         2,
         1
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_kvcmjPZ1U8N3k2cE5IGz9B3gpswe-EqYo",
+      "tracksN": 8,
+      "playsTotal": 1736
     },
     {
       "id": "the-anomaly-detective",
@@ -402061,6 +402065,372 @@
         10,
         5,
         5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "cubic-color-confusion",
+      "title": "Cubic Color Confusion Soundtrack",
+      "medium": "game",
+      "game": "Cubic Color Confusion",
+      "composers": [],
+      "date": "2026-11-22",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5530920/Cubic_Color_Confusion_Soundtrack/",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cubic+Color+Confusion+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5530920/ba3a2da2fd9a1aa48387883c94623087d85f3594/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction"
+      ],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ]
+    },
+    {
+      "id": "gobs-gears",
+      "title": "Gobs & Gears - Original Soundtrack",
+      "medium": "game",
+      "game": "Gobs & Gears",
+      "composers": [
+        "Donovan Jonk"
+      ],
+      "date": "2026-11-22",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5592850/Gobs_Gears_Original_Soundtrack/",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Gobs+%26+Gears+-+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5592850/48b8b336b2acece7fabe7a8d3c5c7f58759310d3/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 1,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Simulator",
+        "Strategy"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "heroic",
+        "joyful"
+      ],
+      "moodsN": [
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hadamantia-polychromatic-kingdom",
+      "title": "Hadamantia: Polychromatic Kingdom Soundtrack",
+      "medium": "game",
+      "game": "Hadamantia: Polychromatic Kingdom",
+      "composers": [
+        "Dierita Scarlet"
+      ],
+      "date": "2026-11-22",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4717370/Hadamantia_Polychromatic_Kingdom_Soundtrack/",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hadamantia%3A+Polychromatic+Kingdom+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4717370/29771c7125a72586159738cdd48b769c0b28ff9b/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "rune-ark",
+      "title": "Rune Ark Soundtrack",
+      "medium": "game",
+      "game": "Rune Ark",
+      "composers": [
+        "WelesGames"
+      ],
+      "date": "2026-11-21",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5420450/Rune_Ark_Soundtrack/",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Rune+Ark+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5420450/ce49840900122c4005a814ad8c7363ecf903e309/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Adventure"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-the-hunger-games-sunrise-on-the-reaping",
+      "title": "The Hunger Games: Sunrise on the Reaping Soundtrack",
+      "medium": "film",
+      "game": "The Hunger Games: Sunrise on the Reaping",
+      "composers": [
+        "James Newton Howard"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1300968",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Hunger+Games%3A+Sunrise+on+the+Reaping+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_R7Rdgp1PzrN",
+      "art": "https://yt3.googleusercontent.com/Tv--RqtXmMcg7eTdEsnaWgzh_j1b5YOoVx4P2XfVZiOSU8fH_lkig0969s0OA4l-VQ1-NpD9hE8JF3XG=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Haymitch Meets Snow (From The Hunger Games: Sunrise on the Reaping - The Score)",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "composerAliases": [
+        "James Howard Newton",
+        "James Newton-Howard",
+        "The Behemoth! Collective"
+      ],
+      "albumArtists": [
+        "James Newton Howard"
+      ],
+      "ytmPlaylistId": "OLAK5uy_muqkntnPTbX12-Frv-WL_1rqu5qlLLcNw",
+      "scoresN": 1,
+      "tracksN": 1,
+      "playsTotal": 111000,
+      "moods": [
+        "ominous",
+        "intense",
+        "mysterious"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-un-weekend-artificiale",
+      "title": "Un weekend artificiale Soundtrack",
+      "medium": "film",
+      "game": "Un weekend artificiale",
+      "composers": [
+        "Gianluca Sibaldi"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1723882",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Un+weekend+artificiale+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_1LwPAxBHF6Z",
+      "art": "https://yt3.googleusercontent.com/BS1NUjeFnRa-cd6Yjy0khG_DaMQivPUJJtN5py4_Uof92rbCASbAzqbJ6B1paX8dH-MJ-CBvVbVPp3I=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Un Weekend Artificiale (Original Movie Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Science Fiction"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Gianluca Sibaldi"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lOlwpm2BQZGkVZRNCkogyFSxSghCIOQOg",
+      "scoresN": 19,
+      "tracksN": 19,
+      "playsTotal": 1136,
+      "moods": [
+        "playful",
+        "mysterious",
+        "joyful"
+      ],
+      "moodsN": [
+        9,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-a-talent-for-murder",
+      "title": "A Talent for Murder Soundtrack",
+      "medium": "film",
+      "game": "A Talent for Murder",
+      "composers": [
+        "Dickon Hinchliffe"
+      ],
+      "date": "2026-10-23",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1084409",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=A+Talent+for+Murder+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_RlEJSmoK8cd",
+      "art": "https://yt3.googleusercontent.com/MYO5SPl0bxZR2SjdXGepaW7Anbu-huwx8ke4BMVfsSWNessVfkWjSl0nT7Xw56OOJ2yAVBUMOlfSvr4=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "A Talent For Murder (Original Film Soundtrack)",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "composerAliases": [
+        "Dickon Hinchcliffe"
+      ],
+      "albumArtists": [
+        "Dickon Hinchliffe"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kjm9H2mwpWULMML8LQ4zlTQDqsuEeQNSE",
+      "scoresN": 21,
+      "tracksN": 21,
+      "playsTotal": 781,
+      "moods": [
+        "ominous",
+        "suspenseful",
+        "mysterious"
+      ],
+      "moodsN": [
+        6,
+        5,
+        5
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-good-daughter",
+      "title": "The Good Daughter Soundtrack",
+      "medium": "tv",
+      "game": "The Good Daughter",
+      "composers": [
+        "Jonathan Sanford"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/249565",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Good+Daughter+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_XvLGlzWByHm",
+      "art": "https://yt3.googleusercontent.com/OXJln23FfFECb3x9bcH20BZsUXhZewPpqtNDakMBevcBg9TjI4LoGTgdBnjD_tVBFlnidpGQUhwV4IzCqQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Good Daughter (Original Series Soundtrack)",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Jonathan Sanford"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lG5pxA64j5T67D3YoNkOH3EIHvdlGOgmI",
+      "scoresN": 22,
+      "tracksN": 22,
+      "playsTotal": 2304,
+      "moods": [
+        "tender",
+        "mysterious",
+        "suspenseful"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-minimum-wage",
+      "title": "Minimum Wage Soundtrack",
+      "medium": "tv",
+      "game": "Minimum Wage",
+      "composers": [
+        "Ben Kaplan",
+        "Ragan McKenna",
+        "Tommy Armstrong",
+        "Julia DiCesare"
+      ],
+      "date": "2026-10-26",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/321221",
+          "seenAt": "2026-11-22T17:35:11Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Minimum+Wage+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ergGMZcPQUH",
+      "art": "https://yt3.googleusercontent.com/clr6TNL_S0fbfj6N91JtqGbkwc62ibWCgy-U1WCGNF5aJt1W9tDvwmK-GgXMFO0pJu1gwDhSJTS9zq0=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Minimum Wage (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Comedy"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Ben Kaplan",
+        "Ragan McKenna",
+        "Tommy Armstrong",
+        "Julia DiCesare"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nq1CLxe6zahbedWYnDXZw8AxJCCsPR2Tg",
+      "scoresN": 4,
+      "tracksN": 4,
+      "playsTotal": 1547,
+      "moods": [
+        "nostalgic",
+        "tender",
+        "playful"
+      ],
+      "moodsN": [
+        2,
+        2,
+        1
       ],
       "moodsV": 2
     }
