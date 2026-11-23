@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T17:43:11Z",
+  "updatedAt": "2026-11-23T22:00:19Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -378142,10 +378142,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Monster+Alchemy+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_WB3TcZcOqnc",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5240550/86a6c94b4624ce2df24375f62217b21999f9a88a/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0,
       "themes": [
         "Fantasy",
         "Open world"
@@ -378155,14 +378154,19 @@
         "Strategy",
         "Turn-based strategy (TBS)"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_l1dWEORAATj5NYlJxYFEVONTV1dC-T5Is",
+      "tracksN": 22,
+      "playsTotal": 187
     },
     {
       "id": "world-of-tanks-heat-season-2",
       "title": "World of Tanks: HEAT - Season 2 Soundtrack",
       "medium": "game",
       "game": "World of Tanks: HEAT - Season 2",
-      "composers": [],
+      "composers": [
+        "World of Tanks: HEAT Sound Squad"
+      ],
       "date": "2026-09-28",
       "sources": [
         {
@@ -378173,17 +378177,20 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=World+of+Tanks%3A+HEAT+-+Season+2+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_BDgY87sOIxo",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4873700/3bcb7a4d10611e7f75dca96fa8370aa53943e49d/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0,
       "themes": [
         "Action"
       ],
       "genres": [
         "Shooter",
         "Tactical"
-      ]
+      ],
+      "albumTitle": "Season 2 Soundtrack",
+      "ytmPlaylistId": "OLAK5uy_mSSxepRp4vqtuV5zNegR_nnJtGqVbbS3A",
+      "tracksN": 3,
+      "playsTotal": 363
     },
     {
       "id": "minecraft-dungeons-ii",
@@ -378765,16 +378772,18 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Grail+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_ITKZpw3W75A",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5065540/b48911b6d36561a712a12030a2c293974102a255/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0,
       "themes": [],
       "genres": [
         "Strategy",
         "Indie"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_muEltzHs2GGeJo0tyPOxhDfm4Yyi1GA04",
+      "tracksN": 18,
+      "playsTotal": 470
     },
     {
       "id": "holy-warriors-the-rift-soundtrack-cd-2-a-dream",
@@ -378817,10 +378826,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Songs+of+Glimmerwick+Original+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_oAqaNP2kYU1",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5214050/a196aca725bb44489f232cc07f0ce329ba9009e6/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 47,
       "themes": [
         "Fantasy",
         "Open world"
@@ -378840,7 +378848,10 @@
         12,
         11
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_lOITL9U7jzFu32A5eDJyWK9CaYaRv9h6Y",
+      "tracksN": 47,
+      "playsTotal": 4462
     },
     {
       "id": "cloudscrapers",
@@ -402431,6 +402442,426 @@
         2,
         2,
         1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "how-should-i-keep-a-house-squeaky-clean-with-a-filthy-little-neighbour-ghost",
+      "title": "How should I keep a house squeaky clean, with a filthy little neighbour ghost? Soundtrack",
+      "medium": "game",
+      "game": "How should I keep a house squeaky clean, with a filthy little neighbour ghost?",
+      "composers": [
+        "eYs"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5237130/How_should_I_keep_a_house_squeaky_clean_with_a_filthy_little_neighbour_ghost_Soundtrack/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=How+should+I+keep+a+house+squeaky+clean%2C+with+a+filthy+little+neighbour+ghost%3F+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5237130/f65c4dc526d7cdfc0f354ec8b6b6fe8f181264fd/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "echomnesia",
+      "title": "Echomnesia Soundtrack",
+      "medium": "game",
+      "game": "Echomnesia",
+      "composers": [
+        "eYs"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5237140/Echomnesia_Soundtrack/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Echomnesia+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5237140/49cdc278897879febad462a2fcbfaa9717ba497e/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "project-blacknode",
+      "title": "Project BLACKNODE Soundtrack",
+      "medium": "game",
+      "game": "Project BLACKNODE",
+      "composers": [
+        "Melvin Weert"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5585680/Project_BLACKNODE_Soundtrack/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Project+BLACKNODE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5585680/6e1bdd0c7531d5292235c08a28b2febea811c3af/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "radiosol",
+      "title": "RADIOSOL Original Soundtrack",
+      "medium": "game",
+      "game": "RADIOSOL",
+      "composers": [
+        "Yodez"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5348960/RADIOSOL_Original_Soundtrack/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=RADIOSOL+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5348960/386c861e99f34f3e7143d42119ea84238b5c1819/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction",
+        "Open world"
+      ],
+      "genres": [
+        "Simulator",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "go-next",
+      "title": "Go Next! Soundtrack",
+      "medium": "game",
+      "game": "Go Next!",
+      "composers": [
+        "Miguel Angell"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5505470/Go_Next_Soundtrack/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Go+Next%21+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5505470/5d49f6f99f7be18bd8bf3194b8e79e46476db103/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "passed-by-censor",
+      "title": "Passed by Censor Soundtrack",
+      "medium": "game",
+      "game": "Passed by Censor",
+      "composers": [
+        "Cafer Omurden Cengiz"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5441220/Passed_by_Censor_Soundtrack/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Passed+by+Censor+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5441220/262d17ff000a1710f8ceab3d249d72a838de8060/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "heart-abyss-ost-artbook",
+      "title": "Heart Abyss: OST & Artbook",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Sergei \"SoundFlakes\" Krupnov"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5509270/Heart_Abyss_OST_Artbook/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Heart+Abyss%3A+OST+%26+Artbook",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5509270/520cefa85ea1d0a6eca5a5e74ee4fdeb6418a9ab/capsule_231x87.jpg",
+      "notable": true,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Platform",
+        "Strategy",
+        "Hack and slash/Beat 'em up"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "real-puzzles-kittens-marine-life-audio-files",
+      "title": "Real Puzzles - Kittens: Marine Life (Audio Files)",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Black Cat Leo"
+      ],
+      "date": "2026-11-22",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5534430/Real_Puzzles_Kittens_Marine_Life_Audio_Files/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Real+Puzzles+-+Kittens%3A+Marine+Life+%28Audio+Files%29+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5534430/660949e2d94b0b83695c6fa82d90f69d8483eeb2/capsule_231x87.jpg",
+      "notable": true,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "real-puzzles-canyons-secluded-manor-audio-files",
+      "title": "Real Puzzles - Canyons: Secluded Manor (Audio Files)",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Black Cat Leo"
+      ],
+      "date": "2026-11-22",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5348600/Real_Puzzles_Canyons_Secluded_Manor_Audio_Files/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Real+Puzzles+-+Canyons%3A+Secluded+Manor+%28Audio+Files%29+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5348600/43891d15faacb2a209148b565ebb463e5f0bcab0/capsule_231x87.jpg",
+      "notable": true,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "bounce-on-2-drallo-s-demise",
+      "title": "Bounce On 2: Drallo's Demise Soundtrack",
+      "medium": "game",
+      "game": "Bounce On 2: Drallo's Demise",
+      "composers": [
+        "T3KL3R"
+      ],
+      "date": "2026-11-22",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4662790/Bounce_On_2_Drallos_Demise_Soundtrack/",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Bounce+On+2%3A+Drallo%27s+Demise+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4662790/530db9701931fad0c6ceab2480b8eb380d3821e0/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action"
+      ],
+      "genres": [
+        "Platform",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-the-fire-within-you",
+      "title": "The Fire Within You Soundtrack",
+      "medium": "film",
+      "game": "The Fire Within You",
+      "composers": [
+        "La Niña"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1632188",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Fire+Within+You+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_l2iA286nsOz",
+      "art": "https://yt3.googleusercontent.com/-N_BRXXGoT0zYf63oB1wVsBUOlAHDHnzIF2VI6pSd2-YpD6lE4h-eDN1ROuMvp25BQp12qcza0RIqOQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Il fuoco che ti porti dentro (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Drama"
+      ],
+      "albumArtists": [
+        "LA NIÑA"
+      ],
+      "ytmPlaylistId": "OLAK5uy_nWuTP-3EaA2lQObM8h-2WDuXcpSoPazaw",
+      "scoresN": 8,
+      "tracksN": 8,
+      "playsTotal": 2120,
+      "moods": [
+        "tender",
+        "intense",
+        "peaceful"
+      ],
+      "moodsN": [
+        3,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-blue-road",
+      "title": "The Blue Road Soundtrack",
+      "medium": "tv",
+      "game": "The Blue Road",
+      "composers": [
+        "Primary"
+      ],
+      "date": "2026-11-20",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/300523",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Blue+Road+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_hpJbolvR3Aw",
+      "art": "https://yt3.googleusercontent.com/46isfn6eHfX9u5xNP6GH5NHToYS00VevPtRRMj6hszVYtS5baGU8ruEbD6-gI3AAIi2QX2IdKI14s-DIFg=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Blue Road (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Crime",
+        "Mystery"
+      ],
+      "composerAliases": [
+        "최동훈",
+        "Choi Dong-hoon"
+      ],
+      "albumArtists": [
+        "Various Artists"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lQb9jvLKizXl50czI_LxTCh93gTX0NuP4",
+      "scoresN": 21,
+      "tracksN": 30,
+      "playsTotal": 18723,
+      "moods": [
+        "suspenseful",
+        "intense",
+        "tender"
+      ],
+      "moodsN": [
+        7,
+        6,
+        6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-piedone-a-cop-in-naples",
+      "title": "Piedone - A Cop in Naples Soundtrack",
+      "medium": "tv",
+      "game": "Piedone - A Cop in Naples",
+      "composers": [
+        "Giorgio Giampà",
+        "Marta Lucchesini"
+      ],
+      "date": "2024-12-02",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/276021",
+          "seenAt": "2026-11-23T21:52:39Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Piedone+-+A+Cop+in+Naples+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_yRsvYlHH5pN",
+      "art": "https://yt3.googleusercontent.com/JUypDzS_N4LmaChY0mWOrhCv6T9M1iZBtYbaPKwguHb-myUdrGbtZ-bQioY6X8d4YWW1cPHstliClRYa=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Piedone - Uno Sbirro A Napoli (Original Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Action & Adventure",
+        "Crime"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Giorgio Giampà",
+        "Marta Lucchesini"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kdaa9sHaZvV6E1AS08ALU5PT3ZWsf1r_0",
+      "scoresN": 14,
+      "tracksN": 14,
+      "playsTotal": 2266,
+      "moods": [
+        "laid-back",
+        "nostalgic",
+        "intense"
+      ],
+      "moodsN": [
+        3,
+        3,
+        3
       ],
       "moodsV": 2
     }

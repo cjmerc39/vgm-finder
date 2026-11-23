@@ -1455,6 +1455,23 @@
     "vote_count": 6
    }
   },
+  "1599184": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     16,
+     12
+    ],
+    "id": 1599184,
+    "original_title": "\u6597\u7834\u82cd\u7a79\u5267\u573a\u7248\uff1a\u53cc\u5e1d\u4e4b\u6218",
+    "poster_path": "/uEyFP5Z0IyQDLzzoOGRthambK7o.jpg",
+    "release_date": "2026-11-22",
+    "title": "Battle Through the Heavens: The Battle of Two Emperors",
+    "vote_count": 6
+   }
+  },
   "1599191": {
    "aliases": [],
    "checked": [
@@ -1512,6 +1529,23 @@
     "release_date": "2026-10-02",
     "title": "Infirmary",
     "vote_count": 6
+   }
+  },
+  "1611767": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     10749,
+     35
+    ],
+    "id": 1611767,
+    "original_title": "Clashing Through the Snow",
+    "poster_path": "/95K1Y96ELBDL3M8kyTVb5wocCtX.jpg",
+    "release_date": "2026-11-23",
+    "title": "Clashing Through the Snow",
+    "vote_count": 9
    }
   },
   "1613021": {
@@ -2214,7 +2248,8 @@
   "1750432": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2366,7 +2401,8 @@
   "1760114": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2701,6 +2737,22 @@
     "release_date": "2026-10-12",
     "title": "Instadocs: AI Gone Wild",
     "vote_count": 7
+   }
+  },
+  "1791730": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1791730,
+    "original_title": "Primetime Preacher$",
+    "poster_path": "/ilFRKYUhsYyW0mpSifpFZmpR9yo.jpg",
+    "release_date": "2026-11-14",
+    "title": "Primetime Preacher$",
+    "vote_count": 5
    }
   },
   "1792170": {
@@ -3149,16 +3201,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-24",
-   "deferred": 0,
-   "due": 2,
-   "found": 0,
-   "recorded": 3,
-   "searched": 2,
-   "searches": 2,
-   "tracked": 102
-  },
-  {
    "date": "2026-10-25",
    "deferred": 0,
    "due": 3,
@@ -3447,6 +3489,16 @@
    "searched": 8,
    "searches": 14,
    "tracked": 157
+  },
+  {
+   "date": "2026-11-23",
+   "deferred": 0,
+   "due": 2,
+   "found": 0,
+   "recorded": 3,
+   "searched": 2,
+   "searches": 2,
+   "tracked": 160
   }
  ]
 }
