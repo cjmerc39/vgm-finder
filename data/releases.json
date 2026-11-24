@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T22:00:19Z",
+  "updatedAt": "2026-11-24T20:36:29Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -379345,10 +379345,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=VOIN+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_509iYUJJj5J",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4968560/55203493dbb731c25240785cd1aabf2219d7148c/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0,
       "themes": [
         "Action"
       ],
@@ -379357,7 +379356,10 @@
         "Hack and slash/Beat 'em up",
         "Adventure"
       ],
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_krjBPicCTsCSq_R7YA7AIPpInJtw_YxH4",
+      "tracksN": 21,
+      "playsTotal": 194024
     },
     {
       "id": "gamble-hunters",
@@ -379411,10 +379413,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=All+Hallows+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_EEMrEqDWn21",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4815340/5e29958be460df419c24903361823e12a4d18d5f/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 17,
       "themes": [
         "Action",
         "Horror"
@@ -379434,7 +379435,10 @@
         3,
         2
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_mfWYYkVRoBdNjMzfGr4m_8ZSUsx06GDbk",
+      "tracksN": 17,
+      "playsTotal": 53
     },
     {
       "id": "havoc-heirs",
@@ -379574,10 +379578,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Echobreaker+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_78gAfOMMznq",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5272200/d6c42afbe2be4ff7e6e157beca1c50d8b3b2e521/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 4,
       "themes": [
         "Action"
       ],
@@ -379595,7 +379598,10 @@
         2,
         1
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_m_QLnCK7VkkCZHLMLwVQY9bTDl16H8xlU",
+      "tracksN": 4,
+      "playsTotal": 84
     },
     {
       "id": "side-quest",
@@ -379615,10 +379621,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Side+Quest+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_HLi5UcDSu1M",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5160620/e1b651f0f9b530e3e5ffb051c39f98a08f09b9c8/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 14,
       "composersFrom": "steam",
       "moods": [
         "intense",
@@ -379630,7 +379635,10 @@
         2,
         2
       ],
-      "moodsV": 2
+      "moodsV": 2,
+      "ytmPlaylistId": "OLAK5uy_kfzppqA_qwanTewq2Q82oZ3K1JGuJ801g",
+      "tracksN": 14,
+      "playsTotal": 576
     },
     {
       "id": "anthem-of-limbo",
@@ -379650,11 +379658,13 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=ANTHEM+OF+LIMBO+Official+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_mGwN0eCFkJJ",
       "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5297350/93fcfbe94f7b0f9d7943eb673a59ccb2b840afd6/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 0,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "ytmPlaylistId": "OLAK5uy_mvW6iDS_YqnDbDAdQApz5Fcf9UlvGhcGo",
+      "tracksN": 53,
+      "playsTotal": 157
     },
     {
       "id": "the-dream-of-a-cockspur",
@@ -402862,6 +402872,596 @@
         3,
         3,
         3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "checkmage",
+      "title": "Checkmage! Soundtrack",
+      "medium": "game",
+      "game": "Checkmage!",
+      "composers": [
+        "Ben Partridge \"Alastair\""
+      ],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5507380/Checkmage_Soundtrack/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Checkmage%21+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5507380/7741c8dd0e7f1e7bf7bf2a831e4dc60b7ffad1d5/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 23,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Strategy",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "intense",
+        "playful",
+        "driving"
+      ],
+      "moodsN": [
+        5,
+        5,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "hidden-cats-in-beijing",
+      "title": "Hidden Cats in Beijing Soundtrack",
+      "medium": "game",
+      "game": "Hidden Cats in Beijing",
+      "composers": [
+        "Thiago Adamo"
+      ],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5476500/Hidden_Cats_in_Beijing_Soundtrack/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hidden+Cats+in+Beijing+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5476500/18cb2aab1648a0291a4398f752092c317d1487cb/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Puzzle",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "astral-phase",
+      "title": "Astral Phase Soundtrack",
+      "medium": "game",
+      "game": "Astral Phase",
+      "composers": [
+        "Redline Interactive"
+      ],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5632140/Astral_Phase_Soundtrack/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Astral+Phase+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5632140/f0a6c6d32ff50c066e1d2bf4e2320cc88bfc36d8/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 4,
+      "themes": [],
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam",
+      "moods": [
+        "ominous",
+        "intense",
+        "eerie"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "scarecrow-90s-crime-story",
+      "title": "Scarecrow: 90s Crime Story Soundtrack",
+      "medium": "game",
+      "game": "Scarecrow: 90s Crime Story",
+      "composers": [],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5574540/Scarecrow_90s_Crime_Story_Soundtrack/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Scarecrow%3A+90s+Crime+Story+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5574540/8df1bda1d693fa4459309dc540e6241f663da849/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror"
+      ],
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Visual Novel"
+      ]
+    },
+    {
+      "id": "dear-president-original-main-theme",
+      "title": "Dear President Original Main Theme",
+      "medium": "game",
+      "game": null,
+      "composers": [
+        "Yurii Radko",
+        "Ege Günay Karamanlılar"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5570550/Dear_President_Original_Main_Theme/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Dear+President+Original+Main+Theme+soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5570550/aa5d69e3c157d44779a432e9f480776373eb91c3/capsule_231x87.jpg",
+      "notable": true,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "黄莓c-huangmeic",
+      "title": "黄莓C HuangmeiC Soundtrack",
+      "medium": "game",
+      "game": "黄莓C HuangmeiC",
+      "composers": [
+        "atomo_muzic 可可Aletta Brydat"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5550630/黄莓C_HuangmeiC_Soundtrack/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E9%BB%84%E8%8E%93C+HuangmeiC+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5550630/aebff5e87871964c7114d5ac1bf7f76bfdf4fc82/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "terminus-day-zero",
+      "title": "Terminus: Day Zero - Soundtrack",
+      "medium": "game",
+      "game": "Terminus: Day Zero",
+      "composers": [
+        "Choi Min-ju"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5434020/Terminus_Day_Zero_Soundtrack/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Terminus%3A+Day+Zero+-+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5434020/3205ebc0e236b238944b3231ec2ac8689df280e6/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Action",
+        "Horror",
+        "Survival",
+        "Stealth"
+      ],
+      "genres": [
+        "Point-and-click",
+        "Adventure",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "star-purr",
+      "title": "Star Purr Original Soundtrack",
+      "medium": "game",
+      "game": "Star Purr",
+      "composers": [
+        "akalod"
+      ],
+      "date": "2026-11-23",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5363860/Star_Purr_Original_Soundtrack/",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Star+Purr+Original+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5363860/2185ea4b31eb670165c73967c4f63eb965c32678/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-parivarik-manuranjan",
+      "title": "Parivarik ManuRanjan Soundtrack",
+      "medium": "film",
+      "game": "Parivarik ManuRanjan",
+      "composers": [
+        "Joel Crasto"
+      ],
+      "date": "2026-11-12",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1493572",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Parivarik+ManuRanjan+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_P3dd5lYLC0x",
+      "art": "https://yt3.googleusercontent.com/MnidGHMeETVseV9r5a5XaggQ6e_ayT-RG-8lhU8GuRufedgtzUm5bIgjU2FWGQ18HelAArPa1a3FhAxU=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Parivarik ManuRanjan (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "albumArtists": [
+        "Vishal Mishra",
+        "Shamir Tandon",
+        "Jubin Nautiyal",
+        "Dhvani Bhanushali"
+      ],
+      "ytmPlaylistId": "OLAK5uy_le7KC8aBQx9mBnUQu7tz_6ALozrJtzkOo",
+      "scoresN": 5,
+      "tracksN": 6,
+      "playsTotal": 122800,
+      "moods": [
+        "romantic",
+        "playful",
+        "nostalgic"
+      ],
+      "moodsN": [
+        4,
+        2,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-focker-in-law",
+      "title": "Focker In-Law Soundtrack",
+      "medium": "film",
+      "game": "Focker In-Law",
+      "composers": [
+        "Theodore Shapiro"
+      ],
+      "date": "2026-11-21",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1400336",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Focker+In-Law+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fQ46cZVpd5a",
+      "art": "https://yt3.googleusercontent.com/lCKIjJQY32bMiiON-Te036XIGIc1jnJ0gf2M8QjKBfLwHNeUrW2WnJZRWgaxb-zich4HetE1qTDyUlE=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Focker In-Law (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "composerAliases": [
+        "Teddy Shapiro"
+      ],
+      "albumArtists": [
+        "Theodore Shapiro"
+      ],
+      "ytmPlaylistId": "OLAK5uy_la5U7dIla0KcTJDtekYJ6-9QZGPBfrsk4",
+      "scoresN": 21,
+      "tracksN": 22,
+      "playsTotal": 22393,
+      "moods": [
+        "playful",
+        "tender",
+        "driving"
+      ],
+      "moodsN": [
+        7,
+        4,
+        4
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "film-o-m-operation-mole",
+      "title": "O.M: Operation Mole Soundtrack",
+      "medium": "film",
+      "game": "O.M: Operation Mole",
+      "composers": [
+        "Sai Abhyankkar"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1384528",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=O.M%3A+Operation+Mole+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_YyQrvk266xf",
+      "art": "https://yt3.googleusercontent.com/g83_rsheKlm36g3KvvnSoeVi6M5kwK0P7ZOLQvu2kyC3XDrbzQOoDb_tp7pnQeyMVj4VoEkJcNvUWYIpXw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "O.M: Operation Mole (Original Soundtrack)",
+      "genres": [
+        "Crime",
+        "Action",
+        "Thriller"
+      ],
+      "albumArtists": [
+        "Sai Abhyankkar"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k00xZZW_YveyvzMFaE0ObDUp9_Egk16Cg",
+      "scoresN": 11,
+      "tracksN": 11,
+      "playsTotal": 1004000,
+      "moods": [
+        "intense",
+        "driving",
+        "ominous"
+      ],
+      "moodsN": [
+        4,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-underground",
+      "title": "Underground Soundtrack",
+      "medium": "tv",
+      "game": "Underground",
+      "composers": [
+        "Miyu Hosoi"
+      ],
+      "date": "2026-01-28",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/309328",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Underground+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_Dujvtv54HBj",
+      "art": "https://yt3.googleusercontent.com/fgyHpdTSarjTA3SeLmgpHF6qMOUc526IMPMsspBmi0QVbndYc8qCI5Z0mydRy4Dnz2V3e4qXuDtv4VOJ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "“Underground” Original Soundtrack",
+      "genres": [
+        "Drama",
+        "Action & Adventure"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Miyu Hosoi"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kiNVLf_U7HLKamDk2uAA8VdZ3aTxz9bFA",
+      "scoresN": 10,
+      "tracksN": 10,
+      "playsTotal": 1374,
+      "moods": [
+        "mysterious",
+        "intense",
+        "ominous"
+      ],
+      "moodsN": [
+        3,
+        3,
+        2
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-nia-liston-the-merciless-maiden",
+      "title": "Nia Liston: The Merciless Maiden Soundtrack",
+      "medium": "tv",
+      "game": "Nia Liston: The Merciless Maiden",
+      "composers": [
+        "Naoki Endo"
+      ],
+      "date": "2026-10-06",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/312850",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Nia+Liston%3A+The+Merciless+Maiden+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_3gVrNAcLhhN",
+      "art": "https://yt3.googleusercontent.com/C98mCvOEQp7Fab8jcQU21ZwPYV9waSM3gGdeSZV-lf9fkqRuLk5_edncZM11fxVV0E3Lm3An2nUrAJTh0Q=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "\"Nia Liston: The Merciless Maiden\" ORIGINAL SOUNDTRACK",
+      "genres": [
+        "Animation",
+        "Sci-Fi & Fantasy",
+        "Anime"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Naoki Endo"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kJ-WIF8STcakIZ-f3kmRauvG3MLkrsPOo",
+      "scoresN": 86,
+      "tracksN": 87,
+      "playsTotal": 212230,
+      "moods": [
+        "intense",
+        "heroic",
+        "epic"
+      ],
+      "moodsN": [
+        19,
+        15,
+        14
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-the-altruists",
+      "title": "The Altruists Soundtrack",
+      "medium": "tv",
+      "game": "The Altruists",
+      "composers": [
+        "Alex Somers"
+      ],
+      "date": "2026-11-19",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/308007",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=The+Altruists+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_fcWKVH8xnKe",
+      "art": "https://yt3.googleusercontent.com/HtWZuxHVz8DiDv8nAQM7-oDwdEz4VhVZKfjZpPGPRGtuHqOnWvqeJ5V3TjnkPpPR2KxdqqmjCRRm87xs=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "The Altruists (Soundtrack from the Netflix Limited Series)",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "composerAliases": [
+        "Jónsi & Alex",
+        "Alex Kendall Somers",
+        "Алекс Сомерс"
+      ],
+      "albumArtists": [
+        "Alex Somers"
+      ],
+      "ytmPlaylistId": "OLAK5uy_lCUAW8yUua0yvCLTzsWEal49fizLGmDvA",
+      "scoresN": 18,
+      "tracksN": 18,
+      "playsTotal": 1216,
+      "moods": [
+        "ominous",
+        "eerie",
+        "mysterious"
+      ],
+      "moodsN": [
+        4,
+        4,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-did-someone-happen-to-mention-me",
+      "title": "Did Someone Happen to Mention Me? Soundtrack",
+      "medium": "tv",
+      "game": "Did Someone Happen to Mention Me?",
+      "composers": [
+        "Shin Kono"
+      ],
+      "date": "2026-10-22",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/300527",
+          "seenAt": "2026-11-24T20:28:31Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Did+Someone+Happen+to+Mention+Me%3F+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_OX6oZAhc1BB",
+      "art": "https://yt3.googleusercontent.com/NTL5OnWOMxEB422RkPRLh3S5xtysE3tz73HWBYLS4U_xPHBXyvPZH0cojsdSRQp6adSltYGFvsDYwzFk=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Did Someone Happen to Mention Me? (Soundtrack from the Netflix Series)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "composerAliases": [
+        "河野 伸",
+        "Shin Kōno",
+        "Shin Kouno",
+        "こうの しん"
+      ],
+      "albumArtists": [
+        "Shin Kono",
+        "チョウ＆チヂミ"
+      ],
+      "ytmPlaylistId": "OLAK5uy_kLtJxTN5b4zsCLDOycLSOFxd1N_0StGsM",
+      "scoresN": 31,
+      "tracksN": 31,
+      "playsTotal": 75515,
+      "moods": [
+        "mysterious",
+        "playful",
+        "intense"
+      ],
+      "moodsN": [
+        8,
+        7,
+        6
       ],
       "moodsV": 2
     }

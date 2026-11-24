@@ -1324,7 +1324,8 @@
   "1571766": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -1567,7 +1568,8 @@
   "1613037": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [
     "Pressure Cooker"
@@ -2312,7 +2314,8 @@
   "1755291": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -3062,6 +3065,40 @@
     "vote_count": 6
    }
   },
+  "1829270": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1829270,
+    "original_title": "Chiara",
+    "poster_path": "/5IXa5EEvPgwwbkw3E84ZdkuGUWs.jpg",
+    "release_date": "2026-11-23",
+    "title": "Chiara Ferragni: Front Facing",
+    "vote_count": 5
+   }
+  },
+  "1840180": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     35,
+     10749
+    ],
+    "id": 1840180,
+    "original_title": "Debakanya",
+    "poster_path": "/sfBFvDnV2fXS7torf7aal0Fm5fn.jpg",
+    "release_date": "2026-11-20",
+    "title": "Debakanya",
+    "vote_count": 9
+   }
+  },
   "487802": {
    "aliases": [
     "\u0425\u0430\u043d\u0441 \u0426\u0438\u043c\u043c\u0435\u0440",
@@ -3200,16 +3237,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-25",
-   "deferred": 0,
-   "due": 3,
-   "found": 0,
-   "recorded": 1,
-   "searched": 3,
-   "searches": 3,
-   "tracked": 103
-  },
   {
    "date": "2026-10-26",
    "deferred": 0,
@@ -3499,6 +3526,16 @@
    "searched": 2,
    "searches": 2,
    "tracked": 160
+  },
+  {
+   "date": "2026-11-24",
+   "deferred": 0,
+   "due": 3,
+   "found": 0,
+   "recorded": 2,
+   "searched": 3,
+   "searches": 3,
+   "tracked": 162
   }
  ]
 }
