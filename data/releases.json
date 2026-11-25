@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T20:36:29Z",
+  "updatedAt": "2026-11-25T19:50:39Z",
   "releases": [
     {
       "id": "atomic-owl-vinyl-reissue-is-now-available-from-ghost-mutt-records",
@@ -380297,10 +380297,9 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=Factorized+Soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_566NnD4HwKM",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5243780/da5d60b84b041327edcce0a28dff38acf9fc57e2/capsule_231x87.jpg",
       "notable": true,
-      "tracksN": 24,
       "composersFrom": "steam",
       "moods": [
         "intense",
@@ -380319,7 +380318,10 @@
       "genres": [
         "Shooter",
         "Indie"
-      ]
+      ],
+      "ytmPlaylistId": "OLAK5uy_m0rwrek-idE5w7pO8HjxvYj3AszZLwueE",
+      "tracksN": 24,
+      "playsTotal": 36
     },
     {
       "id": "from-beyond-album-edition",
@@ -380339,10 +380341,14 @@
         }
       ],
       "ytmSearchUrl": "https://music.youtube.com/search?q=From+Beyond%3A+Album+Edition+soundtrack",
-      "ytmAlbumUrl": null,
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_wTI4UFLiQK1",
       "art": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4807840/0cf4013aa53ebd44bb464c72073a998028314d24/capsule_231x87.jpg",
       "notable": true,
-      "composersFrom": "steam"
+      "composersFrom": "steam",
+      "albumTitle": "From Beyond (Soundtrack)",
+      "ytmPlaylistId": "OLAK5uy_ngqEwX9gh31tRdEWGEIWPxobWrQULjIlU",
+      "tracksN": 3,
+      "playsTotal": 155
     },
     {
       "id": "film-doing-life",
@@ -403462,6 +403468,267 @@
         8,
         7,
         6
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "cosdarica-s-journey-at-the-end-of-the-world",
+      "title": "Cosdarica's Journey at the End of the World Soundtrack",
+      "medium": "game",
+      "game": "Cosdarica's Journey at the End of the World",
+      "composers": [
+        "Nowamension Games"
+      ],
+      "date": "2026-11-25",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/4506380/Cosdaricas_Journey_at_the_End_of_the_World_Soundtrack/",
+          "seenAt": "2026-11-25T19:43:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Cosdarica%27s+Journey+at+the+End+of+the+World+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4506380/49e376c3f33260b33a4245f5b8c9604745472566/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Simulator",
+        "Indie"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "immiscere",
+      "title": "IMMISCERE Soundtrack",
+      "medium": "game",
+      "game": "IMMISCERE",
+      "composers": [
+        "Mimeface"
+      ],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5562870/IMMISCERE_Soundtrack/",
+          "seenAt": "2026-11-25T19:43:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=IMMISCERE+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5562870/d578a0c9cbec0e1dfc7cdd7f309cb1f95e937767/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "composersFrom": "steam"
+    },
+    {
+      "id": "少女-一场雨",
+      "title": "少女，一场雨 Soundtrack",
+      "medium": "game",
+      "game": "少女，一场雨",
+      "composers": [
+        "三玖谁顶的住啊"
+      ],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5499540/少女一场雨_Soundtrack/",
+          "seenAt": "2026-11-25T19:43:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=%E5%B0%91%E5%A5%B3%EF%BC%8C%E4%B8%80%E5%9C%BA%E9%9B%A8+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5499540/2692450922198e9caf61c3441ce45fd2f8a30b98/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [],
+      "genres": [
+        "Role-playing (RPG)",
+        "Indie",
+        "Visual Novel"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "become-blackhole",
+      "title": "Become Blackhole Soundtrack",
+      "medium": "game",
+      "game": "Become Blackhole",
+      "composers": [
+        "Panda"
+      ],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "steam",
+          "type": "catalog",
+          "url": "https://store.steampowered.com/app/5603950/Become_Blackhole_Soundtrack/",
+          "seenAt": "2026-11-25T19:43:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Become+Blackhole+Soundtrack",
+      "ytmAlbumUrl": null,
+      "art": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5603950/7634b7e0602f0d142c887983cb491f507e529d51/capsule_231x87.jpg",
+      "notable": true,
+      "tracksN": 0,
+      "themes": [
+        "Science fiction"
+      ],
+      "composersFrom": "steam"
+    },
+    {
+      "id": "film-hexed",
+      "title": "Hexed Soundtrack",
+      "medium": "film",
+      "game": "Hexed",
+      "composers": [
+        "Kris Bowers"
+      ],
+      "date": "2026-11-25",
+      "sources": [
+        {
+          "name": "tmdb-film",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/movie/1538497",
+          "seenAt": "2026-11-25T19:43:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Hexed+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_VEchjISij0y",
+      "art": "https://yt3.googleusercontent.com/slAD2O7ElynK95220AYiiRJygclgt3D0rbwAjphgoD-jY3qqfa_x8nzGvtbgZyRKAUcGfBT87yN0AsY=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Hexed (Original Motion Picture Soundtrack)",
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "composerAliases": [
+        "Kristopher Bowers"
+      ],
+      "albumArtists": [
+        "Kris Bowers"
+      ],
+      "ytmPlaylistId": "OLAK5uy_ledBdYADRPAHTUVhD9QbM7S6X_X8evj9I",
+      "scoresN": 43,
+      "tracksN": 44,
+      "playsTotal": 575662,
+      "moods": [
+        "joyful",
+        "playful",
+        "mysterious"
+      ],
+      "moodsN": [
+        12,
+        12,
+        8
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-blade-runner-2099",
+      "title": "Blade Runner 2099 Soundtrack",
+      "medium": "tv",
+      "game": "Blade Runner 2099",
+      "composers": [
+        "Leopold Ross"
+      ],
+      "date": "2026-11-24",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/171802",
+          "seenAt": "2026-11-25T19:43:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Blade+Runner+2099+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_CLbnvd2y94i",
+      "art": "https://yt3.googleusercontent.com/LqUMwl82eJKZLdPK-pgvQfEaJrrOKyx6qfTnh9QCyKhYiqcgtob7r8lgX2_ZYrUCZy6iaVN3R-pWRrw=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Blade Runner 2099 (Prime Original Series Soundtrack)",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Drama"
+      ],
+      "composerAliases": [
+        "Leo Ross",
+        "Leopold \"Leo\" Ross"
+      ],
+      "albumArtists": [
+        "Leopold Ross"
+      ],
+      "ytmPlaylistId": "OLAK5uy_keckXlOTX1hnWOIEolqdCfNV9wbZYr9qo",
+      "scoresN": 18,
+      "tracksN": 18,
+      "playsTotal": 3848,
+      "moods": [
+        "mysterious",
+        "ominous",
+        "intense"
+      ],
+      "moodsN": [
+        5,
+        3,
+        3
+      ],
+      "moodsV": 2
+    },
+    {
+      "id": "tv-campus-diaries-season-2",
+      "title": "Campus Diaries Season 2 Soundtrack",
+      "medium": "tv",
+      "game": "Campus Diaries",
+      "composers": [
+        "Amit Trivedi",
+        "Arpit Mehta",
+        "Simran Hora",
+        "Abhishek Yadav"
+      ],
+      "date": "2026-11-18",
+      "sources": [
+        {
+          "name": "tmdb-tv",
+          "type": "catalog",
+          "url": "https://www.themoviedb.org/tv/155056",
+          "seenAt": "2026-11-25T19:43:48Z"
+        }
+      ],
+      "ytmSearchUrl": "https://music.youtube.com/search?q=Campus+Diaries+Season+2+Soundtrack",
+      "ytmAlbumUrl": "https://music.youtube.com/browse/MPREb_73Ki8WqvElx",
+      "art": "https://yt3.googleusercontent.com/w2v0pvRchwnAkPrgEO4zm8Ye8RV5LglEvNXiWxsV2TDV0lROIWLPbI935ic3qnbkw3y__DnXbYW7_QKElQ=w544-h544-l90-rj",
+      "notable": true,
+      "albumTitle": "Campus Diaries - Season 2 (Original Series Soundtrack)",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "composersFrom": "album",
+      "albumArtists": [
+        "Amit Trivedi",
+        "Arpit Mehta",
+        "Simran Hora",
+        "Abhishek Yadav"
+      ],
+      "ytmPlaylistId": "OLAK5uy_k1KTCV8s2jaHWfwGboF4DHtsZ2Rr9is8A",
+      "scoresN": 2,
+      "tracksN": 2,
+      "playsTotal": 21700,
+      "moods": [
+        "eerie",
+        "mysterious",
+        "ominous"
+      ],
+      "moodsN": [
+        1,
+        1,
+        1
       ],
       "moodsV": 2
     }

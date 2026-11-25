@@ -216,6 +216,23 @@
     "vote_count": 15
    }
   },
+  "1280115": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     18,
+     10751
+    ],
+    "id": 1280115,
+    "original_title": "Way of the Warrior Kid",
+    "poster_path": "/atI81xXKNVah7PJFBo3aXqQKtnG.jpg",
+    "release_date": "2026-11-24",
+    "title": "Way of the Warrior Kid",
+    "vote_count": 8
+   }
+  },
   "1282159": {
    "aliases": [],
    "checked": [
@@ -2103,7 +2120,8 @@
   "1728084": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -2960,6 +2978,22 @@
     "vote_count": 5
    }
   },
+  "1802703": {
+   "aliases": [],
+   "checked": [],
+   "composers": [],
+   "entry": {
+    "genre_ids": [
+     99
+    ],
+    "id": 1802703,
+    "original_title": "Rob Lowe: The Outsider",
+    "poster_path": "/dydflxYhZ0UCS5gaz8iCKFcEAvE.jpg",
+    "release_date": "2026-11-24",
+    "title": "Rob Lowe: The Outsider",
+    "vote_count": 5
+   }
+  },
   "1810511": {
    "aliases": [],
    "checked": [],
@@ -3237,16 +3271,6 @@
   }
  },
  "runs": [
-  {
-   "date": "2026-10-26",
-   "deferred": 0,
-   "due": 1,
-   "found": 0,
-   "recorded": 6,
-   "searched": 1,
-   "searches": 1,
-   "tracked": 109
-  },
   {
    "date": "2026-10-27",
    "deferred": 0,
@@ -3536,6 +3560,16 @@
    "searched": 3,
    "searches": 3,
    "tracked": 162
+  },
+  {
+   "date": "2026-11-25",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 2,
+   "searched": 1,
+   "searches": 1,
+   "tracked": 164
   }
  ]
 }
