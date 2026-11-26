@@ -216,23 +216,6 @@
     "vote_count": 15
    }
   },
-  "1280115": {
-   "aliases": [],
-   "checked": [],
-   "composers": [],
-   "entry": {
-    "genre_ids": [
-     18,
-     10751
-    ],
-    "id": 1280115,
-    "original_title": "Way of the Warrior Kid",
-    "poster_path": "/atI81xXKNVah7PJFBo3aXqQKtnG.jpg",
-    "release_date": "2026-11-24",
-    "title": "Way of the Warrior Kid",
-    "vote_count": 8
-   }
-  },
   "1282159": {
    "aliases": [],
    "checked": [
@@ -266,6 +249,25 @@
     "release_date": "2026-10-29",
     "title": "The Mongoose",
     "vote_count": 6
+   }
+  },
+  "1299329": {
+   "aliases": [],
+   "checked": [],
+   "composers": [
+    "Miles Ross"
+   ],
+   "entry": {
+    "genre_ids": [
+     18,
+     80
+    ],
+    "id": 1299329,
+    "original_title": "Josephine",
+    "poster_path": "/6pUSCeInGp4Ut3rqgPNWUrmKBUi.jpg",
+    "release_date": "2026-11-19",
+    "title": "Josephine",
+    "vote_count": 7
    }
   },
   "1314786": {
@@ -757,6 +759,35 @@
     "release_date": "2026-10-23",
     "title": "Gajab Raat",
     "vote_count": 5
+   }
+  },
+  "1457866": {
+   "aliases": [
+    "Nine Inch Nails",
+    "Michael Trent Reznor",
+    "Nine Inch Noize",
+    "Nine Inch Nails",
+    "Atticus Matthew Cowper Ross",
+    "\u30a2\u30c6\u30a3\u30ab\u30b9\u30fb\u30ed\u30b9",
+    "Nine Inch Noize"
+   ],
+   "checked": [],
+   "composers": [
+    "Trent Reznor",
+    "Atticus Ross"
+   ],
+   "entry": {
+    "genre_ids": [
+     35,
+     18,
+     53
+    ],
+    "id": 1457866,
+    "original_title": "THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH",
+    "poster_path": "/thX8Rs7nfgmPHfCgjoFuRovy49l.jpg",
+    "release_date": "2026-11-24",
+    "title": "THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH",
+    "vote_count": 7
    }
   },
   "1466670": {
@@ -1810,7 +1841,8 @@
   "1643768": {
    "aliases": [],
    "checked": [
-    30
+    30,
+    60
    ],
    "composers": [],
    "entry": {
@@ -3272,16 +3304,6 @@
  },
  "runs": [
   {
-   "date": "2026-10-27",
-   "deferred": 0,
-   "due": 1,
-   "found": 0,
-   "recorded": 0,
-   "searched": 1,
-   "searches": 1,
-   "tracked": 108
-  },
-  {
    "date": "2026-10-28",
    "deferred": 0,
    "due": 0,
@@ -3570,6 +3592,16 @@
    "searched": 1,
    "searches": 1,
    "tracked": 164
+  },
+  {
+   "date": "2026-11-26",
+   "deferred": 0,
+   "due": 1,
+   "found": 0,
+   "recorded": 2,
+   "searched": 1,
+   "searches": 1,
+   "tracked": 165
   }
  ]
 }
